@@ -100542,6 +100542,23 @@
       "book": "psalms",
       "chapter": "99",
       "note": "Correcting my own recommendation about the entity artefact. I recorded here that converting six entities at psalms 99 key 4 and changing nothing else flipped the entry from B to A (ttr 0.5780 to 0.5853), and from that I said the unescaping fix in QA.visible was worth a grade and now urgent. The second measurement does not support the strong form. At isaiah 66 key 7, an entry of almost the same length with almost the same entity load — three mdash and three rsquo against psalms 99's four rsquo and two mdash, nine junk tokens in 648 against ten in 514 — the identical conversion moved ttr by one ten-thousandth, 0.5761 to 0.5760. So the artefact is worth a few thousandths, not reliably a grade; psalms 99 happened to be sitting two thousandths under the floor and the junk happened to be denser per 200-token window. The fix is still correct and still worth making, because the measurement should not depend on an escaping choice at all, but it should be ranked as a correctness cleanup rather than as a grade recovery, and the interim rule should be read as count the entities before blaming the prose, not expect them to carry the grade."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "psalms",
+      "chapter": "136",
+      "verses": [
+        "16-22"
+      ],
+      "note": "Polish pass. Entry at key 16 was a single-metric B, ttr 0.5735 against the 0.58 floor with compress 0.4577 well clear. At 425 words it had room, and this is the case where ADDING material worked: about 100 words of Spurgeon from the same block that the first pass had left out, which brought vocabulary the entry did not already hold — that God's dealings are mysterious but must be right simply because they are his; that in the end they must come out of the wilderness into the promised land; that no provision was there even for single travellers; and the whole closing movement, that many a time he forgave them and though he smote them for their transgressions he waited to be gracious and turned to them speedily in compassion, their faithfulness failing where his did not, the fiery cloudy pillar that never ceased to lead the van being the visible proof of an immutable love. Four substitutions went with it, rulers and the great ones and the famous kings for four of six kings, the barren place for a fourth wilderness, where to go for a third way, and Canaan named where the source names it. 425 words to 528, ttr to 0.6024, compress to 0.4582, grade A with 0.0224 of margin, the widest of any polish in this run."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "66",
+      "note": "Refining when adding material helps a thin ttr, since this run has now tried it twice with opposite results. At isaiah 66 key 7 and earlier at psalms 5 key 11, adding fresh grounded material gained nothing — at psalms 5 it took the entry from 405 to 481 words and left ttr exactly where it started, because the addition landed in the entry's densest region and brought that region's own vocabulary with it. At psalms 136 key 16 the same move gained 0.029, the largest single gain in the run, because the material added was from a part of the source the first pass had skipped entirely and carried words the entry did not hold anywhere. So the rule is not add length or do not add length. It is: look at where the worst 200-token window sits, and add only where the new words are new. Where the thin window is the dense one, the lever is the other direction — quote less of it, or substitute inside it."
     }
   ]
 }
