@@ -100196,6 +100196,33 @@
       "book": "zechariah",
       "chapter": "6",
       "note": "Revising the B-diagnosis rule that was first stated here. The original form held that a B on compress points at a repeated SENTENCE FRAME and a B on ttr at a repeated NOUN, and that the two want opposite edits. Four consecutive polish entries have now shown that this is only true of entries that fail ONE metric. Where an entry is thin on both — hosea 12 key 14 (ttr 0.5608, compress 0.4238), joel 3 key 1 (0.5589 / 0.4252) and hosea 11 key 1 (0.5661 / 0.4311), against hosea 10 key 14 which failed ttr alone — the two faults had one cause every time, and it was the noun, not the frame: a word repeated ten to thirteen times in 600 words drags its frames along with it, because the frames are what carry it. Thinning the dominant nouns lifted compress as much as ttr in all three (compress gains of 0.014, 0.023 and 0.020 without a single sentence deliberately reshaped). So the working rule is now: on a single-metric B, diagnose as before. On a double B, count the nouns FIRST and only fall back to register — the jeremiah 44 case, where no word or frame dominated — when no word is running hot. That ordering matters because rebuilding sentence shapes is the expensive repair and it was not needed in any of the three."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "zechariah",
+      "chapter": "13",
+      "note": "CORPUS-LEVEL SOURCE DEFECT, quantified. Keil and Delitzsch's commentary is truncated at ~203 words across almost the whole corpus. Scanning all 1189 catena files (125,818 voice blocks): 9,847 blocks are EXACTLY 203 visible words, 9,727 of them K&D, spread over 985 of 1189 chapters (83%). Per voice, the share of blocks falling in a 200-204 word band is K&D 9,732/10,472 = 92.9%, John Gill 2,821/29,682 = 9.5%, and every other voice 0.3-0.8% (Ellicott 0.7, Clarke 0.7, Wesley 0.3, Calvin 0.7, Barnes 0.8, Henry 0.7, JFB 0.8). That ~0.7% is the natural distribution, so K&D's 92.9% is a hard cap and Gill's 9.5% is about 13x baseline - a second cap at 202 words hitting ~2,600 Gill blocks beyond chance. Sampled tails are severed mid-clause: 'make him an Edomitish proselyte (see', 'refers to the', 'confirmed by A. Schultens (Anim-adv. ad Jes. xix. 17) and by'. CONSEQUENCE: K&D is one of only two grammatical-historical voices, so this strips the corpus of its most technical exegesis almost everywhere, leaves K&D looking like a verse-rendering-only voice, and is very likely a major cause both of the dropped-K&D findings (ezekiel 43 pericopes 1/13/18, zechariah 13 pericope 3) and of legacy chapters reading thin. This is upstream of the synthesis and cannot be repaired by rewriting prose - it needs a re-scrape. I found it from the ezekiel 43 observation that six K&D blocks shared one exact word count; the generalisation was a single pass over the data tree."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "zechariah",
+      "chapter": "13",
+      "verses": [
+        "8"
+      ],
+      "note": "Two reported critics had been ANONYMISED - the inverse of the ezra 2 defect, where reported critics were wrongly promoted into voices. The catena has K&D crediting 'the poor and righteous in the nation, who suffer injustice' to Hitzig, and a whole quoted sentence to Kliefoth; the prose gave the first unattributed and the second as 'another writer'. Both now named as reported, per the loop doc convention. Worth noting that the fix also cleared the metric: the pericope was grade B by 0.0005 of ttr and adding the two proper nouns took it to 0.5821, so the honest correction and the metric pulled the same way."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "zechariah",
+      "chapter": "13",
+      "verses": [
+        "3"
+      ],
+      "note": "Pericope 3's K&D block is one of the 203-word truncations: 203 words, pure verse text, severed mid-sentence at 'Arise, O sword, over my shepherd, and over the man'. As with ezekiel 43 I deliberately did NOT declare it in excluded_voices - the block is genuine commentary on this passage, merely cut off before the exposition begins, and calling it residue would misrepresent an upstream extraction defect as misfiling."
     }
   ]
 }
