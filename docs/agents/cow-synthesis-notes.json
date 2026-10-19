@@ -100601,6 +100601,65 @@
         "21"
       ],
       "note": "My 'voices with no block header of their own' check fires on FIFTEEN of this chapter's twenty-one pericopes, and every one is a false positive. Matthew Henry has blocks in catena keys 1 and 12 only, Keil and Delitzsch in eight keys, so the rest of the chapter legitimately draws on them by span - this is the normal shape for Chronicles, where Henry comments on whole sections rather than verses. Added after the Joseph Hall case in 2samuel 18 and already shown false-positive twice in 2samuel 24, the check is now demonstrated unusable on its own at a 15-of-21 rate. It is only worth running as a FILTER whose every hit is then tested against the whole-chapter catena; as a standalone signal it is noise."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "25",
+      "verses": [
+        "19"
+      ],
+      "note": "Polish pass on the single B in an otherwise all-A chapter, and the first polish of a thin entry in this run. Key 19 stood at ttr 0.5200 against the 0.58 floor with compress 0.4565 clear, in 192 words on a seven-word source (Ellicott's whole note is To Hashabiah, so the Hebrew). The waste was a doubled list: Keil and Delitzsch's reconstruction of the lot places was given once in full and then again in part. Replaced the second statement with what Keil actually infers FROM the order, which is the one thing in the chapter that makes this particular lot matter — that the lots cannot have lain in separate urns drawn from in turn, since the three houses would then alternate, but must all have lain together, those of Asaph and Jeduthun coming out early enough that after the fourteenth draw none but Heman's were left — together with Bertheau reading the same order the opposite way, and Ellicott's point that the twelve must be understood even at the heads where the text omits the formula because the total of two hundred and eighty-eight requires it. 192 words to 244, still inside the thin window, ttr to 0.6600, compress to 0.4842, grade A with 0.08 of margin."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "25",
+      "verses": [
+        "9",
+        "19"
+      ],
+      "note": "An arithmetic slip in Keil and Delitzsch, carried through the chapter. Their reconstruction at key 9 reads that the four sons of Asaph received the first, third, fifth and seventh places; the SIX sons of Jeduthun the second, fourth, eighth, twelfth and fourteenth; and the four sons of Heman first mentioned the sixth, ninth, eleventh and thirteenth. That is five places named for six sons, where the other two houses get one place per son. The prose for key 19 reproduces the list of places without repeating the count of sons, so the slip is neither propagated nor silently corrected. Worth knowing before anyone reconciles the courses against the family lists, since the missing sixth Jeduthunite place is the kind of gap that reads as a data error rather than a printing one."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "99",
+      "note": "Third and sharpest measurement of the entity artefact, which settles how it should be ranked. The effect scales with junk-token density relative to the audit's 200-token MATTR window, so it is largest on SHORT entries where that window is the whole text. Converting the same six-to-ten entities and changing nothing else: psalms 99 key 4, 514 tokens with ten junk, ttr 0.5780 to 0.5853, plus 0.007 and a grade; isaiah 66 key 7, 648 tokens with nine junk, 0.5761 to 0.5760, no change at all; 1chronicles 25 key 19, a thin entry of 201 tokens with eight junk, 0.5200 to 0.5389, plus 0.019, the largest of the three and still nowhere near enough to carry the grade. So the artefact is worth up to about two hundredths on a thin entry and nothing in particular on a long one, and the unescaping fix in QA.visible should be ranked as a correctness cleanup that matters most for thin entries, not as a grade recovery anywhere. In all three cases the conversion was reverted and the chapter's own convention kept, because every chapter met so far is internally consistent (1chronicles 25 carries 87 entities and no literal dashes or apostrophes at all) and converting one entry would make it the odd one out for a fraction of a grade."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "25",
+      "note": "A hypothesis tested and discarded, recorded so nobody spends the same hour on it. Finding a thin entry graded B, the obvious suspicion is that the grade metric is calibrated against it: MATTR uses a 200-token window, so on an entry of 200 tokens the window is the whole text and the score collapses to a plain type-token ratio, which for a short piece of prose on one subject should run lower than the average of windows sampled from a 600-word piece. The corpus says otherwise. Across 66 thin entries and 12,558 normal ones the grade distributions are indistinguishable: thin 98.5 per cent A and 1.5 per cent B; normal 98.6 per cent A, 1.1 per cent B, 0.3 per cent D. So thin entries are not disadvantaged, this one B was simply repetitive, and the metric needs no thin-specific adjustment."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "25",
+      "verses": [
+        "1",
+        "6",
+        "14",
+        "17",
+        "20",
+        "22",
+        "24",
+        "30"
+      ],
+      "note": "Eight standing ENTITIES advisories in this chapter, none of them in the entry polished and all predating it, with one that is a different kind of problem from the rest. Jeduthunite at key 19 was mine to fix and is fixed, a derived adjective where the source has only Jeduthun forty-three times; that is the seventh instance of the derivation-and-orthography pattern after Adrian, the ae ligature, Talmudic, French, Augustine of Hippo and the oe ligature. The others are Levitical twice, Davidic, Amram, Jarmuth, and Hannah with Miriam, which are all plausibly groundable forms the checker is missing. But Chronicler appears four times across four entries, and the word chronicler occurs NOWHERE in this chapter's source in either case. That is not an orthography miss; it is a term of art the entries have adopted that no witness in the chapter uses. Harmless in itself, since the referent is the book's author and every commentator discusses him, but it is a vocabulary the synthesis has invented rather than inherited, and worth a decision one way or the other before it spreads. Not changed here, since the four entries are another worker's and all graded A."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "25",
+      "note": "Chapter-level reading for the owner, offered without touching the entries. This chapter landed yesterday graded 21 of 21 A and passes every gate, but the audit reports FLOOR 4, nineteen per cent of its entries sitting in the 350 to 449 band, which is the highest floor-hugging rate I have seen on an all-A chapter. The cause looks structural rather than careless: the chapter is a register of twenty-four courses, twenty-one source keys of which several hold a single clause of Ellicott (seven words at key 19, ten at key 17, twenty-three at key 18), so the writer had one entry per key and very little under most of them. The pericope rule exists for exactly this shape — a register of names is its own worked example in the loop doc — and tiling the courses in groups of three or four would have given four or five entries with real material instead of twenty-one scraped to the floor. I have not re-tiled it: that would discard a landed all-A chapter to chase a flag the gate does not raise, which is the owner's call and not a worker's."
     }
   ]
 }
