@@ -99945,6 +99945,13 @@
         "46"
       ],
       "note": "ELLICOTT CHROME, 31st consecutive chapter. Key 46 runs 1,060 words of which 76 are commentary; the footer is 984 again, the fifth chapter running at that exact figure after job 33, 1chronicles 18, job 24 and 2chronicles 25."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "21",
+      "note": "A TRAP FOR ANY NOTES-ONLY COMMIT: THE LOOP RUNS ON A DETACHED HEAD. Recording this because I hit it and it cost a confusing round of push failures. The working tree in this loop is a detached HEAD, and the local branch refs/heads/master is stale — in my session it sat 56 commits behind origin/master. So git push -u origin master pushes that stale BRANCH, not the commit you just made, and git answers with 'Updates were rejected because a pushed branch tip is behind its remote counterpart', which reads like a conflict with another worker when in fact the remote has not moved at all. The fix is to name the source explicitly: git push origin HEAD:master, which for a commit made on top of a fresh reset is a plain fast-forward and needs no merge, no rebase and no force. synthesis-loop.py finish --push does the right thing already, which is why the chapter landings have never shown this; it only bites a hand-made commit, which in practice means a notes-only commit like this one. Check ancestry first with git merge-base --is-ancestor origin/master HEAD, and if that fails, reset to origin/master and re-run the note script rather than merging the notebook, since every worker appends to the same JSON file and a merge there will conflict."
     }
   ]
 }
