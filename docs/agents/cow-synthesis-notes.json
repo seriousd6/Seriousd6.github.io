@@ -99706,6 +99706,135 @@
         "5"
       ],
       "note": "No lean past the witness was found or fixed. The recorded notes for this chapter name none for vv.4-5, and the entry reports the four-way dispute over the clause about the king strength exactly as the earlier worker left it, Keil and Delitzsch against the majority reading, Wesley on the Hebraism, Gill and Spurgeon reading the words as they stand, and Clarke taking the verse of the human author. Every edit was to a pronoun, a noun substitution or an HTML entity. One substitution needed care: the chest was used for one of five occurrences of ark, which is a plain English equivalent and not a new identification, since Clarke and Ellicott both argue the footstool is the ark and the prose still says so twice."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "30",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31"
+      ],
+      "note": "Chapter-wide scaffolding templating, the worst seen so far: 31/31 verses built on one rhetorical skeleton. 23 verses closed on the banned carrier 'the witnesses do not divide'; 7 used 'so the witnesses'; 15/31 opened on '...and the witnesses <verb>'; 29/31 carried a 'divide/part only over X, on Y wholly one' closing formula; and 73 sentences across the chapter opened 'The <school-epithet> <Name>' in near-fixed order (reformed Gill, puritan Henry, wesleyan Clarke/Wesley, grammatical-historical Ellicott/K&D) - a slot-list spread over sentences rather than clauses, which rule 6 does not catch. The substance per commentator was sound; only the connective tissue was formulaic, so the repair was ~90 sentences of scaffolding, not a regeneration."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "30",
+      "note": "The carrier lint is exact-string and a single interposed adverb defeats it (job 41's 'do not finally divide' x3). Job 30 confirms the fix is worth making and shows its shape: an adverb-tolerant regex over 'the (witnesses|voices|expositors|interpreters|commentators) (\\w+ ){0,2}(do not)? (finally )?(divide|differ|disagree|part)' plus the near-synonym families 'converge/agree/concur' and 'note/observe/remark'. Preserve the distinction that 'the witnesses DIVIDE' announcing genuine disagreement is content, not a carrier - job 30 v1/v13/v18/v28 all use it legitimately."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "30",
+      "note": "The roll-call/consensus-shape detectors are UNUSABLE without a quote-aware sentence splitter. On job 30 a plain (?<=[.!?])\\s+ splitter merged sentences across quote-terminated boundaries ('.\"' or '.&rdquo;' followed by a capital), producing super-sentences that inflated name and semicolon counts: all 4 surviving ROLLCALL/ROLLCALL-SHAPE hits (v13 s5, v15 s0, v17 s0, v28 s3) were artifacts - a 4-of-4 false-positive rate. Splitting on (?<=[.!?])[\"\\u201d\\u2019']?\\s+(?=[\"\\u201cA-Z]) cleared all four. Also: the semicolon test (>=3 names + >=2 semicolons) misses the commonest form, because the inventory is usually comma-separated and FOLLOWS the agreement frame - so also catch a >=3-name sentence whose PRECEDING sentence matches that frame."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "30",
+      "verses": [
+        "9"
+      ],
+      "note": "A new sub-type of the invented-attribution family: a SWAPPED referent rather than a fabricated claim. Gill's catena reads 'as Christ the antitype of Job was the song of the drunkard'; the prose made it 'even as the Psalmist was the song of the drunkards'. The allusion behind it (Ps. 69:12) makes 'the Psalmist' look plausible, but the swap deletes Gill's whole typological argument. What makes it detectable at all: the SAME verse's second paragraph had it right ('Christ, the antitype who was likewise the song of the scornful'), so the verse contradicted itself. Worth a detector - within-verse attribution inconsistency, the same source claim rendered two incompatible ways."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "30",
+      "verses": [
+        "23"
+      ],
+      "note": "A milder new sub-type: the factually-correct but UNGROUNDED attribution. The prose credited Clarke's quoted poem to 'Blair's poem The Grave'. Robert Blair did write it, so no fact-check catches this; but the catena quotes the verse signed only 'The Grave.' and never names an author, so the credit came from the generator's outside knowledge. Only a grounding check finds it. This is the first attribution defect this loop has met that is TRUE - which makes it the hardest to spot and the easiest to wave through."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "30",
+      "verses": [
+        "15",
+        "21"
+      ],
+      "note": "Misfiled 'Jamieson, Fausset and Brown' residue - the ELEVENTH chapter. Both blocks here are 2 Chronicles 7 commentary (v15: the fire and cloud at the dedication; v21: the ceremonial of dedication), so the residue is from one scrape of a single foreign passage. Declared via excluded_voices. The remedy stays mechanical; detection must stay structural - a keyword list would not have found 2 Chronicles text sitting in Job."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "30",
+      "verses": [
+        "15",
+        "28"
+      ],
+      "note": "A worse variant than JFB residue, and the structural check found it in the same pass: catena voice blocks that are GENUINE for the verse but unclaimed by the tags, so the prose silently drops them. v15 had real Clarke, Ellicott and Wesley blocks with only Gill, K&D and Henry in voices - Ellicott's alternative subject ('Thou chasest', God himself the pursuer) is a whole third side of the verse's debate and was missing entirely. v28 dropped Wesley. The test that finds both: every <strong>Label:</strong> block in the catena key, minus voices, minus excluded_voices."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "30",
+      "verses": [
+        "3",
+        "5",
+        "15",
+        "16",
+        "27",
+        "30"
+      ],
+      "note": "Span-source problem, sharpest proof yet that a PER-KEY grounding check produces false accusations. The K&D rendering for v15 ('they pursue my nobility like the wind') sits in catena key 10, FIVE verses away; a per-key check would have flagged it as invented. Same for v5, whose whole substance (Henry's 'arrant scoundrels', 'scum of the country', the workhouse, 'one half of the world does not know how the other half lives') sits under key 1, giving 4.23x expansion against a 102-word key. v3 from keys 2-3, v16 and v27 and v30 from key 15. Graded B on the five worst with notes naming the key, so the stretch signal is not silently dismissed. Rule: grounding checks must ALWAYS run against the whole-chapter catena, never one key."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "30",
+      "note": "Two more false-negative modes for grounding checks, to add to abbreviations (LXX./Vulg./J. D. Mich.) and diacritics (Jarmuth): (1) ROMAN-NUMERAL references - the prose's 'Ps. 22:14' is 'Ps. xxii. 14' in the catena, so v16's Psalm citation read as ungrounded until folded; (2) EMBEDDED NEWLINES - the catena stores Henry with literal \\n, so 'the seeds of our own disease' spanned a line break and grepped as NONE. Normalise whitespace and expand roman numerals before matching, or both read as fabrication. Also confirmed: a name-pair regex ('Dioscorides and Galen', 'Gill and Keil') matches no literal catena string and produces pure noise - check single names, or distinctive phrases."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "30",
+      "verses": [
+        "14",
+        "18"
+      ],
+      "note": "Confirms and sharpens the job 41 v30 lesson about the ttr lever. Both verses were grade B and both reached A by CUTTING, but only because what was cut was repeated vocabulary: v14 0.5652->0.6139 by removing a duplicated 'savage pleasure/delight' recap and the shared tail of Ellicott's two renderings; v18 0.5668->0.5956 by removing a wholesale second expounding of Clarke's wrestler image and Gill's colour-change, plus the third identical 'collar' quote. Contrast job 41 v30, where cutting made ttr WORSE because the cut removed distinct words. The diagnostic to run first is a word-frequency count, not a judgement about length: if the top repeats are content words you can retire, cutting works; if the verse is simply lexically narrow, it does not, and B is the honest grade."
     }
   ]
 }
