@@ -100525,6 +100525,23 @@
       "book": "2samuel",
       "chapter": "24",
       "note": "Measured commentator-quotation load, which is much higher here than in any other chapter of this run: 14.6% of the chapter is quoted commentator prose (1,421 of 9,762 words), with ten verses over 0.20 and two at 0.32. Quoted SCRIPTURE is only 3.2% chapter-wide, max 0.11 in any verse, so rule 5 - which caps scripture at about a fifth - is comfortably met and nothing here breaks a documented rule. I did NOT rewrite the ten verses, because no rule caps commentator quotation and doing so would have been me inventing a standard. Flagging it as a question for the owner instead: is there an intended ceiling on quoted commentator prose, distinct from the scripture cap? If so the audit script should measure it, since the current QUOTEFRAC-style check conflates the two and makes chapters like this look like rule-5 failures when they are not."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "66",
+      "verses": [
+        "7-9"
+      ],
+      "note": "Polish pass. Entry at key 7 was a single-metric B, ttr 0.5761 against the 0.58 floor with compress 0.4320 clear. The repair was the usual vocabulary thinning, but it is worth recording what did NOT work first, because it corrects an earlier recommendation of mine. The entry carries three mdash and three rsquo entities, which the audit's visible() does not unescape, so nine junk tokens were inflating the count (validator 634 words against audit 648). Converting those six entities and changing nothing else moved ttr from 0.5761 to 0.5760 — one ten-thousandth, in the wrong direction. The conversion was therefore reverted and the chapter's own convention kept, since all ten entries here use entities and entry 7 would otherwise have been the odd one out for no measurable gain. The grade came instead from eleven substitutions: names them for identifies both, the whole for the whole verse, applies it for a second refers it to, the gospel's voice and the Jewish church for the voice of the gospel and the church of the Jews, will abide for a seventh shall, the answer for a fourth verse, her for a fifth church, in the first times and in the latter day alike and the joining of the two for two boths, anywhere for a third in the world, history for the history of the world, and two restorations of Wesley's own words that had been dropped, in the ordinary course of his providence and she shall go on. 634 words to 636, ttr to 0.5900, compress to 0.4368, grade A with 0.010 and 0.0168 of margin."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "99",
+      "note": "Correcting my own recommendation about the entity artefact. I recorded here that converting six entities at psalms 99 key 4 and changing nothing else flipped the entry from B to A (ttr 0.5780 to 0.5853), and from that I said the unescaping fix in QA.visible was worth a grade and now urgent. The second measurement does not support the strong form. At isaiah 66 key 7, an entry of almost the same length with almost the same entity load — three mdash and three rsquo against psalms 99's four rsquo and two mdash, nine junk tokens in 648 against ten in 514 — the identical conversion moved ttr by one ten-thousandth, 0.5761 to 0.5760. So the artefact is worth a few thousandths, not reliably a grade; psalms 99 happened to be sitting two thousandths under the floor and the junk happened to be denser per 200-token window. The fix is still correct and still worth making, because the measurement should not depend on an escaping choice at all, but it should be ranked as a correctness cleanup rather than as a grade recovery, and the interim rule should be read as count the entities before blaming the prose, not expect them to carry the grade."
     }
   ]
 }
