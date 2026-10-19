@@ -99860,6 +99860,52 @@
         "25"
       ],
       "note": "No lean past the witness was found or fixed, and the recorded notes for this chapter name none for vv.21-25. One whole position was removed as redundant rather than as unfaithful: Calvin's closing inference that their guilt was proved by the severity of the punishment, which the entry already carried twice, once in his own words that the atrocity of the punishment shows the atrocity of the sin and once in his argument from God not being angry without reason. What remains of him is unchanged — the argument from the prediction to the righteousness of the judgment, the two principles about the seed of Abraham, incense as a part put for the whole, and the voice of the Lord applied to the discourses of the prophets with the law and the statutes added besides. The rewrites in Gill's sentence altered only wording: the incense for it, a thing they owned doing for which they owned they did, they had fared better for it was better with them. Keil and Delitzsch, Clarke and the address to the women stand as the earlier worker left them."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "7",
+      "note": "Second chapter running with the identical scaffolding signature, which makes it a GENERATION-ERA fingerprint rather than a chapter accident. ezra 7: 17/25 verses closed on the banned 'the witnesses do not divide', 2 on 'so the witnesses', 1 on 'the witnesses note', 15/25 opened on '...and the witnesses <verb>'. job 30 the batch before: 23/31, 7, 0, 15/31. Both chapters are legacy-unversioned. If the ratio holds across the 130 chapters still to rewrite and the 68 to polish, the carrier lint fix is worth far more than any per-chapter repair, because a corpus-wide grep for the exact string would find most of it mechanically."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "7",
+      "verses": [
+        "28"
+      ],
+      "note": "StudyLight page chrome quantified for the first time: 692 of catena key 28's 1342 words are site navigation furniture ('Apocalyptic Books NASB KJV HCS ESV BSB WEB Bible Lexicons (3) ... Bill Klein's Greek Thoughts ...'), attributed to Charles Ellicott because the scrape overran the end of his comment into the page footer. 52% of the key. The important part: chrome SUPPRESSES a stretch signal rather than raising a false one - v28's recorded expansion is 0.36x where the true figure against ~650 real words is about 0.73x, so a thin verse can be made to look well-sourced. It landed in the chapter's LAST key, which is where a scrape runs off the end, so the cheap detector is to check the final key of every chapter for navigation furniture: 'Bible Lexicons', 'Apocalyptic Books', 'Books of Law', or a run of version abbreviations."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "7",
+      "verses": [
+        "6",
+        "12",
+        "24"
+      ],
+      "note": "Misfiled 'Jamieson, Fausset and Brown' residue - the TWELFTH chapter. All three blocks here are Josiah-reform commentary (v6: the temple copy of the law laid beside the ark, Manasseh and Amon; v12: the king's deputation to one with the prophetic spirit, a friend of Jeremiah; v24: chemarim, the Guebres or fire-worshippers), i.e. 2 Kings 22-23 / 2 Chronicles 34-35. Job 30's two blocks were likewise both 2 Chronicles 7. So the residue arrives in RUNS from a single contiguous foreign scrape, which means finding one block in a chapter predicts more in the same chapter - check every key once you find one, and expect them to share a source passage."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "rejected",
+      "book": "ezra",
+      "chapter": "7",
+      "note": "CORRECTION to the job 30 templating note filed earlier this session, which called the 73 'The <school-epithet> <Name>' sentence openings 'a slot-list spread over sentences rather than clauses, which rule 6 does not catch'. That overstates it. ezra 7 has 78 such openings across 25 verses, and with four to six voices per verse that is roughly ONE PER VOICE - i.e. it is the attribution convention that keeps the prose's strong-tagged schools in step with the schools array, not padding. Rule 6 bans walking the verse phrase by phrase; this is not that. What IS a fair criticism is the near-fixed ORDER (reformed, puritan, wesleyan, grammatical-historical) repeated verse after verse. I varied the syntactic position where doing so did not cost a school tag, but did not attempt a wholesale change in either chapter: that would be a corpus-wide convention decision for the owner, not a chapter repair. Recording this so the earlier note is not read as a licence to strip epithets."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "7",
+      "verses": [
+        "11"
+      ],
+      "note": "The span-source problem cuts FORWARD as well as backward, which no previous note had established. v11's K&D material sits in key 8 (their block spans vv. 8-11, the usual backward case), but their note that the commission stands in its Chaldee original sits in key 12 - one verse LATER than the verse that uses it. So a span-aware source resolver cannot simply walk backward to the nearest block header; it has to consider the whole chapter, or at minimum a window in both directions. Same chapter, same verse, both directions."
     }
   ]
 }

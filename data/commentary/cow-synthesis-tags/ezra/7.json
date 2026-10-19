@@ -59,16 +59,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "6": {
@@ -111,17 +123,32 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.76
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "7": {
   "voices": [
@@ -156,16 +183,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "note": "5.42x against an 83-word key. K&D's partitive “some”, Gill's motives for the delay and Henry's tribute to Ezra all sit in neighbouring keys; nothing is added. Graded B so the stretch signal is not silently dismissed.",
+    "expansion": 5.42
+   }
   }
  },
  "8": {
@@ -202,16 +242,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.13
+   }
   }
  },
  "9": {
@@ -248,16 +300,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "note": "11.34x against a 35-word key. Gill's Nisan/New-Year note is in key 9 itself; the “good hand” formula Henry and Ellicott expound sits in keys 1, 8 and 6. Every claim checked against the whole-chapter catena. Graded B so the stretch signal is not silently dismissed.",
+    "expansion": 11.34
+   }
   }
  },
  "10": {
@@ -300,16 +365,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.54
+   }
   }
  },
  "11": {
@@ -352,16 +429,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "K&D's comment for this verse sits in catena key 8, where their block spans vv. 8-11 — the technical terms for “copy” and “letter” and the Ezra 4:11 / 4:7 cross-references are theirs verbatim. Their note that the document stands in its Chaldee original is in key 12, one verse FORWARD, so the span cuts both directions. “The administrative language of the Persian chancery” is the prose's own framing of those terms rather than K&D's words; it is a gloss, not a claim they make.",
+    "expansion": 0.25
+   }
   }
  },
  "12": {
@@ -398,17 +488,32 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.8
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "13": {
   "voices": [
@@ -449,16 +554,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.67
+   }
   }
  },
  "14": {
@@ -496,16 +613,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 2.03
+   }
   }
  },
  "15": {
@@ -541,16 +670,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "Henry's Ps. 45:12 citation is grounded as “See Ps. xlv. 12” in catena key 11 — roman numerals and a span at once. “The daughter of Tyre” is the prose glossing the content of the cited reference, the established legitimate case, not an added claim.",
+    "expansion": 1.57
+   }
   }
  },
  "16": {
@@ -588,16 +730,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "Wesley's Gen 6:8 is his own citation in key 16 (“Find - Procure, as that word is used, Gen 6:8 26:12 Psal 84:3”); “Noah found grace” is the prose glossing that reference's content.",
+    "expansion": 1.08
+   }
   }
  },
  "17": {
@@ -634,16 +789,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "note": "8.79x against a 48-word key. Ellicott's priority-of-sacrifice reading, the Numbers 15 rule and his observation that Ezra dictated the liturgical detail are all in keys 16 and 17; K&D's connecting particle likewise. Graded B so the stretch signal is not silently dismissed.",
+    "expansion": 8.79
+   }
   }
  },
  "18": {
@@ -686,16 +854,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.38
+   }
   }
  },
  "19": {
@@ -726,16 +906,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "note": "5.49x against a 78-word key. Gill's distinction from the Cyrus vessels, Ellicott's forward pointer to Ezra 8:25 and K&D's verb of completion are all grounded across keys. Graded B so the stretch signal is not silently dismissed.",
+    "expansion": 5.49
+   }
   }
  },
  "20": {
@@ -772,16 +965,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.63
+   }
   }
  },
  "21": {
@@ -812,16 +1017,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.77
+   }
   }
  },
  "22": {
@@ -858,16 +1075,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 2.95
+   }
   }
  },
  "23": {
@@ -904,16 +1133,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.23
+   }
   }
  },
  "24": {
@@ -956,17 +1197,32 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 2.33
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "25": {
   "voices": [
@@ -1008,16 +1264,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.27
+   }
   }
  },
  "26": {
@@ -1055,16 +1323,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.06
+   }
   }
  },
  "27": {
@@ -1107,16 +1387,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.53
+   }
   }
  },
  "28": {
@@ -1160,16 +1452,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "Recorded expansion (0.36x) is misleading in the OTHER direction from the usual span problem: 692 of this key's 1342 words are StudyLight page chrome — navigation furniture (“Apocalyptic Books NASB KJV HCS … Bible Lexicons”) attributed to Ellicott where the scrape overran the commentary into the site footer. Against the ~650 real source words the true ratio is about 0.73x. Chrome SUPPRESSES a stretch signal rather than raising a false one.",
+    "expansion": 0.36
+   }
   }
  },
  "2": {
@@ -1207,16 +1512,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 2.03
+   }
   }
  }
 }
