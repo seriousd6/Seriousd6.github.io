@@ -100223,6 +100223,26 @@
         "3"
       ],
       "note": "Pericope 3's K&D block is one of the 203-word truncations: 203 words, pure verse text, severed mid-sentence at 'Arise, O sword, over my shepherd, and over the man'. As with ezekiel 43 I deliberately did NOT declare it in excluded_voices - the block is genuine commentary on this passage, merely cut off before the exposition begins, and calling it residue would misrepresent an upstream extraction defect as misfiling."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "zechariah",
+      "chapter": "10",
+      "verses": [
+        "6"
+      ],
+      "note": "SECOND true positive for the THIN-PHRASE detector, and the FIRST genuine hit for the roll-call shape detector since the splitter was fixed - and the two sat in adjacent sentences. The Rule 2 violation was 'Of the second house little is said', which narrates the sparseness of the commentary; the roll-call immediately followed it, three names and two semicolons in one per-voice inventory ('Gill takes it of what remain of the ten tribes; Clarke notes that the tribe named was always distinguished for its valour; Wesley reads the clause about the children as...'). Both fixed in one rewrite. Two lessons: (a) the THIN detector's precision is much better for phrases that take the commentary as subject - 'little is said' and job 37's 'the reading is brief' are both true positives, while every adjectival hit about the subject matter has been false; (b) the two defects co-occur, which makes sense - a writer who has little to work with announces the fact and then lists what little there is. Worth testing whether the pairing holds elsewhere."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "zechariah",
+      "chapter": "10",
+      "verses": [
+        "10"
+      ],
+      "note": "A THIRD kind of unusable voice block, distinct from both misfiled residue and the 203-word truncation: catena key 12's Keil and Delitzsch entry is 26 words consisting of nothing but the verse text, with no comment at all. So the structural voice check (catena labels minus voices minus excluded_voices) now flags at least three different upstream conditions, and they need different responses - residue goes in excluded_voices, a truncated block stays unclaimed and is reported, and a bare verse-text block is simply empty and correctly ignored. Anyone acting on the structural check corpus-wide should classify before remediating, or they will file genuine commentary as residue."
     }
   ]
 }
