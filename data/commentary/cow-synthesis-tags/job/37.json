@@ -43,16 +43,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "Two carriers here were invisible to the exact-string lint because they use NEAR-SYNONYMS of 'witnesses': 'The voices do not divide' and 'the interpreters agree'. Both removed. This is the concrete confirmation of the lint gap predicted after job 41 — the banned list needs the voices/interpreters/expositors/commentators family, not just 'witnesses'.",
+    "expansion": 0.25
+   }
   }
  },
  "2": {
@@ -89,16 +102,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.12
+   }
   }
  },
  "3": {
@@ -135,16 +160,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.68
+   }
   }
  },
  "4": {
@@ -152,7 +189,8 @@
    "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "Matthew Henry"
+   "Matthew Henry",
+   "John Wesley"
   ],
   "schools": [
    {
@@ -162,8 +200,8 @@
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke renders 'the voice of his excellency' as 'of his majesty' — no sound so becomes God as thunder — and reads 'he will not stay them' as the lightnings unlimited and unbounded, like God, irresistible."
+    "prevalence": "several",
+    "summary": "Clarke renders 'the voice of his excellency' as 'of his majesty' — no sound so becomes God as thunder — and reads 'he will not stay them' as the lightnings unlimited and unbounded, like God, irresistible; Wesley marks the lightning as seen before the thunder is heard."
    },
    {
     "school": "grammatical-historical",
@@ -210,16 +248,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "John Wesley has a real block for this verse ('After the lightning, which is seen before the thunder is heard') that the prose carried under Gill's name alone. Wesley is now credited in prose and added to voices.",
+    "expansion": 0.49
+   }
   }
  },
  "5": {
@@ -249,16 +300,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.12
+   }
   }
  },
  "6": {
@@ -301,17 +364,32 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "7": {
   "voices": [
@@ -352,16 +430,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.7
+   }
   }
  },
  "8": {
@@ -397,16 +487,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "note": "5.17x against an 81-word key, the highest in the chapter. Gill's wild beasts lurking in their dens are grounded in key 8 itself and in keys 6-7; the farmer and the sealed hand are the prose's own connective images tying this verse to v7, not attributed claims. Graded B so the stretch signal is not silently dismissed.",
+    "expansion": 5.17
+   }
   }
  },
  "9": {
@@ -414,7 +517,8 @@
    "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "Matthew Henry"
+   "Matthew Henry",
+   "John Wesley"
   ],
   "schools": [
    {
@@ -424,8 +528,8 @@
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke refers to his note on Job 9:9 where the word is 'chambers,' cites the Chaldee 'from the supreme chamber the commotion,' and guesses the whirlwind a scorching blast like the simoom."
+    "prevalence": "several",
+    "summary": "Clarke refers to his note on Job 9:9 where the word is 'chambers,' cites the Chaldee 'from the supreme chamber the commotion,' and guesses the whirlwind a scorching blast like the simoom; Wesley glosses the cold of the north simply as freezing winds."
    },
    {
     "school": "grammatical-historical",
@@ -468,16 +572,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "John Wesley's gloss for this verse ('Cold - Freezing winds') was uncredited and he was absent from voices; both fixed.",
+    "expansion": 1.78
+   }
   }
  },
  "10": {
@@ -514,16 +631,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.98
+   }
   }
  },
  "11": {
@@ -587,16 +716,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "Cut a three-term restatement that re-listed the readings just given ('emptied, dispersed, or filled' after each had already been set out), which took ttr 0.5704 -> 0.5975 and the verse from B to A. Also removed a leftover carrier, 'The grammatical-historical witnesses hold both possibilities open' — 'witnesses hold' is another form the lint misses.",
+    "expansion": 1.04
+   }
   }
  },
  "12": {
@@ -638,17 +780,32 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.78
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "13": {
   "voices": [
@@ -684,16 +841,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.05
+   }
   }
  },
  "14": {
@@ -730,16 +899,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
   }
  },
  "15": {
@@ -796,16 +977,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.81
+   }
   }
  },
  "16": {
@@ -842,16 +1035,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 2.0
+   }
   }
  },
  "17": {
@@ -889,16 +1094,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.06
+   }
   }
  },
  "18": {
@@ -936,17 +1153,32 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.65
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "19": {
   "voices": [
@@ -982,16 +1214,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.99
+   }
   }
  },
  "20": {
@@ -1028,16 +1272,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "Removed a Rule 5 requote: Ellicott's rendering was quoted in full although it differs from the lemma by one word, so the lemma was effectively quoted twice. Now only the inserted 'would' is quoted, which is the whole point of his reading.",
+    "expansion": 1.02
+   }
   }
  },
  "21": {
@@ -1080,16 +1337,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
  },
  "22": {
@@ -1146,16 +1415,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.89
+   }
   }
  },
  "23": {
@@ -1218,16 +1499,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.47
+   }
   }
  },
  "24": {
@@ -1284,16 +1577,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
   }
  }
 }

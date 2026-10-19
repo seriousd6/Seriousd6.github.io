@@ -100099,6 +100099,50 @@
         "20"
       ],
       "note": "Refining the previous note: the pair at keys 14 and 20 is byte-identical, not merely the same length (md5 5f4e2f4419db on both), so this full lattice carries one stalled pair after all, and the pairing had eight distinct donor blocks for nine slots. The donor is identified: every one of the nine blocks is Jamieson on Luke 14 — the great supper and the recompense at keys 14 and 20, counting the cost of a costly work at key 26, the lost sheep at key 38, the salt that has lost its savour at key 32, dust on man's part quoting Bengel at key 44, and the man intoxicated with new-found resources at key 50. So the misfile is not scattered residue but a single continuous commentary on one other chapter, laid down at every sixth key of this one. That is the clearest view of the mechanism yet recorded, and it suggests the sweep could recover Luke 14 from its victims rather than merely discard them."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "37",
+      "verses": [
+        "8"
+      ],
+      "note": "FIRST TRUE POSITIVE from the THIN-PHRASE detector across five chapters of use, and it is a clean Rule 2 violation: 'With only two witnesses attending closely, the reading is brief but of one mind.' That narrates the thinness of the source, which rule 2 forbids outright - a reader must not be able to tell any editing happened. Removed. Worth recording because the detector's false-positive rate had been so high (this same chapter has 'the thin and yielding air' at v16 and 'though thin and transparent' at v18, both about the subject) that it was becoming tempting to ignore it. The distinguishing test is grammatical, not lexical: a true positive predicates thinness of THE COMMENTARY or THE WITNESSES ('the reading is brief', 'only two witnesses'), a false positive predicates it of the thing being described. A detector keyed on 'the (reading|comment|witnesses|sources) (is|are) (brief|thin|scanty)' plus counting phrases like 'only two witnesses' would have caught this one and none of the others."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "37",
+      "verses": [
+        "1",
+        "11"
+      ],
+      "note": "The carrier near-synonyms predicted after job 41 are now confirmed in the wild, and there are more forms than the earlier note listed. job 37 v1 carried 'The voices do not divide' and 'the interpreters agree' - both invisible to the exact-string lint, both found only by the adverb-tolerant regex over the (witnesses|voices|expositors|interpreters|commentators) family. v11 additionally carried 'The grammatical-historical witnesses HOLD both possibilities open', where the verb is neither divide nor agree nor note. So the lint needs the subject family AND an open verb slot, not an enumerated verb list. Also worth noting: 11 verses here used the exact banned string while 12 more used a variant, so an exact-string corpus scan would find roughly half of what is actually there."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "37",
+      "verses": [
+        "6",
+        "12",
+        "18"
+      ],
+      "note": "Misfiled 'Jamieson, Fausset and Brown' residue - the FOURTEENTH chapter, and the FOURTH running with the run pattern. All three blocks here are 2 Chronicles 14-15, Asa's reform (the reward of faith and piety after a signal victory; the resolution needed for reforming measures; Asa's grand scheme and the general assembly). Running tally of source passages: job 30 = 2 Chronicles 7; ezra 7 = 2 Kings 22-23 / 2 Chron 34-35; job 13 = 1 Chronicles 23; job 37 = 2 Chronicles 14-15. Every one is Chronicles or Kings, which suggests the residue originates from one scrape pass over the historical books rather than from random misfiling - a useful hint for whoever fixes it at source."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "37",
+      "verses": [
+        "4",
+        "9"
+      ],
+      "note": "Two more genuine-but-unclaimed voices, found by the same structural test that caught job 30 v15 and ezra 7 v28: John Wesley has real blocks for v4 ('After the lightning, which is seen before the thunder is heard') and v9 ('Cold - Freezing winds'), and in both cases the prose already carried his point under another commentator's name. Both are SHORT blocks, which is probably why they were skipped - the generator seems to drop a voice whose contribution is a one-line gloss even when that gloss is exactly what the prose goes on to say. Four instances now across four chapters; the test is cheap (catena <strong>Label:</strong> blocks minus voices minus excluded_voices) and should be run corpus-wide."
     }
   ]
 }
