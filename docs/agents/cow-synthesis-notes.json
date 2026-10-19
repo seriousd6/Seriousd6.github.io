@@ -100330,6 +100330,44 @@
         "1"
       ],
       "note": "A better way out of a near-miss grade B than metric-shaving. This pericope was B at 0.5696 with 642 of 650 words used, so cut-only; honest tightening of repeats got it to 0.5791, still 0.0009 short, and the remaining repeats (new x10, psalm x9, song x9, victory/salvation x3) are the theme of Ps 98:1 itself and could not go without deleting sound commentary. Rather than settle for a documented B as with psalms 5 v11 and job 41 v30, I checked whether anything grounded was being left out - and found that the prose gave John Calvin one nearly contentless sentence ('begins from its resemblance to an earlier psalm') while his catena block states the psalm's whole scope: God's glory displayed in the spread of the knowledge of his name through the world, the promises to Abraham's posterity amply accomplished in the manifested Saviour, salvation reaching every quarter of the earth. Restoring that carried genuinely fresh vocabulary and took ttr to 0.5982, grade A, at exactly 650 words. LESSON: when a verse is lexically narrow and at the word ceiling, check for DROPPED CONTENT before concluding the metric is wrong - adding grounded material raises distinct-token count where cutting cannot, and it improves the entry instead of merely passing it."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "18",
+      "verses": [
+        "12"
+      ],
+      "note": "A THIRD truncation mode, and the worst stretch ratio of the run: catena key 12 is exactly ELEVEN words - 'John Gill: And the man said unto Joab,.... Disdaining his proposal:' - severed mid-sentence after a colon, so Gill's comment on the verse is effectively absent and the prose runs 40.55x the key. This is not the ~203-word cap documented for K&D and Gill in zechariah 13; it is a block cut almost immediately. Taken with the 203-word cap and the bare-verse-text blocks of zechariah 10, the catena now shows at least three failure modes in how voice blocks were captured, and they are probably all the same scrape fault at different points. Anyone running the 203-word scan should widen it: look for blocks ending in a colon, a comma or an open bracket, which is the signature of a mid-sentence cut at any length."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "18",
+      "verses": [
+        "12",
+        "30"
+      ],
+      "note": "Two more Rule 2 true positives, bringing the run's tally to six, and one of them makes the point of the rule unusually sharply. v12 said 'though the source here is thin - the reformed Gill alone comments directly'; v30 said 'the witnesses, though brief, read the command as...'. The v12 statement was FACTUALLY TRUE - the catena key really is eleven truncated words - and it still had to go, because rule 2 is not about accuracy but about what the reader should be shown: the defect belongs in the notebook, the prose should simply be as good as the sources allow. All six true positives so far predicate brevity of the COMMENTARY ('the reading is brief', 'only two witnesses', 'little is said', 'keeps it short', 'notes in one line', 'the source here is thin', 'though brief'), and every false positive has predicated thinness of the subject matter. That split is now stable enough to build the detector on."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "18",
+      "verses": [
+        "5"
+      ],
+      "note": "A reported critic promoted into voices - the ezra 2 defect again, and my structural voice check CANNOT see it. Joseph Hall was listed in v5's voices although he has no labelled block; he is quoted inside Matthew Henry's block as 'Bishop Joseph Hall's famous descant'. The prose credited him correctly as reported, so only the tags were wrong. The limitation matters: the structural check reads <strong>Label:</strong> headers, so a critic quoted INSIDE a block is invisible to it, which is exactly how Hall got into voices unnoticed. A complementary check is needed - every name in voices that has no block header of its own is either a reported critic (move to debates holders, as done here) or unsourced."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "18",
+      "note": "Two more abbreviation misses for the grounding checker, both of which produced false alarms here. (1) 'Hom. Il. vii., ver. 305' is Clarke citing Homer's Iliad, so the prose's 'in Homer Ajax gave his to Hector' is grounded though 'Homer' appears nowhere in the catena. (2) Ellicott cites 'Judg. 11:43' and '1 Samuel 11:11' and the prose names their content as 'Jephthah' and 'Saul at Jabesh' - the reference-gloss case, but neither name is in the source. Add Hom./Il. to the abbreviation map alongside LXX./Vulg./J. D. Mich., and note again that a bare chapter-and-verse citation makes any name the prose draws from it look invented. Fifteenth chapter for misfiled JFB as well, six verses here (v3, v9, v15, v21, v27, v33), source passages Judges 20-21 and Joshua 8 - still Kings/Chronicles/Judges, still the historical books."
     }
   ]
 }
