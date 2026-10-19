@@ -100163,6 +100163,39 @@
         "1-2"
       ],
       "note": "Polish pass. Entry at key 1 (vv.1-2) was thin on both metrics, ttr 0.5661 against the 0.58 floor and compress 0.4311 against 0.42, with the same single cause now seen four times this run: a crowded vocabulary that drags its frames along. In 650 words, God ten times, love and loved twelve between them, out seven, Israel six, people six, Egypt five, called and calling eight, and the frames out of Egypt three times, the calling of three, the coming out of twice, a type of twice. Thinned the repeated nouns with faithful alternates (beloved and cherished for loved, affection for love, summons for calling, the exodus and the rescue from Egypt for coming out of Egypt, prefigured for was a type of) and let the frames go with them. No attribution or claim altered; the subject in the second half of the Henry sentence is carried by a pronoun rather than a third God. 650 words to 620, ttr to 0.6066, compress to 0.4507, grade A with 0.027 and 0.031 of margin, and the worst 200-token window up from 0.51 to 0.58."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "7",
+      "verses": [
+        "1-53"
+      ],
+      "note": "Survey only; declined for worker capacity, NOT a blocklist candidate. Served as a polish pick but all 53 tag entries are legacy-unversioned (51 A, 2 B at keys 9 and 39), so it is a legacy rewrite and the under-firing no-qa-stamp test mis-routed it, the same mis-routing seen at john 1 in the previous batch. 53 source keys, no gaps, 86660 usable source words, more than twice the one-chapter batch ceiling. About 14649 of those words are appended patristic material (17 percent) and roughly 1000 are Ellicott chrome. Per-voice: Henry 18720, Calvin 13245, Ellicott 10733, Barnes 7164, Robertson 7127, Clarke 6712, Gill 3638, Lightfoot 2555, Wesley 2029, Jamieson 212. Largest keys 14 (10016), 37 (8751), 1 (7602), 45 (4195). Henry carries four mega-heads at keys 1, 14, 37 and 45 (4112, 7691, 3536 and 3084 words) plus three short notes at 25, 31 and 40, and the heads fall on the chapter's own divisions: vv.1-13 (18662 words), 14-24 (22819), 25-30 (8094), 31-36 (7279), 37-39 (13241), 40-44 (4263), 45-53 (12302). Expect 13 to 15 tiles. Needs a dedicated worker."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "7",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24",
+        "36",
+        "42",
+        "48"
+      ],
+      "note": "Jamieson stride misfile, forty-sixth consecutive chapter observed, and it confirms the single-donor-chapter finding made at john 1. Blocks sit at keys 6, 12, 18, 24, 36, 42 and 48: stride of six, offset six, with the slot at key 30 empty and keys 12 and 18 byte-identical (md5 601a0361a31d), so the lattice shows both of the known donor shapes at once. Every block is Jamieson on Mark 12 — consulting on the best plan with a cross-reference to Matthew 22:15 at key 6, the Sadducees who say neither angel nor spirit at keys 12 and 18, the words they had just quoted to entangle him at key 24, the chief seats at key 36, the widow's superfluity and what they had to spare at key 42, and the pointer to Luke 21 at key 48. So this is a second clean case of one continuous commentary on one other chapter laid down at every sixth key, which strengthens the recommendation that the sweep recover the donor chapter rather than merely discard the blocks. All seven excluded as residue by whoever takes this chapter."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "zechariah",
+      "chapter": "6",
+      "note": "Revising the B-diagnosis rule that was first stated here. The original form held that a B on compress points at a repeated SENTENCE FRAME and a B on ttr at a repeated NOUN, and that the two want opposite edits. Four consecutive polish entries have now shown that this is only true of entries that fail ONE metric. Where an entry is thin on both — hosea 12 key 14 (ttr 0.5608, compress 0.4238), joel 3 key 1 (0.5589 / 0.4252) and hosea 11 key 1 (0.5661 / 0.4311), against hosea 10 key 14 which failed ttr alone — the two faults had one cause every time, and it was the noun, not the frame: a word repeated ten to thirteen times in 600 words drags its frames along with it, because the frames are what carry it. Thinning the dominant nouns lifted compress as much as ttr in all three (compress gains of 0.014, 0.023 and 0.020 without a single sentence deliberately reshaped). So the working rule is now: on a single-metric B, diagnose as before. On a double B, count the nouns FIRST and only fall back to register — the jeremiah 44 case, where no word or frame dominated — when no word is running hot. That ordering matters because rebuilding sentence shapes is the expensive repair and it was not needed in any of the three."
     }
   ]
 }
