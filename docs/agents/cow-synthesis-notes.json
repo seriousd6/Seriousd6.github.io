@@ -100243,6 +100243,28 @@
         "10"
       ],
       "note": "A THIRD kind of unusable voice block, distinct from both misfiled residue and the 203-word truncation: catena key 12's Keil and Delitzsch entry is 26 words consisting of nothing but the verse text, with no comment at all. So the structural voice check (catena labels minus voices minus excluded_voices) now flags at least three different upstream conditions, and they need different responses - residue goes in excluded_voices, a truncated block stays unclaimed and is reported, and a bare verse-text block is simply empty and correctly ignored. Anyone acting on the structural check corpus-wide should classify before remediating, or they will file genuine commentary as residue."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "psalms",
+      "chapter": "5",
+      "verses": [
+        "11"
+      ],
+      "note": "Polish pass. Entry at key 11 was a single-metric B, ttr 0.5752 against the 0.58 floor with compress 0.4445 well clear, so a repeated noun — but this chapter's house style quotes the commentators directly, and nearly all the repetition sat INSIDE the quotations: rejoice eight times and joy seven in 405 words, most of them Clarke's and Henry's and Spurgeon's own words, which cannot be reworded. Two things worked and one did not. What worked was quoting LESS of the repetitive stretches and carrying the dropped sense in varied prose of my own (Gill's righteousness-riches-strength list became merit or wealth or vigour, Clarke's not merely let them rejoice became not a wish but a prediction, Ellicott's lights on the word rejoice became traces the verb), plus dissolving the structural repeats around the quotations (a second where the wicked, a second bliss, a third believer). What did NOT work was adding fresh grounded material: 76 words of unused Gill and Spurgeon lifted the count from 405 to 481 and left ttr exactly where it started, because the addition landed in the densest region and brought the region's own vocabulary with it. 405 words to 453, ttr to 0.5937, compress to 0.4509, grade A with 0.0119 of margin. The lesson for quote-heavy Psalms entries is that the lever is the quotation boundary, not added length."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "2",
+        "9"
+      ],
+      "note": "Three standing ENTITIES advisories on this chapter, none of them in the entry polished and all three predating it, recorded so nobody chases them twice. Behind is a sentence-initial common word and is the left-anchor false positive already recommended for the _LABEL_RE fix. Rabbi and Elohim are almost certainly orthography misses of the kind seen five times before (Hadrian for Adrian, Peraea for Peraea with the ligature), where the source carries the form under different spelling or diacritics. The chapter gate passes with all three present, so they are advisory only, but they are the sixth, seventh and eighth instances of the fidelity checker flagging a form its own corpus holds."
     }
   ]
 }
