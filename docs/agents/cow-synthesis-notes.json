@@ -100143,6 +100143,16 @@
         "9"
       ],
       "note": "Two more genuine-but-unclaimed voices, found by the same structural test that caught job 30 v15 and ezra 7 v28: John Wesley has real blocks for v4 ('After the lightning, which is seen before the thunder is heard') and v9 ('Cold - Freezing winds'), and in both cases the prose already carried his point under another commentator's name. Both are SHORT blocks, which is probably why they were skipped - the generator seems to drop a voice whose contribution is a one-line gloss even when that gloss is exactly what the prose goes on to say. Four instances now across four chapters; the test is cheap (catena <strong>Label:</strong> blocks minus voices minus excluded_voices) and should be run corpus-wide."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "joel",
+      "chapter": "3",
+      "verses": [
+        "1"
+      ],
+      "note": "Polish pass. Entry at key 1 was thin on both metrics, ttr 0.5589 against the 0.58 floor and compress 0.4252 only 0.0032 clear of 0.42, and the cause was a single crowded vocabulary rather than a register fault: God thirteen times in 649 words, people nine, whole eight, world five, year four, carrying a nest of frames with them (of the whole four times, the whole world three, it shall be three, shall be the three, of God and three, the latter times of twice). Thinned the dominant nouns and let the frames go with them: entire course of history for whole course of the world, all Israel for the whole Israel of God, all the nations for the judge of the whole world, and Henry's two halves marked First and Second instead of two matching it shall be the year of clauses. Every attribution and claim is unchanged; whole import is kept because it is Clarke's own phrase. 649 words to 606, ttr to 0.6084, compress to 0.4486, grade A with 0.028 of margin."
     }
   ]
 }
