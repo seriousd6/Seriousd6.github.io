@@ -99974,6 +99974,45 @@
         "1"
       ],
       "note": "A polish job where the only defect was metric, and the fix was pure function-word tightening. Pericope 1 was recorded grade B at 649 words against a 650 ceiling, so nothing could be added and the ttr had to come from cutting. 'the' alone was 86 of 649 words (13.3%). Rewriting possessives and compressing 'the X of the Y' constructions ('the dimensions of the building' -> 'the building's dimensions', 'the idols of the heathen' -> 'heathen idols', 'the course of the sun' -> 'the sun's course') removed 46 words, almost all of them repeated function words, and took ttr 0.5748 -> 0.5899 with no claim touched. This is the cleanest confirmation yet of the rule from job 30 v14/v18: cutting raises ttr when and only when it removes repeats. Where a verse is at the word ceiling AND lexically narrow, function-word density is the lever to check first."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "13",
+      "note": "THIRD consecutive chapter with the same scaffolding signature, and the shape is now specific enough to grep for. job 13: 24/28 verses carried 'the witnesses do not divide', and 20 of those used one exact template - 'The witnesses do not divide; they agree that X' - where the fix is simply to delete the frame and let X stand as the assertion it already is. job 30 was 23/31, ezra 7 17/25. All three legacy-unversioned. That sub-template matters because it is mechanically repairable: the clause after 'they agree that' is already good prose, so a scripted pass could strip the frame and capitalise, leaving only the varied cases for a writer. Worth measuring corpus-wide before anyone repairs more chapters by hand."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "13",
+      "verses": [
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "Misfiled 'Jamieson, Fausset and Brown' residue - the THIRTEENTH chapter, and the THIRD running where it arrives as a contiguous run from one foreign passage. All three blocks here are 1 Chronicles 23 (David makes Solomon king; the Levites' fathers' houses; Laadan and Shimei). job 30's two were both 2 Chronicles 7; ezra 7's three were all Josiah's reform (2 Kings 22-23 / 2 Chron 34-35). The pattern is now firm enough to act on: residue comes in runs sharing one source passage, so finding one block means checking every key in that chapter and expecting its neighbours to be from the same place."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "13",
+      "verses": [
+        "15"
+      ],
+      "note": "A grounding false-negative mode not previously recorded: TRANSLITERATION VARIANTS of one technical term. v15's prose says 'Ketib' three times and nothing in the catena matches, which reads exactly like the invented-apparatus fabrications found in ezra 2 and 1chronicles 25. But Gill writes 'Cetib' and Keil and Delitzsch write 'Chethib' - the prose simply normalised to the modern spelling. 'Masoretic' likewise answers to K&D's 'Masora magna'. Diacritic folding does not catch this; the check needs an equivalence set for the Hebrew-apparatus vocabulary (Ketib/Cetib/Chethib/Kethibh, Qere/Keri/Qeri, Masora/Masoretic, Targum/Chaldee). Add to the list alongside abbreviations, diacritics, roman numerals and embedded newlines."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "rejected",
+      "book": "job",
+      "chapter": "13",
+      "verses": [
+        "15"
+      ],
+      "note": "METHOD WARNING, from a false alarm I raised and then cleared on this verse. v15's catena has no Henry block, yet the prose quotes Henry at length, so I grepped the chapter for the prose's phrases - 'come forth as an enemy', 'well pleased with him' - and got NONE, which looked like fabrication. It was not: Henry's block sits in key 13 and reads 'well pleased with God as a friend even when he seems to come forth against us as an enemy'. I had been grepping the PROSE'S OWN PARAPHRASE against the source, which is circular and will always fail on any well-compressed summary. Falling back to distinctive content words ('labour to come up to', 'high expression of faith') hit immediately. Rule: never test a paraphrase; test the rare nouns and verb stems inside it."
     }
   ]
 }
