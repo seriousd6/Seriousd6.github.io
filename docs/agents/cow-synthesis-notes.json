@@ -100368,6 +100368,116 @@
       "book": "2samuel",
       "chapter": "18",
       "note": "Two more abbreviation misses for the grounding checker, both of which produced false alarms here. (1) 'Hom. Il. vii., ver. 305' is Clarke citing Homer's Iliad, so the prose's 'in Homer Ajax gave his to Hector' is grounded though 'Homer' appears nowhere in the catena. (2) Ellicott cites 'Judg. 11:43' and '1 Samuel 11:11' and the prose names their content as 'Jephthah' and 'Saul at Jabesh' - the reference-gloss case, but neither name is in the source. Add Hom./Il. to the abbreviation map alongside LXX./Vulg./J. D. Mich., and note again that a bare chapter-and-verse citation makes any name the prose draws from it look invented. Fifteenth chapter for misfiled JFB as well, six verses here (v3, v9, v15, v21, v27, v33), source passages Judges 20-21 and Joshua 8 - still Kings/Chronicles/Judges, still the historical books."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "18",
+      "verses": [
+        "1-34"
+      ],
+      "note": "Legacy rewrite. Served as a polish pick with all 33 tag entries legacy-unversioned, the fourth mis-routed chapter in four batches, but unlike the other three it is small enough to do: 6804 usable source words over 33 source keys, well inside the batch ceiling, so it was taken rather than declined. Tiled into five entries: 1-3, 4-14, 15-27, 28-31, 33-34. The source has NO key 32, so the closing stretch had to be split at that hole rather than run 28-34, the same rule learned at 2chronicles 25. The tiling otherwise follows Henry's three blocks at keys 1, 4 and 28, which mark the alliance, the consultation of the prophets and the battle. After the chrome, the Jamieson misfiles and one dead Keil and Delitzsch block are taken out, about 5050 words are usable, which is why the expansion runs high (0.31, 0.40, 0.56, 0.73, 0.34) — the chapter is almost entirely Ellicott's textual notes (3241 words) and Henry (1606), with Clarke 670, Wesley 242 and Gill 54."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "18",
+      "verses": [
+        "9",
+        "15",
+        "33"
+      ],
+      "note": "Jamieson stride misfile, forty-eighth consecutive chapter, and a fourth confirmation of the single-donor mechanism. Keys 9, 15 and 33 carry blocks of 180, 255 and 38 words on a stride of six with offset three, and every one is Jamieson on 2 Kings 4 and 5: the Shunammite woman disburdening her grief at Elisha's feet at key 9, the official rod sent ahead by the servant and the question whether Elisha shared the necromancers' idea of it at key 15, and at key 33 a block that carries its own chapter header, 2 Kings 5:1-7, Naaman's Leprosy. That header is the first time a misfiled block has named its donor outright. All three excluded as residue. One coincidence worth a second look but NOT worth a conclusion: Clarke's genuine note at key 33 reports the Targum naming Naaman as the archer who shot Ahab and ends by referring the reader to his note on 2 Kings 5:1 for the tradition, so the misfiled block at that key lands on the very chapter Clarke's own cross-reference points at. Keys 9 and 15 have no such pointer, so the stride still explains the pattern and this is probably chance, but if a sweep is ever written it is cheap to test whether a victim key's cross-references predict its donor."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "18",
+      "verses": [
+        "2",
+        "3"
+      ],
+      "note": "Keil and Delitzsch truncation, both blocks cut at exactly 200 words, which is now the eleventh and twelfth block found at that precise length and confirms a fetch cap rather than a parse failure. Key 2 reaches real argument before the cut: the comparison with the fuller account in Kings, the three years without war between Aram and Israel, Ahab's determination with his servants to snatch Ramoth back, and the observation that the chronicler exchanged the exact date for an indefinite one. Key 3 dies entirely in verse quotation, running the text of verses 3 to 7 and reaching no comment at all, so the voice is dead there. Declared for the first entry on the strength of key 2 and silent thereafter; the voice appears nowhere else in the chapter."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "18",
+      "verses": [
+        "34"
+      ],
+      "note": "Ellicott chrome, thirty-third consecutive chapter, and the SECOND instance where the chrome is not terminal, after john 1 key 51. Key 34 carries 163 words of genuine Ellicott on the king holding himself up in the chariot and on the ending the chronicler omits, then the navigation strip and about 980 words of StudyLight furniture — Footnotes, Copyright Statement, the BibleSupport courtesy line, terms links, the sub-menu stylesheet and a long block of page JavaScript — and then John Wesley's 32-word block on the death. Two chapters in a row have now shown the chrome sitting between two voices rather than at the end of the key, which settles the detector question: a rule that trimmed the tail of an oversized terminal block would have eaten Wesley here exactly as it would have eaten Robertson at john 1. The detector has to key on the copyright sentence. The 984-word constant holds to within a few words for the seventh consecutive chapter outside Isaiah."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "4",
+        "22",
+        "26",
+        "31",
+        "34"
+      ],
+      "note": "The Wesley-abridges-Henry pattern at its densest yet: FOUR times in one chapter, and with a second mechanism visible alongside it. Wesley's blocks at keys 4, 22, 26 and 31 each give one of Henry's numbered reflections back in almost the same words — the rule about enquiring by believing prayer, unbiased consultation of the scriptures and our own consciences and regard to the hints of providence; the saying that one lying spirit can make four hundred lying prophets and that the devil becomes a murderer by being a liar; the lot of faithful ministers hated merely for being true to God and just and kind to the souls of men, with that day declaring who was right; and the three senses of Jehoshaphat's cry in Henry's own order. Separately, the Henry block at key 1 has Concise material appended to the exposition proper, and that appendix carries the very sentences Wesley gives at key 34 — what can hurt those whom God will protect, what can shelter those whom God will destroy, Jehoshaphat safe in his robes and Ahab killed in his armour — which Henry also writes in his own block at key 28. So that one antithesis stands three times in this chapter's catena under two labels. It is used ONCE in the prose, attributed to Henry at the verse his block expounds, with Wesley noted as repeating it; the re-quoting cap would otherwise be breached by following the source."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "18",
+      "verses": [
+        "15",
+        "33"
+      ],
+      "note": "Out-of-key voice declaration, fifth chapter. Henry heads only three keys here, 1, 4 and 28, but his key-4 block is a set of six numbered reflections that name the verses they expound, three of which (the lying spirit at verse 21, the chamber within a chamber at verse 24, and Micaiah's appeal to the issue at verse 27) fall inside the entry for verses 15 to 27; and his key-28 block is explicitly in two numbered parts, the second of which cites verse 33. So Henry is declared on both of those entries although no block sits under their keys, on the same ground as at matthew 23, 1chronicles 18, job 33 and job 24: the block names the verses it treats. The tools pass it because synthesis-fidelity.py computes ungrounded_voices per chapter rather than per span, which means the rule is still convention and not contract. Splitting Henry's key-28 block along his own numbering, so that each half lands on the entry whose verse it cites, is the cleanest form of the practice recorded so far and is offered as the pattern for whoever formalises it."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "18",
+      "verses": [
+        "14"
+      ],
+      "note": "Sixth instance of the fidelity checker flagging a name its own corpus holds under a different orthography. Ellicott compares the chronicler's recast answer with the Delphic oracle about the Halys, and the source spells the king's name with the oe ligature, which is the only spelling in the chapter; writing it in plain ASCII raised an ENTITIES flag, and the standing practice is not to carry a ligature into prose. Resolved by naming the river and not the king, so the oracle and its ambiguity survive the sentence. The pattern now has six members (Adrian for Hadrian, the ae ligature in a place name, Talmudic, French, Augustine of Hippo, and this), and the remedy recommended for the checker is the same each time: normalise diacritics and ligatures before testing a proper noun against the corpus."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "18",
+      "verses": [
+        "20"
+      ],
+      "note": "Who the spirit was that volunteered to deceive Ahab. Clarke reports the Targum's answer and calls it a strange gloss: the spirit of Naboth of Jezreel came out from the abode of the righteous, offered to be a spirit of false prophecy in the mouth of the prophets, was granted the power but told that whoever speaks falsely can have no mansion among the righteous and must go forth. Ellicott leaves the spirit unnamed, renders it a spirit of falsehood rather than a lying spirit, and sets beside it the place in Ezekiel where God says of a deceived prophet that he himself deceived him, noting that the verb there rendered deceive is the one rendered entice in this chapter. Henry and Wesley both make it the devil, who becomes a murderer by being a liar."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "18",
+      "verses": [
+        "31",
+        "33"
+      ],
+      "note": "Two divisions in the battle narrative. First, what Jehoshaphat's cry meant: Henry offers three senses and Wesley repeats all three in the same order, a call to his friends to relieve him, a call to his enemies to correct their mistake, or a prayer; Ellicott reasons to the prayer from the text itself, since the Kings account ends at the cry and the clause about the Lord helping him is therefore the chronicler's own addition, which presupposes that he read the cry as a prayer; Clarke quotes the Targum, that Jehoshaphat cried and the Word of the Lord brought him assistance. Second, whether the arrow was aimed: Ellicott canvasses Gesenius, the Greek and the Syriac on the phrase at a venture and judges Rashi best, that the archer did not know why he chose that particular man to shoot at, while Clarke prefers the Targum, which names Naaman as the archer and makes him draw the bow precisely so that the prophecies of Elijah and of Micaiah might be fulfilled."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "18",
+      "verses": [
+        "1-34"
+      ],
+      "note": "Every entry graded A on the first pass of every gate, 5 of 5, with no FLOOR, PAD, THIN, SLOT, NOISE, META, TMPL or UNSOURCED flag and no breach of the quote-led-opening rule. All proper nouns in prose were verified against this chapter's source; the one flag raised, a king's name carried by the oe ligature in the source, was resolved by not using the name. The transliterated Hebrew forms in Ellicott's blocks, which carry diacritics throughout, were deliberately not carried into prose and are described instead. No bare scripture references in the prose, and the antithesis about robes and armour that stands three times in the catena under two labels is used once."
     }
   ]
 }

@@ -1,1268 +1,417 @@
 {
  "1": {
+  "range": "1-3",
+  "pericope_label": "Jehoshaphat, rich and honoured, joined affinity with Ahab by marrying his son to Athaliah; after certain years he went down to Samaria, was feasted with sheep and oxen in abundance, and agreed to go up with Ahab against Ramoth-gilead",
   "voices": [
    "John Gill",
    "Matthew Henry",
-   "Charles Ellicott",
    "Adam Clarke",
-   "John Wesley"
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
   "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the worst match ever made by the house of David — Jehoshaphat, grown greater but not wiser, joined with a degenerate idolater, whether from pride or from a policy of uniting the kingdoms."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'riches and honour' repeated from 2 Chronicles 17:5; the affinity is Jehoram's marriage to Athaliah, and Ahab's seeking it proves Judah's prosperity; the vav is consecutive, not adversative."
-   },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: the increasing riches and honour are the very thing that moved Ahab to court Jehoshaphat's friendship and affinity."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke and Wesley: the affinity is Jehoram's marriage to Ahab's daughter Athaliah."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jehoshaphat's prosperity",
-   "affinity with Ahab",
-   "the marriage of Jehoram and Athaliah",
-   "riches as a snare"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott and Keil: the parallel's exact 'third year' (dated from the Syrian truce, cf. Jehoshaphat's 16th-17th year) is exchanged by the chronicler for the indefinite 'certain years'; the lavish feast is a deliberate plan, and 'persuaded' means 'incited/pricked on' (cf. 1 Chronicles 21:1)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the interval was two years (Syriac, Arabic), or the third year after the affinity was contracted."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the visit to Samaria",
-   "the royal banquet as a snare",
-   "chronology of the visit",
-   "persuaded to war"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: essentially 1 Kings 22:4, from which the narratives coincide; 'Ramoth' means 'heights'; the chronicler disturbs the older symmetry to make Jehoshaphat's assent more definite. Keil sets the exchange at the head of the consultation."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: Ramoth-gilead belonged to Israel but was held by Syria; the whole chapter is explained on 1 Kings 22."
+    "summary": "Gill has the riches and honour still increasing and makes them the reason Ahab sought friendship and affinity, to which Jehoshaphat agreed, and he reports the Syriac and Arabic reading of two years for the interval before the visit."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: 'I am as thou art' — some men's kindnesses are dangerous; Ahab begs help to recover a city that was Jehoshaphat's by right, his own title being usurped."
+    "summary": "Henry divides the king in two, one growing greater by piety and good management and one not growing wiser, calls the marriage the worst match ever made by any of the house of David and offers pride and policy as its motives, reads the feast as a device to wheedle Jehoshaphat into the expedition since the kisses of an enemy are deceitful, and presses the irony that Ramoth and every city of Israel belonged of right to Jehoshaphat as heir of the house of David, so that Ahab was asking help to recover for himself what was never his; he concludes that some men kindnesses are dangerous as well as their society infectious."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke states the affinity plainly, that Athaliah was taken to be wife to Joram, notes that Ramoth-gilead belonged to the Israelites and was then held by the king of Syria, and refers the reader to his fuller notes on the parallel in Kings."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott finds the phrase about riches and honour repeated word for word from the preceding chapter and reads the prosperity of Judah in the fact that so powerful a monarch sought so intimate a connection, dates the marriage eight or nine years before the visit and the visit to the sixteenth or seventeenth year of the reign, treats the royal hospitality as part of a deliberate plan to obtain co-operation, and glosses the verb rendered persuaded as incited or pricked on, a word used especially of urging to evil; Keil and Delitzsch set this account beside the fuller one in Kings, find them agreed except in the introduction, and observe that the chronicler exchanged the exact date in the third year, intelligible only in the light of the earlier wars, for an indefinite one."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How long after the marriage was the visit to Samaria?",
+    "sides": [
+     {
+      "position": "two years, on the authority of the Syriac and Arabic",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "the third year, reckoned from the truce between Syria and Israel, which puts the visit in the sixteenth or seventeenth year of the reign",
+      "holders": [
+       "Charles Ellicott",
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Keil and Delitzsch alone explain why the chronicler dropped the date, that in the third year means nothing apart from the history of Ahab earlier wars.",
+   "Henry alone asks by what right Ahab sought help to recover a city that belonged to Jehoshaphat as heir of the house of David."
+  ],
   "themes": [
-   "Ramoth-gilead",
-   "'I am as thou art'",
-   "a too-easy alliance",
-   "the disputed city"
+   "riches and honour that bought a bad alliance",
+   "a marriage into the house of Ahab",
+   "a feast laid as a snare",
+   "a city claimed by both kings"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
+   }
   }
  },
  "4": {
-  "voices": [
-   "Charles Ellicott",
-   "Matthew Henry",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the great duty of acknowledging God and enquiring at his word before we undertake anything — yet also the great danger of bad company, into which even a good man like Jehoshaphat is drawn."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: enquiry is made by particular believing prayer, unbiased consulting of Scripture and conscience, and a close regard to the hints of providence."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: the words stand exactly as 1 Kings 22:5; 'enquire at the word' is better 'seek the word.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "enquiring at the word of the LORD",
-   "believing prayer",
-   "the danger of bad company",
-   "seeking God before acting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "Charles Ellicott",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'the prophets' (the king's establishment); the chronicler rounds Kings' 'about four hundred' and writes Adonai, not ha-elohim, quietly withholding the covenant name from these court-prophets."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the misery of a man surrounded by flatterers and flattering prophets who cry peace — Ahab was cheated into his ruin, preferring those who humoured him to the one who warned him."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: they consult the prophets about the war, and all except Micaiah promise victory."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the four hundred prophets",
-   "flattery in place of prophecy",
-   "'God will deliver it'",
-   "a hollow unanimity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: the chronicler opens with 'and' for 'but,' standing exactly as the literal Hebrew of 1 Kings 22:7; by asking for a prophet 'besides,' Jehoshaphat tacitly disowns the whole assembly."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: Jehoshaphat's discernment — unable to rest in smooth assurances, he wanted the fair warning of a true prophet rather than the humouring of false ones."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a prophet of the LORD besides",
-   "holy dissatisfaction",
-   "the four hundred disowned",
-   "discernment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: the chronicler aggravates the opposition, 'all his days for evil'; Micaiah = 'Who is like Iah?' (the oldest form of the Name), Imla = 'he is full'; 'let not the king say so' deprecates an omen of evil."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: Jehoshaphat could scarcely find heart for even a mild rebuke of Ahab's hatred of the prophet; Ahab's complaint that Micaiah never prophesies good is in truth his highest commendation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ahab hates the true prophet",
-   "'never good, but evil'",
-   "the meaning of Micaiah's name",
-   "a faint reproof"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'called for one of his officers' is literally 'called to a eunuch' (cf. 1 Chronicles 28:1); the name appears in the contracted form Mikahu, for which the margin gives the usual spelling."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the summons of Micaiah",
-   "the court eunuch",
-   "haste to fetch the prophet",
-   "the machinery of the court"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'were sitting each on his throne'; 'clothed in their robes' lacks the needed pronoun (Syriac 'raiment spotted white and black'); 'void place' = threshing-floor, the word perhaps corrupt from beruddim, 'spotted'; 'were prophesying.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: the Targum's gloss — Ahab consulted false prophets, but Jehoshaphat sought the LORD and prayed at the entering in of Samaria, and before them the false prophets prophesied lies."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the two enthroned kings",
-   "robes and threshing-floor",
-   "two kings, two trusts",
-   "the prophets in full cry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'push' is properly 'butt,' the goring of a horned beast (Daniel 8:4; figuratively Deuteronomy 33:17); 'until they be consumed' = 'unto destroying them,' a promise of total victory."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Zedekiah's iron horns",
-   "acted prophecy counterfeited",
-   "a promise of total victory",
-   "the false sign"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "Charles Ellicott",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'prophesied' is nibbe'im, while v.9's mithnabbe'im can mean 'raving' (Jeremiah 29:26); the nabi is the spokesman/herald of God (Assyrian nabu, the god Nebo); 'and prosper' = 'thou shalt prosper' (cf. Genesis 20:7)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: all save Micaiah promise Ahab victory."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: a king cheated by smooth unanimity was cheated to his ruin, preferring the humourers to the one who warned him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the unanimous chorus",
-   "the meaning of 'prophet'",
-   "heralds of heaven profaned",
-   "'go up and prosper'"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'with one assent' is literally 'one mouth' (cf. Joshua 9:2); better read 'the prophets have with one mouth spoken good'; 'like one of theirs' answers Kings' 'like the word of one of them.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the messenger's counsel",
-   "pressure to conform",
-   "'be like one of theirs'",
-   "the consensus against conscience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'even' is better 'nay, but' — a flat refusal of the messenger's plea; and the chronicler writes 'my God' where Kings has 'Jehovah,' a personal allegiance the four hundred had forfeited."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Micaiah's oath",
-   "'what my God saith, that will I speak'",
-   "the prophet's fidelity",
-   "refusal to conform"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'shall I forbear' (Kings 'shall we'); the chronicler gives a definite reply that 'they' (the Syrians) shall be delivered up, recalling the Delphic oracle to Croesus — though Micaiah's mockery is transparent enough."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Micaiah's irony",
-   "'Go up and prosper'",
-   "holy sarcasm",
-   "the Delphic parallel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: the verse stands word for word as 1 Kings 22:16; 'I adjure thee' is the same solemn charge the high priest laid upon Christ (Matthew 26:63) — a truthful witness bound by God's name to speak a truth that will condemn him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ahab adjures Micaiah",
-   "the truth demanded on oath",
-   "the parallel to Caiaphas",
-   "the king's self-contradiction"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'upon the mountains' (Kings 'unto'); 'as sheep' is 'like the flock,' of sheep and goats — a scattered, shepherdless flock is an army without its king, and the true oracle of defeat."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'all Israel scattered'",
-   "sheep without a shepherd",
-   "the true oracle",
-   "a vision of defeat"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'but evil' as in Kings, with a marginal variation, referring back to the king's complaint at v.7 — Ahab hears the true oracle only as confirmation of his grudge against the prophet."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'did I not tell thee?'",
-   "truth resented as spite",
-   "Ahab's fixed heart",
-   "the message hated with the messenger"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: the chronicler's connectives and abridgement ('hear ye' for 'hear thou'; the shortened host of heaven); the Vulgate renders 'therefore hear the word of the LORD' — the true throne set over the thrones of Samaria."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the heavenly throne",
-   "the host of heaven",
-   "the true court above the kings",
-   "the ground of the oracle"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'one said thus, and another said thus' — the heavenly council debating; the text is certainly right against those who would smooth away a scene that shows Ahab's ruin decreed and the deception permitted within God's government."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'Who shall entice Ahab?'",
-   "the heavenly council",
-   "a decree of ruin",
-   "deliberation before the throne"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "Charles Ellicott",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: render 'and the spirit came forth' — with the article, a single volunteer stepping out of the host to take the commission the LORD had invited."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: the Targum's gloss names the enticing spirit and bars it from returning among the righteous, since one who speaks falsely may keep no mansion there — a curiosity, but resting on the plain sense that the deception was proposed and permitted before God."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Adam Clarke",
-    "note": "Preserves the Targum's fancy that the enticing spirit came forth from the abode of the righteous, offered itself as a spirit of false prophecy, and was then barred from returning among the righteous for having spoken falsely."
-   }
-  ],
-  "themes": [
-   "the volunteer spirit",
-   "'I will entice him'",
-   "the Targum's gloss",
-   "falsehood permitted before God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'become a spirit of falsehood'; Scripture shows God overruling and even sending deception as judgment (Isaiah 19:14; Ezekiel 14:9; 2 Thessalonians 2:11), the verb pittah ('entice/deceive') running through the vision."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: two doctrines — the power of Satan by divine permission (one lying spirit makes four hundred), and the justice of God in giving up to strong delusion those who will not receive the love of the truth."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a lying spirit in the prophets' mouths",
-   "deception as judgment",
-   "God permits but does not author the lie",
-   "strong delusion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'and now' for 'now therefore,' 'these thy prophets' where Kings and several MSS read 'all these' — Micaiah brings the whole vision down on Ahab with a 'therefore.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: 'See the power of Satan! One lying spirit can make four hundred lying prophets,' becoming a murderer by being a liar and destroying men by deceiving them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'the LORD hath put a lying spirit'",
-   "the deception unmasked",
-   "the power of the deceiver",
-   "warned and unheeding"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'smote' is the chronicler's shortened form; the taunt is literally 'where is the way the Spirit of Jehovah passed to speak with thee?' — a mockery that unwittingly concedes the true word came through the one, not the four hundred."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Zedekiah's blow",
-   "violence answering truth",
-   "the taunt that confesses",
-   "the majority affronted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'destined to see' on the day of hiding, in 'a chamber within a chamber'; that Zedekiah's later history is unrecorded shows (with Ewald) the original narrative was much fuller than this extract."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the persecutor is 'made to see in that day' what he will not now believe; the day always comes that declares who was right and who wrong."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the day of hiding foretold",
-   "the false prophet's reckoning",
-   "'a chamber within a chamber'",
-   "the lost sequel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: the chronicler addresses several attendants ('take ye') where Kings has one; 'governor' is sar, a prefect over the city; 'carry back' is literally 'make him return' to custody."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Micaiah handed to custody",
-   "truth silenced not answered",
-   "the machinery of arrest",
-   "Amon and Joash"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'of affliction' (lahats) is accusative — 'bread with stint, water with stint,' literally 'squeezing' (cf. Isaiah 30:20); 'until I return in peace' is the chronicler's correction of 'until I come.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: 'this fellow' — the faithful minister's frequent lot, hated for being true to God; yet that day will declare who is right, to the consolation of the persecuted and the confusion of the persecutors."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "prison and bread of affliction",
-   "'until I return in peace'",
-   "the persecuted minister",
-   "the coming vindication"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: the words of 1 Kings 22:28; Micaiah makes the bystanders witnesses; 'Hearken, all ye people' opens the book of Micah (Micah 1:2), and (with Thenius) the section bears marks of historical truth, likely from Jehu son of Hanani's history (2 Chronicles 20:34)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the persecuted may appeal to the issue, as Micaiah does; the day will declare who is in the right and who in the wrong."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'if thou return, the LORD hath not spoken by me'",
-   "the prophet stakes all on the event",
-   "'Hearken, all ye people'",
-   "the historical source"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
+  "range": "4-14",
+  "pericope_label": "Jehoshaphat asked for the word of the LORD; Ahab gathered four hundred prophets who promised victory, and when Jehoshaphat asked for another Micaiah was sent for, while the two kings sat enthroned in their robes and Zedekiah made horns of iron",
   "voices": [
    "Matthew Henry",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "schools": [
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: Jehoshaphat will be endangered in his robes yet delivered, Ahab disguised yet slain — no art or arms can save those God has appointed to ruin, nor any danger destroy those he will protect."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: both kings go up against the Syrians, the confederate armies are defeated, and the king of Israel is slain."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the march to Ramoth-gilead",
-   "the word about to be proved",
-   "robes and disguise",
-   "providence governs the battle"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "Charles Ellicott",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'disguising myself and entering!' is a hurried, exclamatory idiom; 'they went' is the chronicler's reading where Kings has 'he' (Ahab) went into the battle."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: refers the disguise to his fuller treatment at 1 Kings 22:30."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: in urging Jehoshaphat to keep his robes Ahab really aimed at his ally's life — unprincipled treachery, justly requited when the disguise failed to save Ahab himself."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ahab's disguise",
-   "robes urged on Jehoshaphat",
-   "suspected treachery",
-   "outwitting the word of God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: Kings numbers the chariot-captains as 'thirty and two' (from the earlier Syrian wars, 1 Kings 20), which the chronicler passes over; the Syrian order to spare all but the king of Israel concentrates the whole force on Ahab alone."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Syrian command",
-   "the hunt for one man",
-   "strategy and prophecy",
-   "Benhadad's order"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "Charles Ellicott",
-   "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'the LORD helped him, and God moved them from him' is the chronicler's own addition, reading the cry as a cry to God; a perfectly natural event (the captains discovering their mistake) is rightly regarded as providential, for Hebrew faith knows no order of the world apart from the constant activity of Jehovah."
+    "summary": "Henry declines to repeat what he wrote on the parallel in Kings and draws reflections instead: the duty of acknowledging God in all our ways and enquiring at his word, an enquiry made by particular believing prayer, by unbiased consultation of the scriptures and our own consciences, and by regard to the hints of providence; the danger of bad company even to good men, since Jehoshaphat in complaisance sits in his robes hearing lies told in the name of the Lord and will rebuke neither the king who hates a prophet nor the false prophet who abuses the faithful seer, and those who venture among the seats of the scornful cannot come off without a great deal of the guilt of omitted duty; and the unhappiness of a man surrounded by flatterers who cry peace, since that counsel is not always best for us which is most pleasing to us."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke gives the Targum ('the Word of the LORD brought him assistance'); Wesley: the cry — to friends, to enemies, or to God — was not in vain, for an invisible power moved the captains to depart."
+    "summary": "Wesley gives Henry rule about enquiring back in almost the same words; Clarke quotes the Targum contrast, that Ahab consulted false prophets while Jehoshaphat sought instruction from the presence of the Lord and prayed at the entering in of Samaria, and that before these all the false prophets prophesied lies."
    },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott marks where the chronicler differs from Kings, the four hundred given flatly rather than about four hundred, the true God for the Lord, the singular shall I go which he thinks obviously more appropriate, and Ahab complaint sharpened to all his days for evil, extending the grievance over the prophet whole career; he derives Micaiah name from an older form meaning who is like Iahu, Iahu being probably the oldest shape of the divine name, and the father name from a root meaning he is full; he hears Jehoshaphat deprecating an omen; he prefers the Syriac reading of the robes, raiment spotted white and black, since the Hebrew lacks the possessive, and takes the void place for a threshingfloor while suspecting the word corrupt and grown out of the term for spotted; he distinguishes the participle used of the court prophets, which also means mad or raving, from the plainer form used later, and traces the root to an Assyrian verb meaning to call or proclaim; and he compares Micaiah first answer, as the chronicler has recast it to name the Syrians outright, with the Delphic oracle about the crossing of the Halys."
+   }
+  ],
+  "outliers": [
+   "Ellicott alone compares the recast answer with the studied ambiguity of the Delphic oracle.",
+   "Clarke alone brings in the Targum picture of Jehoshaphat praying at the entering in of Samaria while the false prophets spoke."
+  ],
+  "themes": [
+   "four hundred prophets with one voice",
+   "a king who hated the one prophet who told him the truth",
+   "two thrones at the gate of Samaria",
+   "an oracle framed to be read either way"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.4
+   }
+  }
+ },
+ "15": {
+  "range": "15-27",
+  "pericope_label": "Micaiah foretold Israel scattered as sheep without a shepherd, then told of the LORD on his throne and of the spirit that volunteered to be a lying spirit in the mouth of the prophets; Zedekiah struck him and Ahab sent him to prison on the bread and water of affliction",
+  "voices": [
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "schools": [
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: Jehoshaphat cried to God and was heard, the LORD moving the captains to depart — God has all men's hearts in his hand and turns them against their own first intentions."
+    "summary": "Henry takes the permission given to the lying spirit as the heart of the passage: one lying spirit can make four hundred lying prophets and use them to deceive a king, so that the devil becomes a murderer by being a liar and destroys men by deceiving them, and there is justice in God giving up to strong delusions those who will not receive the love of the truth but rebel against it; he closes on the hard case of faithful ministers, hated and persecuted and ill-treated for being true to their God and just and kind to the souls of men, with Micaiah buffeted, imprisoned and condemned to prison fare for discharging a good conscience, yet able to appeal with assurance to the issue, as all may who are persecuted for their faithfulness, since the day will declare who was right and who wrong."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the Targum strange gloss that the volunteer was the spirit of Naboth of Jezreel, who came out from the abode of the righteous and offered to be a spirit of false prophecy in the mouth of the prophets, was given the power but told that whoever speaks falsely can have no mansion among the righteous and must go forth and do as he had said; Wesley repeats Henry sayings about the one lying spirit and about the lot of faithful ministers almost word for word."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott compares Ahab adjuration with the demand the high priest would put to Christ, notes that the chronicler abridged the host of heaven standing on both sides of the throne to the right hand only, reports that the Greek translators read the opening word of the vision as a denial rather than a consequence, and holds the odd dialogue form of the next verse certainly right; he renders a spirit of falsehood rather than a lying spirit and sets beside it the place in Ezekiel where God says of a deceived prophet that he himself deceived him, the verb there being the one rendered entice here; he makes Zedekiah destined rather than merely liable to see the day of hiding in a chamber within a chamber, and follows Ewald in taking the silence about his later history for a sign that the original narrative held much more than the present extract; he reads the prison fare as bread with stint and water with stint, the word meaning literally a squeezing, which the Vulgate turns into a little bread and a very little water and the Syriac into enough of each to keep life; and he observes that Micaiah closing words to the bystanders are the very words that open the book of Micah, where Hitzig makes them a borrowing and Thenius argues instead that the section bears indubitable marks of historical truth and probably comes from the history of Jehoshaphat written by Jehu the son of Hanani."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who was the spirit that volunteered to deceive Ahab?",
+    "sides": [
+     {
+      "position": "the spirit of Naboth of Jezreel, come out from the abode of the righteous, which Clarke reports from the Targum and calls a strange gloss",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "an unnamed spirit of falsehood, with the stress laid on the word in Ezekiel where God says he himself deceived the prophet he gave over",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the devil, who becomes a murderer by being a liar and destroys men by deceiving them",
+      "holders": [
+       "Matthew Henry",
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Ellicott alone follows Ewald in reading the silence about Zedekiah later history as evidence that the chronicler is quoting a fuller narrative.",
+   "Ellicott alone weighs Hitzig against Thenius on whether Micaiah closing words were borrowed from the book of Micah or belong to an older history of Jehoshaphat."
+  ],
   "themes": [
-   "Jehoshaphat mistaken for Ahab",
-   "the cry for help answered",
-   "providence in a natural event",
-   "God moves the captains' hearts"
+   "sheep without a shepherd",
+   "a spirit that volunteered to lie",
+   "four hundred mouths and one deceit",
+   "bread and water of affliction"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.56
+   }
+  }
+ },
+ "28": {
+  "range": "28-31",
+  "pericope_label": "Both kings went up to Ramoth-gilead; Ahab disguised himself while Jehoshaphat wore his robes, and the Syrian captains, ordered to fight only with the king of Israel, surrounded Jehoshaphat until he cried out and the LORD drew them away from him",
+  "voices": [
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry suspects that Ahab, while professing friendship, was really aiming at Jehoshaphat life so as to have the management of his own son-in-law the successor, since otherwise he would never have advised him to enter the battle in royal raiment and make himself an easy mark; if that was the design it was as unprincipled a treachery as ever man was guilty of, and Ahab was justly taken in the pit he had dug for his friend, while the unwary prince, vigorously attacked, would have wished himself too late in the habit of the poorest soldier. Henry offers three senses for the cry and draws the conclusion that God has all men hearts in his hand and turns them as he pleases, contrary to their own first intentions, so that many are moved unaccountably both to themselves and others by an invisible power."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley gives Henry three senses of the cry in the same order and adds that it was not in vain, since God moved the captains to depart; Clarke quotes the Targum, that Jehoshaphat cried and the Word of the Lord brought him assistance, and refers to his notes on the parallel in Kings for the disguise."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott hears Ahab words as a hurried exclamation, disguising myself and entering, and notes that where Kings has Ahab alone go into the battle this account has both kings go, with the Syriac, the Greek, the Vulgate, the Arabic and the Targum agreeing; the thirty-two captains of Kings are left unnumbered here because the chronicler passed over the earlier war they belong to, though the Syriac and Arabic supply the number, and the verb of the encirclement is better rendered came round against him than turned aside against him, the difference in the Hebrew turning on half a letter. Since the Kings account ends at the cry, he holds the clause about the Lord helping him and inciting the captains away to be from the chronicler own pen, and reasons that the chronicler must have taken the cry for a prayer, a sense the verb often bears; the captains discovering their mistake and retiring is a perfectly natural event rightly called providential, since Hebrew faith knows nothing of an order of the world that can be separated even in thought from the constant personal activity of God."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What did Jehoshaphat cry mean?",
+    "sides": [
+     {
+      "position": "left open among three, a call to his friends to relieve him, a call to his enemies to correct their mistake, or a prayer to God",
+      "holders": [
+       "Matthew Henry",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "a prayer, since the clause about the Lord helping him is the chronicler own addition and presupposes it",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "a prayer answered, the Word of the Lord bringing him assistance, as the Targum has it",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Ellicott alone identifies the clause about the Lord helping Jehoshaphat as an addition from the chronicler own pen and reasons from it to the sense of the verb.",
+   "Henry alone reads the advice to wear the robes as an attempt on Jehoshaphat life."
+  ],
+  "themes": [
+   "a king in disguise and a king in his robes",
+   "a mistake in the Syrian ranks",
+   "a cry heard in the middle of a battle"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.73
+   }
   }
  },
  "33": {
+  "range": "33-34",
+  "pericope_label": "A man drew a bow at a venture and smote the king of Israel between the joints of the harness; Ahab held himself up in his chariot facing the Syrians until the evening, and died",
   "voices": [
+   "Matthew Henry",
+   "Adam Clarke",
    "Charles Ellicott",
-   "Adam Clarke"
+   "John Wesley"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Ellicott: 'at a venture' means without design (cf. 2 Samuel 15:11; Rashi: 'without knowing why he chose that man'); the wound fell at the one opening of the breastplate, where the versions only guess at the armour's anatomy."
+    "summary": "Henry sets the two kings side by side: wicked Ahab disguising himself, arming himself, as he thought securing himself, and slain all the same, since no art and no arms can save those whom God has appointed to ruin, so that Jehoshaphat is safe in his robes and Ahab killed in his armour, the race not being to the swift nor the battle to the strong."
    },
    {
     "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke prefers the Targum, which names the archer as Naaman, captain of the host of the great king of Syria, drawing a bow that the prophecy of Elijah the Tishbite and of Micaiah the son of Imla might be fulfilled and smiting the king between the heart and the caul of the liver where the coat of mail is joined; he admires the last act of the king of Israel as true personal courage and patriotism, since Ahab knew his troops would give way at once if they found he was mortally wounded and that the slaughter in the pursuit would be great, so that but for the accident the Syrians had probably been defeated; and he closes with a caution the reader should never forget, that God is repeatedly represented in the Bible as doing what, in the course of his providence, he only permits to be done. Wesley puts Henry antithesis of robes and armour in two lines."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Clarke: the Targum names the archer a Syrian captain and reads the random shot as the appointed fulfilment of the prophecies spoken against Ahab, the arrow finding the seam of the mail."
+    "summary": "Ellicott compares the phrase at a venture with a similar expression elsewhere which Gesenius interprets as without thought of evil design, calls the Greek with good aim a bad guess, reports the Syriac innocently straight before him, and judges the explanation of Rashi best of all, that the archer did not know why he chose that particular man to shoot at; he takes the joints of the harness for the breastplate, with the Syriac reading between the division of his mail, and dismisses the Greek in the midst of the lungs and breast and the Vulgate between the neck and shoulders as mere guesses; he prefers the reading of this book, that the king continued holding himself up in the chariot facing Aram until the evening, to the reading in Kings, because the sense is that Ahab bravely bore up against the pain of his wound in order not to discourage his own side by retiring from the field; and he explains the omission of the return of the army and the washing of the chariot at the pool of Samaria by Jehoshaphat having had no part in it, and perhaps by the chronicler true perception of the real climax of this vivid story of the olden time."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Was the arrow aimed at Ahab or not?",
+    "sides": [
+     {
+      "position": "not aimed: the archer did not know why he chose that particular man to shoot at, which Ellicott judges the best of the explanations offered",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "aimed, Naaman drawing the bow against him that the prophecies of Elijah and Micaiah might be fulfilled, as the Targum has it",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Clarke alone presses the general caution that Scripture represents God as doing what his providence only permits to be done.",
+   "Ellicott alone prefers the reading of this book to that of Kings on the ground of what it implies about Ahab courage."
+  ],
   "themes": [
-   "the arrow 'at a venture'",
-   "the decree executed blindly",
-   "the unguarded seam",
-   "prophecy fulfilled in Ahab's wound"
+   "an arrow shot at a venture",
+   "a king propped up in his chariot until evening",
+   "armour that could not shelter",
+   "a story the chronicler ends at its climax"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "Charles Ellicott",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'increased' = 'grew' (cf. Genesis 40:10); Ahab 'continued holding himself up in the chariot' — the chronicler's preferable reading; and the sequel (1 Kings 22:36-38) is omitted because Jehoshaphat had no part in it and the true climax is the king's death at sundown."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: real courage and patriotism in Ahab's holding himself up lest his troops give way; and the standing truth that God is represented as doing what in his providence he only permits."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.34
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the dying king upright in his chariot",
-   "death at sundown",
-   "the chronicler's climax",
-   "God permits what he is said to do"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
