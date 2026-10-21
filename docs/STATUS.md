@@ -1,7 +1,16 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-10-21** (new single-page topical study, **Serving on a
+> Last updated: **2026-10-21** (new single-page topical study, **Self-Defense
+> as a Christian**, at `topics/self-defense/` — what Scripture says about
+> defending life (Exodus 22, Genesis 14, Nehemiah 4, Proverbs 24, Romans 13),
+> Jesus' hard sayings in context (Matthew 5:38–42, Peter's sword), defending
+> yourself versus others and the non-resistance tradition stated respectfully,
+> six limits on the heart and conduct of a defender, hard questions (lethal
+> force, property, firearms, aftermath), a prayer, and a 17-row key-verses
+> table. All Scripture is quoted from the BSB; a scripted check found all 58
+> quoted segments verbatim in `data/bible/BSB/`. Registered in `topical[]`.
+> Also **2026-10-21**: new single-page topical study, **Serving on a
 > Jury as a Christian**, at `topics/jury-duty/` — whether a believer may serve
 > (Romans 13, Jeremiah 29:7, the lay judges of Exodus 18, "do not judge" in
 > context), God's heart for justice, how a juror should act at each stage
