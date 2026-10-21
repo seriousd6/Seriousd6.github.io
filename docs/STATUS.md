@@ -1,7 +1,17 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-10-21** (new single-page topical study, **Self-Defense
+> Last updated: **2026-10-21** (new single-page topical study, **Signs,
+> Tongues, and the Marks of a True Believer**, at `topics/signs-and-tongues/` —
+> Mark 16:17–18 and the textual question about Mark 16:9–20, tongues and gifts
+> in Acts and 1 Corinthians 12–14, why no single sign proves the Spirit's
+> presence (1 Cor 12:29–30, Matthew 7:21–23, Deuteronomy 13), the Pentecostal,
+> continuationist and cessationist positions stated as each would state them,
+> seven New Testament marks of a true believer, practical guidance for those
+> with and without the gift, and an 18-row key-verses table. All Scripture is
+> quoted from the BSB; a scripted check found every quoted Scripture segment
+> (97) verbatim in `data/bible/BSB/`. Registered in `topical[]`.
+> Also **2026-10-21**: new single-page topical study, **Self-Defense
 > as a Christian**, at `topics/self-defense/` — what Scripture says about
 > defending life (Exodus 22, Genesis 14, Nehemiah 4, Proverbs 24, Romans 13),
 > Jesus' hard sayings in context (Matthew 5:38–42, Peter's sword), defending
