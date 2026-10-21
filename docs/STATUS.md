@@ -1,7 +1,16 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-09-13** (**COW synthesis loop re-aimed.** Generation
+> Last updated: **2026-10-21** (new single-page topical study, **Serving on a
+> Jury as a Christian**, at `topics/jury-duty/` — whether a believer may serve
+> (Romans 13, Jeremiah 29:7, the lay judges of Exodus 18, "do not judge" in
+> context), God's heart for justice, how a juror should act at each stage
+> (selection, trial, deliberation, afterward), four hard questions (unjust law,
+> capital cases, mercy vs. justice, heavy cases), a juror's prayer, and a 14-row
+> key-verses table. All Scripture is quoted from the BSB in `data/bible/BSB/`;
+> a scripted check found all 36 quoted passages verbatim in that text.
+> Registered in `topical[]`.)
+> Previously **2026-09-13** (**COW synthesis loop re-aimed.** Generation
 > finished at 1,189/1,189 on 2026-09-12 and the repair queue emptied behind it,
 > leaving the loop deadlocked: the only chapter left in `--queue auto` was
 > numbers 31, blocked on a source defect, and every worker spent nine days
