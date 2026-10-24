@@ -100806,6 +100806,113 @@
       "book": "1kings",
       "chapter": "1",
       "note": "MIS-ROUTED LEGACY, the twenty-third found: the picker offered '1kings 1' as a polish, but all 53 entries carry standard legacy-unversioned and none carries cow-prose-rules-2026-08-09, so it is a legacy rewrite however it is labelled. It reached the polish queue on the strength of one key graded B (key 36). Not taken this batch - at 53 keys and 22,789 usable source words it is a whole-context job, and the batch had already spent its budget on the job 27 rewrite. Recording it so the count keeps rising: the no-qa-stamp routing test under-fires, and a chapter whose entries are ALL legacy should never be served as polish no matter how its grades read. The cheap fix is the one already recommended - route on the presence of the current standard stamp, not on grade - and until it lands, every worker must re-test the routing of each polish pick by hand, which is exactly the kind of check a queue is supposed to make unnecessary."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "4"
+      ],
+      "note": "Eighteenth chapter in which a Jamieson, Fausset and Brown block is misfiled under a key it has nothing to do with. Here it sits under key 4, Job's oath that his lips shall not speak wickedness, and reads: '(See on 1Ki 7:49). The increased number was not only in conformity with the characteristic splendor of the edifice, but also a standing emblem to the Hebrews, that the growing light of the word was necessary to counteract the growing darkness in the world [Lightfoot].' That is JFB on the ten candlesticks of 2 Chronicles 4. Declared in excluded_voices and nothing carried. The reason this instance is worth recording separately is the trailing '[Lightfoot]': the bracketed source JFB cites inside the misfiled block is itself a VOICE_LABELS entry, so a name-marked segment scan reads it as a one-word Lightfoot block and reports a nineteenth voice that does not exist. Any future automated residue sweep must strip bracketed inline citations before counting segments, or every misfiled JFB block that quotes an authority will generate a phantom second finding."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "12",
+        "21"
+      ],
+      "note": "A new member of the attribution-defect family, and the first one found TWICE in a single chapter: a rendering that the commentator explicitly credits to a third party, carried in the prose as the commentator's own. Clarke on key 12 writes 'The original is very emphatical: hebel tehbalu, and well expressed by Mr. Good: Why then should ye thus babble babblings!'; the prose had Clarke himself rendering it. Clarke on key 21 writes 'Such as is called by Mr. Good, a levanter, the euroclydon, the eastern storm of Act 27:14'; the prose had Clarke identifying it. Both fixed. This differs from the zechariah 13 case (Hitzig, Kliefoth anonymised out of existence) in that the reported critic is not dropped but SILENTLY ABSORBED, which is worse: the prose reads as fully attributed and nothing looks missing. It is detectable, though, and cheaply: the carrier is always a short credit phrase immediately before or after the quoted words. A lint over /(?:by|following|as|with) (?:Mr\\.|Dr\\.|Prof\\.) [A-Z][a-z]+|well expressed by|according to [A-Z][a-z]+/ inside a voice block, cross-checked against whether the prose names that third party anywhere in the verse, would have caught both of these. Clarke is the voice to watch: he quotes Good, Parkhurst, Thevenot and the Chaldee by name throughout this chapter alone."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "3"
+      ],
+      "note": "The pre-existing B here was fixed by RESTORING dropped content, not by shaving repeats, and the sequence is worth recording because the first two rounds of cutting moved the metric almost nowhere. Baseline w=447 ttr=0.5530. Compressing Henry's thirteen occurrences of 'breath' plus a carrier fix got 0.5620; restoring Clarke's transliterated Hebrew (nishmathi, ruach Eloah, nismath chaiyim, lenephesh chaiyah) got 0.5719; adding 66 words of Henry's genuinely dropped caution about peremptory resolutions moved it to 0.5711, i.e. BACKWARDS. The thing that actually worked was reading the worst MATTR window instead of the whole-verse frequency table. Every one of the four lowest windows sat at the OPENING, and the cause was three restatements of the same clause inside 150 words: the verse quoted in full, then Gill's 'so long as breath remained', then K&D's 'for still all my breath is in me, and the breath of Eloah in my nostrils'. Dropping the opening verse quotation and letting K&D's rendering be the one full citation took it to 0.5776; de-duplicating 'term' and 'life' in the same span, 0.5794; thinning the 'it/us/we' pile in Henry's hortatory paragraph, 0.5875 and an A at 517 words. The lesson on top of the existing conditional-lever rule: run the per-window MATTR, not just the frequency count. The frequency count says WHICH words repeat; only the window says WHERE, and a verse can be lexically fine on average while one dense patch of restatement holds the mean below the floor."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "6"
+      ],
+      "note": "The 203-word Keil and Delitzsch truncation did positive damage here, not just loss, and this is the first case recorded of that. Their key-4 block covers vv. 4-6 by span and is cut mid-sentence at exactly 203 words, on the words 'The heart is used here as the seat of'. The prose had completed it: 'the heart, they observe, standing here for the seat of self-knowledge.' That completion is plausible and may even be right, but it is the WRITER's and reads as K&D's. Rewritten to stop where the source stops. The general warning: the truncation does not only remove material, it leaves a dangling subordinate clause that invites completion, and a completion is indistinguishable in the finished prose from a quotation. Any verse whose source block ends on 'as the', 'in the sense of', 'because', a colon or an open bracket should be checked for a prose sentence that finishes the thought. Same verse also carried Henry's name in its closing sentence while Henry was not in its declared voices; his key-1 block does cover v. 6 by span, but since the claim attributed to him there (the clear conscience of an honest life) is really Clarke's, the name was dropped rather than the voice added."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "6",
+        "7",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "18",
+        "19",
+        "20",
+        "21"
+      ],
+      "note": "Seventh legacy-unversioned chapter in a row showing the generation-era templating fingerprint, and the highest saturation yet measured: 17 instances of 'the <plural-subject> <verb>' across 23 verses, 74 percent. Eight were the banned literal 'the witnesses do not divide' and six 'so the witnesses'; the remaining three were open-verb forms the banned list does not reach. More useful than the count is the SHAPE, which was almost invariant: eleven of the seventeen were the second half of the opening sentence, in the form '<scene-setting clause> — and the witnesses <verb> <object>'. That is a single generated sentence skeleton, and it means the carrier is not filler sprinkled through the prose but the structural hinge of the opening. Repairing it therefore requires rewriting openings, not deleting phrases, and the honest fix costs some active voice: the replacements here run to passives and to abstract subjects ('attention fastens on', 'the chief labour of the exposition is', 'what first draws comment is'), varied deliberately so the repair does not install a second template. After the pass the family is down to one instance, v. 3's 'the expositors who weigh that clause', which is a concrete relative clause rather than the skeleton. Two side effects of carrier deletion that the lint would not catch and that a reviewer must: v4, v14 and v18 were each left with a dangling 'and that ...' or 'and agree that ...' whose subject had been the deleted carrier. A scan for /[—,;]\\s+(and|or|but|while|yet)\\s+(that |agree|hold|divide|read|note|find|take|insist|differ|part)\\b/ found all three with four false positives, and is worth running after every carrier pass."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "8",
+        "11",
+        "18",
+        "19"
+      ],
+      "note": "Four classes of requote/thin flag judged false positives here, with the grounds, since the same shapes keep recurring. (1) v8 and v11: the verse quoted in full at the head of the entry overlaps a clause of itself quoted later as the lemma a commentator is glossing. That is normal commentary practice, not rule 5's 'same fragment quoted twice', and a requote check keyed on token overlap will flag it in every verse that opens on its own text. (2) v8: the AV 'hope of the hypocrite' against Ellicott's 'hope of the godless' — two different RENDERINGS of one clause, and the difference between them is the whole point of the verse, since Clarke's argument is that chaneph means a polluted wretch and not a religious pretender. Suppressing one would destroy the content. Same for v11 'by the hand of God' against Ellicott's 'of the hand of God', and v19's K&D 'he lieth down rich and doeth it not again'. (3) v19: Ellicott's rendering is broken by an interpolated gloss — 'he openeth his eyes, and it' — his riches — 'is not' — so a naive quote splitter counts it as two spans and pairs them as a requote. (4) v18 THIN-PHRASE 'brief': 'the cocoon of its brief larval life' predicates brevity of the insect, not of the commentary, which is the grammatical distinction that has separated every true rule-2 positive from every false one so far. Nine true positives, nine false; the test has not failed yet."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "6",
+        "9",
+        "10",
+        "12",
+        "13",
+        "15",
+        "17",
+        "20",
+        "21",
+        "22"
+      ],
+      "note": "Ten verses in this chapter depend on a scripture reference the prose SUPPLIES for a citation the scrape stripped, and the distinction that decided how each was graded is worth stating once. Gill's blocks here end sentences on a bare comma-space where the citation stood: 'such as regard iniquity in their hearts, ,' / 'laugh at their calamity, and mock when their fear cometh, ,' / 'a Magormissabib, ,' / 'nor Sodom and Gomorrah, will not spare them, ,'. In each case the source QUOTES OR NAMES the scripture, so the identification is forced by the words already present — Ps. 66:18, Prov. 1:26, Jer. 20:3, 2 Pet. 2:4 — and that is citation repair, not content import; graded A with the note recording which. v15 was graded B instead because its two supplied items are substantive: K&D cite only 'comp. Genesis 23:2' and the prose names SARAH as the mourning in view, and cite 'the psalm of Asaph, 78:64' where the prose states its CONTENT, that the widows there made no lamentation. A name and a fact are imports; a chapter-and-verse number for a quoted line is not. This gives the grounding checker a usable rule for the bare-citation false-negative mode already logged (Jephthah, Saul at Jabesh, Abraham and Melchizedek, Sarah, Noah): resolve the citation and A it when the source's own words fix the target, B it when the prose adds who or what is there."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "22"
+      ],
+      "note": "Key 22 carries StudyLight page chrome in bulk — a navigation list of commentary titles ('Burton Coffman Commentaries Adam Clarke Commentary Albert Barnes Notes John Gill's Exposition Complete List of 144 Bible Concordances'), a devotional index naming Spurgeon twice, a 'Footnotes:' heading, a copyright statement and several hundred bytes of raw CSS. This is a SIXTH kind of unusable block, distinct from the five already logged, and it needs no excluded_voices declaration because it carries no voice header of its own: usable_source_words counts it as unattributed text, which inflates the denominator but claims nothing. The practical hazard is the opposite of the residue cases — a name-based scan sees 'Albert Barnes', 'Spurgeon', 'Adam Clarke' inside the nav list and reports voices present that are not, so a structural check that keys on bare NAMES rather than on 'Name:' headers will manufacture findings here. Both of the checks built this window had to be header-anchored to survive this key. Worth measuring corpus-wide how many chapters carry a trailing chrome block: the signature is reliable, a 'Copyright Statement' or 'terms of use' or '.sub-menu{' string in the catena."
     }
   ]
 }
