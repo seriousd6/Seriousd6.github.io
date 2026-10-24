@@ -100913,6 +100913,78 @@
         "22"
       ],
       "note": "Key 22 carries StudyLight page chrome in bulk — a navigation list of commentary titles ('Burton Coffman Commentaries Adam Clarke Commentary Albert Barnes Notes John Gill's Exposition Complete List of 144 Bible Concordances'), a devotional index naming Spurgeon twice, a 'Footnotes:' heading, a copyright statement and several hundred bytes of raw CSS. This is a SIXTH kind of unusable block, distinct from the five already logged, and it needs no excluded_voices declaration because it carries no voice header of its own: usable_source_words counts it as unattributed text, which inflates the denominator but claims nothing. The practical hazard is the opposite of the residue cases — a name-based scan sees 'Albert Barnes', 'Spurgeon', 'Adam Clarke' inside the nav list and reports voices present that are not, so a structural check that keys on bare NAMES rather than on 'Name:' headers will manufacture findings here. Both of the checks built this window had to be header-anchored to survive this key. Worth measuring corpus-wide how many chapters carry a trailing chrome block: the signature is reliable, a 'Copyright Statement' or 'terms of use' or '.sub-menu{' string in the catena."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "28",
+      "verses": [
+        "19"
+      ],
+      "note": "The reported-authority detector proposed in the job 27 note was built and run here, and it works. Pattern: /(?:as|by|with|following|according to)\\s+(?:Mr\\.|Dr\\.|Prof\\.)?\\s*([A-Z]\\w{3,})\\s+(?:says|relates|observes|thinks|translates|renders|has it|notes|remarks|conjectures)/ over each voice block, with the captured name cross-checked (diacritic-folded) against the whole chapter's prose. Job 28 gave four candidates and exactly one true positive: Gill's 'as Ludolphus says, there are no gems found there' at key 19, which the prose had rendered 'where, he says, gems are rare or wanting' — reading as Gill's own report of a country he had not visited. Fixed to name Ludolphus. The three OK results were genuine: Pliny twice (keys 9 and 18) and Mr. Broughton (key 28), all already credited in the prose. Zero false positives on a chapter dense with reported authorities — Diodorus Siculus, Strabo, Junius and Tremellius, Ludolphus, Peters, Good, Coverdale, Schultens, Schlottmann all appear in these blocks. This is now three consecutive chapters carrying this defect (zechariah 13 anonymised, job 27 absorbed twice, job 28 absorbed once), so it is not a chapter accident, and the detector is cheap enough to run on every chapter. Recommend it be added to the sweep as a standing check rather than rebuilt per worker."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "28",
+      "note": "Heaviest templating saturation measured so far: 28 of 28 verses carried the carrier family, 19 of them the exact banned literal 'The witnesses do not divide; they agree that X' as the CLOSING sentence. That is the same generation-era fingerprint logged for the six previous legacy-unversioned chapters, but in a purer form — in job 27 the skeleton sat in the opening sentence, here it sits in the closing, and the two chapters are adjacent in the same book. So the skeleton varies by chapter while the family does not, which means a repair script keyed on sentence POSITION would miss half the corpus; only the subject-plus-open-verb pattern generalises. A second finding, and the more useful one: removing these closings LOWERS ttr. Two verses that were A before the carrier pass fell below the 0.58 floor after it (v23 from 0.5800 to 0.5778) and v14 got worse (0.5744 to 0.5692), because the deleted frame is mostly distinct function words — 'witnesses', 'divide', 'gather', 'confession' — whose removal costs more distinct tokens than it saves repeated ones. This is the conditional-lever rule firing in the opposite direction from usual, and it means a carrier pass must be re-graded verse by verse afterwards and budgeted for repair, not treated as free. Both were fixed by restoring genuinely dropped source material (see the fidelity notes on 14 and 23), which is the third and fourth time that has worked where cutting would not."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "28",
+      "verses": [
+        "14",
+        "23"
+      ],
+      "note": "Two B verses, both fixed by restoring dropped source material rather than shaving repeats, and in both cases the material was sitting in plain sight. v14 (0.5692 after the carrier pass) closed on a sentence that merely restated Henry's immediately preceding miners-and-mariners pair; Henry's key-12 block, which covers v14 by span, also contains an unused sentence — 'Those who dig into the bowels of the earth, to rifle the treasures there, cannot in these dark recesses find this rare jewel, nor with all their art make themselves masters of it' — plus the two words 'none for grace' dropped from the vein clause. Swapping the restatement for the real sentence took it to 0.5802 and an A at 447 words. v23 (0.5780) was 0.002 short with 222 words of headroom; Ellicott's 368-word block had an unused clause, 'though evil itself may undoubtedly involve and imply the deflection from a previously existing right', and adding it alone gave 0.5820. Running total for the restore-rather-than-cut move: psalms 98 pericope 1, job 27 v3, and now job 28 v14 and v23 — four for four. The diagnostic that found both was the per-window MATTR, not the frequency table: in each case the worst 200-word window sat at the verse's TAIL, which is exactly where a closing restatement lives, and the frequency table gave no hint of that."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "28",
+      "verses": [
+        "10"
+      ],
+      "note": "Nineteenth chapter with a misfiled Jamieson, Fausset and Brown block. This one is the shortest yet and the most clearly orphaned: under key 10, a verse about cutting rivers among the rocks, JFB reads in full 'that is, at the time when this history was composed; for after the Babylonish captivity there is no trace of either ark or staves.' It is a fragment of JFB on the staves of the ark of the covenant — 1 Kings 8:8 or 2 Chronicles 5:9 — and it begins with 'that is,' because the clause it was glossing is not here either. Declared in excluded_voices; nothing carried. Two things worth recording. First, the leading 'that is,' is a usable second signal for this defect class alongside the subject mismatch: a voice block that OPENS on a subordinate connective ('that is,', 'or rather,', 'i.e.,', 'See on') has been severed from its antecedent and belongs elsewhere. Second, the header-anchored check found this cleanly where a bare-name scan would not have: job 28 is thick with names inside blocks (Pliny, Strabo, Diodorus, Ludolphus, Junius and Tremellius, Schultens, Schlottmann) and every one of them would have been reported as an undeclared voice."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "28",
+      "verses": [
+        "2",
+        "3",
+        "6",
+        "11",
+        "13",
+        "25",
+        "26"
+      ],
+      "note": "Seven REQUOTE flags, all judged false positives, and they fall into exactly the two classes already logged — which is now enough instances to say the check as written cannot distinguish them and should be narrowed. Class one, the verse quoted in full at the head of the entry overlapping the clause a commentator is glossing later: v6 ('the stones of it are the place of sapphires' vs 'the place of sapphires'), v13 ('neither is it found in the land of the living' vs 'the land of the living'), v25 ('to make the weight for the winds' vs 'weight for the winds'), v26 ('a way for the lightning of the thunder' vs 'way for the lightning of the thunder'), v2. Class two, two different RENDERINGS of one clause, where the divergence is the content: v3 (AV 'searcheth out all perfection' vs Keil and Delitzsch 'searcheth out to the furthest bound') and v11 (AV 'he bindeth the floods from overflowing' vs the rendering 'from weeping'). Suppressing either member of a class-two pair would delete the reason the verse has a discussion at all. Concrete narrowing that would clear all seven without weakening the rule: exempt a later span that is a contiguous SUBSTRING of the entry's first quoted span, and exempt a pair whose non-overlapping tokens include a translation variant, i.e. where the two spans differ by content words rather than only by length. Rule 5's real target — the same fragment quoted twice to pad — is a pair with identical or near-identical tokens in neither of those relations."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "28",
+      "verses": [
+        "2",
+        "4"
+      ],
+      "note": "Job 28 contains the most unusual catena material met so far, and it is worth flagging as a positive rather than a defect. Keil and Delitzsch's block on key 2 reports that among the expositors of the mining strophes are two men actually acquainted with mining, a director and an inspector of mines, and weighs their technical observations about the cross-bar on a rope and the earliest mode of letting off water. Clarke on key 4 lays out two rival readings of an acknowledged crux — mining versus the infancy of navigation — names Mr. Peters for the second, quotes his paraphrase at length, cites the psalmist's reeling ship at Ps. 107:26-27 in its support, and THEN rejects it. Ellicott on key 1 states the whole chapter's interpretive crux up front, that the subject of v. 3 is man and not God, which Wesley then takes the other way at vv. 9-11. Three consequences for the writer. A chapter can carry a genuine live disagreement that the prose must preserve rather than harmonise, and v9 here does preserve it ('the three read them of man, and Wesley of God'). A voice can be cited at length and then overruled, so the prose must keep the rejection or it misreports the commentator. And the mining-expert detail means the 203-word truncation on key 2 cuts away technical content that no other voice supplies, which is a sharper loss than the usual one."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "28",
+      "note": "Mixed apostrophe encoding WITHIN a single chapter, which cost a failed patch and is worth a standing warning. job 28's entries use a straight ASCII apostrophe in some verses (v1 'Job's complaint') and a curly U+2019 in others (v18 'the sea's own jewels'), with no pattern by verse number or voice. Any anchored multi-edit patch written by hand will therefore fail on roughly half its anchors, and the failure mode is silent in the sense that it reports only the FIRST miss, so a 41-edit patch takes 41 round trips to repair one at a time. The fix that worked, and that any future worker should build once: generate the apostrophe variants of each anchor (itertools.product over the positions holding either character), keep the single variant that occurs exactly once in the entry, and mirror the entry's DOMINANT style onto the replacement so the file does not become more mixed than it already is. That turned 41 unresolved edits into 41 resolved ones in a single pass. Worth measuring corpus-wide how many chapters are internally mixed; if it is common, normalising the whole synthesis tree to one apostrophe would remove a recurring class of wasted work, though it would be a mass rewrite of the data tree and so needs the owner's decision rather than a worker's."
     }
   ]
 }
