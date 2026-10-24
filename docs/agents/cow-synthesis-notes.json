@@ -100985,6 +100985,46 @@
       "book": "job",
       "chapter": "28",
       "note": "Mixed apostrophe encoding WITHIN a single chapter, which cost a failed patch and is worth a standing warning. job 28's entries use a straight ASCII apostrophe in some verses (v1 'Job's complaint') and a curly U+2019 in others (v18 'the sea's own jewels'), with no pattern by verse number or voice. Any anchored multi-edit patch written by hand will therefore fail on roughly half its anchors, and the failure mode is silent in the sense that it reports only the FIRST miss, so a 41-edit patch takes 41 round trips to repair one at a time. The fix that worked, and that any future worker should build once: generate the apostrophe variants of each anchor (itertools.product over the positions holding either character), keep the single variant that occurs exactly once in the entry, and mirror the entry's DOMINANT style onto the replacement so the file does not become more mixed than it already is. That turned 41 unresolved edits into 41 resolved ones in a single pass. Worth measuring corpus-wide how many chapters are internally mixed; if it is common, normalising the whole synthesis tree to one apostrophe would remove a recurring class of wasted work, though it would be a mass rewrite of the data tree and so needs the owner's decision rather than a worker's."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "source-defect",
+      "book": "colossians",
+      "chapter": "1",
+      "verses": [
+        "15"
+      ],
+      "note": "THE MECHANISM behind the Catena-Aurea miscredit pattern, found and quantified. synthesis_qa.VOICE_LABELS registers the short form 'Cyril', and _LABEL_RE requires the label to be followed immediately by a colon. The catena at this key heads a block 'Cyril of Jerusalem:', which therefore matches NOTHING - not the long form, which is unregistered, and not the short form, because what follows 'Cyril' is ' of' and not ':'. The consequence is not that the block is skipped: split_voices cannot see the boundary at all, so the block is silently folded into the segment of the PRECEDING voice. Measured here: John Wesley's genuine comment on this verse is 89 words, and split_voices reports 290, because Cyril's 203-word catechetical lecture on Golgotha is attributed to him. That is why Wesley has been the standing victim of the miscredit in every earlier instance - he is simply the voice the harvest puts before the patristic blocks. Three further consequences worth acting on: source_words is overstated wherever this happens, which inflates the denominator of the expansion ratio; the audit's per-voice reasoning is wrong on those keys; and excluded_voices CANNOT be used to declare such residue, because the validator checks the declaration against the same broken regex and rejects it (I tried 'Cyril of Jerusalem' here and had to revert). The fix is two lines - register the long forms, or anchor _LABEL_RE on a word boundary rather than an immediate colon - and it should precede any further corpus-wide measurement work, since it silently corrupts the inputs."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "source-defect",
+      "book": "colossians",
+      "chapter": "1",
+      "verses": [
+        "15"
+      ],
+      "note": "Misfiled 'Jamieson, Fausset and Brown' residue, already declared in excluded_voices by the earlier pass but never noted, so recording it for the tally. The 138-word block is 1 Corinthians 4:6 - Apollos and Paul as types of all teachers, 'not to go beyond what is written', 'that ye be not puffed up as ye are', with an [Estius] attribution. This BREAKS the pattern recorded on 2026-10-19, that every donor passage met so far was from Chronicles or Kings and therefore probably from one scrape pass over the historical books. The donor here is a Pauline epistle, and the victim is a Pauline epistle, which suggests instead that the residue is drawn from whatever passage sits at a fixed offset in the same source corpus rather than from one wandering historical-books pass. Running tally of donors: job 30 = 2 Chronicles 7; ezra 7 = 2 Kings 22-23; job 13 = 1 Chronicles 23; job 37 = 2 Chronicles 14-15; job 27 = 1 Kings 7; colossians 1 = 1 Corinthians 4. Five of six are Chronicles or Kings, so the earlier generalisation was reasonable but is now falsified, and anyone building a detector should key on the structural signature rather than on the donor book."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "disagreement",
+      "book": "colossians",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "Pre-existing ENTITIES flag at v1 on 'Seleucids', verified as a FALSE POSITIVE of the kind already on the open list. The source has 'Seleucid' once, in the singular, and 'Antiochus' once; the prose writes the plural. So this is the derived-ending class, like 'Jeduthunite' at 1chronicles 25 - the checker tests surface forms and does not fold derivational or inflectional endings before comparing. It is the ninth or tenth instance and the cheapest of the open fixes: stemming the candidate and the source tokens before the membership test would clear this whole class. Not corrected here, since v1 is another worker's entry and graded A on its own terms; recorded only so the instance count keeps rising."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "fidelity",
+      "book": "colossians",
+      "chapter": "1",
+      "verses": [
+        "15"
+      ],
+      "note": "The NARROWEST B met in this run and a third distinct repair move. ttr stood at 0.5790 against the 0.58 floor - one ten-thousandth under - with compress clear at 0.4306, so a single-metric B whose only fault was a dominant noun: 'image' ran 10 times in 649 tokens, with 'son', 'man', 'god', 'father', 'nature' and 'creature' all at five or six behind it. What makes it worth a note is that neither of the two moves already on record could be used. Substitution alone was available but thin, since the verse's subject IS the word image and the sources gloss it relentlessly. Addition, which carried daniel 5, was impossible: the entry already stood at 648 words against the 650 cap, so there was no room for new material at all. The move that worked was a SWAP - cutting lower-value prose already present and spending the freed words on source material that was lexically remote from everything on the page. Specifically, out went part of Chrysostom's angel digression and some of Gill's enumerated degrees; in came Ellicott's background paragraph (the Platonising Judaism of Philo, the personification of wisdom in the Alexandrine book, the unspotted mirror, a floating vision fixed in solid reality), his direct refusal of Chrysostom, Barnes's derivation of the firstborn from Hebrew custom (double portion, estate and title, priest of the household), and Calvin's mirror and idol. Result: ttr 0.5790 to 0.6492 and compress 0.4306 to 0.4539, a gain of 0.070 on a gap of 0.001. So the rule now has three branches, chosen by what the SOURCE holds rather than by how far under the floor the entry sits: add an unused argument where there is room; swap for one where there is not; substitute nouns only when the spare material merely restates what is already written. One flag raised and cleared in drafting: I wrote 'Logos', which the checker rightly caught, since Robertson prints the word in Greek throughout. Same orthography class as the Croesus ligature and Gill's 'Misna', and handled the same way - rephrased to 'the whole doctrine of the Word' rather than carrying a transliteration the source never uses."
     }
   ]
 }
