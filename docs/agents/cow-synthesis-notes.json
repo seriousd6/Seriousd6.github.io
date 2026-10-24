@@ -100698,6 +100698,80 @@
       "book": "zechariah",
       "chapter": "6",
       "note": "Adding a third case to the B-diagnosis rule recorded here, now that one has been met that neither of the first two covers. The rule so far: a single-metric B points at a repeated noun or a repeated frame depending on which metric failed; a double B usually has one cause and it is the noun. 1corinthians 2 key 11 is a double B that is neither, and the distinguishing mark is how FAR under the floor it sits. Every other B met in this run has been within fifteen thousandths of 0.58; that one was fifty-four under, at 0.5260. A gap that size is not a few repeated words, it is the subject matter: five witnesses were each glossing one clause about the spirit of a man and the Spirit of God, so the three governing nouns recurred whoever was speaking, and the definite article alone ran to eleven per cent of the text. Substitution could not reach the floor and neither could trimming; the fix was to stop three voices saying the same thing and let one say it, which is an editorial judgement about overlap rather than a vocabulary repair. So the working triage is now: measure how far under the floor the entry sits. Within about fifteen thousandths, count the nouns and substitute. Fifty or more under, look for voices that are duplicating each other and cut the duplication, because no amount of rewording will carry an entry that distance."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "22"
+      ],
+      "note": "Ellicott chrome at key 22 - the THIRTY-FIFTH consecutive chapter with the pattern, and another clean demonstration that the chrome attaches to the Ellicott FETCH rather than to the end of the key. Ellicott's genuine comment is 69 words ('The Authorised Version supplies God as the subject; but we obtain very good sense by understanding it of the man who constantly fled from his power...'), then the navigation strip ('Job Job 26 Job Job Job Job 28 Footnotes:') and roughly 983 words of boilerplate. Here the chrome IS terminal within the key, but job 27 also shows why a position-based trim stays unsafe: the same chapter's key 1 ends with Ellicott at 75 genuine words and no chrome at all, so terminality is a property of the fetch, not of the key. Keep the detector keyed on the copyright sentence."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "4"
+      ],
+      "note": "Misfiled 'Jamieson, Fausset and Brown' residue - 46 words of 1 Kings 7 on the temple candlesticks ('(See on 1Ki 7:49). The increased number was not only in conformity with the characteristic splendor of the edifice...[Lightfoot]') filed under Job 27:4. Declared in excluded_voices on the vv.1-6 tile. What is new is the LATTICE: this chapter's stride-6 sampling slots are keys 4, 10, 16 and 22, and only key 4 is filled - a single isolated block where job 13, job 30, job 37 and ezra 7 each had a contiguous RUN from one foreign passage. So the run pattern recorded on 2026-10-19 is not universal: the lattice is always stride 6, but how many of its slots are occupied varies from one to all. The donor passage here is Kings, which keeps the Chronicles-or-Kings tally intact (job 30 = 2 Chr 7; ezra 7 = 2 Kgs 22-23; job 13 = 1 Chr 23; job 37 = 2 Chr 14-15; job 27 = 1 Kgs 7)."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "21"
+      ],
+      "note": "Per-source TRUNCATION at exactly 200 words, SIXTEEN blocks in one chapter - the heaviest instance seen, beating the previous high. John Gill is cut at keys 1, 2, 5, 6, 7, 8, 9, 11, 13 (nine) and Keil and Delitzsch at keys 2, 4, 9, 12, 14, 15, 21 (seven). No other witness in the chapter is ever truncated: Henry runs to 2576 words at key 11, Clarke to 480 at key 8, so the cap is per-source and not per-key. Key 1's Gill dies mid-sentence ('he added to take or lift up his parable, as the words may be') and key 2's K&D stops at 'since the proverb (el-methel) seals it in the mouth of the Arab, since'. The cost is real and measurable on this chapter: Gill contributed 3198 words of which roughly 1800 are the nine capped blocks, so something like a third of his usable material is simply absent. Adds weight to the pending per-source truncation-length check."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "1"
+      ],
+      "note": "A defect shape not previously recorded: OCR CORRUPTION in a patristic block. Key 1 opens with roughly 330 words of Gregory the Great, and the scan is badly damaged - 'which same whilst they i castesound of nothing belonging to the history', 'oblige the reader tur to look', 'A L*\"go Deen named', 'wEcclus.', a stray footnote digit welded to a word ('rendered null1'), and an editorial footnote spliced into the middle of a sentence so that the refusal of the musical-instrument reading reads as a fragment. The substance is still recoverable with care - Gregory's point that Scripture mixes mystical matter into historical narration so that obscurities act as spurs toward a deeper sense, and his refusal to read mashal as an instrument, citing 'Music in mourning... as a tale out of season' - and it is used in the vv.1-6 tile. But this is the first block I have met where the writer has to RECONSTRUCT rather than compress, and the risk is obvious: a damaged block invites invention. Worth a corpus scan for the signature (stray digits glued to word ends, repeated-letter garbage like 'castesound', isolated capitals with asterisks), both to find the others and to decide whether such blocks should be declared rather than used."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "9"
+      ],
+      "note": "A truncation artefact worth distinguishing from the plain 200-word cap: at key 9 the Keil and Delitzsch block spends all 200 of its words on APPARATUS and is cut before a single word of comment. It prints the Authorised text of vv.9-13, then their own verse translation of vv.13-18, then stops at 'We have already had the combination'. K&D habitually lead with the text, so where the cap lands early in a long run of verse-translation the result is a block with ZERO usable content that nevertheless heads a key and counts toward source_words. I did not declare it in excluded_voices - it is neither misfiled nor chrome, and K&D are declared elsewhere in the chapter on their substantive blocks at keys 12, 15 and 21 - but a measurement that treats this as 200 words of witness material is overstating the source. If the per-source truncation check gets built, this is the shape to count separately: truncated-before-comment, not merely truncated."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "27",
+      "verses": [
+        "15",
+        "20"
+      ],
+      "note": "Out-of-key voice declaration, SEVENTH chapter, and the cleanest grounds yet. Henry comments on job 27 in exactly three mega-heads, at keys 1 (1452w, covering vv.2-6), 7 (1379w, covering vv.7-10) and 11 (2576w, covering vv.11-23). The first two map onto the first two tiles, but the third spans thirteen verses and therefore three tiles, so the vv.15-19 and vv.20-23 tiles declare Henry although his block sits at key 11. The justification is stronger here than in the earlier six cases because Henry does not merely touch those verses, he NUMBERS them as he goes - 'v. 16-18', 'v. 19', 'v. 20, 21', 'v. 22', 'v. 23' - each with its own exposition, so the attribution is to material he himself assigned to those verses. The check passes because synthesis-fidelity computes ungrounded_voices per CHAPTER. This remains an owner-level rule to ratify: a witness may be declared on a span his block demonstrably expounds. job 27 suggests a mechanical test that would license it safely - the block contains an explicit verse citation falling inside the declared range."
     }
   ]
 }
