@@ -100772,6 +100772,40 @@
         "20"
       ],
       "note": "Out-of-key voice declaration, SEVENTH chapter, and the cleanest grounds yet. Henry comments on job 27 in exactly three mega-heads, at keys 1 (1452w, covering vv.2-6), 7 (1379w, covering vv.7-10) and 11 (2576w, covering vv.11-23). The first two map onto the first two tiles, but the third spans thirteen verses and therefore three tiles, so the vv.15-19 and vv.20-23 tiles declare Henry although his block sits at key 11. The justification is stronger here than in the earlier six cases because Henry does not merely touch those verses, he NUMBERS them as he goes - 'v. 16-18', 'v. 19', 'v. 20, 21', 'v. 22', 'v. 23' - each with its own exposition, so the attribution is to material he himself assigned to those verses. The check passes because synthesis-fidelity computes ungrounded_voices per CHAPTER. This remains an owner-level rule to ratify: a witness may be declared on a span his block demonstrably expounds. job 27 suggests a mechanical test that would license it safely - the block contains an explicit verse citation falling inside the declared range."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "fidelity",
+      "book": "daniel",
+      "chapter": "5",
+      "verses": [
+        "3"
+      ],
+      "note": "Single-metric B on ttr (0.5520 against the 0.58 floor) with compress already clear at 0.4335, so by the band rule a 28-thousandth gap in the substitute-the-noun range. The dominant noun was a pair: 'god' 11 times and 'gods' 7, eighteen in 562 tokens, with 'temple' at 7 behind them. Two moves were made. Substitution first, grounded in the sources' own vocabulary - the Lord of heaven, the Creator, the maker of heaven and earth, deities, images, plate - which took god/gods from 18 to 4. Then ADDITION of about eighty words of Calvin that the old prose had left entirely untouched: the idolater's own plea that images were images only, Calvin's answer that the power and majesty of the thing worshipped was supposed shut up inside the substance, the Papacy comparison, the Habakkuk parallel, and the servants' haste from the treasury. Result ttr 0.5520 -> 0.6832 and compress 0.4335 -> 0.4774, the largest single-pass ttr gain of this run at +0.131. The lesson refines my own band rule, which had treated addition as a last resort after psalms 5 failed with it: the gain here came mostly from the addition, because the unused source material was lexically REMOTE from what was already on the page (subtlety, superstition, statues, pictures, essence, treasury, nets) rather than more of the same. So before counting nouns, check whether the source holds a whole UNUSED ARGUMENT. If it does, adding it beats substituting, since a new argument brings new vocabulary while substitution only renames the old. If the only spare material restates what is there - which is what psalms 5 had - substitution remains the move."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "observation",
+      "book": "daniel",
+      "chapter": "5",
+      "verses": [
+        "3"
+      ],
+      "note": "Calvin's Papacy aside was CARRIED here, and the reason matters because three notes of 2026-09-02 on daniel 7 record the opposite decision. At 7:25 a catalogue of named papal grievances was dropped, at 7:27 the charge that Jewish interpreters are 'not only foolish and stupid but crazy' was dropped, at 7:11 an aside about the Pope's throne was dropped - in each case the exegesis was carried and the polemic left behind. At 5:4 Calvin's remark that 'the Papacy is a glaring proof how men cling to gross superstitions when they desire to excuse their errors' is doing different work: it is a premise, offered as evidence for his claim about what the Babylonian idolater actually believed, namely that the plea about images being only images is the sort of subtlety idolaters always invent. Drop it and the argument loses its support. The test this yields is clean and should be applied rather than re-decided each time: carry the polemic when it functions as a PREMISE in the exegetical argument, drop it when it is a VERDICT ON PERSONS."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "observation",
+      "book": "daniel",
+      "chapter": "5",
+      "note": "A corpus-wide SHAPE DIVERGENCE in the tags, found while revising this chapter and measured across all 1,189. Two fields have two incompatible forms in live data, and the validator accepts both: schools[].summary is a prose string in most chapters but a bare LIST OF NAMES in 182 of them (15%), and debates is a list of question/sides objects in most but a list of plain STRINGS in 430 (36%). daniel 5 is in the terse form on both counts. The concentration is in the poetry and prophets - psalms 35, ezekiel 26, isaiah 25, jeremiah 24, hosea 11 - which suggests one generation pass rather than scattered drift. Two consequences. First, any consumer that reads summary as a string or debates[].question will break on a third of the corpus. Second, and worse for the site, the terse schools entries carry NO CONTENT at all, only the commentator's name, so the whole discoverability value of the schools field is absent from those 182 chapters. I kept daniel 5's own shape when revising key 3 rather than make one entry of eleven inconsistent with its siblings, which is the right call per chapter but means the divergence will not heal through ordinary polish work. It needs an owner decision: either normalise the 430 in one pass, or tighten the validator to accept only one form and let the queue convert them."
+    },
+    {
+      "at": "2026-10-24",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "1",
+      "note": "MIS-ROUTED LEGACY, the twenty-third found: the picker offered '1kings 1' as a polish, but all 53 entries carry standard legacy-unversioned and none carries cow-prose-rules-2026-08-09, so it is a legacy rewrite however it is labelled. It reached the polish queue on the strength of one key graded B (key 36). Not taken this batch - at 53 keys and 22,789 usable source words it is a whole-context job, and the batch had already spent its budget on the job 27 rewrite. Recording it so the count keeps rising: the no-qa-stamp routing test under-fires, and a chapter whose entries are ALL legacy should never be served as polish no matter how its grades read. The cheap fix is the one already recommended - route on the presence of the current standard stamp, not on grade - and until it lands, every worker must re-test the routing of each polish pick by hand, which is exactly the kind of check a queue is supposed to make unnecessary."
     }
   ]
 }
