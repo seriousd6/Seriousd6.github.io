@@ -101225,6 +101225,52 @@
       "book": "haggai",
       "chapter": "2",
       "note": "A PRACTICAL CONSEQUENCE of the tags shape divergence I measured on 2026-10-25, met for the first time while repairing a chapter in the terse form. haggai 2 is one of the 182 chapters whose schools[].summary is a bare LIST OF NAMES rather than prose. Repairing key 4 produced substantial new content to record - Keil and Delitzsch's 'be comforted' rendering and their compound-subject construction, Gill's Johannine tail - and there was NOWHERE IN THE SCHOOLS FIELD TO PUT IT, because appending prose to a list would either break the shape or require converting that one entry to the rich form and making it inconsistent with its seven siblings. I guarded the write so the append was skipped rather than silently corrupting the field, and put the content in the debates list (which in this chapter is strings, so it took it) and in the per-verse fidelity note. That works, but it means the terse chapters DEGRADE UNDER REPAIR: each polish pass can improve the prose while being structurally unable to improve the tags, so the gap between the two forms widens every time one of the 182 is touched. It strengthens the case for normalising the shape before more polish work lands, and it gives the normalisation a concrete cost to weigh: 182 chapters whose schools field cannot carry what a repair discovers."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "19",
+      "note": "THE WORD FLOOR AND THE CARRIER BAN ARE IN DIRECT TENSION, and this chapter quantifies it. 2 Kings 19 carried 80 carrier instances across 36 verses on a rigid two-slot skeleton: every verse opened '<scene> — \"<verse quote>\" — and the witnesses <verb> <object>' and closed on 'The witnesses do not divide', often with 'Together they <verb>' following. Removing both cost roughly 15 to 20 words per verse, and that alone moved the FLOOR count from 0 to 21 of 36 (58 percent), the highest rate recorded. Two verses that were grade A before the carrier pass fell below the ttr floor because of it (v13 from 0.5810, v23 held but barely), which is the already-logged finding that deleting a carrier removes DISTINCT words. The new and sharper point is about length. The carriers were load-bearing: prose written to a 350-650 band with filler at both ends of every verse cannot lose that filler and stay off the floor. And lengthening is not available here, because 21 of the 36 verses already record expansion ABOVE 1.0 — the prose is already longer than the catena it rests on, with the chapter averaging only 535 source words per verse. So the honest repair necessarily lands the chapter at the floor, and any attempt to lift it off would be padding, which is the thing PAD exists to catch. Taken with matthew 28 (floor-hugging on 2,450 source words per verse, expansion 0.03 to 1.11) and micah 5 (ceiling-saturated on 25,428 words, expansion 0.14 to 0.50), the flat band has now failed in three distinguishable ways on three consecutive chapters. Recommend the target scale with usable source words, and that FLOOR be reported with the expansion ratio beside it, since a verse at 352 words on 200 words of source is the opposite problem from a verse at 352 words on 2,450."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "19",
+      "verses": [
+        "34"
+      ],
+      "note": "A voice credited with a reading where NO BLOCK EXISTS, which is a new member of the attribution-defect family and the most serious kind yet. The entry for v. 34 said: 'The witness of Keil and Delitzsch reads the verse in the same key, as the Lord's own undertaking to save the city for His own sake and His servant David's.' Key 34 of the catena contains exactly one block, Ellicott's, thirty-nine words long. Keil has no block there at all; split_voices confirms it, and the only text in the chapter matching that sentence is bare verse recitation of 2 Kings 19:32-35 inside a Keil block filed under an earlier key. So the sentence credits Keil with a position on the strength of his having quoted the verse. It asserts nothing beyond the verse either, which is why it reads so smoothly and why no lint caught it: the claim is true, the attribution is empty. Removed, and Keil dropped from this entry's voices. What makes this worth a note of its own is the detection route. The grounding check cannot find it, because 'Keil and Delitzsch' is of course groundable in the chapter; the voices-sourced check passes for the same reason; and the prose names no distinctive term to grep. It surfaced only because the recorded expansion of 9.07 was absurd — 372 words of prose on a 41-word key — and chasing that number down led to the block count. So EXPANSION IS A USABLE DETECTOR for this defect, not merely an advisory: a per-key ratio far above the 6.0 stretch line means either span-sourcing, which is legitimate and was also true here for Henry, or an attribution with nothing under it. Both deserve the look, and the two are easy to tell apart once you count blocks per key."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "19",
+      "verses": [
+        "15"
+      ],
+      "note": "Twentieth chapter with a misfiled Jamieson, Fausset and Brown block, and this one is the largest and most clearly orphaned so far: 247 words under key 15, which is Hezekiah's prayer in the temple, consisting entirely of JFB on 2 SAMUEL 15 — Absalom rising early to stand beside the way of the gate, hearing suitors whose causes had lain undecided through David's infirmities, lavishing civilities to seduce the affections of the multitude. Not one word bears on Hezekiah, Sennacherib, or prayer. It had been neither declared nor used: absent from voices, absent from excluded_voices, and invisible in the prose, so the only trace of it was in the usable_source_words denominator, where it inflated this verse's source by two-thirds. Now declared. Running tally of the signatures that identify this defect class, all confirmed on at least two chapters: a subject with no relation to the verse (all twenty); a block opening on a subordinate connective such as 'that is,' or 'See on' (matthew 28 key 10); a bracketed inline citation that a segment scan reads as a phantom extra voice (job 27 key 4). This one adds a fourth and the easiest to automate: the block names PERSONS WHO DO NOT OCCUR ANYWHERE ELSE IN THE CHAPTER. Absalom and David appear nowhere else in 2 Kings 19 outside Henry's and Ellicott's references to the Davidic covenant, and a check for proper nouns appearing in exactly one voice block and nowhere else in the chapter's catena would have flagged this in a single pass over the corpus."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "19",
+      "verses": [
+        "9",
+        "12",
+        "24"
+      ],
+      "note": "Three more grounding false-negative modes, found by chasing names absent from the catena that turned out to be sound. Adding to the Greek-script, commentator-abbreviation and corrupted-classical-abbreviation modes logged for matthew 28. (1) A SCRAPE-INSERTED SPACE INSIDE A WORD. v12 says 'Rezeph is the Assyrian Rasappa'; 'Rasappa' is absent because Ellicott's text reads 'The Assyrian R açappa' — the scrape has put a space after the capital. Any substring match fails, and so would a token match on either fragment. Worth a probe of its own, since a single-letter token followed by a lowercase fragment is a strong and cheap signal of this corruption; it is probably frequent wherever the scrape hit an italicised transliteration. (2) DIACRITICS IN TRANSLITERATED PLACE NAMES, not just in Hebrew terms. v24's 'all the Nile-arms of Mazor' renders Ellicott's 'all the Nile arms of Mâçôr'. My folder handles combining marks but ç is a distinct codepoint that NFKD does not decompose to c, so the fold must map it explicitly; the same applies to ş, ḥ, ṣ and the rest of the Assyriological set, which is all over Ellicott and Keil. (3) GREEK SCRIPT AGAIN, confirming it is systematic rather than a matthew 28 accident: v9's 'the Tarakos of Manetho' renders Keil's 'the Ταρακός of Manetho'. Net for this chapter: fourteen names flagged absent, of which nine were name-pair regex artifacts, three were these encoding modes, and only TWO were genuine imports — Terah and Bit-Adini at v12, both supplied from bare citations and both cut. The checker's precision is now the limiting factor on its usefulness: it is crying wolf five times for every real finding."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "19",
+      "note": "Two smaller findings worth recording. FIRST, A VERSE MISSING FROM THE CATENA ALTOGETHER. 2 Kings 19 has thirty-seven verses; the catena has thirty-six keys, with key 19 absent entirely — no block from any voice. The synthesis matches it exactly, carrying thirty-six entries and no entry for v. 19, so the prose is not at fault and validate-synthesis is right to pass it. But it means the chapter silently offers no commentary at all on Hezekiah's closing petition, 'now therefore, O LORD our God, I beseech thee, save thou us out of his hand, that all the kingdoms of the earth may know that thou art the LORD God, even thou only' — which is, theologically, the hinge of the whole prayer and the verse the rest of the chapter answers. The loop's own doc notes the reverse case (a synthesis for a verse the catena lacks, recorded as a --coverage advisory); this direction deserves the same treatment, because a reader of the site will find vv. 18 and 20 expounded and nothing between. Worth a corpus scan for keys missing from catena files relative to the verse count in data/bible. SECOND, RULE 2 BREACHES THAT HAD SURVIVED to this standard: v5's opening said 'the witnesses, few here, mark the hinge it forms' and v6's 'the witnesses, though only two are at hand here, weigh both the comfort and the scorn'. Both predicate scarcity of the COMMENTARY, which is exactly the banned move, and both were sitting inside the carrier clause — which is probably why they were never caught separately. That suggests the rule-2 check should run on the carrier sentences specifically, since a generated opening is where a writer would naturally apologise for a thin source."
     }
   ]
 }
