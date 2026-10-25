@@ -75,16 +75,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say.",
+    "expansion": 0.03
+   }
   }
  },
  "2": {
@@ -119,16 +132,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. The quoted “there had been a great earthquake” is a composite: Barnes writes “Rather, there had been” and Gill “Or ‘there had been one’,” and the rest is the verse's own wording.",
+    "expansion": 0.29
+   }
   }
  },
  "3": {
@@ -161,16 +187,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say.",
+    "expansion": 1.11
+   }
   }
  },
  "4": {
@@ -204,16 +243,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. One quotation here supplies a word the catena is missing mid-sentence; the supplied word is bracketed rather than passed off as the source's own. Calvin's block reads “The Lord struck with as if he had engraved” and “the distinction between the two kinds of between which Matthew draws a comparison”; “the soldiers with terror” and “fear” are supplied and bracketed.",
+    "expansion": 0.46
+   }
   }
  },
  "5": {
@@ -247,16 +299,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. Robertson's note is fully grounded though a naive grep misses it: his participle stands in Greek script (Ιησουν τον εσταυρωμενον) where the prose transliterates it, and his cross-reference is abbreviated “1Co 2:2”.",
+    "expansion": 0.37
+   }
   }
  },
  "6": {
@@ -290,16 +355,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say.",
+    "expansion": 0.57
+   }
   }
  },
  "7": {
@@ -323,6 +401,11 @@
     "school": "reformed",
     "prevalence": "single",
     "summary": "Calvin: Peter singled out for consolation; the angel signs Christ's own promise; the women honoured as apostles of the apostles."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem: the angel's errand proves the Son's Lordship — nothing excepted from it, Gabriel himself serving him as a peculiar dignity."
    }
   ],
   "debates": [
@@ -358,16 +441,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. Cyril of Jerusalem is carried here for the first time; his block sits nested inside the Wesley segment, which split_voices folds together because the enum holds only a bare “Cyril”.",
+    "expansion": 0.39
+   }
   }
  },
  "8": {
@@ -412,16 +508,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. Clarke's Terence tag is grounded but unfindable by name: the catena abbreviates it “Terant. Andr. v. 945”, itself a scrape corruption of “Terent.”",
+    "expansion": 0.17
+   }
   }
  },
  "9": {
@@ -476,16 +585,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. Cyril quotes “I will hold him, and will not let him go” without naming a speaker; an earlier draft called it “the Bride's word”, which the source does not say, so the gloss was cut back to the citation.",
+    "expansion": 0.29
+   }
   }
  },
  "10": {
@@ -520,16 +642,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. One quotation here supplies a word the catena is missing mid-sentence; the supplied word is bracketed rather than passed off as the source's own. Calvin's block reads “bestow the name of on deserters”; “brethren” is supplied and bracketed.",
+    "expansion": 0.43
+   }
   }
  },
  "11": {
@@ -577,16 +712,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say.",
+    "expansion": 0.11
+   }
   }
  },
  "12": {
@@ -614,16 +762,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. Barnes's block reads “and been really stolen” where the sentence requires “had”; the prose corrects what is plainly a one-character scrape corruption.",
+    "expansion": 0.69
+   }
   }
  },
  "13": {
@@ -633,13 +794,19 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Cyril of Jerusalem"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "majority",
     "summary": "The story refutes itself — sleeping men could not witness a theft (Robertson's 'Irish bull'); Clarke's heap of absurdities (all asleep, the death penalty, the noise, the time); the lie proves the resurrection it denies."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem: Isaiah had mocked the bargain beforehand, putting into the priests' mouths “tell us, and relate to us another deceit.”"
    }
   ],
   "debates": [],
@@ -651,16 +818,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. Cyril of Jerusalem is carried and newly declared; his block here sits nested inside the Wesley segment and was previously neither declared nor used.",
+    "expansion": 0.63
+   }
   }
  },
  "14": {
@@ -681,6 +861,11 @@
     "school": "puritan-evangelical",
     "prevalence": "single",
     "summary": "Henry: the priests' care for the soldiers' safety betrays the lie — true negligence they would have prosecuted; they cannot shield them from God's justice."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem: the sealed tomb against the risen Lord — the priests want understanding while the women are eye-witnesses; the soldiers surrendered truth for silver."
    }
   ],
   "debates": [],
@@ -693,16 +878,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. Cyril of Jerusalem is carried here for the first time, from the same nested block that spans this verse and the one before.",
+    "expansion": 0.79
+   }
   }
  },
  "15": {
@@ -735,16 +933,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. One quotation here supplies a word the catena is missing mid-sentence; the supplied word is bracketed rather than passed off as the source's own. Calvin's block reads “to blind the that”; “Jews” is supplied and bracketed. Clarke's reckoning of “until this day” is folded into the existing dating sentence rather than repeated after it.",
+    "expansion": 0.26
+   }
   }
  },
  "16": {
@@ -793,16 +1004,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say.",
+    "expansion": 0.05
+   }
   }
  },
  "17": {
@@ -856,16 +1080,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. One quotation here supplies a word the catena is missing mid-sentence; the supplied word is bracketed rather than passed off as the source's own. Calvin's block reads “suddenly caused them to and afterwards led them to”; “doubt” and “worship” are supplied and bracketed.",
+    "expansion": 0.54
+   }
   }
  },
  "18": {
@@ -924,16 +1161,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say.",
+    "expansion": 0.32
+   }
   }
  },
  "19": {
@@ -999,16 +1249,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. Cyril of Jerusalem's reading was already summarised in this entry's schools block but appeared nowhere in the prose; it is now carried, so tags and prose agree.",
+    "expansion": 0.1
+   }
   }
  },
  "20": {
@@ -1048,16 +1311,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "note": "A: every claim traces to a block in this chapter's catena. The templated header this entry carried (the whole AV verse quoted, then “The witnesses <verb>” plus a three-topic list) was replaced with a substantive opening; no content was lost with it, since it asserted nothing the body does not say. One quotation here supplies a word the catena is missing mid-sentence; the supplied word is bracketed rather than passed off as the source's own. Calvin's block reads “but that the may put them into practice”; “they” is supplied and bracketed. Cyril of Jerusalem, likewise summarised in schools but absent from the prose, is now carried.",
+    "expansion": 0.09
+   }
   }
  }
 }

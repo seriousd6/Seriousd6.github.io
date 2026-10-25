@@ -101052,6 +101052,65 @@
       "book": "colossians",
       "chapter": "3",
       "note": "Two more ENTITIES false positives of the derived-ending class, both on other workers' entries in this chapter and both verified: 'Rome' at vv.1-2 and 'Scythians' at vv.8-11, where the verse text itself has the singular 'Scythian'. With 'Seleucids' at colossians 1:1 and 'Jeduthunite' at 1chronicles 25 that is now at least a dozen instances across the corpus, all of one shape - the checker compares surface forms and folds neither inflectional nor derivational endings before the membership test. Stemming both the candidate and the source tokens would clear the whole class in a few lines, and it is now the cheapest outstanding fix by a wide margin. Not corrected here: both entries are another worker's and graded A on their own terms."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "28",
+      "note": "NEW SOURCE-DEFECT CLASS, and it is corpus-wide: mid-sentence WORD EXCISIONS, distinct from the K&D end-truncation logged so many times. The catena drops a word or short phrase out of the middle of a sentence, leaving a grammatically impossible remainder. Matthew 28 examples, all verified in the RAW html so this is not visible() stripping tags: Calvin key 4 'The Lord struck with as if he had engraved their consciences with a hot iron' (missing 'the soldiers with terror') and 'the distinction between the two kinds of between which Matthew draws a comparison' (missing 'fear', words transposed); Calvin key 10 'deigning to bestow the name of on deserters' (missing 'brethren'); Calvin key 15 'to blind the that the resurrection of Christ was buried' (missing 'Jews'); key 17 'suddenly caused them to and afterwards led them to' (missing 'doubt' and 'worship'); Calvin key 20 'but that the may put them into practice' (missing 'they'); Barnes key 12 'and been really stolen' for 'had been'. A high-precision bigram probe (the that / name of on / struck with as / them to and / that the may / the between which, and a few more) finds 6 signatures in this chapter and 1,191 across 327 of the 1,189 chapters in the corpus — so better than a quarter of the tree is affected, and the probe is deliberately narrow, so that is a floor not a ceiling. Calvin is the heaviest hit voice here by a wide margin. The reason this matters more than it looks: the previous writer repaired these holes SILENTLY INSIDE QUOTATION MARKS, so the entries read as verbatim quotation while actually being reconstruction. Fixed here by bracketing every supplied word, which is the ordinary convention and keeps the reader able to tell. Recommend the probe be widened and run corpus-wide, and that the bracket convention be made explicit in the prose rules, because any writer meeting a hole will otherwise do the natural thing and fill it."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "28",
+      "note": "The quote-led-opening rule had its worst instance in the corpus here and it is now clear: 20/20 verses (100%) before this pass, 0/20 after, and matthew 28 was the ONLY chapter left over the 1/3 threshold at the time of the pass. The mechanism is worth recording because it was not 'quoting too much' at all. Every verse carried an identical GENERATED TWO-SENTENCE HEADER: sentence one was the whole AV verse quoted verbatim, sentence two was 'The witnesses <verb>' followed by a three-item list of the topics the commentators treat, and in several verses a third contentless frame followed ('The grammatical-historical commentators parse the words.' / 'set the scene.'). So one defect presented as three — the quote-led breach, a carrier, and a rule-6 topic slot-list — and all three cleared with one repair per verse, because the header asserted nothing the body did not already say. A measurement that matters for interpreting the lint: the raw quoted fraction looked alarming at 0.39-0.71 per verse, but splitting scripture from commentator quotation showed scripture at only 0.071, well under the one-fifth cap, with commentator quotation at 0.504. The cap in the rules is on SCRIPTURE, so the chapter was never in breach of it; the thing a reader would actually notice is that half the prose is direct quotation of the expositors, and there is no stated ceiling for that. After the pass scripture is 0.015 and commentator quotation 0.483 — essentially unchanged, because removing the verse headers removed scripture, not commentary. The owner question stands and is now measured on a worst case: is there a ceiling for commentator quotation distinct from the scripture cap? Until there is, no worker should restructure half a chapter on their own judgment, and I have not."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "28",
+      "verses": [
+        "7",
+        "9",
+        "13",
+        "14",
+        "19",
+        "20"
+      ],
+      "note": "The VOICE_LABELS gap caused measurable CONTENT LOSS here, which is the first time that has been demonstrated rather than predicted. 'Cyril of Jerusalem' is not an enum entry (only a bare 'Cyril' is), so split_voices cannot see his header and folds his text into whichever voice precedes it — in this chapter, John Wesley. Cyril heads a block in 6 of the 20 keys (7, 9, 13, 14, 19, 20) and every one of them was invisible to the tooling. The consequence in the data: keys 19 and 20 carried an eastern-antiochene SCHOOLS entry summarising Cyril's reading, with the summary written out in full, while the prose said nothing of him at all; keys 7 and 14 declared him in voices and likewise never used him; key 13 had him in the source and neither declared nor used him. All six now carry him, and keys 7, 13 and 14 have gained the matching schools entry. John Chrysostom is swallowed the same way under key 11, though there the prose does use him. A correction to my own earlier reasoning, recorded so the next reader does not repeat it: I first treated 'declared in voices but absent from the prose' as a defect in itself. It is not. validate-synthesis.py line 173 checks only that tags.voices is a non-empty list and the comment says plainly 'for badges', and the only other invariant is that each declared voice be groundable in the source. voices is a display roster of what the catena offers, and v1 declares nineteen voices for a 390-word entry, which no entry could carry. The genuine defect is narrower and worth stating precisely: a SCHOOLS entry is substantive, carrying a slug, a prevalence and a summary, so a schools summary the prose never presents is a real mismatch. That was true of exactly two verses here, 19 and 20."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "28",
+      "verses": [
+        "5",
+        "8",
+        "9"
+      ],
+      "note": "Three NEW false-negative modes for the grounding check, all found by chasing apparent fabrications in this chapter that turned out to be sound. Every one of them would have produced a retracted accusation of the kind 1chronicles 25 taught us to fear. (1) GREEK SCRIPT vs TRANSLITERATION. v5 attributes to Robertson a note on the perfect participle 'estaurômenon'. No fold-and-grep finds it, because Robertson's block has the Greek, not the Latin letters: 'Ιησουν τον εσταυρωμενον'. Any checker that strips non-ASCII, as mine does to handle diacritics, destroys every Greek and Hebrew original in the corpus and so can never match a transliteration. The fix is a transliteration map for the Greek alphabet, not more folding. (2) COMMENTATOR-SPECIFIC BOOK ABBREVIATIONS. The same v5 note cites 1 Corinthians 2:2, absent as written because Robertson writes '1Co 2:2'; he also uses 'Joh', 'Mr', 'Mt', 'Lu'. These are not the classical abbreviations already in the ABBR map, they are a particular commentator's house style, and Robertson appears in nearly every chapter. (3) CORRUPTED CLASSICAL ABBREVIATIONS. v8 credits Terence for the line on fear and joy intermingling. 'Terence' appears nowhere; the catena has 'Terant. Andr. v. 945', which is 'Terent. Andr.' with a scrape corruption on top of the abbreviation. So the equivalence set has to tolerate a typo in the abbreviation itself, which in practice means matching on the WORK and line reference rather than the author name. Net for this chapter: a first pass flagged 36 quoted segments as unmatched; after handling ellipses properly, Greek script, and these abbreviations, the true count of ungrounded claims was ONE — v9's 'the Bride's word', where Cyril quotes 'I will hold him, and will not let him go' without naming a speaker and the prose supplied the figure. That one was cut."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "28",
+      "note": "FLOOR-HUGGING is worth an owner decision, and this chapter is the sharpest case for it. Seven of twenty verses here sit at 350-375 words and the audit flags them FLOOR at 35 percent, the highest rate I have met; six of the twenty were already floor-hugging before this pass, so it is the chapter's pre-existing condition rather than something the repair introduced, and the gate passes because 350-650 is the documented range and the PAD rate is zero. What makes it worth raising is the source behind it. Matthew 28 carries 48,949 usable source words over 20 keys, about 2,450 per verse, which is the richest catena I have worked on; the recorded expansion ratios for the chapter run from 0.03 to 1.11, meaning the prose uses a few percent of what is available. A 360-word entry built on 2,450 words of Gill, Barnes, Clarke, Ellicott, Robertson, Calvin, Wesley, Henry, Cyril of Jerusalem and a dozen fathers is not padded, it is barely tapped — the opposite failure from the one the word floor was designed to catch. Concretely, the five verses I did have to lengthen to clear the floor after the header repair were all lengthened with genuinely dropped material found in minutes: Gill on why the women's errand needed haste, Clarke's textual note on the doubtful opening clause, Gill on the fears Christ removes, Calvin on the carelessness of the priests' enquiry, and Cyril throughout. The question for the owner is whether the word target should scale with source size, because a flat 350-650 band treats a 400-word catena and a 2,450-word catena identically, and for the second it rewards leaving most of the witness on the floor."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "28",
+      "verses": [
+        "4",
+        "6"
+      ],
+      "note": "Two ROLLCALL-SHAPE hits judged false positives, and the distinction is now clean enough to state as a rule. v4: 'They were \"Roman soldiers and veterans... seized with a panic\" (Gill); \"by terror they fainted, or were thrown into a swoon\" (Barnes); Ellicott infers the two Maries saw the soldiers prostrate; and Robertson adds no wonder they became as dead men and fled before the women came.' v6: 'It was a new tomb (John 19:41) so there could be no deception (Clarke); Barnes describes the niche cut in the rock; Ellicott adds the linen clothes and the napkin (John 20:5-6).' Four names and two semicolons in the first, three and two in the second, so both trip the detector. Both are legitimate. The test that separates them from the thing rule 6 bans: in a degenerate slot-list each item is the SAME KIND of thing about the same object, a gloss slotted into a repeated frame, and dropping any one of them costs nothing. Here each name contributes a DIFFERENT observation — Gill the soldiers' veteran hardness, Barnes the medical fact of the swoon, Ellicott what the women saw on arrival, Robertson that they had fled before the women came; and in v6 the tomb's newness, the shape of the niche, the grave-clothes. Expanding either into separate sentences would pad, not clarify. So the detector should stay a filter whose every hit is read, exactly as the job 30 lesson concluded for the frame-then-inventory shape, and the readable signal is whether the items are interchangeable. Also recording that this chapter's REQUOTE hits were again entirely the two classes already logged — verse-head overlapping a glossed lemma, and two renderings of one clause — with the added wrinkle that the prose here uses internal ellipses heavily, so any requote or verbatim check MUST split on '...' before matching or it reports most of the chapter as unmatched. My first pass made exactly that mistake and reported 80 bad fragments where there was one."
     }
   ]
 }
