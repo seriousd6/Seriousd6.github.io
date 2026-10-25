@@ -101467,6 +101467,34 @@
       "book": "matthew",
       "chapter": "8",
       "note": "All 34 entries were rewritten from the catena rather than polished, so the fidelity grade is a writer's grade on new prose: 34/34 A, checked_by self, every attribution re-verified against the verse key plus its enclosing section head. The legacy entries carried NO fidelity record at all (the chapter was legacy-unversioned), so there was no stamp to compare against. Two attribution errors in the legacy prose are worth recording as the shapes to watch for, both now gone: entry 6 credited Gill's note on the Persic version to the wrong provenance chain, and entry 1's 'reformed Calvin marks the striking display of divine power' sat beside a second, duplicate statement of the same Calvin quote 300 words later. Spot-checks run on this chapter: span-aware voice grounding (34/34 grounded), em-span quotation grounding (all grounded, 0.1% of text), numeric-claim checking against the span source, and the banned-carrier family regex (80 instances to 0)."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "19",
+      "verses": [
+        "10",
+        "16"
+      ],
+      "note": "Two Jamieson, Fausset and Brown blocks in job 19 are MISFILED and carry no comment on Job at all. Key 10 (119w) is on the Levitical officers and scribes of 1 Chronicles 23/26 — six thousand magistrates, their three classes, 'rulers for every matter pertaining to God'. Key 16 (453w) is on 1 Chronicles 27:1-15, the twelve monthly captains of David's militia, twenty-four thousand to a legion. Both declared in excluded_voices on the pericope tiles covering them (6-12 and 13-19) and the declarations validated clean. Two things worth noting beyond the exclusion. (1) The keys are 10 and 16 — STRIDE 6, matching the Jamieson stride-6 lattice recorded from colossians and the Chronicles/Kings chapters, so the misfiling is systematic placement rather than random corruption. (2) The donor corpus is 1 Chronicles, which is the pattern the colossians 3 case falsified for the Epistles (donor there was the Corinthian correspondence); in the poetical books the Chronicles donor still holds. This is NOT a blocklist candidate: the rest of job 19's catena is sound and the chapter rewrote cleanly to 6/6 A."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "19",
+      "verses": [
+        "27"
+      ],
+      "note": "Keil and Delitzsch at key 27 is a VERSE-TEXT-ONLY block: 67 words printing 'Job 19:27 Whom I shall see for myself... Job 19:28 But ye should say... Job 19:29 Be ye afraid of the sword' and nothing more. Fifth instance of the 'labelled block containing no commentary' class (after haggai 2's eleven K&D blocks at exactly 203 words each, job 27 key 9, and mark 8's cross-reference-only and see-also-only blocks), and again K&D, the chronically truncated voice that heads the phantom-declaration list at 1,272. I did NOT exclude it: the K&D block at key 22 prints the strophe for verses 22-29 and carries real exposition of verse 25 ('If we have correctly understood al-aphar, we cannot in this speech find that the hope of a bodily recovery is expressed') plus its own rendering 'And after my skin, thus torn to pieces, And without my flesh shall I behold Eloah'. Both were used on the 25-27 tile and K&D declared there, grounded out of key per the standing out-of-key procedure. The 'without my flesh' rendering is a genuine fourth position in the in-the-flesh debate and would have been lost had I excluded the voice on the strength of its key-27 block alone."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "19",
+      "note": "Legacy rewrite, 29 per-verse entries to 6 pericope tiles (1-5, 6-12, 13-19, 20-24, 25-27, 28-29) on 23,181 usable source words. Two procedural findings. (1) TILING FROM THE SOURCE'S OWN OUTLINE. Clarke's key-1 block opens with a chapter synopsis that states the divisions outright — cruelty of friends 1-5, laments his sufferings 6-12, forsaken by all 13-19, sufferings and the wish for a record 20-24, hope of resurrection 25-27, warning to persecutors 28-29 — so the tiling is the source's and not mine. Preferable to inventing one: where a commentator prints an outline, use it. Henry's three mega-heads (1-7 at key 1, 8-22 at key 8, 23-29 at key 23) cut across those divisions, which forces out-of-key Henry declarations on tiles 3, 5 and 6; justified on the job 27 precedent because Henry numbers the verses as he expounds them (v.13, v.15, v.16, v.17, v.18, v.19, v.20, v.21, v.22 inside the key-8 block; v.25, v.26, v.27, v.28, v.29 inside key 23). (2) THE BOOK OF JOB'S ENTITY CONVENTION. Checked before writing: job 19's legacy prose carried 131 literal em-dashes and 100 ASCII possessives and ZERO HTML entities, and job 27, 28 and 41 agree (0, 0, 2 mdash against 21, 72, 142 literal). So the book writes dashes and apostrophes literally. I followed it, and the side-effect is worth stating plainly: literal em-dashes produce NO junk token, where '&mdash;' yields 'mdash' and '&rsquo;s' yields two. Converting tile 1 from entities to literals moved audit-words 643 to 635 with the validator count unchanged. On a chapter one is rewriting whole, choose literal punctuation — it sidesteps the entity-density problem (john 14) and the of-phrase trap that follows from trying to rephrase around it."
     }
   ]
 }
