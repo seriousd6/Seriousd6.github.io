@@ -101502,6 +101502,23 @@
       "book": "luke",
       "chapter": "13",
       "note": "Pick de-risking for whoever takes this next: I measured luke 13 and declined it, so the baseline is here rather than needing re-derivation. 46,189 usable source words across 35 source keys; 35 synthesis entries, ALL legacy-unversioned, no fidelity records, 2 recorded grade B; lengths 352-566 with 31 of 35 under 400, so floor-hugging at roughly 0.28 expansion. The defect profile is NOT matthew 8's. Every one of the 35 entries is QUOTE-LED (the gate threshold is 0.34, so this is 100% against a one-third limit), and the quoted fraction runs 0.33 to 0.68 of the entry — a third to two-thirds of each entry is direct quotation, which also breaches the rule-5 scripture cap of about one fifth. Several entries additionally re-quote the same fragment (keys 3, 4, 7, 8, 9, 11, 33, 35). So the work per entry is converting quotation into paraphrase, not removing carriers, which makes this a heavier job than its word count suggests — matthew 8 was 73,670 words but needed only carrier removal plus restoration. Patristic section heads are keys 1, 6, 10, 18, 22, 31 (same hybrid structure as mark 10 and matthew 8), and JFB blocks sit on keys 7 and 13 — worth checking those two against the back-shift signature logged under matthew 8."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "11",
+      "verses": [
+        "31"
+      ],
+      "note": "Polish of the chapter's one remaining grade B, and the NARROWEST B measured so far: ttr 0.5775 against a 0.58 floor, short by 0.0025, with compress already clear at 0.4446. PARALLEL RHETORIC — a third member of the duplication family, after parallel quotation (1samuel 17) and of-phrase inflation (john 14). The single worst window scored 0.52 and sat squarely on Clarke's chain, which the prose reproduced limb by limb: 'As surely as the Jews were once in the kingdom and the Gentiles were not; as surely as the Gentiles are now in and the Jews are not; so surely will the Jews be brought back.' That is Clarke's own anaphora, and reproducing it verbatim imports his repetition into the distillation — 'surely' x3 on top of Jews x7 and Gentiles x8. The fix is to NAME the figure rather than PERFORM it: 'setting three certainties end to end, the exchange of places once accomplished, the reverse exchange now standing, and a third still to come, so that the restoration grows as secure as the two displacements already visible.' Same argument, same force, none of the anaphora. Rule: where the source's force comes from a rhetorical figure, report the figure; only quote it where the wording itself is what the witnesses disagree about. ADD branch also used, the entry being 576 words on 928 of source: Gill's wholly unused opening (blindness fallen, the veil over the heart, and the careful distinction that they hold there is a God and that he is one, the refusal falling on Father and Son), Barnes's unused immediate-versus-remote effect, Robertson's identification of the particle as one of purpose, and Clarke's 'not everlasting'. Final 641 words, ttr 0.6408 (margin 0.061), compress 0.4457, grade A; chapter now 36/36 A."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "11",
+      "note": "Refinement of the haggai 2 finding that terse-shape chapters DEGRADE UNDER REPAIR. Romans 11 is terse — debates is a list of plain strings, outliers an empty list — and it did NOT degrade. The reason matters: this chapter's school summaries are flowing prose strings, so new material from a repair has somewhere to go, and the new purpose-versus-consequence split could simply be appended to debates as a second string without changing the shape. Haggai 2's problem was narrower than 'terse': its schools summary was a bare NAME LIST, which cannot absorb a sentence. So the terse variant has two sub-forms and only one of them is lossy under repair: terse-with-prose-summaries repairs cleanly, terse-with-name-list-summaries does not. That halves the urgency of the tags-shape normalisation item, since the shape to hunt for is the name-list summary (182 chapters carry it) rather than terse debates (430 chapters). Worth checking whether those two sets overlap before anyone starts the normalisation pass."
     }
   ]
 }
