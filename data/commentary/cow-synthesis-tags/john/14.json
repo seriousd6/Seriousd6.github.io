@@ -81,7 +81,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -193,7 +193,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -305,8 +305,8 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
-   "grade": "B",
+   "generated": "2026-10-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
@@ -323,8 +323,9 @@
    "lint": "audit-synthesis-quality/1",
    "fidelity": {
     "grade": "A",
-    "checked_by": "cow-synthesis-loop",
-    "expansion": 0.16
+    "checked_by": "self",
+    "note": "Repaired 2026-10-25. No witness dropped and no content added: the entry was B on ttr alone, 0.008 under, and the causes were the reporting machinery plus the entity artefact. Entity junk was the densest met so far - seven &mdash; and six &rsquo; giving roughly fifteen counted tokens that are not words, which is why the audit read 658 words where the validator read 643. Four dashes became colons or commas and all six possessives were rephrased away, but NOT by converting them to of-phrases: see the note against this verse for why that first attempt failed. The know-family, which stood at sixteen occurrences in 647 tokens, is now ten, with Henry's deliberate play on may know and do know and Ellicott's on ought and did kept intact and only the incidental occurrences varied. 643w/ttr 0.5718 to 615w/0.5917, compress 0.4295 to 0.4432.",
+    "expansion": 0.15
    }
   }
  },
@@ -423,7 +424,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -527,7 +528,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -629,7 +630,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -726,7 +727,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -839,7 +840,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -976,7 +977,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1105,7 +1106,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1244,7 +1245,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1340,7 +1341,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1454,7 +1455,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1562,7 +1563,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1654,7 +1655,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1765,7 +1766,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1876,7 +1877,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1997,7 +1998,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -2139,7 +2140,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -2272,7 +2273,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -2401,7 +2402,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-26",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
