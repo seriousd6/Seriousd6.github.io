@@ -101288,6 +101288,26 @@
       "book": "mark",
       "chapter": "8",
       "note": "A FOURTH tags shape variant, for the tally begun on 2026-10-25. mark 8 writes debates as objects with keys 'question' and 'positions', where 'positions' is a single prose STRING naming all sides, and writes outliers as objects with keys 'voice' and 'view'. That is neither the rich form (debates with a 'sides' list of position/holders objects, outliers as plain strings) nor the terse form (debates as plain strings, schools summaries as name lists). So the live shapes are now: rich, terse, this hybrid, and the schools-summary-as-list variant which crosses them. Any consumer of the tags must handle at least four, and a normalisation pass needs to enumerate them before it starts rather than assume two. Noting it here rather than converting mark 8, on the same reasoning as colossians 3 and haggai 2: a single entry converted inside a chapter of eighteen makes that entry the odd one out, and the decision belongs with whoever normalises."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "15",
+      "verses": [
+        "26"
+      ],
+      "note": "Single-metric B on ttr, 0.008 under, with compress clear, and all three causes were in the machinery rather than the matter. First, 'servant' ran seven times in 443 tokens, because the verse is about calling one. Second, 'verb' four times and 'answer' four, as the stock terms for Robertson's lexical notes - the attribution-frame defect recorded at 1corinthians 15, here in its lexical-commentary form. Third, and worth the measurement: three '&rsquo;s' possessives, which the audit's visible() does not unescape, so each contributed two junk tokens and SIX of the 443 counted words were not words at all. The validator and audit word counts differed by exactly six, which is a direct confirmation of the entity artefact recorded earlier against psalms 99 and 1chronicles 25. I reduced the possessives from three to one by REPHRASING rather than by converting the entity, on the isaiah 66 precedent: all eighteen entries in this chapter use &rsquo; and nothing else - I checked, 18/18, zero ASCII possessives and zero literal curly quotes - so converting one entry would have made it the odd one out for a gain of about six thousandths. Rephrasing got most of the same gain and kept the convention. Servant is now three, the lexical notes are varied, and Augustine's unused tail is added. 437w/ttr 0.5722 to 473w/0.6014, compress 0.4440 to 0.4529."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "15",
+      "verses": [
+        "26"
+      ],
+      "note": "A NEAR-MISS I nearly shipped as a correction, recorded because the method that produced it is one I formalised only yesterday and it can be run the wrong way round. The entry attributes a paragraph to Augustine - the servant called aside is a prophet taken up and searched, the elder son asking why these feasts are kept in the church, the brother in the farthest parts of the earth and the new song from the end of the earth - and there is NO Augustine block at keys 26 or 27. Following the mark 8 procedure I searched the chapter, found the phrases at key 25, and found that the block they sit in is labelled 'Bede:'. On that evidence I was about to correct the attribution from Augustine to Bede. It would have been WRONG. The Catena Aurea hands material between fathers by interior abbreviations, and this block contains exactly one, 'AUG.' at character 410, after which the text runs continuously - the elder son as Israel, the field as the wealth of the Law and the Prophets, the music and dancing, the servant called, the prophet answering, the new song - with no 'BEDE.' resuming before the material in question at characters 1013 to 1500. So the enclosing label is Bede and the owner of these sentences is Augustine, and the entry was right. THE RULE THIS YIELDS, which belongs beside the mark 8 procedure rather than replacing it: the block label names only who OPENS the key, not who owns any given sentence in it; before correcting an attribution, locate the interior abbreviations and establish which segment the quoted material falls in. The mark 8 direction is safe - prose names a voice with no block anywhere, so search for the block - because it only ever adds a verified voice. The reverse direction is not safe: prose names a voice whose material appears under another label is NOT evidence of error, because the other label may merely be the key's opening voice. I came close to degrading a sound entry by applying yesterday's lesson one step too confidently."
     }
   ]
 }
