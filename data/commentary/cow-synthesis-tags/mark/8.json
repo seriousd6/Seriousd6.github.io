@@ -63,7 +63,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -143,7 +143,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -221,7 +221,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -301,7 +301,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -390,7 +390,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -486,7 +486,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -570,7 +570,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -640,7 +640,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -737,7 +737,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -814,7 +814,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -885,7 +885,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -967,7 +967,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1052,7 +1052,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1128,7 +1128,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1207,7 +1207,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1299,7 +1299,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
@@ -1325,12 +1325,11 @@
  "35": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "Chrysostom",
+   "Remigius",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1385,8 +1384,8 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
-   "grade": "B",
+   "generated": "2026-10-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
@@ -1404,7 +1403,8 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 1.02
+    "note": "Repaired 2026-10-25. The voices list was wrong in both directions and is corrected. It had declared Albert Barnes, Adam Clarke, John Wesley and Cyril of Jerusalem, none of whom the prose reports and none of whom has usable material here: Barnes's and Wesley's blocks at this key are pure cross-reference lists, Clarke's is a see-also referral to his notes on Matthew, and the 203-word Cyril block is off-topic residue on the Passion (the high priest, the smiting and spitting, I gave my back to the scourges) with no bearing on these verses. It had omitted Chrysostom, Remigius and Matthew Henry, who carry two paragraphs of the prose and are grounded at key 34, where the Catena's exposition of take up his cross runs on into these verses - every distinctive phrase used (whosoever spares his son, the substance itself of the soul, the price of his house, in exchange for our salvation) is found there. The schools, debates and outliers were already written for the correct six voices, so only the list was out. Metric repair: soul ran twelve times and life nine in 610 tokens; Chrysostom and Gill were given the same arithmetic twice over, so Gill now carries only his distinctive ransom language and the day of wrath, and his unused comment on the profit clause is added. 610w/ttr 0.5524 to 572w/0.5934, compress 0.4325 to 0.4441.",
+    "expansion": 0.95
    }
   }
  },
@@ -1457,7 +1457,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-15",
+   "generated": "2026-10-25",
    "grade": "A",
    "checks": [
     "length",
