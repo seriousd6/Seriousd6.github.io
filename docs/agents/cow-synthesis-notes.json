@@ -101308,6 +101308,66 @@
         "26"
       ],
       "note": "A NEAR-MISS I nearly shipped as a correction, recorded because the method that produced it is one I formalised only yesterday and it can be run the wrong way round. The entry attributes a paragraph to Augustine - the servant called aside is a prophet taken up and searched, the elder son asking why these feasts are kept in the church, the brother in the farthest parts of the earth and the new song from the end of the earth - and there is NO Augustine block at keys 26 or 27. Following the mark 8 procedure I searched the chapter, found the phrases at key 25, and found that the block they sit in is labelled 'Bede:'. On that evidence I was about to correct the attribution from Augustine to Bede. It would have been WRONG. The Catena Aurea hands material between fathers by interior abbreviations, and this block contains exactly one, 'AUG.' at character 410, after which the text runs continuously - the elder son as Israel, the field as the wealth of the Law and the Prophets, the music and dancing, the servant called, the prophet answering, the new song - with no 'BEDE.' resuming before the material in question at characters 1013 to 1500. So the enclosing label is Bede and the owner of these sentences is Augustine, and the entry was right. THE RULE THIS YIELDS, which belongs beside the mark 8 procedure rather than replacing it: the block label names only who OPENS the key, not who owns any given sentence in it; before correcting an attribution, locate the interior abbreviations and establish which segment the quoted material falls in. The mark 8 direction is safe - prose names a voice with no block anywhere, so search for the block - because it only ever adds a verified voice. The reverse direction is not safe: prose names a voice whose material appears under another label is NOT evidence of error, because the other label may merely be the key's opening voice. I came close to degrading a sound entry by applying yesterday's lesson one step too confidently."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "10",
+      "verses": [
+        "6",
+        "21",
+        "22",
+        "25",
+        "30"
+      ],
+      "note": "The read-back found five real fidelity errors that the machine stamp had passed: all 23 entries arrived graded A with checked_by 'cow-synthesis-loop', i.e. nobody had read them. Shapes, each now corrected: (1) v22 miscounted a source count — Robertson's 'In the LXX and Polybius once' had become 'twice in the Greek Old Testament'; (2) v25 conflated two etymologies — Mark's eye-word tau-rho-upsilon-mu-alpha-lambda-iota-alpha-sigma (from tryo, to wear away) was given Matthew and Luke's derivation (titrao, to bore), and 'each evangelist uses a different word' was wrong since Matthew and Luke share one; (3) v6 transferred provenance — Gill cites Beza's most ancient copy, which had become 'the oldest copy known to him'; (4) v21 and v30 substituted an epithet for the source's own name ('the philosopher' for Crates the Theban; 'a well-known imperial sneer' for Julian the Apostate); (5) v30 absorbed a reported authority — the hundred-wives observation is Vincent's, quoted by Robertson. None was detectable by the lint: every one is grammatical, in the right voice's mouth, and groundable in the span. This is the clearest evidence yet for distinguishing a writer fidelity grade from a loop stamp in the gate."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "10",
+      "note": "This catena is SECTION-structured, not per-verse: the Catena Aurea patristic blocks (Chrysostom, Theophylact, Bede, Gloss, Origen, Augustine, Pseudo-Chrysostom, Pseudo-Jerome, Jerome) appear ONLY under the section-head keys 1, 13, 17, 28, 32, 35, 41 and 46, while Gill/Henry/Clarke/Barnes/Wesley/Robertson/Ellicott are per-verse and Cyril of Jerusalem is sprinkled per-verse from the Catechetical Lectures. An attribution checker keyed to the entry's own 'range' therefore reports every patristic attribution as ungrounded — 19 of 23 entries here, 24 distinct names. Resolving against range-keys PLUS the enclosing section head cut that to one, which was itself a false positive (see the Origen note). Concrete case for the span-aware source resolution item."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "10",
+      "verses": [
+        "13"
+      ],
+      "note": "Origen's v13 block has NO header markup at all: it runs inline inside the Chrysostom paragraph as 'Origin, in Matt., XV, 7:' — misspelled, and with the citation where a <strong> tag should be. Header parsing cannot see it, so the voice is invisible to any unclaimed-voice or attribution check, and VOICE_LABELS cannot reach it either. The prose attributes it correctly and says so ('whose comment the compiler has run into the same paragraph'). Worth a corpus sweep for 'Origin,' and for other inline 'Name, in <book>., <roman>:' attributions."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "10",
+      "note": "Three more grounding false-negative modes, all found here: (a) the ae ligature — the source reads 'Peraean' with the ligature, which NFKD does NOT decompose, so a folded grep misses it (add ae/oe/AE expansion to the fold); (b) abbreviated book names in a citation — Barnes's 'Lev 19:13' does not match a search for 'Leviticus'; (c) an inline attribution whose name is a scrape misspelling ('Origin' for Origen). With the earlier set (Greek script vs transliteration, commentator abbreviations like 1Co/Joh/Mr, corrupted classical abbreviations, scrape-inserted spaces inside words, undecomposable diacritics, roman numerals) the grounding checker now has nine known false-negative modes — it should carry an equivalence table rather than a fold."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "10",
+      "verses": [
+        "22",
+        "35"
+      ],
+      "note": "Two flags judged false positives. (1) v22 reads as 'NEEDS WORK' to any harness that ignores the thin flag: it is a correctly declared thin pericope — 188 usable source words, under THIN_SOURCE_MAX 200, and its length sits inside THIN_MIN/THIN_MAX 120-349. The lint's own THIN category correctly reports 0. Check the thin flag before 'repairing' a short entry. (2) v35's apparent roll-call (Barnes, Wesley, Gill in succession on who spoke) is not a slot-list: Barnes gives 'not in person', Wesley 'she and not they', Gill 'the mother as their mouth' — three distinct shades, which is what the source has."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "10",
+      "verses": [
+        "33",
+        "22"
+      ],
+      "note": "Two levers confirmed again. (1) Rule 6 has a shape the SLOT check misses: v33 chained four clauses on 'means', which is a slot-list by connective rather than by repeated frame. Rewriting the connectives alone left it at ttr 0.5781, still B; what fixed it was RESTORING unused source — Henry's v33-34 material sitting in section key 32, which he expressly tags 'v. 33, 34'. Result 463w, ttr 0.5972, A. (2) The same lever repaired v22 after a correction COST ttr: fixing the Polybius miscount dropped it 0.5900 -> 0.5750 (B), because the deleted words were distinct ones; adding Robertson's own bracketed-Matthew detail brought it to 0.6000 (A) at 214w. Restore-rather-than-cut is now 7 for 7 across job 27/28, 2kings 19, micah 5, mark 10."
     }
   ]
 }
