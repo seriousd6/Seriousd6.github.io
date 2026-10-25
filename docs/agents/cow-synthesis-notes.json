@@ -101155,6 +101155,49 @@
       "book": "job",
       "chapter": "41",
       "note": "MEASURED, corpus-wide: the thin exemption is being used almost nowhere, and the gap it was meant to close has instead been filled with padding. Across 12,606 entries, only 67 are marked thin, while 1,057 are THIN-ELIGIBLE BUT PADDED - that is, 200 or fewer usable source words after excluded_voices, yet more than 349 words of prose, which is precisely the pair of conditions the thin rule exists to make impossible. That is 8.4% of the corpus. The concentration is in the narrative and genealogical books, where short catenae are the norm: 1chronicles 238, 2chronicles 131, 1kings 130, 2samuel 118, 2kings 110, job 99, 1samuel 82, ezra 32, esther 26, mark 25. The extreme tail is instructive - 1chronicles 8:26 runs 421 words on 7 of source, 2samuel 18:12 runs 446 on 9, esther 4:12 runs 484 on 13 - ratios of 50x and 60x that no amount of faithful compression explains. FOUR entries are worse than padded and should be looked at first, because their usable source is ZERO: ezra 2:49 (443 words of prose), ezra 2:13 (438), 1chronicles 25:30 (400) and 1chronicles 25:24 (390). I verified all four rather than assume, since the _LABEL_RE bug I recorded at colossians 1:15 can manufacture a false zero: it is not that. In each case the key's entire catena is misfiled Jamieson residue, correctly declared in excluded_voices, so after exclusion there is no witness material at all, and roughly 1,671 words of prose across the four rest on nothing but the verse text and general knowledge. That is the 'no legal output' hole the loop doc describes for numbers 7, in its acute form: the contract forbids padding and forbids narrating the thinness, and with zero usable source it permits nothing, so the writer wrote anyway. These four need a decision rather than a repair - blocklist, or regeneration once the Jamieson misfiling is fixed at source and the real blocks for those verses are recovered. The remaining 1,053 are a mechanical pass: mark thin and cut to the 120-349 band. Both numbers are reproducible from the scan described here."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "micah",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "10",
+        "14"
+      ],
+      "note": "A prose habit worth naming, because it recurred in six of this chapter's nine pericopes and it is the mirror image of the attribution defects logged for job 27 and job 28: the writer systematically REPLACED A PROPER NAME THE SOURCE SUPPLIES WITH AN EPITHET. Wesley names 'Nineveh or Babylon' and 'Sennacherib, or Nebuchadnezzar'; the prose had 'one of the great northern capitals' and 'one of their kings'. Ellicott names 'King Zedekiah'; the prose had 'the last king of Judah'. Clarke's land of Nimrod is 'Babylon, which was also built by Nimrod'; the prose had 'built by the same founder'. Ellicott dates a dispersion to 'the death of St. Stephen'; the prose had 'after a martyrdom'. Keil and Delitzsch name the 'asherim; the prose had 'the sacred posts'. Most tellingly, Ellicott names Baal and Astarte, the statue placed by MANASSEH in the house of the Lord, and JOSIAH who burnt it at 2 Kings 23:6 — and the prose wrote 'the worship of two named deities' and 'a later king', omitting Manasseh altogether. That phrase 'two named deities' is the giveaway: it acknowledges that the source names them and declines to pass the names on. None of this is unfaithful and none of it would ever trip the grounding check, since no claim is added — which is exactly why it is worth recording. The cost is that the commentary becomes less useful than its sources, and in the Newcome case (key 3) it also absorbed a reported authority, the same defect family as Mr. Good and Ludolphus. All six restored. Every restoration was SHORTER than the epithet it replaced, which matters on a chapter whose entries all sit within five words of the 650 ceiling."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "fidelity",
+      "book": "micah",
+      "chapter": "5",
+      "verses": [
+        "8"
+      ],
+      "note": "A clean confirmation of the conditional-lever rule, and the first case met where the entry had NO headroom at all. Key 8 was the chapter's only grade B: ttr 0.5773 against the 0.58 floor, at 645 words with the ceiling at 650, so adding grounded material was not available as a lever and cutting was the only move. The frequency count said where to cut: the definite article stood at 62 occurrences in 646 words, 9.6 percent, with 23 of them inside the worst 200-word window, and 'enemies' at ten. Twelve edits, every one of them a grammatical substitution that removes a repeated function word while keeping the claim whole — 'the kings of the earth' to 'earth's kings', 'the people of God' to 'God's people', 'the Church of God' to 'God's Church', 'the victories of the Maccabees' to 'the Maccabees' victories', 'the hand of the church' to 'the church's hand', and so on — plus two synonym swaps that trade a repeated word for a distinct one ('opponents' for a tenth 'enemies', 'foes' for a ninth). Result 0.5773 to 0.6135, and the entry fell to 619 words, which handed back 31 words of headroom that then paid for restoring an unused Keil and Delitzsch sentence. So on a ceiling-bound entry the possessive rewrite is the lever of choice: it is the only move that raises type-token ratio and buys length at the same time. Worth contrasting with the four cases now logged where cutting FAILED and restoration worked — those were all verses with headroom and a dropped voice. The diagnostic that tells them apart is simply whether there is room to add."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "micah",
+      "chapter": "5",
+      "note": "Two structural facts about this chapter that bear on open questions, recorded with numbers. FIRST, ZERO DIRECT QUOTATION. Micah 5 contains no quoted spans at all across its nine pericopes — the whole chapter is indirect paraphrase. Set beside matthew 28, repaired in this same run at 0.483 commentator quotation and 0.015 scripture, the corpus evidently spans the entire range from nothing to half the text with no stated norm anywhere between. That makes the standing owner question sharper rather than softer: there is no ceiling for commentator quotation, and apparently no floor either, so two chapters repaired to the same standard on the same day can differ by fifty points on the measure a reader would notice first. Worth deciding, because the two read very differently. SECOND, CEILING SATURATION. All nine entries sat at 645 to 650 words before this pass, every one within five words of the maximum, which is itself a generation fingerprint as clear as the templated headers were in matthew 28 — prose written to a word target rather than to the material. The combination is instructive: micah 5 is pressed against the ceiling on 25,428 source words (expansion 0.14 to 0.50), while matthew 28 was hugging the floor on 48,949 (expansion 0.03 to 1.11). Same standard, opposite failure, and in both cases the word band is doing no useful work — it neither stopped micah 5 from running long on a thin source nor made matthew 28 use a rich one. This is the second chapter in a row arguing that the word target should be a function of available source rather than a flat 350-650."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "source-defect",
+      "book": "micah",
+      "chapter": "5",
+      "verses": [
+        "8",
+        "14"
+      ],
+      "note": "Micah 5 is a chapter that had ALREADY been repaired to cow-prose-rules-2026-08-09 — all nine pericopes carried the current standard, ranges, pericope labels, and Jamieson Fausset and Brown correctly declared in excluded_voices on three of them — and it came back to the queue solely because one pericope had drifted to grade B. Two things were nevertheless left undone by the earlier pass, and both are the kind a re-queue should expect to find. (1) Its fidelity records were stamped checked_by 'cow-synthesis-loop', i.e. machine-asserted grade A on all nine with no note on any of them, meaning nobody had read a single pericope against its source. Re-reading them this pass produced seven substantive corrections, so the machine stamp was not merely uninformative, it was wrong in detail. Recommend the gate distinguish a writer grade from a loop stamp, because at present both satisfy 'fidelity-self-graded' and only one of them means what the check's description says: 'the writer re-read each verse against its source'. (2) Two carriers of the adverb-tolerant family survived — 'On the last clause the voices converge' and 'On the images the voices divide over what the promise looks at' — because they use 'the voices' with an open verb and so sit outside the banned literal list. That is the fourth chapter in a row where the literal list missed instances the subject-plus-open-verb regex catches, and here it is on a chapter that had already been through a repair pass. Also noted: Keil and Delitzsch's block in the 14-15 range is bare verse text with no comment at all, the category that is correctly ignored rather than declared, consistent with the zechariah 10 precedent."
     }
   ]
 }
