@@ -101388,6 +101388,85 @@
         "4"
       ],
       "note": "Polish of key 4 (grade B, ttr 0.5718). OF-PHRASE INFLATION — a measured lever failure worth recording. The chapter is entity-dense: QA.visible() strips tags but does not unescape entities, so '&mdash;' yields the junk token 'mdash' and '&rsquo;s' yields TWO junk tokens; key 4 showed audit-words 658 against validator-words 643, the densest gap met so far (7 em-dashes, 6 possessives). Chapter convention is strictly consistent (21/21 entries use &mdash;, 20/21 use &rsquo;, zero ASCII possessives), so per the isaiah 66 precedent the fix is to REPHRASE, not convert. FIRST ATTEMPT FAILED: rewriting 'X&rsquo;s Y' as 'the Y of X' cut junk tokens from ~15 to 3 yet ttr went DOWN, 0.5718 -> 0.5646, because each conversion adds two high-frequency function words ('the', 'of'). The luke 15 success was ELIMINATING the possessive construction, not inverting it. SECOND ATTEMPT: eliminated the constructions outright ('the house of his Father' -> 'going to the Father'; 'the death of Christ' -> 'his death'; 'the house of God' -> 'his dwelling'), and thinned the know-family 16 -> 10 while keeping Henry's deliberate may-know/do-know play and Ellicott's ought/did play intact. Final 615w, ttr 0.5917, compress 0.4432, grade A. Rule: on an entity-dense cap-bound entry, remove the possessive, do not re-order it."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "8",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29"
+      ],
+      "note": "JFB's blocks in this chapter are BACK-SHIFTED, not randomly misfiled. All five belong to earlier chapters and four advance in step with the key: key 5 carries Matt 6:34 (take no thought for the morrow), key 11 carries Matt 7:4 (the mote and the beam), key 17 carries Matt 7:9 (a stone for bread), key 23 carries Matt 7:13-14 (the broad and narrow way), and key 29 is a bare '(See on Mt 3:10)' stub. That in-step advance points to a block-list alignment offset in the JFB import rather than per-verse misfiling, and it gives an automatable signature the structural check does not currently use: a JFB block whose scripture citations ALL fall outside the chapter it sits in. Worth a corpus sweep on that signature before any remediation, since it would distinguish an offset import (fixable by realignment) from true residue (fixable only by re-scrape). This is the 20th through 24th residue instance logged."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "8",
+      "verses": [
+        "1",
+        "5",
+        "9"
+      ],
+      "note": "Three more inline attributions with no header markup, the same defect class as mark 10's Origen: Haymo is introduced by citation INSIDE Pseudo-Chrysostom's block at key 5 and inside the Gloss at key 9, and Damascenus ('Damascenus, De Fid. Orth. iii. 15') inside Pseudo-Chrysostom at key 1. None is reachable by <strong> header parsing, so all three are invisible to the unclaimed-voice check and to VOICE_LABELS. Haymo is not marginal — he carries substantive material in three entries of this chapter (the mount as heaven, the rule for teachers, the virtues under the centurion's command). The pattern is now two books deep: a Catena compiler's citation ('Name, in <work>., <roman>:') does the work a header tag should."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "8",
+      "verses": [
+        "6",
+        "24",
+        "26",
+        "27",
+        "30",
+        "32"
+      ],
+      "note": "Truncation at exactly 200 words is live in this chapter and now demonstrably duplicating: Gill is cut at exactly 200w in keys 6, 24, 30 and 32, and Cyril of Jerusalem at exactly 200w in keys 17, 26, 27 and 29 — with Cyril's 200-word block IDENTICAL verbatim across keys 26 and 27. Separately, Calvin's blocks here carry a defect sub-class I have not logged before: editorial apparatus dropped inline into the body rather than words merely excised. Key 1 splices a translator's footnote about Horne's 'Introduction to the Critical Study' into the middle of Calvin's sentence on elephantiasis; keys 3, 8, 19, 21 and 31 carry ordinary mid-sentence excisions on top of that. Both remedies are the same re-scrape."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "8",
+      "note": "This chapter is the clearest specimen of the legacy school-scaffold shape, and the cleanest counter-example to the carrier/floor tension. All 34 entries were legacy-unversioned, 17 of them grade B, every one 352-404 words against a 73,670-word catena (expansion about 0.17), with 80 carrier instances and a roll-call built out of school labels: a meta opening ('On Matthew 8:1 — \"quote\" — the witnesses read...'), paragraphs headed by school names, a closing carrier. In 2kings 19 removing carriers forced 58% of verses to the floor because they were already at the ceiling; here it cost nothing, because every entry had 250+ words of headroom and the deleted frames were paid for by restoring source the legacy prose had dropped — Chrysostom's 662w and Bede's 191w in key 1 went entirely unused, and Henry's 4,895w in key 5 was barely touched. Restore-rather-than-cut is now 9 for 9. The lesson for the FLOOR/expansion item: headroom, not carrier count, predicts whether a carrier pass is safe."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "8",
+      "verses": [
+        "1"
+      ],
+      "note": "A rule-5 breach the quotes-capped check cannot see. The legacy entry 1 quoted Calvin's 'by his word alone and a touch of his hand' TWICE and Jerome's 'that by mighty works the preceding doctrine might be confirmed' TWICE, inside the same entry — exactly what 'the same fragment must never be quoted twice' forbids. It passed because this chapter's quotation is mark-free: quoted matter is delimited with <em>, so a quotation-mark extractor finds zero fragments and reports the entry clean. Signature for the sweep: an entry with zero quotation marks but non-empty <em> spans should be re-run with an <em>-aware extractor. On the current prose em-quotation is 19 of 18,263 words (0.1%), every span grounded."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "8",
+      "note": "Two procedural findings. (1) The section structure is confirmed in a SECOND book: the Catena Aurea patristics appear only under section heads 1, 5, 10, 14, 16, 18, 23 and 28, with Gill/Henry/Clarke/Barnes/Wesley/Robertson/Ellicott per-verse and Cyril sprinkled per-verse — the same hybrid as mark 10, so span-aware source resolution is not a one-book quirk. (2) The loop doc's inline school-label convention (docs/agents/cow-synthesis-loop.md lines 227-232, 'each commentator's school named inline as a <strong> tag') is enforced by NO check and is followed by none of the landed repairs (mark 10, 2kings 19, micah 5, matthew 8). It should be enforced or retired, because a writer who follows it produces precisely the school-keyed roll-call shape the ROLLCALL and SLOT heuristics then flag — the convention and the prose rules are pulling against each other."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "8",
+      "note": "Hazard for any future bulk metadata tool. Regenerating the 34 entries' voices/schools mechanically from the prose mis-attributed twice before I caught it: a sentence in which Robertson QUOTES Chrysostom was assigned to eastern-antiochene, and the surnames 'Origen' and 'Chrysostom' matched inside 'Pseudo-Origen' and 'Pseudo-Chrysostom', inventing two voices that were not speaking. A generator needs a reported-speech guard (reject a name preceded by quotes/cites/borrows/after/with/to the effect that) and a Pseudo- prefix guard, and the summary should begin at the clause head so a joint sentence ('Clarke and Gill both identify...') is not truncated into 'Gill both identify'. Note also that schools[].summary is free text validated by nothing, so a stale summary left over from rewritten prose is invisible to every check — it has to be re-derived whenever the prose is rewritten."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "8",
+      "note": "All 34 entries were rewritten from the catena rather than polished, so the fidelity grade is a writer's grade on new prose: 34/34 A, checked_by self, every attribution re-verified against the verse key plus its enclosing section head. The legacy entries carried NO fidelity record at all (the chapter was legacy-unversioned), so there was no stamp to compare against. Two attribution errors in the legacy prose are worth recording as the shapes to watch for, both now gone: entry 6 credited Gill's note on the Persic version to the wrong provenance chain, and entry 1's 'reformed Calvin marks the striking display of divine power' sat beside a second, duplicate statement of the same Calvin quote 300 words later. Spot-checks run on this chapter: span-aware voice grounding (34/34 grounded), em-span quotation grounding (all grounded, 0.1% of text), numeric-claim checking against the span source, and the banned-carrier family regex (80 instances to 0)."
     }
   ]
 }
