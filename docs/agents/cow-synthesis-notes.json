@@ -101904,6 +101904,33 @@
         "24"
       ],
       "note": "THE SCHOOL SCHEMA HAS NO HOME FOR THE CAPPADOCIANS, and the tree is already incoherent about it. VALID_SCHOOLS offers eastern-antiochene and eastern-alexandrian as the only two Eastern buckets. Basil, Gregory Nazianzen and Titus of Bostra fit neither naturally, and Eusebius of Caesarea sits between them; I assigned Basil, Gregory Nazianzen and Titus of Bostra to eastern-antiochene and Eusebius to eastern-alexandrian, which is defensible but not derivable from anything. A corpus survey of the existing tags shows these voices already in use — Basil in 34 entries, Eusebius 16, Titus of Bostra 10, 'Titus Bost' 9, Gregory Nazianzen 5 — with no consistent school attached, so earlier chapters have each guessed separately. TWO things follow: the schema needs either a Cappadocian/Greek-patristic bucket or a documented convention for forcing these into the existing two; and 'Titus of Bostra' versus 'Titus Bost' is a SECOND split-spelling case after the matthew 10 Rabanus/Raban finding, which strengthens the case that VOICE_LABELS should be rebuilt from the catena headers themselves rather than hand-maintained."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "4",
+      "verses": [
+        "6"
+      ],
+      "note": "Polish of key 6, the chapter's one grade B, with BOTH metrics near their floors: ttr 0.5521 against 0.58 and compress 0.4280 against 0.42, clear by only 0.008. Unlike john 5:21, where the compress tax was entity literals, this entry has ZERO entities and only one repeated 5-gram in 622 words — so the compress shortfall came not from repeated literals but from the article-and-preposition scaffolding itself, which compresses well and therefore drags the ratio down. 'the' ran 79 of 622 tokens, a rate of 0.127 against this chapter's own 0.095, almost all of it in genitive chains on one noun: the Spirit of Christ, the Spirit of God, the Spirit of the Father, the Spirit of Jesus Christ, the Spirit of Truth, the first person of the glorious Trinity, the cry of Abba, the sending of the Spirit. Rewriting those as possessives and bare nouns took 'the' to 33 (rate 0.060) and 'of' to 14, and lifted BOTH metrics at once: ttr to 0.6081 and compress to 0.4559. REFINEMENT TO THE JOHN 5 RULE: I said there that compress wants repeated literals hunted and ttr wants repeated tokens, two different searches. That holds, but article inflation is the case where ONE edit serves both, because function-word scaffolding is simultaneously a token repeat and a highly compressible character pattern. So the order of operations should be: measure the article rate first, since if it is above the chapter norm the cheap fix moves both metrics and frees words besides — 78 of them here, which funded the ADD. Final 644w, ttr 0.6464 (margin 0.066), compress 0.4620 (margin 0.042). Chapter conventions preserved: ASCII possessives, no entities, em-dashes used sparingly."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "4",
+      "verses": [
+        "6"
+      ],
+      "note": "ADD material drawn from Calvin, whose 717-word block at this key was the largest in the span and barely touched — the entry had used about sixty words of him. Two pieces were taken, both chosen because they are lexically remote from 'Spirit', which was the saturated token in the weakest window. (1) Calvin raises the obvious objection against his own evidential argument: do not wicked men carry their rashness so far as to proclaim God their Father, and often with louder confidence than anyone? His reply narrows what the evidence covers — no idle boast, nor the proud opinion a man entertains of himself, but the witness of a pious conscience accompanying the new birth, which weighs only in believers since the ungodly have no experience of such certainty. Without this the entry gave Calvin's argument without the objection it was built to answer. (2) On the participle he reads its FORCE rather than its sense: crying expresses boldness, where hesitation keeps the mouth nearly shut and lets half-broken words escape a stammering tongue. That is a genuine fourth position in the entry's own debate on the doubled address, alongside Ellicott's reduplication of entreaty, Wesley's joint cry of Jew and Gentile, and Robertson's raven-croak, and it is the only one that reads the word's temper instead of its reference. Both added to the prose and to the tags, and Calvin added as a holder in the second debate. Not taken: Calvin's polemic against the schoolmen and Popery on perpetual doubt, which is vivid but sectarian rather than exegetical; his substantive point there, that no man is a Christian who has not learned by the Spirit's teaching to call God Father, is already carried by the conscience sentence."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "4",
+      "note": "POLISH QUEUE TRIAGE — measured, and it confirms the routing problem with numbers rather than suspicion. Before drawing this batch I classified every chapter holding a grade-B verse by whether any of its entries carry the legacy-unversioned stamp, since matthew 16 had just shown that a polish pick inside a legacy chapter CANNOT land (the fidelity read-back demands a self-grade on every verse in the chapter, and legacy entries have none). Of 18 chapters with B verses, exactly 9 are unlandable by polishing and 9 are landable. UNLANDABLE, all legacy-stamped throughout: matthew 26 (10 B of 75 entries), john 7 (2 of 53), 1kings 1 (1 of 53), luke 2 (35 of 52), 1kings 2 (3 of 46), matthew 21 (3 of 46), john 13 (6 of 38), matthew 19 (1 of 30), matthew 16 (3 of 28). LANDABLE, no legacy entries: daniel 9, galatians 2, galatians 4, hosea 4, isaiah 59, jeremiah 10, matthew 22, romans 1, romans 8 — all small, 8 to 30 entries, one B verse each. The queue is therefore half dead weight, and because --worst-first is also longest-first the picker serves the unlandable ones FIRST: they hold the most B verses and the most entries. Five consecutive draws this batch returned matthew 16, luke 2, galatians 4, matthew 16 again, matthew 22 — three of five unlandable, and the chapter reverted an hour earlier offered twice. That is the whole mechanism behind mis-routed legacy dominating the draws, and it is cheap to fix: route the polish queue on presence of the current standard stamp, not on grade, and the nine legacy-stamped chapters move to the rewrite queue where they belong. Until then every worker will burn batches on chapters that cannot land, and the nine genuinely landable chapters will keep being crowded out."
     }
   ]
 }
