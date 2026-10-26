@@ -101750,6 +101750,46 @@
         "21"
       ],
       "note": "The block filed under Augustine at key 21 is a CATENA block carrying interior attributions to other fathers, 1,469 words of which the label accounts for only part. Reading it through, the sequence is AUG. (the dead-man-rising comparison, the two guards against a divided or instrumental agency, 'observe not only the power but the will'), then HILARY ('For to will is the free power of a nature, which by the act of choice rests in the blessedness of perfect excellence'), then AUG. again (which dead are meant; the soul/body division), then AUG. on the form of the Son of man appearing in judgment, then HILARY again on nativity ('only a self-existent nature can possess all things, and nativity cannot have any thing except what is given it'), then CHRYS. ('As He gave Him life, i.e. begot Him living; so He gave Him judgment, i.e. begot Him a judge'). Same shape as the luke 15 case, where a single AUG. tag at char 410 ran on continuously with no BEDE. resuming, and the same hazard: the block LABEL names only who opens the key. I used only material standing under an AUG. tag and declared no new voice, because declaring Hilary or Chrysostom would put a name in voices that heads no block in this chapter and the voices-sourced check would have nothing to match. But the Hilary and Chrysostom material here is genuine, on-topic and currently unusable, which is a real loss of two witnesses on the nativity and the begetting of a judge. Recommend the Catena blocks be split on their interior abbreviations at harvest time rather than filed whole under the opening father; until then, anyone working a Catena key should read past the label before deciding a chapter is voice-poor."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "16",
+      "verses": [
+        "15",
+        "16",
+        "26"
+      ],
+      "note": "THE HENRY MISCREDIT, and it is systematic. All three grade-B verses in this chapter used Matthew Henry heavily in prose while omitting him from voices, AND credited his words to the modern commentators standing at the verse. Verified by locating each quoted phrase and then finding which label owns the position: 'more clear and distinct' (key 15, credited to Barnes and Gill), 'in the name of all the rest' and 'foreman of the jury' (key 16, credited to Barnes, Robertson and Ellicott), 'chief of ten thousand' and the four propositions on the soul (key 26, correctly named Henry but with him undeclared) — every one of them sits inside Henry's own block. Henry's blocks in this chapter are at keys 1, 5, 13, 21 and 24, i.e. five section heads, so his comment on vv.15, 16 and 26 lives at keys 13 and 24 and is groundable out of key, which is standard practice; what is NOT acceptable is crediting it to whoever happens to head the per-verse catena. The mechanism is the mirror of the 'Wesley the standing victim' case: there a label regex folded one voice's text into the preceding voice, here a long section head supplies material that the per-verse voices get paid for. Diagnostic worth noting: in all three entries the TAGS already carried a puritan-evangelical school summary naming Henry while voices omitted him, so the tags knew he was a contributor and the declaration did not. That is a mechanical, zero-source-reading test for the whole corpus: flag every entry whose school summaries name a voice absent from its own voices list. Henry declared at all three keys; the miscredits reassigned to him in both prose and tags."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "16",
+      "verses": [
+        "16",
+        "26"
+      ],
+      "note": "TWO UNSOURCED CLAIMS INSIDE QUOTATION MARKS OR ATTRIBUTION, both corrected, and a new worst case. (1) Key 16 printed, in quotation marks, that Calvin says Peter 'comprehends briefly the whole power of Christ'. Searched chapter-wide: 'comprehends' 0 hits, 'whole power' 0 hits. The wording is not Calvin's anywhere in this chapter. His actual sentence is present and is better: 'The confession is short, but it embraces all that is contained in our salvation', and he unpacks it as an everlasting Kingdom and an everlasting Priesthood, to reconcile us to God, expiate sin by sacrifice and obtain a perfect righteousness, and to uphold, supply and enrich us with every description of blessing. The tags carried the same invented phrasing, so it had propagated. (2) Key 26 said Origen 'presses the metaphysics of the soul's value, that what bears the image of God cannot be priced against perishable things'. In his 819-word block at that key, 'image' 0 hits and 'value' 0 hits, while 'ransom' has 4 and 'precious blood' 3. His argument is the ransom: a man's substance might seem to be the price, but no man owns anything which tendered as a ransom delivers a soul from death — the ransom was given and God gave it, the precious blood of his Son. A better argument than the one invented for him, and now in the prose. WHY THIS IS THE WORST CLASS YET. The john 5 case put a father on the wrong side of a real debate. This one asserts WORDING he did not write, inside quotation marks, which is the strongest claim a distillation can make. No gate catches it: the fidelity checker tests whether a VOICE is groundable in the chapter, and Calvin and Origen both are. Recommend a quoted-span check — extract every span inside quotation marks and require it to occur in the chapter's source — which is mechanical, needs no judgement, and would have caught both. Legacy per-verse prose is the place to run it first, since that style quotes where the current standard reports."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "16",
+      "verses": [
+        "15"
+      ],
+      "note": "Albert Barnes at matthew 16:15 is a BARE CROSS-REFERENCE: his whole block is the single token '16:13', measured by cutting from his label to the next label rather than to end-of-string. He was nevertheless declared in voices and credited in the prose with a claim that is Henry's. Now moved to excluded_voices, which validated clean. This is the cross-reference-only sub-form of 'labelled block containing no commentary', previously met at mark 8 (Barnes and Wesley) — so the same voice, the same defect, a second time. Method note worth keeping, because I got it wrong once in this very batch: measuring a block by splitting on its own label and taking everything after it reported 322 words for this stub, because the slice swallowed Ellicott, Robertson and Calvin behind it. The correct measure is label position to NEXT label position. Any corpus pass over block sizes must do it that way or it will report every short block as long and miss every stub. Suggest the hollow-block detector already on the open list be specified as: cut each block at the next label, then flag blocks under about 20 usable words, and sub-classify by whether the residue is a bare verse reference, verse text only, a cross-reference list, or a see-also referral."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "rejected",
+      "book": "matthew",
+      "chapter": "16",
+      "note": "failed lint (chapter); reverted, attempt kept at scratchpad/rejected/matthew-16-20261026-092340"
     }
   ]
 }
