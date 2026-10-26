@@ -101603,6 +101603,123 @@
         "1"
       ],
       "note": "SECOND INSTANCE of the tags-richer-than-prose defect, one batch after the first, in a different book and by a different author. At hebrews 1:4 the tags carried Clarke's second ground where the prose stopped halfway. Here the tags for the 1-2 tile already carried TWO Barnes claims the prose had lost: his positive answer ('This seems designed to represent the church as about to be increased, and as in that condition watched by a dragon, a mighty foe ready to destroy its offspring') and his structural claim ('This portion of the book commences a new series of visions'), which is his argument that the opened temple and ark at the close of chapter 11 belong with chapter 12. Both are verbatim in his key-1 block. The prose gave only his OBJECTION to the church-before-the-incarnation reading, so Barnes appeared as a voice that raises a difficulty and never answers it — and the chapter's own disagreement note records only that objection too, so the gap had propagated. Both restored with words freed by the article thinning. TWO INDEPENDENT INSTANCES NOW, and in both the omitted material was the commentator's CONCLUSION while the retained material was his objection or his first clause, which suggests the original pass truncated long blocks at a sentence boundary rather than summarising them. The tags-match check cannot catch this, since it tests that tagged content has prose support and not the converse. Recommend the reverse pass be raised in priority: for every entry, list school-summary and debate claims naming a voice whose prose treatment does not carry them. It is mechanical, it needs no source reading, and on this evidence it recovers real argument rather than cosmetics."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "LEGACY SHAPE: all 51 entries arrived as 'legacy-unversioned' SCHOOL-SUMMARY prose rather than per-voice attribution — 41/51 opened on 'the witnesses', 22 carrier instances, quotation fraction ~0.40 (over the rule-5 cap), 7/51 with internal duplication, 44/51 with sweep findings. Every entry sat at 350-435 words (median 369) against ~2,957 usable source words per verse: 0.12 expansion, the LOWEST ratio seen in this repair effort (mark 10 was 0.62, matthew 10 0.21). The legacy writer had aggregated by school ('the Reformed voices (Calvin, Gill)', 'the cloud of witnesses is, at root, unanimous') instead of naming who said what, which is why the shape passes the word bands and fails every content check. Rewrite kept the bands and replaced the aggregation with attribution throughout."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "1",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "32",
+        "38",
+        "44",
+        "50"
+      ],
+      "note": "JFB RESIDUE CLUSTER — eight keys in ONE chapter, the densest yet. key 2 -> Luke 14:11 (exalted/abased); key 8 -> Matt 5:46; keys 14 and 20 -> the SAME Luke 14 feast block (duplicate-broadcast inside one chapter); key 32 -> 'See on Mt 5:13-16 and Mr 9:50' (salt and light); key 38 -> Matt 18:12-14 / Luke 15 lost sheep, with Trench quoted; key 44 -> an 8-word Bengel fragment, 'not done without dust on man's part'; key 50 -> prodigal-son material ('with harlots', Luke 15:30) with Trench on fornication as the standing image of idolatry. None of it touches John 1. This is the same commentator and the same failure mode logged on matthew 8 and john 1 keys 14/20 earlier in the session, and it strengthens the standing recommendation that residue be CLASSIFIED before remediation: a back-shift offset and a duplicate broadcast need different fixes, and JFB here shows both at once."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "1",
+      "verses": [
+        "51"
+      ],
+      "note": "CYRIL DUPLICATE-BROADCAST, FOURTH BOOK. The identical 142-word Cyril of Jerusalem block beginning 'And many are the proofs concerning the life eternal' is attached to john 1 key 51. The same block is already logged at matthew 8, at matthew 10 keys 15 AND 42, and at mark 10. Four books, five keys, byte-identical text, and in no case does it expound the verse it is filed under. The 200-word truncation is also present (the block stops mid-sentence at 'gathereth fruit unto life eternal'). A corpus-wide grep for this one block would quantify the class in a single pass and is the cheapest available test of whether duplicate-broadcast is a scrape artefact or an import-time fan-out."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "33",
+        "34"
+      ],
+      "note": "HOMILETIC PREFACE AS VERSE CONTENT. Three keys carry sermon openings that are not exposition of anything: key 1 has Barnes's and Clarke's prefatory matter about the evangelist (3,714w and 4,393w — introductions to the Gospel, filed under verse 1); key 33 has Augustine's tractate opening ('We have arrived, as the Lord hath willed it, to the day of our promise'); key 34 has another ('We rejoice at your numbers, for you have come together with readiness'). Both Augustine blocks are cut at exactly 300 words. This is a sub-class distinct from residue: the material belongs to the right BOOK and often the right verse's sermon, but it is front matter, not commentary, and it inflates the usable-source measure that the thin exemption and the word target are both derived from. Key 34's preface did yield one usable passage (the psalm's poor and needy man as the voice of the one body) and was used; the rest is unusable by construction."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "1",
+      "verses": [
+        "27",
+        "28",
+        "29",
+        "30",
+        "34"
+      ],
+      "note": "TTR CONFIRMED AGAIN, FIVE MORE TIMES: grounded source lifts ttr, my own editorial summary depresses it. Draft 29 closed with a paragraph of my own synthesis ('Taken together the readings divide along a familiar line...') at 304w/0.6195; replacing it with Lightfoot's laying-on-of-hands rite, Barnes's and Clarke's lamb catalogue, Calvin's figure-of-speech note, Ellicott on beareth/taketh away and Chrysostom on the occasion took it to 580w/0.6187 — same ttr at nearly double the length, where padding would have dropped it. Key 30 went B->A (0.5736 -> 0.6012) purely by rewriting a Calvin paragraph to vary diction around 'before'/'time', which the subject matter makes unavoidably repetitive. Keys 27, 28 and 34 all cleared the floor by pulling MORE from their own keys rather than by stretching what was there. Restore-rather-than-cut is now 14-for-14."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "1",
+      "verses": [
+        "22",
+        "40",
+        "44"
+      ],
+      "note": "THE FLOOR FORCES NEAR-1:1 EXPANSION ON THIN KEYS. Three keys in this chapter have less source than the 350-word floor comfortably allows: key 22 has 363 usable source words and needs 355 prose words (0.98); key 40 has 466 and needs 362 (0.78); key 44 has 454 and needs 399 (0.88). None of the three qualifies for the thin exemption, which caps usable source at 200. Against a chapter mean of 0.12 expansion this is a fourfold-to-eightfold swing in how hard the floor bites, decided entirely by the catena's uneven block sizes. This is the same standing item as 'should the word target scale with usable source words?' — the measurable form of the question is that FLOOR and expansion should be reported side by side, since a 350-word entry on 363 source words and a 350-word entry on 9,661 source words are opposite defects wearing the same number."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "1",
+      "verses": [
+        "39",
+        "44"
+      ],
+      "note": "TWO REAL COMMENTATOR DISAGREEMENTS WORTH KEEPING, as against the legacy prose's habit of flattening them into unanimity. (1) THE TENTH HOUR, key 39: Ellicott and Calvin both read Jewish reckoning and make it four in the afternoon (Ellicott arguing that the Babylonian method, usual at Ephesus as at Jerusalem, is not departed from in this Gospel; Calvin that only two hours remained till sunset); Robertson reads Roman time and makes it ten in the morning, on the ground that a writer at Ephesus late in the century would use it and that 'evening on that day' at 20:19 fits; Barnes sets out both computations and declines to decide. (2) BETHSAIDA, key 44: Gill applies the tetrarch's refounding and the name Julias to the disciples' own town, where Ellicott and Robertson keep Julias on the eastern shore in Iturea and reserve the western Bethsaida of Galilee for Philip, Andrew and Peter. Both were written as disagreements rather than resolved, which is what the chapter's A grades are mostly made of."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "1",
+      "verses": [
+        "31"
+      ],
+      "note": "SWEEP FALSE POSITIVE, name detector. My scratch ROLLCALL-SHAPE heuristic counts capitalised tokens as commentator names, so 'The one was in the deserts until the day of his showing unto Israel, the other dwelt with his parents at Nazareth ... and the coming to Jordan for baptism was their first interview' scores as 3 names + 3 semicolons and is flagged. There is not a single commentator in the sentence: Israel, Nazareth and Jordan are the three 'names'. The repo's own gate reports SLOT 0 and NOISE 0 for the chapter. The fix for the detector is to match against the chapter's actual voice-label set rather than against capitalisation — the same correction the matthew 10 Rabanus/Raban finding pointed at from the other direction."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "1",
+      "verses": [
+        "30",
+        "31"
+      ],
+      "note": "SPAN-AWARE RESOLUTION, john 1: patristic heads are [1,2,3,4,5,6,7,9,10,11,14,15,16,18,19,20,21,22,24,25,26,28,29,32,35,37,41,43,47] against a single Henry head at 16 for the whole second half. The practical consequence is that keys 30 and 31 carry NO patristic block of their own and must be written from head 29, where the catena's inline sub-attributions (THEOPHYL., AUG., GREG., CHRYS.) hold the material that belongs to them — Augustine's 'he comes after me because he was born after me', Gregory's 'begotten of his Father out of time', Theophylact's 'Attend, O Arius'. A per-key reader sees empty patristic coverage at 30 and 31 and would write them from the Protestant commentators alone. This is the fourth book where two heads are needed (patristic plus Henry) and the first where the Henry span covers 36 consecutive verses."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "1",
+      "verses": [
+        "47"
+      ],
+      "note": "METADATA GENERATOR needed two new guards for this chapter, both found by reading the generated school summaries. (1) COMMA-LIST ABSORPTION: 'Gill, Barnes and Clarke all take the errand as a specimen' resolved for Clarke to the fragment 'Barnes and Clarke all take...' because the clause-head backtrack handled 'X and Y' but not 'X, Y and Z'. (2) STRICT-THEN-LOOSE CLAUSE SEARCH: the old <6-word fallback replaced a short clause with the WHOLE SENTENCE, so Calvin's summary at key 47 became 'Barnes and Clarke keep the commendation modest, and Calvin generalises it' — a sentence whose subject is two other voices — while Calvin's actual material sat two sentences later. Searching first for an occurrence that yields a clause of >=8 words at a clause head, and only then falling back, fixed it. Both defects are invisible to every check in the repo, which is the standing point that schools[].summary is free text validated by nothing."
     }
   ]
 }
