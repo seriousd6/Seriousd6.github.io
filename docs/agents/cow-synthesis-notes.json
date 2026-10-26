@@ -101720,6 +101720,36 @@
         "47"
       ],
       "note": "METADATA GENERATOR needed two new guards for this chapter, both found by reading the generated school summaries. (1) COMMA-LIST ABSORPTION: 'Gill, Barnes and Clarke all take the errand as a specimen' resolved for Clarke to the fragment 'Barnes and Clarke all take...' because the clause-head backtrack handled 'X and Y' but not 'X, Y and Z'. (2) STRICT-THEN-LOOSE CLAUSE SEARCH: the old <6-word fallback replaced a short clause with the WHOLE SENTENCE, so Calvin's summary at key 47 became 'Barnes and Clarke keep the commendation modest, and Calvin generalises it' — a sentence whose subject is two other voices — while Calvin's actual material sat two sentences later. Searching first for an occurrence that yields a clause of >=8 words at a clause head, and only then falling back, fixed it. Both defects are invisible to every check in the repo, which is the standing point that schools[].summary is free text validated by nothing."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "5",
+      "verses": [
+        "21"
+      ],
+      "note": "A MISATTRIBUTED POSITION, corrected. The tags for key 21 placed Augustine on the side 'Literal raising, of a kind the prophets performed only by request' together with Barnes and Clarke. His block says the opposite in as many words: 'He alludes to the general resurrection which is to be; not to the resurrection of those few, who were raised to life, that the rest might believe; as Lazarus, who rose again, to die afterwards.' The prophets-by-request argument is Barnes's and Clarke's and Augustine nowhere makes it; he expressly EXCLUDES the Lazarus-type raising as the reference. Augustine removed from that side and given his own, with the further division his block draws, the raising and quickening referred to the soul's resurrection, which takes place by the substance of Father and Son and is their joint work, and the committed judgment referred to the body's, which takes place by a temporal dispensation of the Son's humanity, not co-eternal with the Father. The prose was simply silent on all of it, so the error lived only in the tags and in the recorded debate. THIS IS A THIRD DIVERGENCE CLASS and the worst of the three. mark 8: the voices LIST over-reports what the prose uses. hebrews 1:4 and revelation 12:1: the TAGS carry argument the prose dropped, recoverable and benign. Here the tags assert a position the voice's own block CONTRADICTS, which no current check can catch — UNSOURCED tests whether a voice is groundable in the chapter, not whether the position attributed to it is the one he holds. A groundable voice on the wrong side of a debate passes every gate. Recommend that any future fidelity pass verify holder-to-position pairing and not merely voice presence; the debates carry the schools' disagreements to readers, so a wrong holder is a wrong claim about what a father taught."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "5",
+      "verses": [
+        "21"
+      ],
+      "note": "Polish of key 21, the chapter's one grade B, and the first entry met where BOTH metrics sat near their floors: ttr 0.5616 against 0.58 and compress 0.4228 against 0.42, the latter clear by only 0.0028. That matters for lever choice, because the two respond to different things. ttr answers to repeated TOKENS; compress is a zlib ratio and answers to repeated CHARACTER SEQUENCES, so a long literal string recurring ten times costs compress specifically. Here the entry carried 4 mdash and 6 rsquo, that is ten copies of a seven-or-eight character literal, which is a compress tax the token count barely registers. Removing them by rephrasing (not converting — the chapter is strictly consistent at 118 mdash and 82 rsquo with zero literals) lifted compress 0.4228 to 0.4407 while the article and conjunction thinning lifted ttr 0.5616 to 0.6499. Combined: 'the' 73 to 49, rate 0.117 to 0.080 against the chapter's own 0.091; 'of' 23 to 11; 'and' 31 to 34 after the ADD. PRACTICAL RULE: when compress is the binding metric, hunt repeated LITERALS — entities, stock phrases, parallel constructions — rather than repeated words; when ttr binds, hunt tokens. Two different searches on the same entry. Secondary note: the article thinning freed 113 words on a 2,630-word source, which funded the Augustine ADD, so on an article-heavy entry the cheap lever pays twice, once in the metric and once in the word budget. House style preserved: all 31 entries in this chapter carry bold inline school slugs, and this one keeps them."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "5",
+      "verses": [
+        "21"
+      ],
+      "note": "The block filed under Augustine at key 21 is a CATENA block carrying interior attributions to other fathers, 1,469 words of which the label accounts for only part. Reading it through, the sequence is AUG. (the dead-man-rising comparison, the two guards against a divided or instrumental agency, 'observe not only the power but the will'), then HILARY ('For to will is the free power of a nature, which by the act of choice rests in the blessedness of perfect excellence'), then AUG. again (which dead are meant; the soul/body division), then AUG. on the form of the Son of man appearing in judgment, then HILARY again on nativity ('only a self-existent nature can possess all things, and nativity cannot have any thing except what is given it'), then CHRYS. ('As He gave Him life, i.e. begot Him living; so He gave Him judgment, i.e. begot Him a judge'). Same shape as the luke 15 case, where a single AUG. tag at char 410 ran on continuously with no BEDE. resuming, and the same hazard: the block LABEL names only who opens the key. I used only material standing under an AUG. tag and declared no new voice, because declaring Hilary or Chrysostom would put a name in voices that heads no block in this chapter and the voices-sourced check would have nothing to match. But the Hilary and Chrysostom material here is genuine, on-topic and currently unusable, which is a real loss of two witnesses on the nativity and the begetting of a judge. Recommend the Catena blocks be split on their interior abbreviations at harvest time rather than filed whole under the opening father; until then, anyone working a Catena key should read past the label before deciding a chapter is voice-poor."
     }
   ]
 }
