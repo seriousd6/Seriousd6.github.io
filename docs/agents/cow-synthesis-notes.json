@@ -101931,6 +101931,95 @@
       "book": "galatians",
       "chapter": "4",
       "note": "POLISH QUEUE TRIAGE — measured, and it confirms the routing problem with numbers rather than suspicion. Before drawing this batch I classified every chapter holding a grade-B verse by whether any of its entries carry the legacy-unversioned stamp, since matthew 16 had just shown that a polish pick inside a legacy chapter CANNOT land (the fidelity read-back demands a self-grade on every verse in the chapter, and legacy entries have none). Of 18 chapters with B verses, exactly 9 are unlandable by polishing and 9 are landable. UNLANDABLE, all legacy-stamped throughout: matthew 26 (10 B of 75 entries), john 7 (2 of 53), 1kings 1 (1 of 53), luke 2 (35 of 52), 1kings 2 (3 of 46), matthew 21 (3 of 46), john 13 (6 of 38), matthew 19 (1 of 30), matthew 16 (3 of 28). LANDABLE, no legacy entries: daniel 9, galatians 2, galatians 4, hosea 4, isaiah 59, jeremiah 10, matthew 22, romans 1, romans 8 — all small, 8 to 30 entries, one B verse each. The queue is therefore half dead weight, and because --worst-first is also longest-first the picker serves the unlandable ones FIRST: they hold the most B verses and the most entries. Five consecutive draws this batch returned matthew 16, luke 2, galatians 4, matthew 16 again, matthew 22 — three of five unlandable, and the chapter reverted an hour earlier offered twice. That is the whole mechanism behind mis-routed legacy dominating the draws, and it is cheap to fix: route the polish queue on presence of the current standard stamp, not on grade, and the nine legacy-stamped chapters move to the rewrite queue where they belong. Until then every worker will burn batches on chapters that cannot land, and the nine genuinely landable chapters will keep being crowded out."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "16",
+      "verses": [
+        "4",
+        "22"
+      ],
+      "note": "THIS CHAPTER IS THE EVIDENCE FOR THE STANDING ITEM ABOUT THE INLINE SCHOOL-LABEL CONVENTION. matthew 16 is the first chapter I have repaired that FOLLOWS the convention in docs/agents/cow-synthesis-loop.md (the inline school-label guidance), and following it produced exactly the roll-call shape the prose rules exist to prevent. Count: 107 bolded school labels in <strong> tags across ALL 28 entries — grammatical-historical 27, Reformed 20, Alexandrian 17, Wesleyan 14, Puritan 8, Antiochene 5, Latin 4, plus ad-hoc bolds. Every entry was a sequence of paragraphs each headed by a school: 'The grammatical-historical commentators are terse', 'The Wesleyan Clarke and Wesley read it as spiritual adultery', 'The Reformed Calvin agrees', 'The Alexandrian Origen, the chief outlier'. The writer organised by SCHOOL and never by VOICE, which is why the per-voice attribution the tags-match check assumes was never written. This is the THIRD distinct legacy shape of the session: john 1 was school-summary aggregation, luke 13 was quote-stitching, matthew 16 is inline school-label roll-call. My recommendation is now concrete and the opposite of enforcement: RETIRE the convention from the loop doc. A writer who follows it cannot pass the prose rules, and the chapter proves it at scale."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "16",
+      "verses": [
+        "1"
+      ],
+      "note": "MY OWN SWEEP IS BLIND TO THE SHAPE IT SHOULD CATCH. The scratch sweep reported carriers and quote fractions for all 28 entries and ZERO rollcall findings on a chapter carrying 107 bolded school labels, because the ROLLCALL heuristic counts capitalised names and semicolons and never looks at markup. The repo's own audit was no better: 25 A / 3 B, SLOT 0, NOISE 0, and the chapter did not even breach the quote-led-opening threshold (8/28 = 0.29). The cheapest possible fix for the whole class is a one-line check: NO <strong> TAG BELONGS IN cow-synthesis PROSE. No legitimate entry needs bold, the tag is not used for anything else in the tree, and grepping for it would have flagged all 28 entries in a second. Recommend it as a validator rule rather than a lint, since it admits no false positives."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "16",
+      "verses": [
+        "13"
+      ],
+      "note": "APPARATUS INTRUSION, second instance, and this one is the catena's OWN editorial footnote. The block attributed to Cyril at key 13 is not commentary at all but the Catena Aurea editor's note ABOUT that attribution: 'This passage is quoted in the Catena from Cyril in Lib. Thes. but does not occur in any of S. Cyril's works. On the subject of this interpolation, vid. Launoy's Epistles, part i. Ep. 1-3... He is apparently the first to cite them, and they seem to have been written later than Nicholas I. and Leo IX.' So the scrape has captured an editorial disclaimer that the passage is spurious, and filed it as though Cyril had said it. This is the same class as the matthew 8 finding where a translator's footnote on Horne was spliced into a Calvin sentence, and it sharpens the earlier recommendation: the re-scrape needs to strip editorial apparatus, not merely fix truncation, because apparatus text is INDISTINGUISHABLE from commentary by word count or by voice label and is actively misleading — a writer who trusted this block would attribute to Cyril a note saying Cyril did not write it."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "16",
+      "verses": [
+        "12",
+        "18"
+      ],
+      "note": "JFB RESIDUE, fourth consecutive repaired chapter. Key 12 carries Mark 6:3 material — 'In Mark the question is, Is not this the carpenter?... Do we not know all about His parentage? Has He not grown up in the midst of us?' — which is the Nazareth rejection, not the leaven of the Pharisees. Key 18 carries Herod Antipas and Mark 6:14, which belongs to Matthew 14. Running tally of JFB residue in chapters I have repaired this session: matthew 8, john 1 (eight keys), luke 13 (two keys), matthew 16 (two keys). Four chapters, four hits, no exceptions. On that base rate the class is near-universal rather than occasional, which is the strongest argument yet for treating it as one mechanical remedy instead of per-chapter judgment."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "16",
+      "verses": [
+        "22",
+        "23",
+        "24"
+      ],
+      "note": "QUOTATION, same result as luke 13 and worth recording as a second data point. Baseline fractions here ran 0.29 to 0.64 with a mean near 0.47 and seven REQUOTE entries; after rewriting, sweep findings are 0/28 and quotation is under the cap. The chapter also got LONGER rather than shorter: 28 entries averaging about 400 words became entries averaging about 500, with keys 13, 18, 24 and 28 at or near the 650 ceiling. The inference from two chapters now, measured the same way: heavy commentator quotation in the legacy prose was SUBSTITUTING for prose that had not been written, not carrying content that would be lost by paraphrase. Where the source is rich — and 76,455 usable words over 28 keys is rich — removing quotation frees room rather than costing it."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "16",
+      "verses": [
+        "5",
+        "8"
+      ],
+      "note": "THE VERIFICATION PASS EARNED ITS KEEP TWICE, in opposite directions. (1) UNDER-REPORT: it caught Chrysostom missing from key 5, where I had written 'is the question Chrysostom presses' — a name inside a mid-sentence relative clause, which the clause-head rule skips at EVERY occurrence, so the voice vanished from the metadata while remaining the subject of the paragraph. Reworded to put him at the clause head. (2) OVER-REPORT: Clarke's manuscript-witness list at key 8 named Origen and Theophylact as TEXTUAL WITNESSES to an omission, and the 'X and Y' clause-head backtrack would have promoted Theophylact to a speaking voice in a chapter where he says nothing at all. I reworded the witness list rather than widen the reported-speech cue, because adding 'in' to that regex would suppress legitimate clause heads elsewhere. THE GENERAL FINDING: a witness list and a voice attribution are syntactically identical — 'in Origen and Theophylact' parses exactly like 'Origen and Theophylact hold' — and only the kind of list distinguishes them. Any automated voice extraction will need a stop-list of apparatus contexts (manuscripts, versions, fathers cited as witnesses, editors) or it will invent voices from critical apparatus."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "16",
+      "verses": [
+        "2",
+        "18",
+        "23",
+        "28"
+      ],
+      "note": "FOUR DISAGREEMENTS KEPT, where the legacy prose had reported each as a consensus. (1) ARE vv.2-3 GENUINE? Ellicott reports the Vatican and Sinaitic omitting them and cannot think them interpolated given their 'singular originality of form'; Robertson adds that McNeile rejects them, Westcott and Hort bracket them, and Zahn credits Papias with adding them; Jerome had already noted they are 'not found in most copies of the Greek text'. (2) WHAT IS THE CHURCH BUILT ON? Origen asks five consecutive questions against any Peter-only reading; Augustine insists the name was given earlier and says he has often explained the rock as him whom Peter confessed; Wesley points to Christ himself and to all twelve names on the twelve foundations; Calvin counts a twofold honour; Cyril of Jerusalem makes it the Gentile Church. (3) HOW HARSH IS 'SATAN'? Barnes and Clarke both soften it by translation to 'adversary' and deny any anger, Clarke saying the literal rendering 'takes away that harshness'; Ellicott and Wesley keep the full force, Wesley noting no other apostle ever received so sharp a reproof. (4) WHAT IS 'SHALL NOT TASTE OF DEATH'? Robertson lists six candidates and refuses to choose; Ellicott rules out the Transfiguration on the wording, since six days off is not naturally described that way; Clarke and Wesley take the destruction of Jerusalem; Remigius takes the Transfiguration. All four were written as open questions."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "16",
+      "verses": [
+        "10",
+        "13"
+      ],
+      "note": "PER-KEY VARIANCE AT ITS EXTREME, on one chapter. Key 13 holds 13,130 usable source words, the largest single key I have measured; keys 19, 21, 24 and 28 run 4,000 to 7,500 each. Against that, key 9 has 199 usable words and KEY 10 HAS 48 — the thinnest key of the session, and so thin that it is writable only from the section head at key 5 (Chrysostom's account of the reproof, Henry's distinction between carelessness and inordinate care). The chapter total of 76,455 words, which is what the size command reports and what the batch budget is set from, tells you nothing whatever about any individual verse: the ratio between the richest and poorest key here is 274 to 1. This is the third chapter in a row where the floor and the section head between them decided the length of the thin entries, and it is the same standing item — report FLOOR beside per-key expansion, not beside the chapter total."
     }
   ]
 }
