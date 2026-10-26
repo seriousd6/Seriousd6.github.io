@@ -102020,6 +102020,26 @@
         "13"
       ],
       "note": "PER-KEY VARIANCE AT ITS EXTREME, on one chapter. Key 13 holds 13,130 usable source words, the largest single key I have measured; keys 19, 21, 24 and 28 run 4,000 to 7,500 each. Against that, key 9 has 199 usable words and KEY 10 HAS 48 — the thinnest key of the session, and so thin that it is writable only from the section head at key 5 (Chrysostom's account of the reproof, Henry's distinction between carelessness and inordinate care). The chapter total of 76,455 words, which is what the size command reports and what the batch budget is set from, tells you nothing whatever about any individual verse: the ratio between the richest and poorest key here is 274 to 1. This is the third chapter in a row where the floor and the section head between them decided the length of the thin entries, and it is the same standing item — report FLOOR beside per-key expansion, not beside the chapter total."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "hosea",
+      "chapter": "4",
+      "verses": [
+        "6"
+      ],
+      "note": "Polish of key 6, the chapter's one grade B, and the TIGHTEST compress margin met so far: ttr 0.5673 against 0.58 and compress 0.4223 against 0.42, clear by 0.0023. Two levers, chosen by what each metric answers to. For compress, the entry carried one repeated 5-gram, 'the priests who should have', appearing in Henry's paragraph twice over ('the priests who should have taught them', 'the priests, who should have been still teaching'); it was dissolved by rewriting the first as 'the teachers set over it'. For ttr, the scaffolding: 'the' 64 of 651 (rate 0.098 against this chapter's own 0.092, so only slightly high) and 'of' 28, mostly a genitive chain on one noun — knowledge of God, of his law and providence, of his hatred of sin. Rewriting those took 'the' to 39 and 'of' to 13 and freed 48 words. Result ttr 0.6299 and compress 0.4397. CAUTION WORTH RECORDING: the article rate here was only marginally above the chapter norm, so the lever was weaker than at galatians 4 (0.127 against 0.095) or revelation 12 (0.144 against 0.113), and it did NOT by itself carry compress to a comfortable margin — 0.4397 is only 0.0097 clear. What finished the job was the ADD, because fresh vocabulary lifts compress directly. So the rule from galatians 4 needs a bound: article thinning moves both metrics only when the rate is well above the chapter norm; when it is merely at the norm, expect ttr to respond and compress to need new material. Final 646w, ttr 0.6469, compress 0.4416."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "hosea",
+      "chapter": "4",
+      "verses": [
+        "6"
+      ],
+      "note": "THE TERSE-NAME-LIST SHAPE DEGRADED UNDER REPAIR, as predicted, and here is the measurement. At haggai 2 I recorded that terse chapters lose content under repair; at romans 11 I narrowed that, since romans 11 is terse in its DEBATES (plain strings) yet repaired cleanly because its school summaries are prose with room to absorb new material. The lossy sub-form was therefore the NAME-LIST summary, and hosea 4 is one: every school entry here is a bare list, ['Calvin','Gill'], ['Henry'], ['Wesley','Clarke'], ['Ellicott','Keil and Delitzsch'], and the debates are bare topic labels with no positions at all — 'Which people are destroyed', 'Whether the priests or the people are the more to blame', 'Who is addressed in the singular'. The ADD I made is substantial: Henry's working of the verse's SECOND HALF, which the entry had never treated — the reciprocal threat (priests no longer admitted to the privileges of their office nor ever received again, Ezekiel 44:13; the people forfeiting what they were, a kingdom of priests and a royal priesthood, Exodus 19:6, profaning their own crown) and the two senses of the forgotten children (the people's, never taught to remember their Creator, or the priests', who shall not succeed to the office but be reduced to poverty). NONE of that argument can be recorded in a name list. I could add a fourth debate LABEL, 'What the reciprocal threat covers, and whose children are forgotten', and a theme, and did; the topic is now discoverable but the positions behind it are not, and they live only in the prose. I did not convert the shape, since the chapter's other ten entries all use it and the standing precedent is to keep a chapter internally consistent rather than make one entry the odd one out. CONFIRMED AND BOUNDED: the name-list summary is the lossy variant, it costs argument and not cosmetics, and a repair into it is only partially recoverable. That raises the priority of normalising this sub-form specifically — 182 chapters carry it — above the broader terse-debates question, which affects 430 chapters but repairs cleanly."
     }
   ]
 }
