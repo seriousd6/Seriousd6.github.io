@@ -101804,6 +101804,106 @@
       "book": "matthew",
       "chapter": "16",
       "note": "DROPPED — and the reason is structural, not a defect in the work. This explains the mis-routed-legacy problem mechanically, so it is the most useful thing in the batch. A POLISH PICK INSIDE A LEGACY CHAPTER CANNOT LAND. The picker offered matthew 16 as 'polish' because it holds three grade-B verses, but all 28 entries are stamped legacy-unversioned. I repaired the three (keys 15, 16, 26), the validator passed, and the chapter graded 28/28 A with UNSOURCED 0 and META 0. The pipeline then failed at the fidelity step, because the read-back requires a self-grade on EVERY verse in the chapter and the 25 legacy entries I did not touch all report 'self-grade: MISSING'. There is no honest three-verse path: supplying 28 self-grades means reading the chapter's 76,455 source words, which is the full legacy rewrite. I did not stamp grades I had not checked. TWO CONSEQUENCES FOR THE QUEUE. (1) Every mis-routed legacy chapter in the polish queue is unlandable by polishing, so it is drawn, worked and reverted, which is exactly why the same chapters keep returning to the top of the draw — this is the mechanism behind the routing item already on the open list, now with a measured cause rather than a suspicion. Routing on presence of the current standard stamp instead of on grade would fix it. (2) A first attempt also failed earlier, on the chapter lint, over a PRE-EXISTING META defect at key 2 — the clause 'and the comment is brief', the identical phrase recorded as a META defect at hebrews 1:9, so it is a recurring template worth a corpus grep. finish runs the lint with --enforce-all, so the legacy exemption does not apply and one untouched legacy verse blocks the whole chapter. I fixed that clause and the lint passed; the fidelity wall is the one that cannot be cleared. Both reverted attempts are preserved under scratchpad/rejected/matthew-16-20261026-092340 and -092448, which is gitignored and will be lost with the container, so the prose itself is not durable — but the three diagnoses recorded alongside this note are, and they are the expensive part. Anyone rewriting matthew 16 should apply them: Henry declared and credited at keys 15, 16 and 26; Barnes excluded at key 15; Calvin's real sentence at key 16; Origen's ransom argument at key 26."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "6"
+      ],
+      "note": "LEGACY SHAPE: QUOTE-STITCHING, and it is a DIFFERENT legacy writer from john 1's. Every one of the 35 entries opened with the verse text inside quotation marks (35/35 QUOTE-LED, 100% — the audit's chapter-level breach list had luke 13 at the top), followed by a slot-list sentence ('The witnesses dwell on the report, the slain Galileans, and the motive'), then paragraphs of long block quotation with almost no connective prose, closing on a 'The witnesses thus see...' frame. Quotation fractions ran 0.26 to 0.68 (mean ~0.45, more than double the rule-5 cap); 13 of 35 entries had REQUOTE, the same fragment quoted twice, which rule 5 forbids outright. Against that, john 1 was school-summary AGGREGATION with low quotation. The important practical difference: here the attributions were already accurate and complete, so the repair was re-EXPRESSION rather than re-attribution — the content was present and only had to be put into prose. That is markedly cheaper per verse. The corpus therefore holds at least two distinct legacy failure modes, and knowing which one a chapter has predicts how long it takes."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "13",
+      "verses": [
+        "6",
+        "26"
+      ],
+      "note": "THIS CHAPTER ANSWERS THE STANDING QUESTION ABOUT A COMMENTATOR-QUOTATION CEILING. luke 13 was the measured maximum of the whole survey (0.68 at key 6, chapter mean ~0.45) and is now rewritten with quotation under the scripture cap, sweep findings 0/35, and 35/35 A at equal or greater length — keys 1, 23, 24, 32 and 33 all came out LONGER than the legacy entries they replaced. So the reduction cost nothing: the quoted material was not carrying the entry, it was standing in for prose that had not been written. Recommendation unchanged but now evidenced: the gate should carry an explicit commentator-quotation ceiling beside the scripture cap, and this chapter is the worked example of what enforcing it costs. Note the one measurement that argues for care: keys 20, 21 and 27 have 91, 130 and 146 usable source words, where a ceiling expressed as a FRACTION is trivially satisfied and tells you nothing."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "13",
+      "verses": [
+        "17",
+        "28",
+        "34",
+        "35"
+      ],
+      "note": "CYRIL OF JERUSALEM RESIDUE x4 IN ONE CHAPTER, and key 17 is a NEW SUB-CLASS. The four blocks are four unrelated catechetical lectures: key 17 is on John 20:22 (the breathing on the apostles), key 28 on Luke 3:11 (the fruits of repentance), key 34 on anthropomorphic pictures of God, key 35 on Exodus 34 (the Lord proclaiming the name). Key 34's is the only one partly usable, since it happens to quote the hen-and-chickens clause while arguing against taking 'wings' literally, and it was used on that ground. KEY 17 IS PHRASE-COLLISION RESIDUE: Cyril's lecture opens 'And when He had said this, He breathed on them' (John 20:22) and Luke 13:17 opens 'And when he had said these things'. That is neither an alignment offset nor a duplicate broadcast — it is a lexical false match on a common narrative formula, and it predicts that ANY verse opening with such a formula is exposed. The cheap corpus test is to compare the scripture lemma quoted inside a block against the verse the block is filed under and report the mismatches; unlike the other residue classes this one is detectable automatically, because the block names the verse it is really about."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "13",
+      "verses": [
+        "31"
+      ],
+      "note": "CALVIN BACK-SHIFT — the residue classes are NOT confined to JFB. The Calvin block filed at luke 13:31 is his comment on VERSE 16: it discusses 'one whose body had been bowed', the title daughter of Abraham, the eighteen years, and the delivering to Satan for the destruction of the flesh from 1 Corinthians 5:5. That is a back-shift of fifteen verses in a Reformed commentator, where the standing item treats back-shift as a JFB import problem (matthew 8 keys 5/11/17/23/29, john 1 keys 2/8/14/20). Beside it at the same key sits a Cyril of Alexandria block whose content is the TEXT of Luke 13:22-30 reproduced as commentary — the verse-range-header-as-content shape already logged at john 1. Two different defects at one key, from two different sources. The recommendation to classify residue before remediating it now has a second supporting case: an offset fix calibrated on JFB would leave this Calvin block exactly where it is."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "13",
+      "verses": [
+        "7",
+        "13"
+      ],
+      "note": "JFB RESIDUE, luke 13: key 7 carries 'the flat roof. (See on Mr 2:2)' and key 13 carries Bengel on the paralytic — 'sweet saying! The bed had borne the man; now the man shall bear the bed!' Both belong to the healing of the paralytic in Mark 2, neither touches Luke 13, and both are the short-fragment form of the class rather than a full misfiled block. With the john 1 cluster (eight keys) and the matthew 8 set, JFB residue is now logged in three consecutive chapters I have repaired, which makes it the most reliably present defect in the tree and the strongest candidate for a single mechanical remedy."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "13",
+      "verses": [
+        "20",
+        "21",
+        "27"
+      ],
+      "note": "SPAN-AWARE RESOLUTION, luke 13, and a choice the loop doc does not cover. The patristic material for vv.23-30 lives in the catena block filed at KEY 22, and the material for vv.14-17 in the block at KEY 10; the Gloss/Ambrose/Theophylact/Augustine/Eusebius/Bede matter for the leaven sits at KEY 18. Keys 20, 21 and 27 have almost nothing of their own — 91, 130 and 146 usable source words. All three are UNDER the THIN_SOURCE_MAX of 200, so the thin exemption was available and I declined it, writing them in the normal 350-650 band out of section-head material instead. Flagging the decision rather than hiding it: the thin flag and the section head are two different answers to the same shortage, they produce entries of very different length, and the loop doc does not say which to prefer. My reason for choosing the head was that the material genuinely expounds those verses and a thin entry would have thrown it away; the argument the other way is that per-key expansion then reads as 2.7x. Whichever the owner prefers, it should be written down, because a per-key reader and a per-span reader will make opposite calls on the same verse."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "13",
+      "verses": [
+        "32",
+        "33",
+        "34"
+      ],
+      "note": "DISAGREEMENTS PRESERVED RATHER THAN FLATTENED, which is most of what the A grades here are made of. (1) WAS THE LAMENT UTTERED TWICE? Gill and Robertson allow it, Plummer calls the supposition 'a rather violent hypothesis', and Gill offers the alternative that Luke transcribed it from Matthew on the cue of a prophet perishing at Jerusalem. (2) ARE THE THREE DAYS A DATE? Clarke builds a four-year ministry on them and concludes the parable is out of place; Ellicott refuses the literal sense outright, saying it 'would not have been true in fact' and blaming men's want of power to enter into the poetic forms of Eastern speech; Theophylact repunctuates the sentence to make the reckoning idiomatic; Robertson simply calls it a proverb. (3) WHO IS THE FOX? Herod Antipas for Barnes, Robertson, Ellicott and Calvin; possibly the Pharisees for Gill; and Clarke objects that cunning fits badly on a man who never troubled to conceal his vices. (4) Lightfoot at key 35 confesses the passage defeats him — 'my old eyes see better than my younger ones did' — which the legacy entry had smoothed away entirely. The legacy prose reported all four as settled."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "13",
+      "verses": [
+        "8"
+      ],
+      "note": "METADATA GENERATOR: a THIRD guard, plus a verification pass that should probably be standard. (1) INVERTED ATTRIBUTION: 'It belongs to God's mercy, says Basil, not to inflict punishment silently' puts the name mid-sentence as an attributive, which the clause-head rule skipped at every occurrence, so Basil would have been dropped from key 8's voices although he is the subject of the paragraph. Fixed with a cue for says/said/notes/observes/adds/writes/remarks/argues/holds immediately before the name, which then takes the whole sentence as the clause. (2) NEGATIVE LOOKAHEADS: 'Gregory' must not match 'Gregory Nazianzen' and 'Cyril' must not match 'Cyril of Jerusalem'. BOTH pairs occur in this chapter, and without the guard each longer name would have collapsed into the shorter one, inventing agreement between two different fathers. (3) THE VERIFICATION PASS is what found the Basil case: after generating, re-scan the prose for every name in the table and report any that is present but undetected. It found exactly one defect here and zero after the fix. Every one of these three is invisible to the repo's checks, which continue to validate voices only for groundability and never for completeness against the prose."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "13",
+      "verses": [
+        "24"
+      ],
+      "note": "THE SCHOOL SCHEMA HAS NO HOME FOR THE CAPPADOCIANS, and the tree is already incoherent about it. VALID_SCHOOLS offers eastern-antiochene and eastern-alexandrian as the only two Eastern buckets. Basil, Gregory Nazianzen and Titus of Bostra fit neither naturally, and Eusebius of Caesarea sits between them; I assigned Basil, Gregory Nazianzen and Titus of Bostra to eastern-antiochene and Eusebius to eastern-alexandrian, which is defensible but not derivable from anything. A corpus survey of the existing tags shows these voices already in use — Basil in 34 entries, Eusebius 16, Titus of Bostra 10, 'Titus Bost' 9, Gregory Nazianzen 5 — with no consistent school attached, so earlier chapters have each guessed separately. TWO things follow: the schema needs either a Cappadocian/Greek-patristic bucket or a documented convention for forcing these into the existing two; and 'Titus of Bostra' versus 'Titus Bost' is a SECOND split-spelling case after the matthew 10 Rabanus/Raban finding, which strengthens the case that VOICE_LABELS should be rebuilt from the catena headers themselves rather than hand-maintained."
     }
   ]
 }
