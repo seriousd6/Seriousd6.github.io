@@ -101797,6 +101797,13 @@
       "book": "matthew",
       "chapter": "16",
       "note": "failed fidelity (self-graded); reverted, attempt kept at scratchpad/rejected/matthew-16-20261026-092448"
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "16",
+      "note": "DROPPED — and the reason is structural, not a defect in the work. This explains the mis-routed-legacy problem mechanically, so it is the most useful thing in the batch. A POLISH PICK INSIDE A LEGACY CHAPTER CANNOT LAND. The picker offered matthew 16 as 'polish' because it holds three grade-B verses, but all 28 entries are stamped legacy-unversioned. I repaired the three (keys 15, 16, 26), the validator passed, and the chapter graded 28/28 A with UNSOURCED 0 and META 0. The pipeline then failed at the fidelity step, because the read-back requires a self-grade on EVERY verse in the chapter and the 25 legacy entries I did not touch all report 'self-grade: MISSING'. There is no honest three-verse path: supplying 28 self-grades means reading the chapter's 76,455 source words, which is the full legacy rewrite. I did not stamp grades I had not checked. TWO CONSEQUENCES FOR THE QUEUE. (1) Every mis-routed legacy chapter in the polish queue is unlandable by polishing, so it is drawn, worked and reverted, which is exactly why the same chapters keep returning to the top of the draw — this is the mechanism behind the routing item already on the open list, now with a measured cause rather than a suspicion. Routing on presence of the current standard stamp instead of on grade would fix it. (2) A first attempt also failed earlier, on the chapter lint, over a PRE-EXISTING META defect at key 2 — the clause 'and the comment is brief', the identical phrase recorded as a META defect at hebrews 1:9, so it is a recurring template worth a corpus grep. finish runs the lint with --enforce-all, so the legacy exemption does not apply and one untouched legacy verse blocks the whole chapter. I fixed that clause and the lint passed; the fidelity wall is the one that cannot be cleared. Both reverted attempts are preserved under scratchpad/rejected/matthew-16-20261026-092340 and -092448, which is gitignored and will be lost with the container, so the prose itself is not durable — but the three diagnoses recorded alongside this note are, and they are the expensive part. Anyone rewriting matthew 16 should apply them: Henry declared and credited at keys 15, 16 and 26; Barnes excluded at key 15; Calvin's real sentence at key 16; Origen's ransom argument at key 26."
     }
   ]
 }
