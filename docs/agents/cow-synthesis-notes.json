@@ -101519,6 +101519,50 @@
       "book": "romans",
       "chapter": "11",
       "note": "Refinement of the haggai 2 finding that terse-shape chapters DEGRADE UNDER REPAIR. Romans 11 is terse — debates is a list of plain strings, outliers an empty list — and it did NOT degrade. The reason matters: this chapter's school summaries are flowing prose strings, so new material from a repair has somewhere to go, and the new purpose-versus-consequence split could simply be appended to debates as a second string without changing the shape. Haggai 2's problem was narrower than 'terse': its schools summary was a bare NAME LIST, which cannot absorb a sentence. So the terse variant has two sub-forms and only one of them is lossy under repair: terse-with-prose-summaries repairs cleanly, terse-with-name-list-summaries does not. That halves the urgency of the tags-shape normalisation item, since the shape to hunt for is the name-list summary (182 chapters carry it) rather than terse debates (430 chapters). Worth checking whether those two sets overlap before anyone starts the normalisation pass."
+    },
+    {
+      "at": "2026-10-25",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "10",
+      "note": "New legacy prose defect, not previously logged: INTERNAL SELF-DUPLICATION. 26 of the 42 entries contain a repeated 7-gram, and the worst carry a verbatim repeated run of 11 to 23 words — key 28 repeats 23 consecutive words and has 30 duplicated 7-grams. The shape is an appended second pass that restates the first with the SAME quotations: in key 28 the clauses 'fall asleep at death', 'the killing of the body would be the killing of the soul too', 'separated from God and his love', the Romans 8:35 citation, 'they who truly fear God, need not fear man' and 'Racks and gibbets, terrible as they are' each appear twice, the second time under a fresh carrier opening ('The witnesses make this the crown of the chapter's counsels against fear'). This is the mechanical cause of the chapter's grade distribution: all 19 grade-B entries fail the compress/zip threshold and 15 of them sit at the top of the duplication ranking, while the 17 clean entries (verses 1-17) contain no repeated 7-gram at all. It is also a rule-5 breach, since the same fragment is quoted twice. Detector for the sweep: count repeated 7-grams within a single entry, and report the longest repeated contiguous run — cheap, and it separates genuine repetition from a doubled entry, which need opposite repairs. A doubled entry must be DEDUPLICATED and then refilled from unused source, where a merely repetitive one is repaired by restoration alone."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "10",
+      "note": "Outcome of the rewrite: all 42 entries rewritten from the catena, 42/42 grade A, every categorical flag 0, lengths 350-649, sweep findings 32/42 to 0/42, internal self-duplication 26/42 entries to 1 (an eight-word repeat in v37), and the legacy frame gone entirely — all 42 had opened 'On Matthew 10:NN — \"quote\" — the witnesses read', all 42 contained 'the witnesses', and 41 of 42 carried school-label scaffolding. Fidelity is a writer's grade on new prose, 42/42 A checked_by self, every attribution re-verified against the verse key plus its enclosing patristic head and Henry head. The 19 grade-B entries all failed compress and all sat at the top of the duplication ranking, so deduplication alone fixed the metric; the refill came from source the legacy prose never used. One technique worth recording: my OWN summarising paragraphs depress ttr where grounded source content lifts it. v13 graded B until I replaced a closing paragraph of my own synthesis with Calvin's actual argument, which took it to A at the same length; the same move rescued v20. Editorial connective tissue is the thing to cut when ttr is short, not source material."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "10",
+      "note": "VOICE_LABELS evidence: the SAME father appears under two header spellings inside one chapter — 'Rabanus' heads 4 blocks (keys 5, 11, 29 and one more) and 'Raban' heads 5 (keys 16, 23, 27, 32, 34, 37). Both are Rabanus Maurus. The repo's own voices-sourced check resolves it (0 ungroundable), but any checker matching the tagged voice name against header text will report six false ungrounded attributions, as mine did until I looked. Worth normalising in VOICE_LABELS rather than in each writer's head, and worth a corpus count of split-spelling headers generally: an author split across two labels is also an author whose blocks are half-invisible to any per-voice coverage statistic."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "10",
+      "verses": [
+        "7",
+        "15",
+        "18",
+        "21",
+        "27",
+        "33",
+        "42"
+      ],
+      "note": "Five residues in this chapter, and a new cross-book pattern. (1) JFB at key 21 carries Matthew 9 material (the paralytic and the call of Matthew). (2) The separately-labelled 'John Chrysostom' at key 7 carries Matthew 11 material (John the Baptist's disciples' inquiry). (3) Origen at keys 18 AND 27 both carry Matthew 16 material (the charge not to proclaim him the Christ), each truncated at exactly 200 words. (4) Cyril at key 33 carries Matthew 18:10 (the little ones' angels). (5) New and more interesting: Cyril's 142-word excerpt beginning 'And many are the proofs concerning the life eternal' appears at key 15 AND key 42 of this chapter, and the SAME excerpt appears in matthew 8 and in mark 10. So Cyril's catechetical lectures are being matched to verses by a heuristic weak enough to paste one passage into many unrelated places across different books. That is a different defect from the JFB back-shift logged under matthew 8: not an alignment offset but a duplicate-broadcast. Detector: count how many distinct (book, chapter, verse) slots hold byte-identical Cyril blocks; any block appearing more than two or three times is matched, not commented."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "10",
+      "note": "Concrete argument for span-aware resolution, from the structure of this chapter. The patristic blocks sit under 17 separate heads (keys 1, 5, 9, 11, 16, 18, 19, 21, 23, 24, 26, 27, 29, 32, 34, 37, 40) while Matthew Henry appears under only THREE (keys 1, 5 and 16) with blocks of 6,701, 7,701 and 10,552 words covering verses 1-4, 5-15 and 16-42 respectively. Several verse keys are tiny by comparison — key 30 is 312 words, key 31 is 298, key 36 is 507 — so an entry written from its own key alone cannot reach the 350-word floor honestly, and three of my entries only cleared it after I went to Henry's section block for material he had plainly written about those very verses. A writer without span resolution either pads or writes a thin entry and flags it wrongly, since these keys are over THIN_SOURCE_MAX and so ineligible for the thin exemption. The resolver this chapter needs is two-headed: nearest preceding patristic head AND nearest preceding Henry head, which are different keys for most of the chapter."
     }
   ]
 }
