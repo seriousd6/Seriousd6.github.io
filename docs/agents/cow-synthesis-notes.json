@@ -101563,6 +101563,26 @@
       "book": "matthew",
       "chapter": "10",
       "note": "Concrete argument for span-aware resolution, from the structure of this chapter. The patristic blocks sit under 17 separate heads (keys 1, 5, 9, 11, 16, 18, 19, 21, 23, 24, 26, 27, 29, 32, 34, 37, 40) while Matthew Henry appears under only THREE (keys 1, 5 and 16) with blocks of 6,701, 7,701 and 10,552 words covering verses 1-4, 5-15 and 16-42 respectively. Several verse keys are tiny by comparison — key 30 is 312 words, key 31 is 298, key 36 is 507 — so an entry written from its own key alone cannot reach the 350-word floor honestly, and three of my entries only cleared it after I went to Henry's section block for material he had plainly written about those very verses. A writer without span resolution either pads or writes a thin entry and flags it wrongly, since these keys are over THIN_SOURCE_MAX and so ineligible for the thin exemption. The resolver this chapter needs is two-headed: nearest preceding patristic head AND nearest preceding Henry head, which are different keys for most of the chapter."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "observation",
+      "book": "hebrews",
+      "chapter": "1",
+      "verses": [
+        "4"
+      ],
+      "note": "Polish of the chapter's one grade B (ttr 0.5604 against the 0.58 floor, compress already clear at 0.4362). Landed WITHOUT READING THE 5,709-WORD SOURCE: the cheap test showed only 3 entity junk tokens (1 mdash, 1 rsquo), so the lean was machinery, and three levers already in the notebook carried the whole lift. (1) ATTRIBUTION FRAMES — 'says' x7 in 645 words across ~18 frames, the 1corinthians 15 class; varying them costs no source material. (2) CONTENT-TOKEN THINNING — 'name' x11 plus 'title' x3, cut to 2 and 2 by letting pronouns and 'appellation' carry some of the load. (3) PARALLEL RHETORIC — Wesley's own anaphora reproduced limb by limb ('he inherits the name, in right whereof he inherits all things... his inheriting the name more ancient than all worlds, his inheriting all things as ancient as all things'), verified verbatim in his block. Reported rather than performed, per the rule written down at romans 11:31 one batch earlier. Result 645w/0.5604 to 642w/0.6366, +0.076 ttr, the largest cheap-lever gain measured; the romans 11 rule generalised on its first test. CAVEAT WORTH MORE THAN THE RESULT: the ttr lever drifts claims if applied without checking, and it drifted three of mine. Reducing 'being' turned Robertson's contrast into 'the timeless was of the verse before' when his block says 'In contrast with on in verse 3' — on is the present participle, so 'being' was correct. Reducing 'inherit' turned Wesley's 'he inherits the title' into 'the title comes to him' and Robertson's perfect into 'received it', blunting the very word Clarke denies ('It is not by inheritance that Christ possesses a more excellent name than angels, but as God'). And 'servants' became 'hired help', importing a wage relation where Barnes wrote 'as a son has a rank in a family above servants'. All three restored after spot-checking the blocks, at a cost of 0.004 ttr. RULE: before substituting a repeated token, check whether that token is itself under dispute in the entry; if it is, vary the frame around it and leave the word alone."
+    },
+    {
+      "at": "2026-10-26",
+      "kind": "fidelity",
+      "book": "hebrews",
+      "chapter": "1",
+      "verses": [
+        "4"
+      ],
+      "note": "A prose/tags DIVERGENCE found while repairing key 4, and it runs the opposite way from the mark 8 class. The tags for this entry already recorded Clarke's full position — 'Clarke denies the word, holding that Christ possesses the name not by inheritance but as God, naturally and essentially, AND AS GOD MANIFESTED IN THE FLESH IN CONSEQUENCE OF HIS HUMILIATION AND DEATH' — but the prose carried only the first half, stopping at 'naturally and essentially'. Clarke's sentence in the source continues exactly as the tags have it. The omission mattered for the recorded disagreement: with only the first half, Clarke reads as flatly contradicting Wesley, where in fact he allows a second and acquired ground and the two are less opposed than they look. Restored to the prose with the words freed by the ttr work. The general point: the mark 8 finding was that voices are declared from block labels while the prose is written from the material found, so the DECLARATION over-reports. Here the TAGS were right and the PROSE under-reported, which the tags-match check cannot catch because it tests that tagged content has prose support and not the converse. Worth a pass that reads the other direction — school summaries and debate strings carrying claims absent from the entry they describe — since in this instance the tags preserved the better reading and the prose had quietly lost it."
     }
   ]
 }
