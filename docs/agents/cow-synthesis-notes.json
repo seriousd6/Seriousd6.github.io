@@ -102183,6 +102183,26 @@
         "4"
       ],
       "note": "Key 4 went B->A (ttr 0.5769 -> 0.6090, 623 -> 630 words) by rewriting paragraph 1 alone. The MATTR-200 dip was localised: the six worst windows all started between token 39 and 51, inside Calvin's 'limited, determined, decreed, constituted / would amount to the same thing / visibly determined or constituted the Son of God' stretch, where the same two participles recurred three times and 'the Son of God' three times more. The fix replaced the versions catalogue with compressed apposition (Syriac giving ... Vulgate predestinated, Arabic destined by ...), named Calvin's ancients (Origen, Chrysostom, Cyril) instead of 'some of the ancients', and pulled two unused grounded fragments — Calvin's 'clothed and adorned with his own power' and Barnes's Acts 17:26 'determined the bounds of their habitation'. Grounded source lifts ttr; this is now 15-for-15 for restore-rather-than-cut."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "fidelity",
+      "book": "daniel",
+      "chapter": "9",
+      "verses": [
+        "27"
+      ],
+      "note": "POLISH of the single B entry, key 27. THE BINDING METRIC WAS COMPRESS, NOT ttr -- 0.4134 against the 0.42 floor, while ttr already passed at 0.5836. That is the first compress-bound polish pick this rotation, and it tested the isaiah 59 article-rate rule from the other side. Article rate was 0.1448 against this chapter's own 0.0990 mean across its other thirteen entries, a ratio of 1.46x, just over the ~1.4x threshold the isaiah 59 note predicted would carry BOTH metrics on one edit set. IT DID: taking 'the' from 94 to 62 (rate 0.1023, now at the chapter mean) and 'of' from 24 to 14 lifted ttr 0.5836 to 0.6257 AND compress 0.4134 to 0.4310 in a single pass, with no separate literal hunt needed. So the threshold rule holds whichever metric is binding, which is the useful form of it. Landed 636 words, ttr 0.6318, compress 0.4336, grade A, chapter 14/14 A, gate 0 violations. Self-grade A on the read-back. ENTITY CONVENTION: this chapter carries ZERO entities and zero literal em-dashes but DOES use ASCII possessives ('God's covenant'), which made genitive-to-possessive recasting free -- no junk token either way. I introduced seven curly apostrophes during the rewrite and converted them back to ASCII to match; worth flagging as an easy way to break a chapter's internal consistency without the word-count or grade noticing."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "observation",
+      "book": "daniel",
+      "chapter": "9",
+      "verses": [
+        "27"
+      ],
+      "note": "A DROPPED ENUMERATION, recovered, and it is a CHEAPER COUSIN OF THE isaiah 59 COVERAGE GAP. Wesley's block at this key is only 110 words, and the prose used all four of its parts -- so by every coverage test the voice was fully read. But his FIRST part is a six-member list of the means by which Christ confirmed the covenant: 'By the testimony of angels, of John baptist, of the wise men, of the saints then living, of Moses and Elias. By his preaching. By signs and wonders. By his holy life. By his resurrection and ascension. By his death and blood shedding.' The pre-existing prose rendered this as 'the testimony of witnesses, the preaching, the signs, the holy life and the death' -- which SILENTLY DROPPED the resurrection and ascension entirely, and flattened five named witnesses into the word 'witnesses'. Restored in full, which also happened to serve both metrics, since ten fresh content tokens (angels, baptist, wise, saints, Elias, wonders, resurrection, ascension, blood, shedding) lift ttr and compress at once. THE GENERAL SHAPE: where a witness ENUMERATES, a distillation tends to collapse the list to its first and last members and a category word for the middle. That is invisible to every gate -- the voice is declared, the voice is sourced, the tags match, the length is in window, and the compression ratio looks healthy -- because what is lost is not a claim but the EXTENT of a claim. MECHANICAL TEST, and it is cheap: for each entry, find enumerations in the source blocks (three or more coordinated members, detectable on repeated 'By ', 'of ', or comma-plus-conjunction runs) and count how many members survive into the prose. Flag any list that lost more than one member. Unlike the isaiah 59 check this one works on single-key pericopes too, and I would expect it to fire most on Wesley, Henry and Gill, who enumerate by habit. Also fixed in passing: the prose had cut Wesley's 'till the time draws near' from the closing clause about all Israel being saved."
     }
   ]
 }
