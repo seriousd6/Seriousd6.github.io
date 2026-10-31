@@ -102101,6 +102101,88 @@
         "20"
       ],
       "note": "POLISH-QUEUE ROUTING, re-measured after this batch, and the fix is now a one-line change. The queue holds 13 chapters. 'synthesis-loop.py status' ALREADY PRINTS the discriminator for each one -- it reports 'N grade B, M legacy' per chapter -- so the picker has the data in hand and does not use it. Landable by polishing (zero legacy verses): jeremiah 10, daniel 9, matthew 22, romans 1, romans 8 -- FIVE, each with exactly one grade-B verse. Unlandable (legacy verses alongside, so the fidelity read-back reports self-grade MISSING on untouched entries and 'finish' runs the chapter lint with --enforce-all over all of them): 1kings 1, 1kings 2, matthew 19, matthew 21, matthew 26, luke 2, john 7, john 13 -- EIGHT. Because --worst-first is longest-first, the picker serves the unlandable ones FIRST: this batch was offered matthew 26 (75 verses, all legacy) on the first draw and 1kings 2 and luke 2 on later draws, and each had to be declined after a measurement. That discovery cost is paid again by every worker. CONCRETE FIX: in the polish queue, skip any chapter whose legacy count is non-zero -- it belongs in the REWRITE queue, where it will be re-stamped wholesale anyway, and where its grade-B verses get fixed for free. That single filter empties the polish queue of 8 of its 13 chapters and leaves 5 clean single-verse picks, which is a complete and cheap session for one worker. The 66 remaining grade-B verses break down as 5 inside landable chapters and 61 inside legacy chapters, so routing on the stamp also reveals that the polish queue is NOT 66 units of work -- it is 5, and the other 61 are a byproduct of the rewrite queue. This is the same recommendation recorded after the galatians 4 batch, restated with current numbers because nothing has changed and the evidence is now stronger."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "14",
+        "17",
+        "18",
+        "20",
+        "22",
+        "25",
+        "28",
+        "30"
+      ],
+      "note": "A fifth legacy shape, or rather the absence of one: romans 1 arrived already stamped cow-prose-rules-2026-08-09, all 14 entries at the current standard, queued only for a single grade-B verse. Unlike john 1 (school-summary aggregation), luke 13 (quote-stitching) and matthew 16 (inline school-label roll-call), there was nothing structural to rewrite. 'Polish' here meant roll-call repair plus one ttr lift. Worth distinguishing in the queue: a chapter at the current standard with one B verse is an hour of work, not a day, and --worst-first does not know the difference."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "14",
+        "17",
+        "18",
+        "20",
+        "22",
+        "25",
+        "28",
+        "30"
+      ],
+      "note": "Prose signature: every one of the 14 entries was written to the 650-word ceiling (623-650, mean 645). That is the opposite signature from the floor-hugging seen in rewritten chapters, and it has a cost: there is no headroom. Lifting key 4's ttr had to be done by substitution, not addition — 27 words of slack and no more. A chapter written to the ceiling is harder to repair than one written to the floor, because every fix must pay for itself in words."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "6",
+        "8",
+        "10",
+        "14",
+        "25",
+        "30"
+      ],
+      "note": "Lint gap, the roll-call-by-semicolon shape: ten sentences across keys 1, 6, 8, 10, 14 (x2), 25 (x3) and 30 took the form of a frame clause followed by a semicolon-separated list of three commentators ('Throughout the whole world the grammarians all soften. Ellicott calls it hyperbole...; Robertson agrees...; Barnes limits world...'). The repo gate scores these SLOT 0 — it looks for list markup and parallel openers, not for punctuation. My own sweep caught them only by counting semicolons per sentence. Argues for a punctuation-aware slot-list check: a sentence with two or more semicolons, each clause headed by a different voice label, is a slot list however it is punctuated."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "4"
+      ],
+      "note": "Budget: pericope keying makes chapter-level source totals even less indicative of per-entry budget than usual. romans 1 has 32 source keys but only 14 synthesis entries, each spanning a range (key 4 covers vv.4-5). 'size romans 1' reported 97,434 usable source words, which scored it as a whole-batch chapter; the actual work was 14 entries of polish. The size meter should report entry count alongside source words, or the batch budget will keep mis-sizing pericope-keyed chapters in both directions."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "fidelity",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "4"
+      ],
+      "note": "Key 4 went B->A (ttr 0.5769 -> 0.6090, 623 -> 630 words) by rewriting paragraph 1 alone. The MATTR-200 dip was localised: the six worst windows all started between token 39 and 51, inside Calvin's 'limited, determined, decreed, constituted / would amount to the same thing / visibly determined or constituted the Son of God' stretch, where the same two participles recurred three times and 'the Son of God' three times more. The fix replaced the versions catalogue with compressed apposition (Syriac giving ... Vulgate predestinated, Arabic destined by ...), named Calvin's ancients (Origen, Chrysostom, Cyril) instead of 'some of the ancients', and pulled two unused grounded fragments — Calvin's 'clothed and adorned with his own power' and Barnes's Acts 17:26 'determined the bounds of their habitation'. Grounded source lifts ttr; this is now 15-for-15 for restore-rather-than-cut."
     }
   ]
 }
