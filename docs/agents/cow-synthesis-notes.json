@@ -102267,6 +102267,129 @@
         "0"
       ],
       "note": "CORRECTION, AND IT SUPERSEDES MY OWN NOTE OF EARLIER TODAY (the 'POLISH-QUEUE ROUTING' observation filed under isaiah 59, commit e9fc54a9). I WAS WRONG, and the error cost this session six declined draws. I had measured that the remaining polish chapters all carry legacy-stamped verses, concluded they were 'unlandable', and recommended the picker skip any polish chapter with a non-zero legacy count on the ground that it 'belongs in the rewrite queue'. docs/agents/cow-synthesis-loop.md lines 57-63 already answers this, and says the opposite: 'A chapter appears in exactly one queue -- the earliest it qualifies for... Most polish chapters are also legacy chapters (5,525 of the 8,700 legacy verses sit inside the 239 polish chapters); rewriting one re-stamps every verse in it, so it leaves both queues at once. That is why polish runs first -- IT IS THE SAME REWRITE, ordered so the worst-reading chapters are fixed soonest.' So the polish queue is not misrouted and its chapters are not stuck. They are FULL-CHAPTER REWRITES that have been deliberately prioritised ahead of the legacy queue because their prose reads worst, and the legacy count beside each one in 'status' is a description of the work, not a disqualification. WHAT I ACTUALLY DISCOVERED, stated correctly: a polish chapter whose verses are ALL legacy-stamped cannot be landed by the narrow method I was using -- repairing the one or two grade-B entries and running finish -- because the fidelity read-back demands a self-grade on every verse and legacy entries report MISSING, and because finish lints the chapter with --enforce-all so one untouched legacy entry's META defect blocks the whole chapter. That observation (first recorded at matthew 16) is sound. THE CONCLUSION I DREW FROM IT WAS NOT. The remedy is not to change the picker; it is to do the chapter as a rewrite, which is what the queue was asking for all along. The operator prompt contributed to the confusion by giving one instruction for a 'polish' pick ('read the existing prose AND the fidelity notes, fix that specific lean rather than rewriting around it') that only fits a chapter whose entries are already current-standard. For the eight chapters now left in the queue, every entry is legacy, so that instruction cannot apply and the loop doc governs. WORTH ADDING TO THE PROMPT: on a polish pick, check whether the chapter's entries are current-standard; if they are, fix the lean; if they are legacy-stamped, rewrite the chapter as pericope tiles exactly as for a legacy pick. CHAPTERS I DECLINED THIS SESSION THAT SHOULD HAVE BEEN REWRITTEN: matthew 26, luke 2, 1kings 1, 1kings 2, matthew 21, john 13, john 7, matthew 19. SIZES, measured, for whoever takes them -- 1kings 2 20,698 usable source words across 46 keys; 1kings 1 22,789 across 53; matthew 19 68,584 across 30; john 13 75,143 across 38; matthew 21 79,005 across 46; john 7 86,660 across 53; luke 2 93,012 across 52; matthew 26 144,865 across 75. Only the two Kings chapters fall under the ~40,000-word threshold at which a chapter becomes the whole batch; the other six are each a whole batch, and matthew 26 at 144,865 words is more than three times the threshold and the largest chapter I have measured in any queue."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "8",
+        "18",
+        "28",
+        "46"
+      ],
+      "note": "A fifth legacy shape, and it is a composite rather than a new generation. matthew 21 carried, in one chapter: the verse text quoted as the opener on 46 of 46 entries (the luke 13 defect), a 'The witnesses gather around three things' roadmap sentence on 26 of 46, inline <strong> school labels (8 across 4 entries, the matthew 16 defect), 17 paragraphs opening with a school as grammatical subject, and a quote fraction running 0.39 to 0.78 with a mean of 0.59. Since three previously catalogued shapes co-occur here, the four 'shapes' are better understood as independent defects that cluster than as four distinct authorship generations. That matters for triage: a chapter should be scored by which defects it has, not by which shape it resembles."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "21",
+      "verses": [
+        "18",
+        "27",
+        "1",
+        "39"
+      ],
+      "note": "Quote fraction: matthew 21 key 18 measured 0.75 and key 27 0.78, a new corpus maximum above luke 13's 0.68. Bringing all 46 entries under the ~0.20 cap again cost nothing in substance and the chapter came out LONGER, mean 386 to 393 words, with keys 1 and 39 substantially longer than their legacy versions. Restore-rather-than-cut is now 16-for-16. This is the third chapter in a row to confirm it, which should settle the standing question: adopt a commentator-quotation ceiling distinct from the scripture cap."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "3"
+      ],
+      "note": "Carrier lint gap, the patristic collective subject. 'Among the fathers the two beasts stand for...' and 'The fathers take the two beasts for...' are the same slot-list shape the carrier rule exists to stop, and neither the repo gate nor my own sweep catches them: the subject family covers witnesses/voices/commentators but not fathers, Greek fathers, Latin fathers, grammarians. The verb slot is working correctly, since 'the expositors converge on' DID trip the lint at key 3. It is the noun list that is short. I found the last instance only by a separate grep for school-as-subject paragraph openers, which is not a check anything runs."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "21",
+      "verses": [
+        "15",
+        "22",
+        "24",
+        "25",
+        "33",
+        "38"
+      ],
+      "note": "Voice detection: 9 of 46 entries named a speaking voice the clause-head detector could not reach, and they fall into exactly three recurring positions. The 'as X notes' attributive (keys 15, 22, 25), where the REPORTED_CUE for 'as' correctly suppresses quotation-of-sources but also suppresses a legitimate attribution. The mid-sentence relative, 'which X glosses sharply' (keys 24, 33, 38). And the prepositional-phrase opener, 'On the design of the parable X is fullest' (key 33). All nine were fixed by rewording rather than by widening the detector, as in matthew 16. These three positions are now stable enough across chapters to be worth a written style rule: a voice must be the grammatical subject of its own clause."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "21",
+      "verses": [
+        "10",
+        "17",
+        "28",
+        "44",
+        "45"
+      ],
+      "note": "Two classes of CORRECT exclusion that the verification pass reports as misses, each now seen twice. First, chapters where only Pseudo-Chrysostom appears and bare 'Chrysostom' must not be registered (keys 10, 17, 28, 45): the detector's BARE guard handles this, but the verification regex does not carry the same guard, so it false-alarms on every such key. Second, a commentator named as a manuscript witness rather than a speaking voice: key 44, 'wanting in the Codex Bezae and in Origen', which is the same class as matthew 16 key 8's Theophylact in Clarke's witness list. Recommend the verification pass carry the BARE/Pseudo guard and an apparatus-context stop-list; otherwise each run costs a manual read of every false alarm."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "21",
+      "verses": [
+        "10",
+        "17",
+        "28",
+        "33",
+        "45"
+      ],
+      "note": "Pseudo-Chrysostom had no entry in the school map and would have been dropped from the voices table silently. Assigned latin-fathers, the Opus Imperfectum in Matthaeum being a Latin work, but flagging it rather than hiding it: this is a fresh instance of the standing problem that the school schema has no stable home for several patristic voices, and the corpus is already inconsistent about this one. It speaks in 5 of the 46 entries here, so the choice is not cosmetic."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "21",
+      "verses": [
+        "4",
+        "31"
+      ],
+      "note": "Misfiled source, two instances in one chapter. Key 31 carries a 200-word Cyril of Jerusalem catechesis on baptismal water and the sealing of the soul by the Spirit; key 4 carries a Cyril excursus on the third hour and Pentecost. Neither expounds its verse: both are lecture material broadcast against keys it has no relation to. Both omitted from the written entries. With the Catena editor's own footnote filed as Cyril at matthew 16 key 13, and Cyril's 'many are the proofs concerning the life eternal' appearing in four books, Cyril of Jerusalem is now the single largest contributor to the duplicate-broadcast residue class. Worth checking whether his material was ingested per-lecture rather than per-verse."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "21",
+      "verses": [
+        "40"
+      ],
+      "note": "Thin flag versus section head, a concrete case. Key 40 has 106 usable source words of its own, below THIN_SOURCE_MAX of 200, which would license thin: true and a 120-349 word entry. But the section head at key 28 carries Henry's full treatment of the lord of the vineyard returning to reckon, which expounds v.40 directly rather than incidentally. I wrote from the head material and landed 356 words. A per-key reader would have called this thin; a per-span reader would not. The loop doc still does not say which governs, and this is the cleanest instance yet for deciding it."
+    },
+    {
+      "at": "2026-10-31",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "21",
+      "verses": [
+        "21",
+        "22",
+        "26",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40",
+        "41",
+        "43",
+        "45",
+        "46"
+      ],
+      "note": "FLOOR is measuring source budget, not writing quality. matthew 21 finishes 46/46 grade A, 0/46 on my stricter sweep, 0 violations at the gate with --enforce-all, 0.00% ungroundable fidelity and 0 chapters breaching quote-led, and still shows the advisory FLOOR mark on 12 of 46 verses (355-375 words). Those 12 are simply the verses whose own source is thinnest. Reporting FLOOR beside per-key expansion rather than beside the chapter total would make that legible instead of looking like a quarter of a clean chapter is underwritten."
     }
   ]
 }
