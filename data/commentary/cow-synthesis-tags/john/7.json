@@ -1,75 +1,291 @@
 {
  "1": {
   "voices": [
-   "Augustine of Hippo",
-   "John Chrysostom",
+   "Chrysostom",
+   "Augustine",
    "Bede",
+   "Theophylact",
+   "John Lightfoot",
+   "Matthew Henry",
    "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "range": "1-13",
+  "pericope_label": "Jesus walked in Galilee, for the Jews sought to kill him: My time is not yet come",
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine makes the withdrawal a precedent, since the Head hid first so that no guilt attaches to a member who hides later, and holds that Christ could have escaped had he chosen, the retreat being an accommodation to our weakness; he reads “my time” of the time of glory where the brethren’s, the glory of the world, is always ready, bids the Lord’s body answer its insulters that our country is lofty and the way to it low, finds in their seeking human glory for him the proof that they did not believe, and takes the brethren for Mary’s kindred and not her offspring, the womb that bore the Lord conceiving no other as the sepulchre held no other. Bede paraphrases their advice as a summons to the royal city, where the rulers might see his miracles and praise follow."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom has him flee as man and remain as God, admires Evangelists who report what tells against their Master, and finds bitterness under the courtesy, since the charge that nobody acts in secret taxes him with fear while the clause about being known taxes him with vain glory; he suspects the brethren of meaning to betray him, so that the time refused is the time of the cross, and notes that the world cannot hate men of its own mind. Theophylact says the disciples meant are the multitudes."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes limits the plot to the rulers, the people never having attempted his life, and has Christ wait until the crowds had passed lest it be said he chose his moment to raise a tumult; he and Ellicott both report Josephus calling tabernacles the greatest of the feasts, Ellicott adding that it was a memorial of the deliverance and a harvest thanksgiving, and calling the “yet” doubtful and needless, since on the better reading it is never said he went up to the feast at all, only that he refused to go as they meant it, openly with the caravan. Lightfoot lays out the month of Tisri day by day, down to the high priest sequestered seven days before the Atonement to rehearse the rites, and holds that Christ denies the time and not the going. Robertson keeps the plain negative and finds the manner of verse ten exactly opposite to the advice."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin makes the withdrawal a rule for danger, that it is not ours to ask what God has decreed but what he commands, and warns that we must not for the sake of life lose the reasons for living; he ends on the murmuring, where the one Church then on earth appears a shapeless chaos whose rulers hold the people by fear. Gill reads the booths as a type of Christ tabernacling in human nature and an emblem of the saints dwelling in the tabernacles of their bodies."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke supplies the ritual in full — branches of palm and willow bound with gold and silver cords, the daily circuit of the altar with Hosanna and trumpets, the sevenfold circuit called the great Hosanna, and water drawn from Siloam and poured with wine while the people sang of the wells of salvation — and ties it forward to the cry of the last day; he then raises Porphyry’s charge of falsehood, that Christ said he would not go and went, and answers that he said only not yet."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks the verb, that it is not said he durst not but that he would not, and adds that providence may cast men of merit into obscurity as it did his Master, who even so walked rather than sat still; that divine institutions do not go out of date, though John calls it the feast of the Jews because it was shortly to be abolished; and that the kindred had honour but not a saving honour, since grace runs in no blood — their fault being presumption in prescribing to Christ, carelessness of his safety, and self at the bottom."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Did “I go not up yet unto this feast” make the later going a falsehood?",
+    "positions": [
+     {
+      "view": "No — he denied the time, not the going, which answers Porphyry’s charge",
+      "held_by": [
+       "Adam Clarke",
+       "John Lightfoot"
+      ]
+     },
+     {
+      "view": "The “yet” is a doubtful and needless reading; on the better text he never says he will not go to the feast, only that he will not go as they meant it, openly with the caravan",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Keep the plain negative, and read verse ten as a manner exactly opposite to their advice",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who are the brethren?",
+    "positions": [
+     {
+      "view": "Mary’s kindred and not her offspring, the womb that bore the Lord conceiving no other",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "view": "Kindred with real honour but no saving honour, since grace runs in no blood",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Chrysostom",
+    "claim": "Suspects the brethren of meaning to betray him, so that the time he refuses is the time of the cross rather than a time of festival safety."
+   }
+  ],
+  "themes": [
+   "After these things Jesus walked in Galilee: for he would not walk in Jewry, because the Jews sought to kill him.",
+   "Now the Jews’ feast of tabernacles was at hand.",
+   "His brethren therefore said unto him, Depart hence, and go into Judea, that thy disciples also may see the works that thou doest.",
+   "For there is no man that doeth any thing in secret, and he himself seeketh to be known openly. If thou do these things, shew thyself to the world.",
+   "For neither did his brethren believe in him.",
+   "Then Jesus said unto them, My time is not yet come: but your time is alway ready.",
+   "The world cannot hate you; but me it hateth, because I testify of it, that the works thereof are evil.",
+   "Go ye up unto this feast: I go not up yet unto this feast; for my time is not yet full come.",
+   "When he had said these words unto them, he abode still in Galilee.",
+   "But when his brethren were gone up, then went he also up unto the feast, not openly, but as it were in secret.",
+   "Then the Jews sought him at the feast, and said, Where is he?",
+   "And there was much murmuring among the people concerning him: for some said, He is a good man: others said, Nay; but he deceiveth the people.",
+   "Howbeit no man spake openly of him for fear of the Jews."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-01",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.03
+   }
+  }
+ },
+ "14": {
+  "voices": [
+   "Chrysostom",
+   "Augustine",
+   "Bede",
+   "Alcuin",
+   "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Calvin"
   ],
+  "range": "14-24",
+  "pericope_label": "How knoweth this man letters, having never learned? My doctrine is not mine, but his that sent me",
   "schools": [
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Augustine: the chapter commends Christ’s humanity — concealing himself he kept his power, offering an example to our weakness; the Head doing what he sanctions in the member."
+    "summary": "Augustine makes the timing fulfil the earlier refusal exactly, and adds that he went up not to the feast but to the light, his own feast day being the one his passion made; he resolves “not mine” by identity, since the Father’s teaching is his Word and Christ is that Word, so the doctrine is at once his and not his, against the Sabellian heresy which makes Father and Son two names for one thing. He makes doing the will mean believing, and lays down that we must not seek to understand in order to believe but believe in order to understand; he has Moses convict them, the law of the eighth day overriding the law of the seventh, since circumcision signs salvation and no man may rest from that work, and observes that the caster-out of devils was told he had one. Bede takes the answer for an example, that a wrong censure is better met by wholesome advice than by asserting a truth one could assert. Alcuin gives three reasons for the rite and says it then had the virtue baptism has now, only the gate was not yet open."
    },
    {
     "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom explains the delay as calculated, since men who had hunted for him would attend the more closely when he appeared without warning, and says it was not the doctrine they admired but something else altogether; he divides “not mine” differently from Augustine, his as he taught it and not his as it came from the Father, finding in the denial the strongest proof that the two are one, and reduces the test to a condition — put away the anger and envy you bear me and nothing will hinder the knowing. On the charges he answers the first from the commandment: the law says thou shalt not kill, and they seek to kill; if he broke a law it healed a man, where they transgress for an evil end."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Chrysostom: ‘had not power’ is no weakness (he cast the soldiers back); envy and malice, by which death entered the world, drive the Jews to murder."
+    "summary": "Barnes works the promise out as evidence, internal and of two kinds, claims that only men who wish to live in sin doubt, and adds that God’s goodness put this proof within every man’s reach, since it takes no great learning to be a Christian. Ellicott puts the stress on the willing, which precedes faith, rather than the deed, which follows, insists the “any man” excludes nobody, naming Saul the Pharisee, Cornelius and Justin, and draws the circumcision argument a fortiori: if a patriarchal rite overrides the Mosaic sabbath because the fathers came before Moses, an act of love must override it the more, being older than all time. Robertson quotes Westcott, that where there is no sympathy there can be no understanding, and presses it further, that unbelieving critics are disqualified as witnesses, their isolation proving nothing about God. Lightfoot shows the rabbis themselves ruling that circumcision and its cure null the sabbath, while disputing whether a stranger’s son might be so circumcised."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he confined himself within human limits, having emptied himself (Phil 2); conducted himself as a man liable to dangers."
+    "prevalence": "single",
+    "summary": "Calvin says sound judgment flows from the fear of God, so that men unable to tell truth from falsehood want the first requisite, which is piety."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke supplies the retort, that men who ask why the healing was not deferred to a working day should be asked why the circumcising is not."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: not ‘durst not’ but ‘would not’ — prudence, not fear; gospel light is taken from those who would quench it."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "‘After these things’ skips the ~6-month withdrawal (passover to tabernacles); imperfects picture itinerant ministry and settled hostility (5:18)."
+    "summary": "Henry adds that the people would be freer after days in their booths, that he came when friends and enemies alike had stopped looking, and that the teaching shamed the priests by taking their office out of their hands; on the learning he notes that Moses was taught the wisdom of Egypt while Christ was not taught even that of the Jews, and that a learned age was chosen lest the religion look like a design to impose on the world."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "How can the doctrine be both his and not his?",
+    "positions": [
+     {
+      "view": "By identity — the Father’s teaching is his Word, and Christ is that Word",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "view": "By aspect — his as he taught it, not his as it came from the Father, the denial itself proving the two are one",
+      "held_by": [
+       "Chrysostom"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does “if any man will do his will” require?",
+    "positions": [
+     {
+      "view": "Believing, so that we believe in order to understand and not the reverse",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "view": "The removal of anger and envy, after which nothing hinders the knowing",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "view": "The willing, which precedes faith, rather than the deed, which follows",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "A reachable proof: internal evidence of two kinds, since it takes no great learning to be a Christian",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
    {
-    "voice": "Augustine of Hippo",
-    "note": "Reads the concealment as Christ deliberately modelling for his members the lawful flight from persecution he himself did not need."
+    "voice": "A.T. Robertson",
+    "claim": "Turns the promise into a rule of evidence against the critics, holding that unbelieving scholarship is disqualified as a witness because it lacks the sympathy understanding requires."
    }
   ],
   "themes": [
-   "humanity and power of Christ",
-   "withdrawal from persecution",
-   "envy and malice",
-   "‘his hour not yet come’"
+   "Now about the midst of the feast Jesus went up into the temple, and taught.",
+   "And the Jews marvelled, saying, How knoweth this man letters, having never learned?",
+   "Jesus answered them, and said, My doctrine is not mine, but his that sent me.",
+   "If any man will do his will, he shall know of the doctrine, whether it be of God, or whether I speak of myself.",
+   "He that speaketh of himself seeketh his own glory: but he that seeketh his glory that sent him, the same is true, and no unrighteousness is in him.",
+   "Did not Moses give you the law, and yet none of you keepeth the law? Why go ye about to kill me?",
+   "The people answered and said, Thou hast a devil: who goeth about to kill thee?",
+   "Jesus answered and said unto them, I have done one work, and ye all marvel.",
+   "Moses therefore gave unto you circumcision; (not because it is of Moses, but of the fathers;) and ye on the sabbath day circumcise a man.",
+   "If a man on the sabbath day receive circumcision, that the law of Moses should not be broken; are ye angry at me, because I have made a man every whit whole on the sabbath day?",
+   "Judge not according to the appearance, but judge righteous judgment."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-01",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.03
+   }
   }
  },
- "2": {
+ "25": {
   "voices": [
-   "John Gill",
+   "Chrysostom",
+   "Augustine",
    "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
@@ -78,1836 +294,356 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "25-30",
+  "pericope_label": "Do the rulers know indeed that this is the very Christ? I am not come of myself",
   "schools": [
    {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine reads secrecy and boldness together, since he went up hidden to show figuratively that he was hidden even in the feast the Jews kept, and now the power appears which had been taken for timidity; he adds that, not understanding that power, they supposed the rulers’ knowledge was what spared him. He allows their expectation a foundation, since the Scriptures say both things, foretelling whence Christ should come as man while hiding him as God from the profane, and takes “we know whence he is” as true and false at once: they knew Jesus of Nazareth and his parents, the birth from the Virgin being the only part hidden from them."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom makes something of the note that these were men of Jerusalem, where the miracles had been most and the people were worst, ready to surrender every judgment to corrupt rulers, and asks whether it was not itself a miracle that men who had raged for his life stood suddenly quiet."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Tabernacles (skēnopēgia, hapax) on 15 Tisri, ~5 months after Passover; booths recall the wilderness; a pilgrim and harvest feast Josephus calls the greatest; later branch/altar ceremonies set up v.37."
+    "prevalence": "several",
+    "summary": "Lightfoot asks how the expectation agrees with the later verse about Bethlehem and answers that they looked for a manifestation there, then a hiding, then a second appearing from nobody knew where, quoting the Midrash on the roe that appears and is hidden with Moses as the pattern. Barnes gives the same sources, crediting Lightfoot, and finds the notion corrected where men are told not to go out to the desert after a Christ. Robertson hears contempt in the demonstrative, agrees the concession about his origin is terse and real, has Christ pass the popular theology by to charge them with ignorance of the Father, and keeps the imperfect of the arrest as a seeking begun rather than finished. Ellicott marks how a technical reason, never examined, was enough to stifle every growing conviction and annul all his words and works; he grants a real concession, those features being known to friend and foe alike, while pressing that an outer life tells little even of a brother man, insists the word rendered true means not truthful but the ideally existent One, bases the claim to know the Father on oneness of essence and a true mission, and separates cause from occasion in the failed arrest — nobody laid a hand on him because the crowd was divided, while the hour not yet come is the writer’s primary cause, the beloved disciple having learned, looking back from old age, that every deed of that life had its hour mapped in the counsels of God."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the feast recalls God’s grace in the wilderness; Christ usually came to feasts (subject to the Law; gospel opportunity), yet now stays retired. Gill: it typifies Christ’s tabernacling in flesh."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "feast of tabernacles",
-   "wilderness memorial",
-   "Christ tabernacling in flesh",
-   "setting of the chapter"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The ‘brethren’ (half-brothers, Robertson; cousins/relations, others) challenge him with heavy irony to ‘manifest’ himself in Judea before the rulers and the earlier-made disciples (2:23; 4:1)."
+    "prevalence": "single",
+    "summary": "Calvin makes “we know whence he is” irony, that they know everything and know nothing, and adds that there is no more destructive plague than men intoxicated by the little knowledge they have; he declines to press the clauses about the Father as far as Ellicott does, allowing a heavenly descent to be inferred but denying it would prove eternal divinity against the Arians, and takes a warning for teachers from it, that a man who has truly ascertained the truth of God may boldly resist all men, as Jeremiah appealed when charged with imposture, but that we must beware of fanatics who give out their own inventions as oracles."
    },
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Calvin: they ridicule his concealment as folly — he ‘wishes to be something’ yet ‘wants confidence in himself.’"
+    "summary": "Clarke traces the expectation instead to the question who shall declare his generation, remarks that the miraculous conception would have relieved them, quotes with Robertson the rabbinic proverb that three things come unlooked for — a thing found by chance, the sting of a scorpion and the Messiah — would read “ye both know me” as a question, taking them on their own profession and then adding what they lack, that he is no self-authorised prophet, and notes a variant turning “I am” into “I came”, judging it slight and too refined. Wesley divides the clauses to answer the two questions, generation to whence and mission to who."
    }
   ],
   "debates": [
    {
-    "question": "Who are Jesus’ ‘brethren’?",
-    "sides": [
+    "question": "Where did the expectation that Christ’s origin would be unknown come from?",
+    "positions": [
      {
-      "position": "half-brothers (sons of Joseph and Mary)",
-      "holders": [
-       "A.T. Robertson"
+      "view": "From a rabbinic scheme of manifestation, hiding and second appearing, documented in the Midrash on the roe",
+      "held_by": [
+       "John Lightfoot",
+       "Albert Barnes"
       ]
      },
      {
-      "position": "cousins / distant relations (Hebrew idiom)",
-      "holders": [
-       "John Calvin",
-       "John Wesley",
-       "John Gill"
-      ]
-     },
-     {
-      "position": "Joseph’s children by a former wife (some of the ancients)",
-      "holders": [
+      "view": "From “who shall declare his generation”, a difficulty the miraculous conception would have relieved",
+      "held_by": [
        "Adam Clarke"
+      ]
+     },
+     {
+      "view": "From Scripture itself, which foretells his human origin while hiding his divine one from the profane",
+      "held_by": [
+       "Augustine"
       ]
      }
     ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the brethren’s unbelief",
-   "challenge to ‘show thyself’",
-   "identity of the brethren"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Sound in the abstract but evil in motive; the condition ‘if thou do these things’ assumes yet quietly doubts the works; they crave Messianic pomp and a ‘name’ at Jerusalem."
    },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: they trample the proofs of his divine power; near relations, as Satan’s instruments, tempt God’s children to ambition and avarice."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "worldly ambition",
-   "‘shew thyself to the world’",
-   "unbelief of relatives",
-   "miracles and reputation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The brethren’s plain unbelief after the Nazareth/Beelzebub rejections; yet later they pray with the Apostles (Acts 1:14), changed by the risen Lord’s appearing (1 Cor 15:7)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: carnal kinship is worthless without faith; the new creature, not blood, makes one Christ’s brother (Mt 12:50) — against Mary-veneration grounded on relationship."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "unbelief of the brethren",
-   "carnal vs. spiritual kinship",
-   "later conversion",
-   "grace not blood"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Time’ = kairos, the fitting occasion for a public Messianic manifestation (not the hōra of death); he avoids going up with the crowds to shun parade and the rulers’ envy."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the ‘time’ is of setting out for the feast; the world favours the brothers but is Christ’s mortal enemy, so he cannot move at their convenience."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘my time is not yet come’",
-   "divinely-ordered seasons",
-   "the world’s friendship and enmity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The world cannot hate its own; it hates Christ because his testimony exposes its evil — light hated by those who love darkness (3:19); a ‘law of moral correspondence’ (Westcott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: peace with the world is bought by consent to vice; the unregenerate are Christ’s adversaries because the gospel summons all as guilty (16:8)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the world’s hatred",
-   "testimony against evil works",
-   "light and darkness",
-   "regeneration"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "Against Porphyry’s charge of falsehood: ‘I go not up’ (ouk, Robertson) is no contradiction of v.10, since Christ refuses only the open, caravan manner; he goes later, secretly, at mid-feast (v.14)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does ‘I go not up to this feast’ contradict his later going up (Porphyry’s charge)?",
-    "sides": [
+    "question": "How is “ye both know me, and ye know whence I am” to be taken?",
+    "positions": [
      {
-      "position": "no — he refuses only the open, caravan manner the brothers urged, not the going itself",
-      "holders": [
-       "A.T. Robertson",
+      "view": "True and false at once — they knew Nazareth and the parents, not the Virgin birth",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "view": "Irony: they know everything and know nothing",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "A question, granting their profession before adding what they lack",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "A real concession about the outer life, which tells little even of a brother man",
+      "held_by": [
        "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Refuses to argue eternal divinity from this passage against the Arians, allowing only that a heavenly descent may be inferred — a deliberate restraint where Ellicott reads oneness of essence."
+   }
+  ],
+  "themes": [
+   "Then said some of them of Jerusalem, Is not this he, whom they seek to kill?",
+   "But, lo, he speaketh boldly, and they say nothing unto him. Do the rulers know indeed that this is the very Christ?",
+   "Howbeit we know this man whence he is: but when Christ cometh, no man knoweth whence he is.",
+   "Then cried Jesus in the temple as he taught, saying, Ye both know me, and ye know whence I am: and I am not come of myself, but he that sent me is true, whom ye know not.",
+   "But I know him: for I am from him, and he hath sent me.",
+   "Then they sought to take him: but no man laid hands on him, because his hour was not yet come."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-01",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
+  }
+ },
+ "31": {
+  "voices": [
+   "Chrysostom",
+   "Augustine",
+   "Bede",
+   "Theophylact",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "range": "31-36",
+  "pericope_label": "The Pharisees sent officers to take him: ye shall seek me, and shall not find me",
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine has the physician gather the poor and humble, who saw their infirmities soonest and took his medicine without hesitation, and reads their question as meaning that if there are not two Christs then this is he; unable to find the officers taking him against his will, he has them sent to hear him teach instead, and puts the answer about going as meaning that what they wish to do now they will do in time, but not now, because it is not his will. Bede takes the going for a return to the Father at whose command he became incarnate, from which he has never come back."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom will not call the people’s faith sound, since their form of words shows they were not steady in believing him the Christ, and adds that grosser minds are moved by miracles and not doctrine; he notes that he had taught often before without being so handled, that the praise of the crowd stung the rulers though the sabbath was still the charge they named, and that being afraid to act themselves they sent others. In the answer he hears the greatest humility, as though Christ asked why they made such haste and bade them wait a little, and marks that he does not say “I am here” but “I am with you”, since persecution would not stop his teaching them the way of salvation; on the seeking that would fail he looks to the women who lamented him and to the taking of the city. Theophylact hears a threat of complaint to the Father, an injury to the sent being an injury to the sender."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes dwells on the love of it, that the offer of salvation was made to his own persecutors while they were seeking his life, reads the seeking that fails of the Messiah rather than of Jesus — a nation in its calamities desiring a deliverer and being disappointed — keeps to Jews scattered in every land, and observes that no answer was returned, the question of place being turned aside for their own salvation. Robertson glosses the verb of going as a withdrawing and calls the saying enigmatic to those who heard it. Lightfoot takes “the dispersed among the Gentiles” in its strict sense of Greeks and leaves open whether the dispersed Greeks or the Jews among them are meant, both being the most scattered nations under heaven, the key lying in the distinction between Hebrews and Hellenists. Ellicott agrees the better manuscripts omit the pronoun but takes the hearers to be the hierarchy at large, calls the guess at his destination another instance of men unable to read any meaning off the surface, and traces the dispersion to three centres — Babylonia much the largest, Egypt the most consequential through the Greek version and the Alexandrian school, and Syria the least numerous, whose synagogues were nevertheless the first buildings in which Jesus was preached as Messiah — adding that the scorn of the question was turned by the after history into an unconscious prophecy, like the words of Caiaphas."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin has no doubt that Christ addresses his enemies, ridiculing efforts that must fail because the Father has fixed the time, and turns it into a warning, that Christ is present whenever the gospel calls men to hope, so that a man who disregards the presence loses nothing for Christ but is left a stranger to God."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke says the words went to the common people and not to the officers, reports that the pronoun rendered “unto them” is missing from more than eighty copies and from several fathers, and offers three readings of the dispersion — the Jews of the Greek-speaking empire, the Gentiles themselves, or the ten lost tribes."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Whom was Jesus answering in verse 33?",
+    "positions": [
+     {
+      "view": "His enemies, whose efforts he ridicules because the Father has fixed the time",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "The common people, not the officers — and the pronoun “unto them” is absent from more than eighty copies",
+      "held_by": [
        "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The hierarchy at large; the better manuscripts do omit the pronoun",
+      "held_by": [
+       "Charles Ellicott"
       ]
      }
     ]
    },
    {
-    "question": "Is the reading ‘ouk’ (not) or ‘oupō’ (not yet)?",
-    "sides": [
+    "question": "Who are “the dispersed among the Gentiles”?",
+    "positions": [
      {
-      "position": "‘ouk’ (not) is the harder, likely original reading",
-      "holders": [
-       "A.T. Robertson"
+      "view": "Greeks in the strict sense, or the Jews among them — the distinction between Hebrews and Hellenists is the key",
+      "held_by": [
+       "John Lightfoot"
       ]
      },
      {
-      "position": "‘not yet’ (oupō), found in some MSS, eases the difficulty",
-      "holders": [
+      "view": "Either the Jews of the Greek-speaking empire, the Gentiles themselves, or the ten lost tribes",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Jews scattered in every land, with the question of place turned aside altogether",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "The historic dispersion of Babylonia, Egypt and Syria, whose synagogues first heard Jesus preached as Messiah",
+      "held_by": [
        "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "Porphyry’s charge",
-   "textual variant ouk/oupō",
-   "secret vs. open going",
-   "Father’s appointed time"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "Theophylact",
-   "John Chrysostom",
-   "Augustine of Hippo",
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom/Theophylact: he abides, then goes up secretly ‘as it were’ — by economy — to teach us (who cannot check our persecutors) the way of life, not merely to prove the Incarnation."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Constative aorist ‘abode’ covers a few days; he stayed behind only three or four before reaching Jerusalem (v.14)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Calvin: the cousins keep an easy peace with unbelievers; ‘accursed be that peace’ that abandons the Son of God."
-   }
-  ],
-  "debates": [],
   "outliers": [
    {
-    "voice": "John Chrysostom",
-    "note": "Reads Christ’s human conduct as deliberate moral instruction for disciples who lack his power to overawe their enemies."
+    "voice": "Augustine",
+    "claim": "Cannot find the officers ever laying hold of him, and so has the Pharisees send them not to arrest but to hear him teach."
    }
   ],
   "themes": [
-   "abiding in Galilee",
-   "going up ‘as it were in secret’",
-   "Christ’s example for the persecuted",
-   "economy / incarnation"
+   "And many of the people believed on him, and said, When Christ cometh, will he do more miracles than these which this man hath done?",
+   "The Pharisees heard that the people murmured such things concerning him; and the Pharisees and the chief priests sent officers to take him.",
+   "Then said Jesus unto them, Yet a little while am I with you, and then I go unto him that sent me.",
+   "Ye shall seek me, and shall not find me: and where I am, thither ye cannot come.",
+   "Then said the Jews among themselves, Whither will he go, that we shall not find him? will he go unto the dispersed among the Gentiles, and teach the Gentiles?",
+   "What manner of saying is this that he said, Ye shall seek me, and shall not find me: and where I am, thither ye cannot come?"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "He goes up ‘not openly but as it were in secret,’ pointedly reversing the brothers’ ‘manifest thyself openly’ (v.4); the secrecy is only of the journey, not his later public teaching; he appears at mid-feast (v.14)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "secret going up",
-   "against the brothers’ advice",
-   "Christ orders his own manifestation",
-   "last journey but one"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-01",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘The Jews’ = the hostile rulers (not the crowds); the imperfect ‘were seeking’ and the contemptuous ‘Where is that one?’ reveal a widely-known plot and an anticipated crisis."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the one true Church appears as ‘a shapeless chaos,’ the people whispering under the tyranny of priests and scribes."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the hostile rulers",
-   "‘Where is he?’",
-   "plot against Christ",
-   "church under tyranny"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Multitudes’ (plural only here) murmur, split over his character — ‘a good man’ (agathos, pure in motive) vs ‘he deceiveth the people’ (planaō, the rulers’ future ‘deceiver’); slander had the rulers’ backing."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: division over Christ is no new evil — be armed with a shield against it, and beware the rashness of judging God’s things lightly."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is Jesus ‘a good man’ or one who ‘deceiveth the people’?",
-    "sides": [
-     {
-      "position": "a good man, pure in motive",
-      "holders": [
-       "some of the multitude"
-      ]
-     },
-     {
-      "position": "a deceiver leading the people astray",
-      "holders": [
-       "others, backed by the rulers"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "murmuring of the multitudes",
-   "good man vs. deceiver",
-   "division over Christ",
-   "slander privileged"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "None spoke ‘openly’ (boldly) for fear of the rulers — the same dread that silenced the disciples (19:38; 20:19); Barnes: many timid friends praise his life but not his deity or atonement."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the rulers wished his name ‘buried in oblivion’ — gross tyranny; yet Christ’s power shone the brighter, heard amidst armed foes."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fear of the Jews",
-   "timid confession",
-   "reign of terror",
-   "Christ heard despite it"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "Chrysostom",
-   "Theophylact",
-   "Augustine of Hippo",
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Mid-feast (Chol Moʿed) is, so far as known, Christ’s first public appearance as a teacher, likely expounding a read Scripture; he stands suddenly before the very leaders who sought him (v.11)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom/Theophylact: he delays to heighten attention, appearing when the crowd, done with the feast’s ceremonies, is readier to hear him."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Augustine: on the charge that he ‘seduceth the people’ — to lead from evil to good is to be a good ‘seducer,’ the comfort of true preachers."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he did not desist from his office for fear; ceremonies need doctrine to be ‘lively images,’ so Christ teaches where the priests are dumb. Henry: the gospel is one ‘to the plain and to the polite.’"
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Augustine of Hippo",
-    "note": "Redeems the word ‘seducer’: leading men from evil to good is a good seduction — the office of every faithful preacher."
-   }
-  ],
-  "themes": [
-   "teaching in the temple",
-   "middle of the feast",
-   "ceremonies needing doctrine",
-   "Christ the public teacher"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "They marvel not at his teaching’s substance but that an untrained ‘layman’ commands the learning (grammata) of the rabbinic schools (Acts 4:13; 26:24) — ‘his learning, not his wisdom’ (Dods/Westcott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: their wonder seeks occasion to despise him; we ignore the divine hand in ordinary means and, from pride, let the extraordinary ‘pass away as a dream.’"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘never having learned’",
-   "learning vs. wisdom",
-   "the untaught Teacher",
-   "wonder turned to contempt"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "His doctrine is not self-originated but the Father’s who sent him — the language of an ambassador (Isa 11:2), a bold claim of a source superior to the rabbis’ (Talmud vs NT)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the offence is a ladder — an untaught teacher proves he was ‘taught by God’; the Son came from a workshop, not the schools, that the gospel’s divine origin be manifest."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘my doctrine is not mine’",
-   "sent from the Father",
-   "divine origin of the gospel",
-   "the untaught taught by God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The stress is on ‘willeth’: a will to do God’s will is the condition of knowing the doctrine — experimental knowledge needing moral harmony (Westcott); the ‘any man’ excludes none (Saul, Cornelius, Justin)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: sound judgment flows from the fear of God; the hearers fail to tell truth from falsehood because they lack piety and the desire to obey."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "obedience and knowledge",
-   "‘if any man willeth to do’",
-   "spiritual epistemology",
-   "testing the doctrine"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "To speak ‘of himself’ is to seek one’s own glory; Christ seeks the sender’s glory, so is ‘true’ and ‘no unrighteousness’ (= no falsehood/imposture, adikia vs alēthēs) is in him."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the glory sought is the touchstone — what displays God’s glory is divine, what feeds human ambition is to be rejected; no teacher is faithful unless void of ambition."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "single",
-    "summary": "Origen reasons from ‘no unrighteousness’ toward Christ as righteousness, since the righteous Lord orders all things righteously."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Origen",
-    "note": "Turns ‘no unrighteousness in him’ into a meditation on Christ as righteousness itself, mirroring the righteous God."
-   }
-  ],
-  "themes": [
-   "seeking God’s glory vs. one’s own",
-   "the mark of a true teacher",
-   "no falsehood (adikia)",
-   "touchstone of doctrine"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "Chrysostom",
-   "Augustine of Hippo",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Those who prided in Moses’ law break it by seeking his life (Rom 3:10); ‘and yet’ (kai adversative) alludes to 5:18; the Law was read at this very (Sabbatical-year) feast (Deut 31:10)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: he answers both charges — to break a law to heal is a beneficial transgression; ‘you kill,’ which the law forbids, is for an evil end."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he reasons from the person — their free indulgence in vice unmasks their ‘zeal for the Law’ as hypocrisy."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Augustine: Truth and Charity were speaking; Christ foresaw whom his word would profit — blessed are they who have not seen yet believe."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘why seek ye to kill me?’",
-   "law-keepers who break the law",
-   "Sabbath healing",
-   "hypocrisy of zeal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The ignorant Galilean pilgrims (not the plotting rulers) cry ‘thou hast a devil’ = ‘thou art mad,’ unaware of the plot (5:18); spoken in wonder, not hostility (Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: ‘hast a devil’ was the idiom for madness; the crowd, ignorant of the priests’ designs, slanders Christ — a warning against opinions on what we do not understand."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Who speaks ‘thou hast a devil’?",
-    "sides": [
-     {
-      "position": "the ignorant pilgrim multitude (better text)",
-      "holders": [
-       "A.T. Robertson",
-       "Charles Ellicott",
-       "John Calvin"
-      ]
-     },
-     {
-      "position": "the hostile ‘Jews’ (a manuscript variant)",
-      "holders": [
-       "Adam Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "‘thou hast a devil’",
-   "madness idiom",
-   "ignorant crowd",
-   "hidden plot"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘One work’ = the Sabbath healing of ch.5 that provoked the plot (5:18); the marvel was the apparent Sabbath-breaking; some join ‘dia touto’ (because of this) to v.21."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: leaving persons for the fact, Christ notes he is blamed for one Sabbath work while they do many (circumcisions) on every Sabbath uncondemned."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘one work’",
-   "the Sabbath healing",
-   "marvel and hostility",
-   "setting up the defence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Circumcision is ‘of the fathers’ (Abraham, Gen 17), only adopted by Moses (Lev 12:3); by rabbinic rule (Hillel) it ‘nulleth the sabbath’ when the eighth day falls on it."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Calvin: their own Sabbath circumcising sets up an argument from the greater to the less — the partial rite vs the whole healing of a man."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "circumcision and the Sabbath",
-   "‘of the fathers’ (Abraham)",
-   "rabbinic rule",
-   "argument from the lesser"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "From lesser to greater: if circumcision (a partial work, removing ‘a small portion of flesh’) rightly overrides the Sabbath, how much more making ‘a whole man sound’; ‘are ye wroth’ (cholate) pictures bitter spleen."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: both circumcision and the cure are works of God, but Christ argues the greater from the less; their anger is prejudice against his person, not zeal for the Law."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "argument from lesser to greater",
-   "‘every whit whole’",
-   "Sabbath and mercy",
-   "prejudice not zeal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Judge by substance not surface (kat’ opsin = superficially); the Sabbath law is subordinate to mercy; ‘judge righteous judgment’ is itself a Mosaic precept (Deut 1:16-17) read at this feast."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: their wrong judgment springs from prejudice against his person; right judgment must be ‘regulated by the truth of the fact,’ not appearances."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "righteous vs. superficial judgment",
-   "mercy over the letter",
-   "prejudice against the person",
-   "Sabbath and love"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "Augustine",
-   "John Chrysostom",
-   "Augustine of Hippo",
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Jerusalem residents (distinct from the pilgrims) know the rulers’ plot (5:18) and marvel that he speaks boldly unhindered."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: ‘them of Jerusalem,’ who saw the most miracles, are the most pitiable — surrendering judgment to corrupt rulers; the murderers’ sudden silence is itself a proof of his Godhead."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: the earlier ‘secret’ going signified Christ hidden in the feast whose mystery was his own; now supposed timidity shows itself as power."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin/Henry: they wonder at the rulers’ restraint but miss the providence of God, who ties men’s hands though he does not turn their hearts."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘them of Jerusalem’",
-   "the plot known",
-   "timidity shown as power",
-   "providence restraining enemies"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "From the rulers’ silence the townsmen infer a possible secret change of mind; the question (mēpote, ingressive ‘come to know’) expects ‘no’ and carries sarcasm; ‘very’ (alēthōs) is absent in the best MSS."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘do the rulers know?’",
-   "sarcasm at the leaders",
-   "textual variant (alēthōs)",
-   "unwitting truth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "They claim to know his (Galilean, Joseph-and-Mary) origin against the notion that Messiah’s ‘whence’ is unknown; Lightfoot harmonises with v.42 — a Bethlehem birth, then hiddenness, then reappearance from an unknown place."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: their imagined knowledge of his origin is the veil over their eyes; Wesley: they would not follow even believing rulers, ‘because they knew whence he was.’"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘we know whence he is’",
-   "Messiah’s hidden origin",
-   "ignorance mistaken for knowledge",
-   "Bethlehem and the eternal ‘whence’"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: ironic reproach — 'you know all things yet know nothing'; God is 'true'/faithful, so the gospel stands though the world rage."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "They know the phenomenal, not the truly existent One who sent him; 'and yet I am not come of myself' exposes their ignorance of the Father."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: Christ takes them on their own profession — his mission is attested by Baptist, Spirit, voice, doctrine, miracles, but they know not God."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is 'ye know me, and know whence I am' ironic, a question, or a partial concession?",
-    "sides": [
-     {
-      "position": "bitter irony — they know nothing",
-      "holders": [
-       "Calvin"
-      ]
-     },
-     {
-      "position": "a partial concession — they know the surface only",
-      "holders": [
-       "Ellicott",
-       "Robertson",
-       "Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "knowing yet not knowing",
-   "sent by the Father",
-   "ignorance of God",
-   "Christ's true origin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ's unique knowledge belongs to One only, grounded in his origin and mission; he is 'the Father's Apostle to men' (John 1:18; 17:25)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a warrant for bold confidence in God's truth, yet the bare words are not a sufficient proof of eternal deity against the Arians."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: 'from him' = eternal generation, 'sent me' = the mission flowing from it, answering their two questions."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does 'I am from him' prove Christ's eternal divinity, or only his heavenly mission?",
-    "sides": [
-     {
-      "position": "it answers eternal generation + mission",
-      "holders": [
-       "Wesley",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "it infers heavenly descent but is no decisive proof against Arians",
-      "holders": [
-       "Calvin"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "I know him",
-   "from the Father",
-   "eternal generation",
-   "the Father's Apostle"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Christ was guarded by God's protection; his death was by the Father's decree, and the time of every man's death is fixed by God."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The imperfect marks repeated efforts; 'his hour' shows John's theme of a predestined course (2:4; 8:20; 13:1), the immediate restraint being the divided crowd."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: 'his hour' = the time of his suffering."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "his hour not yet come",
-   "providence",
-   "predestined Passion",
-   "appointed time of death"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "Augustine",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: not a sound faith — moved by miracles not doctrine; Augustine: the humble received the physician the rulers sought to kill."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The question rests on the Messianic expectation of many miracles (Isa 35:5-6); an advance from 'good man' (v.12) to 'many believed.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: even this miracle-leaning, weak faith is honoured as a 'small spark' acceptable to God; Henry: convinced but lacking courage to confess."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "weak faith",
-   "Messianic miracles",
-   "Isaiah 35",
-   "a small spark honoured"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Pharisees enlist the Sadducean chief priests in the Sanhedrin to send temple police; the crowd's sympathy (v.31) provoked them."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: rival parties conspire together under Satan against the Son of God — a shaming spur to our own zeal for Christ's kingdom."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: the spreading conviction that Jesus is Messiah is exactly what moves them to seek his death."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Sanhedrin",
-   "Pharisees and Sadducees united",
-   "temple officers",
-   "faith provokes opposition"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Barnes/Clarke: tender warning to persecutors to seek him while he remains — about six months before the cross."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'I go unto him that sent me' (hypagō, to withdraw to the Father) is enigmatic to the hearers; the end is now at hand."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: spoken to his enemies — he ridicules their futile efforts, reproaches their ingratitude, and warns grace will soon be withdrawn."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a little while",
-   "going to the Father",
-   "season of grace",
-   "ascension hinted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke/Barnes: a national seeking — vainly looking for a deliverer in the Roman judgment, not individual salvation."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the vain groans of the reprobate, like Esau — they 'seek' without really seeking; receive Christ while present."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott/Robertson: a general truth (cf. 8:21; 13:33) of his return to the Father and unapproachable presence, not the fall of Jerusalem."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What is the fruitless 'seeking' of Christ?",
-    "sides": [
-     {
-      "position": "a national seeking of a deliverer in coming judgment",
-      "holders": [
-       "Clarke",
-       "Barnes"
-      ]
-     },
-     {
-      "position": "the reprobate's vain, impenitent groans",
-      "holders": [
-       "Calvin"
-      ]
-     },
-     {
-      "position": "a general truth of his unapproachable ascended presence",
-      "holders": [
-       "Ellicott",
-       "Robertson"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "seeking and not finding",
-   "where I am ye cannot come",
-   "reprobation",
-   "ascended presence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The scornful guess about the diaspora is an unconscious prophecy of the Gentile mission, which grew out of the synagogues (Acts 15:21)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: proof of their earth-bound stupidity — they hear 'the Father' and think only of distant lands; the threatening did not affect them."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley leaves open both 'Jews scattered in Greece' and 'teach the heathen themselves.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "dispersion among the Greeks",
-   "unconscious prophecy",
-   "Gentile mission",
-   "spiritual deafness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Their scorn gives place to genuine wonder; the unintelligible saying baffles even the rulers (and later Peter, 13:37)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB note merged here concerns another scene and does not bear on v.36."
-   }
-  ],
-  "themes": [
-   "bafflement",
-   "repetition of the saying",
-   "incomprehension",
-   "unanswered question"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "37": {
   "voices": [
    "Chrysostom",
-   "John Chrysostom",
-   "Augustine of Hippo",
-   "Origen",
-   "John Gill",
+   "Augustine",
+   "Jerome",
+   "Alcuin",
+   "Theophylact",
    "John Lightfoot",
-   "Matthew Henry",
    "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Calvin"
   ],
+  "range": "37-39",
+  "pericope_label": "If any man thirst, let him come unto me, and drink: out of his belly shall flow rivers of living water",
   "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: on the last/great day, when all were gathered, Christ cries the free invitation — no compulsion, but for those whose desire is strong."
-   },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Augustine: an inner thirst of the inner man — come not by feet but by affection and love; grounded in Matthew 5:6."
+    "summary": "Augustine turns the thirst inward, since the inner man loves more than the outer, so we go to this water not on our feet but on our affections; he makes the belly the conscience of the inner man and the river the love of a neighbour, so that a man who thinks the water given to satisfy himself alone has none flowing from him, while the man who does good to others drinks the whole fountain and becomes it. On the Spirit he grants that the Spirit was with God already and not given to believers until the rising, then faces his own objection, that the Baptist, Zacharias, Mary, Simeon and Anna were filled before: what was new after the exaltation, he answers, was men speaking tongues they had never learned; and asked why nobody speaks all tongues now, he answers that the Church herself speaks the tongues of all nations, so a man outside her does not receive the Spirit while one who loves unity owns whatever anyone in her has. Jerome supplies from the Proverbs the testimony about fountains dispersed abroad which Chrysostom could not find. Alcuin sets the promise before the Ascension and the fiery tongues after."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom has the feast over and the people about to go home, so that the cry is provision for the road, and explains the choice of day, since an offer made earlier would have slipped from minds full of the festival; he stresses that no compulsion is used, only a condition of desire, finds no passage that says what the Scripture is said to say and would stop the sentence earlier, making the believing and not the flowing what Scripture prescribed, notes the plural rivers and the word living, meaning always in motion, pointing to the wisdom of Stephen, the tongue of Peter and the strength of Paul, and distinguishes the earlier gift, since the apostles cast out devils by a power given them and not by the Spirit given. Theophylact explains the crying as meant to be heard, giving others confidence."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Cried' marks intensity; the eighth 'great day' of Tabernacles is the setting; the imagery draws on John 4:14 and Isaiah 55:1."
+    "summary": "Lightfoot questions the greatness of the day, since the bullocks diminish through the week until one is left, so that by the count of sacrifices it was the least of them, and supplies the Jewish opinion that the Spirit had departed with Zechariah and Malachi, which is why men at Ephesus could say they had not heard whether there were a Holy Spirit. Barnes gives five reasons for the title, among them the solemn assembly, the finishing of the law and the drawing of water from Siloam, supposes Christ cried while that ceremony went forward to illustrate his doctrine and draw men off a rite never commanded, denies that any one passage of Scripture is meant and takes the substance of the prophets, pointing to the spring whose waters fail not, and makes diffusiveness the nature of piety, so that nobody can believe without desiring the same for others, quoting the Jewish figure of reins that are fountains. Ellicott weighs the seventh day against the eighth and takes the eighth, then turns Barnes’s point over, since on that day the water was not drawn at all and the very absence of the ceremony may be what prompted the declaration of the thing it had signified; he rejects both repunctuations as attempts which, in avoiding the difficulty, also miss the sense, and puts it that every man in living communion with Christ becomes himself a centre of spiritual influence. Robertson insists the words touch the dispensation and not the existence of the Spirit, and takes the clause for the Evangelist’s own comment, written late and pointing to Pentecost."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: 'if any thirst' excludes the self-satisfied; the invitation is free, yet only the thirsty come."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: a gospel invitation and promise, given on the last day to the gathered, departing crowd."
+    "prevalence": "single",
+    "summary": "Calvin takes the plural for the diversified graces of the Spirit and turns it into a rebuke, since graces that would flow like rivers come into us scarcely by drops, faith being too small to receive him."
    }
   ],
   "debates": [
    {
-    "question": "Where does the sentence break — does 'as the Scripture said' attach to believing or to the rivers?",
-    "sides": [
+    "question": "Was the water-drawing ceremony in progress when Jesus cried?",
+    "positions": [
      {
-      "position": "stop after 'as the Scripture said'; 'rivers...' is Christ's own assertion",
-      "holders": [
-       "Chrysostom",
-       "Augustine",
-       "most moderns"
+      "view": "Yes — he cried while it went forward, to illustrate his doctrine and draw men off a rite never commanded",
+      "held_by": [
+       "Albert Barnes"
       ]
      },
      {
-      "position": "the Scripture is the source of the 'rivers' image (Prov 5:16 / prophets)",
-      "holders": [
-       "Jerome",
-       "some"
+      "view": "No — on the eighth day the water was not drawn at all, and the very absence of the ceremony may be what prompted the declaration",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "The day’s greatness is itself doubtful, since the sacrifices diminish through the week",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What Scripture is quoted in “as the scripture hath said”?",
+    "positions": [
+     {
+      "view": "None that says it — stop the sentence earlier, so that the believing and not the flowing is what Scripture prescribed",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "view": "The Proverbs on fountains dispersed abroad",
+      "held_by": [
+       "Jerome"
+      ]
+     },
+     {
+      "view": "No single place, but the substance of the prophets",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Neither repunctuation will do; they avoid the difficulty and miss the sense",
+      "held_by": [
+       "Charles Ellicott"
       ]
      }
     ]
@@ -1915,859 +651,291 @@
   ],
   "outliers": [
    {
-    "voice": "Origen",
-    "note": "Links the cry to the Word who 'stands among you' as the sovereign principle permeating all creation."
+    "voice": "Augustine",
+    "claim": "Answers why nobody now speaks all tongues by making the Church herself the speaker of every nation’s tongue, so that a man outside her unity receives no Spirit while one who loves unity owns whatever anyone in her has."
    }
   ],
   "themes": [
-   "if any thirst",
-   "living water",
-   "Feast of Tabernacles",
-   "free invitation",
-   "the Spirit"
+   "In the last day, that great day of the feast, Jesus stood and cried, saying, If any man thirst, let him come unto me, and drink.",
+   "He that believeth on me, as the scripture hath said, out of his belly shall flow rivers of living water.",
+   "(But this spake he of the Spirit, which they that believe on him should receive: for the Holy Ghost was not yet given; because that Jesus was not yet glorified.)"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-01",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom/Cyril: 'belly' = the heart; 'rivers' (plural) = the overflowing, ever-working grace of the Spirit, seen in Stephen, Peter, Paul."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: the drinker becomes a fountain; the river flowing out is love of neighbour, which keeps the stream from drying up."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A free citation paralleling the 'well springing up' of John 4:14; the believer is filled so as to overflow to others."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: believers are not barren soil but water their neighbours from the abundance received."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "rivers of living water",
-   "the heart/belly",
-   "overflow to neighbour",
-   "the Spirit's abundance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: the Spirit existed and worked before, but the full giving waited on Christ's exaltation; Chrysostom: gifts wait on the cross, for friends not enemies."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Not yet given' = not the absolute absence of the Spirit but the not-yet of the full Pentecostal outpouring."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the Spirit was always in the Church, but the abundant manifest gift waited on Christ's glorification to apply the finished redemption."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Spirit not yet given",
-   "Jesus glorified",
-   "Pentecost",
-   "the Spirit applies redemption"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "40": {
   "voices": [
-   "Augustine",
-   "Augustine of Hippo",
-   "John Gill",
-   "Albert Barnes",
+   "Chrysostom",
+   "Alcuin",
+   "Theophylact",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Matthew Henry"
+   "John Calvin"
   ],
+  "range": "40-44",
+  "pericope_label": "Of a truth this is the Prophet: shall Christ come out of Galilee? there was a division among the people",
   "schools": [
    {
     "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: the word sifts the crowd — some speak after the manner of the multitude, others rightly own him; 'the Prophet' distinguished from 'the Christ.'"
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'The Prophet' (Deut 18:15) is a distinct expected figure; some now dare to confess Jesus as Messiah outright."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the gospel occasions schism but is not its cause — the seed of division lay hidden in men and is only awakened by the word."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Prophet vs the Christ",
-   "division",
-   "schism",
-   "the word sifts"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A bolder party openly confesses him Messiah; others object from his supposed Galilean origin (expecting 'No')."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the gospel occasions schism but is no reproach; their one error is making Christ a Galilean, which a little inquiry would have corrected."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: a little examination would have shown his birth fulfilled prophecy; men still perish by trusting 'common report.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "This is the Christ",
-   "Galilee objection",
-   "schism",
-   "failure to inquire"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A true premise (Davidic seed, Bethlehem — Micah 5:2) wrongly applied in ignorance of the actual birth; John faithfully records the crowd's error."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: they could not have forgotten Bethlehem — Herod's slaughter gave terrible reason to remember it."
+    "prevalence": "single",
+    "summary": "Alcuin reads the first two groups as men who had begun to drink the spiritual thirst and laid the unbelieving thirst aside, while the third remained dried up in unbelief; on the failed arrest he gives the reason plainly, that the one who held power over their designs did not permit it."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Cyril: God's oath to David (Ps 132:11) of an enduring throne is fulfilled in Christ's kingdom, not Solomon's."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB note merged here concerns the widow's mite and does not bear on v.42."
-   }
-  ],
-  "themes": [
-   "seed of David",
-   "Bethlehem",
-   "Micah 5:2",
-   "right text wrongly applied"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Chrysostom asks why they argue about the birthplace when the descent was the real question, since they knew he was of the house of David and suppressed his extraction in order to put forward where he had been brought up; had they wanted the truth, he says, they would have gone and asked how the prophets can say Bethlehem while he comes from Galilee, and because they were careless of knowing it he gave them no answer, though he had praised Nathanael for a question of the same shape. He reads the attempted arrest as proof that they had no anxiety to learn anything, and finds the failure of it enough to have raised compunction in any other men, since malignity believes nothing and looks only to blood. Theophylact observes that the division was not among the rulers, who were settled one way, the moderate among them using malicious words to block his path to glory while the more malignant wanted hands laid on him."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The word is 'schisma,' a clear rent; John uses it of the crowd's split (9:16; 10:19), a term that later entered the Church's history."
+    "summary": "Robertson notes that those who named him the Christ went further than those who named him the Prophet, and said it openly. Ellicott raises the question the passage has always provoked, how the Apostle could record such objections without correcting them, and answers that he is giving the feelings and words of the multitude as they really occurred, so that the absence of correction is itself a mark of truthful narrative; he adds that a writer of the second century, with the earlier Gospels before him, could not have made so great a mistake unintentionally nor have thrown himself into the spirit of a Jewish crowd so completely as to invent the question, and separates the Prophet from the Christ in the crowd’s words, as the legates of the Sanhedrin had separated them earlier."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the threefold division fulfils Christ's own prediction; the schism witnesses to his word."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "division/schism",
-   "fulfilment of prophecy",
-   "the word exposes the heart"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "44": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The imperfect 'were wishing to seize him' echoes v.30; restraint came from the sympathetic section and the power of his presence (18:6)."
+    "prevalence": "single",
+    "summary": "Calvin ranks the three groups in the same order as Alcuin, allowing the second a more correct opinion than the first, and draws the lesson from the quarrel: the schism arose not among Gentiles who were strangers to faith but in the chief seat of the Church, and a man ought not to be distressed at seeing those who wish to be counted God’s people fighting over contrary opinions. The divisions do not come out of the gospel, their seed lying concealed in men beforehand, as vapours are raised by something other than the sun yet appear only when the sun is up; and the peace of men who do not know God arises more from stupidity than from agreement. On the objection he finds the same contempt under the ignorance, since men who had taken the trouble to inquire would have found both titles belonged to him, and remarks how diligent men are in seeking an excuse to turn from Christ and how dull in receiving sound doctrine, so that the Scriptures which lead us to Christ by the hand are made into obstacles."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke: their disunity (v.43) was, under God, why his life was preserved — 'the remainder of wrath thou wilt restrain' (Ps 76:10)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: their cruel eagerness failed by God's providence, his hour not yet come."
+    "summary": "Clarke turns the objection on the reader: had they examined a little further they would have found the birth exactly as foretold, and many still lose their souls in the same way, led away by common report and refusing a fair hearing, which is the ground on which unbelief has established itself."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why did John record the crowd’s mistake about Galilee without correcting it?",
+    "positions": [
+     {
+      "view": "Because he gives their words as they really occurred; the absence of correction is itself a mark of truthful narrative, and no second-century writer could have invented it",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Because the objectors were careless of knowing, and Christ himself gave them no answer",
+      "held_by": [
+       "Chrysostom"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How do the three groups in the crowd rank?",
+    "positions": [
+     {
+      "view": "The first two had begun to drink and laid unbelief aside; the third remained dried up",
+      "held_by": [
+       "Alcuin"
+      ]
+     },
+     {
+      "view": "Same order, with the second holding a more correct opinion than the first",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "Those who said “the Christ” went further than those who said “the Prophet”, and said it openly",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Makes the schism a comfort rather than a scandal, since it arose in the chief seat of the Church and its seed lay concealed in men beforehand, as vapours are raised by something other than the sun yet appear only when the sun is up."
+   }
+  ],
   "themes": [
-   "restrained arrest",
-   "providence",
-   "wrath of man restrained",
-   "his hour"
+   "Many of the people therefore, when they heard this saying, said, Of a truth this is the Prophet.",
+   "Others said, This is the Christ. But some said, Shall Christ come out of Galilee?",
+   "Hath not the scripture said, That Christ cometh of the seed of David, and out of the town of Bethlehem, where David was?",
+   "So there was a division among the people because of him.",
+   "And some of them would have taken him; but no man laid hands on him."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-01",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "45": {
   "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Matthew Henry",
+   "Chrysostom",
+   "Augustine",
+   "Alcuin",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: the plotting Pharisees were harmed while the officers, subdued by one sermon, became bold heralds of Christ's wisdom."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the rulers, skipping worship to scheme, fret at their own officers' failure (Ps 112:10)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The temple police of v.32 return to the Sanhedrin empty-handed, themselves half-won to Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "officers return empty",
-   "word over schemes",
-   "the rulers' frustration"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "46": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: a great truth — none spoke like Christ; the arresters were 'taken with him,' preserved by God's power over the conscience of bad men."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: they were won by the teaching alone, not signs — 'Never man spake thus'; impartial minds need no long arguments."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A candid confession from men sent to arrest him; the word's self-authenticating force disarmed them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Never man spake like this",
-   "power of the word",
-   "conscience of enemies",
-   "involuntary testimony"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "47": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the Pharisees flatter the officers' vanity and brand the gospel a 'cheat' — the real deceived being those who looked for worldly dominion."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: priestly pride and self-love breed tyranny and contempt of others."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A rhetorical sneer expecting denial — assuming no one of sense could follow the Galilean."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Are ye also deceived",
-   "ridicule for argument",
-   "appeal to vanity",
-   "priestly pride"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "48": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "45-53",
+  "pericope_label": "Never man spake like this man: doth our law judge any man, before it hear him?",
   "schools": [
    {
-    "school": "puritan-evangelical",
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Henry: the appeal to the example of the great — yet some rulers did believe (Nicodemus next), and men are swayed by rank in religion."
+    "summary": "Augustine answers the officers’ saying plainly, that he spoke so because he was both God and man, and hears in the Pharisees’ retort an admission that they were charmed; on the curse he sets the halves against each other, since those ignorant of the law believed on him who gave it while its teachers condemned him. Alcuin agrees the officers were led away, and laudably, having left unbelief for faith."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom builds the paragraph on a contrast: the scribes, always near Christ and reading the Scriptures, were not profited but harmed, while the officers, who had none of these advantages, were subdued by a single sermon. He bids us admire their judgment, which asked no signs, since they said never man spoke thus and not never man wrought such miracles, and their boldness before the men who sent them; and he calls the appeal to rank the most foolish thing the Pharisees could have said, the ground of accusation being that the people believed and the rulers did not, so that he asks how men convinced by the law can be the cursed ones."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The boast was even then untrue; God chose the weak (1 Cor 1:26-27), and the despised crowd's faith would outlast the rulers' unbelief."
+    "summary": "Robertson quotes the rabbinic maxim that no brutish man is sin-fearing nor any of the people of the earth pious, and on the closing verse is blunter than the rest: the oldest copies omit what follows, it appears first in Codex Bezae, and it is probably a true story because it is like Jesus, but no part of this Gospel. Ellicott sets the people of the earth against the holy people and refuses the reading that makes the curse an excommunication; he catches with Clarke the historical error about Galilee, holds that adverse criticism would charge the mistake to the Evangelist, and calls the following passage one of the most striking instances of an undoubted addition, apostolic in age but not from the pen of John, so that this verse joins the insertion to something we cannot identify. Barnes adds that if the people were ignorant the fault lay with the rulers, whose business was to teach them, marks “art thou also of Galilee” as reproach of the highest kind, and reads the breaking up as disorder, a melancholy exhibition of pride and anger brought to an inquiry, seeing God let their passions dissolve the assembly so that Jesus was safe."
    },
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin divides the Pharisees’ pride in two, a tyranny claimed on the title of priests and a contempt of everyone else, which he finds again in priests of his own day who allow none but themselves the name of the Church. On Nicodemus he returns a double verdict: a neutral man who dares not undertake the defence of sound doctrine yet cannot bear to see truth oppressed, so that the mention is partly to his praise and partly to his shame, a spark of godliness shining in his venturing one word while he still hankers after the concealment of night; against those who plead his example he presses that what he says might be said for a robber, and that in saving the person he abandons the doctrine, the better use of the case being that God lets a doctrine take root in secret and bud long after, as this man’s faith gathered vigour from the death of Christ. Of the chapter’s end he says only that the close is astonishing."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Calvin: the rulers measure truth by their own rank — pride that abuses others and blinds itself."
+    "summary": "Clarke supplies the rabbinic contempt, the people of the earth not thought worthy of a resurrection, and notes that when they paid well they purchased their masters’ good opinion; he catches the historical error about Galilee, Jonah having come from Gath-hepher in Zebulun, and adds that no prophet having arisen from a place is no proof that none could; on the text he reports the next verse and the eleven following wanting in several manuscripts, obelised in others, and carrying a variety of reading found nowhere else in the sacred writings. Wesley puts Nicodemus’s question more kindly, as asking whether the council did not themselves act like men ignorant of the law in sentencing before hearing."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "How should Nicodemus’s intervention be judged?",
+    "positions": [
+     {
+      "view": "A double verdict — partly praise, partly shame; his plea might be made for a robber, and in saving the person he abandons the doctrine",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "More kindly: he asks whether the council were not themselves acting like men ignorant of the law",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does John 7:53 belong to this Gospel?",
+    "positions": [
+     {
+      "view": "Doubtful — wanting in several manuscripts, obelised in others, with a variety of reading found nowhere else in the sacred writings",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "An undoubted addition, apostolic in age and a real incident, but not from the pen of John",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Certainly no part of John: the oldest copies omit it and it appears first in Codex Bezae, though it is probably a true story because it is like Jesus",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB note merged here concerns another scene and does not bear on v.48."
+    "voice": "Alcuin",
+    "claim": "Grants the Pharisees’ charge and turns it, saying the officers were indeed led away, and laudably, having left unbelief for faith."
    }
   ],
   "themes": [
-   "argument from authority",
-   "none of the rulers",
-   "Nicodemus the exception",
-   "pride"
+   "Then came the officers to the chief priests and Pharisees; and they said unto them, Why have ye not brought him?",
+   "The officers answered, Never man spake like this man.",
+   "Then answered them the Pharisees, Are ye also deceived?",
+   "Have any of the rulers or of the Pharisees believed on him?",
+   "But this people who knoweth not the law are cursed.",
+   "Nicodemus saith unto them, (he that came to Jesus by night, being one of them,)",
+   "Doth our law judge any man, before it hear him, and know what he doeth?",
+   "They answered and said unto him, Art thou also of Galilee? Search, and look: for out of Galilee ariseth no prophet.",
+   "And every man went unto his own house."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-01",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "49": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The rabbinic scorn of the 'am hâ-âretz' ('people of the earth') against the law-instructed; yet the common people heard Jesus gladly (Mk 12:37)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: an unjust reproach — unlearned disciples may know God's word better (Ps 119:99); to curse them usurps God's prerogative (Prov 26:2)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the concealed motive was that they thought holiness lay only in their own rank — like the Popish claim to be the only Church."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "people of the earth",
-   "contempt for the crowd",
-   "cursing usurps God",
-   "key of knowledge withheld"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "50": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A courageous protest from within the Sanhedrin; Nicodemus, the night visitor (3:2), answers their own 'have any rulers believed?'"
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: he kept his seat not from cowardice but to serve Christ within, like Hushai or Daniel; later openly bold (19:39)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a 'neutral man' with a spark of godliness yet excessive timidity, who cannot bear the truth oppressed."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Was Nicodemus's keeping his council seat cowardice or strategy?",
-    "sides": [
-     {
-      "position": "a strategic position to serve Christ within",
-      "holders": [
-       "Henry",
-       "Barnes"
-      ]
-     },
-     {
-      "position": "excessive timidity, only a spark of courage",
-      "holders": [
-       "Calvin"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Nicodemus",
-   "secret disciple",
-   "courage and timidity",
-   "a witness within the council"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "51": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Nicodemus appeals to the law's rule against condemning the unheard (Ex 23:1; Deut 1:16); the law's expounders were its breakers."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: he prudently argues from their own law, waiving Christ's doctrine and miracles, and retorts their charge of legal ignorance."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fair trial",
-   "no condemnation unheard",
-   "the law-keepers as law-breakers",
-   "prudent defence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "52": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Factually false — Jonah, Nahum, Hosea (and others) were Galilean; ridicule, not argument, and they cut off reply (2 Kings 14:25)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: they knew the contrary and that Jesus was born in Bethlehem; a poor answer that would not bear examination."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: their fury at the mild Nicodemus betrays their hatred of Christ — like enemies who brand any candour heresy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Art thou also of Galilee",
-   "scorn not argument",
-   "factual falsehood",
-   "fury at candour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "53": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson/Ellicott: this verse begins the pericope adulterae (7:53–8:11), absent from the best MSS — a genuine-sounding story but not original to John."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the self-dissolving of so formidable a conspiracy shows it was scattered by the hand of God; Barnes sees pride and anger in disorder."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: one plain question of Nicodemus broke up the council — a word spoken in season (Prov 15:23)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is 7:53 (opening the pericope adulterae) original to John's Gospel?",
-    "sides": [
-     {
-      "position": "not genuine to John, though likely a true story",
-      "holders": [
-       "Robertson",
-       "Ellicott",
-       "Clarke"
-      ]
-     },
-     {
-      "position": "treated as the historical close of the council",
-      "holders": [
-       "Calvin",
-       "Gill",
-       "Barnes",
-       "Wesley"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "council dissolved",
-   "providence scatters the plot",
-   "pericope adulterae",
-   "textual addition"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

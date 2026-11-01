@@ -102902,6 +102902,111 @@
         "1"
       ],
       "note": "The spread no longer prevents collisions, and a whole batch was lost to that. synthesis-frontier.choose picks uniformly from items[:min(spread, len(items))], so --spread 40 is only as wide as the queue. When I drew, the polish queue held three chapters (luke 2, john 7, john 13); two workers drawing from three entries collide about a third of the time, and we did. I wrote all eight pericope tiles for john 13, 5,187 words of prose over 75,143 source words, passed validator, lint, fidelity, chapter gate and corpus gate, and the push was correctly dropped because 0fbb1514 had landed the chapter as a 38-verse per-verse rewrite first. The notes survived in 391d06fc, the prose did not. This is pure waste the picker could prevent and the per-chapter budget rule cannot: the rule stops a worker ABANDONING a pick, not two workers finishing the same one. Cheapest fixes, in order of effort: have finish write a claim file under docs/agents/ when a chapter is picked and have next skip claimed chapters older than some timeout; or seed choose's randrange from a worker identity so two workers partition the same short queue instead of sampling it; or simply have next refuse to serve a queue shorter than the number of live workers. Until one exists, a worker drawing from a two or three chapter queue should expect to lose the batch and may be better off taking the rewrite queue, which holds 130 chapters."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "14",
+        "25",
+        "31",
+        "37",
+        "40",
+        "45"
+      ],
+      "note": "Tiled john 7 in SEVEN pericopes on the chapter's own divisions, which are also Matthew Henry's four section heads (keys 1, 14, 37, 45) plus his short notes: 1-13, 14-24, 25-30, 31-36, 37-39, 40-44, 45-53. A prior survey note estimated 13 to 15 tiles and declined the chapter for capacity. Seven is defensible because the validator imposes no expansion FLOOR, only the 350-650 word window, and john 13's 1-5 tile had already passed at expansion 0.037. Realised expansions here run 0.029 to 0.150. Henry's heads giving the tiling is now confirmed a fifth time."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "7",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24",
+        "36",
+        "42",
+        "48"
+      ],
+      "note": "THE JAMIESON STRIDE in john 7 is stride 6, offset 6: keys 6, 12, 18, 24, 36, 42, 48 all carry Jamieson, Fausset and Brown on MARK 12, not John 7. Key 30 is empty and keys 12/18 are byte-identical (md5 601a0361a31d, per an earlier worker's note). 'Jamieson, Fausset and Brown' IS in VOICE_LABELS, so unlike the Cyril residue it can be disowned: declared excluded_voices on the five tiles whose ranges cover a stride key (1-13, 14-24, 31-36, 40-44, 45-53), which the validator accepted. 900 words of residue removed from the usable-source count. Three books now show the pattern with a book-specific offset (1kings offset 2, john 13 offset 4, john 7 offset 6), so the sweep should solve for stride and offset per book rather than assume one."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "7",
+      "verses": [
+        "37"
+      ],
+      "note": "Gregory's reading of 'out of his belly shall flow rivers of living water' (sacred preaching running down from the bellies of believers; the entrails as right intention, humility toward God, mercy toward man) sits inside the Catena block at key 37 as the abbreviation 'GREG.', immediately after an Augustine segment. ungrounded_voices searches the lowered chapter pool for 'gregory' and fails, so declaring the voice would fire UNSOURCED, and attributing it to the host block would misattribute it. Dropped the claim and put Calvin's 'graces that would flow like rivers come into us scarcely by drops' in its place. Identical to the GREG.-inside-Bede case at john 13:21 — the interior-abbreviation defect has now cost two chapters a genuine contribution."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "7",
+      "verses": [
+        "37"
+      ],
+      "note": "Three-way dispute over whether the water-drawing ceremony was in progress when Jesus cried. Barnes gives five reasons for 'that great day' and supposes Christ cried WHILE the drawing went forward, to illustrate his doctrine and draw men off a rite never commanded. Ellicott takes the eighth day instead and INVERTS Barnes: on the eighth the water was not drawn at all, and 'the very absence of the ceremony may have suggested' the declaration of the thing it had signified. Lightfoot undercuts both by questioning the day's greatness, since the bullocks diminish through the week until one is left, so by the count of sacrifices it was the least. Recorded as a debate on the 37-39 tile."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "7",
+      "verses": [
+        "8"
+      ],
+      "note": "Porphyry's charge that Christ lied in saying 'I go not up yet unto this feast' and then going is handled five ways in one chapter: Clarke raises the charge and answers that he said only NOT YET; Lightfoot agrees he denies the time, not the going; Ellicott calls the 'yet' a doubtful and needless reading and holds that on the better text he never says he will go to the feast at all, only that he refuses to go as the brethren meant it, openly with the caravan; Robertson keeps the plain negative and finds verse 10's manner exactly opposite to their advice; Augustine sidesteps the whole textual question by reading 'my time' of the time of glory. Three of the five answers are mutually exclusive on the text itself."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "7",
+      "verses": [
+        "53"
+      ],
+      "note": "john 7 carries THREE independent textual notes on 7:53-8:11, with three different verdicts: Clarke (wanting in several manuscripts, obelised in others, 'a variety of reading as is no where else found in the sacred writings', Griesbach leaving it under notes of doubtfulness); Ellicott ('one of the most striking instances of an undoubted addition', apostolic in age and a real incident but not from John's pen, so that 7:53 joins the insertion to something now unidentifiable); Robertson (oldest manuscripts omit it, first appears in Codex Bezae, copies place it at the end of the Gospel or in Luke, 'probably a true story for it is like Jesus' but no part of John). Carried as a debate rather than resolved, since the last tile's final verse IS the disputed one."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "7",
+      "verses": [
+        "1"
+      ],
+      "note": "THE pericope_label CONVENTION IS SPLIT, and the split is not by book. john 9 and john 11 use a SHORT condensation of two KJV phrases joined by a colon (10-20 words); john 6 uses the FULL KJV text of the range (99-315 words). Followed the john 9/11 short form here. Separately confirmed in john 6, 9 and 11 that 'themes' holds ONE KJV VERSE TEXT PER VERSE in the range, not thematic phrases — so themes and pericope_label are generated from different things. The loop doc should settle the label form before another John chapter is tiled; a prior plan for this chapter assumed the full-text form and would have produced 76-126 word labels."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "7",
+      "verses": [
+        "16"
+      ],
+      "note": "The entity check flagged 'Sabellians'. The source (Augustine, key 16) says 'it refuses the Sabellian heresy, which dares to assert that the Son is the same as the Father, there being only two names for one thing' — the adjective, never the plural noun. Rewritten to 'against the Sabellian heresy which makes Father and Son two names for one thing'. Second chapter running in which the only entity signal was a plural GROUP noun coined off a source adjective or phrase; the first was 'Latins' at matthew 19. Worth a rule in the loop doc: never name a party, school or nation in a form the source does not itself use."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "7",
+      "verses": [
+        "14",
+        "25",
+        "37",
+        "40"
+      ],
+      "note": "Cyril of Jerusalem residue is present in john 7 at keys in all four of the 14-24, 25-30, 37-39 and 40-44 ranges, and is STILL undeclarable because of the _LABEL_RE gap: VOICE_LABELS contains 'Cyril' but the regex requires a colon immediately after, so the source label 'Cyril of Jerusalem:' never matches and undeclarable_voices rejects the exclusion. Its words are therefore still counted as usable source here (the 86,660-word figure for this chapter includes them), which inflates every expansion ratio in the chapter. The one-line fix remains: add 'Cyril of Jerusalem' to VOICE_LABELS AHEAD of 'Cyril', since the alternation is first-match, or let the pattern take an optional ' of <Place>'. Unchanged from the matthew 19 note; not fixed here because the operator prompt reserves source and tooling changes."
     }
   ]
 }
