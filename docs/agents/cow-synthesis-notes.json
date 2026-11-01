@@ -102469,6 +102469,136 @@
         "12"
       ],
       "note": "THE ENTITY CHECK FIRED TWICE ON LEGITIMATE EXPANSIONS, which is the derivational-stemming gap already on the open list, now with two clean examples in one chapter. (1) Clarke's block at key 2 answers the way of all the earth with three quotations attributed in the source as 'Hor. Odar. lib. i., od. iv.', 'Ib. od. xxviii.' and 'Hor. Sat. l. ii.' I wrote Horace, which is unambiguously what Hor. means and whose Odes those lines are, and the checker flagged ENTITIES: Horace because the spelled-out name occurs nowhere in the source. (2) Clarke's block at key 25 says 'is this indeed the way that French kings ruled' and 'a revolution in that state'. I wrote 'in France', and the checker flagged ENTITIES: France against a source that has French but not France. BOTH SIGNALS WERE CORRECT AS IMPLEMENTED AND WRONG AS CRITICISM. I resolved them by writing to the source's own forms, 'quoting one of them three times' and 'if that is how French kings ruled', which cost nothing here but would cost real precision in a chapter where an abbreviated authority needs naming. WHY THIS MATTERS MORE THAN IT LOOKS: the check is a genuinely valuable one, since it is the only automatic guard against invented proper nouns, which is the matthew 22 invented-flourish class in its most dangerous form. Weakening it would be wrong. But as it stands it taxes faithful expansion of abbreviations and ordinary derivation of adjectives, and the tax falls hardest on Clarke, who abbreviates his classical authorities by habit. TWO CHEAP IMPROVEMENTS, in order of value: first, treat a source token as matching a prose token when the source token is a prefix of the prose token followed by a period in the source, which covers Hor. to Horace, Rom. to Romans and the whole abbreviation family at a stroke; second, add a small table of nation adjective pairs, French and France, Greek and Greece, Hebrew and Israel, since those recur constantly in these commentators. Neither requires stemming in general, which is the version of this item I had previously filed and which is harder than it needs to be."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "26",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "26",
+        "64"
+      ],
+      "note": "A sixth legacy shape, the reference-header opener. All 75 entries began 'On <ref>Matthew 26:1</ref>-<ref>2</ref> - \"quoted verse text\" - the witnesses mark...', packing a ref header, the quoted verse and a roadmap clause into one sentence. Alongside it, 139 <strong> school labels across the chapter, and a sub-defect not seen before: the school inlined as an adjective on the voice name - 'The Reformed Calvin', 'The Puritan Henry', 'The Wesleyan-Arminian Wesley', 'The Eastern Cyril of Jerusalem'. That is a third distinct form of the school-label defect, separate from the <strong> tag and from the school-as-paragraph-subject, and no lint catches it."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "26",
+      "verses": [
+        "5",
+        "7",
+        "8",
+        "9",
+        "10",
+        "15",
+        "29",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "46"
+      ],
+      "note": "Appended duplicate paragraphs, the chapter's most widespread defect after the opener. At least a dozen entries (5, 7, 8, 9, 10, 15, 29, 31, 32, 33, 34, 35, 46) carried a trailing paragraph restating material already given earlier in the SAME entry, almost certainly padding to clear the 350-word floor: key 9 gave Barnes's 'it was the property of Mary' twice, key 15 gave Lightfoot's Maimonides slave-price twice. The repo audit scores dupfrac 0.000 for these because it measures CROSS-verse duplication; this is intra-entry. An intra-entry duplicate-paragraph check would have flagged the whole set cheaply."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "26",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "14",
+        "15"
+      ],
+      "note": "Overlapping key coverage, a structural defect rather than a prose one. Keys 1 and 2 both expound v.2; keys 3, 4 and 5 all cover the plot of vv.3-5; keys 14 and 15 both cover v.15. The legacy entries carried ref-headers declaring multi-verse ranges while per-verse keys existed for the same verses, so the same material was written twice under different keys with different wording. I split each overlap by topic (key 1 the close of the discourses and the Passover etymology, key 2 the chronology and the paschal ritual, and so on). Because the duplication is paraphrased rather than verbatim, cross-verse dupfrac does not see it either."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "26",
+      "verses": [
+        "40",
+        "44",
+        "45",
+        "46",
+        "64"
+      ],
+      "note": "Apparatus commentary written into the prose. Keys 40, 46 and 64 each carried an inline parenthetical note about a source misfile - 'The Jamieson-Fausset-Brown fragment attached here belongs to the woes of chapter 23, not this verse' - and keys 44 and 46 narrated their own source thinness ('The thin comment matches the brief verse'), while key 45 editorialised that a source was 'here on-topic'. These are rule-2 violations: the entry discusses its sources' defects instead of expounding the verse. All removed. Worth noting that the gate scored META 0 on every one of them, because the META lint matches phrases ABOUT thin commentary but not parenthetical apparatus notes. The underlying JFB misfile is real and should be recorded separately from the prose that mentioned it."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "26",
+      "verses": [
+        "44",
+        "46",
+        "49",
+        "53",
+        "56",
+        "61",
+        "65",
+        "67",
+        "68",
+        "71",
+        "75"
+      ],
+      "note": "Cross-key attribution in the legacy prose. Several entries cited a voice 'under v.59' or '(under v.67)' or '(under v.43)', importing a neighbour key's material and labelling the import. Keys 44, 46, 49, 53, 56, 61, 65, 67, 68, 71 and 75 all did this. It makes an entry's attributions unverifiable against its own source block and defeats any per-key grounding check. Each entry now stands on material from its own key, except where a voice genuinely comments across a span, in which case the claim is stated without the bracketed verse pointer."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "26",
+      "verses": [
+        "56"
+      ],
+      "note": "Harness bug found and fixed: my sweep's ROLLCALL-SHAPE detector counted semicolons in un-unescaped HTML entities. chk's visible() leaves &rsquo; intact, so every apostrophe contributes a ';' and any sentence with three or more voice names plus three or more apostrophes false-alarms. Found at key 56, where 'Gill, Barnes and Ellicott take the first clause as Christ&rsquo;s own words rather than the Evangelist&rsquo;s comment, following Mark&rsquo;s report' scored '3 names, 3 semis' with no semicolon in it. Patched to unescape before any punctuation-based test. This means some ROLLCALL-SHAPE hits I chased earlier in this chapter and in matthew 21 were phantoms, and the fixes for them were unnecessary though harmless."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "26",
+      "verses": [
+        "4",
+        "59",
+        "60",
+        "61",
+        "62"
+      ],
+      "note": "Carrier-lint vocabulary collision with the subject matter. This chapter is about a trial with actual false witnesses, so 'the witnesses did not agree' is Barnes's and Ellicott's literal description of the court, not a carrier phrase about commentators. The lint cannot tell the two apart, and at keys 60 and 61 I had to paraphrase legitimate source language ('the men produced differed', 'the testimony would not hold') purely to get past it. Key 4 still carries Clarke's 'the witnesses of the most essential act of redemption', also literal, which the gate correctly scores META 0. Recommend the carrier rule require the collective subject to govern a reporting verb about commentary, or that chapters whose subject is testimony be exempted - otherwise trial narratives will keep forcing writers away from their sources' own words."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "26",
+      "verses": [
+        "44"
+      ],
+      "note": "Thin flag: the opposite ruling from matthew 21 key 40, in the adjacent chapter. Key 44 here has 138 usable source words, under THIN_SOURCE_MAX of 200, and its section head sits at key 28 covering the Last Supper rather than the third Gethsemane prayer, so head material would not expound this verse. I took the thin exemption and wrote 216 words, and the validator confirms it is justified. In matthew 21 key 40 the own-source was 106 words but the head genuinely expounded the verse, so I wrote 356 from head material and declined the flag. The owner now has both rulings on the same question from adjacent chapters, with the deciding test in each case being whether the head material expounds THIS verse rather than merely sitting above it."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "26",
+      "verses": [
+        "61"
+      ],
+      "note": "Self-caught invented attribution, recorded because no automated check would have found it. Drafting key 61 I wrote that Robertson supplied the detail making the altered temple-saying legally useful to the prosecution, since a boast of pulling down the sanctuary could be presented as sedition where a prophecy of resurrection could not. Robertson says nothing of the kind; the reasoning was mine, attached to his name because it fitted the paragraph. Caught by re-reading the entry against the dig and replaced with what he actually says, that the charge was a pitiful perversion and that the two witnesses disagreed even in their misrepresentation. The grounding test could not have caught this: ungrounded_voices only verifies that a named voice appears somewhere in the chapter's sources, never that the claim attributed is that voice's own. That gap is the single largest unguarded fidelity risk in the loop."
     }
   ]
 }
