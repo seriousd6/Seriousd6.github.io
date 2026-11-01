@@ -102390,6 +102390,47 @@
         "46"
       ],
       "note": "FLOOR is measuring source budget, not writing quality. matthew 21 finishes 46/46 grade A, 0/46 on my stricter sweep, 0 violations at the gate with --enforce-all, 0.00% ungroundable fidelity and 0 chapters breaching quote-led, and still shows the advisory FLOOR mark on 12 of 46 verses (355-375 words). Those 12 are simply the verses whose own source is thinnest. Reporting FLOOR beside per-key expansion rather than beside the chapter total would make that legible instead of looking like a quarter of a clean chapter is underwritten."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "5",
+        "11",
+        "22",
+        "32",
+        "41"
+      ],
+      "note": "LEGACY REWRITE, 53 per-verse entries replaced by 6 pericope tiles. This chapter sat in the POLISH queue with 1 grade-B verse and 53 legacy-stamped entries, and I had twice declined it this session as unlandable before reading docs/agents/cow-synthesis-loop.md lines 57-63 and discovering that a polish chapter of that shape IS a rewrite, prioritised ahead of the legacy queue because its prose reads worst. See the correction note filed under docs 0. TILING FROM THE EXPOSITOR'S OWN OUTLINE, per the job 19 rule: Matthew Henry heads blocks at keys 1, 5, 11, 32 and 41 and nowhere else, which is his five-part division of the chapter, and I followed it, splitting only his long third section at the natural break between Bathsheba before David and Nathan before David. Final tiles 1-4, 5-10, 11-21, 22-31, 32-40, 41-53. RESULTS: 650/635/645/648/642/646 words, all in window; ttr 0.658, 0.640, 0.648, 0.633, 0.644, 0.671; compress 0.465, 0.460, 0.472, 0.455, 0.453, 0.463; all six grade A on both metrics with wide margins, which is the expected signature of fresh prose against repaired legacy prose. Chapter 6/6 A, validate-data and validate-synthesis clean, pericopes tile the chapter, lint gate 0 violations under --enforce-all, fidelity read-back 0 signals, every tile self-graded A. Compression 0.2x, 0.17x, 0.14x, 0.56x, 0.15x, 0.12x of 22,789 usable source words. HOUSE STYLE taken from the chapter's already-rewritten siblings rather than from the legacy entries I replaced: 1kings 3 and 2samuel 7 use plain prose with no strong tags on voice names, no scripture refs at all, ASCII apostrophes and no dashes, where the legacy 1kings 1 used 174 strong tags and 90 ref links. I followed the siblings. VOICES: Gill at all 53 keys, Keil and Delitzsch 25, Ellicott 28, Clarke 24, Henry 5, and Jamieson excluded as residue throughout. Each tile declares only voices it actually uses."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "20",
+        "26",
+        "44",
+        "53"
+      ],
+      "note": "FOUR DISTINCT SOURCE DEFECTS IN ONE CHAPTER, three of them chrome shapes and one a misfiling. (1) JAMIESON STRIDE-6 RESIDUE, offset 2, and a clean instance. Blocks at keys 2, 20, 26 and 44; every one of those is congruent to 2 modulo 6. The content is 1 SAMUEL throughout: key 2 is on the high priesthood passing from Eleazar to Ithamar and Eli's forfeit (1 Sam 2), keys 20 and 26 are on the boy Samuel's night call and Eli's submission (1 Sam 3), key 44 is on the ark carried into battle and the elders' failure to see the real cause (1 Sam 4). THE BACKWARD RULE HOLDS AGAIN, Kings being served from Samuel, earlier in the canon, and this is the first time I have seen the walk land on the IMMEDIATELY preceding book rather than several books back. KEYS 20 AND 26 CARRY BYTE-IDENTICAL TEXT, 223 words each on the same 1 Sam 3 passage, so the stride can emit the same residue twice within one chapter; worth adding to the detector, since a duplicate pair is cheaper to spot than a single stray. All four excluded via excluded_voices on the tiles that contain them. (2) WHOLE-BOOK FRONT MATTER AT KEY 1, in two sources at once. Clarke's key-1 block runs 1,309 words of which roughly 1,180 are front matter for the whole of 1 Kings, the Hebrew and Septuagint titles, the Vulgate and Syriac and Arabic headings, the authorship question with Ezra canvassed over five numbered arguments, and a contents summary of all twenty-two chapters; only the last 130 words or so are commentary on verse 1. Keil and Delitzsch's key-1 block is worse, being entirely the editorial introduction to the books of the Kings, their contents, character, origin and sources, with nothing on the verse at all. This is the documented Clarke chapter-argument shape escalated to a BOOK argument, and it is the first case I have recorded where two independent sources both deposit book front matter on the same key. (3) A CHAPTER APPENDIX AT THE LAST KEY. Clarke's key-53 block runs 719 words of which about 700 are a transcription of Friar Bacon's method of restoring the natural heat, an occult medical treatise he explicitly promised at verse 4 with the words an extract from Friar Bacon's Cure of Old Age may be found at the end of the chapter. So the appendix is filed as commentary on the chapter's closing verse. Only the opening sentence on go to thine house is usable. DETECTOR NOTE: this one is self-announcing, since the promise at the earlier verse names the appendix; a sweep could pair a forward reference of the form at the end of the chapter with an oversized final-key block in the same source. (4) A BLOCK FILED ONE VERSE EARLY. Keil and Delitzsch at key 4 quote verses 4 and 5 and then comment entirely on verse 5, Adonijah exalting himself; the same shape I recorded at jeremiah 10:7 two batches ago, where their block was filed at key 7 and expounded verse 10. Both times the block opens by quoting a RANGE and is filed under the first verse of it while the exposition addresses a later one. That is now twice in the same source and strengthens the proposed sweep: for every block whose opening quotation spans more than one verse, compare the filed key against the verse the exposition actually names."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "1",
+      "verses": [
+        "22"
+      ],
+      "note": "TWO CALIBRATION LESSONS FROM MY FIRST LEGACY REWRITE THIS ROTATION, both of which cost me effort I could have saved by looking at a sibling chapter first. (1) HOW MANY TILES. I estimated ten tiles for 53 verses from the narrative shape, which would have been about 6,500 words of fresh prose. The corpus convention is far coarser: the already-rewritten OT narrative chapters use THREE TO FIVE large tiles, 1kings 3 covering 28 source keys in 3 tiles of 648 words each (1-4, 5-15, 16-28) and 2samuel 7 covering 29 keys in 5 (1-3, 4-11, 12-17, 18-24, 25-29). Six tiles for 53 verses is in keeping; ten would have been out of character and twice the work. THE CHECK IS ONE COMMAND: read the ranges and entry count of a neighbouring chapter in the same book that already carries the current stamp, before planning any tiling. (2) THE CORPUS SUPPORTS TWO SHAPES AND BOTH PASS. matthew 21, landed by the other worker during this same session, is 46 entries for 46 verses with range absent entirely and no pericope_label, all grade A and current-standard; validate-synthesis.py scopes its pericope check to chapters that ACTUALLY declare a range (see the comment at line 116), so a per-verse rewrite is legal. The operator prompt says to regenerate a legacy pick AS PERICOPE TILES, which is what I did and what suits a narrative chapter whose catena is very uneven here, nine of the 53 keys carrying between 12 and 70 words. But a worker should know both shapes are permitted, because the difference in labour is roughly eightfold. A THIRD FINDING, AND IT IS ABOUT THE GATES RATHER THAN THE CHAPTER. My 22-31 tile declares Matthew Henry among its voices, and Henry heads NO block within keys 22 to 31; his exposition of those verses sits inside the block filed at key 11, which covers his whole third section through verse 31. The attribution is materially sound, since his text plainly expounds those verses, and I would make the same choice again. But NOTHING IN THE PIPELINE OBJECTED: validate-synthesis passed, the lint gate passed under --enforce-all with zero violations, and the fidelity read-back reported no signal. So voices-sourced is satisfied by chapter-wide groundability, not by presence at the entry's own keys. That is exactly the hole I described from the reader's side at isaiah 59, where Wesley was declared and groundable while one of his blocks went entirely unread; here I have confirmed it from the AUTHOR's side, by declaring a voice whose block lies outside the entry's range and watching every check pass. The per-entry coverage test I proposed would flag my own tile, correctly, as needing the reviewer to confirm that the out-of-range block really does expound the verses claimed. It should be built."
     }
   ]
 }
