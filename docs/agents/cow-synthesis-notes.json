@@ -102892,6 +102892,16 @@
         "1"
       ],
       "note": "The pericope_label split tracks TILING STYLE, not book. Inside John, the chapters rewritten as pericope tiles (6, 9, 11) all set pericope_label to the full KJV text of the range and write plain prose with no refs, no strong tags, ASCII apostrophes and no dashes; the chapters rewritten near per verse (1, 5, 14) use entity apostrophes, em dashes and strong tags. matthew 22, tiled with ranges, instead uses a short descriptive label. So there are two live label forms and the correlation is with how the chapter was tiled rather than with which book it is in. I followed the tiled John siblings here, full KJV text, 76 to 126 words a label. This is worth settling in the loop doc: the short form is what a renderer can put in a heading without truncation, while the full text duplicates the verse display beneath it."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "1"
+      ],
+      "note": "The spread no longer prevents collisions, and a whole batch was lost to that. synthesis-frontier.choose picks uniformly from items[:min(spread, len(items))], so --spread 40 is only as wide as the queue. When I drew, the polish queue held three chapters (luke 2, john 7, john 13); two workers drawing from three entries collide about a third of the time, and we did. I wrote all eight pericope tiles for john 13, 5,187 words of prose over 75,143 source words, passed validator, lint, fidelity, chapter gate and corpus gate, and the push was correctly dropped because 0fbb1514 had landed the chapter as a 38-verse per-verse rewrite first. The notes survived in 391d06fc, the prose did not. This is pure waste the picker could prevent and the per-chapter budget rule cannot: the rule stops a worker ABANDONING a pick, not two workers finishing the same one. Cheapest fixes, in order of effort: have finish write a claim file under docs/agents/ when a chapter is picked and have next skip claimed chapters older than some timeout; or seed choose's randrange from a worker identity so two workers partition the same short queue instead of sampling it; or simply have next refuse to serve a queue shorter than the number of live workers. Until one exists, a worker drawing from a two or three chapter queue should expect to lose the batch and may be better off taking the rewrite queue, which holds 130 chapters."
     }
   ]
 }
