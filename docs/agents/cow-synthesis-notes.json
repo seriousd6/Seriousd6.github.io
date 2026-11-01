@@ -103007,6 +103007,176 @@
         "40"
       ],
       "note": "Cyril of Jerusalem residue is present in john 7 at keys in all four of the 14-24, 25-30, 37-39 and 40-44 ranges, and is STILL undeclarable because of the _LABEL_RE gap: VOICE_LABELS contains 'Cyril' but the regex requires a colon immediately after, so the source label 'Cyril of Jerusalem:' never matches and undeclarable_voices rejects the exclusion. Its words are therefore still counted as usable source here (the 86,660-word figure for this chapter includes them), which inflates every expansion ratio in the chapter. The one-line fix remains: add 'Cyril of Jerusalem' to VOICE_LABELS AHEAD of 'Cyril', since the alternation is first-match, or let the pattern take an optional ' of <Place>'. Unchanged from the matthew 19 note; not fixed here because the operator prompt reserves source and tooling changes."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "8",
+        "21",
+        "25",
+        "36",
+        "41"
+      ],
+      "note": "Tiled luke 2 in TEN pericopes, deliberately double its pericope count. Matthew Henry's six section heads sit at keys 1, 8, 21, 25, 36 and 41 (2033, 2980, 1605, 4539, 229 and 3384 words), giving vv.1-7, 8-20, 21-24, 25-35, 36-40, 41-52; I subdivided four of them at narrative seams the heads themselves cross, producing 1-5, 6-7, 8-14, 15-20, 21-24, 25-32, 33-35, 36-40, 41-45, 46-52. The reason is the standing recommendation in the luke 7 note, that a Gospel chapter tiled on its pericopes alone leaves most of its witnesses uncited; luke 2 carries 93,012 usable source words across 52 keys, so six tiles would have run at 0.04 expansion and dropped whole commentators. Ten tiles give 6,464 words of prose at expansions 0.043 to 0.167, and every one of the chapter's nineteen voices is cited somewhere. Henry's heads giving the tiling is now confirmed a sixth time; the new point is that they can be SUBDIVIDED without loss, because Henry's own blocks run across the seams and supply both sides."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "23",
+        "29",
+        "35",
+        "41",
+        "47"
+      ],
+      "note": "JAMIESON STRIDE, luke 2: stride 6, offset 5. Keys 23, 29, 35, 41 and 47 carry Jamieson, Fausset and Brown blocks of 145, 23, 11, 171 and 38 words, and all five are on LUKE 20, not Luke 2: the vineyard parable with a pointer to Matthew 21:33-46 at key 23, the Sadducees as the materialists of the day at 29, the resurrection question at 35, the lawyer of Matthew 22:35 at 41, and the great commandment at 47. The donor positions advance monotonically, so this is a fourth confirmation of the single-donor-chapter mechanism. Known offsets are now 1 (luke 13, donor Mark 2), 2 (1kings 1/2, donor 1 Samuel), 4 (john 13, donor John 1), 5 (luke 2, donor Luke 20) and 6 (john 7, donor Mark 12) -- all on stride 6, every offset in the congruence class now attested, which is what a fixed-stride import bug off by a per-book constant would look like. Declared as excluded_voices on the five tiles whose ranges cover a stride key and accepted by the validator; 388 words removed from the usable-source count."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "4",
+        "7",
+        "9",
+        "10",
+        "11",
+        "14",
+        "18",
+        "26",
+        "29",
+        "30",
+        "31",
+        "33",
+        "40",
+        "46",
+        "49"
+      ],
+      "note": "CYRIL OF JERUSALEM RESIDUE AT FIFTEEN KEYS IN ONE CHAPTER, the highest count recorded anywhere. Blocks sit at keys 4, 7, 9, 10, 11, 14, 18, 26, 29, 30, 31, 33, 40, 46 and 49, and eleven of the fifteen are exactly 201 words, the others 198, 136 and 58 -- a fourth book confirming the 201-word truncation ceiling. Together they are roughly 2,800 words, about 3 percent of the chapter's 93,012 usable source words, and every one of them is STILL undeclarable because of the _LABEL_RE gap: VOICE_LABELS holds 'Cyril' but the regex requires a colon immediately after the name, so the source label 'Cyril of Jerusalem:' never matches and undeclarable_voices rejects the exclusion. I verified this directly on a joined blob of all fifteen keys. The one-line fix is unchanged from matthew 19 and john 7: add 'Cyril of Jerusalem' to VOICE_LABELS AHEAD of 'Cyril', the alternation being first-match, or let the pattern take an optional ' of <Place>'. Note that luke 2 also has GENUINE Cyril blocks at keys 1, 22 and 42 labelled plain 'Cyril', so the fix must not collapse the two."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "33",
+        "39",
+        "42"
+      ],
+      "note": "THE GROUNDING CHECK HAS A FALSE POSITIVE, and luke 2 is the case that exposes it. QA._hit accepts a match when the first FIVE characters of a name key occur in the pool, for any key longer than five characters. The string 'augustine' occurs nowhere in any luke 2 source pool -- I checked the full 186,092-word SourceIndex pool -- yet ungrounded_voices reports 'Augustine' as grounded, because the chapter is full of Caesar AUGUSTUS and 'augus' matches. So the chapter lint would have passed a wholly unsupported attribution to Augustine. What caught it instead was the ENTITIES check in synthesis-fidelity, which tests the whole lowercased token and correctly refuses 'Augustine'. Consequence: the AUG. blocks at keys 33, 39 and 42 carry real Augustine material -- the sword as doubt and astonishment, with a sword passing close by causing fear though it does not strike; the resolution of Matthew's Archelaus difficulty by reading 'the land of Israel' as including Galilee; Joseph as father by the bond of wedlock rather than by begetting -- and I could use none of it. RECOMMENDATION: raise the prefix floor in _hit, or require the full token for patristic names, where the five-character prefixes collide badly (augus, grego, theop, chrys)."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "21",
+        "25",
+        "52"
+      ],
+      "note": "THREE MISALIGNED-BLOCK SHAPES IN ONE CHAPTER, none of them residue, all of them inflating a tile's source denominator. (1) APPENDED REVIEW AT THE LAST KEY: Adam Clarke's block at key 52 is 2,277 words and is not a comment on verse 52 at all -- it opens 'The following remarks, taken chiefly from Mr. Claude, on the foregoing subject' and then expounds vv.8-14, the shepherds, the glory of the Lord, their fear and the angel's discourse. That is a fifth of the 46-52 tile's whole denominator filed under the wrong verse, and it is a NEW shape: not back-shift, which moves a block by a constant, but a whole-chapter review parked on the final key. (2) VERSE-RANGE-HEADER-AS-CONTENT: the 'Cyril of Alexandria' block at key 21 is 227 words reproducing the TEXT of Luke 2:8-18 as if it were commentary, the shape already logged at john 1 and luke 13. (3) HOMILETIC PREFACE: the Cyril of Alexandria block at key 25 opens 'VERY numerous indeed is the assembly, and earnest the hearer: for we see the Church full: but the teacher is but poor' -- the exordium of a sermon, genuine Cyril on Luke 2 but not on verse 25. A denominator-cleaning pass should look for all three."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "15",
+        "21",
+        "22"
+      ],
+      "note": "THE ABBREVIATION DEFECT, now measurable per chapter, and luke 2 gives both the loss and the exception. LOST: 'ATHAN.' occurs six times and 'MAXIMUS' once, and neither 'athanasius' nor 'maximus' occurs anywhere in the pool, so both are uncitable; this cost Athanasius's reading of circumcision as the stripping off of the old birth and a sign of the future baptism, his pairing of the two birds with body and soul since the Lord requires a double return of chastity and meekness, and his note on the presentation (what place is excepted from the Father's dominion, that by remaining there he should be separate?). Also lost was the Maximus passage at key 8 ('if the swaddling clothes are mean in your eyes, admire the Angels singing'). KEPT: 'GREG. NYSS.' is usable here for the first time in this loop, because 'Gregory of Nyssa:' happens to be spelled out once as an outer label at key 35 -- the same abbreviation that cost luke 7 its best grief exposition. The rule this yields is uncomfortable: an abbreviated father is citable if and only if his full name occurs somewhere in the pool by accident, which is luck rather than design, and the remedy is still an abbreviation table in name_keys or an expansion pass at harvest."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "2"
+      ],
+      "note": "THE CYRENIUS CHRONOLOGY IS HANDLED SIX WAYS, the widest spread in the chapter. (1) Barnes follows Lardner: read it as the first census of the man AFTERWARDS familiarly known as governor, and defends the idiom by saying one may equally say General Washington saved Braddock's army. (2) Clarke gives Lardner's solution and then a second, that the word rendered 'first' may mean 'before', as in John's 'he was before me', and PREFERS the second. (3) Ellicott refuses the 'before' reading outright, the construction being absent from Luke elsewhere and unnatural across a twelve-year gap, supplies a missing governor from a coin of Antioch bearing A. Volusius Saturninus, shows Quirinus already holding office in the East as rector to Caius Caesar, and emphasises the adjective instead: this enrolment was the FIRST under his government, as distinct from the taxing of Acts 5:37. (4) Robertson appeals to Ramsay for a periodical fourteen-year census attested in dated Egyptian papyri back to A.D. 20 and for inscriptions proving Quirinus twice in Syria. (5) Calvin suspects Josephus's recollection simply failed him, and offers that the edict could not be executed at once for popular tumult, Coponius having been sent with an army. (6) Lightfoot sets out Dion Cassius and then declines: let the more learned judge. Three of the six are mutually exclusive on the text itself."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "8"
+      ],
+      "note": "THE DATE OF THE NATIVITY, four ways, all turning on one datum: the flocks were in the open. Lightfoot supplies the rabbinic calendar, sheep of the wilderness driven out about the Passover and brought home at the first rain on the third of Marchesvan. Clarke concludes the December nativity should on this ground be given up, and reports from Fabricius a catalogue of a hundred and thirty-six opinions about the YEAR, with the DAY placed in every month of the twelve -- Egyptians January, Wagenseil February and then August, Bochart March, Clemens Alexandrinus April, Epiphanius June or July, Lightfoot 15 September, Scaliger and Casaubon October -- until Pope Julius fixed the twenty-fifth of December, which the ancient Romans kept as the feast of the goddess Bruma. Ellicott takes the season just before the Passover, when the grass is greenest, and derives the traditional date differently, from the displacement of the Saturnalia at the winter solstice, noting the earliest Latin Christmas hymns dwell on the rising of the Sun of Righteousness on the world's wintry darkness. Barnes agrees it was earlier and then stops on principle: matters of moment are clearly revealed, and what God regards as unimportant he conceals. Note that Clarke and Ellicott agree on the conclusion and disagree entirely on the mechanism."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "7"
+      ],
+      "note": "DOES THE MANGER PROVE THE FAMILY POOR? Four positions, and the interest is that Clarke argues AGAINST the devotional reading. Calvin sees both the great poverty of Joseph and a cruel tyranny which admitted no excuse and compelled him to bring his wife at so inconvenient a season, supposing the descendants of the royal family were handled the more harshly. Henry counts the stable an instance of his parents' poverty and also of the corruption of manners in that age, since men with any common humanity would not have turned a woman in travail into a stable. Clarke objects outright: the inspired penman GIVES the reason, that there was no room, and an honest man who had worked diligently under the peculiar blessing of God could not have been so destitute as to be unable to procure a lodging for a night, nor would he have brought his wife at all had he been so ill fitted for the journey. Barnes takes the middle, that being there was no proof of poverty but a simple matter of necessity, while Jesus was nevertheless born poor and cradled in no palace. The same four reappear at vv.21-24 over the two turtledoves, where Clarke and Ellicott both switch sides and read the substitution as proof the family was NOT in affluence, and Calvin has to answer the objection from the Magi's gold by replying that we do not read their camels were laden with it."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "35",
+        "39"
+      ],
+      "note": "TWO MORE FIVE- AND SIX-WAY SPLITS, both preserved as debates rather than flattened. (1) THE SWORD, five readings: literal martyrdom (Lightfoot, 'thy soul, i.e. thy life', citing Epiphanius that whether she died or was put to death she has a crown among the martyrs); probable martyrdom, though the figure is used by the most respectable Greek writers for pungent sorrow (Clarke); the grief of the passion, since no history tells of her being slain and iron kills the body and not the soul (Bede, with Barnes and Wesley); the spear of scandal, the calumny she would meet for conceiving unmarried (Gill, who then moves to the sorrows from cradle to cross); and the word of God, sharper than the sharpest sword, which makes the clause a testimony to Mary's WISDOM rather than a prophecy of her suffering (Ambrose, alone). Ellicott and Robertson stand outside the question on philology, identifying the weapon as the long barbaric Thracian javelin, Goliath's sword in the Greek, rather than the short Roman blade. (2) THE HARMONY WITH MATTHEW, six ways, with the sharpest opposition in the chapter: Ellicott says plainly that neither Evangelist knew the other's narrative and that the two 'cannot readily be brought into harmony', where Robertson holds that 'the two Gospels supplement each other'; between them stand Bede (Luke omitted what he knew Matthew had set forth), the Greek Exposition (this verse stands BEFORE the descent into Egypt), Barnes (not immediately, with the three-year compression in Paul's conversion as a parallel) and Clarke (a return to Galilee at once and a SECOND return after Egypt)."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "36"
+      ],
+      "note": "A CROSS-CHAPTER CATCH worth recording because it links the two chapters this worker landed back to back. Lightfoot, on Anna the daughter of Phanuel of the tribe of Aser, observes that she was CERTAINLY a Galilean, and then asks how she could have been accounted a prophetess by the Jews given the proverb 'out of Galilee ariseth no prophet' (John 7:52) -- the very saying whose historical error Clarke and Ellicott dissect in john 7, which I rewrote immediately before this chapter. He adds the Rabba passage that the king Messiah, placed on the north, shall come and build the sanctuary placed on the south, and asks whether it does not savour of Christ's coming out of Galilee. Neither john 7's entry nor this one could cite the other, the corpus having no cross-reference apparatus, but the pair is a good argument for one: the strongest answer in the tree to the Galilee proverb sits in a different book from the verse that states it."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "LABEL AND THEME CONVENTIONS, settled here by precedent rather than by rule. I followed luke 7 -- same book, same loop, the most recent pericope-tiled Luke chapter -- in using the FULL KJV text of the range as pericope_label, giving labels of 47 to 145 words, and one KJV verse text per verse as themes. The split first recorded at john 7 therefore stands and now has two members on each side: john 9 and john 11 use a SHORT condensation of two KJV phrases joined by a colon (10-20 words), while john 6 and luke 7 use the full text. Both pass the validator, which checks only that the fields are present. This should be settled in docs/agents/cow-synthesis-loop.md before another Gospel chapter is tiled, because a reader moving between john 9 and luke 2 sees two different kinds of heading for the same kind of entry, and because a 145-word label is a different UI object from a 15-word one."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "46"
+      ],
+      "note": "One entity signal across ten tiles, and the same class as the last two chapters: 'Eunomians'. The source (Cyril at key 51) says 'the Eunomian Heretics', the adjective with a noun, never the plural substantive. Rewritten to 'the Eunomian heretics'. That is now three chapters running -- 'Latins' at matthew 19, 'Sabellians' at john 7, 'Eunomians' here -- in which the ONLY entity signal was a plural group noun coined off a source adjective. The loop doc should carry the rule explicitly: never name a party, school, sect or nation in a form the source does not itself use, and prefer the source's adjective-plus-noun to a coined plural."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "DRAFT OVERRUN IS A CONSTANT, and the measurement is now large enough to act on. The ten luke 2 first drafts came in at 698, 789, 846, 788, 857, 806, 775, 788, 805 and 831 words against a 650 cap: plus 7 to plus 32 percent, mean about plus 25. Across john 13 (8 tiles), john 7 (7 tiles) and luke 2 (10 tiles) that is twenty-five consecutive tiles with not one first draft inside the window. The cause is not verbosity but voice count: a Gospel tile has twelve to fifteen citable voices and each costs about 30 words, so four paragraphs of five voices is already 600 words before any connective prose. The prescription that actually worked here: budget four paragraphs at about 160 words each, allow five voices per paragraph at about 30 words, hold a named voice to ONE clause unless it is carrying a debate position, and plan for exactly one trim round rather than treating it as failure. Cheaper still would be a draft-time word counter in the loop doc's checklist."
     }
   ]
 }
