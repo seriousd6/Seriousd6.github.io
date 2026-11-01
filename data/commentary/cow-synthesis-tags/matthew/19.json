@@ -1,1614 +1,498 @@
 {
  "1": {
   "voices": [
-   "Chrysostom",
-   "Raban",
-   "Pseudo-Chrysostom",
-   "Origen",
-   "Hilary",
-   "Jerome",
-   "Glossa Ordinaria",
-   "Augustine of Hippo",
-   "Remigius",
-   "John Chrysostom",
-   "John Gill",
-   "John Lightfoot",
    "Matthew Henry",
+   "John Wesley",
+   "Chrysostom",
+   "Origen",
+   "A.T. Robertson",
+   "John Gill",
    "Albert Barnes",
    "Adam Clarke",
+   "John Lightfoot",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "Raban",
+   "Pseudo-Chrysostom",
+   "Hilary"
   ],
+  "range": "1-2",
+  "pericope_label": "He leaves Galilee for the coasts of Judea beyond Jordan, and heals the multitudes",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The start of the Peraean ministry; Christ crosses the Jordan toward Jerusalem and the cross, healing to authenticate his teaching."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Allegory: Christ leaving Father and synagogue to cleave to the Church (Ephesians 5:32); the move keeps the Gentiles in view."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the departure as a final farewell to Galilee, where Christ was reared and did most of his work, and draws from it a lesson of timing rather than geography: faithful ministers are not removed from a place before their testimony in it is finished, which comforts any who follow providence instead of their own humours."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "single",
-    "summary": "Chrysostom: he frequents Judaea now because the passion is near, mingling miracle with teaching."
+    "summary": "Chrysostom explains the return to Judaea by the nearness of the passion, notes that Christ stops at the borders, and marks the alternation of word and work in the two verses, so that the miracles win belief for the teaching and the teaching shows what the miracles are good for; the Pharisees alone were hardened by them."
    },
    {
     "school": "eastern-alexandrian",
     "prevalence": "single",
-    "summary": "Origen: healing beyond Jordan figures baptism; few 'arise and follow' to the twelve thrones."
+    "summary": "Origen hears a claim in the formula of transition, since to finish one&rsquo;s words is to leave nothing unsaid and that can be said of Jesus only; he also presses that the healing happened where baptism had been given, baptism being where spiritual sickness is truly cured, and separates crowds who merely followed from Matthew, who arose and followed."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: Christ's final farewell to Galilee, leaving only when his testimony there was finished."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "departure from Galilee",
-   "Peraean ministry",
-   "journey to the cross",
-   "Gentiles in view"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Raban divides the Judaean ministry, east of Jordan first and then westward by Jericho and Bethphage, and distinguishes Judaea proper from the whole land that bore the name; Pseudo-Chrysostom sees a father setting out on a long journey and leaving his children a pledge of his love; Hilary finds the Gentiles admitted at the frontier to the pardon prepared for the Jews."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Crowds gather from all the surrounding regions; Christ teaches and heals, the miracles sealing his doctrine."
+    "summary": "Barnes has Christ cross the river to avoid Samaria and travel south through Peraea, old territory of Reuben, Gad and Manasseh; Robertson agrees that Galileans commonly took that way, adds from Luke that this journey skirted Samaria as well, treats the clause as a formula closing Matthew&rsquo;s great blocks of sayings, and glosses the verb as meaning to lift and shift; Lightfoot allows the eastern sense but prefers Mark&rsquo;s plainer wording; Ellicott steps back from the route to the interval the verse covers, a whole Peraean ministry and two visits to Jerusalem."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke notes the mixed motives of the crowd — instruction, healing, curiosity, and entrapment."
+    "prevalence": "several",
+    "summary": "Clarke dissents over the preposition, holding that beyond Jordan here means by the side of Jordan, since Jericho lies seven miles west of the water in the one journey to the final passover, and he sorts the motives of the throng into instruction, cure, curiosity and entrapment; Wesley states the bare fact that from that time Christ walked no more in Galilee."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill supplies the content of the sayings now ended: humility, offences, the manner of reproving an offender and the forgiving of him."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether beyond Jordan places the road east of the river (Barnes, Robertson) or alongside its western bank (Clarke), with Lightfoot allowing the eastern sense but preferring Mark&rsquo;s plainer wording."
+  ],
+  "outliers": [
+   "Origen alone makes finishing one&rsquo;s words a claim no one else can bear, neither Moses nor the prophets.",
+   "Hilary alone reads the border healings as the Gentiles admitted to a pardon prepared for the Jews."
+  ],
   "themes": [
-   "healing the multitudes",
-   "Peraean ministry",
-   "mixed motives",
-   "mercy on the move"
+   "farewell to Galilee",
+   "the road to Jerusalem",
+   "word and work",
+   "healing at the border",
+   "following Christ"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-01",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "3": {
   "voices": [
-   "Origen",
-   "John Gill",
-   "John Lightfoot",
    "Matthew Henry",
+   "Jerome",
+   "John Calvin",
+   "A.T. Robertson",
    "Albert Barnes",
    "Adam Clarke",
+   "John Lightfoot",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
+   "Origen",
+   "Pseudo-Chrysostom",
+   "Chrysostom",
+   "Hilary",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "3-12",
+  "pericope_label": "The Pharisees ask about divorce; Christ answers from creation and speaks of eunuchs",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The Shammai/Hillel dispute over Deuteronomy 24:1; a snare sharpened by Herodian politics in Peraea (Herod Antipas, Josephus)."
-   },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: Christ proves the indissoluble union by creation, the leaving of parents, and one-flesh — what God joined, let none sunder."
+    "summary": "Henry traces the reply in three steps, one female made for one male so that Adam had no other to take, the leaving of father and mother as a tie nearer than the filial, and the one flesh that makes a man&rsquo;s wife himself; he calls the writing of divorcement an allowance framed to restrain rather than countenance, hedged with formalities that forbade haste, and names the disciples&rsquo; recoil sullen, children throwing away what they have because denied what they want."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the malicious question yields a fixed law of indissoluble marriage grounded in the order of creation."
+    "summary": "Calvin reduces the argument to two heads, creation&rsquo;s order serving as law and the later toleration as a concession to an intractable nation, hears in the number itself a verdict against polygamy as Malachi had, insists the right of divorce is mutual since the husband is no more lord of his body than the wife, denies that celibacy is in itself a virtue and excuses it only as freedom for better employments, and reproaches Jerome by name for gathering pagan slanders against a divine institution; Gill agrees with Wesley that the gift of continence is given to few."
    },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "single",
-    "summary": "Origen: to tempters Christ replies with doctrine, not evasion."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "divorce for every cause",
-   "Shammai and Hillel",
-   "one flesh",
-   "tempting question"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ answers from creation and Moses, not Shammai or Hillel; the original design fixes marriage as permanent, not subject to caprice."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the 'two' of creation proves one husband with one wife, condemning polygamy as well as divorce."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: one man and one woman condemns polygamy; one flesh condemns divorce."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "creation order",
-   "male and female",
-   "monogamy",
-   "appeal to the beginning"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Adam's words are a divine oracle (Holy Spirit); 'cleave'/'one flesh' marks a union closer than any other, sealed in the offspring."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: argues from the lesser (parent-child) to the greater (marriage); honours God's order, husband as head not tyrant, condemns polygamy."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "single",
-    "summary": "Origen: 'one flesh' figures Christ and the Church (Ephesians 5:31-32); Christ left the Father for his bride."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "one flesh",
-   "leave and cleave",
-   "Christ and the Church",
-   "Genesis 2:24"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'What God yoked' — marriage rests on the natural fact of union, not law or ceremony; systems easing divorce treat the permanent as temporary."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Christ restrains husbands' caprice and forbids magistrates to confirm unlawful divorce; the magistrate abuses his power who permits it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "let not man put asunder",
-   "God joined them",
-   "ideal of marriage",
-   "against arbitrary divorce"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Moses permitted (not commanded) divorce for hardness of heart, to protect women — a punishment on husbands, distinct from spiritual law."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The laxer school appeals to the letter (Deuteronomy 24:1); men wrest Scripture to justify lust."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "single",
-    "summary": "Origen: the law must not be read by the letter alone — 'from the beginning it was not so.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "command vs permission",
-   "Deuteronomy 24:1",
-   "protection of women",
-   "wresting Scripture"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Suffered,' not 'commanded': a concession choosing the lesser of two evils; the creation ideal stands unrepealed (perfect tense)."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "single",
-    "summary": "Origen: some laws accommodate human weakness, as Paul's concessions do (1 Corinthians 7); the higher law is 'from the beginning.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "John Lightfoot",
-    "note": "Reads 'hardness of heart' as obduration against God (idolatry), carrying a note of punishment."
-   }
-  ],
-  "themes": [
-   "hardness of heart",
-   "suffered not commanded",
-   "concessive law",
-   "creation ideal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "Chrysostom",
-   "Origen",
-   "Jerome",
-   "Pseudo-Chrysostom",
-   "Augustine of Hippo",
-   "Raban",
-   "Glossa Ordinaria",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Fornication alone dissolves the one-flesh bond; remarriage while the first lives is forbidden — yet reconciliation after repentance is open (Augustine)."
+    "summary": "Jerome sets the trap as a syllogism with two horns, since allowing the putting away contradicts Christ&rsquo;s own preaching of chastity while forbidding it makes him impious against Moses, and holds that fornication alone divides the flesh, remarriage being barred so long as the first partner lives; Pseudo-Chrysostom answers that wills and not bodies make or dissolve the union; Hilary assigns the three eunuchs to nature, violence and choice."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom insists the third kind of eunuch means a putting away of evil thoughts, since to cut off a limb is to undertake the work of murderers and open a door to the Manichaeans."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen asks what follows if the wife be no adulteress but a poisoner or a killer of her children, and whether the exception can really be the only one."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ proclaims his own law; only adultery permits divorce (a mensa et thoro); Robertson defends the genuineness of the exception."
+    "summary": "Robertson, Barnes and Lightfoot place the dilemma in the rival schools, Shammai permitting divorce for unchastity alone and Hillel for any passing dislike; Robertson adds that the sentence says what God joined and not whom, with the yoking verb in a timeless aorist, and defends the exception Matthew alone records against McNeile, who dates it to a later practice; Lightfoot presses that hardness of heart in scripture more often names obduracy toward God than unkindness to a wife, and would render the preposition as to; Ellicott remarks that the essence of the bond is made to rest on the natural fact of union rather than on contract or ceremony, supplies the political danger of the question in Peraea, and generalises the concession to the Law&rsquo;s tolerance of polygamy and slavery."
    },
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Calvin: the right is mutual to husband and wife, and the innocent party is freed to remarry."
+    "summary": "Clarke takes cleave from gluing and notes that a well-glued board breaks sooner in the whole wood than at the joint, reads one flesh as including the child compounded of both, names the escape from the trap in answering from Moses rather than either school, and looks with Barnes to the Essenes behind the eunuch saying while recalling that Origen took the words on himself literally; Wesley holds the gift given to few, whom he bids receive it joyfully."
    }
   ],
   "debates": [
-   {
-    "question": "May the innocent party remarry after divorcing an adulterous spouse?",
-    "sides": [
-     {
-      "position": "No — remarriage while the former spouse lives is adultery",
-      "holders": [
-       "Jerome",
-       "Raban",
-       "most fathers"
-      ]
-     },
-     {
-      "position": "Yes — Christ permits the innocent party to remarry",
-      "holders": [
-       "Calvin",
-       "Robertson"
-      ]
-     }
-    ]
-   }
+   "Whether hardness of heart names unkindness to a wife or obduracy toward God, Lightfoot pressing the second and rendering the preposition as to, so that Moses added divorce to their hardness as a punishment.",
+   "What the three eunuchs mean: Hilary assigns nature, violence and choice; Chrysostom insists the third is a discipline of thought and not of the body; Clarke and Barnes look to the Essenes."
   ],
-  "outliers": [],
-  "themes": [
-   "exception for fornication",
-   "remarriage",
-   "indissoluble bond",
-   "marriage raised above the schools"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "Jerome",
-   "Chrysostom",
-   "Pseudo-Chrysostom",
-   "Hilary",
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The disciples voice the popular Hillel view; Ellicott likens it to Milton's tract; Christ's doctrine was too high even for the Twelve."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Continence is a gift sought from God by grace; the prize is for those who will struggle, not shun the contest."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: their selfish recoil rejects a gift of God; he rebukes Jerome's calumnies against marriage, a medicine for fallen nature."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "better not to marry",
-   "gift of continence",
-   "selfish recoil",
-   "marriage as good"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'This saying' = the disciples' conclusion; celibacy suits few (1 Corinthians 7); for the rest marriage is the safer state."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the choice is not ours — continence is a special gift not given to all; self-imposed vows of celibacy reprove God's appointment."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke/Wesley: neither state is condemned; the gift comes by nature, violence, or grace."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a special gift",
-   "not for all",
-   "celibacy vs marriage",
-   "against self-imposed vows"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The third eunuch is spiritual — a bridling of thoughts, not bodily mutilation (which is cursed); the gift is for kingdom service."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Essenes as analogue; Origen's literal self-mutilation lamented; celibacy must be for the kingdom, not imposed as a rule (Rome's error)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: celibacy is no virtue in itself but freedom for God's service; he condemns the binding vow of perpetual virginity."
-   }
-  ],
-  "debates": [],
   "outliers": [
-   {
-    "voice": "Adam Clarke",
-    "note": "Recalls Origen's literal self-mutilation as a misreading of the verse."
-   }
+   "Ellicott alone extends the concession into a principle, finding in it an explanation of the Law&rsquo;s tolerance of polygamy and slavery, and a warning that a nation calling itself Christian may sink low enough to need concessive legislation still.",
+   "Calvin alone reproaches Jerome by name for heaping pagan slanders on marriage."
   ],
   "themes": [
-   "three kinds of eunuchs",
-   "celibacy for the kingdom",
-   "not mutilation",
-   "against imposed vows"
+   "the Pharisees&rsquo; trap",
+   "Shammai and Hillel",
+   "creation as law",
+   "suffered not commanded",
+   "the exception of fornication",
+   "celibacy as gift"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-01",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.03
+   }
   }
  },
  "13": {
   "voices": [
    "Pseudo-Chrysostom",
-   "Origen",
-   "Remigius",
    "Jerome",
    "Chrysostom",
-   "Glossa Ordinaria",
-   "Hilary",
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
+   "A.T. Robertson",
+   "Charles Ellicott",
+   "Origen",
+   "Remigius",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
+   "John Wesley",
+   "Gloss",
+   "Matthew Henry",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Lightfoot",
+   "Hilary"
   ],
+  "range": "13-15",
+  "pericope_label": "Little children are brought to him and he lays his hands on them",
   "schools": [
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Christ welcomes infancy ('of such,' by disposition not years); Hilary reads the children as a type of the believing Gentiles."
+    "summary": "Pseudo-Chrysostom explains the timing, since the discourse had been of chastity and the hearers brought the purest bodies they had, and finds the rebuke sharper for following so soon on the child Christ had set in the midst; Jerome marks the pronoun, of such and not of these, because disposition and not years decided the judgment; Remigius recalls the old custom of bringing little children to aged men for benediction by hand or tongue; the Gloss notes that the hands were laid while men held them, signifying that the grace of his aid was needed; Hilary allegorises the infants as the Gentiles."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The disciples' rough indifference rebuked; Lightfoot reads believers' infants as disciples — a warrant for infant baptism."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom lays the rebuke to a jealous regard for Christ&rsquo;s dignity, from which the disciples would have thrust the children away."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen turns the rebuke inward: the more advanced, before they have learnt the way of righteousness that is for children, rebuke those who bring the unlearned, and must learn to be babes to babes, as he who was in the form of God was made a babe."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: children of believers belong to the visible church — 'the promise is to you, and to your children.'"
+    "summary": "Henry holds that the gesture mingles love and familiarity with authority, and that whom Christ prays for in heaven he lays his hand upon by his Spirit; he reads the children of believing parents into the visible church, takes it ill of any who forbid them the water, and hears finality in the departure, as though enough had been done once the rights of the lambs were settled."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: a shield against the Anabaptists — Christ receives those too young to know their need, and gives them purity."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "blessing the children",
-   "infant baptism",
-   "disciples rebuked",
-   "of such is the kingdom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Calvin presses what the act presumed, that those who brought them must have been persuaded the Spirit was at Christ&rsquo;s disposal and, since the less is blessed by the better, allowed him the honour of the highest Prophet though they had not grasped his office; he then uses the passage as a shield against the Anabaptists, baptism being the pledge of forgiveness and adoption and so not to be denied to those whom God adopts and renews by the Spirit according to the capacity of their age; Gill enters a caution about the age, that the words used do not always mean newborns."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ's indignant tenderness; the kingdom belongs to such 'as by inheritance'; hope (Barnes) that infants are saved."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: grace and baptism extend to infants whom God adopts; yet 'of such' also means the childlike, childlike in malice not understanding."
+    "summary": "Robertson thinks the Twelve believed they were doing Jesus a kindness, having no vision of his love for children; Barnes argues that the phrase means persons resembling children in temper, of whom the church is composed, and that although he hopes all infants saved the passage was not framed to teach it; Ellicott ties the rebuke to the saying just spoken, since men who had heard the eunuch life honoured could take mothers and infants only for an interruption of prayer, and finds here the true warrant of the English baptismal office, asking why those capable of spiritual blessing then should be thought incapable now; Lightfoot, pressing that believers brought them and not Jews who despised him, concludes that their infants were disciples as much as their parents."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: the verse ruins 'non-elect infants' damnation'; Christ sanctified childhood by passing through it."
+    "summary": "Clarke takes the kingdom to be literally composed of such and holds that the contrary doctrine of non-elect infants&rsquo; damnation sprung from Moloch; he and Wesley trace the rite of laying on hands to Jacob&rsquo;s hands on the sons of Joseph and read it as a consecration, the person thereafter held sacred property."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What of such means: Jerome and Barnes take it of disposition rather than years, Barnes adding that the passage does not teach that all infants are saved, while Clarke and Ellicott take the kingdom to belong to these children themselves.",
+   "Whether the passage warrants infant baptism: Calvin, Clarke, Henry, Lightfoot and Ellicott all build on it, Ellicott calling it a surer warrant than doubtful passages in the Acts and Epistles, while Barnes keeps to temper and the composition of the church."
+  ],
+  "outliers": [
+   "Hilary alone makes the infants a type of the Gentiles, forbidden by disciples still zealous for Israel and due to receive the Spirit by laid-on hands when the Law had ceased.",
+   "Origen alone reads the rebuke as a parable of the advanced despising the simple."
+  ],
   "themes": [
-   "suffer the children",
-   "childlike kingdom",
-   "infant salvation",
-   "forbid them not"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ laid hands and truly blessed the children, then resumed toward Jericho; Ellicott reads the act as the warrant for infant baptism."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
+   "children brought to Christ",
    "laying on of hands",
-   "real blessing",
+   "of such is the kingdom",
    "infant baptism",
-   "departure to Jericho"
+   "the disciples&rsquo; rebuke"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-01",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
  "16": {
   "voices": [
-   "Raban",
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Charles Ellicott",
    "Jerome",
    "Chrysostom",
-   "Augustine of Hippo",
-   "Origen",
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Augustine",
+   "Albert Barnes",
+   "John Wesley",
+   "John Lightfoot",
+   "Raban",
    "Remigius",
    "Pseudo-Augustine",
-   "John Chrysostom",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "Origen"
   ],
+  "range": "16-22",
+  "pericope_label": "The rich young ruler asks what he must do, and goes away sorrowful",
   "schools": [
    {
-    "school": "latin-fathers",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Jerome reads him as proud and tempting; Remigius/Raban draw the active vs contemplative life and the call to sell all."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Chrysostom: not a hypocrite but a captive of wealth — 'Jesus loved him.'"
+    "summary": "Ellicott presses the anonymity of a conspicuous man and ventures that the ruler was Lazarus, on the evidence of a wealthy household, friends among the chief rulers, a sister who believed in eternal life, and the one thing lacking that answers the one thing needful; he also holds the command to sell binding in spirit and not letter, naming schools, hospitals and missions as its modern form; Barnes takes the correction of the title for a reproof of flattering titles and no disclaimer of divinity; Robertson asks whether the question betrayed proud complacency or pathetic despair and answers both; Lightfoot answers that Christ used the nation&rsquo;s own idiom of perfection, its casuists having capped alms at a fifth of an estate, to try a man who boasted of keeping the law."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: a grave, good question; Christ leads him to own him as good God and to enter life by obedience."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A blameless but unsatisfied ruler depending on works; Ellicott conjectures he may be Lazarus."
+    "summary": "Henry holds that Christ would have him either know him God or not call him good, the correction being a lesson in transferring to God all praise given us; he adds that a merely moral man is no complete Christian while an immoral man is none at all, since our light burns in love to God but shines in love to our neighbour, and he names covetousness the rock the ruler split on, crediting him the honesty of going rather than pretending."
    },
    {
     "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin rejects the refinement that the correction hints at the Godhead, holding that only the authority of the doctrine is maintained, since to call Christ good falsely is to refuse to own that he came from God; he also explains the recital of the second table, observance of the first being readily feigned so that the second serves better for scrutiny, and sets the fifth commandment in that table against Josephus; Gill takes the man for a civil magistrate rather than a synagogue officer."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Jerome finds him young, rich and proud, asking as one who tempts, and reads his which? as insidious since he could read the commandments himself; answering Vigilantius, he denies that those who keep their estates and dole out the income do better than those who sell at once. Augustine harmonises the forms of the question, having Christ point past the title given to the form of a son of man toward the one God, and will not shut out the hired multitude who merely fed the hungry, finding parting with what we own the harder thing, like losing a limb. Remigius marks every word of the command, not consume but sell, not some as Ananias did but all, and to the poor rather than to neighbours or the rich; Pseudo-Augustine grants discriminate alms good and the single stripping better; Raban sees two lives set out, the active belonging to the Law and the contemplative to the Gospel."
+   },
+   {
+    "school": "eastern-antiochene",
     "prevalence": "single",
-    "summary": "Calvin: he dreams of merit; Christ sends him to the law as the way of righteousness to expose his self-trust."
+    "summary": "Chrysostom will not call him a hypocrite, since Mark has him running and kneeling and reports that Jesus looked on him and loved him, and since it is unsafe to decide uncertain cases, above all in blame."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen turns the possessions into the acts of the mind, to be sold off to the virtues that were poor in all that is good."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke marshals the manuscripts for a different reading of the question, why dost thou question me concerning that good thing, which Griesbach admitted, and notes that the anti-trinitarian argument built on the common form collapses if it stands; Wesley calls the command to sell particular and never meant for a rule, necessary for this man and for many of us a sin, and insists the earlier answer is plain and serious, not ironical."
    }
   ],
   "debates": [
-   {
-    "question": "Did the young ruler come sincerely or to tempt Christ?",
-    "sides": [
-     {
-      "position": "Sincerely, though self-trusting",
-      "holders": [
-       "Chrysostom",
-       "Henry",
-       "Barnes",
-       "Calvin"
-      ]
-     },
-     {
-      "position": "Proudly, tempting him",
-      "holders": [
-       "Jerome"
-      ]
-     }
-    ]
-   }
+   "Whether the question was honest: Jerome reads it as a temptation and the following which? as insidious, while Chrysostom, Calvin and Henry take him for a sincere though self-deceived inquirer.",
+   "What the correction of good corrects: Henry takes it as a claim to be owned as God, Calvin denies the Godhead is in view and makes it a demand that the doctrine be received as from God, Barnes reads only a reproof of flattering titles.",
+   "How far sell that thou hast binds: Jerome and Pseudo-Augustine prefer the single stripping, Augustine will not exclude those who only fed the hungry, Wesley and Ellicott hold it particular to the man and binding on others in spirit alone."
   ],
   "outliers": [
-   {
-    "voice": "Charles Ellicott",
-    "note": "Conjectures the young ruler may be Lazarus of Bethany."
-   }
+   "Ellicott alone identifies the young ruler with Lazarus, arguing from the anonymity, the household&rsquo;s wealth, the words one thing thou lackest, and the love Mark records.",
+   "Clarke alone rests the doctrinal weight of the passage on a variant reading, arguing that the anti-trinitarian case built on the received form collapses with it."
   ],
   "themes": [
-   "good Master",
-   "eternal life",
-   "rich young ruler",
-   "self-trusting seeker"
+   "eternal life and doing",
+   "the one who is good",
+   "the second table",
+   "perfection and possessions",
+   "covetousness"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-01",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A reproof of flattery, not a disclaimer of deity; a Socratic method (Ellicott); the variant 'concerning the good' still refutes anti-Trinitarian misuse."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Christ maintains the authority of his doctrine; the law is true righteousness but impossible to us, driving us to faith (Romans 10:5-6)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: a plain, serious answer, not irony — believe, and thence love and obey."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.04
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "none good but God",
-   "keep the commandments",
-   "law as schoolmaster",
-   "not disclaiming deity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The second table is cited as the test of love to God (Lightfoot); the reordering leads from negative prohibitions to the 'broad' positive law."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the second table best scrutinizes the heart (hypocrites feign the first); the fifth commandment belongs to it, against Josephus."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: the commandments are not kept to purchase life; Christ must save from sin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "second table",
-   "love of neighbour",
-   "scrutiny of the heart",
-   "negative to positive law"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The fifth commandment cited last ('no first or last in the law'); 'love thy neighbour as thyself' (Leviticus 19:18) caps the second table."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: rightly understood self-love drives the soul to God, who alone constitutes its happiness; sin against God wrongs the soul."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Cyril: honour earthly parents under the heavenly Father, obeying except where they oppose godliness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "honour parents",
-   "love thy neighbour",
-   "self-love rightly understood",
-   "second table"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "A sincere but shallow claim, kept as to the letter not the spirit; an uneasy conscience and 'psychological paradox' (Robertson) that opens the way for Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "kept from my youth",
-   "what lack I yet",
-   "letter vs spirit",
-   "uneasy conscience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A test of the man's idol, not a universal rule; 'perfect' = complete; the spirit binds all under wealth's power, the letter does not (Ellicott)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke/Wesley: Christ probes the bosom sin of love of the world — a particular direction, never a general rule."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Cyril: wealth is not the devil's; rightly used, money becomes a door of the kingdom."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sell all and follow",
-   "not a universal rule",
-   "the one idol",
-   "treasure in heaven"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "His wealth was an idol; he had not truly kept the law; one sin is enough to keep one from Christ (Robertson)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: the agony of suspense between love of the world and love of the soul; idolatry of goods brings misery."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Charles Ellicott",
-    "note": "Sees the sorrow as hopeful conflict, and conjectures the later Lazarus discipline completed the work."
-   }
-  ],
-  "themes": [
-   "went away sorrowful",
-   "idol of wealth",
-   "one sin enough",
-   "hopeful sorrow"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "23": {
   "voices": [
-   "Glossa Ordinaria",
    "Chrysostom",
    "Hilary",
    "Raban",
    "Remigius",
    "Jerome",
-   "Pseudo-Chrysostom",
-   "Gregory",
-   "Augustine of Hippo",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
+   "Augustine",
    "Adam Clarke",
+   "Matthew Henry",
+   "John Calvin",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
+   "John Lightfoot",
+   "Gloss",
+   "Pseudo-Chrysostom",
+   "Origen",
+   "Gregory",
+   "Albert Barnes",
+   "John Wesley"
   ],
+  "range": "23-30",
+  "pericope_label": "Hard for a rich man; Peter asks their reward, and the twelve thrones are promised",
   "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The danger is trust in riches, not riches; the camel/needle (and 'needle's eye' gate) figure the rich entering only when the load of sin is laid aside."
-   },
    {
     "school": "eastern-antiochene",
     "prevalence": "single",
-    "summary": "Chrysostom: not riches but enslavement to them; 'hard' rises to 'impossible,' then relieved by 'with God all things are possible.'"
+    "summary": "Chrysostom aims the saying not at wealth but at those enslaved by it, and at comforting poor disciples who need not be ashamed; he marks the move from hard to impossible, finds in the word beheld a merciful eye, and answers Peter by asking what this all was &mdash; the reeds, the net, the boat &mdash; concluding that he asked not to parade his sacrifice but to bring in the poor, lest any think perfection closed to him."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Hilary agrees that having riches is no sin, since the saints&rsquo; necessities cannot be supplied with nothing to give, though growing rich is a dangerous toil; Raban grants the distinction between having and loving yet calls it safer to do neither, and applies the reversal to all who begin in zeal and cool; Remigius takes Mark&rsquo;s them that trust in riches as the sense and applies the reversal to the ruler, first by the Law and last by his substance; Jerome says hard and not impossible, since difficulty marks infrequency, notes that Crates and other philosophers despised riches too so that the weight falls on have followed thee, and protests that a literal hundredfold would shame the promise in the matter of wives; Augustine counts all who merely wish for riches among the rich and reads the twelve as a number standing for all who judge; the Gloss offers a Jerusalem gate called the needle&rsquo;s eye; Pseudo-Chrysostom allegorises the needle and places the thrones in the gospel age; Gregory holds that whoever forsakes his possessions will appear as judge with the Judge."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke defines the rich man as one who keeps the surplus of his household&rsquo;s need while the poor starve, supplies the school idiom of the palm tree of gold and the elephant, keeps the regeneration for the restitution at the judgment and repunctuates the verse to join it to the Son of man&rsquo;s sitting, and reads the reversal of Israel and the Gentiles; Wesley observes the one throne left empty, since the promise was to those who followed and Judas proved unworthy."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: more duties and more besetting sins make the rich man's way hard; grace alone saves him from his worldliness, not in it."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: riches are not evil by nature, but few escape intoxication by them; the warning profits rich and poor alike."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "rich man and the kingdom",
-   "trust in riches",
-   "camel and needle",
-   "grace alone"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A proverb of impossibility (cf. the Talmud's elephant, the Koran's borrowing); attempts to soften it as 'cable' or a 'needle's eye' gate are needless."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin leans to 'cable,' but the bold Eastern image of the camel needs no softening — the thing is humanly impossible."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: 'Rich man, tremble — feel this impossibility, else thou art lost forever.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "camel through a needle",
-   "proverb of impossibility",
-   "against softening",
-   "wealth and salvation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Blank amazement; the disciples counted on outward riches; Mark's softening clause is likely a copyist's gloss reflecting their feeling."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: unlike the departing ruler, the trembling disciples do not break off but seek to conquer despair — wholesome trembling that arouses."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke defines the convicting sense of 'rich man'; Wesley: a beggar is saved sooner than one rich."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "who then can be saved",
-   "amazement",
-   "definition of rich",
-   "trembling not despair"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The searching look of wonder and tenderness; salvation impossible to man is the work of God's grace — wealth may even become a help."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Christ heightens, not softens, the difficulty to drive self-distrust and prayer; the verse refutes the anathema against owning the law impossible to keep."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke/Wesley: God alone removes the love of the world; the look is sweet, the saying strengthened not retracted."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "with God all things possible",
-   "impossible with men",
-   "omnipotent grace",
-   "the searching look"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "Origen",
-   "Chrysostom",
-   "Jerome",
-   "Hilary",
-   "Augustine of Hippo",
-   "Pseudo-Chrysostom",
-   "Gregory",
-   "Raban",
-   "Remigius",
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Chrysostom: Peter's 'all' was reeds and a net, but he asks for the poor's sake — none is shut out by poverty."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The 'following' (added to forsaking) is peculiar to believers, unlike pagan philosophers who forsook wealth; Peter the athlete asks his prize."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A poor all, yet truly their all; but the question betrays a self-interested, letter-keeping spirit expecting compensation."
+    "summary": "Henry reads the figure of the camel: a rich man carries a load that is another&rsquo;s, had from others, spent for others, and shortly left to others."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Calvin: the inquiry is fair, but they err in demanding the triumph before finishing the warfare."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we have left all",
-   "mixed motive",
-   "reward",
-   "forsaking and following"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "summary": "Calvin breaks from the rest on the camel, taking the word for a sailor&rsquo;s rope rather than the animal; he places the regeneration at the first advent while distinguishing the reign&rsquo;s beginning from its completion, and faces the objection that exiles recover nothing by answering that the little God sweetens is better than abundance held outside Christ."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Regeneration' read variously — the resurrection/judgment (Barnes), the gospel renewal (Lightfoot), the restitution of all things (Ellicott); thrones = honour, conditioned on faithfulness (Judas's vacant)."
+    "summary": "Ellicott answers that no manuscript gives the word for a cable, which the best scholars think coined for this verse, knows the Syrian parallel to the needle&rsquo;s eye gate and judges it unproven and unnecessary, has relationships multiply by spiritual sympathy rather than by a literal hundredfold, hears Mark&rsquo;s with persecutions as too strange not to have been spoken, and observes the throne of Judas left vacant; Robertson calls every such escape from the figure jejune, since Christ goes on to say impossible, and keeps the regeneration for the final consummation; Barnes likewise reads it of the restitution at the judgment; Lightfoot supplies the school idiom and recalls the disciples from the grosser Jewish hope, since what is renewed is manners and doctrine, not the fabric of the world."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Hilary: regeneration = baptism; Augustine: 'twelve' = the fullness of all judges (Paul too); the age of the Church (Pseudo-Chrysostom)."
-   },
-   {
-    "school": "reformed",
+    "school": "eastern-alexandrian",
     "prevalence": "single",
-    "summary": "Calvin: 'regeneration' began at Christ's first coming, but the thrones belong to the last day when the apostles share his glory."
+    "summary": "Origen credits Peter&rsquo;s will rather than the price of what he left, has him inquire like a victorious athlete after his prizes, and reads the reversal of Israel and the Gentiles, adding that angels once first were made last by sin."
    }
   ],
   "debates": [
-   {
-    "question": "What is 'the regeneration'?",
-    "sides": [
-     {
-      "position": "The final resurrection / renewal of the cosmos",
-      "holders": [
-       "Barnes",
-       "Ellicott",
-       "Robertson"
-      ]
-     },
-     {
-      "position": "The gospel age / renewal of the Church",
-      "holders": [
-       "Lightfoot",
-       "Pseudo-Chrysostom",
-       "Calvin"
-      ]
-     }
-    ]
-   }
+   "Whether salvation for the rich is hard or impossible: Chrysostom moves from the one to the other and Calvin holds that Christ increases rather than extenuates the danger, while Jerome insists that hard marks infrequency and not exclusion.",
+   "Whether the camel is an animal or a cable: Calvin takes the word for a sailor&rsquo;s rope; Ellicott answers that no manuscript gives it and the best scholars think it coined for this verse; Robertson calls the escape jejune.",
+   "What the regeneration is: the laver of baptism (Hilary), the gospel age from the first advent (Pseudo-Chrysostom, Calvin), a renovation of manners and doctrine (Lightfoot), or the restitution at the judgment (Barnes, Clarke, Robertson, Wesley)."
   ],
-  "outliers": [],
+  "outliers": [
+   "Pseudo-Chrysostom alone allegorises the needle as the Son of God, fine at the point of his divinity and thicker in his flesh, and makes each Christian who receives an apostle&rsquo;s word that apostle&rsquo;s throne.",
+   "Augustine alone argues from the number twelve that Paul and all who left everything belong among the judges, and that Levi as the thirteenth tribe is not exempt from being judged."
+  ],
   "themes": [
-   "the regeneration",
-   "twelve thrones",
-   "apostolic honour",
-   "Judas's vacant throne"
+   "wealth as hindrance",
+   "the camel and the needle",
+   "with God all things possible",
+   "Peter&rsquo;s question",
+   "the twelve thrones",
+   "the hundredfold",
+   "first and last"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-01",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The promise widens to all believers; the hundredfold is spiritual (multiplied joys and relationships), given 'with persecutions,' crowned by eternal life."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: God's gladdening grace makes the believer's small portion sweeter than the wicked's abundance, answering the objection from experience."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke/Wesley: fullness of grace here and glory hereafter, for every believer in every age, not the apostles only."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.03
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "hundredfold",
-   "for my name's sake",
-   "with persecutions",
-   "eternal life"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A reversal of human judgments aimed at the disciples' self-complacence, introducing the parable of the labourers (Matthew 20:16)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the redemptive-historical reading — first Jews rejecting the gospel become last, last Gentiles become first."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: glory goes by grace, not seniority — God crosses his hands, receiving believing Gentiles over unbelieving Jews."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "first last, last first",
-   "reversal of judgments",
-   "self-complacence rebuked",
-   "Jew and Gentile"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
