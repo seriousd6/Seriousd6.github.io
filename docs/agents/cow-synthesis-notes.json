@@ -102689,6 +102689,117 @@
         "1"
       ],
       "note": "pericope_label has two live conventions and both pass every gate. The OT narrative rewrites (1kings 1, 1kings 3, 2samuel 7) set it to the FULL KJV text of the range, running 95-383 words; matthew 22, the nearest rewritten sibling in this book that declares ranges, sets it to a short descriptive phrase ('The king makes a marriage for his son and the bidden will not come'). I followed matthew 22 here, since it is the same book and the same shape of work, but the split is worth settling in the loop doc rather than left to whichever neighbour a worker happens to read. The short form is also what a renderer can put in a heading without truncation."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "13",
+        "21"
+      ],
+      "note": "The composite legacy shape again, now with raw smart quotes instead of HTML entities. All 38 entries opened with the verse text quoted and a roadmap clause ('The witnesses read this as...'), carried 78 <strong> school labels, and used the school-as-adjective form on voice names ('The Latin Augustine', 'The Eastern Chrysostom', 'The Reformed Calvin'). The one structural difference from matthew 26 is cosmetic but it mattered to tooling: john 13 writes the quotes as literal U+201C rather than &ldquo;, so an entity-based counter reports zero quoted-verse openers on a chapter where every single entry has one. Any audit that counts openers by entity will under-report this chapter class entirely."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "3",
+        "4",
+        "5",
+        "8",
+        "11",
+        "15",
+        "22",
+        "23",
+        "28",
+        "29",
+        "30",
+        "35",
+        "36",
+        "37"
+      ],
+      "note": "Appended duplicate paragraphs on nearly every entry, worse here than in matthew 26. Of 38 entries, well over half closed with a third or fourth paragraph restating what the preceding one had already said - key 3 ('true greatness is shown in lowly service' after the same point made twice), key 4, key 5, key 8, key 11, key 15, key 22, key 23, key 28, key 29, key 30, key 35, key 36, key 37. The repetition is paraphrased rather than verbatim, so neither the audit's cross-verse dupfrac nor an exact-match intra-entry check would catch it; it needs a semantic or n-gram overlap test between paragraphs of the same entry. This is now the single most widespread defect across the three composite-shape chapters I have repaired."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "4",
+        "5"
+      ],
+      "note": "Vague collective attribution as a defect in its own right. Keys 4 and 5 in particular leaned on phrases like 'several note', 'the fathers and Reformers find', 'all agree' where the underlying source had specific, nameable voices available (Gill on the servile office, Lightfoot on the basin capacity from the Eleazar ben Azariah ruling, Clarke on Abigail and David, Ellicott on the basin standing ready in the room). The legacy prose had summarised what it could have attributed. No lint catches this, because the sentences contain no banned carrier and no school label - they simply fail to name anyone. Worth a check: a paragraph of expository prose with zero proper-name subjects is probably summarising rather than reporting."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "10",
+        "13",
+        "16",
+        "20",
+        "22",
+        "28"
+      ],
+      "note": "Systematic misfiling from John 1 into John 13. The Jamieson-Fausset-Brown blocks attached to keys 10, 13, 16, 22 and 28 are commentary on John 1 - 'resuming the thread of Joh 1:14', 'grace upon grace', 'this must have been spoken after the baptism of Christ' - and key 13 carries an Origen block on 'what is the Word which is in the beginning', also John 1. Key 16 and key 20 additionally carry the familiar Cyril of Jerusalem 'many are the proofs concerning the life eternal' broadcast. So this chapter shows two distinct residue classes at once: a chapter-level misfile that looks source-specific (JFB material from chapter 1 landing throughout chapter 13), and the by-now-familiar Cyril duplicate. The JFB pattern is the more diagnostic, since it suggests an alignment error keyed to the book rather than to the verse."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "20",
+        "21",
+        "23",
+        "24",
+        "25",
+        "28",
+        "29",
+        "30"
+      ],
+      "note": "My own writing bias, measured. Across the first four batches of this chapter I landed under the 350-word floor on 17 of 24 entries at first pass, by a median of about 30 words, and had to go back and expand each from the dig. The cause is that I was composing to a felt sense of 'enough' that corresponds to roughly 340 words rather than to the band's midpoint. After switching to dig-before-write and targeting ~420, the last two batches needed almost no floor repair. Recording it because it is a reproducible process finding rather than a fact about the corpus: for a writer, the correct target is not the floor but the middle of the band, and the dig should precede the draft rather than rescue it."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "25"
+      ],
+      "note": "Another false-positive class in my sweep's carrier regex, distinct from the entity bug found in matthew 26. The CARRIER~ pattern for the divide family ends '(divide|differ|disagree|part)' with no trailing word boundary, so the ordinary noun 'difference' matches 'differ'. Key 25's sentence 'the word for the posture here differs... and the expositors make the difference carry the sense' tripped it on the noun, not on any carrier construction. Same shape of bug as the semicolon one: a regex written for a phrase family matching inside a longer word. Both were in my scratch harness rather than the repo lint, but the repo's own CARR_RX list has the identical unterminated alternation and will behave the same way."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "25"
+      ],
+      "note": "Cross-key attribution caught on review, the same defect I had just recorded as a legacy fault. Writing key 25 I reached for Augustine's phrase about the bosom being 'the secret chamber of wisdom' - which belongs to key 23's source block, not key 25's, where Augustine does not appear among the voices at all. The setmeta verification pass flagged Augustine as named in prose but not detected, which is what sent me back to look. Removed. The lesson is that the verification pass earns its keep for exactly this: it does not check fidelity, but a name present in the prose and absent from the detected voices is a reliable signal that either the attribution is misplaced or the sentence is importing from a neighbouring key."
     }
   ]
 }

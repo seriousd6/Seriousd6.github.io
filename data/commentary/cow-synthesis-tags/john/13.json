@@ -1,1754 +1,2414 @@
 {
- "1": {
-  "voices": [
-   "Theophylact",
-   "Augustine",
-   "Bede",
-   "John Chrysostom",
-   "Augustine of Hippo",
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The hour now ‘come’ (after so many ‘not yet,’ 2:4; 7:6); ‘his own’ are the believers; ‘loved unto the end’ = constancy to death; most place the scene at the Last Supper (Thursday eve), Gill/Lightfoot earlier at Bethany."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: ‘unto the end’ (eis telos) means his love led him to death — and to himself, ‘the end of the law’ (Rom 10:4)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom/Theophylact: Christ teaches virtue by action, not words only — the foot-washing is meekness made visible (Mt 11:29; 1 Cor 11:1)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a visible sign that his love is firm and lasting — death itself would not quench it."
-   }
-  ],
-  "debates": [
-   {
-    "question": "When did the foot-washing occur?",
-    "sides": [
-     {
-      "position": "at the Last Supper, the night before the crucifixion",
-      "holders": [
-       "A.T. Robertson",
-       "Charles Ellicott",
-       "Matthew Henry"
-      ]
-     },
-     {
-      "position": "earlier, at Bethany (Simon’s house)",
-      "holders": [
-       "John Gill",
-       "John Lightfoot"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "‘loved them unto the end’",
-   "the hour come",
-   "love that leads to death",
-   "overture to the Passion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
+  "1": {
+    "voices": [
+      "Augustine",
+      "Chrysostom",
+      "Charles Ellicott",
+      "Albert Barnes",
+      "A.T. Robertson",
+      "John Lightfoot",
+      "John Gill",
+      "Matthew Henry",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine turns the closing phrase over carefully, since it will bear two senses"
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom goes straight to the consequence rather than the construction, setting beside it Paul’s charge to be imitators of him as he is of Christ (…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott marks the change in the Gospel’s own language about timing; Barnes reads the final clause of constancy, that he continued the proofs of his love until he was taken away by death; Robertson and most place it at the Last Supper, on our Thursday evening, the night before the crucifixion;…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill and Lightfoot set it earlier, at Bethany; Calvin explains why John opens here rather than with the institution the other Evangelists record"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry grants that the chronology is debated and holds the substance plain regardless, which is the sensible verdict: nothing in the verse depends on which evening…"
+      }
+    ],
+    "debates": [
+      {
+        "question": "When did the foot-washing occur?",
+        "sides": [
+          {
+            "position": "at the Last Supper, the night before the crucifixion",
+            "holders": [
+              "A.T. Robertson",
+              "Charles Ellicott",
+              "Matthew Henry"
+            ]
+          },
+          {
+            "position": "earlier, at Bethany (Simon’s house)",
+            "holders": [
+              "John Gill",
+              "John Lightfoot"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [],
+    "themes": [
+      "‘loved them unto the end’",
+      "the hour come",
+      "love that leads to death",
+      "overture to the Passion"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.03
+      }
+    }
+  },
+  "2": {
+    "voices": [
+      "A.T. Robertson",
+      "Charles Ellicott",
+      "Albert Barnes",
+      "Adam Clarke",
+      "Origen",
+      "John Lightfoot",
+      "John Wesley",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson reads the participle as a genitive absolute meaning during supper, and gives his reason from the narrative itself, that the fourth verse shows plainly the…; Ellicott prefers it now becoming supper time, observing that the supper was not ended but that the company had already reclined…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke goes further and proposes while supper was preparing, arguing that the meal was probably not then begun, since the washing of feet was usually practised…; Wesley reads the adverb as marking a first occasion, that the suggestion was probably now made for the first time"
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Clarke goes further and proposes while supper was preparing, arguing that the meal was probably not then begun, since the washing of feet was usually practised…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Calvin asks why the Evangelist mentions the betrayal at this exact point, and gives two answers"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘during supper’ not ‘ended’",
+      "the devil and Judas",
+      "Christ’s patience with the traitor",
+      "setting of the foot-washing"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.28
+      }
+    }
+  },
+  "3": {
+    "voices": [
+      "Charles Ellicott",
+      "Albert Barnes",
+      "A.T. Robertson",
+      "Adam Clarke",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "majority",
+        "summary": "Ellicott states the paradox the verse is built on, that it is with the full consciousness of his supreme power and divine origin that Jesus stoops…; Barnes puts the same measurement the other way round, that the dignity of his nature shows how low he would stoop to teach and save his…; Robertson…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke supplies the pastoral occasion. Knowing himself almost at the end of his race, Christ thought it necessary to leave the disciples a lesson of humility…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Calvin and the rest find in this the logic of the whole gospel, that it is not in ignorance of his greatness but in full knowledge…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "supreme dignity",
+      "‘all things into his hands’",
+      "kenosis (Phil 2)",
+      "height measuring the stoop"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.39
+      }
+    }
+  },
+  "4": {
+    "voices": [
+      "Adam Clarke",
+      "A.T. Robertson",
+      "John Calvin",
+      "John Wesley",
+      "Albert Barnes",
+      "John Gill",
+      "Charles Ellicott"
+    ],
+    "schools": [
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke corrects a small misreading in the first clause, that he rose not from eating but from his place at table, the dishes probably not yet…; Wesley reduces it to the practical reason, that he laid aside the part of his clothing which would have hindered him"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson marks the tense, a vivid dramatic present, and describes what was removed: the outer robe, leaving him in only the tunic, as one that serveth…; Barnes adds that it was customary to lay the mantle aside when working or running or in the heat of summer, and that girding oneself with…;…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin makes the same point about the garment, that he laid aside the outer and not the inner, the people of Eastern countries wearing long robes; Gill fills in what else was happening at that table, and the contrast is his point"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "laying aside the garments",
+      "girded with a towel",
+      "the servant’s part",
+      "acted parable of the kenosis"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.5
+      }
+    }
+  },
+  "5": {
+    "voices": [
+      "John Gill",
+      "John Lightfoot",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "Albert Barnes",
+      "Adam Clarke",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill notes that pouring the water was itself a servile work, properly belonging to servants, and he can even specify the vessel, since the rabbis had…; Calvin reads the verse as stating a design rather than narrating the sequence, since the Evangelist adds that he began with Peter"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "majority",
+        "summary": "Lightfoot supplies the ruling behind that, from the day they made Rabbi Eleazar ben Azariah president of the council, when the votes were numbered and they…; Ellicott and Robertson both note the definite article, that it was the basin in the room, commonly used and already standing ready, with…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke cites the same precedent, Abigail answering David’s message by asking that her handmaid might be a servant to wash the feet of the servants of…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "washing the disciples’ feet",
+      "the lowest servile office",
+      "lesson in humility",
+      "picture of cleansing"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.5
+      }
+    }
+  },
+  "6": {
+    "voices": [
+      "A.T. Robertson",
+      "Charles Ellicott",
+      "Origen",
+      "Chrysostom",
+      "Augustine",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson catches the word order in Peter’s question, where the pronouns stand emphatically: dost thou my feet wash; Ellicott calls it a point of no importance, while allowing that the natural impression of the narrative is that Peter’s turn came after that of at…"
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen pictures Christ as a physician who begins with those who want his attention most, washing the most unclean first and coming last to Peter, who…"
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Theophylact and Chrysostom suggest instead that he washed the traitor first and came next to Peter, and they account for the silence of the rest by…"
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine enters into the feeling behind the protest and does not treat it as mere impulse"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Augustine and Calvin name both halves of what Peter is doing"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘Lord, dost thou wash my feet?’",
+      "order of washing",
+      "reverence vs. obedience",
+      "unsubmissive humility"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.13
+      }
+    }
+  },
+  "7": {
+    "voices": [
+      "Charles Ellicott",
+      "Albert Barnes",
+      "A.T. Robertson",
+      "Adam Clarke",
+      "John Calvin",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott notices that the pronouns are picked up from Peter’s protest and turned back on him, so that the answer is a gentle rebuke: Peter’s words…; Barnes and Ellicott agree about the reference of the promised knowing, taking it chiefly of the explanation Christ gives within a few minutes (…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke renders the sense as a request rather than a reproof: permit me to do it now, and I will shortly explain; Wesley applies the same thought to the believer’s whole walk rather than to this moment only"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Calvin draws out the principle he finds enshrined in the sentence, that we ought simply to obey Christ even though we should not perceive the reason…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘thou shalt know hereafter’",
+      "obedience before understanding",
+      "faith’s submission",
+      "the act then explained"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.41
+      }
+    }
+  },
+  "8": {
+    "voices": [
+      "A.T. Robertson",
+      "Charles Ellicott",
+      "Albert Barnes",
+      "John Gill",
+      "Adam Clarke",
+      "John Wesley",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson marks the force of the refusal, a strong double negative amounting to never, and quotes Westcott’s judgment on what is at stake, that the first…; Ellicott hears in the vehemence the very voice of the loving, impulsive but self-confident Peter of the earlier Gospels; Barnes draws the…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill traces the change in Peter’s bearing, that before he had behaved with modesty and now with obstinacy and perverseness;; Calvin is sharp with Peter here, and distinguishes this refusal from the first"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke enters one limit on the severity of the threat, holding it certain that Christ did not mean to exclude him from the apostolic office should…; Clarke and Wesley find the deeper sense in the answer, since the washing is emblematical of something spiritual"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘thou shalt never wash my feet’",
+      "‘no part with me’",
+      "self-surrender",
+      "cleansing by Christ alone"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.22
+      }
+    }
+  },
+  "9": {
+    "voices": [
+      "Charles Ellicott",
+      "John Gill",
+      "A.T. Robertson",
+      "Albert Barnes",
+      "John Calvin",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott puts it as asking not for the feet only but for the whole man; Robertson quotes Dods’ summary of the reversal, that a moment ago Peter told his Master he was doing too much and now tells him he is…; Barnes reads the ardour as a half-grasp of the spiritual meaning, since Peter now sees…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill explains the reasoning behind the swing, that Peter, convinced everything depended on this washing and fearing to be deprived of communion with Christ, wishes to…; Calvin credits the yielding before faulting the excess"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Wesley puts the whole of it more tenderly, that one would think man would be wiser than God, and yet this was well meant, being an…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘not my feet only’",
+      "from refusal to excess",
+      "overcorrection",
+      "prelude to v.10"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.59
+      }
+    }
+  },
+  "10": {
+    "voices": [
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "Adam Clarke",
+      "John Gill",
+      "Albert Barnes",
+      "John Calvin",
+      "John Wesley",
+      "Augustine"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson and Ellicott both point out that everything turns on two different verbs; Barnes calls the passage a difficult one and still arrives at the same distinction, between the man already cleansed and the daily renewal he requires"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke supplies the practical background, taking the bathing literally, as something all the apostles had probably done recently in order to prepare themselves for the paschal…; Wesley puts the practical upshot in half a line, that having been already cleansed they need only to wash their feet,…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill reads the bath as regeneration and justification, the man washed in the blood of Christ being clean every whit and justified from all things, and…; Calvin adds the qualification that keeps the word clean from being overstated, that believers are not called pure as though no stain at all…"
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine fastens instead on the exception at the end of the sentence, and notes that the Evangelist himself supplies the explanation in the verse following, that…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "bathed vs. washing the feet",
+      "once-for-all and daily cleansing",
+      "‘clean every whit’",
+      "‘but not all’ (the betrayer)"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.2
+      }
+    }
+  },
+  "11": {
+    "voices": [
+      "Albert Barnes",
+      "John Gill",
+      "A.T. Robertson",
+      "Charles Ellicott"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "majority",
+        "summary": "Barnes observes the exact distinction: Judas, though his feet were washed, was not clean in heart, the outward washing reaching the body but not the soul; Robertson observes what that knowledge did not alter, that Jesus had known for a year at least and yet treated Judas with his usual courtesy,…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill presses it further back, reading the want as a want of regeneration, since Judas was never truly washed in the deeper sense, never born again…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "the betrayer unclean",
+      "outward washing not enough",
+      "Christ knew the traitor",
+      "warning to the church"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 1.5
+      }
+    }
+  },
+  "12": {
+    "voices": [
+      "A.T. Robertson",
+      "Adam Clarke",
+      "Origen",
+      "Charles Ellicott",
+      "John Gill",
+      "Augustine",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson notes the verb for taking his place again, that he reclined, and calls the question that follows a searching one, particularly as it reaches Simon…; Ellicott agrees about the function either way, that the question is asked not to be answered but to direct their attention to the…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke and Origen observe that the Greek may be read as an imperative as well as a question, so that it would run consider what I…"
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Clarke and Origen observe that the Greek may be read as an imperative as well as a question, so that it would run consider what I…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill marks the completeness of the service in the opening clause, that the washing was performed to each of the twelve, Judas included; Calvin explains why an explanation is needed at all, since what Christ had said about the spiritual washing was a sort of digression from his main…"
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine sees Christ mindful of his promise to Peter and now beginning to teach him, so that the question is the first instalment of the explanation…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘Know ye what I have done?’",
+      "act explained",
+      "Christ resumes his garments",
+      "pattern of humble service"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.19
+      }
+    }
+  },
+  "13": {
+    "voices": [
+      "Charles Ellicott",
+      "Albert Barnes",
+      "John Lightfoot",
+      "John Gill",
+      "Adam Clarke",
+      "A.T. Robertson"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "majority",
+        "summary": "Ellicott distinguishes the two titles, taking the first for Teacher rather than the Hebrew Rabbi in this place, and Barnes takes the second of the reverence…; Barnes takes the second of the reverence due to a sovereign and ruler (compare Matthew 23:8–10 ); Gill and Lightfoot note that Rabbi and…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill and Lightfoot note that Rabbi and Mar were the honoured titles Jewish pupils gave their doctors, and that the disciples gave them to Christ not…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke recalls the double title reserved for the most accredited teachers"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘Master and Lord’",
+      "Christ accepts the titles",
+      "‘so I am’",
+      "premise of the exhortation"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.52
+      }
+    }
+  },
+  "14": {
+    "voices": [
+      "Charles Ellicott",
+      "John Calvin",
+      "A.T. Robertson",
+      "Albert Barnes",
+      "John Wesley",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott spells out the inference: if the Lord himself stoops so low, much more must the disciples humble themselves for one another; Robertson notes the first-class condition, which concedes the fact rather than supposing it, and glosses the verb rendered ought as owing a debt, so that the…;…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Calvin identifies the form of the argument as one from the greater to the less, and Ellicott spells out the inference: if the Lord himself stoops…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley presses the same case with an argument from silence that is hard to answer: why do we never read of any one apostle washing the…; Clarke spells out what that means in practice: they should be ready, after his example, to condescend to all the weakness of their brethren, to be…"
+      }
+    ],
+    "debates": [
+      {
+        "question": "Does this institute a literal foot-washing ordinance?",
+        "sides": [
+          {
+            "position": "no — it commands humble mutual service, of which the act is a parable",
+            "holders": [
+              "Albert Barnes",
+              "John Wesley",
+              "John Calvin"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [],
+    "themes": [
+      "‘wash one another’s feet’",
+      "greater to less",
+      "literal rite or humility?",
+      "mutual lowly service"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.58
+      }
+    }
+  },
+  "15": {
+    "voices": [
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Gill",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott locates the example in the principle and not in the specific act, and rests the distinction on the grammar: the clause does not say that…; Robertson glosses the noun as an illustration set before the eyes, and notes that Peter, with this incident evidently in mind, calls Christ a pattern (…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill marks out which of Christ’s acts are imitable and which are not; Calvin guards the same point and then gives it an edge, holding that we are not at liberty to take all Christ’s actions without reserve as…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘I have given you an example’",
+      "principle not the act",
+      "Christ the pattern",
+      "discriminating imitation"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.61
+      }
+    }
+  },
+  "16": {
+    "voices": [
+      "A.T. Robertson",
+      "Adam Clarke",
+      "Albert Barnes",
+      "John Gill",
+      "Augustine",
+      "John Calvin",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson sets out the two comparisons it draws, slave against lord and the one sent against the one who sent him; Barnes draws a different consequence from the same words, that the disciples were to manifest the same spirit their Master did and to expect the same…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke would render the second term as apostle, and takes the whole saying as aimed at the suppression of all worldly ambition and lordly conduct in…; Wesley applies it to both halves of discipleship, that a servant not greater than his lord ought therefore to think much neither of doing nor of…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill marks the weight of the opening formula, the doubled asseveration being used when something of moment and importance, worthy of attention, is about to be…; Calvin enters one caution about how far to press the saying: these are proverbial sayings which admit of a far more extensive…"
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine sums the scene in a phrase, that Christ said this because he had washed the disciples’ feet, as the Master of humility both by word…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "servant not greater than lord",
+      "against lordly ambition",
+      "greater has served",
+      "humility not optional"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.52
+      }
+    }
+  },
+  "17": {
+    "voices": [
+      "Charles Ellicott",
+      "Albert Barnes",
+      "John Gill",
+      "Adam Clarke",
+      "John Calvin",
+      "A.T. Robertson",
+      "Augustine"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott locates the blessing precisely: it lies in the doing and not in the knowing; Barnes and Gill draw the practical consequence, that to understand Christ’s teaching about humility and not practise it is to forfeit the happiness the teaching promises…; Robertson notes that both clauses are…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Barnes and Gill draw the practical consequence, that to understand Christ’s teaching about humility and not practise it is to forfeit the happiness the teaching promises…; Calvin presses the same distinction into a definition, holding that knowledge is not entitled to be called true unless it…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke states where happiness actually lies, that it consists in the knowledge of God and in obedience to him, and that a man is not happy…"
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine states the pronouncement in its plainest form, that blessed they shall be if they do them"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "knowing vs. doing",
+      "‘happy are ye if ye do them’",
+      "blessing on obedience",
+      "against mere profession"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.93
+      }
+    }
+  },
+  "18": {
+    "voices": [
+      "Albert Barnes",
+      "Charles Ellicott",
+      "Chrysostom",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Barnes takes the clause about choosing of the choice to apostleship (compare John 6:70 ;; Ellicott notes the emphatic I know, and the consequence that nothing in what follows takes Christ by surprise"
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom dwells on the fall itself rather than the prophecy, observing that it is a grievous thing to come to the depths of wickedness, for then…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Calvin explains why the warning is spoken aloud at all, and finds two purposes in it"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘I speak not of you all’",
+      "Ps 41:9 fulfilled",
+      "Judas chosen to office",
+      "betrayal foreseen"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.05
+      }
+    }
+  },
+  "19": {
+    "voices": [
+      "A.T. Robertson",
+      "John Gill",
+      "Albert Barnes",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson renders the opening adverb as from now on, and parses the three clauses in order: before it comes to pass, whenever it does come to…; Barnes explains the evidential force the fulfilment would have; Ellicott adds the consideration that makes the forewarning necessary rather than merely…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill reduces the clause to its plain content, that Christ gave them notice beforehand that one of them should betray him; Calvin generalises the comfort beyond this one event"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke agrees that the frequent predictions of his death, so circumstantial as they were, tended to confirm the disciples not only in the belief that he…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "foretold to confirm faith",
+      "‘that I am he’",
+      "Christ’s foreknowledge",
+      "betrayal a buttress of belief"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.62
+      }
+    }
+  },
+  "20": {
+    "voices": [
+      "Charles Ellicott",
+      "Chrysostom",
+      "Adam Clarke",
+      "John Wesley",
+      "Albert Barnes",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott traces the connection to the disciples’ commission: having spoken of their being sent as his servants, of the betrayal by one of their number, and…; Barnes is franker about the difficulty, saying that why Christ repeats the saying at this time cannot now be known, and that it is not…"
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom marvels at the dignity being conferred and puts it as a question, asking what can be equal to the receiving of Christ and his Father"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke reads the same words as encouragement about the mission’s prospects, that though the disciples should be rejected by many they would be received by several…; Wesley compresses the whole into one clause, that Christ puts his own honour upon them as his ambassadors"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Calvin judges that Christ intended by this to provide against a particular scandal, the stumbling that Judas’s crime might cause among the rest"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘he that receiveth you receiveth me’",
+      "dignity of the apostleship",
+      "union with the Sender",
+      "guard against the scandal of Judas"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.34
+      }
+    }
+  },
+  "21": {
+    "voices": [
+      "Augustine",
+      "Chrysostom",
+      "Albert Barnes",
+      "Adam Clarke",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine raises the obvious question about the trouble and dismisses the obvious answer"
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom supplies another occasion for it, that having twice promised help to the apostles in their future labours, Christ remembers that the traitor is cut off…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "single",
+        "summary": "Barnes grounds the agitation in Christ’s true humanity, saying he was deeply affected with the ingratitude and wickedness of a professed friend, his tender sensibilities being…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke attends to the verb for testifying, which means that he spoke with great earnestness, and raises the question whether even now Christ sought Judas’s benefit…; Wesley notes the advantage of that reticence, that speaking thus indefinitely at first was profitable to them all, since it set…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘troubled in spirit’",
+      "‘one of you shall betray me’",
+      "Christ’s true humanity",
+      "wound of betrayal"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.13
+      }
+    }
+  },
+  "22": {
+    "voices": [
+      "John Gill",
+      "Albert Barnes",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill describes the look as that of men surprised and astonished, scarcely crediting what was said, having had no suspicion of anyone among them capable of…; Calvin reads the distribution of unease as the point of the scene"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "majority",
+        "summary": "Barnes glosses the word for doubting as that kind of anxiety a man feels when he is in perplexity and knows not what to say or…; Ellicott notes why John would remember it, since he was nearest to our Lord and knew what the others may not have known, how Peter beckoned…; Robertson observes that…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "the disciples’ bewilderment",
+      "‘doubting of whom he spake’",
+      "hidden hypocrisy",
+      "self-suspicion of tender consciences"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.49
+      }
+    }
+  },
+  "23": {
+    "voices": [
+      "A.T. Robertson",
+      "John Lightfoot",
+      "John Gill",
+      "Albert Barnes",
+      "John Wesley",
+      "Adam Clarke",
+      "Bede",
+      "Augustine"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Gill, Lightfoot and Robertson explain the posture before the intimacy; Lightfoot and Robertson explain the posture before the intimacy; Barnes guards against a misunderstanding of the English, that John was not actually lying on Christ’s bosom at that moment but occupied the place next to…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill, Lightfoot and Robertson explain the posture before the intimacy"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke and Wesley describe the same arrangement, and Wesley suggests that Christ may now have given John the first proof of his peculiar love by disclosing…"
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "several",
+        "summary": "Bede reads the posture as a sign as well as a fact; Augustine presses the figure through the word itself, asking what else is signified by bosom but secret, and calling it the hollow of the breast, the…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "the beloved disciple (John)",
+      "reclining on Jesus’ bosom",
+      "modest self-designation",
+      "nearness of love"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.37
+      }
+    }
+  },
+  "24": {
+    "voices": [
+      "John Gill",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "Chrysostom"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill reconstructs the difficulty Peter was in. He perhaps lay at some distance from Christ, or in such a position that he could not whisper to…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott notes that the Greek is present tense, so that Peter beckons or makes a sign, and he reads the appeal as resting on an assumption…; Robertson glosses the verb as nodding and reads Peter’s character out of the gesture, that he was cautious but could not contain his curiosity;"
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom names the reason John held that place, and will not look for a subtler one: others were loved, but he was loved more than any…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "Peter beckons to John",
+      "silent signs at table",
+      "the two apostles’ temperaments",
+      "access through nearness"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.93
+      }
+    }
+  },
+  "25": {
+    "voices": [
+      "A.T. Robertson",
+      "Albert Barnes",
+      "Adam Clarke",
+      "John Wesley",
+      "John Gill",
+      "Charles Ellicott"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson marks the participle for falling back and adds that it was easily done from where he lay; Barnes explains that it means falling back, or laying his head back on the bosom of Jesus, so that he could speak to him privately without…; Ellicott notes that several good authorities, including…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke infers the same from the secrecy of what follows, that John altered his position at table in order to ask, and that he asked by…; Wesley puts it in a phrase, leaning down and so asking him privately"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill pictures the movement exactly: lying on the couch just in front of Jesus with his back toward him, John bends backwards, falls on his breast…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘Lord, who is it?’",
+      "the whispered question",
+      "intimacy and reverence",
+      "private inquiry of Christ"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 1.23
+      }
+    }
+  },
+  "26": {
+    "voices": [
+      "A.T. Robertson",
+      "John Lightfoot",
+      "Adam Clarke",
+      "John Wesley",
+      "Augustine",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson explains the morsel, a word found only here in the New Testament, and the custom behind it, since it was a token of intimacy to…; Lightfoot and Clarke note that for the host to dip and then hand the sop to a particular guest was a very unusual thing, which is…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Lightfoot and Clarke note that for the host to dip and then hand the sop to a particular guest was a very unusual thing, which is…; Wesley draws out the care in it, that Jesus answered John in his ear, so careful was he not to offend, if it had been possible…"
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine meets the objection the next verse will raise, that Satan entered Judas after he had received bread from Christ’s hand, and asks whether this was…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Calvin asks why a sign was used at all, when Christ might simply have named the man"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "the sop",
+      "token of intimacy",
+      "revealed to one only",
+      "love’s last gift to the traitor"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.25
+      }
+    }
+  },
+  "27": {
+    "voices": [
+      "A.T. Robertson",
+      "Charles Ellicott",
+      "Albert Barnes",
+      "John Lightfoot",
+      "John Wesley",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "majority",
+        "summary": "Robertson notes that this is the only place in the Gospel where the name Satan occurs, and the sequence matters: the devil had before this put…; Ellicott fixes the instant precisely, that it was then, when the heart hardened itself to receive from Jesus the sacred pledge of love while it was…;…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley insists it is not a permission, much less a command, but as if he had said that if Judas is determined to do it, why…; Clarke agrees, judging Judas past all counsel by this point, and reading the words as those of a master of his own hour who would not…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘Satan entered into him’",
+      "grace refused, the door to Satan",
+      "‘that thou doest, do quickly’",
+      "Christ master of his hour"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.21
+      }
+    }
+  },
+  "28": {
+    "voices": [
+      "Albert Barnes",
+      "John Gill",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "majority",
+        "summary": "Gill and Barnes note the ignorance as a simple fact of the scene; Ellicott reads the sentence as a comment of the Apostle’s own, written in remembrance of the impression made at the time: they heard the words spoken…; Robertson states it plainly, that the disciples had not yet perceived the…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill and Barnes note the ignorance as a simple fact of the scene; Calvin asks the harder question, why the knowledge John now possessed did not spread at once, and offers two answers"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "the company’s ignorance",
+      "traitor still hidden",
+      "want of discernment",
+      "hypocrites undetected"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 1.45
+      }
+    }
+  },
+  "29": {
+    "voices": [
+      "Albert Barnes",
+      "John Gill",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Calvin",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Gill and Barnes recall that Judas had the bag, the common purse of the company (compare John 12:6 ), so that when Christ told him to…; Ellicott and Robertson note how exactly the guess fits the office he held, and the irony follows from that fit, since the very trust that made…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill and Barnes recall that Judas had the bag, the common purse of the company (compare John 12:6 ), so that when Christ told him to…; Calvin draws a small but telling inference from the guess itself: it is plain from other passages how great Christ’s poverty was, and yet out of…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke adds a chronological observation he takes from Calmet, and it bears on the harmony of the Gospels"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "Judas had the bag",
+      "innocent misreading",
+      "errand of charity imagined",
+      "treachery under a servant’s guise"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.78
+      }
+    }
+  },
+  "30": {
+    "voices": [
+      "A.T. Robertson",
+      "John Lightfoot",
+      "John Wesley",
+      "Charles Ellicott",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "majority",
+        "summary": "Robertson marks the haste in the adverb, that Judas went out immediately, the deed now set in motion and the supper left behind; Lightfoot reckons what the errand involved, since the man had two miles to go from Bethany to Jerusalem, and then had to seek out the chief…; Robertson and Ellicott…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley adds what became of him afterwards, that he went out to the chief priests and returned, being with them when they ate the passover though…; Clarke puts the two senses together in one clause, that under the conduct of the prince of darkness, and in the time of darkness, Judas went…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "Judas departs immediately",
+      "‘and it was night’",
+      "symbolic darkness",
+      "apostasy as going into the night"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.69
+      }
+    }
+  },
+  "31": {
+    "voices": [
+      "A.T. Robertson",
+      "Albert Barnes",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "Origen",
+      "John Calvin",
+      "Matthew Henry",
+      "John Gill"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson reads it as now at last, the crisis having come, with a sense of deliverance from the presence of Judas and of surrender to the…; Barnes explains what has just been completed: the last deed is done that was necessary to secure the death of the Son of man, and with…; Ellicott explains…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke paraphrases the claim being made, that now it fully appears he is the person appointed to redeem a lost world by his blood, having been…"
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen dates the moment the same way, that after the glory of the miracles and the transfiguration, the next glorifying of the Son of man began…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin explains the pastoral need the saying met; Gill reads the same freedom in it, that Christ and his true disciples being now alone, he used a greater liberty of conversation with them"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry notices the change of register the departure allows, that what follows was Christ’s table-talk with his disciples, who applied themselves to profitable discourse once the…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘now is the Son of man glorified’",
+      "glory in the cross",
+      "Judas gone, discourse begins",
+      "victory through death"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.07
+      }
+    }
+  },
+  "32": {
+    "voices": [
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "Albert Barnes",
+      "Adam Clarke",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "majority",
+        "summary": "Ellicott’s formulation is careful: a humiliation by which God stands manifested to the world constitutes God’s honour in the person of the Son of man, and…; Robertson concurs that God is both the fountain of such glory ( John 17:5 ) and the one who bestows it after Calvary; Barnes reads the…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke looks for an earnest of it even within the Passion, finding one in the moment when the band that came to seize him fell to…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Calvin draws out the reciprocity the verse states"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "mutual glory of Father and Son",
+      "‘glorify him in himself’",
+      "‘straightway’",
+      "cross then exaltation"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.47
+      }
+    }
+  },
+  "33": {
+    "voices": [
+      "A.T. Robertson",
+      "Adam Clarke",
+      "Albert Barnes",
+      "John Lightfoot",
+      "Augustine",
+      "Origen",
+      "John Wesley",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson calls it an affectionate diminutive used by Jesus only here in this Gospel, though common in the First Epistle ( 1 John 2:1 ), as…; Barnes explains why the term fits here, as denoting both their need of teaching and guidance and the deep interest in their welfare that a parent…;…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke renders it beloved children, such as a fond mother uses to her most beloved babes, and adds the circumstance that made it possible, that now…; Wesley supplies the qualification that makes the difference, that they cannot come not yet, being not yet ripe for it"
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine guards the saying against a misunderstanding the previous verse invites"
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen reads the diminutive as a comment on their condition, that he calls them little children because their souls were yet in infancy"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Calvin reads the verse as warning and comfort held together"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘little children’",
+      "a little while",
+      "‘ye cannot come’ in love",
+      "weaning from his presence"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.17
+      }
+    }
+  },
+  "34": {
+    "voices": [
+      "Augustine",
+      "A.T. Robertson",
+      "Adam Clarke",
+      "Albert Barnes",
+      "Charles Ellicott",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine raises the obvious objection against himself. Had Moses not required as much already, writing that a man shall love his neighbour as himself?"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson locates the newness elsewhere, in the practice and the measure; Barnes finds the newness in its function, the commandment being given as a badge of discipleship by which they should be distinguished from all others; Ellicott sets the contrast differently again, not against the…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke presses that standard to its conclusion. Under Moses a man should love his neighbour as himself; Christ more than fulfilled the Mosaic precept, since he…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Calvin reads it as the exhortation that crowns the consolation, and makes it the proof the absence will demand: while he is absent from them in…"
+      }
+    ],
+    "debates": [
+      {
+        "question": "Why is the commandment to love called ‘new’?",
+        "sides": [
+          {
+            "position": "new in standard/degree — ‘as I have loved you’ (the cross)",
+            "holders": [
+              "Adam Clarke",
+              "A.T. Robertson",
+              "Albert Barnes"
+            ]
+          },
+          {
+            "position": "new because it renews us / belongs to the new covenant",
+            "holders": [
+              "Augustine of Hippo"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [],
+    "themes": [
+      "the new commandment",
+      "‘as I have loved you’",
+      "love measured by the cross",
+      "law of the new covenant"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.15
+      }
+    }
+  },
+  "35": {
+    "voices": [
+      "Albert Barnes",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Gill",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Barnes states the mark negatively before he states it positively, and the negatives are the point; Ellicott finds the choice remarkable in itself. The followers of great Teachers and Rabbis had their distinctive marks, and here is the distinctive Christian mark which…; Robertson adds the test…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke cites Tertullian’s Apology for the very words, and makes the same contrast, that the followers of other teachers were known by their habits or some…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill distinguishes three things the mark establishes, which are not the same; Calvin makes the mark a test that can fail in two directions"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "love the badge of discipleship",
+      "‘by this shall all men know’",
+      "public testimony",
+      "seal of the new commandment"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.38
+      }
+    }
+  },
+  "36": {
+    "voices": [
+      "John Gill",
+      "Matthew Henry",
+      "Chrysostom",
+      "Augustine",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill notices what Peter does not respond to, and finds it telling rather than blameworthy; Calvin uses the exchange as a mirror: it shows how ignorant Peter was, who after so many warnings about Christ’s departure was as perplexed as if…"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry is less indulgent and turns it into a general fault, that it is common among us to be more inquisitive about things secret, which belong…"
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom reads the question as love rather than curiosity"
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine agrees that the disciple asks as one ready to follow, and notes that Christ saw his heart"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke identifies both reasons for the delay, that Peter had not yet faith strong enough to die for him and that his work was not yet…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "single",
+        "summary": "Ellicott puts the same thought in terms of order, that for Peter as for the others the place must be prepared and the way opened before…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘Lord, whither goest thou?’",
+      "‘follow afterwards’ (martyrdom)",
+      "Peter’s love",
+      "not yet ready"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.1
+      }
+    }
+  },
+  "37": {
+    "voices": [
+      "A.T. Robertson",
+      "Charles Ellicott",
+      "John Gill",
+      "Adam Clarke",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson marks the impatience in the adverb, since Peter asks why he cannot follow this very minute rather than at this time, a sharper word than…; Ellicott as entirely in character, Peter being impulsive and self-confident and impatient of the delay imposed on him, ready in the fulness of his…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill reads the question as dissatisfaction with the answer given, and Ellicott as entirely in character, Peter being impulsive and self-confident and impatient of the delay…; Calvin names the fault precisely and generalises it"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke supplies a guess at what Peter imagined was meant"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘I will lay down my life’",
+      "presumptuous self-confidence",
+      "overrating one’s strength",
+      "prelude to the denial"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.75
+      }
+    }
+  },
+  "38": {
+    "voices": [
+      "John Gill",
+      "John Lightfoot",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill reads the tone of the reply with some care, and rules out one possibility; Calvin draws the lesson against presumption and is careful about its purpose"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "single",
+        "summary": "Lightfoot is precise about the prophecy, and corrects a reading that would make it fail"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "‘the cock shall not crow’",
+      "denial foretold",
+      "rebuke of presumption",
+      "the denier to become the martyr"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-01",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.14
+      }
+    }
   }
- },
- "2": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Supper being ended’ is a mistranslation — ‘during supper’ (ginomenou), the meal still going (vv.4, 26); the devil ‘put it into the heart’ of Judas (Lk 22:3; 6:70), John’s ‘already’ pertinent."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: John notes the betrayal here to show Christ’s wonderful patience — he washes the feet even of the traitor, choosing the time near death for this last act."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘during supper’ not ‘ended’",
-   "the devil and Judas",
-   "Christ’s patience with the traitor",
-   "setting of the foot-washing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "In full consciousness of his supreme dignity — all things given him (Mt 28:18), come from and going to God (16:28) — he stoops to a slave’s task, the kenosis of Phil 2:6-7; the height measures the depth of the condescension."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and others: not in ignorance but in full knowledge of his greatness he humbles himself, leaving a lesson of humility to cure the disciples’ ambition."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "supreme dignity",
-   "‘all things into his hands’",
-   "kenosis (Phil 2)",
-   "height measuring the stoop"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Each step is the servile preparation of a slave — laying aside the outer garments, girding with a towel — the Master deliberately taking the servant’s part."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and others read it as an acted parable of the incarnation/kenosis: he lays aside the tokens of majesty to clothe himself as a servant (Phil 2:7), prefiguring the stripping of the cross."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "laying aside the garments",
-   "girded with a towel",
-   "the servant’s part",
-   "acted parable of the kenosis"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Foot-washing was the lowest slave’s office (dusty sandalled feet, water provided by a host, Lk 7:44); that Jesus pours, washes, and wipes each disciple’s feet inverts every expectation."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and others: the act enacts the love of v.1 (love that kneels) and pictures cleansing — the daily washing the believer needs (opened in v.10)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "washing the disciples’ feet",
-   "the lowest servile office",
-   "lesson in humility",
-   "picture of cleansing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "Origen",
-   "Theophylact",
-   "Augustine of Hippo",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Peter’s startled ‘Dost thou my feet wash?’ (emphatic pronouns); the order (Peter first or after another) is uncertain and unimportant."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: who would not fear to have his feet washed by the Son of God? Peter’s audacity is reverence; Origen: the physician washes the most unclean first, Peter last."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the protest, though seemingly modest, forgets that obedience outweighs honour — a humility that, refusing Christ’s command, becomes pride."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘Lord, dost thou wash my feet?’",
-   "order of washing",
-   "reverence vs. obedience",
-   "unsubmissive humility"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A gentle rebuke (emphatic ‘I… thou’): Peter does not now grasp the symbolic act but ‘shall know hereafter’ (meta tauta) — chiefly in the explanation of vv.14-17, known ‘by experience.’"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: we must obey Christ even without perceiving the reason — to refuse obedience for lack of a reason is haughtiness; Wesley: enough to love and obey now, knowing hereafter."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘thou shalt know hereafter’",
-   "obedience before understanding",
-   "faith’s submission",
-   "the act then explained"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Peter’s vehement ‘never’ shows the impulsive, self-confident disciple; Christ’s ‘if I wash thee not, thou hast no part with me’ lifts the act to its spiritual sense — washing in his blood/Spirit; ‘the first condition of discipleship is self-surrender.’"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: reverence turned to obstinacy — ignorance followed by obstinacy; misplaced respect cannot excuse refusing Christ’s command."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘thou shalt never wash my feet’",
-   "‘no part with me’",
-   "self-surrender",
-   "cleansing by Christ alone"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Peter swings from refusal to excess — ‘not my feet only’ — fearing to lose communion; ‘a moment ago too much, now too little’ (Dods); ardour half-grasping the spiritual meaning."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: necessity tames him to yield, yet he errs through thoughtlessness, undervaluing the cleansing already received; Wesley: well-meant but ignorant earnestness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘not my feet only’",
-   "from refusal to excess",
-   "overcorrection",
-   "prelude to v.10"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "Augustine of Hippo",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Two verbs: the ‘bathed’ man (leloumenos, regenerated/justified, ‘clean every whit’) needs only to ‘wash’ (nipsasthai) his feet — the daily defilements of his walk, not a fresh regeneration."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: ‘but not all’ — the betrayer; outward washing cannot cleanse a heart harbouring betrayal (explained in v.11)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "bathed vs. washing the feet",
-   "once-for-all and daily cleansing",
-   "‘clean every whit’",
-   "‘but not all’ (the betrayer)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "John explains ‘not all clean’ as Judas — his feet washed but his heart, harbouring the betrayal (v.2), unclean; outward grace cannot cleanse an unrenewed soul, and Christ knew the traitor from the first."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the betrayer unclean",
-   "outward washing not enough",
-   "Christ knew the traitor",
-   "warning to the church"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "Augustine",
-   "Origen",
-   "Alcuin",
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "He reclines again and asks the searching ‘Know ye what I have done?’ (perhaps imperative, ‘Consider’) — to direct them to the meaning he is about to give, the act done to all twelve."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: he begins to fulfil his promise to teach Peter; Alcuin finds in his taking his garments again an image of the risen Lord resuming his glory."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he discloses his intention — that all the godly follow him in not grudging the lowliest service to their brethren."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘Know ye what I have done?’",
-   "act explained",
-   "Christ resumes his garments",
-   "pattern of humble service"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Master’ (Teacher) and ‘Lord’ (sovereign reverence) were the honoured rabbinic titles rightly given him; he accepts them — ‘so I am’ — establishing the greatness on which the coming lesson rests."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘Master and Lord’",
-   "Christ accepts the titles",
-   "‘so I am’",
-   "premise of the exhortation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Argument from greater to less: if the Lord washed their feet, they ‘owe’ one another the lowliest service; most (Barnes, Wesley) hold it commands humble love, not a literal rite (no apostle is recorded washing feet)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: pride hinders the equality that should exist; the exalted Lord stoops to shame the proud who think themselves above serving the brethren."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does this institute a literal foot-washing ordinance?",
-    "sides": [
-     {
-      "position": "no — it commands humble mutual service, of which the act is a parable",
-      "holders": [
-       "Albert Barnes",
-       "John Wesley",
-       "John Calvin"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "‘wash one another’s feet’",
-   "greater to less",
-   "literal rite or humility?",
-   "mutual lowly service"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The example (hypodeigma) is in the principle, not the specific act — ‘according as’ I have done; Christ is the believer’s pattern (1 Pet 5:3; 2:21) in grace and humility, not in his unrepeatable works."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: not all his actions are for imitation (against keeping Lent by his fast) — we copy the spirit, not every outward deed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘I have given you an example’",
-   "principle not the act",
-   "Christ the pattern",
-   "discriminating imitation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "Augustine of Hippo",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The proverb (Mt 10:24; Jn 15:20): the servant is not above his lord, nor the apostle above his sender — aimed to suppress lordly ambition; expect the world’s treatment too (Mt 10:25)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Augustine: he said it because he had washed their feet, ‘the Master of humility both by word and example.’"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "servant not greater than lord",
-   "against lordly ambition",
-   "greater has served",
-   "humility not optional"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Knowing these things confers no blessing; the beatitude is ‘if ye do them’ — happiness lies in the doing, not the knowing, a warning against mistaking grasp of a duty for its discharge."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and others: knowledge of humble love without practice only increases responsibility; the blessing rests on the obedient, not the learned."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "knowing vs. doing",
-   "‘happy are ye if ye do them’",
-   "blessing on obedience",
-   "against mere profession"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Not of you all’ excepts Judas; ‘whom I have chosen’ = chosen to apostleship (6:70; Lk 6:13); the betrayal fulfils Ps 41:9 — the table-companion who ‘lifted up his heel.’"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Christ names the traitor to render Judas inexcusable and to keep the others from being overthrown by his ruin; Chrysostom: the horror of falling to the depths."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘I speak not of you all’",
-   "Ps 41:9 fulfilled",
-   "Judas chosen to office",
-   "betrayal foreseen"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "He foretells the betrayal ‘before it come’ so that its fulfilment may confirm their faith that ‘I am he’ (8:24) — proof of his knowledge of the heart and divine mission."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a reprobate among them should not discourage but confirm faith — when Scripture agrees with experience, belief is established."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "foretold to confirm faith",
-   "‘that I am he’",
-   "Christ’s foreknowledge",
-   "betrayal a buttress of belief"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The mission-saying (Mt 10:40) set amid the betrayal: to receive the sent apostle is to receive Christ, and through him the Father — comfort that they will be received by some though rejected by many."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: set to guard against the scandal of Judas — the apostles’ ministry stands in unbroken union with Christ and the Father; Wesley: ‘I put my own honour upon you.’"
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Chrysostom: what can equal receiving Christ and the Father? — the dignity conferred on the servants of God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘he that receiveth you receiveth me’",
-   "dignity of the apostleship",
-   "union with the Sender",
-   "guard against the scandal of Judas"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "Chrysostom",
-   "Origen",
-   "Bede",
-   "Augustine of Hippo",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "His trouble springs from his true humanity — wounded by a professed friend’s treason; he ‘testified’ (spoke earnestly) and now states plainly what he had hinted: ‘one of you shall betray me.’"
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: troubled ‘in spirit, not flesh,’ by his own will, as at Lazarus’ grave (11:33), being about to single out the traitor; Chrysostom: troubled that the traitor is cut off from the promises."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘troubled in spirit’",
-   "‘one of you shall betray me’",
-   "Christ’s true humanity",
-   "wound of betrayal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The eleven, wholly surprised, look one on another, unable to name the traitor (the Synoptics: each asks ‘Lord, is it I?’) — proof Judas had perfectly concealed his purpose."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and others: hypocrisy may lie hidden in the closest fellowship; their suspecting themselves rather than each other marks humble, tender consciences."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the disciples’ bewilderment",
-   "‘doubting of whom he spake’",
-   "hidden hypocrisy",
-   "self-suspicion of tender consciences"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "Origen",
-   "Bede",
-   "Augustine",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The reclining custom (propped on the left arm) put ‘the disciple whom Jesus loved’ — John himself, veiling his name in modesty — next to Christ, resting on his breast (en tō kolpō), the place of nearest fellowship."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede/Augustine: the bosom signifies secret — ‘the secret chamber of wisdom’ — a sign of the deep doctrines John would later reveal, the eagle drawing from Christ’s breast."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the beloved disciple (John)",
-   "reclining on Jesus’ bosom",
-   "modest self-designation",
-   "nearness of love"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "The cautious-but-curious Peter, at some distance, beckons (neuei) to John — nearest Jesus and his lifelong companion (1:40; Acts 3:1) — to ask who the traitor is; a vivid eye-witness touch."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Peter beckons to John",
-   "silent signs at table",
-   "the two apostles’ temperaments",
-   "access through nearness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "John ‘falls back’ (anapesōn, a different word from v.23) onto Jesus’ breast to ask privately, in a whisper unheard by the others (v.28) — reverence (‘Lord’) joined to closeness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘Lord, who is it?’",
-   "the whispered question",
-   "intimacy and reverence",
-   "private inquiry of Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "Augustine of Hippo",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The dipped ‘sop’ (psōmion) was a token of intimacy (Ruth 2:14; Mk 14:20); unusual to hand it, the others took it as favour or an errand and missed the sign; Christ answered John ‘in his ear,’ sparing Judas."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the sign revealed Judas to John alone (a witness for later), Christ delaying the public exposure; Augustine: the bread was a sign, not poison — the guilt lay in the heart receiving love while plotting murder."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sop",
-   "token of intimacy",
-   "revealed to one only",
-   "love’s last gift to the traitor"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Satan (only here in John) enters to confirm the deed already in Judas’ heart (v.2; Lk 22:3) at the moment he takes the pledge of love while plotting murder; Lightfoot’s type — the second Adam betrayed by one Satan first entered."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "‘Do quickly’ is neither permission nor command (Wesley) but ‘why delay?’ — Christ, master of his hour, will not have it drawn out; the sop was not the Lord’s Supper (Clarke)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘Satan entered into him’",
-   "grace refused, the door to Satan",
-   "‘that thou doest, do quickly’",
-   "Christ master of his hour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "John’s comment that none at the table grasped the meaning of ‘do quickly’ — the traitor revealed to John alone, the rest not perceiving Judas’ heart."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: John had not yet told the others, or all were struck dumb; few in the Church discern the hypocrites the Lord condemns."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the company’s ignorance",
-   "traitor still hidden",
-   "want of discernment",
-   "hypocrites undetected"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Judas held the bag (12:6), so the others took ‘do quickly’ as an errand — to buy for the feast or give to the poor; the office that hid his theft now masks his treachery (Clarke notes the chronology bearing)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Judas had the bag",
-   "innocent misreading",
-   "errand of charity imagined",
-   "treachery under a servant’s guise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Judas goes ‘immediately out’ (euthys), the deed set in motion; ‘and it was night’ is both a note of time and a symbolic darkness — he leaves the light of the world (8:12) for the night of the hour and of his soul."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Judas departs immediately",
-   "‘and it was night’",
-   "symbolic darkness",
-   "apostasy as going into the night"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "Origen",
-   "Augustine of Hippo",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "With Judas gone, the death is set in motion; Christ calls it glory (‘now is glorified,’ aorist, 4×) — the cross the consummation of the Son’s and the Father’s glory (12:23)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he supports the weak disciples by showing he triumphs in the cross over Satan, sin, and death; Origen: the going-out of Judas opens the glorifying."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘now is the Son of man glorified’",
-   "glory in the cross",
-   "Judas gone, discourse begins",
-   "victory through death"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The future glory of the Father’s throne: if God is glorified in the Son’s death, God will ‘straightway’ glorify the Son ‘in himself’ (17:5) — cross then quickly ascension, with no postponement."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the Son glorifies the Father in the cross, and the Father makes the Son partaker of that glory — illustrious honour displayed beyond the brief ignominy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "mutual glory of Father and Son",
-   "‘glorify him in himself’",
-   "‘straightway’",
-   "cross then exaltation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "Augustine",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The tender ‘little children’ (teknia, only here in the Gospel, common in 1 John) frames the warning of departure; ‘whither I go ye cannot come’ — said to the Jews (7:33; 8:21) but now in love, not judgment."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: ‘yet a little while’ — he will be with them forty days after the resurrection before ascending; not glorified away from them at once."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: warning and comfort together — he restrains their eagerness to follow, yet the gentle name shows his care for their welfare."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘little children’",
-   "a little while",
-   "‘ye cannot come’ in love",
-   "weaning from his presence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "Augustine of Hippo",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘New’ not in substance (Lev 19:18 commanded neighbour-love) but in standard and degree — ‘as I have loved you,’ a love that washes feet and lays down life; a badge of discipleship."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: new because it renews us, dividing from the old man; Calvin: the exhortation crowning the consolation — testify by mutual love."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Why is the commandment to love called ‘new’?",
-    "sides": [
-     {
-      "position": "new in standard/degree — ‘as I have loved you’ (the cross)",
-      "holders": [
-       "Adam Clarke",
-       "A.T. Robertson",
-       "Albert Barnes"
-      ]
-     },
-     {
-      "position": "new because it renews us / belongs to the new covenant",
-      "holders": [
-       "Augustine of Hippo"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the new commandment",
-   "‘as I have loved you’",
-   "love measured by the cross",
-   "law of the new covenant"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Mutual love (not power, knowledge, or profession) is the badge by which all men recognise Christ’s disciples — the credential the world can read."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and others: love after Christ’s pattern (v.34) is the public testimony of belonging to him — comfort where it is, rebuke where it is wanting."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "love the badge of discipleship",
-   "‘by this shall all men know’",
-   "public testimony",
-   "seal of the new commandment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "Chrysostom",
-   "Augustine of Hippo",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Peter, unable to bear separation, asks ‘whither goest thou?’; ‘thou canst not follow now, but afterwards’ points to his future martyrdom (21:18-19) — he is not yet ready for the way of the cross."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: ‘follow afterwards’ = follow in death, by martyrdom; Calvin: the deferral is a tender promise, not a refusal, restraining Peter’s untimely ardour."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘Lord, whither goest thou?’",
-   "‘follow afterwards’ (martyrdom)",
-   "Peter’s love",
-   "not yet ready"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Peter’s sincere but presumptuous self-confidence — demanding the ‘now’ and pledging to lay down his life, overrating his own strength, ignorant of his weakness."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he trusts too much to his own strength, forgetting that fidelity is grace’s gift, not the flesh’s power — his boast measures his blindness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘I will lay down my life’",
-   "presumptuous self-confidence",
-   "overrating one’s strength",
-   "prelude to the denial"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Christ echoes Peter’s boast as a question, then foretells precisely the opposite of his offered martyrdom — three denials before cockcrow, which the night fulfilled to the letter."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the rebuke teaches how frail human strength is when self-reliant; the plain prophecy is mercy — it will humble Peter and, fulfilled, confirm faith (v.19); yet the ‘afterwards’ (v.36) still stands."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘the cock shall not crow’",
-   "denial foretold",
-   "rebuke of presumption",
-   "the denier to become the martyr"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- }
 }
