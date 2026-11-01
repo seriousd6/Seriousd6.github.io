@@ -102800,6 +102800,98 @@
         "25"
       ],
       "note": "Cross-key attribution caught on review, the same defect I had just recorded as a legacy fault. Writing key 25 I reached for Augustine's phrase about the bosom being 'the secret chamber of wisdom' - which belongs to key 23's source block, not key 25's, where Augustine does not appear among the voices at all. The setmeta verification pass flagged Augustine as named in prose but not detected, which is what sent me back to look. Removed. The lesson is that the verification pass earns its keep for exactly this: it does not check fidelity, but a name present in the prose and absent from the detected voices is a reliable signal that either the attribution is misplaced or the sentence is importing from a neighbouring key."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28",
+        "34"
+      ],
+      "note": "The Jamieson stride holds in a new book, and points somewhere new. Jamieson, Fausset and Brown blocks sit at keys 4, 10, 16, 22, 28 and 34 of john 13, all congruent to 4 modulo 6, the same stride 6 found in 1kings 1 and 1kings 2 but at offset 4 instead of 2. The residue here does not come from a neighbouring book: it comes from JOHN 1, and it walks forward as the target walks forward, key 4 on the thesis of John 1:14, key 10 on John 1:10, key 16 on grace for grace in John 1:16, key 28 on the baptism and John 1:29, key 34 on the Baptist at the baptism. So the stride sweep is specifiable per book without reading the blocks: find stride and offset from two adjacent chapters, confirm the source position advances monotonically, and strip every key at that congruence. One caution for the sweep: the residue cannot be disowned through excluded_voices in this chapter either, because the stride blocks are long enough to look like commentary and the declaration machinery has its own gap (see the separate note on Cyril of Jerusalem)."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "3",
+        "16",
+        "20",
+        "21",
+        "31",
+        "38"
+      ],
+      "note": "Cyril of Jerusalem residue is indexed by KEY NUMBER, not by content, and repeats across books. Six keys in john 13 carry Catechetical Lecture text (143-201 words each): key 3 on Pentecost and Joel, key 21, key 31, key 38, and critically key 16, which begins '30. And many are the proofs concerning the life eternal' and is the SAME BLOCK, word for word, that sits at key 16 of matthew 19. Two chapters in two different books carry identical Cyril text at the same key index. That makes the residue predictable before any reading: build a map from key number to Cyril block and strip it corpus-wide in one pass, rather than judging block by block. It also explains why the matthew 19 key-16 block read as topically relevant there, which it did only by accident of the lecture's subject. As at matthew 19, the residue cannot be declared in excluded_voices, since synthesis_qa._LABEL_RE matches 'Cyril' only when a colon follows immediately and the source label is 'Cyril of Jerusalem:'."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "2",
+        "6",
+        "13",
+        "21",
+        "31"
+      ],
+      "note": "A voice can be part residue and part genuine inside one chapter, so residue detection cannot work at voice level. Origen in john 13 has 201-word truncated blocks at keys 2 and 13 that are lifted from the earlier chapters of the Gospel (key 2 on the signs and the scourge of small cords, key 13 on the Logos title and 'the stupidity of the general run of Christians'), while keys 6, 21 and 31 carry real Catena-Origen on this chapter, 702, 423 and 1,593 words of it, some of the best material here. Any sweep that excludes a voice wholesale would have thrown away the physician who begins with the sickest, the hands and head refused, and the measure of glory by knowledge. The 201-word ceiling is the usable signal: it recurs from matthew 19, where Origen's blocks ran 201 words at five keys, so the truncation-length check should be run per source per chapter and the SHORT blocks checked for provenance, not the voice."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "26"
+      ],
+      "note": "A new defect class, and no existing check can catch it: one voice misreporting another voice present in the same catena. On the dipped sop, Lightfoot at key 26 writes 'This was a very unusual thing, to dip a sop and reach it to any one', and builds an inference on it, that the others took the gesture for a dismissal to Judas's errand. Clarke at the same key writes 'Dr. Lightfoot observes that it was no unusual thing to dip a sop and give it to any person', which is the reverse of what Lightfoot wrote, and then reasons from his own version. Barnes and Robertson side with Clarke's position on the manners, so the prose reports the split honestly and names Clarke's misquotation in the debates. The groundability and entity checks cannot see this, because both voices are grounded and every name is real; what is wrong is one voice's report of another. A detector would have to compare a quotation attributed to a named voice against that voice's own block in the same chapter, which the corpus can do wherever both blocks are present."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "21",
+        "30"
+      ],
+      "note": "The Catena's interior abbreviations make a genuine contribution undeclarable. Gregory's reading of 'and it was night', that by the time of day is signified the end of the action and that Judas went out in the night to accomplish a perfidy never to be pardoned, sits inside Bede's key-21 block as 'GREG.' and nowhere else in the chapter. Declaring Gregory therefore fails ungrounded_voices, which searches the lowered source pool for 'gregory' and finds only the abbreviation; the first assembly of this chapter was rejected for exactly that and I dropped the claim rather than misattribute it to Bede. The fix belongs at harvest: expand the standard Catena abbreviations (AUG., CHRYS., GREG., ORIG., THEOPHYL., HILAR., REMIG., ALCUIN) when the blocks are split, or give name_keys an abbreviation table. Until then, material carried under an abbreviated interior attribution is unusable, and the loss is silent, since nothing flags a claim the writer never made."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "6",
+        "12",
+        "18",
+        "21",
+        "27",
+        "31",
+        "36"
+      ],
+      "note": "A measured inefficiency, with a number attached. The eight first drafts of this chapter came in at 866, 958, 897, 791, 874, 890, 883 and 814 words against a 650 cap, between 22 and 47 per cent over, a mean of about 32 per cent, and every tile then took one or two trim rounds. The same overrun ran through matthew 19 and the two Kings chapters, so it is the method and not the material. Prescription for the next worker: budget each paragraph before writing and draft to roughly 480 to 500 words of content, since the attributive clauses, connectives and names add about a third. Trimming is not free either, because each round risks the drift the fidelity read-back is there to catch; two of the four entity signals in this chapter came out of trim rounds, not the first draft."
+    },
+    {
+      "at": "2026-11-01",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "13",
+      "verses": [
+        "1"
+      ],
+      "note": "The pericope_label split tracks TILING STYLE, not book. Inside John, the chapters rewritten as pericope tiles (6, 9, 11) all set pericope_label to the full KJV text of the range and write plain prose with no refs, no strong tags, ASCII apostrophes and no dashes; the chapters rewritten near per verse (1, 5, 14) use entity apostrophes, em dashes and strong tags. matthew 22, tiled with ranges, instead uses a short descriptive label. So there are two live label forms and the correlation is with how the chapter was tiled rather than with which book it is in. I followed the tiled John siblings here, full KJV text, 76 to 126 words a label. This is worth settling in the loop doc: the short form is what a renderer can put in a heading without truncation, while the full text duplicates the verse display beneath it."
     }
   ]
 }
