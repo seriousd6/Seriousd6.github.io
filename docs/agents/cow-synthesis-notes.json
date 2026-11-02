@@ -103247,6 +103247,128 @@
       "book": "luke",
       "chapter": "2",
       "note": "COLLISION: my full 52-verse rewrite of luke 2 was dropped at the push step - 'another run finished luke 2 first'. Worker A landed 0791f5fc, a 10-entry PERICOPE treatment (ranges 1-5, 6-7, 8-14, 15-20, 21-24, 25-32, 33-35, 36-40, 41-45, 46-52) covering all 52 verses, all grade A, no gaps. Their version is legitimate and the drop was correct; the chapter is done and the polish queue is now empty. But the cost is worth recording because it is the SECOND collision in this window and the mechanism is now clear. --spread 40 picks uniformly from the queue's first N, which prevents collisions only while the queue is longer than N. The polish queue was TWO chapters (luke 2 and john 7) when I picked, so --spread 40 degenerates to 'pick one of two' and two concurrent workers collide with probability 1/2 per draw. Earlier this window the same thing cost worker A a john 13 batch (see 40285ffb). Here it cost 93,012 usable source words of work: a chapter fully written, metadata regenerated, both validators green, chapter gate 0 violations with --enforce-all, fidelity 0.00%, sweep 0/52. Nothing in the pipeline claims a chapter, and the claim would be cheap - the driver already resets to origin/master before committing, so it could check at PICK time whether the chapter's head commit changed, or write a short-lived claim file. As the queues drain this gets worse, not better: 'to rewrite' is now the only substantial queue at 130 chapters, but polish and repair will keep reaching zero-or-two states where every concurrent draw collides. The dropped work survives for now as dangling commit 940186e8 if the per-verse treatment is ever wanted for comparison against the pericope one; it will be garbage-collected in due course. My notes for the chapter landed separately (0b6142ac) and remain valid, since all nine are chapter-level source and tooling findings that apply to worker A's version equally."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "8",
+        "18",
+        "25"
+      ],
+      "note": "Tiled 2samuel 2 in four pericopes on Matthew Henry's four heads, which sit at keys 1, 8, 18 and 25 (1509, 1539, 769 and 1104 words) and nowhere else: vv.1-7 the anointing at Hebron and the message to Jabesh, 8-17 Ishbosheth set up and the contest at Gibeon, 18-24 the death of Asahel, 25-32 the pursuit broken off and the burial. Seventh confirmation of the Henry-heads heuristic. The useful contrast is with luke 2, landed in the same session: that chapter needed TEN tiles because 93,012 source words over six pericopes would have given 0.04 expansion, whereas this chapter's 14,979 words over four tiles give 0.145 to 0.322, squarely in the 0.11-0.22 band the luke 7 note calls normal for the Old Testament. The rule that falls out is that tile count should be set by source words per pericope, not by pericope count: aim for roughly 3,000 to 6,000 source words per tile and subdivide a head only when it exceeds that."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "2",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28"
+      ],
+      "note": "JFB STRIDE, 2samuel 2: stride 6, offset 4, donor chapter JUDGES 8. Keys 4, 10, 16, 22 and 28 carry Jamieson, Fausset and Brown blocks of 36, 77, 26, 30 and 49 words, and all five are Gideon material: the fords of the Jordan with a pointer to Judges 3:28 at key 4, Gideon's modest answer to the Ephraimites that threw oil on the troubled waters at 10, Penuel near the Jabbok honoured with that name by Jacob at 16, 'the heights of Heres, the sun-hills' for what our version renders before the sun was up at 22, and the Midianite chiefs' atrocities during their seven years' lawless occupancy at 28. Donor positions advance monotonically through Judges 8, a fifth confirmation of the single-donor-chapter mechanism. THE CUMULATIVE TABLE, all on stride 6: offset 1 luke 13 (donor Mark 2), offset 2 1kings 1 and 2 (1 Samuel), offset 4 john 13 (John 1) and 2samuel 2 (Judges 8), offset 5 luke 2 (Luke 20), offset 6 john 7 (Mark 12). Offset 4 now has two independent instances with different donors, which rules out the offset alone identifying the donor. 218 words declared and accepted on all four tiles."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "2",
+        "7",
+        "9",
+        "11",
+        "13",
+        "15",
+        "18",
+        "21",
+        "24",
+        "25",
+        "26",
+        "28",
+        "30",
+        "31"
+      ],
+      "note": "THE K&D 200-WORD CAP, MEASURED EXHAUSTIVELY IN ONE CHAPTER. Fifteen Keil and Delitzsch blocks, FOURTEEN of them at exactly 200 or 201 visible words; only key 31 is shorter, at 111, because the chapter runs out under it. That is 2,911 words, a fifth of the chapter's 14,979, and every one of the fourteen is severed mid-sentence: 'in His forgiving grace, and' at key 2, 'see at' at 7, 'David was king in Hebron over the' at 9, 'the spear came out behind' trailing into 'that it might' at 21, 'and it was no doubt the' at 28. Worse, the block CONTENT is systematically wider than its label: each one opens with the KJV text of its own key and then of the next one or two verses before commenting, so the block filed at key 13 expounds 13 and 14, the block at 15 expounds 15 through 18, and the block at 25 expounds 25 through 27. The span-overrun logged once at 2samuel 22 key 3 is therefore not occasional but the normal shape of a K&D block. Two consequences: per-key expansion ratios in a K&D-heavy chapter are wrong in both directions, and the 203-word scan recommended at zechariah 13 should be run with a mid-sentence-ending test, since here the cap and the mid-sentence cut coincide in all fourteen."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "A NEW GARBLING CLASS: THE SUMMARY BLOCK THAT MISNAMES AN AGENT. The Keil and Delitzsch chapter-summary block at key 1 reads 'he went, in accordance with the will of the Lord as sought through the Urim, to Hebron, and was there anointed king by the tribe of Jabesh, for the love which they had shown to Saul in burying his bones (2 Samuel 2:1-7)'. The chapter says the men of JUDAH anointed him (v.4) and that he afterwards blessed the men of Jabesh-gilead for burying Saul (vv.5-7); the scrape has fused the two clauses and transferred the anointing to Jabesh. This is not truncation, not residue and not back-shift: it is a factual corruption inside an otherwise sound block, and a careless writer would reproduce it as commentary. I avoided the sentence and took the anointing from Henry, Ellicott and Wesley instead. The cheap automatic test is the one already proposed for phrase-collision residue: compare the agents and places a block names against those in the verses it claims to cover, and report the names that appear in the block but not in the span."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "2",
+      "verses": [
+        "14"
+      ],
+      "note": "ABNER'S CHALLENGE IS READ TWO OPPOSITE WAYS, and the sources never arbitrate. Henry takes 'let the young men arise and play before us' as sport in earnest, suspecting Saul had used his men to such barbarous pastimes and Abner had learnt from him to make a jest of wounds and death, and adds that a man is unworthy the name who can throw about firebrands and arrows and ask whether he is not in sport; he faults Joab too, who had wisdom enough not to propose it and not resolution enough to refuse it, standing on a point of honour. Wesley hears a vain-glorious and cruel man and a soldier of fortune. Clarke calls it diabolical play outright. Against all three, Keil and Delitzsch say Abner proposed the single combat 'probably for the purpose of avoiding an actual civil war', and Ellicott says the same, to avoid unnecessary bloodshed between tribes of a common parentage and perhaps to keep the nation from weakening before the common Philistine foe, comparing the Horatii and the Curiatii in Livy on Hervey's suggestion as a combat of strikingly similar circumstance and result. Same words, opposite motive, and the split runs exactly along the devotional/critical line rather than along any denominational one."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "2",
+      "verses": [
+        "23"
+      ],
+      "note": "'THE HINDER END OF THE SPEAR' IS READ THREE WAYS, and the third is a translation claim the other two do not see. Henry reads a back stroke with the butt, from which Asahel feared no danger, a pass he was not acquainted with and had not learned to guard against and which Abner had perhaps used before. Keil and Delitzsch and Ellicott read the butt as itself a weapon, the spears having been sharpened at the hinder end for the purpose of sticking them into the ground, so that the wound is in the abdomen with the spear coming out behind; Ellicott adds that 'the fifth rib', here and at 3:27, 4:6 and 20:10, should be rendered abdomen throughout. Clarke alone reads the phrase as describing a MANOEUVRE rather than an end of the weapon: 'this turning about that he might pierce him is what we translate the hinder end of his spear', so that Abner wheeled and ran the point through. All three are compatible with the Hebrew as the commentators give it, and the chapter offers nothing to decide between them; carried as a debate."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "2",
+      "verses": [
+        "10"
+      ],
+      "note": "THE CHRONOLOGY OF ISHBOSHETH'S TWO YEARS AGAINST DAVID'S SEVEN AND A HALF, four positions and seven sub-answers. Clarke canvasses four: that Ishbosheth reigned two years before any tribe but Judah attached itself to David; that Abner effectively reigned the last five while his king kept only the name; that the sense is that Ishbosheth was forty when he had reigned two; and Houbigant's emendation of six years for two, which Clarke reports with the manuscript evidence and then declines, since the number two is acknowledged by all the ancient versions and all the manuscripts yet collated, although eleven of Kennicott's and nine of De Rossi's support Houbigant's spelling of the noun. He finally dates from the Gibeon expedition itself. Keil and Delitzsch reject the older solution of Schmidt and Clericus, two years at Hebron over Judah and then five and a half over Israel, as at variance with the plain statement of the text. Ellicott takes a different route entirely and puts four or five years between Saul's death and the coronation, arguing from the Philistine hold on the north, from Ishbosheth's being the youngest son and now forty, and from David's seven and a half years ending soon after Ishbosheth's murder. Henry leaves it open. The textual, the historical and the arithmetical routes all lead somewhere different."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "2",
+      "verses": [
+        "22",
+        "26"
+      ],
+      "note": "TWO VOICES CONVERGE ON ABNER'S DIVIDED MIND FROM DIFFERENT VERSES, and this is the boldest claim in the chapter. Henry, on Abner's question how he should hold up his face to Joab, writes that 'Abner's care how he should lift up his face to Joab gives cause to suspect that he really believed David would have the kingdom at last, according to the divine designation, and then, in opposing him, he acted against his conscience.' That is inferred from a single clause and no other voice says it at v.22. But Ellicott reaches a milder version four verses later, wondering at v.26 whether Abner 'was already considering the expediency of transferring his allegiance to the house of David, or, at least, had had enough experience of Ish-bosheth to see that it would be impossible to unite the tribes under his sway'. Neither cites the other and they are reading different verses, which makes the agreement worth recording: the chapter supports a reading of Abner as a man fighting a cause he privately judged lost, and it supports it from two independent places."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "2",
+      "verses": [
+        "32"
+      ],
+      "note": "CHAPTER-FINAL ELLICOTT CHROME, second instance in this book. The Ellicott block at key 32 ends '2 Samuel 2Sa 1 2 Samuel 2Sa 2 Samuel 2Sa 3 Footnotes:' - the navigation footer of the scrape, exactly the shape logged at 2samuel 22 key 51. Two instances in one book, both on the LAST key of the chapter, make it a reliable pattern rather than an accident: it is the Ellicott source's page footer, so it should be strippable corpus-wide by a rule that drops a trailing run of book-name-and-chapter-number tokens followed by 'Footnotes:'. The existing CHROME regex in the dump tooling catches StudyLight and copyright footers but not this one; adding the pattern would clean every Ellicott chapter at once."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "DRAFT OVERRUN SCALES WITH VOICE COUNT, which the three previous chapters could not show. The four first drafts here came in at 740, 731, 702 and 784 words against the 650 cap: plus 8 to plus 21 percent, mean about plus 14. Over john 13, john 7 and luke 2 the mean was plus 25 percent and no draft at all landed inside the window. The difference is not discipline but arithmetic: this chapter has SIX citable voices against luke 2's nineteen, so four paragraphs at a 160-word budget hold five voices each with room to spare, where a Gospel tile has to fit twelve to fifteen. The prescription recorded at luke 2 should therefore be restated per voice rather than per paragraph: budget about 30 words per named voice, allow one extra clause only to a voice carrying a debate position, and expect one trim round when the citable count exceeds about twelve."
     }
   ]
 }
