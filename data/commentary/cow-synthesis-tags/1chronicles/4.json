@@ -1,1920 +1,676 @@
 {
- "1": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: only Pharez was literally Judah's son; the rest are tribal clans called 'sons of Judah,' and Carmi may be read as Chelubai."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke explains the doubled genealogy as drawn from a second public register with remarkable particulars; Wesley notes the names show Shobal's descent from Judah."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill traces the posterity solely in the line of Pharez, the one strict son."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: Ezra is most particular over Judah because that tribe, with Simeon, Benjamin, and Levi, made the surviving kingdom that returned from captivity."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the doubled register of Judah",
-   "only Pharez a literal son",
-   "the Chronicler's sources",
-   "the surviving covenant tribe"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
+  "1": {
+    "range": "1-8",
+    "pericope_label": "The second register of Judah: Pharez to Aharhel",
+    "voices": [
+      "Adam Clarke",
+      "Matthew Henry",
+      "Charles Ellicott",
+      "John Gill",
+      "John Wesley",
+      "Keil and Delitzsch"
+    ],
+    "schools": [
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke treats it as a second genealogy, reintroduced with variations, and accounts for the duplication: probably different copies lay in the public registers, and the writer…; Wesley and Gill reach the same place more briefly, taking the sons for the posterity, since Pharez alone was Judah's…"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry supplies a motive of another order. Ezra is most particular with Judah's register because that tribe, with Simeon, Benjamin and Levi appended, made up the…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott observes that of the five named only Pharez was literally a son of Judah ( 1 Chronicles 2:3 ), the rest standing for great tribal…; Keil and Delitzsch trace Jahath as a name frequent in Levite families and make his sons Ahumai and Lahad the founders of the Zorathite families, the…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Wesley and Gill reach the same place more briefly, taking the sons for the posterity, since Pharez alone was Judah's immediate son, and noting that the…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "a second genealogy of Judah",
+      "clans called sons of Judah",
+      "the Zorathite families",
+      "the crux of Abi-Etam"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-02",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.16
+      }
+    }
+  },
+  "9": {
+    "pericope_label": "Jabez, more honourable than his brethren",
+    "voices": [
+      "John Gill",
+      "Charles Ellicott",
+      "Adam Clarke",
+      "Matthew Henry",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill reports the Targum's addition that he was wiser in the law than his brethren, allows that the honour might lie in wealth, in strength and…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "single",
+        "summary": "Ellicott keeps to the grammar: the Hebrew verb form implies a connection with the preceding verse, so the brethren are perhaps the sons of Coz"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke sets the ancient versions side by side, and they do not agree on what kind of sentence this is; Wesley reads the honour as courage and fervent piety and the record as serving both those ends at once"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry gives the record two purposes, one looking back and one forward"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "a name given for sorrow",
+      "more honourable than his brethren",
+      "the versions divide on the verse",
+      "Jabez and the school of the scribes"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-02",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.63
+      }
+    }
+  },
+  "10": {
+    "pericope_label": "The prayer of Jabez and its answer",
+    "voices": [
+      "John Gill",
+      "Charles Ellicott",
+      "Matthew Henry",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill takes the opening to mean simply that he prayed, as the Targum has it, while noting that some understand a vow — a promise of…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "single",
+        "summary": "Ellicott makes the conditional form explicit: the clause is literally \"if indeed thou wilt bless me,\" and the prayer is expressed as a condition whose consequence…"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry takes both readings in turn rather than choosing between them"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Wesley hears the same allusion, reading the closing verb as a plea that the evil may not oppress and overcome him, with more understood than is…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "vow or ardent desire",
+      "bless me indeed",
+      "enlarge my coast",
+      "that thine hand might be with me",
+      "keep me from evil"
+    ],
+    "excluded_voices": [
+      "Jamieson, Fausset and Brown"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-02",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.89
+      }
+    }
+  },
+  "11": {
+    "range": "11-15",
+    "pericope_label": "Chelub to Caleb son of Jephunneh, and the valley of craftsmen",
+    "voices": [
+      "Keil and Delitzsch",
+      "John Gill",
+      "John Wesley",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "Matthew Henry"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch say as much of the men of Rechah: nothing has been handed down about their connection with the larger families of Judah; Ellicott works the same material as tribal history rather than textual criticism"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill makes the same connection tentatively from the other direction, that if Shuah is the Hushah named earlier then Chelub was a son of Ezer, and…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley takes them for the forebears of the inhabitants of a town not mentioned anywhere else; Clarke records the Targum's gloss on the men of Rechah, that they were the men of the great Sanhedrin, and Wesley takes them for the forebears…"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry fastens on it. Here is a whole family of craftsmen and handicraft tradesmen who applied themselves to all sorts of manufactures, in which they were…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "the men of Rechah",
+      "what the word son can bear",
+      "Caleb the Kenizzite received into Judah",
+      "the valley of craftsmen"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-02",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.48
+      }
+    }
+  },
+  "16": {
+    "range": "16-20",
+    "pericope_label": "Jehaleleel to Ben-zoheth: a section out of order",
+    "voices": [
+      "Keil and Delitzsch",
+      "Charles Ellicott",
+      "John Gill",
+      "Matthew Henry",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch introduce it as descendants of various men whose genealogical connection with the sons and grandsons of Judah is simply not given in the…; Ellicott takes the opposite tack and reads the names as geography and etymology"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill reads the name as meaning a Jewess, rendered so in order to distinguish her from the Egyptian wife named at the end of the verse…"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry accepts the Egyptian marriage at face value and finds it unsurprising: Pharaoh was the common name of the kings of Egypt, and if an Israelite…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke records a reading that dissolves the genealogy into allegory: the Targum takes this verse's names as epithets of Moses"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "names met with only here",
+      "a displaced sentence",
+      "the Jewish wife and the Egyptian",
+      "the daughter of Pharaoh"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-02",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.39
+      }
+    }
+  },
+  "21": {
+    "range": "21-23",
+    "pericope_label": "The sons of Shelah: linen-workers and potters",
+    "voices": [
+      "John Gill",
+      "John Wesley",
+      "Keil and Delitzsch",
+      "Matthew Henry",
+      "Adam Clarke",
+      "Charles Ellicott"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill notes that the lines of Pharez and Zerah came first, the former at length, because the honour of David and his kingdom sprang from it…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley states the same transition in a line; Clarke reports the Targum to the same effect, that these worked in fine flax to make garments for kings and priests"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch add a grammatical note on how the chapter is bound together: the families enumerated above are linked by a conjunction and so grouped…; Ellicott would render the phrase about plants and hedges as the inhabitants of Netaim and Gederah, Netaim meaning plantations and Gederah…"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry reads the clause as inserted for their honour: they were the best weavers in the kingdom and brought up their children to the same business…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "a genealogy of trades",
+      "father of the house of fine linen",
+      "dominion in Moab among ancient things",
+      "potters dwelling with the king"
+    ],
+    "excluded_voices": [
+      "Jamieson, Fausset and Brown"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-02",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.48
+      }
+    }
+  },
+  "24": {
+    "range": "24-27",
+    "pericope_label": "Simeon’s line, and why it did not multiply",
+    "voices": [
+      "John Gill",
+      "Charles Ellicott",
+      "Keil and Delitzsch",
+      "Adam Clarke",
+      "John Wesley",
+      "Matthew Henry"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill explains the order: his account comes before Reuben's because his inheritance lay within the tribe of Judah"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott sets out the three earlier lists — Genesis and Exodus name six sons, while Numbers agrees with Chronicles in naming five, Ohad being dropped;; Keil and Delitzsch explain the shorter list rather than merely recording it: only the five who actually founded families are named, and Ohad is…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke supplies the figures, and they are blunt; Wesley ascribes the failure to increase directly to that curse, and adds a second sign of the same disfavour, that Moses passed Simeon over when he…"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry takes the comparison in the opposite direction and makes it a lesson for the reader rather than a verdict on the tribe: it is said…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "five sons or six",
+      "the son of a Canaanitess",
+      "his brethren had not many children",
+      "the curse on Simeon"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-02",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.39
+      }
+    }
+  },
+  "28": {
+    "range": "28-33",
+    "pericope_label": "Simeon’s cities and habitations",
+    "voices": [
+      "Keil and Delitzsch",
+      "Charles Ellicott",
+      "John Gill",
+      "Adam Clarke",
+      "John Wesley",
+      "Matthew Henry"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch set out the structure: these were the ancient dwelling-places received within Judah's domain at the division of the land ( Joshua 19:1 )…; Ellicott accounts for the discrepancy: Joshua adds Sheba after Beer-sheba, an obviously mistaken repetition which makes fourteen where the…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill follows Kimchi and draws the consequence: these were all that remained for them, so they had to seek new settlements for themselves and their flocks"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke holds that David took some of the Simeonite cities and added them to Judah, and that because the tribe had withdrawn its allegiance, the kings…; Wesley blames the tribe rather than the crown: several of these cities, though assigned to Simeon by Joshua, were through that tribe's sloth…"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry reads the clause as marking a voluntary departure instead: when the ten tribes revolted from the house of David, many of the Simeonites quitted these…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "eighteen cities in two groups",
+      "thirteen and five",
+      "their cities unto the reign of David",
+      "their own genealogy within Judah"
+    ],
+    "excluded_voices": [
+      "Jamieson, Fausset and Brown"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-02",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.4
+      }
+    }
+  },
+  "34": {
+    "range": "34-36",
+    "pericope_label": "The princes of Simeon named one by one",
+    "voices": [
+      "Keil and Delitzsch",
+      "John Gill",
+      "Charles Ellicott",
+      "Matthew Henry"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch read it that way explicitly: the verses record the emigrations of Simeonite families into other districts, and the names belong to an expedition…; Ellicott glosses another of the names in the same register: Jaakobah is literally \"to Jacob,\" a patronymic formed from Jacob much…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill supplies what the names themselves will not"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry sets the increase against the tribe's history and finds a providence in it"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "thirteen princes named",
+      "men nowhere else noticed",
+      "no link to the earlier Simeonite families"
+    ],
+    "excluded_voices": [
+      "Jamieson, Fausset and Brown"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-02",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.61
+      }
+    }
+  },
+  "38": {
+    "range": "38-43",
+    "pericope_label": "The house that increased, and the expeditions to Gedor and Mount Seir",
+    "voices": [
+      "Keil and Delitzsch",
+      "John Gill",
+      "Charles Ellicott",
+      "John Wesley",
+      "Matthew Henry",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch render it as that these men, named one by one, were princes in their families, whose fathers' houses had increased to a multitude…; Ellicott renders the phrase about the land literally as broad of both hands, an open plain, and compares the quiet of Laish, which the Danites took…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill takes the title plainly: the principal men among them, heads of their fathers' houses"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley draws a practical consequence: the clause gives the reason they went and possessed the place, since it lay not in the hands of their brethren…; Gill and Clarke identify those survivors as escapees from the wars of Saul and David"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry turns the description into a thanksgiving: those who dwell in a country wide and quiet and peaceable have reason to own themselves indebted to the…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "princes in their families",
+      "the house of their fathers increased",
+      "seeking pasture for their flocks",
+      "the land wide, quiet and peaceable",
+      "they of Ham dwelt there of old",
+      "five hundred men to mount Seir"
+    ],
+    "excluded_voices": [
+      "Jamieson, Fausset and Brown"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-02",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.18
+      }
+    }
   }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott knit the Zorathite clans to Shobal (cf. 1 Chron. 2:52-53), reading the verse as a supplement to the earlier register; Ahumai and Lahad occur nowhere else."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill identifies Reaiah with the Haroeh named before, the two names of one signification."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Reaiah son of Shobal",
-   "the Zorathites",
-   "supplementing the older register",
-   "obscure clans preserved"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott face the corrupt 'father of Etam': Keil supplies 'families,' Ellicott takes it as the dominant houses of Etam; both weigh the LXX/Vulgate 'sons of Etam' as a conjectured evasion, and read Hazelelponi as a sister-town."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill, with the Targum, takes it of the princes who dwelt in Etam, near Zorah."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a corrupt clause faced honestly",
-   "the houses of Etam",
-   "textual conjecture",
-   "clans of the hill-country"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott gather Penuel and Ezer as sons of Hur, firstborn of Ephratah and father of Bethlehem (1 Chron. 2:19,51), noting Gedor is claimed for both Penuel and Jered (v.18)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads 'father' as prince or founder and would identify Penuel with the earlier Hareph."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons of Hur",
-   "Gedor and Hushah",
-   "anchored in Bethlehem",
-   "the line toward David"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch fix Ashur as Hezron's posthumous son (1 Chron. 2:24), number Naarah's four sons, and distinguish this Hepher from the Gileadite, refusing the unsupported land-of-Hepher conjecture."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets Ashur's pedigree as a son of Hezron by Abiah."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ashur father of Tekoa",
-   "two wives",
-   "obscure families",
-   "the commentator's restraint"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch round off Naarah's branch, marking her four sons as met with only here and refusing to invent a history for them."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes only that of these men we have no account elsewhere."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons of Naarah",
-   "two co-ordinate branches",
-   "the patience of a genealogy",
-   "names kept though faces are forgotten"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch fix the Kethibh/Keri of Jezoar/Zohar, warning that a shared name (with Simeon's Zohar, Gen. 46:10; Abraham's Hittite, Gen. 23:8) is no proof of kinship."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke would restore 'Coz' after Ethnan with the Targum, lest Coz stand in the next verse as a consequent without antecedent, and equates him with Kenaz."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes only that Helah was Ashur's other wife."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons of Helah",
-   "Kethibh and Keri",
-   "a coincidence of names",
-   "mending a broken list"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "Keil and Delitzsch",
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil calls vv.8-10 a fragment of unclear connection; Ellicott ties it to the Hurite scribes of Jabez (1 Chron. 2:55), reads Anub as 'grape-town' (cf. Matt. 7:16), and thinks 'and Coz' fell from the text."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes Coz simply as another son of Helah, reading the fragment as a continuation."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: Jabez ought to be named at the end of this verse, else he stands next as a consequent without an antecedent."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a disputed fragment",
-   "Coz and Aharhel",
-   "the meanings hidden in names",
-   "the seedbed of Jabez"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "Matthew Henry",
-   "Charles Ellicott",
-   "John Wesley",
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry makes the honour the heart of the verse — Jabez dignified by grace and providence — and grounds it in his learning (the scribes of 1 Chron. 2:55) and his piety as a praying man."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott glosses 'sorrow' as 'pain,' likens the naming to Rachel's Benoni (Gen. 35:18), and ties Jabez to the sons of Coz (v.8); Keil and Delitzsch record, only to reject, the guess that Jabez was Othniel (v.13)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley reads the sorrowful name as a double memorandum — of the mother's thankfulness and of the vale of tears into which the child was born."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill weighs the traditions (wiser in the law, wealth, courage), settling on a man of devotion, and rejects the Jabez-Othniel identification."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "more honourable than his brethren",
-   "a name of pain",
-   "learning and piety",
-   "the Jabez-Othniel tradition rejected"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "Matthew Henry",
-   "Charles Ellicott",
-   "John Gill",
-   "John Wesley",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry unfolds the four petitions — bless me indeed (Gen. 22:17), enlarge my coast, thy hand with me (Deut. 33:7), keep me from evil — as a pattern of prayer to the covenant God."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott reads the prayer as a suppressed vow, a condition like Jacob's at Bethel (Gen. 28:20), and finds in the double play on the name (cf. v.9) a mark of the section's antiquity; 'God granted' is literally 'God brought to pass.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley sets the prayer at some great and dangerous undertaking ('enlarge my coast' = drive out the Canaanites); Clarke makes it a meditation on earnest prayer for body and soul, dreading sin and suffering alike."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes the Syriac and Arabic read the prayer in the third person, as a blessing wished upon him, though the Hebrew keeps it his own cry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the prayer of Jabez",
-   "the four petitions",
-   "a suppressed vow",
-   "prayer heard and granted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch make Chelub a form of Caleb/Chelubai, distinct from the two famous Calebs, and refuse to equate Shuah with Hushah, leaving the branch's attachment open (the men of Rechah)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill supposes Shuah the same as Hushah (v.4), so that Chelub descends from Ezer."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is Shuah the same man as the Hushah of v.4?",
-    "sides": [
-     {
-      "position": "yes — so Chelub is son of Ezer, descended from Hur",
-      "holders": [
-       "Gill"
-      ]
-     },
-     {
-      "position": "no — Shuah is otherwise unknown; the identification is unwarranted",
-      "holders": [
-       "Keil and Delitzsch"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Chelub the brother of Shuah",
-   "Caleb and Chelubai",
-   "the caution of shifting name-forms",
-   "the men of Rechah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill glosses Bethrapha as the house of Rapha."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke relays the Targum's grand identification of 'the men of Rechah' with the great Sanhedrin; Wesley reads the name soberly as Rechab, a town not elsewhere mentioned."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons of Eshton",
-   "the men of Rechah",
-   "the Targum's dignifying gloss",
-   "an obscure town preserved"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch derive Kenaz from Hezron (via Caleb the Kenizzite, Num. 32:12; Josh. 14:6) and read 'sons of Kenaz' as distant descendants, since Othniel and Caleb were brothers (Josh. 15:17)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets Kenaz as son of Chelub or Eshton, and had earlier kept Othniel distinct from Jabez."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons of Kenaz",
-   "Othniel distinct from Jabez",
-   "the Kenizzite stock in Judah",
-   "'sons' meaning descendants"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry honours the valley of craftsmen — industrious tradesmen not to be reckoned mean men, who lived together to improve their arts."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch set Meonothai, Ophrah, and Joab father of the valley of Charashim plainly in place."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley reads Joab as father, that is chief or founder, of the inhabitants of the valley."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes Meonothai as another son of Othniel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the valley of craftsmen",
-   "honest labour honoured",
-   "Joab the founder",
-   "skill of hand among God's people"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott frames Caleb the Kenizzite (Josh. 14:6,14) grafted into Judah as the house of Caleb, and lays out the options for the broken clause 'the sons of Elah, even Kenaz.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke recalls Caleb's courageous piety and integrity (Num. 14:24) and the Targum's play on his name."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill insists Jephunneh is not Hezron, so this Caleb is the Kenizzite and brother of Othniel, the very spy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Caleb the son of Jephunneh",
-   "who wholly followed the LORD",
-   "grafted into Judah",
-   "a broken closing clause"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil resists tying the clans to the towns of Ziph (Josh. 15:24), calling their connection lost; Ellicott reads town and clan together and hears in Ziph and Asareel an Edomite-Kenizzite stock absorbed into Judah."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill supposes Jehaleleel a son of the earlier Uknaz."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons of Jehaleleel",
-   "clan or town",
-   "Edomite-Kenizzite traces",
-   "obscure names preserved"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott declare the verse corrupt — a missing mother for 'and she bare,' two wives of Mered tangled together — and weigh the LXX's 'Jether bare Miriam' and the Syriac/Arabic omission as evidence of a faulty text."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill guesses Ezra a son of the Asareel just named."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons of Ezra",
-   "a corrupt text owned frankly",
-   "the dangling 'she bare'",
-   "recovering what can be recovered"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "Charles Ellicott",
-   "Matthew Henry",
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott restores the displaced clause after v.17, splitting Mered's house into a Judahite and an Egyptian group, and reads Bithiah ('daughter of Iah') as a convert or an absorbed Egyptian clan."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry takes her as a literal Egyptian princess married into Judah before the bondage, while Joseph's merits were fresh."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads Jehudijah simply as the Jewish wife, set against the Egyptian."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke relays the Targum's allegory turning every name into a title of Moses, making Bithiah his foster-mother whom 'Mered'/Caleb took."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Who was Bithiah the daughter of Pharaoh, and when did Mered's marriage fall?",
-    "sides": [
-     {
-      "position": "a literal Egyptian princess married into Judah before the oppression",
-      "holders": [
-       "Henry"
-      ]
-     },
-     {
-      "position": "a convert ('daughter of Iah') or an Egyptian clan absorbed into Mered's house",
-      "holders": [
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the veiled foster-mother of Moses",
-      "holders": [
-       "the Targum (as reported by Clarke)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "a daughter of Pharaoh in Judah",
-   "restoring a displaced clause",
-   "convert, clan, or Moses' foster-mother",
-   "the stranger joined to Israel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott, taking the Hebrew 'sons of Hodiah's wife,' would emend to 'his Jewish wife, sister of Naham,' and sets Keilah (Josh. 15:44; 1 Sam. 23:1) and Eshtemoa in the Calebite division."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads Hodiah as another wife of Mered, but reports the reading that takes Hodiah as a man's name."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Hodiah, woman or man",
-   "the sister of Naham",
-   "Keilah and Eshtemoa",
-   "the house of Caleb"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil reads Benhanan as one name and notes the list breaking off after Benzoheth; Ellicott, since the whole section traces the house of Caleb, infers these too are Calebite clans."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill supposes Shimon another son of Mered, or the same as Shammai."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons of Shimon and Ishi",
-   "a list breaking off",
-   "inferred Calebite connection",
-   "kept by their company"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry makes the linen-weavers a matter of honour — the best weavers in the kingdom, raising their children to the same trade, not aiming to make them gentlemen."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke passes on the Targum's gloss that they wrought fine flax for the garments of kings and priests; Wesley marks the turn to Shelah's line."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill explains the order: Pharez was traced first for the honour of David and Messiah; now the writer returns to Shelah."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch note the dropped conjunction marking Shelah as a second co-ordinate line, and place Mareshah at the ruin Marash (Josh. 15:44)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons of Shelah",
-   "the house of fine linen",
-   "inherited labour honoured",
-   "a second line of Judah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry reads 'these are ancient things' as a meditation on providence — a family that once ruled in Moab, its heirs now brought low; those in dominion know not what their posterity may be reduced to."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley takes the dominion as held for the kings of Judah and hears a sigh over blessed days now past in Chaldean servitude; Clarke relays the Targum's tie of Joash and Saraph to Mahlon and Chilion of Ruth."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill can only mark where the Vulgate parts from the resistant Hebrew."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch puzzle over how far the description reaches, inclining to take it of all Shelah's sons but the linen-weavers."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "dominion in Moab",
-   "these are ancient things",
-   "a proud past, a servile present",
-   "the turns of providence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott reads 'plants and hedges' as the towns Netaim and Gederah (Josh. 15:36), and 'the king' as a king of Judah whose royal potteries these were, like those of Sevres."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley reads 'the king' as the king of Babylon and the potters as mean spirits preferring exile to the return; Clarke, dismissing the Targum, sees only brickmakers about the king's fences."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads it as a come-down — once-famous men now of mean employments."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Who is 'the king' with whom the potters dwelt?",
-    "sides": [
-     {
-      "position": "a king of Judah, at a royal pottery in the land",
-      "holders": [
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the king of Babylon, in the drudgery of exile",
-      "holders": [
-       "Wesley",
-       "Gill"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the potters of Shelah",
-   "Netaim and Gederah or plants and hedges",
-   "the king of Judah or of Babylon",
-   "honour or exile"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott reconcile the lists — six sons in Genesis/Exodus, five here and in Num. 26:12 (Ohad dropped), Jarib for Jachin, Nemuel/Zerah for Jemuel/Zohar — and note Shaul the son of a Canaanitess (Gen. 46:10)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke judges the divergent lists irreconcilable, occasioned by one man's several names — to attempt it useless."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill explains Simeon set before Reuben because its inheritance lay within Judah."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry frames the tribe's whole story: never of great note, increasing but not like Judah."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Can the divergent lists of Simeon's sons be reconciled?",
-    "sides": [
-     {
-      "position": "yes — by copyist variants and alternate names",
-      "holders": [
-       "Keil and Delitzsch",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "no — reconciliation is impossible and the attempt useless",
-      "holders": [
-       "Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the sons of Simeon",
-   "five names against six",
-   "Shaul son of a Canaanitess",
-   "Simeon lodged within Judah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch fix Shallum as son of the Canaanitess's line and trace it through six generations to Shimei, noting the unexplained division of the list at 'sons of Mishma.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets the plain succession — Shallum, Mibsam, Mishma."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Simeon's one fruitful line",
-   "the mixed stock of Shaul",
-   "succession as the point",
-   "toward Shimei"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch bring the line to its head in Shimei of the sixteen sons, drawing the contrast with the brethren who had not many, so the tribe never matched Judah."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill names Hamuel, Zacchur, and Shimei."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons of Mishma",
-   "the line reaches Shimei",
-   "one house multiplied",
-   "the coming contrast"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke sets the census numbers side by side (Simeon fallen to the smallest tribe); Wesley traces the failure to increase to Jacob's curse and Moses' passing Simeon by."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott reads 'his brethren' as the fellow-tribesmen and Simeon's absorption into Judah as the fulfilment of 'I will divide them in Jacob' (Gen. 49:7)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes Shimei's many children are nowhere named."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry draws the gentler lesson: those whom God increases should be thankful, even seeing others more increased."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Simeon's stunted increase",
-   "Jacob's curse of scattering",
-   "the census numbers",
-   "judgment and gratitude"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott identify Simeon's eighteen cities within Judah's domain (Josh. 19:1), matching them to the parallel and marking the mistaken repetition of Sheba after Beersheba."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes the cities set down in nearly the same order as the older allotment."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry marks that the cities allotted to Simeon are here recorded as in Joshua's day."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Simeon's cities",
-   "towns within Judah",
-   "matching the parallel",
-   "a distinct people on borrowed ground"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott, with Rashi and Kimchi, reads the five villages as the remnant Simeon kept when the thirteen were lost, and weighs Etam against Joshua's Ether."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill, citing Kimchi, takes these five as all that remained by David's day, driving the tribe to seek new pasture."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the five villages",
-   "a remnant marked off",
-   "what was kept and what was lost",
-   "the pressure to expand"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott read the closing clause as Simeon's own registration — though its settlements lay within Judah, its clans were enrolled as a distinct tribe (Baal = Baalathbeer, Ramath-negeb, 1 Sam. 30:27)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill identifies Baal with Baalathbeer."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "their habitations and their genealogy",
-   "identity kept by the record",
-   "a tribe without its own land",
-   "distinct within Judah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch set the passage as the Hezekian expedition, the thirteen princes its leaders, their pedigrees untraceable to the earlier families."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill introduces them as men of rank, courage, and valour, unnoticed elsewhere, and notes Jamlech's likeness to Jamblichus."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the thirteen princes",
-   "the muster of a bold venture",
-   "men remembered for their deeds",
-   "the Hezekian expedition"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch take the summary as the ground of the narrative: the fathers'-houses increased to a multitude, and so the princes went out for room and pasture."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads them plainly as the principal men, heads of their fathers' houses."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "princes in their families",
-   "the house increased greatly",
-   "increase as the spur to conquest",
-   "from genealogy to history"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch deny 'entrance of Gedor,' reading the phrase as 'the west of Gedor' (balancing the 'rising'/east), and rule out the Judahite Gedor (Josh. 15:58)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry reads it as a locality in Arabia, the entrance of Gedor, which the Simeonites seized."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes it as a place distinct from Judah's Gedor, perhaps the Gedaris of the Philistine borders."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does 'the entrance of Gedor' name a place or a direction?",
-    "sides": [
-     {
-      "position": "a place — the town the raiders reached",
-      "holders": [
-       "Gill",
-       "Henry"
-      ]
-     },
-     {
-      "position": "a compass-point — 'the west of Gedor,' the direction they traveled",
-      "holders": [
-       "Keil and Delitzsch"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "seeking pasture beyond the border",
-   "entrance or west of Gedor",
-   "an ambiguous Hebrew word",
-   "the Hezekian search for room"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Adam Clarke",
-   "Keil and Delitzsch",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott savours the wide, quiet land like Laish (Judg. 18:7), its dwellers Hamites (1 Chron. 1:8); Keil adds the Meunites among them, 'utterly destroyed' by the old word of the ban."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke guesses the dwellers Philistines or Egyptians; Wesley draws the providence — God appoints the bounds of habitation, and the valley lay open to a people Israel had authority to expel."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets the discovery in or near the valley of Gedor."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fat and peaceable land",
-   "the people of Ham",
-   "God appoints the bounds",
-   "peace that proved its undoing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott reads the victims as the Meunites of Maon and glosses the ban (devoting to God, cf. Josh. 6:17, with the Moabite Stone parallel); Keil marks the word's fading religious force into plain extermination, dated by 'unto this day.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill identifies the actors as the princes written by name."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the conquest in Hezekiah's day",
-   "the Meunites",
-   "the ban (cherem)",
-   "a holy war in miniature"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil traces the five hundred to the sons of Shimei and the 'escaped of Amalek' to the survivors of Saul and David's wars (1 Sam. 15:7); Ellicott ties the expedition closely in time to the raid on Gedor."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets the five hundred's march in the land of Edom."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "five hundred to Mount Seir",
-   "the sons of Shimei",
-   "the last of Amalek",
-   "one movement in two prongs"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott reads the 'remnant of the survivors' of Amalek, refugees in Seir from Saul and David (1 Sam. 15:7), a partly Edomite stock (1 Chron. 1:36)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke, with Calmet, dates the expedition near the captivity of the ten tribes, when Simeon's remnant pressed south into Edom."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill recalls the swords of Saul and David the survivors had escaped."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry gathers the close: the curses on Ham and Amalek accomplished, and Simeon's curse of scattering (Gen. 49:7) turned to a blessing of preservation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the end of Amalek",
-   "the hereditary enemy extirpated",
-   "Simeon's curse turned to blessing",
-   "God keeps his word"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil weighs the conjectures over the count of five villages against Joshua's four; Ellicott sets Bilhah, Ezem, and Tolad among the towns of the extreme south of Judah (Josh. 15:26), their sites now unknown."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Simeon's southern towns",
-   "reading by comparison",
-   "name-drift across parallels",
-   "dwellings within Judah's south"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch trace Jehu's three-generation descent and weigh the formula 'those who have come with their names' — the men expressly mentioned — distinguishing it from a similar phrase elsewhere."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jehu son of Josibiah",
-   "'mentioned by their names'",
-   "grammatical precision",
-   "ranking the leaders"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "Charles Ellicott",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott reads the town-names (house of chariots, village of horses, house of lionesses, two gates = Sharuhen) and asks whether 'unto David' means the cities passed from Simeon then, Ziklag being a Philistine borough."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke has David seize the cities from a disloyal Simeon for Judah; Wesley lays the loss to Simeon's own sloth in never taking them from the Philistines, so that David annexed the forfeit."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Why were these cities Simeon's only 'unto the reign of David'?",
-    "sides": [
-     {
-      "position": "David seized them from a disloyal tribe and annexed them to Judah",
-      "holders": [
-       "Clarke"
-      ]
-     },
-     {
-      "position": "Simeon forfeited them by its own sloth in never taking them from the Philistines",
-      "holders": [
-       "Wesley"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "house of chariots and lionesses",
-   "unto the reign of David",
-   "David's encroachment or Simeon's forfeit",
-   "absorption into Judah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott alone traces Bethuel (Chesil/Bethul), Hormah the ancient Zephath 'the ban' (Judg. 1:17), and Ziklag, David's town (Josh. 15:30; 1 Sam. 27:6), through their variant forms and later history."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Bethuel, Hormah, Ziklag",
-   "the ban at Hormah",
-   "Ziklag of David",
-   "obscure towns of great later fame"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil groups the seven names (with Ziza's five-generation pedigree) among the princes of multiplying houses; Ellicott reads Jaakobah as a patronymic 'to Jacob,' fastening the obscure prince back to the patriarch."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "seven princes in a verse",
-   "Jaakobah, 'to Jacob'",
-   "chiefs of multiplying houses",
-   "bound to the stock of Israel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- }
 }
