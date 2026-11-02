@@ -103418,6 +103418,215 @@
       "book": "1chronicles",
       "chapter": "4",
       "note": "Harness mistake of my own, worth recording because the shape will recur for anyone assembling a chapter from per-span files. I wrote the ten pericopes as separate patch/*.html files, assembled them into the prose JSON with a builder script, then fixed four carrier-phrase trips by editing the JSON directly - and then re-ran the builder after re-cutting the last two spans, which silently reverted all four fixes. The sweep caught it (3 of 10 entries flagged again, and one back over the 650 ceiling), but only because I re-ran it rather than trusting the earlier clean result. RULE: when a chapter is assembled from source files, corrections belong in those source files, never in the assembled artefact - or the assembly must be the final step with nothing after it. This is the same class of error as the dig-cap truncation that produced the luke 2 Calvin misattribution: in both cases I trusted a derived view that had gone stale, rather than the thing it was derived from."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "10",
+        "14",
+        "19"
+      ],
+      "note": "Cyril of Jerusalem's blocks at keys 10, 14 and 19 are BYTE-IDENTICAL duplicates of one 200-word slice (verified by string equality). The chapter's seven Cyril blocks total 1,291 keyed words but only 891 distinct, so any per-key or per-voice word tally triple-counts 400 words. The harvester appears to match on keywords ('little ones', 'my Father which is in heaven') rather than scraping sequentially, and files the same paragraph at every verse that trips the match."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "3",
+        "11",
+        "13",
+        "18"
+      ],
+      "note": "Cyril of Jerusalem residue: keys 3 (a baptism catechesis on water and Spirit), 11 (the passion, 'Behold, we go up to Jerusalem'), 13 (proofs of eternal life) and 18 (the Saviour's pre-eminence over the Jews, Paul caught up to the third heaven) are unrelated 200-word slices of the Catechetical Lectures. BUT key 10 is GENUINE — Cyril there expressly expounds this verse's clause, 'is it not written, The little ones' Angels do always behold the face of My Father which is in heaven?' So this voice is MIXED within one chapter, not uniformly residue, and a blanket per-voice exclusion would discard real witness. An earlier survey of mine recorded all seven keys as residue; that was wrong."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "3",
+        "18"
+      ],
+      "note": "'Cyril of Jerusalem' CANNOT be declared in excluded_voices. synthesis_qa._LABEL_RE matches a VOICE_LABELS entry only when a colon follows immediately, and the list holds 'Cyril', so the label 'Cyril of Jerusalem:' never matches: split_voices at key 3 returns no Cyril entry at all. The field is therefore a no-op (usable_source_words fell by 13 words, not the block's 200) and validate-synthesis fails it as 'names a block absent from this entry's source'. I dropped the field rather than assert an exclusion that did not happen. Fix: add 'Cyril of Jerusalem' to VOICE_LABELS AHEAD of 'Cyril' (the alternation is first-match), or allow an optional ' of <Place>'."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "9",
+        "21",
+        "27",
+        "33"
+      ],
+      "note": "JFB stride confirmed in a SIXTH book: stride 6, offset 3 (keys 9, 21, 27, 33; slot 15 empty), donor Matthew 15, positions advancing monotonically. Key 9 '( De 5:16 ). ( Ex 21:17 ).'; key 21 'Striking expression of the ruinous effects of erroneous teaching!'; key 27 the 'evil reasonings' passage on the fabric of tradition nullifying the moral law; key 33 '(Also see on Mr 7:26 .)'. Cumulative table now: offset 1 luke 13 (donor Mark 2), offset 2 1kings 1/2 (1 Samuel), offset 3 matthew 18 (Matthew 15), offset 4 john 13 (John 1) AND 2samuel 2 (Judges 8), offset 5 luke 2 (Luke 20), offset 6 john 7 (Mark 12). Offset alone does not identify the donor. Excluding JFB works here (key 27: 629 to 455 usable words), unlike the Cyril case."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "35"
+      ],
+      "note": "APPENDED REVIEW AT THE LAST KEY, fourth recorded instance: Barnes's key-35 block runs 1,948 words of which only ~170 are on v.35; the remainder is 'REMARKS ON MATTHEW CHAPTER 18', a whole-chapter review that expounds v.1 onward. The numbered moral summary at its head IS on v.35 and is usable; the review is not. Because Barnes is a legitimate voice here, excluded_voices is the wrong instrument — this needs the denominator-cleaning pass, not a per-voice exclusion."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "35"
+      ],
+      "note": "Chapter-final Ellicott chrome, third recorded instance and the FIRST in a New Testament book: Ellicott's key-35 block ends 'Matthew Mat 17 Matthew Mat Matthew Mat 19 Footnotes:'. With 2samuel 2 key 32 and 2samuel 22 key 51 this confirms the pattern is corpus-wide and not OT-only, and always on the chapter's LAST key, so it is strippable by pattern."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "10"
+      ],
+      "note": "The Catena's own editorial apparatus leaks inside a father's block: a footnote within the Bede block at key 10 reads 'These two passages, to which the name of Bede is prefixed in all the editions, have been sought for in Bede without success. They occur in Anselm's Enarrationes...'. That is the editor speaking about Bede, not Bede, and must not be attributed to him."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "24"
+      ],
+      "note": "FIVE valuations of the ten thousand talents, no two agreeing: Barnes sixteen million dollars (talent = 3,000 shekels); Clarke a myriad, the highest number in Greek notation, four and a half million sterling in silver or sixty-seven and a half million in gold, 'a sum equal to the annual revenue of the British empire'; Ellicott two and a half million, from the LXX use of the word for the Hebrew kikar; Robertson ten to twelve million dollars at a thousand the talent, noting the imperial taxes of Judea, Idumea and Samaria came to only 600 talents a year; Henry one million eight hundred and seventy-five thousand pounds. Ellicott alone draws the lesson from the disagreement itself, that the sum is named in its vague vastness."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "10"
+      ],
+      "note": "SIX positions on the little ones' angels: Clarke holds the Lord establishes individual guardians, a notion received by almost all nations; Ellicott agrees the words distinctly recognise the belief and makes them angels of the Presence; Barnes denies a guardian apiece (as many of the Jews believed) and makes them guards of his followers in general; Robertson leaves both doors open; Henry takes a middle way, asking why suppose a guardian each when every saint has a guard of them as occasion requires; Jerome has an angel set over each soul from birth. Cyril of Jerusalem is on a different axis, limiting the DEGREE of the vision by rank — the angels behold God not as he is but as far as they are capable, Archangels more, Thrones and Dominions more still, all less than his worthiness."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "11"
+      ],
+      "note": "Opposite textual verdicts on v.11 from the two commentators who both discuss it: Ellicott reports the words 'wanting in many of the best MSS', while Clarke counts five manuscripts, two versions and three fathers against them and still holds their authenticity beyond doubt, on the ground that the same sentence stands in the parallel place where no various reading has ever been found."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "34",
+        "35"
+      ],
+      "note": "Whether a granted pardon can be revoked divides the chapter's close three ways. Wesley says plainly the pardon was retracted and the whole debt required, and challenges the inference that a pardon once given can never be. Ellicott agrees the debt may come back, that faith which does not work by love ceases to justify, and that the discharge is traced 'as in sympathetic ink', appearing and disappearing with the debtor's faith and love. Henry writes of the pardon revoked and the acquittance cancelled but at the last will NOT have God reverse his pardons, only deny them to those unqualified for them, who had seemed humbled and thought themselves pardoned already — an internal tension in Henry worth noting, since his narrative and his conclusion pull against each other."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "18"
+      ],
+      "note": "Clarke, crediting Lightfoot, argues against 'Christian interpreters generally' that binding and loosing are of THINGS and not persons: the Mishna and the later rabbins use the words to declare a thing unlawful or lawful, the pronouns are neuter in both this place and the promise to Peter (whatsoever thing, not whosoever), and the Jews' formula for setting a man apart to teach ran 'take thou liberty to teach what is bound and what is loose'. Lightfoot himself takes the fuller sense, authority to bind and loose anything that seemed them good under the Spirit's guidance. Against them the fathers here (Chrysostom, Augustine, Jerome) read it of persons in discipline."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "34"
+      ],
+      "note": "Calvin and Robertson independently refuse the purgatorial reading of the tormentors — Calvin calling it ridiculous to light that fire from the word since eternal and not temporal death is meant, Robertson that it is 'not purgatorial, but punitive, for he could never pay back that vast debt'. Barnes keeps the tormentors jailers (torments were inflicted on criminals, not debtors) so that imprisonment is all that is meant; Clarke will have the tortures themselves, after the Asiatic usage on a suspected fraud, before turning them inward to a guilty conscience; Ellicott thinks the words deliberately vague and dares not make them avenging angels or demons."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "18"
+      ],
+      "note": "Origen rests a distinction on a single word: Christ says 'in heaven' (in coelo) here and not, as to Peter, 'in the heavens' (in caelis), because the rest had not yet attained the like perfection. A Petrine datum, and the kind of reading that survives only if the Latin of the Catena is preserved."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "7",
+        "15",
+        "21"
+      ],
+      "note": "Matthew Henry is the largest voice in this chapter by a wide margin — 15,728 words in four blocks at keys 1, 7, 15 and 21 (2,635 / 3,600 / 4,875 / 4,618), about 22% of the chapter's 70,002 usable source words — and the only puritan-evangelical present. His four section heads give the tiling exactly, which is now the eighth chapter in which Henry's heads have done so. A chapter rewritten without him would be missing both its biggest witness and a whole school from every tile's schools block; I caught that only after seven tiles were drafted and had to retrofit him into all of them."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "5",
+        "7",
+        "10",
+        "15",
+        "18",
+        "21",
+        "23",
+        "28"
+      ],
+      "note": "Draft overrun again, and the voice-count correlation holds: all nine first drafts breached the 650-word cap, at 813, 800, 772, 783, 842, 861, 798, 844 and 865 words — a mean of +25% against a mean of 11.7 citable voices per tile. Matches the Gospel-chapter figure from john 13, john 7 and luke 2 (+25% at 25 tiles) and exceeds 2samuel 2 (+14% at six voices). Prescription restated: budget ~30 words per named voice, one extra clause only for a debate position, and expect at least one trim round whenever citable voices exceed about twelve. A draft-time word counter in the loop doc's checklist would have saved nine trim rounds here."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "5",
+        "7",
+        "10",
+        "15",
+        "18",
+        "21",
+        "23",
+        "28"
+      ],
+      "note": "pericope_label convention: followed MATTHEW's own most recent practice (matthew 19, generated 2026-11-01, and matthew 22, 2026-10-31), which is the SHORT descriptive condensation of 10-20 words plus 'themes' as five or six short phrase strings — not the full KJV text and not one KJV verse per verse. Matthew is internally split on this: 13, 17, 2, 25, 7, 27 and 3 carry full-KJV labels (up to 167 words) while 12, 19, 22, 6, 9, 24, 23, 5, 4 and 11 carry short ones. The split is by generation date, not by book, so the convention still needs settling in the loop doc; I took the recent end of it."
+    },
+    {
+      "at": "2026-11-02",
+      "kind": "rejected",
+      "book": "matthew",
+      "chapter": "18",
+      "verses": [
+        "1"
+      ],
+      "note": "Did not reproduce Henry's anti-papal excursus at key 1 ('if Christ ever intended that Peter and his successors at Rome should be heads of the church... whoever pretend to it are usurpers'), though it is genuine Henry and on this verse. It is polemic against a body rather than exposition of the text, and the tile already carries his substantive reading of the dispute. Recorded so the omission is a decision and not an oversight."
     }
   ]
 }
