@@ -103767,6 +103767,161 @@
         "26"
       ],
       "note": "pericope_label convention: followed 1 KINGS's own most recent practice (1kings 1 and 1kings 2, both generated 2026-11-01), which is the FULL KJV text of the range plus 'themes' as four to six short phrase strings. That differs from matthew, whose recent practice (matthew 19 and 22) is a short descriptive condensation with phrase themes. So the split recorded earlier is not between books but between generations, and both current conventions pair their label style with phrase themes rather than one-KJV-verse-per-verse. The vv.1-9 label runs to 328 words, which is long but matches 1kings 13's 370."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "21",
+        "33"
+      ],
+      "note": "JFB RESIDUE, AND THE OFFSET IS NOT A BOOK CONSTANT -- this corrects my own 1kings 2 note. Both JFB blocks in this chapter are residue from 1 SAMUEL 20: key 21 (38 words) is Jonathan and David parting on their covenant and cites '1Sa 20:24-40' outright, and key 33 (16 words) is 'the maniacal frenzy into which the unhappy monarch was transported', i.e. Saul, continuous with the same donor passage. Neither has anything to do with Omri's half-party or Ahab's grove. THE CRITICAL DATUM: keys 21 and 33 are both congruent to 3 MODULO 6, whereas 1kings 1 (keys 2,20,26,44), 1kings 2 (keys 2,14,32,38) and 1kings 9 (key 26) were ALL congruent to 2 modulo 6. My 1kings 2 note asserted 'the offset (2 for this book)' and recommended solving offset once per book; that is wrong. The stride holds at 6 across all four chapters but THE OFFSET MOVES WITHIN A BOOK, so a per-book sweep must solve the congruence per CHAPTER, or at least verify it per chapter before stripping. SECOND CORRECTION: that same note put the donor advance at 'roughly two to three Samuel chapters per Kings chapter'. The cumulative series is now 1kings 1 -> 1Sam 2-4, 1kings 2 -> 1Sam 4-6, 1kings 9 -> 1Sam 15, 1kings 16 -> 1Sam 20. From chapter 9 to chapter 16 that is seven Kings chapters for five Samuel chapters, about 0.7 per chapter, far slower than my estimate -- and 1 Samuel has only 31 chapters, so the stream cannot be advancing at 2-3 per Kings chapter or it would have run out long before 1 Kings 22. THIRD: only 2 of the 6 keys in this chapter's congruence class (3,9,15,21,27,33) actually carry a JFB block, so population of the class is sparse and absence at a congruent key is not evidence against the model. Both excluded via excluded_voices on the tiles containing them (15-22 and 29-33); the exclusions measurably lowered the usable source, 2660 to 2579 and 2450 to 2406."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "34"
+      ],
+      "note": "CHAPTER-FINAL ELLICOTT CHROME, FIFTH INSTANCE AND BY FAR THE WORST. The four previous cases (2samuel 2 key 32, 2samuel 22 key 51, matthew 18 key 35, 1kings 9 key 28) each leaked only the trailing book-name-and-chapter tokens followed by 'Footnotes:'. Here Ellicott's key-34 block leaks '1 Kings 1Ki 15 1 Kings 1Ki 1 Kings 1Ki 17 Footnotes:' AND THEN THE ENTIRE STUDYLIGHT PAGE -- the copyright statement, the whole stylesheet, the full navigation menu tree, the complete 66-element book_data JavaScript array, the verse-popup and accordion scripts, and a live Stripe publishable key. Ellicott's block measures 1,151 visible words of which only about 170 are commentary on the verse; the remaining ~980 are page furniture. That single key is therefore responsible for nearly half of this chapter's nominal 13,193 source words being junk, and it inflates the vv.34 denominator so the expansion ratio reads 0.31x when against real commentary it is nearer 0.6x. The pattern strip recommended at 1kings 9 should not stop at the trailing tokens: it should cut from the first occurrence of the book-name-repetition-plus-'Footnotes:' signature to the end of the block. Five chapters across four books now, always the LAST key, always the same opening signature."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "29"
+      ],
+      "note": "A NEW DEFECT SHAPE: A CORRUPTED NUMERAL INSIDE A LEMMA. Gill's block at key 29 opens 'And in the thirty fifth year of Asa king of Judah began Ahab the son of Omri to reign over Israel'. The KJV reads 'the thirty and eighth year', and Gill himself at key 23 computes 'to the end of the thirty eight of Asa make twelve years' and says Ahab began to reign in Asa's thirty-eighth -- so the numeral at key 29 contradicts both the text Gill is quoting and Gill's own arithmetic four verses earlier. It is a scrape or OCR corruption, not a variant reading. WHY THIS SHAPE MATTERS MORE THAN THE OTHERS: every residue class recorded so far is detectable -- foreign-passage blocks have a foreign subject, page chrome has markup, appended reviews have a visible heading. A corrupted numeral is invisible to all of those tests. It is grammatical, it sits inside a genuine block by a genuine voice on the right verse, and it reads exactly like a substantive chronological variant that a careful writer would be right to report as that commentator's view. I nearly did. The only thing that caught it was cross-checking against the same commentator's own numbers elsewhere in the chapter. RECOMMENDED CHECK, and it is cheap: regnal-year and ordinal numerals inside a lemma can be diffed mechanically against the KJV verse the lemma quotes, since the lemma is a near-verbatim quotation by construction. A mismatch is either corruption or a genuine textual note, and either way a worker should see it flagged rather than have to notice it. Omitted silently from the prose; I cite only Gill's substantive point at that key."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke's chapter-ARGUMENT filed at key 1, SECOND CONSECUTIVE CHAPTER with this exact shape (1kings 9 key 1 was the first recorded instance). Of his 171 words at this key, the first ~130 are a verse-by-verse synopsis of the whole of 1 Kings 16 -- 'Jehu the prophet denounces the destruction of Baasha, 1Kgs 16:1-7 . Zimri conspires against him... Hiel the Beth-elite rebuilds Jericho, 1Kgs 16:34' -- and only the closing ~40 words ('Then the word of the Lord came to Jehu - Of this prophet we know nothing but from this circumstance...') are comment on v.1. Genuine Clarke, and as at 1kings 9 it is independently USEFUL for confirming the chapter's structure: his synopsis breaks at 1-7, 8-15, 16-20, 21-23, 24, 25-28, 29-33, 34, which corroborated the Henry-head tiling at four of six of my boundaries. But it must not be cited as his exposition of v.1. Two instances in two consecutive 1 Kings chapters suggests this is systematic in Clarke rather than incidental, i.e. the harvester is filing every Clarke chapter-argument under key 1 for the whole commentary. The denominator-cleaning pass should expect it on EVERY chapter where Clarke appears, not look for it as an exception."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "2",
+        "13",
+        "16",
+        "20",
+        "22",
+        "25",
+        "26"
+      ],
+      "note": "The Keil and Delitzsch 200-word cap for the third chapter running (after 2samuel 2 and 1kings 9), and here the verse-text-as-content shape is at its most extreme. Seven of their thirteen blocks are almost entirely bare KJV text with little or no exposition attached: key 2 (200 words) is the verbatim text of vv.2-7 and NOTHING ELSE, key 13 quotes vv.13-15 before two lines on Zimri's seven days, key 16 quotes vv.16-19 before one clause, key 20 quotes vv.20-21, key 22 quotes vv.22-24, key 25 quotes vv.25-29 before one sentence, key 26 quotes vv.26-30 before two. THE PRACTICAL CONSEQUENCE IS AN ATTRIBUTION RISK, not just an inflated denominator: key 2 gave K&D no exposition whatever on vv.1-7, so I did NOT declare them among the voices for that tile, even though the per-key source index credits them with 200 words there. A writer who trusted the word count instead of reading the block would have named a commentator who says nothing on the pericope -- which is the UNSOURCED class the audit exists to prevent, arrived at from the opposite direction. The cap is also severing mid-sentence as before. Any denominator-cleaning pass should strip bare verse text from K&D blocks BEFORE the per-key counts are used to decide which voices a tile may name."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "7"
+      ],
+      "note": "Four candidates for the man Baasha killed, and the interest is that no two commentators even frame the question alike. Clarke canvasses all four: the Vulgate takes it of Jehu the prophet, put to death by Baasha ('Ob hanc causam occidit eum, hoe est. Jehu filium Hanani prophetam'); some think Baasha himself is intended, others Jeroboam, and others Nadab the son of Jeroboam, the last being Jarchi's and that of 'some good critics'. Henry never raises the question, simply reading it of Jeroboam's son and all his house. Gill reads the clause for a different question altogether, reporting Abarbinel that the verse is repeated because the first threatening was for making Israel sin and this one for Baasha's own works. Ellicott takes the whole verse for the historian's own note, added chiefly for the last clause, which shows Baasha's act 'though foretold, was not thereby justified'. So there are really two stacked disagreements -- who the victim was, and why the oracle is repeated at all -- and Clarke adds a third by proposing that the verse is displaced and belongs between vv.4 and 5. Recorded because Clarke's transposition is a textual-order emendation offered by a commentator who elsewhere in this same chapter calls the received numeral a mistake, so it is worth knowing he is the chapter's most interventionist witness."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "19"
+      ],
+      "note": "Three incompatible solutions to a genuinely odd clause: how a king of SEVEN DAYS is charged with 'walking in the way of Jeroboam'. Ellicott offers two routes and prefers neither -- either the phrase records only the historian's sense of the curse lying on the whole kingdom through an idolatry Zimri never repudiated, or else the conspiracy had clothed itself in a pretence of zeal for the fulfilment of Jehu's prophecy (vv.3-4) and threw off the religious pretence once the deed was done -- and he states the constraint that forces the question: 'except in this way, he had no time for walking in the way of Jeroboam.' Keil and Delitzsch dissolve the problem grammatically instead, attaching v.19 to the verb of dying in v.18, so the sense is 'and so died for his sins', i.e. as their punishment, with no claim about his conduct in office at all. Henry takes the historically plainest route and denies the premise: he supposes Zimri in fact lived some while past the seven days of his proclamation, 'for he continued long enough to show his inclination to the way of Jeroboam', the seven days being the length of the undisputed proclamation rather than of his life. A good case where a grammatical, a redactional and a chronological solution are each sufficient and mutually exclusive."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "23"
+      ],
+      "note": "The twelve years of Omri, and the methodological spread is the datum. CLARKE ALONE IMPEACHES THE TEXT: 'There must be a mistake here in the number thirty-one', since Zimri began in Asa's twenty-seventh and Omri immediately succeeded him -- then, having said so, he accepts Jarchi's harmony out of Sedar Olam (five years of divided rule plus seven of sole rule, the two dates answering to the beginning of the division and to the sole reign) which reconciles the figures WITHOUT any emendation, so his own solution makes his charge of error unnecessary. Gill reaches the same total with no emendation at all, counting the twelve from Asa's twenty-seventh when Elah was killed, and reports the division at four years by the Jewish chronology 'Jarchi says five'. Keil and Delitzsch reckon from the rebellion against Zimri, leaving the sole government 'seven years and a few months', and uniquely account for the SIX YEARS AT TIRZAH as four of civil war plus two after Tibni's death -- the only witness who explains that figure. Ellicott puts the struggle at four years. So the real divergence reduces to four years versus five, i.e. Gill's Jewish chronology, K&D and Ellicott against Jarchi, whom both Gill and Clarke report. Worth recording that Clarke reports the same authority Gill reports and draws the opposite conclusion about whether the text needs fixing."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "33"
+      ],
+      "note": "HENRY ALONE AGAINST FOUR on what the 'grove' is, and he argues it from the verb rather than from etymology, which is why it is worth keeping rather than reducing to a majority reading. Gill, Clarke, Keil and Delitzsch and Ellicott all take the Asherah for an image: Gill allows a plantation with an idol in it but says 'or rather, Asherah, rendered grove, is Astarte, the goddess of the Zidonians, an image of which Ahab made'; Clarke glosses it 'Asherah, Astarte, or Venus', reporting that the Syriac calls it an idol and the Arabic a tall tree; K&D call it 'the Asherah belonging to the temple of Baal... an idol of Astarte'; Ellicott says it 'no doubt represented the Phoenician Astarte'. Henry reads an actual plantation, 'either a natural one, by planting shady trees there, or, if those would be too long in growing, an artificial one in imitation of it', and his argument is grammatical: 'it is not said he planted, but he made a grove, something that answered the intention, which was to conceal and so countenance the abominable impurities' -- closing on the schoolroom etymology 'Lucus, a lucendo, quia non lucet' and 'He that doeth evil hateth the light'. So the minority position rests on a reading of the Hebrew verb and a purpose argument, while the majority rests on the noun. ALSO RECORDED, a convergence on the god himself: Ellicott lists the Phoenician Baal as 'sometimes as the Sun, sometimes as the planet Jupiter, sometimes half-humanised as the Tyrian Hercules', and Henry independently gives exactly three options, 'Jupiter instead of Jehovah, the sun (so some think), a deified hero of the Phoenicians (so others)'. Two witnesses two centuries apart reaching the same three-way uncertainty is worth more than either alone."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "34"
+      ],
+      "note": "THREE READINGS OF JOSHUA'S CURSE, and the most valuable thing in the chapter is that Clarke builds the case for one and then refuses to adopt it. The readings: (1) the sons died, the eldest 'by the hand and judgment of God' when the foundation was laid and the rest in succession until the family was extinct as the doors were ready to hang -- Henry's reading without hesitation, and he adds the aggravation that Hiel went on building after the curse had begun to execute itself; (2) the words are proverbial for greatly protracted labour 'occasioned by multitudinous hinderances and delays', the builder spending on the work the whole span in which he was capable of fathering children; (3) he sacrificed the firstborn to consecrate the work and the youngest in gratitude at its completion, which Clarke says 'seems to be countenanced by the Chaldee', the only version that represents Hiel as slaying Abiram and Segub. CLARKE'S ARGUMENT RUNS ENTIRELY FOR (2): none of the versions except the Chaldee intimates that the children were slain or died -- he checks the Chaldee, Vulgate, Septuagint, Syriac and Arabic by name and reports 'The MSS. give us no help' -- and he adds two moral objections, 'Why should the innocent children of Hiel suffer for their father's presumption?' and whether a man who lost his firstborn at the founding would have proceeded 'at the risk of losing his whole family'. Having made that case he writes: 'Which of these opinions is the right one, or whether any of them be correct, is more than I can pretend to state.' A commentator declining to collect on his own argument is a rarer thing in this corpus than a disagreement, and I have logged it as an outlier as well. Keil and Delitzsch simply affirm the curse was fulfilled on the builder and refer the explanation to their comment on Joshua 6:26. SECOND DISAGREEMENT at the same verse, over WHOSE territory Jericho was: both Ellicott and K&D note it was allotted to Benjamin, and they resolve the anomaly oppositely -- K&D say it had simply passed into Israel's possession when the ten tribes fell away, Ellicott that it 'should have properly belonged to the kingdom of Judah', so a Bethelite rebuilding it under Ahab's patronage is 'one of the indications of a half-dependent condition of the Southern kingdom at this time'. THIRD, minor but recorded: the Syriac names AHAB himself as the builder ('Also in his days did Ahab build Jericho, the place of execration'), against every commentator and every other version."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "15",
+        "29"
+      ],
+      "note": "HENRY'S SECTION HEADS GAVE THE TILING FOR THE TENTH TIME. His three blocks sit at keys 1, 15 and 29, and reading them out confirms the spans exactly: the key-1 head (1,777 words) runs under three Roman heads -- the ruin of Baasha's family foretold, the reprieve, and 'Execution done at last' -- and explicitly works through vv.11, 12 and 13, so it covers vv.1-14; the key-15 head (1,235 words) runs Zimri, Tibni, Omri, the building of Samaria and 'How he ended his reign, v. 27, 28', so it covers vv.15-28; the key-29 head (1,099 words) covers Ahab, Jezebel, Baal and Hiel, i.e. vv.29-34. Three heads, 34 verses, no residue. I SUBDIVIDED THEM INTO SIX by source words, as the rule allows: 1-7 and 8-14 out of the first head (at the reign boundary in v.8, where Elah begins), 15-22 and 23-28 out of the second (at the accession formula in v.23), 29-33 and 34 out of the third (Hiel's rebuilding being Henry's own point IV and a discrete notice). Source words per tile 2760, 1179, 2579, 2033, 2406, 2111 -- within the ~1,700-6,000 band everywhere except the thin 8-14, discussed in a separate fidelity note. CORROBORATION WORTH RECORDING: Clarke's chapter-argument at key 1 independently breaks the chapter at 1-7, 8-15, 16-20, 21-23, 24, 25-28, 29-33, 34. That agrees with four of my six boundaries (1/8, 23 as a boundary, 29, 34) and differs only in placing the Zimri break at 15/16 rather than 14/15 and in splitting 24 off alone. So on this chapter two independent 18th-19th century structures agree, which is the first time I have had a second witness to a tiling."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "8"
+      ],
+      "note": "The vv.8-14 tile carries this chapter's highest expansion, 632 prose words on 1,179 usable source words, 0.54x, against 0.23-0.32x for the other five. I graded it A and the reasoning should be on the record. FIRST, 0.54x is still well BELOW the corpus median of 0.84x, so by the measure the tool actually applies this tile is a compression, not a stretch; the loop doc's warning threshold is ~6x. My previous five chapters ran 0.14-0.38x, so the number looks high only against my own recent habit of compressing hard, not against the standard. SECOND, the denominator is understated for exactly the reason recorded in the K&D note: three of the five voices' blocks in this span (keys 9, 10 and 13, 200 words each) are substantially bare KJV text, so of the 1,179 nominal words perhaps 700 are exposition -- against which the tile reads 0.90x, i.e. at the median. THIRD, the positive evidence: the tile's TTR is 0.669 and compression 0.470, the chapter's second best on both, the lint reports a zero pad rate and zero templating, and it carries five distinct voices making five distinct points (K&D on Arza's complicity and on the idiom covering males only, Ellicott on the public debauchery and on 'vanities', Henry on Elah absent from his own siege, Clarke on the rabbinic five houses, Gill on the reach to friendship). Nothing in it is said twice. This is the same lesson as the 1kings 9 vv.20-25 tile: a thin source carrying several dense commentators yields a high ratio honestly, and the ratio alone is a poor proxy for stretching."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "8",
+        "15",
+        "23",
+        "29",
+        "34"
+      ],
+      "note": "Draft overrun, sixth chapter running, BUT THE PATTERN FINALLY BROKE IN PART. First-draft word counts were 647, 632, 704, 751, 795, 706 against a 650 cap -- so two of six tiles came in under the cap on the first pass, the first time that has happened in six chapters. Mean overrun +7% against +17% at 1kings 9 and +25% at matthew 18. WHAT CHANGED, and it is the prescription I wrote at 1kings 9 actually working: I budgeted by DISTINCT DISPUTES per tile rather than by voice count. The two tiles that came in clean (vv.1-7 and vv.8-14) carry two and one disputes respectively; the three worst overruns (vv.23-28 at 751, vv.29-33 at 795, v.34 at 706) carry three, two and three disputes each PLUS a geographic or historical excursus I had not counted as a dispute -- Clarke's five-empire history of Samaria, Ellicott's Baal-as-title philology, Clarke's five-version survey of the Jericho curse. SO THE REFINEMENT IS: count excursuses as disputes for budgeting. An excursus costs the same 80-120 words as a dispute and is harder to cut afterwards, because unlike a dispute it has no opposing position whose omission would be dishonest -- it can be dropped wholesale, which is exactly what I did to Clarke's Samaria history (cut from five named empires to three). Trim rounds needed: 0, 0, 2, 4, 4, 2. The four-round tiles were both the ones where I tried patch-trimming before admitting the paragraph needed rewriting; at vv.29-33 I rewrote all four paragraphs wholesale after the first two patch rounds recovered only 25 words of the 145 needed. PRESCRIPTION: if the first draft is more than 10% over, rewrite the longest paragraph rather than patch-trim, because patch-trimming recovers 2-5 words per edit and a 100-word overrun then costs 20-40 asserted replacements."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "16",
+      "verses": [
+        "23",
+        "34"
+      ],
+      "note": "THE ENTITY CHECK FIRED TWICE MORE ON FAITHFUL DERIVATION, and both are the derivational-stemming gap already on the open list -- third and fourth clean examples after the Horace/France pair at 1kings 2. (1) I wrote 'a basin of the Ephraimite hills' for Ellicott's 'a basin of the hills of Ephraim'; the checker flagged ENTITIES: Ephraimite because the derived adjective occurs nowhere in the source, though 'Ephraim' is in both Ellicott and K&D. (2) In the vv.34 school summary I wrote 'allotted to the Benjamites' where K&D have 'allotted to the Benjaminites'; flagged on the one-syllable difference. Both signals correct as implemented and wrong as criticism, and both fixed by writing the source's own form -- 'the hills of Ephraim' and 'Benjaminites'. WHAT THESE TWO ADD TO THE EARLIER PAIR: the 1kings 2 cases were abbreviation expansion (Hor. -> Horace) and nation-adjective derivation (French -> France), and I proposed a prefix-plus-period rule and a small nation table. Neither of those would have caught these. These are TRIBE-NAME GENTILICS, where the source and the prose differ by an English suffix on a biblical proper noun -- Ephraim/Ephraimite, Benjamin/Benjamite/Benjaminites -- and the corpus is internally inconsistent about which form it uses, so a writer cannot reliably guess. CHEAPEST FIX THAT COVERS ALL FOUR CASES: treat a source token as matching a prose token when either is a prefix of the other and the remainder is one of a short closed suffix set (-ite, -ites, -ne, -nes, -an, -ans, -ish, -e), in addition to the prefix-plus-period rule. That is still not general stemming, and it would have silently passed all four of my flags while still catching an invented name, which is what the check is for."
     }
   ]
 }
