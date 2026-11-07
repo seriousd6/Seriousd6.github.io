@@ -103627,6 +103627,146 @@
         "1"
       ],
       "note": "Did not reproduce Henry's anti-papal excursus at key 1 ('if Christ ever intended that Peter and his successors at Rome should be heads of the church... whoever pretend to it are usurpers'), though it is genuine Henry and on this verse. It is polemic against a body rather than exposition of the text, and the tile already carries his substantive reading of the dispute. Recorded so the omission is a decision and not an oversight."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "9",
+      "verses": [
+        "26"
+      ],
+      "note": "JFB residue: the chapter's ONLY Jamieson, Fausset and Brown block sits at key 26 (155 words) and is about AMALEK and Saul's war of extermination — the eastward tribe, Rephidim, 'I am reminded of what Amalek did', the trophy Moses erected — i.e. donor 1 Samuel 15. It has nothing to do with 1 Kings 9:26, Solomon's navy at Ezion-geber. A SINGLE isolated JFB key in a chapter where JFB appears nowhere else is a strong residue signature in its own right and worth using as a detector: with no stride to solve (one key gives no congruence), the giveaway is the isolation plus a subject foreign to the verse. Excluded in the tags."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "9",
+      "verses": [
+        "28"
+      ],
+      "note": "Chapter-final Ellicott chrome, FOURTH recorded instance and the second New Testament-or-later book to show it: Ellicott's key-28 block ends '1 Kings 1Ki 8 1 Kings 1Ki 1 Kings 1Ki 10 Footnotes:'. With 2samuel 2 key 32, 2samuel 22 key 51 and matthew 18 key 35 this is now four chapters across three books, always on the chapter's LAST key, always the same shape of trailing book-name-and-chapter tokens followed by 'Footnotes:'. It is strippable corpus-wide by pattern and should be."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "9",
+      "verses": [
+        "2",
+        "4",
+        "5",
+        "10",
+        "11",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "23",
+        "25"
+      ],
+      "note": "The Keil and Delitzsch 200-word cap again, as at 2samuel 2: twelve of their fourteen blocks in this chapter run to exactly 201 words, severed mid-sentence. Worse here, several of those 201 words are almost entirely bare KJV text rather than exposition — key 5's block quotes vv.5-9 verbatim and key 11's quotes vv.11-15 — so the per-key source-word count credits K&D with explanatory material that is really the verse text over again. That inflates the denominator in any expansion ratio computed per key, and it is the same VERSE-TEXT-AS-CONTENT shape recorded at luke 2."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "9",
+      "verses": [
+        "1"
+      ],
+      "note": "A variant of the appended-review shape, at the FIRST key rather than the last: Clarke's key-1 block (170 words) is not exposition of v.1 but the chapter ARGUMENT, a verse-by-verse synopsis of the whole of 1 Kings 9 ('Solomon's levies, buildings, and the persons employed, 1Kgs 9:15-23... Solomon's navy, and the gold they brought from Ophir, 1Kgs 9:26-28'). Genuine Clarke and useful for establishing the chapter's structure, but it must not be cited as his comment on v.1. The denominator-cleaning pass should look for synopses at key 1 as well as reviews at the last key."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "2"
+      ],
+      "note": "All four moderns feel the same chronological difficulty and solve it four ways, converging on one answer. The temple took seven years and the palace thirteen more and the works were successive, so read flatly the verse puts either the dedication or the divine answer thirteen years after the prayer. Ellicott calls the first infinitely improbable and contradicted by Josephus and the second more preposterous, and makes the verse a summary of chapters six to eight that was never meant to date the vision. Gill reaches the same place through the grammarians, reporting that Junius and Tremellius parenthesize vv.1-9 and render 'for the Lord had appeared' while Piscator begins a distinct narrative. Henry simply repunctuates and dates the vision to the night after the festival. Keil and Delitzsch note only that this account summarizes where Chronicles is fuller. A good instance of four independent routes to one conclusion."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "9",
+      "verses": [
+        "18"
+      ],
+      "note": "Tadmor or Tamar: Ellicott ALONE states the case against the received identification with Palmyra — the Hebrew text has Tamar, the phrase 'in the land' seems to designate the land of Israel, and the surrounding place-names are southern, so the place may be the Tamar of Ezekiel 47:19 or Hazazon-Tamar, the old name of En-gedi, the marginal Tadmor having arisen from a mistaken identification. He then yields to the invariable reference of all the ancient versions and of Josephus to the famous city, and grants that on that reading something has probably dropped out after 'in the land'. Keil and Delitzsch note the written text gives the palm-city with Tadmor in the margin after Chronicles, perhaps mere Aramaean expansion yet still the name the Arabs use. Clarke says it is almost universally allowed to be Palmyra and quotes a rhapsody on Zenobia and Longinus. Worth recording as a case where the strongest textual argument is made by the commentator who then declines to follow it."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "9",
+      "verses": [
+        "28"
+      ],
+      "note": "FIVE positions on Ophir, and the methodological contrast is the real datum. Ellicott alone separates what is certain (east of Palestine, reached by the Red Sea, its gold proverbial) from what is speculation, then decides for India on four grounds: tradition, the LXX's Coptic word for India, the Arabic versions rendering it India outright, and the almug wood being sandal wood from the Malabar coast whose name is a corruption of the Sanscrit — while conceding that Ophir among the sons of Joktan indicates Arabia and that for gold alone western Africa would have the better claim than either. Gill settles with Josephus on the golden Chersonese near Malacca, where a mountain still bears the name. Henry supposes Ceylon. Clarke says no man knows to this day and follows Bruce to Sofala opposite Madagascar, on the argument that only the monsoons explain a three-year voyage. Gill's own list adds Zocatora, Sofala, Peru and Columbus's Hispaniola, Columbus himself having thought he had found Ophir for its gold."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "9",
+      "verses": [
+        "26"
+      ],
+      "note": "Clarke alone reads the navy down to a single ship: the word is literally 'a ship', and though Chronicles has the plural 'it does not appear that Solomon in this case built more than one ship, and this was manned principally by the Tyrians'. Against him Gill, Henry and Keil and Delitzsch all take a fleet. Recorded because it is a minority reading on a plain matter of number that the English plural conceals."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "9",
+      "verses": [
+        "15"
+      ],
+      "note": "Henry's block at key 15 is a WHOLE-SECTION review covering vv.15-28 under four heads (his buildings, his workmen and servants, his piety and devotion, his merchandise), so a single block filed at one key is the only Henry source for three of this chapter's five tiles. The practical consequence: the per-key and therefore per-tile source-word denominators for the tiles covering vv.20-25 and vv.26-28 understate what those tiles actually draw on, because their Henry material is credited to key 15, which lies in the vv.15-19 tile. Henry's three heads at keys 1, 10 and 15 still gave the tiling, as they have in every chapter where he appears; the subdivision of his 15-28 head into three tiles was sized by source words, ~1,700 to 4,000 each."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "9",
+      "verses": [
+        "20"
+      ],
+      "note": "Expansion ratios across the five tiles ran 0.16, 0.20, 0.21, 0.28 and 0.38, the last for the vv.20-25 tile, whose 1,673 usable source words are the thinnest in the chapter while carrying five dense voices (Ellicott's feudal-serfship and Alexander parallels, Clarke's Egyptian-inscription reproach, Henry on the kingdom of priests, the Uzziah point). Nothing is padded — that tile has the chapter's highest type-token ratio at 0.694 and the lint reports a zero pad rate — but it is the clearest case yet that a thin source with several dense commentators produces a high ratio honestly, and that the ratio alone is a poor proxy for stretching."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "10",
+        "15",
+        "20",
+        "26"
+      ],
+      "note": "Draft overrun, fifth chapter running: all five first drafts breached the 650-word cap, at 699, 703, 685, 708 and 905 words, a mean of +17% and a worst case of +39% on the Ophir tile. With only five voices per tile the per-voice budget of ~30 words should have given roughly 150 words of base, so the overrun here is not voice count but source density — Ellicott alone supplies 5,048 words in this chapter and his geographic excursuses on Millo, Beth-horon, Tadmor and Ophir each tempt a full paragraph. Prescription for source-dense rather than voice-dense chapters: budget by the number of distinct DISPUTES in the tile, not the number of voices, and allow one trim round per dispute beyond three."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "10",
+        "15",
+        "20",
+        "26"
+      ],
+      "note": "pericope_label convention: followed 1 KINGS's own most recent practice (1kings 1 and 1kings 2, both generated 2026-11-01), which is the FULL KJV text of the range plus 'themes' as four to six short phrase strings. That differs from matthew, whose recent practice (matthew 19 and 22) is a short descriptive condensation with phrase themes. So the split recorded earlier is not between books but between generations, and both current conventions pair their label style with phrase themes rather than one-KJV-verse-per-verse. The vv.1-9 label runs to 328 words, which is long but matches 1kings 13's 370."
     }
   ]
 }
