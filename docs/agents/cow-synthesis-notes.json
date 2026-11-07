@@ -104032,6 +104032,41 @@
         "30"
       ],
       "note": "Assembly was kept as the LAST step after the 1chronicles 4 lesson, where re-running the builder from patch/*.html reverted four fixes I had applied directly to the assembled JSON. Here every correction went into patch/<key>.html and the prose+tags files were rebuilt from scratch afterwards (git checkout of both files, then build.py, then setmeta.py), so the assembled output cannot diverge from the sources. Builder now also asserts the tiling before writing: exact cover of the source keys, no duplicate coverage, and no span covering a verse absent from the source - the 1chronicles 4 failure mode."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "8",
+      "verses": [
+        "22",
+        "26"
+      ],
+      "note": "THIS CHAPTER BELONGS ON THE BLOCKLIST. It has no legal honest output as the source is currently keyed, and the reason is structural rather than a matter of effort. 1 Chronicles 8 has 40 verses; the catena has 34 keys, with NO block at all for verses 5, 21, 23, 24, 25 and 27. Those absences are hard walls, because QA.coverage_problems forbids an entry from covering a verse absent from the source ('entries cover verses absent from the source'), so no pericope span may bridge them. The runs of present keys are therefore 1-4, 6-20, 22, 26 and 28-40 -- which FORCES verses 22 and 26 to be single-verse entries, walled on both sides. Their entire source is 14 words and 7 words respectively, and both are severed sentence-heads with no predicate: key 22 is 'And Ishpan, and Heber,.... And all that follow to the end of these verses:' and key 26 is 'And Shamsherai,.... Who, with those next mentioned:'. The word window admits 350-650, or 120-349 with thin (THIN_MIN=120, source must be <=200 words, which these pass). So the floor for these two entries is 120 words against 14 and 7 words of a dangling clause -- 8.6x and 17.1x, against a corpus median of 0.84x and a loop-doc warning threshold of ~6x past which 'the prose is mostly not coming from the page in front of it'. There is no exemption below 120 and no way to lower the floor. WHAT THE EXISTING LEGACY PROSE DID, which is the proof that this cannot be done cleanly: it padded them to 391 and 421 words and then NARRATED THE THINNESS to fill the space -- key 26 reads 'the reformed John Gill introduces them with his briefest connective yet -- who, with those next mentioned -- knowing the roll is nearly done and needing only to keep the line'. That is a prose-rule-2 violation (never narrate the source's thinness) and an invented motive for a commentator, shipped under a grade-A legacy stamp. Regenerating the chapter would require me to commit the same offence at the same two keys or ship a validator failure. I did not start it; the tree is clean and nothing was written. THE FIX IS AT HARVEST, not in the writing: Gill's exposition of vv.15-27 is one continuous sentence listing the sons, and the harvester has chopped it into per-verse fragments each ending in a colon whose body was filed under a neighbouring key. Re-harvesting Gill's run as one block keyed at 15 (or declaring vv.15-27 a single pericope, which the gaps at 21 and 23-25 currently forbid) would make the chapter writable at once. Per the standing instruction I have NOT added the blocklist entry myself."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "8",
+      "verses": [
+        "15",
+        "17",
+        "19",
+        "22",
+        "26"
+      ],
+      "note": "A NEW DEFECT CLASS: THE SEVERED LEMMA. Five of Gill's blocks in this chapter are not short comments but TRUNCATED SENTENCE-HEADS, each ending in a colon with its predicate missing -- key 15 (22w) 'And Zebadiah,.... And all that follow in this and the next verse were the sons of Beriah the son of Elpaal; namely:', key 17 (9w) 'And Zebadiah, and Meshullam,.... These, with those that follow:', key 19 (10w) 'And Jakim,.... With all the rest in these verses, namely:', key 22 (14w) 'And Ishpan, and Heber,.... And all that follow to the end of these verses:', key 26 (7w) 'And Shamsherai,.... Who, with those next mentioned:'. HOW THIS DIFFERS FROM AN ORDINARY THIN SOURCE, and why it needs its own detector: a thin block says one small thing completely, and can be distilled honestly into a short entry. A severed lemma says NOTHING -- it is the grammatical onset of a statement that is completed somewhere the harvester did not keep, so there is no proposition in it to attribute to the commentator at all. Yet it passes every existing test: it is genuine Gill, on the right verse, in the right book, with no markup, no foreign subject and no missing voice. The only signal is syntactic. CHEAP DETECTOR, and it is reliable on these five: a block whose visible text ends in a colon or in 'namely:' / 'as follows:' / 'these, with' and which is under ~40 words is a severed lemma, and should be treated as zero usable source rather than as thin material. CORROBORATION FROM THE BEST WITNESS IN THE CHAPTER: Keil and Delitzsch, whose key-16 and key-18 blocks cover the same ground, state outright that 'Of these descendants of Elpaal, also, nothing further is known, and the same may be said of the nine sons of Shimhi, 1 Chronicles 8:19-21; of the eleven sons of Shashak, 1 Chronicles 8:22-25; and of the six sons of Jeroham, 1 Chronicles 8:26, 8:27'. So the one commentator who does write continuously here says on the record that there is nothing to say about precisely the verses whose keys are severed. A register chapter where the sources genuinely say nothing is a legitimate outcome; the defect is that the keying makes it impossible to SAY so within the contract. Probably corpus-wide in the genealogies (1 Chronicles 1-9, Nehemiah 7, Ezra 2, Numbers 26) and worth a scan."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "8",
+      "verses": [
+        "20"
+      ],
+      "note": "JFB RESIDUE, and the SECOND confirmation of the isolated-single-key signature first recorded at 1kings 9:26. This chapter's only Jamieson, Fausset and Brown block sits at key 20 (31 words) and reads 'not in age, for he had reached manhood ( 1Ki 2:9 ) and must have been at least twenty years old; but he was raw and inexperienced in matters of government.' It cites 1 Kings 2:9 outright and is plainly about a young king's fitness to govern -- nothing whatever to do with Elienai, Zilthai and Eliel, three names in a Benjamite register. The signature holds exactly as predicted: where JFB appears at ONE key only in a chapter where they appear nowhere else, and the subject is foreign to the verse, it is residue, and no stride can be solved from a single key. Worth noting for the sweep that the donor here is NOT in 1 Samuel, as the whole 1 Kings series was -- the block's own citation points at 1 Kings 2, i.e. a LATER book than the target (1 Chronicles 8). That breaks the 'backward rule' recorded earlier in this notebook, which held without exception across 1 Kings 1, 2, 9 and 16 where the donor stream (1 Samuel) ran behind the target. So the donor offset is not uniformly backward across the corpus, and a sweep that assumes backwardness will miss this class. It would have been excluded via excluded_voices had the chapter been written; since it was not, it is logged here only."
     }
   ]
 }
