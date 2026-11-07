@@ -103922,6 +103922,116 @@
         "34"
       ],
       "note": "THE ENTITY CHECK FIRED TWICE MORE ON FAITHFUL DERIVATION, and both are the derivational-stemming gap already on the open list -- third and fourth clean examples after the Horace/France pair at 1kings 2. (1) I wrote 'a basin of the Ephraimite hills' for Ellicott's 'a basin of the hills of Ephraim'; the checker flagged ENTITIES: Ephraimite because the derived adjective occurs nowhere in the source, though 'Ephraim' is in both Ellicott and K&D. (2) In the vv.34 school summary I wrote 'allotted to the Benjamites' where K&D have 'allotted to the Benjaminites'; flagged on the one-syllable difference. Both signals correct as implemented and wrong as criticism, and both fixed by writing the source's own form -- 'the hills of Ephraim' and 'Benjaminites'. WHAT THESE TWO ADD TO THE EARLIER PAIR: the 1kings 2 cases were abbreviation expansion (Hor. -> Horace) and nation-adjective derivation (French -> France), and I proposed a prefix-plus-period rule and a small nation table. Neither of those would have caught these. These are TRIBE-NAME GENTILICS, where the source and the prose differ by an English suffix on a biblical proper noun -- Ephraim/Ephraimite, Benjamin/Benjamite/Benjaminites -- and the corpus is internally inconsistent about which form it uses, so a writer cannot reliably guess. CHEAPEST FIX THAT COVERS ALL FOUR CASES: treat a source token as matching a prose token when either is a prefix of the other and the remainder is one of a short closed suffix set (-ite, -ites, -ne, -nes, -an, -ans, -ish, -e), in addition to the prefix-plus-period rule. That is still not general stemming, and it would have silently passed all four of my flags while still catching an invented name, which is what the check is for."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "13",
+      "verses": [
+        "10",
+        "11",
+        "12",
+        "14"
+      ],
+      "note": "Matthew Henry's commentary is filed by SECTION, not by verse: his four blocks in this chapter sit at keys 1, 10, 15 and 23 and each covers the whole section that follows (the key-10 block is 1438 words and comments on vv.10-14). So per-verse source resolution both over-counts the section-head key and under-counts every other verse in the section. Concretely: v14's measured source is 341 words with no Henry in it, giving a recorded expansion of 1.51x, while Henry's key-10 block carries his actual comment on v14 ('Observe how modest he is in his requests. He only prays, Remember me, not Reward me - Wipe not out my good deeds, not Publish them, Record them') which I used and verified verbatim. The v14 entry is faithful; the ratio is an artifact. Same pattern inflates v10 (1501w measured) and v15 (1711w) and deflates vv.11-14 and 16-22. This is the span-aware source resolution item: until it is fixed, per-entry expansion ratios are not comparable within a chapter whose register is section-headed."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "11",
+        "12",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "20",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "note": "Legacy shape here is the inline school-label roll-call: 112 <strong> labels across 31 keys, e.g. 'The <strong>reformed</strong> John Gill takes the law heard to be...' and 'The <strong>grammatical-historical</strong> Keil and Delitzsch explain...'. Baseline was all 31 grade A at 414-486 words (mean 450) but 28/31 trips of the local carrier/roll-call sweep. Voices are modern-only - Gill 31, Ellicott 23, Clarke 21, K&D 20, Wesley 17, Henry 4, no JFB - so unlike luke 2 and 1chronicles 4 there is no residue voice to exclude and excluded_voices stayed empty on all 20 entries."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "13",
+      "verses": [
+        "27",
+        "30"
+      ],
+      "note": "Mixed per-verse/pericope tiling, 31 source keys -> 20 entries, cut so that no span has to expand its source: per-verse where the key carries 350+ usable words, paired or tripled where it does not. The tail forced the recut I did not plan: key 27 is 65 source words and key 30 is 61, so the planned 27-28 | 29 | 30-31 would have made 27-28 a 288-word source under a 350-word floor - a forced expansion. Recut to 27-29 (624w, 0.94x) and 30-31 (711w usable, 0.38x). Rule worth adding to the doc: check the SOURCE WORDS of every planned span against the 350 floor before writing, not just the verse count."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "13",
+      "verses": [
+        "31"
+      ],
+      "note": "Page chrome confirmed again on the chapter's LAST key, matching the one-per-chapter pattern: key 31 carries 650 usable words (Gill 46, K&D 21, Clarke 467, Ellicott 97, Wesley 22) plus ~1008 words of copyright boilerplate and raw CSS inside the Ellicott block, so the raw key measures 1643-2149 words. Ellicott's real contribution there is 97 words ending 'with these words end the annals of Old Testament history', after which the chrome begins. Marker 'Powered by Light speed Technology' remains the reliable cut point; it appears once per chapter on the closing verse across 1100 chapters. Stripping it needs no judgement and would stop the chrome denying the thin exemption exactly where a chapter's last verse is briefest."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "fidelity",
+      "book": "nehemiah",
+      "chapter": "13",
+      "verses": [
+        "16"
+      ],
+      "note": "Caught by the fidelity read-back, not by me: I modernised Gill's 'Zidon' to 'Sidon' and the entity check flagged Sidon as ungroundable in the source pool. Same city, but the source spells it Zidon and the checker is right to object - a reader comparing prose to catena would find a word no witness used. Restored Gill's spelling. Process rule: do not modernise proper-name spellings out of the catena, even where the modern form is the familiar one; the entity check is the only thing standing between a silent normalisation and a drift in the record."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "fidelity",
+      "book": "nehemiah",
+      "chapter": "13",
+      "verses": [
+        "24"
+      ],
+      "note": "Key 24 came back grade B on first assembly (ttr 0.5545 against the 0.58 floor, the only B in 20) and the audit's own recompute caught the mismatch against my recorded A. Cause was twofold: the subject matter forces 'language/speech/Ashdod/children/mother/half' to recur, and my closing paragraph was editorial rather than sourced ('works as proof rather than as colour', 'evidence that cannot be argued with'). Replaced that paragraph with material actually in the catena - Clarke's explicit verdict that his household reconstruction 'is a better explanation than that which intimates that the same child spoke a jargon, half Ashdod and half Hebrew', which is a real disagreement with Gill's first construction - and varied the diction with the sources' own words (tongue, idiom, jargon). Result 368 words, ttr 0.6176, grade A. Low TTR was a symptom of padding, not of the topic."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "11",
+        "12",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "20",
+        "22",
+        "23",
+        "24",
+        "25",
+        "27",
+        "30"
+      ],
+      "note": "Assembly was kept as the LAST step after the 1chronicles 4 lesson, where re-running the builder from patch/*.html reverted four fixes I had applied directly to the assembled JSON. Here every correction went into patch/<key>.html and the prose+tags files were rebuilt from scratch afterwards (git checkout of both files, then build.py, then setmeta.py), so the assembled output cannot diverge from the sources. Builder now also asserts the tiling before writing: exact cover of the source keys, no duplicate coverage, and no span covering a verse absent from the source - the 1chronicles 4 failure mode."
     }
   ]
 }
