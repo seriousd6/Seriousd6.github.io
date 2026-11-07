@@ -104067,6 +104067,95 @@
         "20"
       ],
       "note": "JFB RESIDUE, and the SECOND confirmation of the isolated-single-key signature first recorded at 1kings 9:26. This chapter's only Jamieson, Fausset and Brown block sits at key 20 (31 words) and reads 'not in age, for he had reached manhood ( 1Ki 2:9 ) and must have been at least twenty years old; but he was raw and inexperienced in matters of government.' It cites 1 Kings 2:9 outright and is plainly about a young king's fitness to govern -- nothing whatever to do with Elienai, Zilthai and Eliel, three names in a Benjamite register. The signature holds exactly as predicted: where JFB appears at ONE key only in a chapter where they appear nowhere else, and the subject is foreign to the verse, it is residue, and no stride can be solved from a single key. Worth noting for the sweep that the donor here is NOT in 1 Samuel, as the whole 1 Kings series was -- the block's own citation points at 1 Kings 2, i.e. a LATER book than the target (1 Chronicles 8). That breaks the 'backward rule' recorded earlier in this notebook, which held without exception across 1 Kings 1, 2, 9 and 16 where the donor stream (1 Samuel) ran behind the target. So the donor offset is not uniformly backward across the corpus, and a sweep that assumes backwardness will miss this class. It would have been excluded via excluded_voices had the chapter been written; since it was not, it is logged here only."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "5",
+        "19",
+        "25",
+        "36"
+      ],
+      "note": "WORST voice misfiling found so far, and the first that is cross-BOOK. All five Jamieson, Fausset and Brown blocks in 2samuel 13 are Samson material from JUDGES, not 2 Samuel: keys 1 and 7 carry an identical 135-word block on the Philistines going up to apprehend Samson and the jawbone at Ramath-lehi (Judges 15); key 19 carries Delilah being bribed by the five rulers to extract his secret (Judges 16), sitting where Tamar puts ashes on her head; key 37 ends with the explicit citation 'Jud 16:21, 22. The Philistines Took Him and Put Out His Eyes'; key 25 has an 18-word fragment. Previous finds (luke 2 carrying Luke 20/Mark 12, 1chronicles 4 carrying 1 Chronicles 11) were at least the right book. Here the self-citation makes it machine-detectable: a JFB block whose internal refs point to a different BOOK is residue, no judgement needed. Declared excluded_voices on all five affected spans; 416 words of 16899 removed from the measured source."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "13",
+      "verses": [
+        "38"
+      ],
+      "note": "Albert Barnes appears exactly once in 2samuel 13, at key 39, and it is not commentary at all: the 763-word 'block' is page navigation ('Notes John Gill's Exposition Complete List of 144 Bible Concordances (6) Thompson Chain Reference Nave's Topical Bible ... Scofield Reference Index Treasury of Scripture Knowledge'). It falls entirely after the chrome marker so the chrome cut already removes it and no excluded_voices declaration was needed, but it means a naive voice-census of this chapter reports Barnes as a witness when he contributes nothing. Any automated residue pass should strip chrome BEFORE counting voices, or it will inherit phantom witnesses from the link lists."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "13",
+      "verses": [
+        "38"
+      ],
+      "note": "Page chrome on the chapter's LAST key for the THIRD chapter running (nehemiah 13 key 31, 1chronicles 4 key 43, now 2samuel 13 key 39: 634 usable words plus 999 of boilerplate and the concordance link list). The one-per-chapter-on-the-closing-verse pattern is now confirmed often enough to act on. Here it also truncates a real witness: Ellicott's key-39 block measures 1225 words raw but his actual argument ends after roughly 400, mid-discussion of why David 'desisted from going forth against Absalom', and the rest is chrome."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "21",
+        "30"
+      ],
+      "note": "Matthew Henry is section-filed again, three blocks for 39 verses: key 1 (2984 words, covering vv.1-20), key 21 (1925 words, vv.21-29), key 30 (837 words, vv.30-39). Same defect as nehemiah 13 and the same consequence for measurement - the section-head key's measured source is inflated (v1 reads 0.15x) while every other verse in its section is deflated (vv.22 and 27-28 read 1.27x and 1.36x because Henry's comment on them lives under keys 21 and 27's neighbours). Every Henry attribution in this chapter was verified against the block it actually sits in before use. Two books, two registers, one defect: section-headed commentators are the normal case, not the exception, which is the argument for span-aware source resolution rather than a per-chapter workaround."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "9",
+        "11",
+        "15",
+        "17",
+        "19",
+        "21",
+        "22",
+        "23",
+        "25",
+        "27",
+        "29",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
+      "note": "Mixed tiling, 39 source keys to 20 entries, cut by SOURCE WORDS after excluding JFB residue rather than by narrative units alone. The exclusion changed the cut: my first plan paired 7-8 (400 words), but removing JFB's misfiled 135 left 264 - under the 350 floor and so a forced expansion. Regrouped to 5-8 (641) and 9-10 (383). Lesson for the doc: compute excluded_voices BEFORE planning spans, because residue removal can push a planned span under the floor, and the two decisions are not independent. Nine tiny keys (6=57, 8=35, 11=41, 14=34, 25=79, 28=64, 31=64, 36=28 words) drove the pairing; the narrative units of the chapter and the word budget agreed more often than not."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "13",
+      "verses": [
+        "15",
+        "19",
+        "21",
+        "25",
+        "38"
+      ],
+      "note": "Unusually rich REAL disagreement in this chapter, which made the entries easy to keep honest. v15: Keil and Delitzsch call the love-to-hatred reversal fully explicable psychologically, Ellicott explains it by the maxim that human nature hates whom it has injured, and Clarke flatly refuses the attempt as 'not only brutal but inexplicable'. v20: Wesley glosses Tamar's desolation as giving herself up to solitude, where Keil and Delitzsch insist the term cannot be proved to mean single or solitary. v22: Keil and Delitzsch read 'neither good nor bad' as not a single word spoken, Gill and Wesley read it as silence on that subject only, since total silence would have alerted Amnon. v39: Ellicott gives three arguments against the received 'David longed for Absalom' reading and prefers 'David desisted from going forth against him', with 2 Samuel 14:24 and 14:28 as evidence; Clarke and Wesley keep the received reading and judge David by it."
     }
   ]
 }
