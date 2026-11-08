@@ -104319,6 +104319,177 @@
         "42"
       ],
       "note": "Shape: 42 source keys to 24 spans, cut by source words after removing JFB residue (416 words) and chrome. Legacy baseline 42 entries, all legacy-unversioned. Voices Gill 42, Ellicott 29, K&D 28, Wesley 19, Clarke 18, Henry 5 (section heads at keys 1, 9, 24, 35 and one more), JFB 5 (all residue). Chrome on the last key again - key 42, 926 words - for the FIFTH chapter running, and here it buries the tail of a 1116-word Ellicott block whose real content ends with the Phillipson quotation on the friendship. The chapter is unusually rich in textual cruxes that the witnesses handle differently rather than identically: the defective invocation at v.12 (four different supplements from the versions and the manuscripts), the disputed 'Jonathan arose' at v.25 (Abarbanel and Rashi against the LXX, with Keil calling the Greek senseless), 'm'od' at v.19 (Ellicott rejecting the Vulgate's 'quickly' for 'greatly' on the practical ground that it mattered only that David be FAR, not fast), the insult at v.30 (Ellicott dissolving the slur on Jonathan's mother into an abstract noun), and the single arrow at v.36 where three were agreed. The ethics of David's Bethlehem excuse is a genuine four-way split worth flagging: K&D say flatly 'David did not look upon prevarication as a sin', Ellicott calls the excuse feigned and adds that its morality 'is by no means sanctioned by the compiler of the history; he simply relates the story'."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "15",
+        "21",
+        "27",
+        "33"
+      ],
+      "note": "JFB RESIDUE: STRIDE 6, OFFSET 3, DONOR JUDGES 17-18 -- and this chapter settles two open questions about the pattern. All four JFB blocks are foreign: key 15 (93w) is on carved and molten images plated with silver and the two hundred shekels given to the founder, key 21 (52w) on a Levite of roving disposition engaged by Micah for permanent service, key 27 (48w) on the removal of a son and the installation of a Levite into the priestly office, key 33 (250w) on the Danites' straitened territory and their deputation northward consulting Micah's priest through the teraphim. That is Judges 17-18 entire, and nothing to do with Joab, the woman of Tekoah or Absalom. FIRST FINDING: keys 15, 21, 27 and 33 are all congruent to 3 MODULO 6. At 2samuel 2 the residue sat at offset 4 with donor Judges 8. So the offset has moved WITHIN 2 SAMUEL just as it moved within 1 KINGS (offset 2 at chapters 1, 2 and 9; offset 3 at chapter 16). That is now TWO books in which the offset is not constant, which kills the per-book congruence sweep I recommended at 1kings 2 and confirms the correction I filed at 1kings 16. The stride of 6 has held in every chapter examined; it is only the offset that drifts. SECOND FINDING, and the useful one: the donor ADVANCE RATE looks stable corpus-wide even though the offset drifts. Judges 8 at 2samuel 2 to Judges 17-18 at 2samuel 14 is twelve target chapters for about nine donor chapters, roughly 0.75 donor chapters per target chapter -- against the ~0.7 I measured across 1 Kings 9 to 16 (1 Samuel 15 to 20). Two independent books giving 0.70 and 0.75 means the donor position is PREDICTABLE from a single anchor per book even when the offset is not, so the sweep should solve offset per chapter but can predict the donor passage from the rate. All four excluded via excluded_voices on the four tiles containing them; the exclusions lowered measured source by 163, 90, 85 and 267 words respectively."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "32"
+      ],
+      "note": "CHAPTER-FINAL ELLICOTT CHROME, SIXTH INSTANCE -- AND IT IS NOT ON THE CHAPTER'S LAST KEY, WHICH CORRECTS THE STRIP RULE. Ellicott's key-32 block runs 1,055 words, of which only the first ~75 are commentary ('Absalom makes no acknowledgment of having done wrong...for which he afterwards suffered severely'). The rest is '2 Samuel 2Sa 13 2 Samuel 2Sa 2 Samuel 2Sa 15 Footnotes:' followed by the entire StudyLight page -- copyright statement, full stylesheet, navigation tree, the 66-element book_data array, the verse-popup and accordion scripts, and a live Stripe publishable key. That is the same total-page leak first seen at 1kings 16 key 34, so the heavy form is now two of six instances rather than one. THE CORRECTION: the five earlier instances (2samuel 2 key 32, 2samuel 22 key 51, matthew 18 key 35, 1kings 9 key 28, 1kings 16 key 34) were all on the chapter's LAST key, and I wrote the detector accordingly. Here the chapter's last key is 33, where Ellicott has no block at all; the chrome sits at key 32 because that is ELLICOTT'S last block in the chapter. So the rule is per-commentator, not per-chapter: strip from the book-name-repetition-plus-'Footnotes:' signature to the end of the block, on each commentator's final block, not merely on the chapter's final key. A detector keyed to the chapter's last key would have missed this one entirely."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "30"
+      ],
+      "note": "A MISFILED BLOCK THAT STATES ITS OWN TRUE ADDRESS -- the most tractable misfiling class found so far. Clarke's key-30 block runs 1,119 words. The first ~25 are genuine comment on v.30 ('Go and set it on fire - This was strange conduct, but it had the desired effect. He had not used his influence to get Absalom to court; now he uses it, and succeeds.'). The remaining ~1,090 open with the words 'Additional observations on 2Sam 14:26 :' and are a full dissertation on the weight of Absalom's hair -- Bochart's letter to Faukell, Budaeus on corrupted numerals, Josephus's two hundred shekels as five minae and a mina as two and a half pounds, Epiphanius and Hesychius on the king's shekel, the Attic drachm, and Clarke's own proposal that lamed (thirty) was misread as resh (two hundred). WHY THIS MATTERS MORE THAN THE OTHER MISFILINGS: every class recorded so far has to be diagnosed by reading the content and judging that it does not fit the verse -- the JFB foreign-passage blocks, the chapter-final chrome, the appended chapter reviews, Clarke's chapter arguments. This one ANNOUNCES ITS ADDRESS IN ITS OWN FIRST LINE, so it is mechanically relocatable: a regex for 'Additional observations on <book> <ch>:<v>' can split the block and refile the remainder under the verse it names, with no judgement required. Worth a corpus scan for that exact phrase, since it is a Clarke habit and he appears in most chapters. MEASURED CONSEQUENCE HERE: the per-key counts credited the vv.28-31 tile with 1,119 words it does not stand on and the vv.25-27 tile with none of the hair discussion that is its proper material, so one expansion ratio was understated and the other overstated. I used the dissertation in the vv.25-27 tile, where the hair is, which chapter-level grounding permits; a worker trusting per-key counts would have written the hair tile without its best source and the arson tile with a thousand words of denominator it could not use."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke's chapter-ARGUMENT at key 1 for the THIRD CONSECUTIVE CHAPTER, which confirms the prediction I filed at 1kings 16 and makes this safe to treat as systematic rather than incidental. His key-1 block here is 106 words and is entirely a verse-by-verse synopsis of the whole chapter ('A woman of Tekoah, by the advice of Joab, comes to the king... Hiel the Beth-elite rebuilds Jericho' in the 1 Kings instance; here 'A woman of Tekoah... comes to the king; and by a fictitious story persuades him to recall Absalom, vv. 1-20... David is reconciled to him, 2Sam 14:33'), with NO comment on v.1 at all -- unlike 1kings 9 and 1kings 16, where a short genuine remark on the first verse followed the synopsis. So the proportion varies but the shape does not. At 1kings 16 I wrote that the denominator-cleaning pass 'should expect it on EVERY chapter where Clarke appears, not look for it as an exception'; three for three now supports that. The synopsis is again independently useful for the tiling: his breaks at 1-20, 21-23, 24, 25-26, 27, 28-32, 33 agree with four of my six boundaries. The practical rule for a worker: read Clarke's key-1 block for the chapter's structure, then discount it entirely when deciding whether Clarke may be named as a witness on verse 1."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "16",
+        "18",
+        "32"
+      ],
+      "note": "The Keil and Delitzsch 200-word cap for the FOURTH chapter running, and the attribution risk I warned of at 1chronicles 8 was realised here twice. Twelve of their twenty-one blocks in this chapter run to exactly 200 words, severed mid-sentence; key 32 runs 103 words and is bare KJV text of vv.32-33 with NO exposition whatever, and keys 16 and 18 are likewise dominated by verse text. CONSEQUENCE ONE: K&D have nothing of their own on vv.32-33 at the key where those verses live. Their actual comment on Absalom's demand ('This half forgiving was really worse than no forgiveness at all. Absalom might indeed very properly desire to be punished according to the law') sits at key 29, two tiles earlier. I declared them among the vv.32-33 voices and used that material, which chapter-level grounding permits, but a worker reading only the key would have found 103 words of verse text and either dropped the chapter's sharpest judgment or named a commentator who appeared to say nothing. CONSEQUENCE TWO: the reverse error is equally available, since the per-key word count credits key 32 with 103 words of 'K&D' that contain no view at all. This is the same trap recorded at 1chronicles 8 key 2, now seen in a chapter that was otherwise perfectly workable -- so it is not confined to the register chapters. The denominator-cleaning pass should strip bare verse text from K&D blocks BEFORE per-key counts are used either to size a tile or to decide which voices it may name."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "1"
+      ],
+      "note": "THE WHOLE CHAPTER TURNS ON A PREPOSITION, AND THE WITNESSES SPLIT TWO AND TWO. Ellicott states the problem exactly: the phrase may mean that David's heart yearned FOR Absalom (so the Authorised Version, the Vulgate, the Septuagint and the Syriac) or that it was set AGAINST him; the Hebrew particle is used both ways but more frequently in the latter, and 'unquestionably expresses hostility in the only other place (Daniel 11:28) in which this form of the phrase occurs'. He therefore renders 'the king's heart was against Absalom', and clinches it with a structural argument the others never raise: on the warmer reading 'his stratagem to obtain his recall... would otherwise have been quite unnecessary'. Keil and Delitzsch read it the same way and add that David had not repealed the banishment even after comforting himself for Amnon's death. Against them Henry takes the warm sense -- the heat of his displeasure over, his old affection surviving, wanting only a friend to court him to a reconciliation 'without impeaching the honour of his justice' -- and Wesley supplies the psychology that makes the warm sense work, that the king 'desired to see him, but was ashamed to shew kindness to one whom God's law and his own conscience obliged him to punish; he wanted therefore a fair pretence, which therefore Joab gave him'. RECORDED BECAUSE THE STAKE IS THE WHOLE NARRATIVE, not a shade of meaning: on Ellicott's reading Joab is working against the king's settled mind and the parable is a deception; on Henry's and Wesley's he is giving a willing king the cover he already wants, and the parable is a courtesy. Note also that the strongest philological argument (the Daniel parallel) and the strongest literary argument (the stratagem would be pointless) both belong to the minority side against all the ancient versions."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "26"
+      ],
+      "note": "FIVE POSITIONS ON THE TWO HUNDRED SHEKELS OF HAIR, and the spread is a small case study in how these commentators handle an incredible number. (1) TEXT CORRUPT, NO EMENDATION OFFERED: Keil and Delitzsch call it 'in any case a round number, and much too high', reasoning that the sacred reckoning gives about six pounds and that even halving the royal shekel leaves the figure excessive; Ellicott reaches the same arithmetic from the same unknown and concludes 'some clerical error has probably arisen in copying the number'. (2) TEXT CORRUPT, EMENDATION SPECIFIED: Clarke alone says which letters, proposing that lamed (thirty) was misread as resh (two hundred) since 'if the upper stroke of the lamed were but a little impaired, as it frequently is both in MSS. and printed books, it might be very easily taken for resh', and he strengthens it by two further readings -- that the phrase rendered 'at every year's end' is literally 'from the end of days to days', which the Targum gives as 'at proper or convenient times', and that the head was POLLED, the redundancy cut off, not shaved. (3) TEXT SOUND: Henry alone defends it, reckoning the weight lower than the moderns and citing bishop Patrick that with the oil and powder, gold-dust if Josephus has the fashion right, 'it is not at all incredible'; Clarke reports the same defence at length from Bochart, including an officer of Clarke's own acquaintance who wore more than two pounds of powder daily on hair that did not weigh a quarter as much. (4) NOT WEIGHT BUT VALUE: Wesley records it without deciding, and Clarke independently notes 'there are some, however, who endeavor to solve the difficulty by understanding shakal to mean rather the value than the weight'. (5) THE MAXIMAL READING: Josephus, reported and derided by Clarke, makes two hundred shekels five minae and a mina two and a half pounds, i.e. twelve and a half pounds, and adds that eight days scarcely sufficed to shear the head -- Clarke's verdict, 'Credat Judaeus Apella!' and 'This is rabbinism, with a witness.' WORTH KEEPING because Clarke sets out and rejects Bochart's whole case before advancing his own, so a single block contains the strongest version of three of the five positions."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "14"
+      ],
+      "note": "TWO WITNESSES AGREE THAT THE ENGLISH IS WRONG, AND ONE BUILDS A DOCTRINE ON THE GREEK. Ellicott: 'The Hebrew is difficult, but the English is certainly wrong. The literal translation is \"And God doth not take away the soul, but thinketh thoughts that He may not banish the banished one\"; and the meaning is that God in wrath remembers mercy, and does not press punishment to extremes.' Clarke independently gives the same Hebrew sense, 'And God doth not take away the soul', and then reports the versions: the Septuagint has 'And God will receive the soul', from which he argues that 'after human life is ended, the soul has a state of separate existence with God. This was certainly the opinion of these translators, and was the opinion of the ancient Jews, at least three hundred years before the incarnation'; the Vulgate has 'Nor does God will the destruction of the soul'. Wesley alone works with the received English, glossing 'Respect - So far as to exempt him from this common law of dying'. RECORDED FOR TWO REASONS. First, it is a clean case of the received text's rendering being rejected by the two most philological witnesses while the devotional one builds on it, so a synthesis that followed the English alone would have reported the minority reading as the consensus. Second, Clarke's inference is the most doctrinally loaded thing in the chapter -- an argument for pre-Christian Jewish belief in the soul's survival drawn from a translator's choice of verb -- and it is worth flagging that he rests it on the Septuagint's rendering of a verse whose Hebrew he has just called obscure."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "24"
+      ],
+      "note": "THE HALF-MEASURE DIVIDES THEM THREE TO TWO, and the division is not along school lines, which is itself the point. FOR IT: Clarke holds it 'highly proper to show this detestation of the crime, and respect for justice' while remitting the death penalty; Wesley agrees on two grounds, 'lest whilst he shewed some mercy to Absalom, he should seem to approve of his sin' and because 'by this means Absalom might be drawn to a more thorough humiliation and repentance'; Henry gives two reasons of the same colour, the king's own honour, that he might not seem to countenance so great a criminal nor forgive too easily, and Absalom's greater humiliation, adding the telling detail that David 'had heard something of his conduct when Joab went to fetch him, which gave him too much reason to think that he was not truly penitent'. AGAINST IT: Keil and Delitzsch, flatly, 'This half forgiveness was an imprudent measure, and bore very bitter fruit' -- a judgment they repeat at v.29 in the stronger form 'This half forgiving was really worse than no forgiveness at all'; and Ellicott, who alone separates the two acts by their motives, 'The former had been done in weakness, the latter through a sense of justice', and then condemns the compound, 'The effect of this half measure was unfortunate; Absalom was irritated, and yet placed in a favourable position to carry out his plots.' SO THE TWO GRAMMATICAL-HISTORICAL VOICES OPPOSE THE TWO WESLEYAN-ARMINIAN VOICES AND THE PURITAN ONE, which is the reverse of what one would predict if the question were doctrinal: it is a political judgment about what half-pardons do, and the moderns who read the narrative as history take the dimmer view while the devotional readers defend the king's conscience. Note also that Ellicott's position is the only one that accounts for both the recall and the exclusion by different motives rather than treating the pair as a single policy."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "27"
+      ],
+      "note": "TAMAR'S MARRIAGE: A GLOSS REJECTED BY TWO AND RESCUED BY ONE. The Septuagint adds at this verse that Absalom's daughter 'became the wife of Roboam the son of Solomon, and bore him a son named Abia'. Clarke reports it, notes that Josephus says the same, and observes that 'this addition is not found in the other versions'. Keil and Delitzsch answer that it is 'quite at variance with 1 Kings 15:2, where it is stated that the wife of Rehoboam and mother of Abia (Abijam) was named Maacah', and record that Thenius 'regards it as original, though for reasons which Bttcher has shown to be worthless'. ELLICOTT ALONE SAVES THE SUBSTANCE BY RECONSTRUCTION: he calls it 'evidently a confused gloss', but then reasons that Maachah is called the daughter of Absalom while Abijah is elsewhere called the son of Michaiah the daughter of Uriel, so 'this must mean that Maachah was his granddaughter through Tamar' -- Tamar married Uriel, and her daughter became the mother of a line of kings. That is the most constructive piece of harmonisation in the chapter: the gloss is wrong as it stands and right in what it was reaching for, and the correction turns a contradiction into a genealogy. Recorded because it is the opposite of the usual pattern, where the textual critics dismiss and the devotional writers accept; here the critic who dismisses the wording is the one who recovers the fact."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "22",
+        "33"
+      ],
+      "note": "WESLEY REPRODUCES HENRY NEARLY VERBATIM, TWICE IN ONE CHAPTER, AND IT HAS A CONSEQUENCE FOR HOW PREVALENCE IS COUNTED. At v.22 Henry writes that David could not be justified in suspending the law, and that 'God justly made Absalom, whom his foolish pity spared, a scourge to him'; Wesley at the same verse writes 'How justly did God make this man, whom he had so sinfully spared, a scourge to him?' At v.33 Henry closes 'Did the bowels of a father prevail to reconcile him to an impenitent son, and shall penitent sinners question the compassion of him who is the Father of mercy? If Ephraim bemoan himself, God soon bemoans him... He is a dear son, a pleasant child, Jer. xxxi. 20'; Wesley writes 'Did the bowels of a father prevail to reconcile him to an impenitent son? And shall penitent sinners question the compassion of him who is the Father of mercy? If Ephraim bemoan himself, God soon bemoans him, with all the expressions of fatherly tenderness. He is a dear son, a pleasant child.' These are not parallel insights; the second is an abridgement of the first, which is consistent with Wesley's Notes being avowedly a condensation of earlier expositors. THE METHODOLOGICAL CONSEQUENCE, which I do not think the contract currently handles: Henry is mapped to puritan-evangelical and Wesley to wesleyan-arminian, so when they agree the tags record TWO schools holding a view and the prevalence rises accordingly -- but where Wesley is abridging Henry there is one witness, not two, and the apparent breadth of agreement is an artifact of the mapping. I have counted them separately here because the contract's school enum requires it and because Wesley does diverge elsewhere in this chapter (he reads 'the iniquity be on me' against Clarke and Ellicott, and reports the value-not-weight solution for the hair, neither of which is in Henry). But a prevalence of 'several' resting on Henry plus Wesley alone should be treated as weaker evidence than one resting on any other pair, and it may be worth a rule: where Wesley's wording tracks Henry's closely, record the view once and note the dependence rather than counting two schools."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "21",
+        "25",
+        "28"
+      ],
+      "note": "HENRY'S SECTION HEADS GAVE THE TILING FOR THE ELEVENTH TIME, with a wrinkle worth recording. His four blocks sit at keys 1, 21, 25 and 28, but they are not four heads: the key-1 head (3,228 words) runs under seven numbered divisions explicitly keyed to vv.1, 2, 5-7, 8, 9, 10, 11, 12-13, 14, 15-17 and 18-20, so it covers vv.1-20; the key-21 head (1,036 words) covers the recall and then 'Occasion taken hence to give an account of Absalom', working through vv.25, 26 and 27, so it covers vv.21-27; the key-28 head (941 words) covers vv.28-33. THE KEY-25 BLOCK (114 words) IS NOT A HEAD AT ALL but a short redundant SUMMARY of the Absalom-beauty portion of the key-21 head, repeating its substance in condensed form ('Nothing is said of Absalom's wisdom and piety. All here said of him is, that he was very handsome...'). This is the Henry duplicate-summary shape: the exposition and its own precis both harvested, filed under different keys. It inflates Henry's apparent coverage from three heads to four and would mislead anyone counting heads to infer the tiling. I subdivided the three real heads into seven tiles by source words, breaking 1-20 at the parable's start and at its application (1-3, 4-11, 12-20), 21-27 at the accession of the beauty notice (21-24, 25-27), and 28-33 at Joab's arrival (28-31, 32-33). Source words per tile 4361, 1795, 3517, 2205, 1297, 2662, 1366. Clarke's chapter argument at key 1 independently corroborated four of the six boundaries."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "4",
+        "12",
+        "21",
+        "25",
+        "28",
+        "32"
+      ],
+      "note": "pericope_label convention: I followed THIS BOOK'S MOST RECENT PRACTICE, which is not my own earlier practice in it. 2samuel 13 (generated 2026-11-07) and 2samuel 23 (generated 2026-11-08) both use a SHORT DESCRIPTIVE label of ten to twenty words with four to six SHORT PHRASE themes -- e.g. 'Amnon's love for Tamar, and the judgment on David's house' with themes 'prophecy fulfilled', 'the sword in David's house', 'parental failure'. My own 2samuel 2 (2026-11-02) used the FULL KJV TEXT of the range as the label AND the full KJV verses as the themes, which makes the themes field useless since it merely repeats the verse text. My 1kings 9 and 1kings 16 followed the full-KJV label style too, though with phrase themes. So the short-descriptive style is now the practice in both books where recent work exists, and the full-KJV label is the older habit. I have used short descriptive labels and phrase themes here. This supersedes the note I filed at 1kings 9 recording the full-KJV style as 1 Kings practice: the real pattern is chronological, the corpus is converging on short labels, and a worker should look at the most recently generated chapters in the book rather than at the book as a whole."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "4",
+        "12",
+        "21",
+        "25",
+        "28",
+        "32"
+      ],
+      "note": "Draft overrun, seventh chapter running, and the trend is now clearly broken. First-draft counts against a 650 cap: 695, 735, 672, 614, 671, 641, 517 -- so THREE of seven tiles came in within the window on the first pass, against two of six at 1kings 16 and none at all in the five chapters before that. Mean overrun +4%, against +7% at 1kings 16, +17% at 1kings 9 and +25% at matthew 18. The excursus-counting prescription I filed at 1kings 16 is what is doing the work: I budgeted each tile by the number of distinct DISPUTES PLUS EXCURSUSES rather than by voice count, and the two tiles that needed the most trimming (vv.4-11 at 735 and vv.1-3 at 695) are the two where I under-counted, treating Clarke's six-point enumeration of the widow's disguise and his quenched-coal excursus as parts of a dispute rather than as separate budget items. ONE REFINEMENT TO ADD: the tile that came in shortest (vv.32-33 at 517) did so because its nominal 1,366 source words are mostly Ellicott's page chrome, leaving about 650 usable -- and 517 against 650 is 0.80x, almost exactly the corpus median. That is worth stating as a positive result rather than a shortfall: when the usable source is honestly measured the length followed it without my aiming at a number, which is what the length-follows-material rule is for. The seven ratios against NOMINAL source run 0.15 to 0.50, all far below the 0.84 median, because four of the seven tiles carry inflated denominators from the defects recorded separately (Clarke's misfiled dissertation, Ellicott's chrome, K&D's verse-text blocks, Henry's whole-section head filed at one key)."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "14",
+      "verses": [
+        "27"
+      ],
+      "note": "THE ENTITY CHECK HAS A BLIND SPOT FOR DIACRITICS, found by accident and worth fixing. The source spells Boettcher's name 'Bttcher' -- the umlaut has been stripped somewhere in the scrape, leaving a token that is not a word in any language. I wrote 'Böttcher' in the prose, which is the correct form and the unambiguous expansion of the mangled token, exactly as 'Hor.' expands to 'Horace' in the case I recorded at 1kings 2. MY ENTITY CHECKER PASSED IT SILENTLY, AND NOT BECAUSE IT WAS GROUNDED: the pattern is [A-Z][a-zA-Z]{2,}, so a name containing any non-ASCII letter simply never matches -- 'B' alone fails the length requirement and 'ttcher' does not begin with a capital. So every proper noun with a diacritic in it is invisible to the only automatic guard against invented names, which is the wrong failure direction for a check whose whole purpose is catching fabricated authorities. I verified that this is not a reason to avoid such names: a scan of 400 shipped synthesis files found non-ASCII letters already present in the prose, including this same 'ö' in judges 3, plus 'ē', 'ō', 'ü', 'æ', 'î', 'û', 'â' and 'í' and some bare Hebrew characters, so diacritics are established practice. THE FIX IS TO WIDEN THE CHARACTER CLASS, not to write round the problem: extend the pattern to Unicode letters and, since the SOURCE side is the mangled one, treat a source token as matching when it equals the prose token with diacritics folded away. That single rule covers Bttcher/Böttcher and any other casualty of the same stripping, and it does not weaken the check against names absent from the source altogether."
     }
   ]
 }
