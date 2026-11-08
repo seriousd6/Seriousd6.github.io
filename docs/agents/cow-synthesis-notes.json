@@ -104238,6 +104238,87 @@
         "38"
       ],
       "note": "Chrome on the chapter's LAST key for the FOURTH chapter running (key 39: 702 usable words plus 945 of boilerplate and the StudyLight navigation and copyright block). Two things it costs here. First, Albert Barnes appears in a voice census of this chapter solely because his name occurs inside the chrome's link list - he contributes no commentary at all. Second, and more serious, the chrome truncates Ellicott mid-argument and sits on top of Clarke's chapter-end note, which is substantive: Clarke uses the end of the chapter to return to vv.4-5, which he had called very obscure, and gives De Dieu's reading of them in full (the three natural images - sun, cloudless morning, tender grass - being things grateful to men but not constant, so that the point is the denial: not so is David's house, flourishing like these but perpetual). That is a fourth reading of vv.4-5 which a per-verse source resolution would never surface at vv.4-5, because it is filed at v.39. I used it in the 38-39 entry and said so there."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "20",
+      "verses": [
+        "1",
+        "6",
+        "18",
+        "25",
+        "31"
+      ],
+      "note": "THIRD independent confirmation of the JFB misalignment, and it fits the signature exactly. All five JFB blocks in 1samuel 20 are JOSHUA material: keys 1 and 7 carry a byte-identical 244-word block on the trans-jordanic tribes' altar and the assembly at Shiloh (Joshua 22); key 19 continues the same assembly; key 25 is on the possessions already given being a pledge of the unconquered remainder (Joshua 13); key 31 is on the prohibition of marriage with the idolatrous Canaanites, citing Ex 34:12-16 and De 7:3 (Joshua 23). Hosting book 1samuel is canonical index 8, Joshua is 5, so the delta is 3 - positive, as in all 76 header-bearing cases I measured. The keys 1-and-7 duplication is also a repeat: 2samuel 13 had the identical pair of keys carrying one duplicated JFB block. So the defect now has three signatures that travel together - wrong book, always earlier, and a duplicated block at keys 1 and 7. Declared excluded_voices on all five affected spans. Earlier chapters: 2samuel 13 hosted Judges, 2samuel 23 hosted 1 Samuel, nehemiah 13 had no JFB at all."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "20",
+      "verses": [
+        "22"
+      ],
+      "note": "Third chapter running that the fidelity entity check has caught me expanding a source, and the pattern is now unmistakable enough to name as my dominant failure mode. Keil and Delitzsch cite only 'vid., Genesis 31:48-49' as a parallel for the LORD standing as witness between two covenanting parties; I wrote 'the comparable scene between Jacob and Laban' and the checker flagged both names as ungroundable. The reference is correct and the identification is correct, but neither name is in the catena, so a reader collating prose against source would find two proper nouns no witness supplied. Replaced with 'an earlier covenant sealed the same way'. Running tally of this same slip: nehemiah 13 Zidon to Sidon; 2samuel 23 'Q. Curt.' to 'Quintus Curtius'; here a bare chapter-and-verse to the names of the men in it. The rule I need is narrower than 'do not invent' - it is 'do not RESOLVE what the source leaves abbreviated, unspelled, or merely referenced', however certain the resolution."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "rejected",
+      "book": "1samuel",
+      "chapter": "20",
+      "verses": [
+        "9",
+        "10",
+        "12"
+      ],
+      "note": "Caught by the builder's own tiling assertion, not by me, and it would have been invisible without it. My span list collapsed keys 9-10 into one entry and started the next at 12, leaving key 11 covered by nothing; the assertion reported 'spans: 23 covered: 41 source keys: 42, uncovered: [11]' and refused to write. The cause was that I had written 9.html for v.9 and 10.html for vv.10-11 while drafting, then built the SPANS list from memory rather than from the patch directory. Two cheap defences: derive the span keys from the patch filenames rather than retyping them, and keep the exact-cover assertion in front of every build - it has now caught a distinct error on two chapters running (the absent-verse case on 1chronicles 4, the uncovered-verse case here)."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "20",
+      "verses": [
+        "25",
+        "30",
+        "31"
+      ],
+      "note": "Worth recording because it cuts against my own last note. In 2samuel 23 I found a misfiled John Wesley block at key 26 and filed it as evidence that the ingest defect reaches past JFB. In 1samuel 20 the Wesley block at the SAME key number 26 is perfectly on topic - 'Something - Some accident which has rendered him unclean, and so unfit to partake of this feast' is exactly right for 'he thought, Something hath befallen him, he is not clean'. So the Wesley case does not replicate at the same key in a different chapter, and one misfiled Wesley block is not yet a pattern. The JFB finding stands on 76 measured headers and three hand-verified chapters; the Wesley finding stands on one block and should be treated as an isolated observation until someone runs the same header probe over the Wesley layer."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "20",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "6",
+        "8",
+        "9",
+        "10",
+        "12",
+        "13",
+        "15",
+        "18",
+        "20",
+        "22",
+        "24",
+        "25",
+        "27",
+        "30",
+        "31",
+        "32",
+        "35",
+        "37",
+        "39",
+        "42"
+      ],
+      "note": "Shape: 42 source keys to 24 spans, cut by source words after removing JFB residue (416 words) and chrome. Legacy baseline 42 entries, all legacy-unversioned. Voices Gill 42, Ellicott 29, K&D 28, Wesley 19, Clarke 18, Henry 5 (section heads at keys 1, 9, 24, 35 and one more), JFB 5 (all residue). Chrome on the last key again - key 42, 926 words - for the FIFTH chapter running, and here it buries the tail of a 1116-word Ellicott block whose real content ends with the Phillipson quotation on the friendship. The chapter is unusually rich in textual cruxes that the witnesses handle differently rather than identically: the defective invocation at v.12 (four different supplements from the versions and the manuscripts), the disputed 'Jonathan arose' at v.25 (Abarbanel and Rashi against the LXX, with Keil calling the Greek senseless), 'm'od' at v.19 (Ellicott rejecting the Vulgate's 'quickly' for 'greatly' on the practical ground that it mattered only that David be FAR, not fast), the insult at v.30 (Ellicott dissolving the slur on Jonathan's mother into an abstract noun), and the single arrow at v.36 where three were agreed. The ethics of David's Bethlehem excuse is a genuine four-way split worth flagging: K&D say flatly 'David did not look upon prevarication as a sin', Ellicott calls the excuse feigned and adds that its morality 'is by no means sanctioned by the compiler of the history; he simply relates the story'."
     }
   ]
 }
