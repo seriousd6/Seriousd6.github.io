@@ -104758,6 +104758,110 @@
       "book": "1samuel",
       "chapter": "12",
       "note": "1 Samuel 12 carries the densest textual disagreement of any chapter I have synthesized, and it is worth recording as a set because the same voices keep changing sides. On the identity of Bedan (v.11): Barak, on the Greek and Syriac, which Ellicott thinks probable from the similarity of the letters; Samson, on the Targum, Kimchi's Ben-Dan, and Henry; Jair, on Calmet, Wesley and Poole; and Wordsworth's refusal to emend at all, on the ground that the obscurity of a name occurring nowhere else is itself a mark of the speech's genuineness. On the final name in the same verse: Samson, on the Syriac and Arabic, with Clarke agreeing that a speaker would not quote himself, against Ellicott and Henry who defend the self-mention. On the syntax of v.14: Keil and Delitzsch find the apodosis in the last clause, Ellicott holds with Payne Smith that the sentence breaks off unfinished, Wesley reads the clause as a privilege rather than a duty, and Henry refuses to separate promise from precept. On v.15: the comparative 'as against your fathers' (Hebrew, Ellicott, Keil and Delitzsch) against Kimchi's 'kings' and the Septuagint's 'your king', which Keil and Delitzsch call an unhappy conjecture and Thenius would write into the text. On v.21 Ellicott argues the conjunction 'for' is a copyist's intrusion because no ancient version renders it. Recorded on the relevant spans; noted here because the chapter is a useful test case for whether the tags schema can carry this much divergence legibly."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "34",
+      "verses": [
+        "10",
+        "22",
+        "28"
+      ],
+      "note": "JFB residue, stride 6, offset 4 (keys 10, 22, 28). Donor passage is 2 Chronicles 26-28 / 2 Kings 15-16 -- Ahaz, Tiglath-pileser, the captivity of Damascus to Kir. This is the FIRST donor found in the same book as the target chapter; the seven previously measured chapters all drew from another book. Declared in excluded_voices on tiles 8-13, 14-22 and 24-28; JFB is therefore named in no prose."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "34",
+      "verses": [
+        "23"
+      ],
+      "note": "Verse 23 has no source key at all (32 keys, 1-22 and 24-33). This walls Henry's section head, which covers vv.14-28 (he labels it '2 Kings xxii. 8-20' and comments explicitly on 'v. 24, 25' and 'v. 27, 28'), into two tiles: coverage_problems' extra check measures against the full key set, so a 14-28 entry would be rejected as covering a verse absent from the source. Consequence: Henry's comments on the oracle sit in the key-14 block while the verses they treat are in the 24-28 tile."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "34",
+      "verses": [
+        "24"
+      ],
+      "note": "vv.24-28 graded A at 1.5x expansion (1.13x unadjusted), the chapter's only tile above 0.35x. The denominator is misassigned, not the prose: Henry's 700-odd words on vv.24-28 are filed at key 14 behind the verse-23 gap, so the 14-22 denominator carries them and the 24-28 denominator (293 usable words, Ellicott's collation plus Clarke's Targum note) does not. Combined 14-28: 1090 prose on 2188 source = 0.50x, in line with the chapter. Corpus median is 0.84x and STRETCH_RATIO is 6.0, so nothing is flagged; recording it because the per-tile figure invites a wrong reading."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "34",
+      "verses": [
+        "1"
+      ],
+      "note": "Henry's section heads gave the tiling again -- thirteenth chapter running. His four heads here are vv.1-7, 8-13, 14-28, 29-33, and the only departure from them is the forced 14-22 / 24-28 split described in the verse-23 note."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "34",
+      "verses": [
+        "33"
+      ],
+      "note": "Chapter-final Ellicott chrome at key 33, the eighth instance recorded: 1,175 words of which roughly 215 are commentary, the rest stylesheet, nav tree, a 66-element book_data array and a live Stripe publishable key. Heavy full-page form, now the majority shape. Sits on the commentator's last block, consistent with the rule as corrected at 2samuel 14."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "34",
+      "verses": [
+        "19",
+        "33"
+      ],
+      "note": "Two further Wesley-Henry verbatim or near-verbatim borrowings, at v.19 (rend the heart and not the garments) and v.33 (the doubled verb, 'made them serve, even serve'), bringing the tally to six across four chapters. Handled as proposed: the view is recorded once, both are named, and the pair alone does not carry prevalence above 'single' -- here they fall in different schools, so the question did not arise."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "34",
+      "verses": [
+        "12"
+      ],
+      "note": "A genuine four-way split at v.12 on why the overseers were chosen from Levites skilled in music, and the chapter's liveliest question. Clarke argues they played to lighten the labour from a Greek treatise on music recovered from the cities buried by Vesuvius (the Theban harper paid out of the workmen's wages); Ellicott thinks they probably did, as in Egypt, and notes the term for setting the work forward is itself musical; Wesley has them serving in both offices by turns; Henry flatly denies the connection and takes the music as evidence of mathematical sense."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "34",
+      "verses": [
+        "3"
+      ],
+      "note": "The Chronicles/Kings chronology of the reform (twelfth year here, eighteenth in Kings) is argued four ways. Henry and Ellicott both have the work begun at twelve and completed after the book was found; Keil and Delitzsch call the Chronicle the more exact because it keeps the events in their order of time; Ellicott reports and rejects Thenius (the extirpation placed first to show the king needed no prompting) and Noldeke (to clear the king of eighteen years' tolerance)."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "34",
+      "verses": [
+        "14",
+        "28"
+      ],
+      "note": "Non-contributing block shape, logged for the denominator-cleaning list: Clarke's only blocks at keys 14 and 28 are bare cross-references ('See on 2Kgs 22:8 (note)', 'See particularly the note on 2Kgs 22:20 (note)'). They carry his name and words into the per-key counts while containing no proposition. Clarke is therefore not declared on the 14-22 tile, though he is on 24-28, where his Targum note at v.27 is real content."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "34",
+      "verses": [
+        "29"
+      ],
+      "note": "Keil and Delitzsch are not declared on vv.29-33: their only block in the span is roughly 200 words of bare KJV verse text. Fourth chapter running in which the K&D 200-word cap produces verse-text-only blocks, and the same attribution risk -- per-key counts credit the voice with words containing no view."
     }
   ]
 }
