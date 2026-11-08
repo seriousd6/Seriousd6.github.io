@@ -104490,6 +104490,29 @@
         "27"
       ],
       "note": "THE ENTITY CHECK HAS A BLIND SPOT FOR DIACRITICS, found by accident and worth fixing. The source spells Boettcher's name 'Bttcher' -- the umlaut has been stripped somewhere in the scrape, leaving a token that is not a word in any language. I wrote 'Böttcher' in the prose, which is the correct form and the unambiguous expansion of the mangled token, exactly as 'Hor.' expands to 'Horace' in the case I recorded at 1kings 2. MY ENTITY CHECKER PASSED IT SILENTLY, AND NOT BECAUSE IT WAS GROUNDED: the pattern is [A-Z][a-zA-Z]{2,}, so a name containing any non-ASCII letter simply never matches -- 'B' alone fails the length requirement and 'ttcher' does not begin with a capital. So every proper noun with a diacritic in it is invisible to the only automatic guard against invented names, which is the wrong failure direction for a check whose whole purpose is catching fabricated authorities. I verified that this is not a reason to avoid such names: a scan of 400 shipped synthesis files found non-ASCII letters already present in the prose, including this same 'ö' in judges 3, plus 'ē', 'ō', 'ü', 'æ', 'î', 'û', 'â' and 'í' and some bare Hebrew characters, so diacritics are established practice. THE FIX IS TO WIDEN THE CHARACTER CLASS, not to write round the problem: extend the pattern to Unicode letters and, since the SOURCE side is the mangled one, treat a source token as matching when it equals the prose token with diacritics folded away. That single rule covers Bttcher/Böttcher and any other casualty of the same stripping, and it does not weaken the check against names absent from the source altogether."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "22",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "29"
+      ],
+      "note": "JFB RESIDUE FROM CHRONICLES, STRIDE 6 OFFSET 5 -- AND A VERIFIED BYTE-IDENTICAL DUPLICATE, THE SECOND COMMENTATOR TO SHOW THAT DEFECT. All four Jamieson, Fausset and Brown blocks here are foreign to Job: key 5 and key 11 both carry 'This beautiful thanksgiving prayer was the effusion overflowing with gratitude and delight at seeing the warm and widespread interest that was now taken in forwarding the favorite project of his life...' which is Solomon's thanksgiving at 1 Chronicles 29; key 17 is 'Hebrew, \"put their hands under Solomon,\" according to the custom still practised in the East of putting a hand under the king's extended hand and kissing the back of it (2Ki 10:15). 1Ch 29:26-30. His Reign and Death.'; key 29 opens 'Commentary by Robert Jamieson 2Ch 1:1-6. Solemn Offering of Solomon at Gibeon' and runs on about Zadok, the brazen altar and Bezaleel. Donor is therefore 1 Chronicles 29 to 2 Chronicles 1, i.e. backward of the target as usual. Keys 5, 11, 17 and 29 are all congruent to 5 MODULO 6 -- a THIRD distinct offset after 2 (1kings 1/2/9), 3 (1kings 16 and 2samuel 14) and 4 (2samuel 2), which settles that the offset is effectively arbitrary per chapter while the stride of 6 has never varied in any chapter examined. THE NEW PART: keys 5 and 11 are BYTE-IDENTICAL, verified by string equality and by SHA1 (both 603 raw characters, sha1 5300127b5ec6), not merely similar. I first recorded this duplicate-block shape at matthew 18, where three Cyril of Jerusalem blocks were the same 200-word slice; this is the first instance in a different commentator, which means it is a property of the harvester rather than of one corpus. CONSEQUENCE FOR MEASUREMENT: the two keys credit JFB with 196 words of which 98 are the same 98 words, so any per-chapter voice total double-counts them, and the duplicate also defeats the 'isolated single key' residue detector I proposed at 1kings 9, since a duplicated block looks like corroboration across keys. A harvest-time check for identical block hashes across keys in the same chapter is cheap and would catch both this and the Cyril case."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "22",
+      "verses": [
+        "1"
+      ],
+      "note": "GREGORY THE GREAT APPEARS IN THIS CHAPTER, AND HIS MATERIAL IS GENUINE -- worth flagging for whoever writes it, because a latin-fathers voice in Job is rare enough that a worker might take it for residue by reflex. His key-1 block runs 300 words and is squarely on Job 22:2-3: he reads Eliphaz as a man who, 'being opposed to the words of truth' and getting the worst of the argument, 'often repeat[s] even what is well known, lest by holding their tongue they should seem defeated', and then takes up the two questions themselves -- that 'by comparison with God, our knowledge is ignorance... for it is by participation, and not by comparison, with God that we become imbued with wisdom', and that 'in all that we do well, we are doing good to ourselves and not to God', quoting the Psalmist's 'Thou art my God, seeing that Thou needest not my goods' and glossing that God 'needs not the good in him that serveth Him, but bestows the goodness which He receives'. He closes toward Matthew 25:40, that what is done to the least of the brethren is done to Christ. So the block is both on-passage and theologically substantial, and it gives the chapter an eastern-or-latin patristic witness it would otherwise lack entirely -- the only one among eight voices. Two cautions for the writer: the text is OCR-damaged in places ('Lit. get the worst in making out a case', 'perfect knowledge f 1', 'Ps.16,2.', 'Mat.25,') so quotations need care; and Gregory is reading Eliphaz AGAINST Job, which is the opposite of what the chapter's modern voices do, so he belongs in the debate about whether Eliphaz's premises are sound rather than in a consensus summary."
     }
   ]
 }
