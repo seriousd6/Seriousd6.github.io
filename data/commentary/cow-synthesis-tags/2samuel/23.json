@@ -1,1997 +1,1178 @@
 {
- "1": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The superscription rests on Balaam's oracle (Numbers 24); the doubled 'said' is a form reserved for divine utterances, marking a claim to inspiration."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: not David's last words absolutely but the last spoken under prophetic inspiration; the Targum reads them of Messiah."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: David's last will and testament, described by the meanness of his origin and the height of his elevation as prince and psalmist."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the last poetical composition, a glorious prediction of Messiah's kingdom; Wesley thinks the description is the sacred penman's, not David's."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Whose words are these — David's or the historian's?",
-    "sides": [
-     {
-      "position": "the sacred writer describing David",
-      "holders": [
-       "Wesley"
-      ]
-     },
-     {
-      "position": "David himself, rehearsing the grace that raised him",
-      "holders": [
-       "Gill",
-       "Matthew Henry"
-      ]
-     }
-    ]
-   },
-   {
-    "question": "What does 'last words' mean?",
-    "sides": [
-     {
-      "position": "the last uttered under prophetic inspiration",
-      "holders": [
-       "Gill"
-      ]
-     },
-     {
-      "position": "the last poetical composition",
-      "holders": [
-       "Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "last words",
-   "inspiration",
-   "Messianic prophecy",
-   "David the psalmist"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
+  "1": {
+    "pericope_label": "David's last words: the oracle and its speaker",
+    "voices": [
+      "John Gill",
+      "John Wesley",
+      "Adam Clarke",
+      "Keil and Delitzsch",
+      "Charles Ellicott",
+      "Matthew Henry"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill rules out two readings: the phrase points not back to the psalm of the preceding chapter but forward, and cannot mean the last words David…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley takes the second, that these are not simply the last he spoke but the last he spake by the Spirit of God, assisting and directing…; Clarke narrows it to form, supposing the last poetical composition to be meant — David might have spoken many words after these in prose, but none…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch hold that the introduction rests, in form and in substance, upon Balaam's last sayings concerning the future history of Israel ( Numbers 24:3…; Ellicott reaches the parallel through a single word, noting that the term rendered said, used twice here, is a peculiar form employed…"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry takes the son of Jesse for the meanness of David's origin, and draws the lesson that it is good for those advanced to be corner-stones…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "last words",
+      "inspiration",
+      "Messianic prophecy",
+      "David the psalmist"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.17
+      }
+    }
+  },
+  "2": {
+    "pericope_label": "The Spirit of the LORD spake by me",
+    "voices": [
+      "John Gill",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill takes it to reach back over everything he ever composed"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke divides the sentence and refuses to let either half absorb the other; Wesley widens the scope backwards across the psalter"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "single",
+        "summary": "Ellicott reaches the same destination by a shorter road, observing that in keeping with the preceding sentence this clause and the one beside it assert as…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "verbal inspiration",
+      "the Spirit of the Lord",
+      "prophecy",
+      "words and matter"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.79
+      }
+    }
+  },
+  "3": {
+    "range": "3-4",
+    "pericope_label": "He that ruleth in the fear of God, and the morning without clouds",
+    "voices": [
+      "John Gill",
+      "John Wesley",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "Keil and Delitzsch"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill takes the God of Israel to be the covenant God of Israel literally considered, and also the covenant God and Father of the whole spiritual…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley makes it the strength and defence and protector of his people — manifested, he adds, in God's directing kings and rulers so to manage their…; Clarke makes the Rock the Fountain whence Israel was derived, Wesley makes it the strength and defence and protector of his people — manifested, he…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott concedes that the original is exceedingly elliptical both here and in the next verse, but holds the English gives the true sense, and calls this…; Keil and Delitzsch rule out one construction of the next verse on grounds of theology rather than grammar"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "just government",
+      "the fear of God",
+      "Rock of Israel",
+      "Messianic ruler",
+      "light of the morning"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.75
+      }
+    }
+  },
+  "5": {
+    "pericope_label": "The everlasting covenant with David's house",
+    "voices": [
+      "John Wesley",
+      "Keil and Delitzsch",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "John Gill"
+    ],
+    "schools": [
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley reads it the same way and makes the admission explicit: God knows that neither David nor his children had lived and ruled as they should…; Clarke arrives at the same place by a change of vowels, reading the word not as so but as established, and taking the whole verse as…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch hold that the first and last clauses can only be made to yield a sense in harmony with the context by being taken…; Ellicott sets the two options side by side and then declines the fashionable one"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill expects the house to be firm and stable in the Messiah who should spring from him, and Clarke holds that all is sure with respect…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "everlasting covenant",
+      "sure mercies of David",
+      "covenant of grace",
+      "David's failing house"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.59
+      }
+    }
+  },
+  "6": {
+    "range": "6-7",
+    "pericope_label": "The worthless as thorns that must be rooted out",
+    "voices": [
+      "John Gill",
+      "John Wesley",
+      "Charles Ellicott",
+      "Keil and Delitzsch",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill makes the point by setting the two images against each other: not the tender grass that springs up and flourishes after rain and sunshine, but…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley reads the turn structurally, as the account of the enemies of a kingdom whose nature and stability the preceding verses had settled; Clarke notes that there is no word for sons in the text at all, only the good-for-nothing man, and suggests the reference may be first to…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott observes that according to the Masoretic punctuation the word stands not in its common form but in the stronger abstract form, meaning worthlessness itself;; Keil and Delitzsch say the same and draw the consequence, that the abstract is stronger than the phrase worthless man and depicts…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "sons of Belial",
+      "thorns",
+      "judgment on the wicked",
+      "worthlessness",
+      "judgment by fire"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.47
+      }
+    }
+  },
+  "8": {
+    "pericope_label": "The catalogue of the mighty men, and the first of the three",
+    "voices": [
+      "Charles Ellicott",
+      "John Wesley",
+      "Matthew Henry",
+      "John Gill",
+      "Keil and Delitzsch",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott accounts for the position: a list of David's chief heroes belongs naturally in the summary closing his reign; Keil and Delitzsch fasten on the heading, where this text has the names of the mighty men and the Chronicles their number — striking, since Chronicles…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley agrees the catalogue, though placed here, was taken long before, which he thinks manifest from Asahel and Uriah being named in it; Clarke gives it as Jashobeam the Hachmonite, and Ellicott concurs, adding that he came to David at Ziklag ( 1 Chronicles 12:1 ) and afterwards became…"
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry assigns the record four purposes: the honour of David, who trained these men and set them an example of conduct and courage;"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill sets out three classes: the first and highest of three only, who were general officers;"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "the mighty men",
+      "textual corruption",
+      "Jashobeam",
+      "religion and courage"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.18
+      }
+    }
+  },
+  "9": {
+    "range": "9-10",
+    "pericope_label": "Eleazar's stand until his hand clave to the sword",
+    "voices": [
+      "Keil and Delitzsch",
+      "John Gill",
+      "Charles Ellicott",
+      "Adam Clarke",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch gloss it the same way, as next to him in rank; Ellicott notes that the Hebrew margin and the Chronicles give Dodo while the text here gives Dodai, as does the passage where he appears as the…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill reads the phrase after him as meaning the next to the Tachmonite, the second worthy of the first class, and Keil and Delitzsch gloss it…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke reaches the same battle by a different route, supposing the defiance here to refer to the war in which David slew Goliath; Wesley takes the English as it stands, glossing gone away as fled away, being dismayed at the approach of their enemies — which leaves the two…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "Eleazar",
+      "the field of Goliath",
+      "standing alone",
+      "textual variants",
+      "perseverance"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.63
+      }
+    }
+  },
+  "11": {
+    "range": "11-12",
+    "pericope_label": "Shammah in the field of lentiles",
+    "voices": [
+      "John Gill",
+      "Keil and Delitzsch",
+      "Charles Ellicott",
+      "Adam Clarke",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill names him the third of the first three and derives the patronymic from the country, following the Targum in taking it of the mountainous region…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch treat the form here as a contraction of the longer form that occurs later in the list, and introduce him as the third…; Ellicott records that Josephus, using different vowels, read it as a place name — Lehi, the scene of Samson's exploit ( Judges 15:9 ) — but…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke notes that where this text has lentiles the Chronicles has barley, and judges one of the two Hebrew words a probable mistake for the other;; Wesley proposes the same solution and extends it, since the Chronicles ascribes the exploit to Eleazar while implying he had partners — so Eleazar…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "Shammah",
+      "defending the field",
+      "the small inheritance",
+      "harmonizing the accounts",
+      "standing one's ground"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.85
+      }
+    }
+  },
+  "13": {
+    "range": "13-14",
+    "pericope_label": "Three go down to David at the cave of Adullam",
+    "voices": [
+      "John Gill",
+      "Keil and Delitzsch",
+      "Charles Ellicott",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill reports that some understand the three already named, Josephus among them, on the view that having related particular exploits of theirs the historian now records…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch argue the opposite from the grammar: because the numeral carries no article here or in the Chronicles, the three intended are not Jashobeam…; Ellicott agrees on the same ground and names his candidates, another three more eminent than the rest of the thirty, two of them no…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke makes the word an office rather than a count, noting that it can scarcely be said with propriety that we have thirty-seven out of thirty…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "the cave of Adullam",
+      "valley of Rephaim",
+      "the thirty",
+      "harvest time",
+      "Bethlehem in enemy hands"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.74
+      }
+    }
+  },
+  "15": {
+    "range": "15-16",
+    "pericope_label": "Bethlehem's water fetched, and poured out to the LORD",
+    "excluded_voices": [
+      "Jamieson, Fausset and Brown"
+    ],
+    "voices": [
+      "John Gill",
+      "Adam Clarke",
+      "John Wesley",
+      "Charles Ellicott",
+      "Keil and Delitzsch"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill supplies the circumstances — harvest time, the summer season, hot weather, and the king thirsty — and stresses that the three heard him express himself…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke explains why this water in particular: Bethlehem was David's own city, he knew the excellence of the water there, and being near the place and…; Wesley puts the same point from David's side, that he was far from desiring or expecting that any of his men should hazard their lives to…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott sets against this Ritter's statement that a little north of the town is David's well, with its deep shaft and its clear cool water; Keil and Delitzsch narrow the obstacle to the outpost, holding that what the men broke through was the camp before the gate at Bethlehem"
+      }
+    ],
+    "debates": [],
+    "outliers": [
+      {
+        "voice": "Adam Clarke",
+        "note": "Adduces the classical parallel of Alexander pouring back the cup of water when his army thirsted — noble, yet David 'added piety to bravery.'"
+      }
+    ],
+    "themes": [
+      "the well of Bethlehem",
+      "longing",
+      "David's weakness",
+      "self-restraint",
+      "self-denial"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.82
+      }
+    }
+  },
+  "17": {
+    "range": "17-18",
+    "pericope_label": "David refuses the water; Abishai chief of the second three",
+    "voices": [
+      "Charles Ellicott",
+      "John Gill",
+      "Keil and Delitzsch",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott observes that the Hebrew here is simply an interrogative exclamation — the blood of the men?; Keil and Delitzsch record the outcome in the verse's own terms, that he therefore would not drink it"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill keeps to the plain sense of what was being declined, that he would not drink of the water these men had brought him"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Wesley takes the three to be named jointly here, with two of them then mentioned severally in the verses that follow"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "the blood of the men",
+      "sanctity of life",
+      "self-command",
+      "sacramental restraint",
+      "Abishai"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 1.1
+      }
+    }
+  },
+  "19": {
+    "range": "19-20",
+    "pericope_label": "Benaiah's lineage and the lion in the pit",
+    "voices": [
+      "John Gill",
+      "John Wesley",
+      "Charles Ellicott",
+      "Keil and Delitzsch",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill answers the question affirmatively and adds the record it rests on: besides the exploit just told, Abishai went down with David into Saul's camp and…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley reads the shortfall simply as a shortfall, that he fell short of the first three in strength and valour; Clarke canvasses the alternatives without settling them — some think two real lions are meant, some two savage gigantic men, others two fortresses — and records…"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Delitzsch and Ellicott both identify the father with Jehoiada the priest ( 1 Chronicles 27:5 ) and raise the possibility that he is the Jehoiada who…; Keil and Delitzsch and Ellicott both identify the father with Jehoiada the priest ( 1 Chronicles 27:5 ) and raise the possibility that he is the…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "degrees of honour",
+      "captain of the second three",
+      "Abishai's exploits",
+      "not of the first three",
+      "Benaiah"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.83
+      }
+    }
+  },
+  "21": {
+    "range": "21-22",
+    "pericope_label": "Benaiah and the Egyptian with the spear",
+    "excluded_voices": [
+      "Jamieson, Fausset and Brown"
+    ],
+    "voices": [
+      "Charles Ellicott",
+      "John Gill",
+      "Adam Clarke",
+      "John Wesley",
+      "Keil and Delitzsch"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott explains the word rendered goodly by appeal to the Chronicles, where the man is termed one of stature and his height put at five cubits;; Keil and Delitzsch add only the standing the verse confers, a name among the three mighty men"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill repeats that figure and reckons the difference, observing that he fell a cubit and a span short of Goliath"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke converts the measure, making five cubits about seven feet six inches; Wesley reads the pit as the circumstance that closed off every alternative, since there Benaiah lay under a necessity either of killing or of being killed…"
+      }
+    ],
+    "debates": [],
+    "outliers": [
+      {
+        "voice": "Adam Clarke",
+        "note": "Illustrates the feat at length from Quintus Curtius — the naked, club-bearing Dioxippus overthrowing the fully armed Horratas before Alexander."
+      }
+    ],
+    "themes": [
+      "staff against spear",
+      "the Egyptian giant",
+      "echo of David and Goliath",
+      "Benaiah's valour",
+      "the name that abides"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.59
+      }
+    }
+  },
+  "23": {
+    "range": "23-25",
+    "pericope_label": "Benaiah set over the guard, and the thirty begun",
+    "voices": [
+      "Charles Ellicott",
+      "Adam Clarke",
+      "John Gill",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "single",
+        "summary": "Ellicott holds the word translated guard means rather private audience, so that David either made Benaiah a member of his council or set him over it…"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke reports the Vulgate's rendering, that David made him his privy counsellor, and gives the Hebrew idiom behind it — he put him to his ears…; Wesley states the principles he will apply throughout: the same names of persons and places are differently pronounced according to the dialects of…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill notes he was more honourable than the thirty whose names are recorded next, while the text still withholds the first three from him"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "trust rewarded",
+      "captain of the guard",
+      "nearness to the king",
+      "Benaiah's future greatness",
+      "Asahel"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.67
+      }
+    }
+  },
+  "26": {
+    "range": "26-28",
+    "pericope_label": "The divisional commanders among the thirty",
+    "excluded_voices": [
+      "John Wesley"
+    ],
+    "voices": [
+      "Charles Ellicott",
+      "Keil and Delitzsch",
+      "John Gill"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Delitzsch and Ellicott between them assign Helez the seventh division, Ira the sixth, Abiezer the ninth, the man called Mebunnai here the eighth, and Maharai the…; Keil and Delitzsch and Ellicott between them assign Helez the seventh division, Ira the sixth, Abiezer the ninth, the man called…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill and Ellicott note what it would later be famous for — Ellicott calling it a priestly city of Benjamin and both naming it the home…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "Helez and Ira",
+      "Tekoah",
+      "monthly army divisions",
+      "a map of the kingdom",
+      "Anathoth"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.72
+      }
+    }
+  },
+  "29": {
+    "range": "29-31",
+    "pericope_label": "Names that can be placed, and names that cannot",
+    "voices": [
+      "Keil and Delitzsch",
+      "Charles Ellicott",
+      "John Gill"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch pause over this run of names to say what the reader should expect of it: apart from Uriah at the very end, none…; Delitzsch and Ellicott make the first man of these verses chief of the twelfth division, and both assign Benaiah the Pirathonite the eleventh — Ellicott adding…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill independently places it in Ephraim;. Ellicott corrects the next epithet to the Baharumite, of the Bahurim mentioned earlier in the book ( 2 Samuel 16:5…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "Ittai of Gibeah",
+      "not Ittai the Gittite",
+      "Gibeah of Saul",
+      "obscure but enrolled",
+      "Ephraim"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.56
+      }
+    }
+  },
+  "32": {
+    "range": "32-34",
+    "pericope_label": "Broken names, and a son of Ahithophel",
+    "excluded_voices": [
+      "Jamieson, Fausset and Brown"
+    ],
+    "voices": [
+      "Keil and Delitzsch",
+      "John Gill",
+      "Charles Ellicott"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch propose that it may survive in a modern village ( Joshua 19:42 ); Ellicott attacks the same difficulty with a copyist's explanation"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill puts Shaalbon in the tribe of Dan and wonders whether it answers to the Silbonitis of Josephus;"
+      }
+    ],
+    "debates": [],
+    "outliers": [
+      {
+        "voice": "Charles Ellicott",
+        "note": "Notes it 'interesting' that a son of David's astute but treacherous counsellor Ahithophel stood among the thirty heroes."
+      }
+    ],
+    "themes": [
+      "a corrupt verse",
+      "scholarly honesty",
+      "a name half-lost",
+      "kept nonetheless",
+      "valour running in families"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.6
+      }
+    }
+  },
+  "35": {
+    "range": "35-37",
+    "pericope_label": "Foreigners in the list, and Joab's armourbearer",
+    "voices": [
+      "Charles Ellicott",
+      "Keil and Delitzsch",
+      "John Gill"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott fixes Carmel seven miles south-south-east of Hebron and remarks that it was famous in David's early history; Keil and Delitzsch place the Carmelite's Carmel in the mountains of Judah ( 1 Samuel 25:2 ) and the Arbite's Arab in the same region (…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill follows the Targum in reading the first epithet of Carmel or Carmela and notes the alternative form of the man's name"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "Carmel of Judah",
+      "Nabal and Abigail",
+      "David's own story",
+      "undecided forms",
+      "Zobah and the Syrian war"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.5
+      }
+    }
+  },
+  "38": {
+    "range": "38-39",
+    "pericope_label": "Uriah the Hittite, and the count of thirty and seven",
+    "voices": [
+      "Keil and Delitzsch",
+      "John Gill",
+      "Charles Ellicott",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Keil and Delitzsch take the same gentile name but trace it to a family settled in Kirjath-jearim ( 1 Chronicles 2:53 ); Ellicott counts the names as the text gives them and finds only thirty-six, then offers two ways of making up the difference: either the unnamed third…"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill follows the Targum in deriving the epithet from Jether and makes them descendants of Caleb, of the tribe of Judah;"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke sets out the sixteen further names appended there — Zabad son of Ahlai, Adina son of Shiza the Reubenite with thirty under him, Hanan son…"
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "Kirjath-jearim",
+      "the ark's old town",
+      "two of one family",
+      "the least still remembered",
+      "Uriah the Hittite"
+    ],
+    "qa": {
+      "v": 1,
+      "standard": "cow-prose-rules-2026-08-09",
+      "generated": "2026-11-08",
+      "grade": "A",
+      "checks": [
+        "length",
+        "refs-linked",
+        "tags-match",
+        "schools-valid",
+        "voices-sourced",
+        "no-meta",
+        "no-noise",
+        "no-slot",
+        "no-carriers",
+        "quotes-capped",
+        "fidelity-self-graded"
+      ],
+      "lint": "audit-synthesis-quality/1",
+      "fidelity": {
+        "grade": "A",
+        "checked_by": "self",
+        "expansion": 0.32
+      }
+    }
   }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the matter came by inspiration and the words 'as directly inspired as the matter'; Wesley extends this to all David's psalms."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the songs were not David's genius but the Spirit's; first impressed on his mind, then spoken with his tongue."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: most explicit assertion of divine prompting; Keil sets the oracle within the current of earlier prophecy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "verbal inspiration",
-   "the Spirit of the Lord",
-   "prophecy",
-   "words and matter"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the ellipsis sets forth the fundamental point of just rule — 'in the fear of God'; Keil sees Nathan's promised ruler, not any magistrate."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: the two clauses answer the two tables — justice to men, piety to God; Clarke reads 'the just one is the ruler,' i.e. Christ."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: 'the God of Israel' is the covenant God and Father of the whole spiritual Israel."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is 'he that ruleth' a maxim for kings or a prophecy of the Messiah?",
-    "sides": [
-     {
-      "position": "the ideal duty of every righteous magistrate",
-      "holders": [
-       "Wesley",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "a prophecy of the one just King, Christ / the promised seed",
-      "holders": [
-       "Clarke",
-       "Keil and Delitzsch"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "just government",
-   "the fear of God",
-   "Rock of Israel",
-   "Messianic ruler"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the just ruler is the light and glory of his people, and the morning images 'well suit' Christ — the true light, morning star, sun of righteousness."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: the images describe the king's duty to rule with sweetness and gentleness; Clarke reads them of the Messiah, the Sun of righteousness."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: tied to Nathan's promise and Psalm 72; David knew the cloudless morning could be realised only in Him who crushes the serpent's head."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Do the morning images describe the king's duty or his (Messianic) glory?",
-    "sides": [
-     {
-      "position": "the king's duty to rule gently, welcome as sunshine",
-      "holders": [
-       "Wesley"
-      ]
-     },
-     {
-      "position": "the glory of the promised ruler, the Sun of righteousness",
-      "holders": [
-       "Gill",
-       "Clarke",
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "light of the morning",
-   "the just ruler",
-   "Sun of righteousness",
-   "Messianic promise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott lays out both renderings; Keil and Clarke prefer the interrogative ('Is not my house so with God?'), Clarke reading kun, 'established.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: against the ruin of his family, David rests the kingdom's stability on the Messiah and the everlasting covenant — the 'sure mercies of David.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: the covenant is 'ordered, sure, all our salvation, all our desire,' and refers also to the covenant of grace with all believers."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How should the difficult verse be rendered?",
-    "sides": [
-     {
-      "position": "affirmative/concessive — 'although my house be not so' (English, LXX, Vulgate)",
-      "holders": [
-       "Gill",
-       "Wesley",
-       "Ellicott (notes it gives higher discernment)"
-      ]
-     },
-     {
-      "position": "interrogative — 'is not my house so with God?'",
-      "holders": [
-       "Keil and Delitzsch",
-       "Adam Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "everlasting covenant",
-   "sure mercies of David",
-   "covenant of grace",
-   "David's failing house"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott: 'Belial' stands in the abstract, 'worthlessness'; the coming of righteousness rejects evil by a law as fixed as action and reaction."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the thorns image wicked men who cast off God's yoke, and wicked governors fit only to be thrust away and deposed."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: God will thrust away all enemies of the covenant kingdom; Clarke reads Belial of Saul and, secondly, of the enemies of Christ."
-   }
-  ],
-  "debates": [
-   {
-    "question": "To whom do 'the sons of Belial' refer?",
-    "sides": [
-     {
-      "position": "a general class of the wicked and wicked rulers",
-      "holders": [
-       "Gill",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "Saul first, and then the enemies of Christ",
-      "holders": [
-       "Adam Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "sons of Belial",
-   "thorns",
-   "judgment on the wicked",
-   "worthlessness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the thorns are handled with an iron hook on a spear-staff; the obscure 'in the same place' is rendered variously (Vulgate 'to nothing,' LXX 'shame')."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: to remove the sons of Belial one must be armed with iron; evil cannot be handled bare-handed."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the burning of the thorns is a charge to magistrates, a caution to David's heirs, and a prediction of the ruin of Christ's enemies."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "judgment by fire",
-   "the impossibility of handling evil",
-   "the Targum's Messianic reading",
-   "end of the oracle"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Read against Chronicles the verse holds 'three great corruptions' (Clarke/Kennicott): Jashobeam the Hachmonite, 'he lifted up his spear,' and the disputed number."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the heroes fall into three classes — a first three, a second three, and the thirty — Joab standing outside as general."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the catalogue honours David and his worthies, excites emulation, and shows how religion inspires true courage."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke follows Kennicott for 'three hundred'; Wesley reconciles the lists by divers names and by heroes who died and were replaced."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Was the number slain eight hundred or three hundred?",
-    "sides": [
-     {
-      "position": "three hundred, as in Chronicles",
-      "holders": [
-       "Adam Clarke"
-      ]
-     },
-     {
-      "position": "eight hundred, the text here being likely correct",
-      "holders": [
-       "Charles Ellicott"
-      ]
-     }
-    ]
-   },
-   {
-    "question": "Is 'Adino the Eznite' a name or a corruption?",
-    "sides": [
-     {
-      "position": "a corruption of 'he lifted up his spear'",
-      "holders": [
-       "Adam Clarke",
-       "Charles Ellicott"
-      ]
-     },
-     {
-      "position": "a genuine proper name of the hero",
-      "holders": [
-       "John Wesley"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the mighty men",
-   "textual corruption",
-   "Jashobeam",
-   "religion and courage"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: 'there gathered' points to Pas-dammim/Ephes-dammim, the field of Goliath; 'were gone away' should read 'were gathered to battle.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke connects the scene to the war in which David slew Goliath; Wesley keeps 'gone away' as 'fled away,' dismayed at the enemy."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Eleazar the second of the first three, son of Ahohi of Benjamin's line."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Did Israel flee, or gather to battle?",
-    "sides": [
-     {
-      "position": "the men of Israel fled away",
-      "holders": [
-       "John Wesley"
-      ]
-     },
-     {
-      "position": "the men were gathered to battle (LXX, Vulgate, Syriac)",
-      "holders": [
-       "Charles Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Eleazar",
-   "the field of Goliath",
-   "standing alone",
-   "textual variants"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the hand cleaving to the sword is a documented cramp after exertion; 'returned after him' means they turned to gather spoil, not that they had deserted."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: 'faint yet pursuing' — in God's service keep resolution though the flesh is weary; and the praise belongs to God, who 'wrought a great victory.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Eleazar rose when Israel fled and stood his ground alone until his hand was weary."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "perseverance",
-   "the hand cleaving to the sword",
-   "the LORD wrought the victory",
-   "valour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the Philistines foraged for the ripe crop, Israel fled, Shammah turned the tide; 'into a troop' preferred over Josephus's 'to Lehi.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: lentiles or barley, perhaps both in one field; Wesley uses the double crop to reconcile Shammah's feat with Eleazar's partners in Chronicles."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Shammah of the hill country, the third of the first three."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Was the field of lentiles or of barley?",
-    "sides": [
-     {
-      "position": "the difference is immaterial or a copyist's slip",
-      "holders": [
-       "Charles Ellicott"
-      ]
-     },
-     {
-      "position": "perhaps both crops grew in the one field",
-      "holders": [
-       "Adam Clarke",
-       "John Wesley"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Shammah",
-   "defending the field",
-   "the small inheritance",
-   "harmonizing the accounts"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: 'the Lord wrought' — the bravery is the instrument's, but the praise of the achievement belongs to God."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: he stood in the midst of the field of lentiles and defended it."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil: the exploit closes the first three and turns to the nameless three who go down to Adullam."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "standing one's ground",
-   "covenant ground",
-   "the LORD wrought the victory",
-   "Shammah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott and Keil: the 'three' (no article) are not the first three but another three of the thirty; 'thirty' names a fluctuating band; 'in the harvest time' may be 'to the rock.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: prefers to read these as the first three, relating one exploit in which all shared."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: 'shalishim' probably names an office, not a fixed thirty (compare Pharaoh's chariot-captains)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Which three went down to David?",
-    "sides": [
-     {
-      "position": "the famous first three",
-      "holders": [
-       "John Gill"
-      ]
-     },
-     {
-      "position": "three others, more eminent among the thirty",
-      "holders": [
-       "Charles Ellicott",
-       "Keil and Delitzsch"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the cave of Adullam",
-   "valley of Rephaim",
-   "the thirty",
-   "harvest time"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill and Keil locate the hold (Zion or a rock by Adullam) and the Philistine garrison at Bethlehem's gate, setting the stage for the water-exploit."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: Bethlehem is in enemy hands because Saul's misrule drove David to caves — when guides persecute the church's champions, the enemy gains."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Bethlehem in enemy hands",
-   "the stronghold",
-   "David the outlaw",
-   "the city of promise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley and Clarke: a natural thirst in harvest-heat; David never wished any to hazard their lives, and the three went of their own accord."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: probably an instance of weakness, a fancy for boyhood water; but reports the public-spirited and the mystical (Bishop Patrick's Messiah) readings."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: on the well itself — no living wells at Bethlehem now, though Ritter reports David's well north of the town."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What did David's longing signify?",
-    "sides": [
-     {
-      "position": "mere thirst and human weakness",
-      "holders": [
-       "Matthew Henry",
-       "Adam Clarke"
-      ]
-     },
-     {
-      "position": "a patriot's wish to reclaim Bethlehem",
-      "holders": [
-       "Matthew Henry (reported)"
-      ]
-     },
-     {
-      "position": "a mystical longing for the Messiah, the water of life",
-      "holders": [
-       "Bishop Patrick (per Henry)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the well of Bethlehem",
-   "longing",
-   "David's weakness",
-   "self-restraint"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: David would not prize his appetite above his soldiers' lives; he poured it out as a drink-offering; Clarke adds the noble parallel of Alexander refusing water."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the deed shows David's power over his men; 'poured it out' is the technical term for a sacrificial libation."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the three, hearing his sigh, made their way through the Philistine army to the well."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Adam Clarke",
-    "note": "Adduces the classical parallel of Alexander pouring back the cup of water when his army thirsted — noble, yet David 'added piety to bravery.'"
-   }
-  ],
-  "themes": [
-   "self-denial",
-   "drink-offering",
-   "the water as blood",
-   "devotion of the three"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the Hebrew is an interrogative exclamation ('the blood of the men?'); the water won at risk of life is as the blood in which life resides (Leviticus 17)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: David refuses to drink what the men brought at such hazard."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: 'these three' acted jointly, after which two are named severally."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the blood of the men",
-   "sanctity of life",
-   "self-command",
-   "sacramental restraint"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott and Keil: Abishai first of a second triad (Benaiah second, an unnamed third); a like feat is told in 1 Samuel 26; the text wavers between 'three' and 'thirty.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Abishai the head of another triumvirate, the second three."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Abishai",
-   "the second three",
-   "three hundred slain",
-   "rank and honour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Abishai most honourable — he took Saul's spear, saved David from Ishbibenob, and slew eighteen thousand Edomites."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: he 'attained not' to the first three because he fell short of them in strength and valour."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil: Abishai heads the second class, more honourable than the thirty yet below the first three — the same formula later used of Benaiah."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "degrees of honour",
-   "captain of the second three",
-   "Abishai's exploits",
-   "not of the first three"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: Benaiah of Kabzeel, commander of the Cherethites and Pelethites, later Solomon's commander-in-chief; 'lion of God' marks great warriors."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke surveys the 'two lionlike men of Moab' (men, lions, or fortresses); Wesley draws out the danger of a pit and the fierceness of lions in snow."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: like father, like son — Benaiah's father a man of valour; tradition makes him a grandson of Jesse."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What are the 'two lionlike men of Moab'?",
-    "sides": [
-     {
-      "position": "two celebrated Moabite warriors / princes",
-      "holders": [
-       "Adam Clarke (Targum)",
-       "Charles Ellicott",
-       "John Gill"
-      ]
-     },
-     {
-      "position": "possibly two real lions, or two fortresses",
-      "holders": [
-       "Adam Clarke (options canvassed)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Benaiah",
-   "lion in a pit",
-   "Moabite champions",
-   "valour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill and Ellicott: the Egyptian a giant of five cubits; Benaiah, armed only with a staff, wrested his spear and slew him with it; Keil records his rank and office."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke adds the classical parallel of Dioxippus disarming an armoured Macedonian with a club — Benaiah 'just such another clubsman.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Adam Clarke",
-    "note": "Illustrates the feat at length from Quintus Curtius — the naked, club-bearing Dioxippus overthrowing the fully armed Horratas before Alexander."
-   }
-  ],
-  "themes": [
-   "staff against spear",
-   "the Egyptian giant",
-   "echo of David and Goliath",
-   "Benaiah's valour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill gathers Benaiah's deeds — the lion, the two Moabite champions, and the giant Egyptian — under the single honour of 'a name among three mighty men.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the name that abides",
-   "summing-up of exploits",
-   "reputation recorded",
-   "rank observed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: 'guard' means rather private audience — David set Benaiah over, or in, his council; Gill: more honourable than the thirty, below the first three."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: the Vulgate makes him privy counsellor ('put him to his ears'); some think a spy, recalling the Midas fable."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What is 'David set him over his guard'?",
-    "sides": [
-     {
-      "position": "over the king's bodyguard",
-      "holders": [
-       "John Gill (plain sense)"
-      ]
-     },
-     {
-      "position": "over, or in, the king's private council / confidence",
-      "holders": [
-       "Adam Clarke",
-       "Charles Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "trust rewarded",
-   "captain of the guard",
-   "nearness to the king",
-   "Benaiah's future greatness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Asahel, killed early by Abner, shows the list spans David's whole reign; leaving him aside the names are exactly thirty; this Elhanan differs from that of 2 Samuel 21:19."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: Asahel, though slain early, keeps his place — honour once earned is not cancelled by death; Christ too has his worthies, their names written in heaven."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Asahel 'one of the thirty' or 'over the thirty'; Joab, the general, is named in no class."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Asahel",
-   "the list spans David's reign",
-   "honour outlasting death",
-   "Christ's worthies"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott and Keil identify the men (Shammah perhaps Shamhuth, captain of the fifth division; Elika omitted in Chronicles) and note the frequent R/D variations."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley lays down four rules for reconciling the lists: dialect, double names, more worthies than named, and replacements for the fallen."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Harodite for Harorite, by the frequent interchange of R and D."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the thirty",
-   "name variations",
-   "the standing army",
-   "reconciling Samuel and Chronicles"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Helez of Beth-pelet (general of the seventh division, called a Pelonite) and Ira of Tekoah (sixth month) placed in the monthly army courses."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Helez of 'Pater' (the Targum), elsewhere called the Pelonite."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Helez and Ira",
-   "Tekoah",
-   "monthly army divisions",
-   "a map of the kingdom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abiezer of Anathoth (Jeremiah's town, general for the ninth month); 'Mebunnai' a misspelling for Sibbechai the Hushathite, slayer of the giant Saph."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Abiezer of Anathoth in Benjamin, the birthplace of Jeremiah."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Anathoth",
-   "Sibbechai the giant-slayer",
-   "recovering a garbled name",
-   "tribe of Benjamin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Zalmon (Chronicles Ilai — undecidable which is right) of the Ahohite family; Maharai of Netophah near Bethlehem, of the family of Serah, tenth division."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Zalmon the same with Ilai, a descendant of Ahoah, grandson of Benjamin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Zalmon or Ilai",
-   "Netophah",
-   "honest uncertainty",
-   "the ordered kingdom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Heleb (Heled/Heldai, general for the twelfth month) of Netophah; Ittai of Gibeah of Benjamin, to be distinguished from Ittai the Gittite of the flight from Absalom."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Heleb is called Heled in the parallel record."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ittai of Gibeah",
-   "not Ittai the Gittite",
-   "Gibeah of Saul",
-   "obscure but enrolled"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Benaiah the Pirathonite (distinct from the son of Jehoiada; eleventh month) of Ephraim's Pirathon, and Hiddai of the brooks of Gaash — near the graves of Abdon and Joshua."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Benaiah of Pirathon, a city in the tribe of Ephraim."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ephraim",
-   "two Benaiahs distinguished",
-   "Gaash and Joshua's grave",
-   "a united realm"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abi-albon (probably Abiel, the syllable strayed from Shaalbonite) of Beth-arabah in the Judean desert; Azmaveth 'the Baharumite,' of Bahurim of Shimei's curse."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Abialbon of Beth-arabah, called Abiel in the parallel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Bahurim",
-   "correcting the copyists",
-   "heroes from David's places of humiliation",
-   "the wilderness of Judah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Eliahba of Shaalbon in Dan; the middle phrase so corrupt that 'Bne-Jashen Jehonathan' yields no sense — Chronicles' 'Bne-hashem the Gizonite, Jonathan' is judged sounder."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Eliahba of Shaalbon or Shaalbin, a city in Dan, perhaps Josephus's Silbonitis."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a corrupt verse",
-   "scholarly honesty",
-   "a name half-lost",
-   "kept nonetheless"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: read 'Jonathan the son of Shammah the Hararite' — so Jonathan, one of the thirty, was son of one of the first three; Keil agrees Chronicles is sounder."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Hararite as 'from the mountainous country,' the versions differing even to 'the mount of Olives.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "valour running in families",
-   "Jonathan son of Shammah",
-   "degrees of rank",
-   "textual reconstruction"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Eliam 'the son of Ahithophel the Gilonite' — a son of David's treacherous counsellor among his heroes; Chronicles differs so far that different persons may be meant."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Eliphelet is called Eliphal the son of Ur in the parallel record."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Charles Ellicott",
-    "note": "Notes it 'interesting' that a son of David's astute but treacherous counsellor Ahithophel stood among the thirty heroes."
-   }
-  ],
-  "themes": [
-   "son of Ahithophel",
-   "grace and treachery in one family",
-   "Bathsheba's kin",
-   "textual difference"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Hezro of Carmel in the mountains of Judah (of Nabal and Abigail's town, famous in David's early history); Paarai/Naarai the Arbite of Arab, form undecidable."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Hezrai of Mount Carmel, called Hezro in the parallel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Carmel of Judah",
-   "Nabal and Abigail",
-   "David's own story",
-   "undecided forms"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Igal (Chronicles Joel) of Zobah, connected with David's Syrian war; Bani the Gadite (Chronicles's 'Mibhar son of Hagri' corrupt) — the text here judged the true one."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Igal of Zobah, a kingdom in Syria, by Hillerus the same with Joel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Zobah and the Syrian war",
-   "a Gadite of the east",
-   "the roll reaches beyond the border",
-   "corrupt parallels"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: Zelek the Ammonite one of several foreigners (Syrian, Gittite, Hittite) risen in David's service, probably proselytes; Naharai of Beeroth, chief of Joab's armour-bearers."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Zelek an Ammonite by birth and a proselyte, or so called from sojourn or exploits."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "an Ammonite among the mighty",
-   "foreigners and proselytes",
-   "grace across old enmities",
-   "Joab's armour-bearer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ira and Gareb both Jithrites of Kirjath-jearim (the ark's resting-place); this Ira distinguished from the priest Ira of 2 Samuel 20:26."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the two of Jether, of the tribe of Judah by way of Caleb."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Kirjath-jearim",
-   "the ark's old town",
-   "two of one family",
-   "the least still remembered"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil vindicates the total 'thirty and seven'; Ellicott notes only thirty-six names appear, and that Chronicles adds sixteen more of later date."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: to find Uriah the Hittite closing the roll revives and aggravates the memory of David's sin against a man who served him so well."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Uriah the Hittite, the husband of Bathsheba."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke turns to textual matters — the sixteen further names in Chronicles and De Dieu's rendering of the oracle in verses 4-5."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Uriah the Hittite",
-   "David's sin memorialized",
-   "the honesty of the Spirit",
-   "grace not merit"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- }
 }

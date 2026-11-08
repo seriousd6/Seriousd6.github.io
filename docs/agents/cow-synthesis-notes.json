@@ -104156,6 +104156,88 @@
         "38"
       ],
       "note": "Unusually rich REAL disagreement in this chapter, which made the entries easy to keep honest. v15: Keil and Delitzsch call the love-to-hatred reversal fully explicable psychologically, Ellicott explains it by the maxim that human nature hates whom it has injured, and Clarke flatly refuses the attempt as 'not only brutal but inexplicable'. v20: Wesley glosses Tamar's desolation as giving herself up to solitude, where Keil and Delitzsch insist the term cannot be proved to mean single or solitary. v22: Keil and Delitzsch read 'neither good nor bad' as not a single word spoken, Gill and Wesley read it as silence on that subject only, since total silence would have alerted Amnon. v39: Ellicott gives three arguments against the received 'David longed for Absalom' reading and prefers 'David desisted from going forth against him', with 2 Samuel 14:24 and 14:28 as evidence; Clarke and Wesley keep the received reading and judge David by it."
+    },
+    {
+      "at": "2026-11-07",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "23",
+      "verses": [
+        "15",
+        "21",
+        "33",
+        "39"
+      ],
+      "note": "CORPUS-WIDE JFB MISALIGNMENT - the general case behind the per-chapter misfilings I have been filing one at a time. Probe: extract every JFB block in data/commentary/cow, keep those whose text opens with an explicit JFB section header of the form 'Bk C:V-V. Title' (76 of 3863 blocks parse this way; 3787 have no leading header and cannot be checked by this method), and compare the header's BOOK to the hosting book. Result: 76 disagree, 0 agree. Not one match. Direction is uniform: the header book is EARLIER than the hosting book in all 76 cases - 76 earlier, 0 same, 0 later - with canonical-index deltas of 1 to 14 (mode 2, n=25). Systematic pairs: 1kings hosts 1samuel (7), 2kings hosts 2samuel (9), 1chronicles hosts 1kings (3), 2chronicles hosts 2kings (5), 1timothy and 1thessalonians host 1corinthians. An always-earlier, never-later, never-matching signature is an ingest that fell behind and drifted, not stray cross-references - a cross-reference would sometimes point forward and would sometimes land in the same book. 1121 chapters contain at least one JFB block, so the whole JFB layer should be treated as unverified pending a re-scrape. EXPOSURE IS SMALL AND BOUNDED: only 49 synthesis entries across 16 chapters list JFB among their voices (john 18, matthew 8, mark 7, luke 5, numbers 5, exodus 3, 1samuel/genesis/joshua 1 each), against 2365 entries that already declare it excluded - the loop's habit of excluding JFB has been protecting the corpus without anyone knowing why. Those 49 entries are the re-check list; everything else is safe. I have not touched the source tree. This chapter: all 4 JFB blocks are 1 Samuel 1-2 Hannah/Eli material, key 33 opening with the literal header '1Sa 2:1-11. Hannah's Song in Thankfulness to God' while hosting 2 Samuel 23:33."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "23",
+      "verses": [
+        "26"
+      ],
+      "note": "The JFB misalignment is NOT confined to JFB. John Wesley's block at key 26 reads in full: 'In the way - Which seems added, to shew, how little the example of parents, or ancestors, is to be valued where it is opposed to the will and word of God.' That is a comment on a formula like 'he walked in the way of his father', which occurs nowhere in 2 Samuel 23; verse 26 is 'Helez the Paltite, Ira the son of Ikkesh the Tekoite'. So a second commentator shows the same defect in the same chapter. Declared excluded_voices on the 26-28 span (keys 27 and 28 carry no Wesley block, so the exclusion costs nothing). Worth checking whether the lagging-ingest signature I documented for JFB also holds for Wesley across the corpus - if two layers drift, the per-voice exclusion habit is load-bearing for more of the tree than anyone has assumed."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "23",
+      "verses": [
+        "21"
+      ],
+      "note": "Caught by the fidelity entity check for the second batch running, and it is the same mistake as 'Zidon' to 'Sidon' in nehemiah 13. Clarke cites his source for the Dioxippus duel as 'Q. Curt. lib. ix., cap. 7.'; I expanded that to 'Quintus Curtius' and the checker flagged both words as ungroundable in the source pool. It was right to: a reader collating prose against catena would find a name no witness wrote. Replaced with 'his classical authority'. The rule generalises beyond proper names to ABBREVIATIONS - do not silently expand what the source abbreviates, whether a place name, an author, or a citation. The entity check is catching one of these per chapter now, which suggests expansion-by-habit is my most frequent fidelity slip."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "rejected",
+      "book": "2samuel",
+      "chapter": "23",
+      "verses": [
+        "1",
+        "8"
+      ],
+      "note": "My own error, caught by validate-synthesis and worth recording because the mechanism is easy to repeat. I declared excluded_voices ['Jamieson, Fausset and Brown'] on the spans keyed 1 and 8, and the validator correctly refused both: 'excluded_voices names a block absent from this entry's source'. JFB in this chapter sits at keys 15, 21, 33 and 39 only. The cause was carrying the exclusion map over from 2samuel 13, where the tiling paired 5-8 and so did contain the JFB key, whereas here v.5 and v.8 stand alone and key 7 falls inside the 6-7 span. Lesson: excluded_voices must be derived from the key list of THIS chapter's spans, never copied across chapters even when the book and the defect are the same. The validator's upper-bound-only design meant the false declarations could not have bought a thin pass, but they would have put a false claim in the record."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "23",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "6",
+        "8",
+        "9",
+        "11",
+        "13",
+        "15",
+        "17",
+        "19",
+        "21",
+        "23",
+        "26",
+        "29",
+        "32",
+        "35",
+        "38"
+      ],
+      "note": "Shape: 39 source keys to 19 spans, cut by source words. Legacy baseline was 39 entries, all legacy-unversioned, 153 <strong> school labels, words 350-497 with a mean of 377 (floor-hugging), and 27/39 trips of the local carrier sweep. Voices Gill 39, Ellicott 34, K&D 26, Clarke 18, Wesley 17, JFB 4 (all residue), Henry 2 (section heads at keys 1 and 8, 2934 and 2477 words, covering vv.1-7 and vv.8-39). The chapter splits cleanly into David's last words (1-7) and the roll of the mighty men (8-39), and the second half needed thematic rather than name-by-name organisation to avoid a roll-call shape: the 26-28 entry is built around the discovery that nearly every man in that stretch commanded one of the twelve monthly army divisions, and 29-31 around the fact that the commentators can offer only a corrected spelling, a located birthplace, or a division - the interest being which is available in each case. Three entries came back grade B on first assembly (ttr 0.544, 0.576, 0.567) and all three were repetition of subject-matter vocabulary rather than padding; rewriting with the sources' own alternative words (sarissa for the Macedonian pike, 'parallel register' for Chronicles) fixed all three."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "23",
+      "verses": [
+        "38"
+      ],
+      "note": "Chrome on the chapter's LAST key for the FOURTH chapter running (key 39: 702 usable words plus 945 of boilerplate and the StudyLight navigation and copyright block). Two things it costs here. First, Albert Barnes appears in a voice census of this chapter solely because his name occurs inside the chrome's link list - he contributes no commentary at all. Second, and more serious, the chrome truncates Ellicott mid-argument and sits on top of Clarke's chapter-end note, which is substantive: Clarke uses the end of the chapter to return to vv.4-5, which he had called very obscure, and gives De Dieu's reading of them in full (the three natural images - sun, cloudless morning, tender grass - being things grateful to men but not constant, so that the point is the denial: not so is David's house, flourishing like these but perpetual). That is a fourth reading of vv.4-5 which a per-verse source resolution would never surface at vv.4-5, because it is filed at v.39. I used it in the 38-39 entry and said so there."
     }
   ]
 }
