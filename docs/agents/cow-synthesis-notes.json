@@ -104862,6 +104862,13 @@
         "29"
       ],
       "note": "Keil and Delitzsch are not declared on vv.29-33: their only block in the span is roughly 200 words of bare KJV verse text. Fourth chapter running in which the K&D 200-word cap produces verse-text-only blocks, and the same attribution risk -- per-key counts credit the voice with words containing no view."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "3",
+      "note": "Declined as a pick, not blocklisted: john 3 is 36 source keys and 90,022 usable source words -- more than twice the ~40,000-word single-chapter batch ceiling and over eight times the chapter landed alongside it. The source is sound; it is the volume (Nicodemus, the new birth, and vv.16-21 draw the fullest commentary in the corpus) that puts it out of reach of one unattended run, and an abandoned pick costs the run everything. It sits at the head of the worst-first legacy queue and will keep being drawn, so it needs either a deliberate multi-run plan or an explicit pericope pre-tiling before a worker takes it."
     }
   ]
 }
