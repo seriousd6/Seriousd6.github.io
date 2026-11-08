@@ -1,178 +1,47 @@
 {
  "1": {
   "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
    "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
-   "Matthew Henry"
+   "Charles Ellicott",
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch map the chapter's two registers and Ziklag's history; Ellicott presses the obscure clause 'kept himself close' as David shut up or banished from Saul's presence."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill fixes the setting: Achish had given Ziklag to David as a safe retreat from Saul's wrath."
+    "summary": "Gill reports the plain fact of Achish's gift of Ziklag."
    },
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke surveys the whole chapter — who joined at Ziklag, the 120,000 at Hebron, the provisions — and notes Ziklag as David's refuge."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch map the chapter's two registers and gloss the archers' Hebrew; Ellicott traces Ziklag's tenure and the obscure clause about keeping close."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry reads providence: while David kept close, God was preparing helpers, for the war was God's and he found out the helpers of it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the two registers",
-   "Ziklag",
-   "barred from Saul's presence",
-   "hidden providence",
-   "the war was God's"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch and Ellicott render the men ambidextrous archers and slingers, and insist 'Saul's brethren of Benjamin' means his fellow-tribesmen, not near kin."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes only that they were armed with bows, the weapon of that age."
+    "summary": "Henry reads David's concealment as the moment Providence was gathering helpers for him."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley names the motive: of Saul's own tribe, yet moved by God's spirit, discerning God's departure from Saul and his presence with David."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ambidextrous archers",
-   "Benjamin's skill",
-   "Saul's fellow-tribesmen",
-   "moved by God's spirit"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott and Keil trace the names to their towns — Gibeah of Saul, Anathoth, Azmaveth — and note the Korahite doorkeepers among them, the picked men of Saul's own country."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill marks Shemaah the Gibeathite of Gibeah, Saul's birthplace, so some of these may have been the king's kindred."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the heartland of Saul",
-   "Gibeah and Anathoth",
-   "named towns",
-   "defection from Saul's country"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott makes Ismaiah a Benjamite only by domicile, reckoned among the famous 'thirty' though absent from the catalogue, and reads 'over the thirty' as captain or as 'above the thirty' in prowess."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill calls him a mighty man among the thirty who came with a company under his command."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley takes 'the thirty' as thirty valiant Benjamites Ismaiah led and commanded."
+    "summary": "Clarke dates the gift of Ziklag; Wesley ascribes the Benjamites' coming to God's Spirit and their own conscience."
    }
   ],
   "debates": [
    {
-    "question": "What is 'the thirty,' and what does 'over the thirty' mean?",
+    "question": "What moved Saul's own tribesmen to come over to David?",
     "sides": [
      {
-      "position": "David's famous corps of heroes, into which Ismaiah was reckoned though unlisted, he being captain over or above them",
+      "position": "A generous indignation at the base treatment Saul had given David",
       "holders": [
-       "Ellicott"
+       "Henry"
       ]
      },
      {
-      "position": "simply a retinue of thirty Benjamites whom Ismaiah led as their commander",
+      "position": "God's Spirit, the conscience of duty to David, and the observation that God had left Saul",
       "holders": [
        "Wesley"
       ]
@@ -182,63 +51,119 @@
   ],
   "outliers": [],
   "themes": [
-   "Ishmaiah the Gibeonite",
-   "the thirty",
-   "captain over the thirty",
-   "unlisted heroes"
+   "Ziklag",
+   "ambidextrous Benjamite archers",
+   "providence gathering helpers",
+   "the registers of 1 Chronicles 12"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
+  },
+  "range": "1-2",
+  "pericope_label": "The Benjamites who came to David at Ziklag"
  },
- "5": {
+ "3": {
   "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
    "Charles Ellicott",
-   "John Gill"
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott mines the names: 'Bealiah' means 'Baal is Jah,' evidence that Baal was once a title of the God of Israel; 'the Haruphite' ties the clan to the sons of Hariph among the returned exiles."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill notes Shephatiah the Haruphite as a native of Haruph or Hariph."
+    "summary": "Gill draws out that Gibeah was Saul's birthplace, so these men may be his kindred."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch and Ellicott work through the chiefs' titles, place-names and Hebrew text variants."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley takes 'over the thirty' as a command of thirty Benjamites who came with Ishmaiah."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What does 'over the thirty' say about Ishmaiah?",
+    "sides": [
+     {
+      "position": "Either he was once captain of the famous corps, or the phrase is merely comparative",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "He arrived attended by thirty valiant Benjamites and was their commander",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "name etymologies",
-   "Baal as a divine title",
-   "the Hariphite clan",
-   "link to the returned exiles"
+   "the Benjamite chiefs",
+   "Gibeah and Anathoth",
+   "the thirty",
+   "Hebrew name variants"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.84
+   }
+  },
+  "range": "3-5",
+  "pericope_label": "The named chiefs of the Benjamite company",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "6": {
   "voices": [
@@ -248,37 +173,59 @@
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil takes the Korhites for descendants of the Levite Korah, doorkeepers of the sanctuary whose office may have moved them to seek the anointed; Ellicott leans the same way but allows a Judean clan Korah."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill denies the Korhites were Levites and makes them the posterity of a Benjaminite Korah."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill insists they are not Levites at all but the posterity of a Korah of Benjamin."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch argue the Levitical descent from the porters of the tabernacle; Ellicott weighs Levitical against Judean Korah and dates the mountain hold."
    }
   ],
   "debates": [
    {
-    "question": "Who are the 'Korhites' of this verse?",
+    "question": "Who were the Korhites in this company?",
     "sides": [
      {
-      "position": "descendants of the Levite Korah, of priestly stock",
+      "position": "Descendants of the Levite Korah, drawn from the porters of the holy place",
       "holders": [
-       "Keil and Delitzsch",
-       "Ellicott"
+       "Keil and Delitzsch"
       ]
      },
      {
-      "position": "posterity of a Korah belonging to Benjamin, not Levites",
+      "position": "Not Levites at all, but the posterity of a Korah of Benjamin",
       "holders": [
        "Gill"
       ]
      },
      {
-      "position": "possibly members of the otherwise-unknown Judean clan Korah",
+      "position": "Members of the Levitical clan Korah, though possibly of the otherwise unknown Judean clan",
       "holders": [
        "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why do Judaean names stand in a list of Benjamites?",
+    "sides": [
+     {
+      "position": "The chronicler welded two lists into one",
+      "holders": [
+       "some (as reported by Ellicott)"
+      ]
+     },
+     {
+      "position": "Towns changed hands, so Judaean towns may have held a partly Benjaminite population",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Gedor may have passed to Benjamin, or be another town of the same name",
+      "holders": [
+       "Gill"
       ]
      }
     ]
@@ -287,56 +234,88 @@
   "outliers": [],
   "themes": [
    "the Korhites",
-   "Levite or Benjaminite descent",
-   "doorkeepers turned soldiers",
-   "priestly names"
+   "Levitical names",
+   "Judaean names in a Benjamite list",
+   "the mountain hold"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.18
+   }
+  },
+  "range": "6-7",
+  "pericope_label": "The Korhites and the sons of Jeroham of Gedor"
  },
- "7": {
+ "8": {
   "voices": [
    "John Gill",
-   "Charles Ellicott"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott weighs why the Judean town Gedor stands in a Benjamite list, preferring shifting town-ownership and mixed border populations to the theory of two welded lists."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill supposes Gedor 'might now belong to Benjamin,' or that another city of the same name lay within it."
+    "summary": "Gill describes what the Gadites separated themselves from and names the eleven in order."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry calls the separation laudable and contrasts these men with the distressed recruits of earlier days."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke notes that speed was reckoned a grand accomplishment in a warrior."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott takes the description apart term by term and hears an ancient poetic source behind the lion-and-gazelle clause; Keil and Delitzsch read the subscription as marking chief warriors."
    }
   ],
   "debates": [
    {
-    "question": "Why does the Judean town-name Gedor appear in a Benjamite roll?",
+    "question": "Which stronghold was the hold in the wilderness?",
     "sides": [
      {
-      "position": "the chronicler welded two separate lists into one",
+      "position": "A hold in the wilderness of Ziph or Maon, or else Ziklag",
       "holders": [
-       "critics (as reported by Ellicott)"
+       "Gill"
       ]
      },
      {
-      "position": "towns changed hands and border towns held mixed populations",
+      "position": "Perhaps Adullam, Hachilah, Maon or En-gedi",
       "holders": [
-       "Ellicott",
-       "Gill"
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Probably one of the holds in the wilderness of En-gedi",
+      "holders": [
+       "Henry"
       ]
      }
     ]
@@ -344,261 +323,128 @@
   ],
   "outliers": [],
   "themes": [
-   "Gedor",
-   "Judean names among Benjamites",
-   "welded lists",
-   "border populations"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott reads the lion-faced, gazelle-swift description as verse betraying an ancient source the chronicler borrowed, comparing David's elegy over Saul and Jonathan."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill explains 'separated themselves' — cutting off from tribe, family, and Saul's government to reach David's stronghold."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke notes swiftness was reckoned a grand accomplishment in a warrior throughout antiquity."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry calls their leaving 'a laudable separation' and finds a pattern of venturing in dependence on divine protection."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
    "the Gadites",
-   "separating from Saul's party",
-   "lion-faced warriors",
-   "ancient poetic source",
-   "costly discipleship"
+   "separation from Saul",
+   "the hold in the wilderness",
+   "lion faces and the swiftness of roes"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott glosses 'the first' as the chief; Keil reads 'one over a hundred, the greatest over a thousand' as the weakest a match for a hundred foes and the strongest a thousand (Lev. 26:8), against the Vulgate."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill lists the eleven, ranked by age, merit, or order of coming to David."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.96
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "eleven Gadite captains",
-   "one against a hundred",
-   "a few as a host",
-   "graded roll"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "8-9",
+  "pericope_label": "The Gadites who separated themselves to the hold"
  },
  "14": {
   "voices": [
    "John Gill",
    "Charles Ellicott",
+   "Keil and Delitzsch",
+   "Adam Clarke",
    "Matthew Henry"
   ],
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott prefers the margin — the least a match for a hundred, the greatest for a thousand — and calls the poetic notice unlike the chronicler's style; David's band was then about 600."
-   },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill takes 'captains of the host' as officers of the militia at home and afterward in David's army."
+    "summary": "Gill makes the captains officers of the militia at home and notes the crossing of Jordan."
    },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry notes they were officers who, though coming alone, had hundreds and thousands at command."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "subscription of the Gadites",
-   "each man a host",
-   "captains with troops at command",
-   "ancient poetic style"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott and Keil make the swollen spring flood the point, the Gadites crossing when Jordan overflowed and routing the valley-dwellers east and west."
+    "summary": "Ellicott prefers the margin and calls the clause poetic; Keil and Delitzsch rest the same reading on the Hebrew preposition."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke dates it to Nisan, before the mountain snows melted, and reads the danger as proof of their heroism."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes they went over Jordan in the first month to reach David."
+    "summary": "Clarke dates the first month and weighs two readings of the flood."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry: daring men who broke through the flood, fit for God's cause because they ventured in dependence on divine protection."
+    "summary": "Henry has them officers who could command thousands, and daring men who swam the flooded river."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Does 'one of the least was over an hundred' describe rank or prowess?",
+    "sides": [
+     {
+      "position": "Rank: the least commanded a hundred, the greatest a thousand",
+      "holders": [
+       "the Syriac and Vulgate (as reported by Ellicott)",
+       "Gill",
+       "Henry"
+      ]
+     },
+     {
+      "position": "Prowess: the weaker could cope with a hundred, the stronger with a thousand",
+      "holders": [
+       "Keil and Delitzsch",
+       "Ellicott",
+       "Bertheau (as reported by Keil and Delitzsch)"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "crossing the flooded Jordan",
-   "the first month",
-   "heroism in the spring flood",
-   "routing the valleys"
+   "captains of the host",
+   "one against a hundred",
+   "Jordan in flood",
+   "putting the valleys to flight"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.06
+   }
+  },
+  "range": "14-15",
+  "pericope_label": "Captains of the host who crossed a flooded Jordan"
  },
  "16": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil supplies the band's chief Amasai (perhaps Amasa) and notes their names were not preserved; Ellicott points back to 'the hold' of v.8."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill records men of Benjamin and Judah besides those already named."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry marks their leader Amasai and David's reason for suspicion of the two tribes that had betrayed him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Benjamin and Judah together",
-   "the mountain fastness",
-   "Amasai their leader",
-   "tribes that had failed David"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
@@ -608,48 +454,79 @@
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott find in David's speech and Amasai's reply the marks of genuine antiquity, and read 'the God of our fathers behold and punish' as a jussive committing the cause to God."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: David went out from suspicion, to sound men largely of Saul's tribe before admitting them."
+    "summary": "Gill holds open both deference and suspicion as reasons for David going out to them."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch account for the missing names; Ellicott glosses the terms of David's challenge clause by clause."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry praises David's prudent, fair treaty — rewarding the faithful, leaving the false to the God who says 'Vengeance is mine.'"
+    "summary": "Henry reads the speech as fair dealing and admires David's restraint in referring his cause to God."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Wesley: by 'the God of our fathers' David both warns them and encourages himself that God would right him."
+    "summary": "Wesley expounds the appeal to the God of our fathers."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why did David go out to meet them?",
+    "sides": [
+     {
+      "position": "Either out of respect for men of eminence, or to sound them before admitting them",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "Out of a jealousy learned from the treachery of Ziph and Keilah",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "David's wary discernment",
-   "the test of the newcomers",
-   "no wrong in my hands",
-   "the God of our fathers",
-   "vengeance is God's"
+   "Benjamin and Judah at the hold",
+   "David's test",
+   "a heart knit in union",
+   "appeal to the God of our fathers"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.94
+   }
+  },
+  "range": "16-17",
+  "pericope_label": "Benjamin and Judah come, and David puts them to the test"
  },
  "18": {
   "voices": [
@@ -657,181 +534,156 @@
    "Adam Clarke",
    "Charles Ellicott",
    "John Wesley",
+   "Keil and Delitzsch",
    "Matthew Henry"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Ellicott reads 'spirit clothed Amasai' with 'God' dropped from the text, holds enthusiasm for truth to be a sort of divine possession, identifies Amasai with Amasa, and lays out the oath's poetic structure."
+    "summary": "Gill renders the verb as clothing and calls Amasai a sister’s son of David’s."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke passes on the Targum's expansion of the oath; Wesley insists heroical and generous motions, not only saving graces, are ascribed to God's Spirit."
+    "summary": "Clarke gives the Targum's paraphrase; Wesley ascribes heroical motions to God's Spirit."
    },
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill calls it a spirit of fortitude clothing Amasai, David's sister's son."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch supply the omitted divine name; Ellicott prints the answer as verse and weighs Amasai's identity and title."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry unfolds the oath clause by clause — 'Thine are we, David'; 'peace to thy helpers'; 'thy God helpeth thee' — and turns it to allegiance to the Son of David."
+    "summary": "Henry distinguishes a spirit of wisdom and resolution from a spirit of prophecy."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What spirit came upon Amasai?",
+    "sides": [
+     {
+      "position": "A spirit of fortitude, strength and presence of mind",
+      "holders": [
+       "the Targum (as reported by Gill and Clarke)"
+      ]
+     },
+     {
+      "position": "The Spirit of God, the divine name omitted or fallen out of the text",
+      "holders": [
+       "Keil and Delitzsch",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Not a spirit of prophecy but of wisdom and resolution for the occasion",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is Amasai the Amasa of the later history?",
+    "sides": [
+     {
+      "position": "Perhaps the Amasa son of Abigail",
+      "holders": [
+       "Ellicott",
+       "the older commentators (as reported by Keil and Delitzsch)"
+      ]
+     },
+     {
+      "position": "Whether he is that Amasa does not appear",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "He presses a modern paraphrase into theology, arguing that enthusiasm for truth and right is itself a sort of divine possession."
+   }
+  ],
   "themes": [
-   "the Spirit-inspired oath",
-   "clothed with the Spirit",
+   "the Spirit clothing Amasai",
    "Thine are we, David",
-   "peace to thy helpers",
-   "allegiance to the Son of David"
+   "peace to thee and to thy helpers",
+   "captains of the band"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.24
+   }
+  },
+  "pericope_label": "Amasai's answer and David's acceptance"
  },
  "19": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
    "Charles Ellicott",
-   "Matthew Henry"
+   "Matthew Henry",
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott set the desertion before Gilboa: David marched out with the Philistines but helped them not, their lords sending him back lest 'he fall to his master Saul' — a summary of 1 Samuel 29."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill notes only that some of Manasseh fell to David and took his part."
+    "summary": "Gill states plainly that men of Manasseh took David’s part."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch set out the desertion idiom and the Philistine lords' reasoning; Ellicott glosses the phrases and raises an alternative reading."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry sees providence timing the defection, seasonable and mighty men joining as David marched home."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "desertion to David",
-   "spared from fighting Israel",
-   "the Philistine lords' distrust",
-   "seasonable providence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil names the seven captains of thousands; Ellicott dates their coming to the eve of Saul's fall, judges the doubled Jozabad a scribal slip, and reads 'thousand' as clan."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill marks these off as a second, later Manassite accession on the return to Ziklag."
+    "summary": "Henry reads the march through Manasseh as a providential opportunity."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Wesley sets it as David returned from the Philistine camp to Ziklag."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "seven Manassite captains",
-   "captains of thousands",
-   "on the road to Ziklag",
-   "the eve of Gilboa"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott finds the Hebrew obscure and offers 'helped David over the band' — joint command of his forces — beside the usual sense of help against the Amalekite raiders; he treats vv.21-22 as the list's subscription."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: they helped David against the Amalekites who had burnt Ziklag and carried off the women."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: against the Amalekites whom David and his six hundred were pursuing."
+    "summary": "Wesley fixes the second company to the return from the Philistine camp."
    }
   ],
   "debates": [
    {
-    "question": "What does 'they helped David against the band' mean?",
+    "question": "Should the text read 'they helped them not' or 'he helped them'?",
     "sides": [
      {
-      "position": "against the Amalekite band of rovers that had burnt Ziklag",
+      "position": "The received reading: David and his men did not help the Philistines",
       "holders": [
-       "Gill",
-       "Wesley"
+       "Ellicott"
       ]
      },
      {
-      "position": "'over the band' — set over David's own forces in joint command",
+      "position": "Possibly 'he helped them', a different vocalisation of the same verb",
       "holders": [
        "Ellicott"
       ]
@@ -841,488 +693,128 @@
   ],
   "outliers": [],
   "themes": [
-   "the band of rovers",
-   "the Amalekite raid on Ziklag",
-   "captains over the band",
-   "the list's subscription"
+   "falling away to David",
+   "David in the Philistine host",
+   "the jeopardy of our heads",
+   "captains of thousands"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott read 'a host of God' as greatness measured by power and spirit, not number, with the antique colouring of Jacob's camp at Mahanaim, and deny any exaggeration."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill dates the daily-swelling ranks from Saul's defeat to David's coming to Hebron."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke calls it an army like the host of the angel of God; Wesley, innumerable as the stars or angels, both named God's hosts."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: David's interest grew when he needed it — leave it to God to bring the promise to birth."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.73
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a great host like the host of God",
-   "daily-growing army",
-   "Mahanaim's camp of God",
-   "strength by spirit not numbers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "19-20",
+  "pericope_label": "The Manassites who fell to David"
  },
- "23": {
+ "21": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
+   "John Wesley",
    "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "Adam Clarke"
   ],
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott read 'numbers of the heads' as bands or totals, not chiefs (no chiefs being named but the Aaronites), and gloss 'turn the kingdom' and 'the word of the LORD' spoken by Samuel."
-   },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: bands trained and accounted for war."
+    "summary": "Gill identifies the rovers as the Amalekites who sacked Ziklag."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke's Targum and Wesley both take the host of God for an innumerable army."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry frames the coronation quota per tribe and the rule that the nearest tribes brought the fewest, from prudence not coldness."
+    "summary": "Henry turns the daily accessions into a lesson on waiting for God's strength."
    },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke dates the gathering after the death of Ish-bosheth."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Hebron muster superscription",
-   "turning Saul's kingdom to David",
-   "according to the word of the LORD",
-   "nearest tribes brought fewest"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil records 6,800 armed men; Ellicott notes the list runs south to north and explains Judah's small number — it had crowned David seven years before and needed not appear in force."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: they came in the name of their brethren, for the whole tribe stuck to David."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: the nearest tribes brought fewest from prudence, being within call."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Judah heads the roll",
-   "a token contingent",
-   "Judah's long allegiance",
-   "prudence not coldness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil records Simeon's 7,100; Ellicott refines 'mighty men of valour' to men fit for warfare or military service."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: a near tribe within Judah's territory brought few, ready within call — prudence, not coldness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Simeon's small contingent",
-   "a southern tribe near Hebron",
-   "loyalty shown by nearness",
-   "picked men of valour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "Ellicott reads 'the sons of the Levite' as gentilic and defends martial Levites as guardians of the sanctuaries; Keil takes the 4,600 as the tribal sum from which the priestly companies are drawn."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the tribe of Levi in arms",
-   "martial Levites",
-   "priests defending the sanctuary",
-   "the Levite total"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott make Jehoiada prince of the house of Aaron and head of its warriors — not the high priest, since Abiathar held that office — and question whether the 3,700 are counted within the 4,600."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke and Wesley agree Jehoiada was captain over Aaron's warriors under the high priest Abiathar, not himself the high priest."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jehoiada leader of the Aaronites",
-   "not the high priest",
-   "the priesthood in arms",
-   "Abiathar's pontificate"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "Ellicott and Keil identify the young warrior Zadok, likely the future high priest who replaced Abiathar, whose father's house of Eleazar was strong enough to muster twenty-two princes; the Levite total is left unstated."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Zadok the young warrior-priest",
-   "twenty-two captains",
-   "the house of Eleazar",
-   "the future high priest"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott explain Benjamin's meagre 3,000: most still kept the ward of Saul's house, their reluctance to own David surviving even the murder of Ish-bosheth."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: they had endeavoured to keep the crown in Saul's family."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: a foolish tribal affection held them back — kindred should never over-rule conscience."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Benjamin's small contingent",
-   "loyalty to the fallen house",
-   "tribal pride versus conscience",
-   "Saul's kindred"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "Keil reads the 20,800 as 'men of name,' renowned by their fathers' houses; Ellicott finds their comparative smallness noticeable, guessing decline since Moses or losses in Saul's last Philistine wars."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ephraim's men of renown",
-   "a diminished leading tribe",
-   "decline since Moses",
-   "the cost of Saul's wars"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott read 'appointed by name' as a formal tribal consultation and enrolment — 18,000 of western Manasseh levied and listed by their chiefs to make David king."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: men not ashamed publicly to own David by putting their names to the roll."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "western half of Manasseh",
-   "chosen by name",
-   "a tribe's deliberate decision",
-   "public allegiance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott and Keil read 'understanding of the times' as political sagacity, not astrology, referring it to the two hundred heads, not the whole tribe, and reporting yet rejecting the older astronomical view."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke preserves the Targum's picture of Issachar as astronomers and calendar-makers; Wesley reads political discernment, timing their allegiance to Abner's death."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry allows natural, ceremonial, or political 'times,' but leans to statecraft — 'it is the periphrasis of statesmen that they know the times.'"
+    "summary": "Ellicott proposes a wholly different rendering of the clause; Keil and Delitzsch defend the nearer antecedent and read the host of God by power rather than number."
    }
   ],
   "debates": [
    {
-    "question": "What was Issachar's 'understanding of the times'?",
+    "question": "What is 'the band' David was helped against or over?",
     "sides": [
      {
-      "position": "political and statesmanlike sagacity, discerning the hour to make David king",
+      "position": "The Amalekite band that had burnt Ziklag",
       "holders": [
-       "Ellicott",
-       "Keil and Delitzsch",
+       "Gill",
        "Wesley",
-       "Matthew Henry"
+       "Henry",
+       "the Vulgate and Syriac (as reported by Ellicott)"
       ]
      },
      {
-      "position": "literal astronomical, calendrical, even astrological skill",
+      "position": "Not a band of enemies but the joint command of his own forces",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who are the men said to have helped David?",
+    "sides": [
+     {
+      "position": "The Manassites just named",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "All the heroes listed from the first verse onward",
+      "holders": [
+       "Bertheau (as reported by Keil and Delitzsch)"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does 'like the host of God' measure numbers or quality?",
+    "sides": [
+     {
+      "position": "Power and spirit, not the count of warriors",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "A very numerous army, innumerable as the stars or angels",
       "holders": [
        "the Targum (as reported by Clarke)",
-       "older Jewish expositors"
+       "Wesley"
+      ]
+     },
+     {
+      "position": "An antique idiom marking excellence by the divine standard",
+      "holders": [
+       "Ellicott"
       ]
      }
     ]
@@ -1330,25 +822,451 @@
   ],
   "outliers": [],
   "themes": [
-   "the men who knew the times",
-   "political sagacity",
-   "astronomy or statecraft",
-   "two hundred heads leading the tribe",
-   "discerning David's hour"
+   "the band of the rovers",
+   "a subscription to the register",
+   "day by day they came",
+   "like the host of God"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.85
+   }
+  },
+  "range": "21-22",
+  "pericope_label": "Help against the rovers, and a host like the host of God",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
+ },
+ "23": {
+  "voices": [
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Charles Ellicott",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry frames the section as the quota each tribe brought and explains why the nearest tribes brought fewest."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke dates the muster after the death of Ish-bosheth; Wesley says Judah came in the name of the whole tribe."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill glosses the armed bands as men trained and accounted fit for war."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch and Ellicott both refuse the Vulgate’s \"chiefs of the army\" and argue for companies or totals."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What does the heading's word for 'heads' denote?",
+    "sides": [
+     {
+      "position": "Companies or bands of soldiers, that is, totals",
+      "holders": [
+       "Keil and Delitzsch",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Chiefs or leaders of the army",
+      "holders": [
+       "the Vulgate and Septuagint (as reported by Ellicott)",
+       "Bertheau (as reported by Keil and Delitzsch)"
+      ]
+     },
+     {
+      "position": "Polls, that is, individuals",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "the muster at Hebron",
+   "turning the kingdom",
+   "according to the word of the LORD",
+   "Judah's small contingent"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
+   }
+  },
+  "range": "23-24",
+  "pericope_label": "The muster at Hebron, and the men of Judah"
+ },
+ "25": {
+  "voices": [
+   "Charles Ellicott",
+   "Matthew Henry",
+   "Keil and Delitzsch"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott corrects the rendering of the military formula and explains how a tribe of priests came to muster."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the Levites’ presence as conviction that David was called of God."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Are Jehoiada's 3,700 inside Levi's 4,600?",
+    "sides": [
+     {
+      "position": "Probably not; the two figures stand beside each other",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "He reaches for a medieval comparison, likening these martial Levites to the priestly warriors of the crusades."
+   }
+  ],
+  "themes": [
+   "Simeon",
+   "the Levite as a tribal name",
+   "martial Levites",
+   "warm hearts but cool heads"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.39
+   }
+  },
+  "range": "25-26",
+  "pericope_label": "Simeon and Levi"
+ },
+ "27": {
+  "voices": [
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "Adam Clarke",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott and Keil and Delitzsch both insist the title is princely rather than priestly, and measure the strength of Eleazar's house."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke and Wesley place Jehoiada under Abiathar as captain of the warriors of Aaron."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "Jehoiada the prince",
+   "not princeps sacerdotum",
+   "Zadok a youth",
+   "the house of Eleazar"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.64
+   }
+  },
+  "range": "27-28",
+  "pericope_label": "Jehoiada the Aaronite leader, and Zadok",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
+ },
+ "29": {
+  "voices": [
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Wesley",
+   "Matthew Henry"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott and Keil and Delitzsch read the guard-keeping clause as the register's own explanation of Benjamin's small muster."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley states the motive plainly as keeping the crown in Saul’s family."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry rebukes the tribal affection that kept Benjamin in a sinking interest."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Why was Ephraim's contingent so small?",
+    "sides": [
+     {
+      "position": "The tribe was already declining within the Mosaic period",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "It had been greatly reduced by Saul's last wars with the Philistines",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "Benjamin’s three thousand",
+   "keeping the ward of the house of Saul",
+   "men of renown",
+   "Ephraim’s decline"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.64
+   }
+  },
+  "range": "29-30",
+  "pericope_label": "Benjamin and Ephraim"
+ },
+ "31": {
+  "voices": [
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Wesley",
+   "Adam Clarke",
+   "Matthew Henry"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott and Keil and Delitzsch both reject the astrological reading and restrict the praise to political sagacity."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke relays the Targum’s astronomy; Wesley argues the political reading from the tribe’s conduct after Abner’s death."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets out three senses of knowing the times and prefers the political."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What is Issachar's 'understanding of the times'?",
+    "sides": [
+     {
+      "position": "Astronomical and astrological skill in calendar and signs",
+      "holders": [
+       "the Targum (as reported by Clarke)",
+       "the old Jewish expositors (as reported by Keil and Delitzsch and Ellicott)"
+      ]
+     },
+     {
+      "position": "Knowing the right season for every matter and business",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "Political sagacity, and nothing more",
+      "holders": [
+       "Ellicott",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "Natural, ceremonial or, rather, political times",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does the praise belong to the tribe or to its two hundred chiefs?",
+    "sides": [
+     {
+      "position": "To the two hundred heads only",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "The two hundred were in effect the whole tribe",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "enrolled by name",
+   "understanding of the times",
+   "what Israel ought to do",
+   "all their brethren at their commandment"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.72
+   }
+  },
+  "range": "31-32",
+  "pericope_label": "Half Manasseh, and the men of Issachar who knew the times"
  },
  "33": {
   "voices": [
@@ -1361,342 +1279,279 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Ellicott render 'keep rank' as closing up the battle array (against the LXX/Vulgate 'help') and 'not of a double heart' as undivided fidelity, defending the large number against doubt."
+    "summary": "Keil and Delitzsch and Ellicott both derive the rare verb from the battle array rather than from helping, and compare the spear words."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Wesley: sincerely loyal, not dissembling, none with separate interests but all for the public good."
+    "summary": "Wesley reads the double heart as dissembling loyalty."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry: Israelites indeed, in whom was no guile."
+    "summary": "Henry singles Zebulun out as Israelites indeed, in whom was no guile."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What does the verb rendered \"could keep rank\" mean?",
+    "sides": [
+     {
+      "position": "To help, as nine manuscripts and the Greek and Latin read it",
+      "holders": [
+       "the Septuagint and Vulgate (as reported by Ellicott)"
+      ]
+     },
+     {
+      "position": "To close up together, setting the battle array in order",
+      "holders": [
+       "Keil and Delitzsch",
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Zebulun's fifty thousand",
-   "keeping rank",
-   "not of a double heart",
-   "undivided loyalty"
+   "Zebulun’s fifty thousand",
+   "a rare verb for closing ranks",
+   "not of double heart",
+   "Naphtali’s shield and spear"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil records a thousand captains and 37,000 men, reckoned by officers then rank and file; Ellicott notes the spear here is a different, perhaps thrown, weapon from Judah's thrusting-spear."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry's rule that the remote tribes measured their zeal by the size of the host they marched so far to bring."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.6
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Naphtali's captains and host",
-   "a thousand commanders",
-   "the thrown spear",
-   "distant tribes' zeal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "33-34",
+  "pericope_label": "Zebulun, not of double heart, and Naphtali",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "35": {
   "voices": [
-   "Keil and Delitzsch",
    "Charles Ellicott"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "unanimous",
-    "summary": "Keil records Dan's 28,600 expert in war; Ellicott notes the gentilic 'the Danite' and stresses that Dan — often omitted in the chronicler's genealogies — is here included, a mark of the completeness of Israel's consent."
+    "summary": "Ellicott supplies the grammar of the tribal names, prefers the margin’s \"rangers of battle\", and declines to criticise the eastern total."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "Dan included",
-   "a tribe often omitted",
-   "the completeness of Israel's consent",
-   "trained men of Dan"
+   "the Danite",
+   "marshalling battle",
+   "from the other side of Jordan",
+   "a hundred and twenty thousand"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott glosses 'expert in war' as marshalling the battle-line ('rangers of battle'); Keil records Asher's 40,000 from the far north-west."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: a remote tribe bringing many, its devotion measured by the multitude it marched down the length of the land."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.41
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Asher's forty thousand",
-   "rangers of battle",
-   "the remote tribes' zeal",
-   "an obscure tribe's full muster"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott record 120,000 from beyond Jordan; Ellicott calls the total remarkable yet declines to emend it for want of any parallel document to check the ciphers."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley marks this as the eastern half of Manasseh, distinct from the western half already numbered."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: the farthest tribes brought the most, their zeal measured by their multitude and their march."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the trans-Jordan host",
-   "a hundred and twenty thousand",
-   "caution over the ciphers",
-   "Manasseh divided by the river"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "35-37",
+  "pericope_label": "Dan, Asher and the tribes beyond Jordan",
+  "thin": true
  },
  "38": {
   "voices": [
-   "John Gill",
    "Charles Ellicott",
+   "John Gill",
+   "Matthew Henry",
    "Keil and Delitzsch",
-   "Matthew Henry"
+   "Adam Clarke"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott and Keil join 'keep rank' and 'perfect heart,' read 'the rest' as those absent from Hebron so that all Israel was unanimous, and reckon the assembly above 300,000, man and warrior being convertible terms."
+    "summary": "Ellicott re-translates the subscription, moves its pause, counts the muster at over three hundred thousand and rebuts Reuss."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: well-disciplined men who could keep rank."
+    "summary": "Gill glosses keeping rank as discipline."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry makes the perfect, single heart the day's glory — Israelites without guile, none with separate interests, all for the public good."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a perfect heart",
-   "keeping rank",
-   "all Israel of one heart",
-   "unanimity of the nation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch describe the three days' festive meals, the nearer tribes providing for the rest."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: a festival to testify their joy on the occasion."
+    "summary": "Henry makes the perfect heart and the one heart the point of the whole muster."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke cautions that only the deputies feasted, and breaks into praise of David as unrivalled statesman, warrior, poet, and divine, worthy of the public choice."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: joy in Israel, for when the righteous rule the city rejoices — a figure of the joy when Christ's throne is set up in the soul."
+    "summary": "Clarke argues that only the deputies can have feasted, and closes with a panegyric on David."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Are the relative tribal numbers credible?",
+    "sides": [
+     {
+      "position": "It is absolutely inconceivable that the nearer tribes furnished so little",
+      "holders": [
+       "Reuss (as reported by Ellicott)"
+      ]
+     },
+     {
+      "position": "A hasty and uncritical exaggeration; we know too little of the tribes to judge",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "He breaks off into a panegyric, calling David unrivalled in the annals of the world as statesman, warrior, hero, poet and divine."
+   }
+  ],
   "themes": [
-   "three days of feasting",
-   "joy in Israel",
-   "a coronation banquet",
-   "David worthy of the choice"
+   "a perfect heart at Hebron",
+   "the remainder of Israel of one heart",
+   "three hundred thousand warriors",
+   "three days eating and drinking"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.76
+   }
+  },
+  "range": "38-39",
+  "pericope_label": "A perfect heart at Hebron, and three days of feasting",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "40": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
    "Charles Ellicott",
+   "Keil and Delitzsch",
    "Matthew Henry"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott spread out the provisions brought from near and far — figs, raisin-cakes, wine, oil, on asses, camels, mules, oxen but not horses — and hear in the simple diction, 'reminding us of Homer's feasts,' a mark of the record's antiquity."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: those nearby, bordering on Judah, brought supplies."
+    "summary": "Gill limits \"they that were nigh\" to the neighbours of Hebron and Judah."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott and Keil and Delitzsch widen the contributors to the northern tribes and gloss the beasts and the foodstuffs."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry: joy in Israel, for when the righteous bear rule the city rejoices, with provision made not for days but for the whole life and for eternity."
+    "summary": "Henry reads the victualling as an equalising of charge and the joy as a figure of Christ enthroned in the soul."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Henry",
+    "note": "He turns the three days of feasting into an argument for submitting to the Son of David, and closes with a call to ask God for wisdom."
+   }
+  ],
   "themes": [
-   "provisions poured out",
+   "provisions on beasts of burden",
+   "cakes of figs and raisins",
    "joy in Israel",
-   "the antiquity of the record",
-   "a nation feasting before David"
+   "the feast at Hebron"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.42
+   }
+  },
+  "pericope_label": "Provisions from near and far, for there was joy in Israel"
  }
 }

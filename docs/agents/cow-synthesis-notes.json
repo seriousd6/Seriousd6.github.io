@@ -104513,6 +104513,62 @@
         "1"
       ],
       "note": "GREGORY THE GREAT APPEARS IN THIS CHAPTER, AND HIS MATERIAL IS GENUINE -- worth flagging for whoever writes it, because a latin-fathers voice in Job is rare enough that a worker might take it for residue by reflex. His key-1 block runs 300 words and is squarely on Job 22:2-3: he reads Eliphaz as a man who, 'being opposed to the words of truth' and getting the worst of the argument, 'often repeat[s] even what is well known, lest by holding their tongue they should seem defeated', and then takes up the two questions themselves -- that 'by comparison with God, our knowledge is ignorance... for it is by participation, and not by comparison, with God that we become imbued with wisdom', and that 'in all that we do well, we are doing good to ourselves and not to God', quoting the Psalmist's 'Thou art my God, seeing that Thou needest not my goods' and glossing that God 'needs not the good in him that serveth Him, but bestows the goodness which He receives'. He closes toward Matthew 25:40, that what is done to the least of the brethren is done to Christ. So the block is both on-passage and theologically substantial, and it gives the chapter an eastern-or-latin patristic witness it would otherwise lack entirely -- the only one among eight voices. Two cautions for the writer: the text is OCR-damaged in places ('Lit. get the worst in making out a case', 'perfect knowledge f 1', 'Ps.16,2.', 'Mat.25,') so quotations need care; and Gregory is reading Eliphaz AGAINST Job, which is the opposite of what the chapter's modern voices do, so he belongs in the debate about whether Eliphaz's premises are sound rather than in a consensus summary."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "12",
+      "note": "All five Jamieson-Fausset-Brown blocks in this chapter are residue: keys 3 (1 Kings 6 doors), 21 (1 Kings 7 hewn stones and the paved court), 27 and 33 (the bronze pillars, byte-identical to each other), 39 (the molten sea). JFB has no legitimate comment anywhere in 1 Chronicles 12, so it is declared in excluded_voices on all five spans. The key gaps are 18, 6, 6, 6 — the stride-6 pagination pattern already filed corpus-wide, with the 27/33 duplication its signature."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "12",
+      "note": "Scrape chrome on the chapter's LAST key for the seventh chapter running: key 40 carries roughly 900 words of StudyLight page furniture, inline CSS and JS, and the full book/commentary navigation lists, inflating the measured source from about 430 words of real Gill/K&D/Ellicott to 1,336. It also plants phantom witnesses, since commentator names in the chrome's link lists are indistinguishable from voice labels to a name-based census. Chrome stripping needs no editorial judgement and must happen BEFORE voice counting."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "12",
+      "note": "Keil and Delitzsch are truncated at exactly 200 words on every key where they appear (2, 3, 6, 9, 15, 17, 19, 20, 22, 23, 24, 25, 27, 29, 30, 31, 32, 33, 34), and Ellicott at exactly 200 on keys 22 and 23 — the documented truncation defect. Because each truncated block quotes and discusses several following verses before being cut, per-key source resolution over-counts the head key and starves the rest: key 9's K&D block is the only commentary in the file on vv.10-13."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "12",
+      "note": "Interior source-key gap at verses 10-13: the source jumps 9 -> 14, and the eleven Gadite names of vv.9-13 are filed inside key 9's K&D block. Spans may not cross the gap (coverage's 'entries cover verses absent from the source' check refuses it), so the tiling runs 1-9 then 14-40. coverage_problems requires only the contiguous run 1-9; 14-40 is advisory. The reader still sees commentary at vv.10-13 because every render path walks back to the nearest key."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "12",
+      "note": "Matthew Henry is section-filed at two keys only — key 1 (2,042 words covering vv.1-22) and key 23 (1,119 words covering vv.23-40) — so half the chapter's Henry material sits outside the spans it belongs to. Span-local source measurement therefore understates every span from 3 to 22 and from 24 to 40 while inflating spans 1 and 23 (2,820 and 1,875 words, giving expansion ratios of 0.22x and 0.31x against prose that is in fact distilling Henry across the whole section). Third commentator shown to file this way, after K&D and JFB."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "12",
+      "note": "The fidelity entity check caught four over-resolutions in my first draft that no other gate would have flagged: 'Ulam' supplied from K&D's bare citation of 1 Chronicles 8:40; 'Gideon' and 'Jabesh' supplied from their bare Judges 7:16 / 1 Samuel 11:1 citations; 'Deborah' supplied from Ellicott's bare Judges 5:18; and 'Clericus' and 'the Preacher' expanded from K&D's 'Cleric.' and 'sicut sapiens dixit'. All four resolutions were correct and all four were mine, not the sources'. Fourth chapter running this check has caught the same class of slip. The narrowed rule stands: do not resolve what the source leaves abbreviated, unspelled or merely cited, however certain the resolution."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "12",
+      "note": "Tiling had to be re-cut mid-chapter. The first plan paired 33 alone and 34-37, which left vv.35-37 with 147 usable source words — above nothing, but alone in a span whose prose floor is 350, and the thin exemption was unavailable because the span as first drawn (34-37) measured 375. Re-cut to 33-34 and a thin 35-37 (147 source words, 208-word entry), where Ellicott is the only voice. Compute per-span source words BEFORE writing, not after: this is the second chapter where the tail forced a recut."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "12",
+      "note": "Process note: a worker restart destroyed the whole scratchpad mid-chapter on the previous pick (john 4), taking about twenty drafted entries and every harness script with it. Patch files in the scratchpad survive nothing; only the repo working tree does. The harness was rebuilt from the shipped scripts (synthesis_qa, audit-synthesis-quality) rather than recovered. For long chapters, assemble into data/commentary/cow-synthesis/<book>/<ch>.json incrementally instead of accumulating loose drafts."
     }
   ]
 }
