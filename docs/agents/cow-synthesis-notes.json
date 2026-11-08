@@ -104569,6 +104569,55 @@
       "book": "1chronicles",
       "chapter": "12",
       "note": "Process note: a worker restart destroyed the whole scratchpad mid-chapter on the previous pick (john 4), taking about twenty drafted entries and every harness script with it. Patch files in the scratchpad survive nothing; only the repo working tree does. The harness was rebuilt from the shipped scripts (synthesis_qa, audit-synthesis-quality) rather than recovered. For long chapters, assemble into data/commentary/cow-synthesis/<book>/<ch>.json incrementally instead of accumulating loose drafts."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "10",
+      "note": "All five Jamieson-Fausset-Brown blocks in 2 Kings 10 are residue, and this time the run is from 2 Samuel 6-7 / 1 Chronicles 13-17: key 4 the ark on a cart, key 10 Uzzah smitten (258 words on the proportionate severity of the punishments for profaning the ark), key 16 the four altars at every six paces, key 22 David blessing in the double character of prophet and king, key 34 Nathan's word given the same night. The key gaps are 18, 6, 6, 12 — the stride-6 pattern again, and the blocks are a contiguous in-order run of JFB on the ark narrative. JFB is declared in excluded_voices on all five spans. Two chapters in a row now (1 Chronicles 12 was 1 Kings 6-7 temple furniture) where every JFB block in the chapter is residue and none is usable."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "10",
+      "note": "Scrape chrome on the chapter's LAST key for the eighth chapter running. Key 36 measures 1,046 usable words of which about 30 are commentary — Ellicott's note that the Hebrew puts 'in Samaria' last for emphasis — and the remaining ~1,015 are StudyLight page furniture, inline CSS, JS and the full book and commentary navigation lists. The inflation forced a tiling decision: a span of 35-36 alone would have measured 1,102 source words, barring the thin exemption, while carrying only about 100 words of real commentary, so there would have been no honest output at 350 words. Merged into 33-36 instead. Chrome stripping needs no editorial judgement and would have removed the dilemma."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "10",
+      "note": "Keil and Delitzsch truncate at exactly 200 words on every key in this chapter where they appear except the last two (key 33 runs 179 and key 35 runs 41, both because the block ends with the chapter). Each truncated block quotes and begins to discuss two or three following verses before being cut, so the commentary on a verse is routinely filed one or two keys earlier than the verse it treats — v.25's identification of the sacrificing priest sits under key 24, v.31's Aroer topography under key 31 but its continuation nowhere. Third chapter in a row where per-key source resolution misattributes K&D."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "10",
+      "note": "Tiling was re-cut four times on this chapter, every time because a planned span held more distinct material than 650 words could carry: 8-11 split to 8-9 and 10-11; 12-14 split to 12-13 and a thin 14; 15-16 split to 15 and 16; 25-26 split to 25 and 26-28, with the pillar material moved into the demolition entry; and finally 33-34 and 35-36 merged because key 36 is chrome. Seventeen spans in the end. The lesson is narrower than 'measure the source first', which I did: a span's source word count does not predict how many DISTINCT readings the witnesses offer in it. Keys 8-11 measured 1,023 words but carried three separate textual debates. Count the debates, not just the words."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "10",
+      "note": "Matthew Henry is section-filed at three keys — 1 (1,707 words covering vv.1-17), 15 (1,707 words covering vv.15-28) and 29 (1,202 words covering vv.29-36) — so his entire contribution to a 36-verse chapter sits under three keys. Spans 1-3, 15 and 29-30 therefore measure 2,972, 2,253 and 1,713 source words and report expansion ratios of 0.21x, 0.23x and 0.37x, while every other span is starved of the Henry material that actually belongs to it. Fourth commentator-and-chapter confirmation of the span-aware source resolution gap already flagged."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "10",
+      "note": "The fidelity entity check again caught every over-resolution in my draft and I caught none of them myself. Four were abbreviation expansions of the kind the standing rule forbids: 'Clericus' from K&D's 'Cler.', 'Vatablus' from their 'Vatabl.', 'Dereser' from their 'Deres.', and 'Silius Italicus' with 'Gaditanian' from 'Sil. Ital.' and 'Gadetanic'. The fifth was worse because it was invented rather than expanded: I placed Elijah's convocation of the prophets of Baal 'on Carmel' where Ellicott gives only the bare citation of 1 Kings 18:19. Fifth chapter running this check has caught a resolution slip, and the second in which the slips cluster where a source uses scholarly abbreviations. Where a source abbreviates a name, keep its own form or drop the name."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "10",
+      "note": "This chapter carries the richest moral disagreement I have met in the corpus, and it is worth recording because the voices divide on the same question four separate times rather than once. On Jehu's letters: Clarke 'this most execrable man' against Wesley's 'Jehu justly required this... but the Samaritans wickedly obeyed it'. On 'Ahab served Baal a little': Wesley refuses all latitude on the principle that we must not do the least evil that the greatest good may come, Henry allows irony or a test of the people but settles on inexcusable deceit, while Ellicott denies there is a falsehood at all and reads a hidden meaning pointing at the intended holocaust. On the zeal: Gill, Clarke and Henry all charge ostentation, while Keil and Delitzsch hold the question of motive separable from the lawfulness of the act. On the divine commendation: Keil and Delitzsch confine it to the deed, Wesley to 'what is here expressed', Ellicott to what the parenthetic verse about the calves leaves of it, and Clarke asks outright whether God ever designed that his decree should be executed by these means. Recorded on the relevant spans; noted here because a reader meeting one of these entries alone will not see that the division runs the length of the chapter."
     }
   ]
 }
