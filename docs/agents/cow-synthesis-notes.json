@@ -104869,6 +104869,87 @@
       "book": "john",
       "chapter": "3",
       "note": "Declined as a pick, not blocklisted: john 3 is 36 source keys and 90,022 usable source words -- more than twice the ~40,000-word single-chapter batch ceiling and over eight times the chapter landed alongside it. The source is sound; it is the volume (Nicodemus, the new birth, and vv.16-21 draw the fullest commentary in the corpus) that puts it out of reach of one unattended run, and an abandoned pick costs the run everything. It sits at the head of the worst-first legacy queue and will keep being drawn, so it needs either a deliberate multi-run plan or an explicit pericope pre-tiling before a worker takes it."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "9",
+      "verses": [
+        "14"
+      ],
+      "note": "Over-resolution caught by the entity check, same class as the nine before it: Keil and Delitzsch gloss 'I will send thee' on the authority they print as '(J. H. Mich.)', and I expanded that to 'Michaelis'. The source leaves it abbreviated and the name appears nowhere in the chapter. Fixed by citing the abbreviation as given. The rule holds without exception so far: do not resolve what the source leaves abbreviated, unspelled or merely cited."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "9",
+      "note": "First chapter in this run with NO Jellyfish/JFB blocks at all. The stride-6 JFB defect was total within the chapter on the previous three (1chronicles 12, 2kings 10, 1samuel 12 - the last with four byte-identical blocks). 1samuel 9 has none, so the defect is per-chapter in its scraping, not a constant of the source."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "9",
+      "verses": [
+        "27"
+      ],
+      "note": "Ellicott, commenting on v27, writes 'in the next chapter (1 Samuel 9:6) we read that the Spirit of the Lord was specially promised to this chosen one'. The citation is wrong: he means 1 Samuel 10:6, as 'the next chapter' itself shows. Left uncorrected in the prose (the reference is given as 'the next chapter', without the numeral) rather than silently fixed."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "9",
+      "verses": [
+        "27"
+      ],
+      "note": "Chrome position confirmed again, and again attached to the LAST key: Ellicott's block at key 27 carries ~270 words of real content followed by ~950 words of StudyLight page furniture (menus, CSS, the book_data array, Cloudflare script). Running tally of chrome position: 1chronicles 12 key 40 (last), 2kings 10 key 36 (last), 1samuel 12 key 23 (NOT last - key 25 clean), 1samuel 9 key 27 (last). A stripper keyed on the chrome's own markers is safe; one keyed on 'last key in file' would miss 1samuel 12. Stripping needs no judgement and should happen BEFORE voice counting, since the chrome inflates Ellicott's usable-word count by a factor of five here."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "3",
+        "11",
+        "18"
+      ],
+      "note": "Henry files by section at only 4 of 27 keys in this chapter (1, 3, 11, 18), each block running ahead over the verses that follow. Fifth chapter running in which section filing is the normal shape of the corpus. Per-key source resolution therefore over-counts the section-head key and starves every key after it - the open request for span-aware source resolution is unaffected by anything learned here."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "9",
+      "verses": [
+        "24"
+      ],
+      "note": "A genuine textual disagreement worth preserving: who speaks the closing words of v24. Wesley takes them for Samuel's, explaining his earlier instruction to the cook. Dean Payne Smith, quoted by Ellicott, answers that Samuel's name is not in the Hebrew at all, that the Greek and Latin insert it by manifest error, and that the Syriac and Chaldee agree with the Hebrew in making the cook the speaker - the ellipse before 'saying' being resolved by the cook's own speech. Both sides recorded in the debates block."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "9",
+      "verses": [
+        "25",
+        "26"
+      ],
+      "note": "The span-planning rule validated on a chapter planned fine from the start. I laid out 20 spans up front for 27 keys by counting the distinct proposals each span would have to carry rather than its source words, and only one span needed splitting afterwards: 25-26, which carried five separate disputes (the descent, the subject of the evening talk, the LXX couch, whether either man slept, the rendering of the rousing) and came out at 716 validator words. Split at the verse boundary - paragraphs 1-3 to v25 (496vw), 4-5 plus unused material to v26 (394vw). Nineteen of twenty spans landed in band first time, against repeated trim cycles on the three chapters before it."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "9",
+      "verses": [
+        "14"
+      ],
+      "note": "Keil and Delitzsch truncated at exactly 200 words again, at keys 14 and 26, each block running ahead into the verses that follow (the key-26 block carries the whole of v27's command). Confirmed on every chapter in this run. The open question about whether the truncation is in the scrape or the source is unchanged."
     }
   ]
 }

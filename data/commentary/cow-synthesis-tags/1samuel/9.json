@@ -9,117 +9,186 @@
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes only the tribe’s name and its first king, and contrasts this Saul with the apostle of the same tribe."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The elaborate genealogy signals Saul's coming importance; the Kish/Ner discrepancy is resolved by omitted links, and 'mighty man of power' means a man of property."
+    "summary": "Keil and Delitzsch read the genealogy as a signal of Saul’s coming importance and reconcile it with Chronicles by omitted links; Ellicott explains the discrepancies as editorial pruning."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: from the smallest tribe, nearly destroyed at Gibeah, Israel's first king 'sprang as a root out of a dry ground' — God gives more honour to the part which lacked."
+    "summary": "Henry takes the three senses of the father’s “power” together and dwells on Benjamin’s smallness and dignity."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke takes 'mighty man of power' literally of bodily strength, which accounts for the extraordinary size of the son."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes that from Benjamin, Jacob's youngest son, came the first king of Israel."
+    "summary": "Clarke renders the phrase literally and jokes that strength was the only power Kish had."
    }
   ],
   "debates": [
    {
-    "question": "What does 'a mighty man of power' say of Kish?",
+    "question": "How is Kish’s descent to be squared with the Chronicles line?",
     "sides": [
      {
-      "position": "a man of property and substance, as in Ruth 2:1",
+      "position": "Kish is son of Abiel, and Ner in Chronicles is grandfather or remoter ancestor, links being passed over",
       "holders": [
        "Keil and Delitzsch"
       ]
      },
      {
-      "position": "literally a strong man — his physical strength explains Saul's stature",
+      "position": "Ner stands between Abiel and Kish, and each summary omits names not needed for its purpose",
       "holders": [
-       "Clarke"
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does “a mighty man of power” describe?",
+    "sides": [
+     {
+      "position": "A man of property, not a brave man",
+      "holders": [
+       "Keil and Delitzsch"
       ]
      },
      {
-      "position": "bold in spirit, strong in body, wealthy in estate — all three",
+      "position": "Literally a strong man, and that was the only power he had",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "All three at once: bold in spirit, strong in body, wealthy in estate",
       "holders": [
        "Matthew Henry"
+      ]
+     },
+     {
+      "position": "A noble and opulent Benjamite of Gibeah",
+      "holders": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "He reports Dean Payne Smith’s view that the civil war after the crime at Gibeah destroyed many older Benjamite records, which is partly why the genealogies tangle."
+   }
+  ],
   "themes": [
-   "genealogy of Saul",
-   "tribe of Benjamin",
-   "providence in small beginnings",
-   "harmonizing the genealogies"
+   "the genealogy of Kish",
+   "the tribe of Benjamin after the war of Gibeah",
+   "a mighty man of power",
+   "a root out of dry ground"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.36
+   }
+  },
+  "pericope_label": "Kish the Benjamite and his lineage"
  },
  "2": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Hebrew means simply 'a young man' (about forty), and in the childhood of nations heroic stature and beauty commended a king to a semi-barbarous people."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill marks the contrast with the later Saul of the same tribe, a little man where this one was tall."
    },
    {
-    "school": "wesleyan-arminian",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Clarke and Wesley: tall stature and fine appearance were highly valued in ancient and eastern kings, and probably contributed to Saul's election."
+    "summary": "Ellicott argues the first epithet cannot mean both choice and young and settles on “a young man”; Keil and Delitzsch run the description straight into the errand."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: nothing is said of Saul's wisdom or piety, only his looks — the king after the people's heart would at least look great, unlike the king after God's own heart."
+    "summary": "Henry reads the description for what it omits, and sets a king after God’s heart against a king after the people’s."
    },
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill contrasts the tall Saul of Benjamin with his namesake the apostle, 'a little man' of the same tribe."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke and Wesley both explain the stature from ancient and eastern valuation of a tall king."
    }
   ],
   "debates": [
    {
-    "question": "What is the weight of Saul's imposing appearance?",
+    "question": "Can the first epithet mean both “choice” and “young”?",
     "sides": [
      {
-      "position": "a providentially fitting credential, since ancient peoples prized heroic stature in kings",
+      "position": "No: one Hebrew word cannot carry both, and the translators followed the Latin electus; “a young man” is best, Saul being about forty to forty-five",
       "holders": [
-       "Ellicott",
-       "Clarke",
-       "Wesley"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "a silent indictment — the people who wanted grandeur received height and nothing more",
+      "position": "The English pairing is left standing and the stature alone is explained",
+      "holders": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why is Saul’s height recorded?",
+    "sides": [
+     {
+      "position": "Because elective kingship paid great respect to personal appearance",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Because tall stature was much valued in a king in the east",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Because heroic proportions were prized in the childhood of nations, and helped Israel accept him",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "To show that nothing but size was on offer, no wisdom, virtue, learning or piety",
       "holders": [
        "Matthew Henry"
       ]
@@ -127,236 +196,322 @@
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Henry",
+    "note": "He notes that Saul did not even excel in strength as he did in height: Israel slighted Samson and is justly put off with a tall man weak as other men."
+   }
+  ],
   "themes": [
-   "Saul's stature and beauty",
-   "king after the people's heart",
-   "outward appearance vs. the heart"
+   "a choice young man",
+   "higher than any of the people from his shoulders upward",
+   "a king after the people’s heart",
+   "what the description leaves out"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.7
+   }
+  },
+  "pericope_label": "Saul, a choice young man, head and shoulders above the people"
  },
  "3": {
   "voices": [
    "John Gill",
    "Matthew Henry",
    "Adam Clarke",
-   "John Wesley",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "John Wesley"
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill states the loss plainly, the animals having strayed from stable or field."
+   },
+   {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: a great man rising from small beginnings and a great event from small occurrences — promotion comes not by chance, but God is the Judge."
+    "summary": "Henry turns the errand into lessons on diligence, obedience and the loss of property, and reads the smallness of the occasion as design."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke marvels at the train of common occurrences conspiring toward the throne; Wesley notes asses were of great price when simplicity and industry were in fashion among persons of quality."
+    "summary": "Clarke explains the value of asses in a land without horses and marvels at the chain of events; Wesley adds that the search was not beneath Saul in those simpler times."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott: the horse being forbidden, asses bore judges and nobles; the trusted servant was traditionally identified with Doeg the Edomite."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes the asses had strayed from the fields where they were kept."
+    "summary": "Ellicott reads the Hebrew as she-asses kept for breeding, gives the legal ground of the scarcity of horses, and defends the servant’s standing in the house."
    }
   ],
   "debates": [
    {
-    "question": "How is God's providence in Saul's rise to be characterized?",
+    "question": "Is the chain of small events chance or design?",
     "sides": [
      {
-      "position": "sovereign appointment — God raiseth up the poor out of the dust to set them among princes",
+      "position": "Everything goes on in the common course, yet all conspired to favour an election God did not approve",
       "holders": [
-       "Matthew Henry"
+       "Adam Clarke"
       ]
      },
      {
-      "position": "a real but judicial providence, advancing a man 'who certainly did not come there by the approbation of God'",
+      "position": "The smallness is the design: Saul stepped at once from the level of his neighbours to the throne, as Hannah sang",
       "holders": [
-       "Clarke"
+       "Matthew Henry"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Henry",
+    "note": "He supposes there was no way to give public notice of strayed asses, and suspects the law obliging a man to return his neighbour’s beast was neglected like other good ones."
+   }
+  ],
   "themes": [
-   "providence in ordinary events",
-   "obedience to parents",
-   "small beginnings of great things"
+   "the she-asses of Kish",
+   "asses in a land without horses",
+   "great events from small occurrences",
+   "the servant sent with Saul"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.38
+   }
+  },
+  "pericope_label": "The asses of Kish are lost"
  },
  "4": {
   "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
    "John Gill",
+   "Keil and Delitzsch",
    "Matthew Henry",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The route runs from the hills of Ephraim through Shalisha ('land of the Three') and Shaalim ('hollow of the hand') back into Benjamin — a systematic, fruitless three-day sweep."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: they began with mount Ephraim because it lay contiguous to Benjamin, where the asses might be supposed to have strayed."
+    "summary": "Gill reads Mount Ephraim as the part next Benjamin and identifies Zuph by Samuel’s birthplace, citing the Targum."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott gives etymologies and locations for Shalisha, Shalim and Zuph; Keil and Delitzsch give the textual reason Saul turned back."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: they travelled far and in vain — but the disappointment was itself the appointment, for Saul met with the kingdom he never dreamed of."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the fruitless search",
-   "sacred geography",
-   "providence in dead ends"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Zuph is the land of Ramathaim-zophim, which the Targum calls simply 'the land in which was the prophet.'"
+    "summary": "Henry pairs the failed errand with the kingdom found, and turns the father’s fear into a charge to children."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke reports Calmet's reconstruction of the circuit — some twenty-five leagues, a three days' journey on foot."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Saul calculates the moment his father's anxiety will shift from the asses to the searchers; Kitto calls this tender regard a favourable indication of character."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: children should do nothing to grieve or frighten their parents, but be tender of their tenderness."
+    "summary": "Clarke sets out Calmet’s route and then withdraws confidence in it, the places being unknown."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Can the route of the search be traced?",
+    "sides": [
+     {
+      "position": "Calmet’s circuit of some twenty-five leagues can be set out, but we do not know where the places were, and the Targum gives quite different names",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "The regions can be identified from their names and from the lie of the hill country",
+      "holders": [
+       "Charles Ellicott",
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "He quotes Dr Kitto’s verdict that Saul’s regard for his father’s feelings here is a favourable indication of character."
+   }
+  ],
   "themes": [
-   "filial tenderness",
+   "the circuit of the search",
    "the land of Zuph",
-   "character of the young Saul"
+   "he missed what he sought and met a kingdom",
+   "tenderness toward a father’s fear"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.78
+   }
+  },
+  "range": "4-5",
+  "pericope_label": "The circuit of the search, and the servant consulted"
  },
  "6": {
   "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
    "Matthew Henry",
    "Charles Ellicott",
-   "John Wesley",
-   "John Gill"
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "puritan-evangelical",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Henry: the servant had more religion than his master, and most people would rather be told their fortune than their duty."
+    "summary": "Gill is careful that the proposal came from the servant, not from Saul."
    },
    {
     "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch catch the gesture in “in this city”; Ellicott reads the servant’s simplicity as evidence of how Samuel was loved in the countryside."
+   },
+   {
+    "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Ellicott: that a farm-servant thought the seer approachable over lost asses proves how close and friendly Samuel's relation to the people was."
+    "summary": "Henry calls it a poor business to employ a prophet about, and contrasts asking one’s fortune with asking one’s duty."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Wesley: acquaintance with God and serviceableness to his kingdom make men truly honourable; the 'peradventure' doubts whether so great a prophet would stoop to such mean matters."
+    "summary": "Wesley hears doubt in the “peradventure” about whether God would answer on so mean a matter."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the servant’s proposal do him credit?",
+    "sides": [
+     {
+      "position": "Yes: that he thought such a loss warranted intruding on the prophet-judge says much for Samuel’s kindly name even in secluded farms",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "He spoke very respectfully of a man he knew only by common fame",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "He doubted whether so great a prophet would be granted a revelation about such mean matters",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "The use proposed for the man of God was poor: better to have given the asses up and gone to learn the knowledge of God",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Henry",
+    "note": "He draws from the mere accident of their position that many will consult a man of God who comes in their way but would not go a step out of their way for wisdom."
+   }
+  ],
   "themes": [
-   "the man of God held in honour",
-   "consulting the prophet",
-   "fortune versus duty"
+   "the servant’s proposal",
+   "a man of God, an honourable man",
+   "all that he saith cometh surely to pass",
+   "consulting a prophet about asses"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 2.05
+   }
+  },
+  "pericope_label": "There is in this city a man of God"
  },
  "7": {
   "voices": [
@@ -364,420 +519,583 @@
    "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke and Wesley: the present reflects the invariable eastern custom of approaching a superior with a gift — respect, gratitude, or support, never a diviner's fee."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill follows the Targum’s “if he receives money” and finds Saul uncertain whether Samuel took such things at all."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: gifts were respectful homage to a superior, as Jacob's spicery to Egypt's vizier and Sheba's gifts to Solomon."
+    "summary": "Keil and Delitzsch let the servant’s quarter shekel remove the obstacle Saul raised; Ellicott calls the gift respectful homage rather than a fee and supplies parallels."
    },
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Saul genuinely did not know whether Samuel took money as the fortune-telling sort did — a telling ignorance of Israel's judge."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry preserves both readings — some think Saul measured Samuel like the prophets who divined for money, but the usage was rather general custom and natural equity."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke denies the prophets took money and grounds the present in the eastern custom of never approaching a superior empty-handed; Wesley multiplies its possible purposes."
    }
   ],
   "debates": [
    {
-    "question": "Does Saul's question about a present imply that prophets took fees?",
+    "question": "What did a present to a prophet signify?",
     "sides": [
      {
-      "position": "no — it is the universal eastern custom of homage to a superior",
+      "position": "Not a fee for prediction, but the invariable custom of never approaching a superior empty-handed",
       "holders": [
-       "Clarke",
-       "Ellicott",
-       "Wesley"
+       "Adam Clarke"
       ]
      },
      {
-      "position": "Saul may have measured Samuel by mercenary diviners, coming to him as to a fortune-teller",
+      "position": "An act of respectful homage in many cases, like Jacob’s spicery or the Queen of Sheba’s gifts",
       "holders": [
-       "Gill",
-       "Matthew Henry (reporting some)"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Any of several things: respect, grateful acknowledgement, the support of the prophets, or relief of the needy known to them",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Saul could not tell whether Samuel accepted such things at all, having no knowledge of him",
+      "holders": [
+       "John Gill"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "He supports the custom from Ward’s account of Bengal, where a petitioner brings fruits or sweetmeats and is greatly wounded if the gift is refused."
+   }
+  ],
   "themes": [
-   "gifts to the man of God",
-   "eastern custom of presents",
-   "sowing spiritual things, reaping temporal"
+   "the bread is spent",
+   "what shall we bring the man?",
+   "presents to a superior",
+   "the support of the prophets"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.6
+   }
+  },
+  "pericope_label": "What shall we bring the man?"
  },
  "8": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
+   "Charles Ellicott"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The quarter-shekel was broken bullion, roughly stamped and snapped at need, silver being then rare; the objection once met, the last hindrance is removed."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry weighs and rejects the harsh reading, defends the propriety of the gift, and keeps one sting for Saul."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke: about ninepence — a token of respect rather than an emolument."
+    "summary": "Clarke reckons the quarter shekel at about ninepence and calls it a token of respect, not an emolument."
    },
    {
-    "school": "puritan-evangelical",
+    "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Henry: Saul would not own the money in his pocket till the servant offered to bear the charge — most people love a cheap religion."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill marks the servant answering Saul 'again': the whole errand is carried forward by the servant's initiative."
+    "summary": "Ellicott declines the calculation and quotes Dean Payne Smith on a roughly stamped shekel divided by a cross."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Did Saul’s small fee measure Samuel by the false prophets?",
+    "sides": [
+     {
+      "position": "Some think so, coming to him as to a fortune-teller and reckoning a quarter shekel enough",
+      "holders": [
+       "some, as reported by Henry"
+      ]
+     },
+     {
+      "position": "Rather it agreed with the usage of the times and natural equity, and little as it was it was the widow’s mite",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Henry",
+    "note": "He notes that Saul raised the want of a present as an objection to going at all, not owning that he had money, and remarks that most people love a cheap religion."
+   }
+  ],
   "themes": [
    "the fourth part of a shekel",
-   "the faithful servant",
-   "great events on small provisions"
+   "divining for money",
+   "the widow’s mite",
+   "a cheap religion"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.95
+   }
+  },
+  "pericope_label": "The fourth part of a shekel of silver"
  },
  "9": {
   "voices": [
    "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the note betrays a later compiler of Samuel's memoranda; a seer was always a prophet, but the prophet was not always a seer."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reads inquiring of God, with the Targum, as asking doctrine of him through a man eminent for grace and prophecy."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: a reviser of very high authority, perhaps of Ezra's day, explained the obsolete title roeh, the most ancient of the three Hebrew words for an inspired man."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: to inquire of God is, as the Targum renders, to 'ask doctrine' of him through a man of prophetic spirit."
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch call it a notice introduced to light what follows; Ellicott traces the history of “seer” and insists the inserter was a reviser of high authority."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: those that are prophets must first be seers — who speaks of the things of God must have an insight into them himself."
+    "summary": "Henry turns the title on those who would hold the office: prophets must first be seers."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke denies the verse was originally part of the book and distinguishes seer from prophet at length; Wesley leaves Samuel’s own authorship open."
    }
   ],
   "debates": [
    {
-    "question": "Who inserted the explanatory note about 'seer' and 'prophet'?",
+    "question": "Whose hand wrote this parenthesis?",
     "sides": [
      {
-      "position": "a later inspired scribe or compiler, perhaps as late as Ezra",
+      "position": "Not the original author: it fits the theory of later compilation from memoranda, and reads better after the eleventh verse",
       "holders": [
-       "Clarke",
-       "Ellicott"
+       "Adam Clarke"
       ]
      },
      {
-      "position": "possibly Samuel himself, in old age calling his youth 'beforetime'",
+      "position": "A later hand, perhaps in Ezra’s time, but a reviser of very high authority",
       "holders": [
-       "Wesley"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Either a later sacred writer or Samuel himself, old enough to say “beforetime” of his own first days",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Simply a notice the historian introduces to throw light on what follows",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How do “seer” and “prophet” differ?",
+    "sides": [
+     {
+      "position": "The seer was always a prophet, but the prophet not always a seer: the seer saw symbolical representations of God",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Seer was the oldest of the three titles and decayed in meaning, while prophet came into common use in Samuel’s day",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The title names a function: he discerned and could discover things secret",
+      "holders": [
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "He offers Virgil’s Sibyl as a specimen of the diviner’s boast of sight, professing herself a seer of wars and of a river foaming with blood."
+   }
+  ],
   "themes": [
+   "beforetime in Israel",
    "seer and prophet",
-   "growth of the sacred text",
-   "revelation as sight"
+   "a later hand in the text",
+   "enquiring of God"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.92
+   }
+  },
+  "pericope_label": "The parenthesis about seers and prophets"
  },
  "10": {
   "voices": [
    "John Gill",
+   "Keil and Delitzsch",
    "Matthew Henry",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
+   "Adam Clarke",
+   "Charles Ellicott"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: 'good is thy word' — Saul approves the plan as generous and feasible, hoping only to learn the way to the asses."
+    "summary": "Gill renders the assent “good is thy word”, derives Ramah’s name from its height, and reads Saul’s hope for the asses."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott argues the unnamed city is Ramah — Samuel's altar, house, and residence all point there — while Keil and Delitzsch hasten the travellers to the decisive meeting."
+    "summary": "Keil and Delitzsch insist the word means the high place of sacrifice, not a hill; Ellicott builds a four-point case that the city was Ramah."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: Saul never thought of going to the man of God till the servant proposed it, and providence needs no informed consent."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "identification of the city",
-   "unwitting steps toward destiny",
-   "Saul led by his servant"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the city stood on a hill — hence Ramah, 'high and lifted up' — so the strangers climb as the maidens descend to the well."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: Saul's never having seen Samuel forecloses any suspicion of collusion, and the maidens' ready knowledge shows the advantage of living in religious places."
+    "summary": "Henry values the maidens’ helpfulness and finds it remarkable that Saul had never seen Samuel."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke: the scene disproves the notion that young women were always kept shut up at home."
+    "summary": "Clarke takes the women at the well as evidence against the notion that young women were kept shut up at home."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is “the hill” they went up to?",
+    "sides": [
+     {
+      "position": "Not a height generally but the high place as a place of sacrifice or prayer",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "The hill the city was built on, whence its name Ramah, signifying high and lifted up",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Henry",
+    "note": "He allows one advantage in Saul’s ignorance of Samuel, that no secret compact between them could be suspected, but refuses to call it any commendation."
+   }
+  ],
   "themes": [
-   "maidens at the well",
-   "no collusion between prophet and king",
-   "piety reflected in a town's meanest"
+   "good is thy word",
+   "which city was it?",
+   "the high place and the hill",
+   "Saul had never seen Samuel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
+  },
+  "range": "10-11",
+  "pericope_label": "They went to the city, and met maidens drawing water"
  },
  "12": {
   "voices": [
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The breathless, detailed reply marks an eye-witness account; bamah is technically the high place as a place of sacrifice, not any hill."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: Samuel was newly returned to his house near the altar he had built; Clarke describes the people's sacrifice as a great feast upon offered flesh and notes Samuel's dwelling at Naioth."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: with the tabernacle deprived of the ark, worship at Samuel's altar in Ramah was for the time allowed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the high place",
-   "sacrificial feast",
-   "everyday life coloured by worship"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "John Wesley",
-   "Adam Clarke",
-   "Matthew Henry",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A very early instance of asking a blessing on meals; the Hebrew verb answers to eulogein, the thanksgiving prayer before the sacrificial meal."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley resolves the blessing into thanksgiving and prayer for acceptance; Clarke notes that the man of God alone performs these rites."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the people would not eat till Samuel came — let the soul first be served, and crave a blessing on your meat before you partake."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "blessing the sacrifice",
-   "grace before meals",
-   "the feast upon the peace-offering"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "Keil and Delitzsch",
    "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
    "Charles Ellicott",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Samuel meets them at the very moment of entry, and the historian breaks off to show the meeting was arranged from heaven; Ellicott adopts Ewald's picture of the bashful Saul and the discerning seer."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the meeting seemed purely accidental, but divine providence ordered it — a sparrow falls not to the ground without our Father."
-   },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill marks the simple ascent into Ramah on which the whole appointment turns."
+    "summary": "Gill keeps to the plain sense and infers from the promptness that Samuel’s house stood near the gate they entered."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott hears an eye-witness in the maidens’ eager reply; Keil and Delitzsch gloss the blessing as the thanksgiving prayer before the meal and the opening word as “immediately”."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry explains the high place as an irregularity the times allowed, the tabernacle having lost the ark."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke places Samuel’s other dwelling at Naioth and describes the feast; Wesley has him returning from travels and divides the blessing in two."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Where had Samuel come from that day?",
+    "sides": [
+     {
+      "position": "From his country dwelling at Naioth, where there was probably a school of the prophets",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "From travels abroad, returning to his own house in Ramah",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Either from his circuit or from his country seat; his movements were generally known",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is Samuel’s blessing of the sacrifice?",
+    "sides": [
+     {
+      "position": "The thanksgiving prayer customarily offered before the sacrificial meal",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "Thanksgiving for a thank-offering, and prayer for its acceptance",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "A matter of office: he alone could perform the rites used on the occasion",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "A very early instance of the devout Hebrew practice of asking a blessing on meals",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "He offers a living parallel from the Arabs, who make a large feast of sacrificed camels and invite the neighbourhood, as in the bidding of guests here."
+   }
+  ],
   "themes": [
-   "the appointed meeting",
-   "providence in chance encounters",
-   "a destiny reserved by heaven"
+   "he came today to the city",
+   "the sacrifice in the high place",
+   "he doth bless the sacrifice",
+   "make haste, for he will come"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.85
+   }
+  },
+  "range": "12-13",
+  "pericope_label": "He is before you: make haste, for he comes today"
+ },
+ "14": {
+  "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
+   "Charles Ellicott"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill has the two go up the hill to the city of Ramah."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch set the meeting at the gate, mark the historian’s break to the previous day, and gloss the opening of the ear and the sending; Ellicott frames the encounter with a long passage from Ewald."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does the promise of saving Israel from the Philistines contradict the earlier account of their subjection?",
+    "sides": [
+     {
+      "position": "No: the earlier account asserts only that there was no longer any permanent oppression",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "He borrows Ewald’s reading of the scene as a study in unconsciousness, Saul bashfully pursuing his humble quest while a portion higher than other men’s had long been reserved for him by heaven."
+   }
+  ],
+  "themes": [
+   "Samuel came out to meet them",
+   "the LORD had opened Samuel’s ear",
+   "I will send thee a man",
+   "two kinds of ignorance at the gate"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.98
+   }
+  },
+  "pericope_label": "They came into the city, and Samuel came out to meet them"
  },
  "15": {
   "voices": [
@@ -785,153 +1103,194 @@
    "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Uncovered the ear' pictures the head-dress pushed aside for a whisper — one of the few direct intimations of how the Spirit communicated with men."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill keeps the whispering picture without the archaeology and reads the promise as a study in unconscious providence."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: God spoke in Samuel's ear in token of friendship, for he revealeth his secret to his servants the prophets; revelation is God removing our deafness."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott explains the idiom from pushing aside the head-dress and makes the Philistine raids the immediate cause of the demand for a king; Keil and Delitzsch meet the same difficulty on textual ground."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley suggests a still small voice; Clarke honestly owns that how the communication was made we cannot tell."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: God told him in a free, familiar, friendly way, as a secret."
+    "summary": "Clarke declines to say how the communication was made and insists the word is captain, not king; Wesley puts the Ammonites in the foreground and the Philistines in the fear."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How was the revelation made to Samuel?",
+    "sides": [
+     {
+      "position": "Literally, the LORD uncovered his ear: the image is of pushing aside the head-dress to whisper",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "A private manner, a whispering in the ear, as a secret told in a friendly way",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "Secret, perhaps by a still small voice",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "How it was made we cannot tell",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Which enemy prompted the request for a king?",
+    "sides": [
+     {
+      "position": "The Philistines, again harassing Israelite territory with destructive raids",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The Ammonites pressed them at that moment, but the Philistines were the constant and most dreaded enemy",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "He produces Alexander’s judgement that the truest line in the Iliad was the one calling Atrides great in the war and great in acts of sway, to show that no king was esteemed who was not a warrior."
+   }
+  ],
   "themes": [
-   "the uncovered ear",
-   "divine friendship with prophets",
-   "revelation before the event"
+   "the LORD uncovered Samuel’s ear",
+   "a captain over my people",
+   "the cry of the people has come unto me",
+   "which enemy drove the demand for a king"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: Saul is anointed nagid, captain of the Lord's host, in an age when no king was esteemed who was not a warrior; Wesley explains why the dreaded Philistines, not the passing Ammonite flood, are named."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott reconciles the verse with the victory of Mizpeh: Philistine power was broken but not destroyed, and their raids were the immediate spur of the demand for a king."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: even in wrath God remembers mercy — he calls Israel 'my people' again and again and sends a captain to save them, humouring their cry like a tender mother."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the man will arrive with no design of his own, merely directed by the providence of God."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.72
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "captain over my people",
-   "deliverance from the Philistines",
-   "mercy within judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "15-16",
+  "pericope_label": "The LORD had told Samuel in his ear the day before"
  },
  "17": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
    "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
+   "Charles Ellicott"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God's 'Behold the man' is the silent answer to Samuel's silent question, and the verb atsar — restrain, control — forecasts a stern, severe rule."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill has Samuel notice the stranger’s height and fix his eyes on him, wanting to be left in no uncertainty."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: this is the man that shall restrain my people, 'for magistrates are heirs of restraint.'"
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott makes the question an explicit silent prayer and renders the closing verb “shall control” or “shall restrain”; Keil and Delitzsch gloss the same verb as coercing a people by authority."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke: what intimate communion Samuel must have held with his God — a constant familiarity."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Saul's height and the fixed hour raised the suspicion, but God spoke that Samuel might be left at no uncertainty."
+    "summary": "Clarke draws a conclusion about the man rather than the moment, on Samuel’s constant familiarity with God."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does the closing verb say about Saul’s reign?",
+    "sides": [
+     {
+      "position": "Not “shall reign” but “shall control” or “shall restrain”, a stern, severe rule, looking forward to what the reign became",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The Latin sense of coercing a people by authority",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "He turns from the exchange to the man, marvelling at the intimate communion and constant familiarity that seems to have existed between Samuel and his God."
+   }
+  ],
   "themes": [
-   "divine identification of the king",
-   "rule as restraint",
-   "communion of God and prophet"
+   "the tacit inquiry, is this he?",
+   "behold the man",
+   "he shall reign over my people",
+   "a stern rule foretold at the outset"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.34
+   }
+  },
+  "pericope_label": "Behold the man whom I spake to thee of"
  },
  "18": {
   "voices": [
@@ -942,499 +1301,652 @@
   ],
   "schools": [
    {
-    "school": "puritan-evangelical",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Henry: Samuel made so mean a figure that Saul took him for a porter rather than a prophet — great worth hidden under despicable appearance, and Samuel knew him before he knew Samuel."
+    "summary": "Gill leaves the location open between Samuel’s own door and the city gate."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch defend the Hebrew 'in the gate' against emendation, while Ellicott thinks the Septuagint's 'in the midst of the city' may be original."
+    "summary": "Keil and Delitzsch defend “in the gate” against Thenius; Ellicott thinks the Greek “in the midst of the city” may be original."
    },
    {
-    "school": "reformed",
+    "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Gill harmonises: the meeting fell either at the door of Samuel's house or within the city gate as the seer passed out."
+    "summary": "Henry fastens on the irony and builds a portrait of Samuel’s plainness out of it."
    }
   ],
   "debates": [
    {
-    "question": "Did the meeting take place 'in the gate' or 'in the midst of the city'?",
+    "question": "Where did Saul come up with Samuel?",
     "sides": [
      {
-      "position": "the Hebrew 'in the gate' stands — entry into a town is precisely through its gate",
+      "position": "In the gate: the phrase specifies the general statement that they entered the city, and Thenius’s alteration is unnecessary",
       "holders": [
-       "Keil and Delitzsch",
-       "Gill"
+       "Keil and Delitzsch"
       ]
      },
      {
-      "position": "the Septuagint's 'in the midst of the city' may preserve the original reading",
+      "position": "Possibly in the midst of the city, as the Greek reads, a scribe easily writing gate for city",
       "holders": [
-       "Ellicott"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Either at the door of Samuel’s own house or within the gate as Saul entered",
+      "holders": [
+       "John Gill"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Henry",
+    "note": "He notes that Samuel took no state upon him, had no attendants or ensigns of honour or distinguishing habit, so that Saul took him for a porter rather than a prophet."
+   }
+  ],
   "themes": [
-   "the unrecognised prophet",
-   "hidden worth",
-   "known before we know"
+   "where is the seer’s house?",
+   "in the gate or in the midst of the city",
+   "the broken thread picked up",
+   "great worth under a despicable appearance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
+  },
+  "pericope_label": "Tell me, where is the seer's house?"
  },
  "19": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Walking before another was a sign of great esteem; the grammar shifts from singular to plural to include the servant in the feast."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: 'I am the seer' was said not in pride but merely for information's sake."
+    "summary": "Gill is careful that “I am the seer” was said for information’s sake, not in pride."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch explain the shift from singular to plural as an express invitation to the servant, and refuse to read “all that is in thine heart” as all that troubles him; Ellicott follows both points."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry turns the answer into a parable of being known before knowing, and reads the detention as pastoral management."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke: the declaration prepared Saul for the communications afterwards made."
+    "summary": "Clarke reads the declaration forward, as preparing Saul for what was to follow."
    }
   ],
   "debates": [
    {
-    "question": "What is 'all that is in thine heart' which Samuel will tell?",
+    "question": "Why was Saul told to go up first?",
     "sides": [
      {
-      "position": "the thoughts of his heart generally, disclosed to prove Samuel a prophet",
+      "position": "Letting a person go ahead was a sign of great esteem",
       "holders": [
        "Keil and Delitzsch"
       ]
      },
      {
-      "position": "Saul's own secret thoughts and aspirations, to lift him above the asses to higher things",
+      "position": "A mark of distinguished honour from one of Samuel’s rank to a young unknown wayfarer",
       "holders": [
-       "Ellicott"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Perhaps simply because business obliged Samuel to call somewhere on the way",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does “all that is in thine heart” mean?",
+    "sides": [
+     {
+      "position": "Not what lies heavy on it, since the asses are dealt with at once, but the thoughts of his heart generally, told to prove Samuel a prophet",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "His secret thoughts and aspirations, the asses being dismissed from his mind altogether",
+      "holders": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Henry",
+    "note": "He reads the whole detention as management of a soul: Saul had nothing in his mind but his father’s asses, and Samuel meant to take him off that care — let us pray together, and then we will talk together."
+   }
+  ],
   "themes": [
-   "honour to the unknowing king",
-   "the seer's self-disclosure",
-   "lifting the heart to higher aspirations"
+   "I am the seer",
+   "go up before me",
+   "all that is in thine heart",
+   "tomorrow I will let thee go"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.77
+   }
+  },
+  "pericope_label": "I am the seer: go up before me to the high place"
  },
  "20": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley",
    "Matthew Henry",
-   "Charles Ellicott"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: Samuel's unasked knowledge of the asses and their date must at once convince Saul he was a true prophet."
+    "summary": "Gill reports Kimchi and the Targum on the three days and stresses the convincing exactness of the telling."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: if a man of God can answer the unasked question, much more doth God himself understand our thoughts afar off."
+    "summary": "Henry supplies the compliment buried in the question and reads Saul’s answer as modesty that presaged preferment."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley: the desire of Israel is the king they long for, entailed on Saul's house unless sin cut off the entail; Clarke says Saul so understood it."
+    "summary": "Clarke calls the speech exceedingly modest and asks who can bear prosperity; Wesley extends the promise to Saul’s posterity."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott, with the Vulgate and Luther: not what Israel desires, but all that Israel possesses of what is desirable, shall be Saul's."
+    "summary": "Ellicott denies that the phrase means what Israel desires and reads the dark words as meant to lift Saul above small matters."
    }
   ],
   "debates": [
    {
-    "question": "What is 'all the desire of Israel'?",
+    "question": "What is “all the desire of Israel”?",
     "sides": [
      {
-      "position": "the kingship Israel is longing for, now settling on Saul and his father's house",
+      "position": "The thing Israel desires, namely a king",
       "holders": [
-       "Wesley",
-       "Matthew Henry",
-       "Clarke"
+       "Adam Clarke",
+       "John Wesley"
       ]
      },
      {
-      "position": "all that is precious and desirable in Israel — 'the best in Israel' — promised to him",
+      "position": "Not what Israel desires but all it possesses of what is precious, as the Latin and Luther render it",
       "holders": [
-       "Ellicott",
-       "Luther (via Ellicott)"
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is Saul’s protest about his tribe modesty or fact?",
+    "sides": [
+     {
+      "position": "Modesty, and a good presage of preferment; he probably supposed Samuel was bantering him",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "Historical fact: the tribe was cut to six hundred men and never recovered, and was afterwards reckoned with Judah",
+      "holders": [
+       "Adam Clarke",
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "the asses found",
-   "proof of true prophecy",
-   "the desire of Israel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: Benjamin, cut to six hundred men, was scarce reckoned an entire tribe; Clarke calls the speech exceedingly modest — 'but who can bear elevation and prosperity?'"
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: Saul answers like Gideon before him — a humble disposition is a good presage of preferment."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: 'a Benjamite' — a son of the tribe of Benjamin, as the Targum renders it."
+    "voice": "Wesley",
+    "note": "He extends the promise past Saul himself to his family or posterity after his death, if by his sin he does not cut off the entail."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "Saul's modesty",
-   "the smallest tribe",
+   "the asses are found",
+   "all the desire of Israel",
+   "am I not a Benjamite?",
    "humility before elevation"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.05
+   }
+  },
+  "range": "20-21",
+  "pericope_label": "The asses are found, and Saul protests his tribe"
  },
  "22": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The 'parlour' is the lishkah, the chamber at the high place; some thirty of the city's most distinguished men sat down, and Saul and his servant were placed at their head."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill calls the room simply the dining room of the house belonging to the high place."
    },
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: the chief place was to raise expectation and prepare the people to give Saul the honour his approaching dignity required."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott calls “parlour” an unfortunate rendering, reads Samuel’s silence as deliberate, and finds the whole feast arranged beforehand; Keil and Delitzsch explain the servant’s place and the thirty guests."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: though Saul's advancement was Samuel's deposing, the prophet was the first and forwardest man to do him honour."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill identifies the room as the dining chamber belonging to the high place."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the chief place among thirty",
-   "Samuel's freedom from envy",
-   "public preparation for kingship"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Everything, down to the reserved dish, was foreseen and provided for — all symbolical of the coming constitutional change; what lay on the leg was the attached fat, not broth or kidney."
+    "summary": "Henry draws out what the honour cost the host, Saul’s advancement being Samuel’s own deposing."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: the Hebrew tabbach is properly the butcher — the slaughterer of the sacrifice kept charge of its portions."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the cook is simply the one who dressed and prepared the food for the guests."
+    "prevalence": "several",
+    "summary": "Clarke attends to the cook, whose title comes from a root meaning to slay; Wesley reads the chief seat as public preparation."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why was Saul given the chief seat?",
+    "sides": [
+     {
+      "position": "To raise the company’s expectation and ready them to pay him the honour his approaching dignity required",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "To awaken new and grander thoughts in him, Samuel answering his protest with no word but this",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "In compliance with the will of God, though Saul’s advancement was Samuel’s own deposing",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "He notes the tradition that the servant was Doeg the Edomite, who would then have had here a foretaste of the rank he later held among Saul’s officers of state."
+   }
+  ],
   "themes": [
-   "the reserved portion",
-   "providence in trivial details",
-   "preparation for the guest unseen"
+   "the parlour or cell at the high place",
+   "the thirty persons bidden",
+   "the chiefest place",
+   "a portion set aside beforehand"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.97
+   }
+  },
+  "range": "22-23",
+  "pericope_label": "The parlour, the thirty persons, and the reserved portion"
  },
  "24": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Following Payne Smith, the Hebrew makes the cook, not Samuel, the speaker — his chat shows Saul how completely his coming had been foreseen."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill lists the candidates for what was served with the shoulder and argues that Samuel, though a Levite, might officiate as priest and so dispose of the right shoulder."
    },
    {
-    "school": "wesleyan-arminian",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Clarke: the shoulder was an emblem of the government now laid on Saul — 'the government shall be upon his shoulder'; Wesley keeps Samuel as speaker, ordering the portion when he first invited the people."
+    "summary": "Keil and Delitzsch reject Dathe, Maurer and Thenius and follow Luther; Ellicott quotes Dean Payne Smith to make the cook, not Samuel, the speaker."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: the left shoulder was Samuel's own accustomed mess, so giving it to Saul was an implicit resignation of his place — the shoulder for strength, the breast for affection."
+    "summary": "Henry makes the left shoulder Samuel’s own portion, so that giving it away resigned his place, and reads shoulder and breast as strength and affection."
    },
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: in those unsettled times Samuel may have officiated as priest, and Saul, fed from the priest's portion, learns to live in friendship with the priests of the Lord."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke guesses at the caul and the fore-quarter and makes the shoulder an emblem of government; Wesley takes the closing words for Samuel’s."
    }
   ],
   "debates": [
    {
-    "question": "Who speaks the words over the reserved shoulder?",
+    "question": "What was served with the shoulder?",
     "sides": [
      {
-      "position": "the cook — Samuel's name is absent from the Hebrew, and the verb is a participle",
+      "position": "Not broth and not the kidney, but, with Luther, the fat attached to the leg that was not destined for the altar",
       "holders": [
-       "Ellicott",
-       "Payne Smith (via Ellicott)"
+       "Keil and Delitzsch"
       ]
      },
      {
-      "position": "Samuel himself, as the Authorised Version, Septuagint and Vulgate read",
+      "position": "A sauce or garnish, or the thigh with the Targum and Jarchi and Kimchi, or on older Jewish authority the breast",
       "holders": [
-       "Wesley"
+       "John Gill"
+      ]
+     },
+     {
+      "position": "Part of the caul, to roast the better; the Targum gives the fore-leg down to the knee, perhaps the whole fore-quarter",
+      "holders": [
+       "Adam Clarke"
       ]
      }
     ]
    },
    {
-    "question": "Why the shoulder for Saul?",
+    "question": "Which shoulder was set before Saul, and why?",
     "sides": [
      {
-      "position": "an emblem of government and strength — the burden of rule laid on the king",
+      "position": "Earlier commentators said the left, the right falling to the priests",
       "holders": [
-       "Clarke",
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "The right, Samuel officiating as priest, which best accounts for his disposal of it",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "The left, Samuel’s own portion at the upper end of the table, so that the gift resigned his place",
+      "holders": [
        "Matthew Henry"
       ]
      },
      {
-      "position": "simply the choicest portion, the leg with its sacrificial fat, honourably reserved",
+      "position": "Whichever it was, it was chosen as an emblem of the government now laid on him, not as the best part",
       "holders": [
-       "Keil and Delitzsch"
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who speaks the closing words?",
+    "sides": [
+     {
+      "position": "Samuel, explaining that he had bidden the cook reserve this part for Saul",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "The cook: Samuel’s name is not in the Hebrew, and the Syriac and Chaldee agree with it against the Greek and Latin",
+      "holders": [
+       "Dean Payne Smith (as quoted by Ellicott)"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "He passes on Payne Smith’s remark that the chat of the cook is entirely after the manner of ancient times, and would show Saul how completely his coming had been foreseen."
+   }
+  ],
   "themes": [
-   "the reserved shoulder",
-   "government upon his shoulder",
-   "a destiny kept unto the appointed time"
+   "the shoulder and that which was upon it",
+   "which shoulder was it?",
+   "the government upon his shoulder",
+   "who speaks the closing words?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.71
+   }
+  },
+  "pericope_label": "The shoulder set before Saul"
  },
  "25": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke describes the flat eastern roof as the place of evening converse; Wesley says plainly they communed concerning the kingdom designed for Saul by God."
-   },
-   {
-    "school": "puritan-evangelical",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Henry imagines Samuel telling the whole story of the people's demand and assuring Saul of his willingness to resign."
+    "summary": "Gill solves the descent from the high place two ways and reports Abarbinel on the sleepless night."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch and Ellicott hold the evening talk was preparation only — on Israel's decline and the need of an obedient leader — the royal word being reserved for the morning."
+    "summary": "Keil and Delitzsch deny the conversation can have turned on the kingdom; Ellicott follows Otto von Gerlach in supplying its subject and judges the Greek reading a correction."
    },
    {
-    "school": "reformed",
+    "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Gill traces the descent from the high place and the ascent to the hill-built city."
+    "summary": "Henry fills the evening conversation out at length, with Samuel satisfying Saul and offering to resign."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke explains the flat roofs of the East as places for walking, talking and sleeping; Wesley says the talk concerned the kingdom."
    }
   ],
   "debates": [
    {
-    "question": "What did Samuel and Saul discuss on the housetop?",
+    "question": "What was the subject of the evening conversation?",
     "sides": [
      {
-      "position": "the kingdom itself, designed for Saul by God",
+      "position": "The kingdom designed for Saul by God",
       "holders": [
-       "Wesley",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "The whole story of the people’s desire of a king, with assurance that Saul was the man and that Samuel would willingly resign",
+      "holders": [
        "Matthew Henry"
       ]
      },
      {
-      "position": "only preparation — Israel's religious and political state — since the word of Jehovah waited for the morrow",
+      "position": "Not the royal call, which was not made known as a word of Jehovah until the next day: the talk was meant to prepare him for it",
       "holders": [
-       "Keil and Delitzsch",
-       "Ellicott",
-       "von Gerlach (via Ellicott)"
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "The religious and political decline of Israel, the heathen opposition, and the need of an obedient leader",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why does the Greek read that a couch was strewn for Saul?",
+    "sides": [
+     {
+      "position": "Apparently a correction, the translators being unable to understand an evening conversation before so formal an announcement next morning",
+      "holders": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "He lets the question that provoked the Greek alteration stand unanswered: why did Samuel not tell Saul of God’s intention during that evening spent together?"
+   }
+  ],
   "themes": [
-   "communing on the housetop",
-   "preparing the future king",
-   "the outgoing judge and the incoming king"
+   "down from the high place",
+   "the flat roof as a place of private conversation",
+   "what did they talk about?",
+   "the Greek couch for the Hebrew communing"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.09
+   }
+  },
+  "pericope_label": "Samuel communes with Saul upon the top of the house"
  },
  "26": {
   "voices": [
@@ -1445,61 +1957,95 @@
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reports Abarbinel’s supposition that neither man could sleep, and what kept each awake."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The two clauses narrate one event in Hebrew fashion — they rose at dawn, Samuel calling from below to the roof where Saul slept on the balcony."
+    "summary": "Ellicott calls the English of the verse misleading and restores the Hebrew order; Keil and Delitzsch read it the same way and locate the two voices."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke: Saul had slept on the housetop all night, and at break of day Samuel called him up."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill passes on Abarbinel's conjecture that neither man could sleep — Samuel for what he must do, Saul for the hints and honours of the day."
+    "summary": "Clarke makes the point briskly: Saul had slept on the roof all night, so there was no calling him up a second time."
    }
   ],
   "debates": [
    {
-    "question": "Did Saul sleep that night?",
+    "question": "Did either man sleep that night?",
     "sides": [
      {
-      "position": "soundly and heavily, weary after the day's excitements",
+      "position": "Neither could, on Abarbinel’s supposition: Samuel for thinking of the anointing, Saul for the hint and the honour",
       "holders": [
-       "Ellicott",
-       "Clarke"
+       "John Gill"
       ]
      },
      {
-      "position": "neither Samuel nor Saul could sleep at all, so full were their minds",
+      "position": "Saul slept soundly, probably heavily, weary after the day’s scene and revelations",
       "holders": [
-       "Gill",
-       "Abarbinel (via Gill)"
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How should the summons be rendered?",
+    "sides": [
+     {
+      "position": "Get up, that I may send thee",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Get up, I will conduct thee",
+      "holders": [
+       "Keil and Delitzsch"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "He makes the escort the reason for the early call: Samuel wished to conduct Saul himself out of the city, having a yet more important communication to make."
+   }
+  ],
   "themes": [
-   "the spring of the day",
-   "urgency of the divine word",
-   "last morning of a private life"
+   "they arose early",
+   "about the spring of the day",
+   "Samuel called from below to the roof",
+   "up, that I may send thee away"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.79
+   }
+  },
+  "pericope_label": "They arose early, and Samuel called Saul from the roof"
  },
  "27": {
   "voices": [
@@ -1507,50 +2053,81 @@
    "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: the privacy guarded Samuel from the charge of imposing a king, that the lot might show the kingdom given by God's destination, not the prophet's contrivance; Clarke defines the word as the counsel or design of the Lord."
-   },
-   {
-    "school": "puritan-evangelical",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Henry: Samuel would not jest with the sacred rite of anointing — and Saul, seeking asses, literally found a kingdom, as many seeking the world have found salvation."
+    "summary": "Gill gives the topography, the city on a hill and its end a descent toward Saul’s road home."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: the meaning of all that had happened was now to be revealed, and when God imposes new duties he never forgets to bestow new powers."
+    "summary": "Ellicott presses the question of Saul’s state of mind and notes the writer’s silence; Keil and Delitzsch give the wording of the command only."
    },
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes the descent to the city's end, where the private word could be spoken."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the prompt obedience and glosses the word of God as the counsel or design of the LORD; Wesley gives Samuel’s reason for the secrecy."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why was the servant sent on ahead?",
+    "sides": [
+     {
+      "position": "So that they might speak privately of the kingdom, which Samuel concealed lest he be thought to impose a king, and so that the lot might show the choice was God’s destination and not Samuel’s contrivance",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "So that the prophet might in all solemn confidence impart the word of God",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "He supplies a principle in place of the missing report of Saul’s state of mind: when new duties are imposed by God, He never forgets to bestow the gift of new powers."
+   }
+  ],
   "themes": [
-   "the word of God shown privately",
-   "God's destination, not man's contrivance",
-   "seeking asses, finding a kingdom"
+   "down to the end of the city",
+   "bid the servant pass on",
+   "the word of God",
+   "the writer here is silent"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-08",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.38
+   }
+  },
+  "pericope_label": "Stand thou still, that I may shew thee the word of God"
  }
 }
