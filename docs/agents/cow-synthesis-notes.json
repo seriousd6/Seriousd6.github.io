@@ -104618,6 +104618,97 @@
       "book": "2kings",
       "chapter": "10",
       "note": "This chapter carries the richest moral disagreement I have met in the corpus, and it is worth recording because the voices divide on the same question four separate times rather than once. On Jehu's letters: Clarke 'this most execrable man' against Wesley's 'Jehu justly required this... but the Samaritans wickedly obeyed it'. On 'Ahab served Baal a little': Wesley refuses all latitude on the principle that we must not do the least evil that the greatest good may come, Henry allows irony or a test of the people but settles on inexcusable deceit, while Ellicott denies there is a falsehood at all and reads a hidden meaning pointing at the intended holocaust. On the zeal: Gill, Clarke and Henry all charge ostentation, while Keil and Delitzsch hold the question of motive separable from the lawfulness of the act. On the divine commendation: Keil and Delitzsch confine it to the deed, Wesley to 'what is here expressed', Ellicott to what the parenthetic verse about the calves leaves of it, and Clarke asks outright whether God ever designed that his decree should be executed by these means. Recorded on the relevant spans; noted here because a reader meeting one of these entries alone will not see that the division runs the length of the chapter."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "20",
+      "verses": [
+        "15",
+        "21"
+      ],
+      "note": "JFB RESIDUE FROM RUTH, OFFSET 3, AND A THIRD CONFIRMATION OF THE DONOR ADVANCE RATE. Both blocks are foreign: key 15 (32 words) is on Naomi returning a forlorn and desolate widow in contrast to the prosperity she left, i.e. Ruth 1; key 21 (60 words) is on the right of gleaning conferred by positive law on the widow, the poor and the stranger, with the distinction that liberty to glean BEHIND the reapers was not a right but a privilege at the owner's good will, citing Leviticus 19:9, Deuteronomy 24:19 and Ruth 2:3. Donor is therefore Ruth 1-2, backward of the target as usual. Keys 15 and 21 are both congruent to 3 modulo 6, the same offset as 2samuel 14. THE VALUABLE PART IS THE RATE. The donor stream in 2 Samuel now reads: Judges 8 at chapter 2, Judges 17-18 at chapter 14, Ruth 1-2 at chapter 20. From chapter 14 to chapter 20 is six target chapters, and Judges 18 to Ruth 2 is about five donor chapters (Judges 19, 20, 21, Ruth 1, 2) -- roughly 0.8 per chapter, against the 0.75 measured from chapter 2 to chapter 14 and the 0.70 measured across 1 Kings 9 to 16. THREE INDEPENDENT MEASUREMENTS NOW AGREE AT 0.70 TO 0.80, which makes the donor position genuinely predictable: given one anchor per book and this rate, a sweep can compute the expected donor passage for any chapter and check the congruent keys against it, instead of reading every block to decide whether it is foreign. The offset still has to be solved per chapter (it was 4 at chapter 2 and 3 at both 14 and 20), but the offset is cheap to find once you know what passage to expect. Both excluded via excluded_voices on the tiles containing them."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "20",
+      "verses": [
+        "1",
+        "26"
+      ],
+      "note": "TWO RECURRING CLARKE AND ELLICOTT DEFECTS, both now beyond doubt. (1) CLARKE'S CHAPTER ARGUMENT AT KEY 1, FOURTH CONSECUTIVE CHAPTER (after 1kings 9, 1kings 16, 2samuel 14). His 227-word key-1 block here opens with a verse-by-verse synopsis of the whole chapter -- 'Sheba raises an insurrection... 2Sam 20:1, 2. David shuts up the ten concubines... Account of David's civil and military officers, 2Sam 20:23-26' -- and only the last ~95 words are comment on verse 1 proper. Four for four means a worker should treat this as the default shape of Clarke's first block and discount it when deciding whether Clarke may be cited on verse 1; and, as before, the synopsis is independently useful, its breaks at 1-2, 3, 4-5, 6-7, 8-12, 13-14, 15-22, 23-26 corroborating five of my five interior boundaries. (2) CHAPTER-FINAL ELLICOTT CHROME, SEVENTH INSTANCE. His key-26 block runs 1,090 words of which about 90 are commentary on Ira the Jairite; the rest begins '2 Samuel 2Sa 19 2 Samuel 2Sa 2 Samuel 2Sa 21 Footnotes:' and continues with the whole StudyLight page including the stylesheet, the navigation tree, the 66-element book_data array and a live Stripe publishable key. That is the heavy full-page form for the third time (after 1kings 16 and 2samuel 14), so it is now the majority shape rather than the exception. Here key 26 is both Ellicott's last block and the chapter's last key, so it does not discriminate between the two rules; the 2samuel 14 case, where they differed, remains the one that settles it in favour of per-commentator."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "20",
+      "verses": [
+        "12",
+        "16"
+      ],
+      "note": "THE WESLEY-HENRY DEPENDENCE, NOW FOUR VERBATIM INSTANCES ACROSS TWO CHAPTERS, which turns the caution I filed at 2samuel 14 into something that should probably change the contract. At 2samuel 14 I recorded two: the 'scourge' verdict at v.22 and the whole Jeremiah 31:20 turn at v.33. This chapter adds two more. At v.12 Henry writes 'the covering of blood with a cloth cannot stop its cry in God's ear for vengeance' and Wesley 'But the covering of blood with a cloth cannot stop its cry to God for vengeance'. At v.16 Henry writes 'Souls know no difference of sexes... Many a masculine heart, and more than masculine, has been found in a female breast; nor is the treasure of wisdom the less valuable for being lodged in the weaker vessel' and Wesley 'Souls know no difference of sex: many a manly heart is lodged in a female breast. Nor is the treasure of wisdom the less valuable, for being lodged in the weaker vessel.' These are abridgements, not coincidences. WHY IT MATTERS FOR THE TAGS: Henry maps to puritan-evangelical and Wesley to wesleyan-arminian, so wherever Wesley is condensing Henry the tags record two schools agreeing and the prevalence rises, when in substance there is one witness. In this chapter I counted them separately, as the enum requires, and it is defensible because Wesley does diverge independently elsewhere here -- he alone argues from Deborah that the wise woman held office, he alone makes mount Ephraim a place inside Benjamin, and he offers his own pair of reasons for Amasa's delay. But four instances in two chapters is a pattern, and the practical rule I would now propose is narrower and testable: where Wesley's wording tracks Henry's at the level of whole clauses, record the view once, name both, and do not let the pair alone carry a prevalence above 'single'."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "20",
+      "verses": [
+        "3"
+      ],
+      "note": "FOUR READINGS OF WHY THE TEN CONCUBINES WERE SHUT UP, and the disagreement is moral, not textual. Henry holds they were partly punished, giving three obligations together: duty, since Absalom's act had rendered them unclean to David; prudence, that the thing might not be so much as named; and justice, 'to punish them for their easy submission to Absalom's lust, despairing perhaps of David's return, and giving him up for gone' -- closing 'Let none expect to do ill and fare well.' CLARKE DENIES THE PREMISE OUTRIGHT: 'he could not punish them, as they were not in the transgression', nor divorce them, nor be familiar with them again since they had been defiled, nor safely marry them to other men, so 'he shut them up and fed them - made them quite comfortable, and they continued as widows to their death'. Keil and Delitzsch read it as protection, that David 'brought the ten concubines... into a place of safety, and took care of them, without going in unto them any more'. Ellicott makes it neither penalty nor kindness but structural, 'the necessary result, under the system of polygamy, of what had happened'. WORTH RECORDING BECAUSE THE DIVISION DOES NOT FOLLOW THE USUAL LINES: the devotional reader is the harshest on the women and the wesleyan-arminian the most exculpating, while the two grammatical-historical voices both decline to assign blame at all. A synthesis that reported only a consensus here would conceal a real question about whether the women were victims or accomplices, which is the kind of judgement the reader should see the witnesses disagree about. Ellicott adds a textual note on their state, that the phrase may be read widowhood of life as the English has it, or with the Chaldee widowhood of the living, i.e. widows while their husband was alive."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "20",
+      "verses": [
+        "8"
+      ],
+      "note": "DID JOAB'S SWORD FALL BY CONTRIVANCE OR BY ACCIDENT? Three answers, and the minority one is preserved only by Clarke. CONTRIVANCE: Henry has it planned down to the fittings, the coat girded close so as not to hang in the way, the belt over the coat so the sword lay ready, and the weapon 'in a sheath too big for it, that, whenever he pleased, it might, upon a little shake, fall out, as if it fell by accident'; Ellicott reconstructs the same design more soberly, a dagger stuck in the girdle 'so arranged that it might fall out as he advanced', picked up naturally in the left hand while the right went out in greeting; Wesley agrees, 'Things having (it is likely) been so contrived by Joab, that upon the least motion of his body, his sword should drop out'. ACCIDENT: Clarke reports that 'Joab, in passing to Amasa, stumbled, (for so some of the versions, and able critics, understand the words it fell out). and that the sword fell down when he stumbled; that he took it up with his left hand as if he had no bad intention'. NEUTRAL: Keil and Delitzsch describe only the mechanism, that 'the sheath came out of the sword-belt in which it was fastened, and the sword fell to the ground', and note that the verse is made up entirely of circumstantial clauses. The stake is whether the text itself testifies to premeditation or whether the premeditation is an inference the commentators supply; on the stumble reading, Joab's guilt rests on what he did after the sword fell rather than on how it fell. Clarke also observes that the garment was not a military one and that in the East it is the beard, not the man, which is kissed."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "20",
+      "verses": [
+        "24"
+      ],
+      "note": "WAS ADORAM OVER THE TAXES OR OVER THE FORCED LABOUR? Ellicott dissents from everyone and makes it a point about the character of the late monarchy: 'The tribute should rather be the levy, the forced labour so largely employed by Solomon. It is remarkable that there is no trace of such an office in 2 Samuel 8:16-18, nor in the parallel (1 Chronicles 18:14-17). It was a feature of Oriental despotism only introduced towards the close of David's reign, and carried to much greater length under Solomon.' Against him Gill makes it revenue, covering both what David received from his own people and the tribute of the conquered nations, with the Targum understanding the officer to be over those who collected and brought it; Clarke calls him 'the chief receiver of the taxes, or Chancellor of the Exchequer, as we term it'; Henry calls him treasurer and notes that it was 'not till towards the latter end of his time that David began to raise taxes'. RECORDED BECAUSE THE TWO READINGS CARRY DIFFERENT VERDICTS ON DAVID: on the tax reading the office is ordinary administration arriving late; on Ellicott's reading it is the first appearance in Israel of the institution that would provoke the schism, and Henry independently supplies the fact that makes Ellicott's case for him -- that the man who held the office held it long and that it cost him his life at last, stoned by the people at Rehoboam's accession (1 Kings 12:18). Neither writer connects his own datum to the other's thesis, which is why the pair is worth keeping together."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "20",
+      "verses": [
+        "1",
+        "4",
+        "14",
+        "23"
+      ],
+      "note": "HENRY'S SECTION HEADS GAVE THE TILING FOR THE TWELFTH TIME, and this chapter is the cleanest instance yet. His four blocks sit at keys 1, 4, 14 and 23, and all four are genuine heads with no duplicate-summary among them (unlike 2samuel 14, where the key-25 block was a condensed repeat of part of the key-21 head). Head 1 covers vv.1-3 under two divisions, the revolt and the concubines; head 4 covers vv.4-13 under four, the commission, Abishai's orders, the murder, and Joab resuming command, keyed explicitly to vv.4, 5, 6-7, 8-10, 11 and 12-13; head 14 covers vv.14-22, the flight, the siege and the woman's treaty, keyed to vv.14, 15, 16-17, 18, 19, 20; head 23 covers vv.23-26, the officers. Four heads, twenty-six verses, no residue and no overlap. I subdivided the two long heads by source words, breaking 4-13 at the reign of the murder (4-7, 8-13) and 14-22 at the woman's first speech (14-17, 18-22), giving six tiles of 2269, 2599, 2434, 2675, 1583 and 2230 usable source words -- the most evenly balanced set I have produced, and the first chapter where no tile needed more than two trim rounds. CORROBORATION: Clarke's chapter argument at key 1 breaks the chapter at 1-2, 3, 4-5, 6-7, 8-12, 13-14, 15-22, 23-26, which agrees with every one of my five interior boundaries except that he splits 3 from 1-2 and 13-14 from 8-12. Two independent eighteenth-century structures agreeing that closely is the second such case (after 1kings 16) and strengthens the practice of reading Clarke's argument for the tiling even while discounting it as comment on verse 1."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "20",
+      "verses": [
+        "1",
+        "4",
+        "8",
+        "14",
+        "18",
+        "23"
+      ],
+      "note": "Draft overrun, eighth chapter running, and the prescription has now essentially closed the gap. First-draft counts against a 650 cap: 658, 671, 629, 624, 664, 708. THREE of six tiles came in inside the window on the first pass and a fourth was eight words over; mean overrun +4%, matching 2samuel 14 and against +7% at 1kings 16, +17% at 1kings 9 and +25% at matthew 18. Trim rounds needed: 1, 2, 0, 0, 1, 3. The one tile that badly overran (vv.23-26 at 708) is the officer list, and the cause is instructive: it carries FOUR distinct disputes in twenty-six verses of pure register -- whether Joab was ever displaced, why a second list exists, what the tribute office was, and who Ira was and what a cohen is -- so the dispute count, not the narrative weight, is what predicted the overrun, exactly as the budgeting rule says. The expansion ratios run 0.23 to 0.41 against nominal source, with the highest on the vv.18-22 tile whose 1,583 usable words are the chapter's thinnest while carrying six voices and the proverb dispute; TTR there is 0.679, the chapter's best, and the lint reports a zero pad rate, so the ratio is honest density rather than stretch -- the same pattern recorded at 1kings 9 vv.20-25 and 1kings 16 vv.8-14. Mean TTR across the chapter 0.662, mean compression 0.460, every tile grade A."
     }
   ]
 }
