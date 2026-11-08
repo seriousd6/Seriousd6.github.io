@@ -104709,6 +104709,55 @@
         "23"
       ],
       "note": "Draft overrun, eighth chapter running, and the prescription has now essentially closed the gap. First-draft counts against a 650 cap: 658, 671, 629, 624, 664, 708. THREE of six tiles came in inside the window on the first pass and a fourth was eight words over; mean overrun +4%, matching 2samuel 14 and against +7% at 1kings 16, +17% at 1kings 9 and +25% at matthew 18. Trim rounds needed: 1, 2, 0, 0, 1, 3. The one tile that badly overran (vv.23-26 at 708) is the officer list, and the cause is instructive: it carries FOUR distinct disputes in twenty-six verses of pure register -- whether Joab was ever displaced, why a second list exists, what the tribute office was, and who Ira was and what a cohen is -- so the dispute count, not the narrative weight, is what predicted the overrun, exactly as the budgeting rule says. The expansion ratios run 0.23 to 0.41 against nominal source, with the highest on the vv.18-22 tile whose 1,583 usable words are the chapter's thinnest while carrying six voices and the proverb dispute; TTR there is 0.679, the chapter's best, and the lint reports a zero pad rate, so the ratio is honest density rather than stretch -- the same pattern recorded at 1kings 9 vv.20-25 and 1kings 16 vv.8-14. Mean TTR across the chapter 0.662, mean compression 0.460, every tile grade A."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "12",
+      "note": "The clearest demonstration of the stride-6 JFB defect I have met. All four Jamieson-Fausset-Brown blocks in 1 Samuel 12 sit at keys 3, 9, 15 and 21 — gaps of exactly 6 — and all four are BYTE-IDENTICAL: the same 78-word note on the city list of Judah arranged in four divisions, which belongs to Joshua 15 and has no relation to anything in 1 Samuel. One paginated chunk repeated at every sixth verse slot, in a chapter where JFB has no legitimate comment at all. Declared in excluded_voices on all four spans. Third consecutive chapter in which every JFB block is residue (1 Chronicles 12 was 1 Kings 6-7, 2 Kings 10 was 2 Samuel 6-7)."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "12",
+      "note": "Chrome again, but NOT on the chapter's last key this time — it is Ellicott's block at key 23, which measures 1,362 words of which roughly 800 are commentary (the Berleberg Bible quotation, Gregory on Jeremiah 15:1, the reflection on the prophet's office and the Ewald quotation) and the remaining 550 are StudyLight page furniture and inline CSS. The chapter's actual last key, 25, is clean. So the chrome attaches to whichever key the scrape happened to end on, not to the last verse of the chapter: nine chapters running have carried it, and the position is not a reliable predictor. A stripper keyed on the chrome's own markers would be safe; one keyed on 'last key in the file' would miss this."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "12",
+      "note": "Keil and Delitzsch truncate at exactly 200 words on every key here except 23 (136, ending with the chapter) and 25 (19). Each truncated block quotes two to four following verses before being cut, so the commentary on a verse is routinely filed one to three keys earlier: the discussion of the conditional in v.14 sits under key 13, the comment on the people's terror in v.18 under key 17, and the whole of vv.24-25 under key 23. Fourth consecutive chapter where per-key source resolution misattributes K&D."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "12",
+      "note": "Span tiling was re-cut six times on this chapter — more than any previous one — and every re-cut was forced by the same thing: a planned span carried more DISTINCT readings than 650 words could hold. 9-10 split (and 10 made thin at 173 source words); 14-15 split; 18-19 split; 21-22 split; 6-7 split; 16-17 split. Twenty-two spans over twenty-five verses in the end, which is nearly one-per-verse on a chapter whose source averages 754 words a verse. The rule I filed on 2 Kings 10 is confirmed: count the debates, not the words. A better heuristic still, visible here, is to count the DISTINCT PROPOSALS the sources make per verse — v.11 alone carries four candidates for Bedan and two for the final name, which is 640 words before any framing."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "12",
+      "note": "Matthew Henry is section-filed at three keys — 1 (1,332 words covering vv.1-5), 6 (1,336 covering vv.6-15) and 16 (2,377 covering vv.16-25) — so the whole of his contribution to a 25-verse chapter sits under three keys, and spans 1, 6 and 16 therefore measure 2,464, 1,826 and 2,717 source words and report expansion ratios of 0.26x, 0.27x and 0.18x. Fifth consecutive chapter confirming the span-aware source resolution gap; it is now clear that section filing is the normal shape of this corpus for Henry, K&D and JFB alike, and that the per-key denominator understates every span that is not a section head."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "12",
+      "note": "One over-resolution caught by the fidelity entity check, and again it was mine and not the sources': I wrote that Ellicott found the same unfinished construction in 'our Lord's words over Jerusalem', where Ellicott gives only the bare citation of Luke 19:42 and names no place. Sixth chapter running this check has caught a resolution slip. The pattern across the six is now stable enough to state as a prediction: the slips cluster where a source cites a verse without quoting it, and where a source abbreviates a proper name. Both are places where the obvious completion is correct and still not the source's."
+    },
+    {
+      "at": "2026-11-08",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "12",
+      "note": "1 Samuel 12 carries the densest textual disagreement of any chapter I have synthesized, and it is worth recording as a set because the same voices keep changing sides. On the identity of Bedan (v.11): Barak, on the Greek and Syriac, which Ellicott thinks probable from the similarity of the letters; Samson, on the Targum, Kimchi's Ben-Dan, and Henry; Jair, on Calmet, Wesley and Poole; and Wordsworth's refusal to emend at all, on the ground that the obscurity of a name occurring nowhere else is itself a mark of the speech's genuineness. On the final name in the same verse: Samson, on the Syriac and Arabic, with Clarke agreeing that a speaker would not quote himself, against Ellicott and Henry who defend the self-mention. On the syntax of v.14: Keil and Delitzsch find the apodosis in the last clause, Ellicott holds with Payne Smith that the sentence breaks off unfinished, Wesley reads the clause as a privilege rather than a duty, and Henry refuses to separate promise from precept. On v.15: the comparative 'as against your fathers' (Hebrew, Ellicott, Keil and Delitzsch) against Kimchi's 'kings' and the Septuagint's 'your king', which Keil and Delitzsch call an unhappy conjecture and Thenius would write into the text. On v.21 Ellicott argues the conjunction 'for' is a copyist's intrusion because no ancient version renders it. Recorded on the relevant spans; noted here because the chapter is a useful test case for whether the tags schema can carry this much divergence legibly."
     }
   ]
 }
