@@ -104950,6 +104950,65 @@
         "14"
       ],
       "note": "Keil and Delitzsch truncated at exactly 200 words again, at keys 14 and 26, each block running ahead into the verses that follow (the key-26 block carries the whole of v27's command). Confirmed on every chapter in this run. The open question about whether the truncation is in the scrape or the source is unchanged."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "13",
+        "28",
+        "33"
+      ],
+      "note": "Declined as a pick (68,585 usable source words, 40 keys), but the tiling is measured and recorded so a later run need not re-derive it. Matthew Henry holds 19,390 words -- 28 per cent of the chapter -- across only four keys, 1, 13, 28 and 33, so his section heads give the tiling: vv.1-12 (19,728 source words), 13-27 (20,603), 28-32 (13,837), 33-40 (14,417). Every section is three to four times the 1,700-6,000 per-tile band, so each needs subdividing: roughly sixteen tiles for the chapter. That is four times the largest chapter one unattended run has landed (2samuel 14, 17.8k), which is why it was declined rather than started."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "13",
+        "28",
+        "33"
+      ],
+      "note": "NEW DEFECT CLASS -- the same source text present twice under two labels in two different translations. Augustine appears both as 'Augustine' (8 keys, 4,599 words, short third-person Catena Aurea extracts) and as 'Augustine of Hippo' (keys 1, 13, 28, 33, 1,002 words, numbered sections from the Tractates on John). On key 1 the two carry the SAME passage of Tractate 112 in two English versions: 'The discourse, which our Lord had with His disciples after supper, and the prayer which followed, being now ended...' against 'When the grand and lengthened discourse was concluded which the Lord delivered after supper...'. Byte and hash comparison cannot see this, so the harvest-time duplicate check proposed for job 22 would miss it; detection needs a shingled or n-gram similarity test, not equality."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "3",
+        "10",
+        "19",
+        "33",
+        "37"
+      ],
+      "note": "Chrysostom is split the same way: 'Chrysostom' (keys 3, 10, 19, 33, Catena Aurea extracts) and 'John Chrysostom' (keys 1, 37, the Homilies on John, opening '[1.]'). Here the two labels carry different works, so nothing is duplicated, but they are one father under two names and any prevalence count treats them as two witnesses. Same class as the Cyril label collision at matthew 18; both argue for a label-normalisation table at harvest rather than per-chapter handling by the writer."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "18",
+      "verses": [
+        "8",
+        "22",
+        "31",
+        "38"
+      ],
+      "note": "Cyril of Jerusalem is wholly residue in this chapter, on the JFB model: keys 8, 22, 31 and 38 carry Catechetical Lecture fragments -- the disgrace of imprisonment, the senses of the word Ecclesia ('26. But since the word Ecclesia...'), how to dispute with Jews ('26. And when thou hast thus wrestled against the Jews'), and the gift of the Spirit to the Apostles ('12. The fellowship of this Holy Spirit') -- none of which comments on its verse, and key 8 begins mid-sentence. Block lengths alternate 149, 200, 149, 200 words, the signature of a capped walk through a donor work. He belongs in excluded_voices on every tile where he appears, and the same check should be run wherever Cyril of Jerusalem is credited in the Gospels."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "note": "Legacy queue measured in full: 115 chapters, 1,882,180 usable source words. Exactly five exceed the 40,000-word single-batch ceiling -- john 4 (94,523), john 3 (90,022), john 18 (68,585), matthew 15 (60,944), john 2 (55,839) -- and the sixth largest is 1samuel 25 at 28,835. The consequence for the loop: --worst-first is longest-first and --spread 40 picks uniformly from the first forty, so every draw falls between about 16,000 and 94,000 source words, and the twenty-seven chapters under 10,000 are never offered. Declining does not dequeue, so those five keep returning. This is a pick-order question for the driver, not something a worker should route around."
     }
   ]
 }
