@@ -105618,6 +105618,104 @@
         "28"
       ],
       "note": "JFB residue at keys 22 and 28, stride 6, drawn from Matthew 13 -- the wheat and the tares, the burning before the housing, the separation by the Judge. The two blocks are BYTE-IDENTICAL: 744 characters each, SHA1 2951a0115da3. That is the third instance of the byte-identical duplicate-block class (after Gill at job 22 keys 5 and 11, and Cyril at matthew 18), and unlike the Augustine double-translation defect found at john 18 this one IS catchable by a hash comparison at harvest time. The block also repeats its own cross-reference '(See on Mt 13:39 )' twice internally, so there is duplication within the block as well as between the two keys."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "15",
+      "verses": [
+        "8",
+        "14",
+        "20",
+        "26",
+        "32"
+      ],
+      "note": "JFB residue at keys 8, 14, 20, 26 and 32, stride 6, offset 2, drawn from 1 Samuel 18-20: David's victory reawakening Saul's jealousy, Michal and the teraphim laid on the divan, Samuel in retirement superintending the school of the prophets at Naioth, and David consulting Jonathan for his safety. This is the first COMPLETE walk observed -- all five stride positions carry a block, where 1kings 22 was missing keys 16 and 34 and 2kings 5 keys 11 and 17. Offset 2 here, against 4 in 1kings 22 and 5 in 2kings 5, all three within one or two books: the offset is simply not predictable. Declared in excluded_voices on all four tiles."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "15",
+      "verses": [
+        "20",
+        "26"
+      ],
+      "note": "BYTE-IDENTICAL JFB duplicate at keys 20 and 26: both 161 words, SHA1 80a572cf8e, the Naioth block. Fourth instance of the byte-identical duplicate-block class (after Gill at job 22 keys 5 and 11, Cyril at matthew 18, and JFB at matthew 15 keys 22 and 28) and the SECOND found in a single session, both in JFB and both at stride-6 walk positions. That is now a pattern worth stating: the residue walk sometimes re-emits the same donor block at two walk positions in the same chapter, which means a harvest-time hash check would catch not only cross-chapter duplicates but a measurable share of the residue itself."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "15",
+      "verses": [
+        "29"
+      ],
+      "note": "Chapter-final Ellicott chrome at key 29, the eleventh instance: 1,094 words of which roughly 110 are commentary (that Baasha had no formal mission of vengeance, that the contrary may be inferred from the later judgment on him, and that sin working out God's purpose is not the less truly sin), the remainder stylesheet, nav tree, book_data array and a live Stripe key. Same form and same position as the previous ten."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "9",
+        "25"
+      ],
+      "note": "Henry's section heads gave the tiling for the sixteenth chapter running: three blocks at keys 1, 9 and 25, marking vv.1-8, 9-24 and 25-34. His long middle section was subdivided at the natural break between the reforms and the Baasha war, giving four tiles of 3,046-3,938 usable source words. Also the sixth chapter in which his blocks carry the Exposition plus an appended condensed restatement; at key 1 the appended portion ends with a paragraph on the two kinds of fulfilling the law, legal and evangelical, which comments on nothing in this chapter at all -- the first time I have seen the appended material drift entirely off the passage."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "15",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke's chapter argument at key 1 for the eighth consecutive chapter."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "15",
+      "verses": [
+        "6",
+        "32"
+      ],
+      "note": "This chapter carries the standing war notice THREE times -- at v.6 (repeating 14:30), at v.16, and again at v.32 (repeating v.16) -- and the witnesses treat the two repetitions quite differently. At v.6 all four engage it and offer four distinct remedies (Keil and Delitzsch by grammar, Gill by referent, Clarke by emendation with fourteen manuscripts behind it, Ellicott by conceding corruption); at v.32 Keil and Delitzsch and Clarke dismiss it in a clause as a plain repetition and nobody attempts a defence. Worth recording because it shows the commentators' attention is drawn by the SURPRISE of a repetition out of place rather than by repetition as such."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "15",
+      "verses": [
+        "13"
+      ],
+      "note": "A clean three-way dispute over a hapax, and one where the two grammatical-historical voices split. The word for the queen mother's idol occurs only here and in the Chronicles parallel. Clarke collates six renderings (Vulgate, Greek, Syriac, Chaldee, Arabic, Jarchi) and concludes it was an obscene emblem; Ellicott reaches the same by reading 'for an asherah' and connecting it with nature-worship; Keil and Delitzsch reject that outright, holding the word to mean formido, an object of fear, and naming Movers as following the Rabbins into the shameful-image reading. Reported in the prose at the level of the witnesses' claims rather than reproducing Clarke's explicit detail, which he himself says would not profit the unlearned reader."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "15",
+      "verses": [
+        "16"
+      ],
+      "note": "The chronological contradiction at the head of the Baasha war is argued four ways and is the chapter's most useful dispute for a reader: Chronicles dates the invasion to Asa's thirty-sixth year, but Baasha died in Asa's twenty-seventh. Gill counts the thirty-six from the division of the kingdom (seventeen under Rehoboam, three under Abijam) and lands on Asa's sixteenth year; Keil and Delitzsch reach the same year from the Chronicles sequence of events; Ellicott dissolves it by taking the standing war phrase to mean continued hostility only; Clarke states it most sharply and leaves it unresolved, saying the numbers in the parallel places are most likely mistaken and that we have no direct means of correcting them."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "15",
+      "verses": [
+        "10"
+      ],
+      "note": "ENTITY flag judged a false positive. The checker flagged Ephraem Syrus in both prose and tags because Keil and Delitzsch abbreviate the name here as 'Ephr. Syr.', and the pool is this chapter's source plus the KJV chapter only. The same commentators spell it in full in 2 Kings 5 ('as Ephraem Syrus and many others suppose'), landed earlier in this same session, so the expansion is the source's own form elsewhere in the same work and not an editorial invention. Kept the full form. This is the abbreviation-expansion case the notebook already lists under 'expand Catena abbreviations'; the fix would be to pool a per-commentator name table rather than per-chapter text."
     }
   ]
 }
