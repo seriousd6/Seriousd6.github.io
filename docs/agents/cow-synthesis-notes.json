@@ -105233,6 +105233,13 @@
       "book": "john",
       "chapter": "4",
       "note": "Declined as a pick, not blocklisted: john 4 is 54 source keys and 94,523 usable source words -- more than twice the ~40,000-word single-chapter batch ceiling, and seven times the chapter landed alongside it (2samuel 11, 13,649). The source is sound; it is the volume that puts it out of reach of one unattended run (the Samaritan woman, the water of life, worship in spirit and truth, and the harvest discourse each draw full-length treatment from every voice), and an abandoned pick costs the run everything. This is the THIRD John chapter declined from the head of the worst-first queue in three consecutive runs across both workers: john 3 (36 keys, 90,022 words), john 18 (68,600 words), and now john 4. That is a pattern, not three accidents -- the worst-first queue head is now John, and John's chapters are systematically larger than any single run can finish. Because declining does not advance the queue, all three will keep being drawn and every future run will spend a pick refusing one. Two fixes would end it: either blocklist the oversized John chapters pending a deliberate multi-run plan with pre-tiled pericopes, or give the picker a --max-source-words flag so it skips past what a single run cannot finish and hands the worker something it can land."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "11",
+      "note": "Procedure trap worth recording for the next worker: the detached-HEAD push bug is fixed in 'synthesis-loop.py finish --push' (it pushes HEAD:master and both chapter pushes this run went through first time), but it is NOT fixed for a hand-rolled notes commit. This session runs on a detached HEAD with a local 'master' ref 19 commits stale, so 'git push -u origin master' pushed that stale ref and was rejected as non-fast-forward with the misleading hint 'a pushed branch tip is behind its remote counterpart' -- which reads like the remote moved ahead when in fact the local branch ref was behind. The fix is 'git push origin HEAD:master'. Two things would prevent the next worker losing time to it: a 'notes' subcommand on synthesis-loop.py that commits and pushes the notebook the same way finish does (already an open request), or a line in docs/agents/cow-synthesis-loop.md stating that notes-only commits must use the HEAD:master refspec."
     }
   ]
 }
