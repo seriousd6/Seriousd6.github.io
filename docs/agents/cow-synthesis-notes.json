@@ -105240,6 +105240,105 @@
       "book": "2samuel",
       "chapter": "11",
       "note": "Procedure trap worth recording for the next worker: the detached-HEAD push bug is fixed in 'synthesis-loop.py finish --push' (it pushes HEAD:master and both chapter pushes this run went through first time), but it is NOT fixed for a hand-rolled notes commit. This session runs on a detached HEAD with a local 'master' ref 19 commits stale, so 'git push -u origin master' pushed that stale ref and was rejected as non-fast-forward with the misleading hint 'a pushed branch tip is behind its remote counterpart' -- which reads like the remote moved ahead when in fact the local branch ref was behind. The fix is 'git push origin HEAD:master'. Two things would prevent the next worker losing time to it: a 'notes' subcommand on synthesis-loop.py that commits and pushes the notebook the same way finish does (already an open request), or a line in docs/agents/cow-synthesis-loop.md stating that notes-only commits must use the HEAD:master refspec."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "30",
+      "verses": [
+        "6",
+        "18"
+      ],
+      "note": "JFB defect on a FIFTH consecutive chapter, stride 12 again, but with a new wrinkle: the two displaced blocks do not come from one continuous passage. Key 6 carries 2 Chronicles 24 material (temple repairs, the surplus applied to furniture, Leviticus 5:16 and Numbers 5:8); key 18 carries 2 Kings 13-14 material (commiserating the fallen condition of his chosen people, checking the idolatrous enemy's taunts, Deuteronomy 32:27 and Psalm 12:4). In 2kings 10 and 2samuel 11 the displaced run was contiguous and in order; here it is not. So neither the stride nor the provenance of the displacement is constant - only that the blocks are total garbage for the chapter they sit in. Declared in excluded_voices on the two spans covering those keys; 126 of 15,283 usable source words removed."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "30",
+      "verses": [
+        "3"
+      ],
+      "note": "Wesley's block at key 3 is physically garbled: two printed columns have been interleaved line by line, producing text like 'nor in such numbers as but in the solemn worship of God, by sacrifices, and prayers, and praise, were necessary for the slaying and offering of so many thousands of and publick instruction of that great congregation in the good knowledge paschal-offerings'. De-interleaved, one strand is Wesley on v3 (the priests not in such numbers as were necessary for so many thousands of paschal offerings) and the other is Wesley on v21-22 (the solemn worship of God by sacrifices and prayers and praise, and publick instruction of that great congregation in the good knowledge of the Lord). I used only the v3 strand, whose sense is unambiguous once separated, and nothing from the other. A line-interleaving defect is new in this run - the previous defects were displacement, truncation and appended duplicates - and it is dangerous because the garbled text is grammatical enough in places to be quoted by mistake."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "30",
+      "verses": [
+        "1",
+        "13",
+        "21"
+      ],
+      "note": "The appended-Concise defect recurs, and in this chapter it is in three of the three Henry blocks. Each of Henry's section blocks (key 1 covering vv.1-13, key 13 covering vv.13-20, key 21 covering vv.21-27) ends with a condensed restatement of its own content in a different register - 'Hezekiah made Israel as welcome to the passover, as any of his own subjects... Oh that messengers were sent forth to carry these glad tidings to every city and every village, through every land!' - which reads as Henry's Concise appended to the Complete. Same defect as in 2samuel 11, where two of two Henry blocks carried it. On this evidence it is not occasional but systematic in the Henry source, and it inflates his usable-word count by roughly a sixth."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "30",
+      "verses": [
+        "22"
+      ],
+      "note": "The best disagreement in the chapter, and a clean four-against-two: what the Levites were commended for in 'that taught the good knowledge of the LORD'. Clarke, Wesley and Henry all read a teaching ministry - Clarke calls it the great work of every Christian minister, Wesley the cause of the king's kindness, Henry expands it into reading and opening the Scriptures after a famine of the word. Keil and Delitzsch and Ellicott both deny it: the clause is about musical skill. Keil and Delitzsch set out the Latin gloss that would make these the men more expert in divine things and able to instruct others and reject it, following Clericus, for those who had distinguished themselves by intelligent playing; Ellicott renders it as showing good skill in chanting and playing, so that the king was praising musicians. The verse is either a tribute to preachers or a compliment on a performance, and nothing in the context settles it."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "30",
+      "verses": [
+        "19"
+      ],
+      "note": "Bertheau is both rejected and adopted inside this one chapter, which is worth recording because it shows Keil and Delitzsch using him as a named foil rather than a source. They reject him twice: on v20, where he made the healing the averting of literal sickness and death per Leviticus 15:31 (they insist the people are not to be thought already sick, and read the healing of the soul or the transgression), and on v24, where he made the royal gifts rich offerings intended for further feasts (they hold they were given for the week of unleavened bread and merely proved surplus). They adopt him once, on v26, where both they and Ellicott quote him verbatim for the comparison with Solomon's dedication. Ellicott, meanwhile, holds on v20 exactly the position Keil and Delitzsch attribute to Bertheau and refuse - so the rejected view is the one the other grammatical-historical commentator actually teaches."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "30",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "18",
+        "25"
+      ],
+      "note": "Five over-resolutions in one chapter, the worst showing of the run, and all five caught by the entity check rather than by me. (1) 'Josiah' - Ellicott cites 2 Chronicles 35:6 and 35:10-11 for the Levites doing the same work later but never names the king; fixed to 'the passover of a later reign'. (2) 'Masoretes' - Keil and Delitzsch write 'the Masoretic verse-division'; I turned the adjective into a group of people; fixed to 'the Masoretic division'. (3) 'Deuteronomic' - Ellicott says only 'the latter passage' of the two he cites; fixed to 'the latter of the two passages he cites'. (4) and (5) 'Judean' twice - a coined adjective; the source has only the OCR-garbled 'Judseans' once, so fixed to 'out of Judah' and 'the several cities of Judah'. Three of the five are a new sub-class worth naming: not resolving a bare citation to a name, but inventing an adjective or a collective noun from something the source gives in another grammatical form. The standing rule needs that corollary - do not nominalise what the source only qualifies."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "30",
+      "verses": [
+        "27"
+      ],
+      "note": "Chrome position: fourth chapter running on the LAST key, and the ratio is now extreme. Ellicott's block at key 27 runs about 180 words of real content followed by roughly 960 words of StudyLight furniture - menus, CSS, the book_data array, the Cloudflare and ads-free scripts - so his apparent usable-word count on this verse is inflated more than fivefold. Tally across the run: 1chronicles 12 key 40 (last), 2kings 10 key 36 (last), 1samuel 12 key 23 (NOT last), 1samuel 9 key 27 (last), 2samuel 11 key 27 (last), 2chronicles 30 key 27 (last). Five of six on the last key. Chrome stripping needs no exegetical judgement and must happen before voice counting; it remains the single highest-value unimplemented fix."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "30",
+      "verses": [
+        "7",
+        "19",
+        "23"
+      ],
+      "note": "Ellicott makes three separate judgements in this chapter about the chronicler as an author, which together amount to a critical stance none of the other voices takes. On vv.7-8 he holds that the recurrence of the same phrases in the preceding chapters' addresses 'prove the ideal character of these addresses', i.e. the speeches are the writer's composition rather than a record. On v19 he notes that the prayer prefers spiritual sincerity to literal observance, 'all the more remarkable as occurring in a writer whose principal aim is to foster a due reverence for the external ordinances'. On v23 he remarks that the chronicler 'is fond of dwelling upon the joy of the ancient festivals, as though he would suggest greater whole-heartedness and magnificence to the people and princes of his own day'. Gill, Henry, Clarke and Wesley all treat the same material as straight report. Recorded because a reader comparing schools on this chapter will find the grammatical-historical difference is not about any single verse but about what kind of book they think they are reading."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "30",
+      "verses": [
+        "27"
+      ],
+      "note": "Clarke's note on the last verse carries the chapter's sharpest school-marked claim, and it is doctrinal rather than exegetical: that men who draw back to perdition had genuine grace and trifled with it, and that 'it is blasphemy to say they had no genuine or saving grace; they had it, they showed it, they trifled with it, sinned against it, continued in their rebellions, and therefore are lost'. Set against Gill's reformed frame elsewhere in the same chapter (the one heart owing to the power and efficacy of divine grace), this is a direct wesleyan-arminian denial of perseverance filed in the same catena. Kept in the prose at length because it is the clearest instance in the run of the school tags carrying real theological weight rather than labelling a method."
     }
   ]
 }
