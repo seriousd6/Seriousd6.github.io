@@ -105009,6 +105009,124 @@
       "at": "2026-11-09",
       "kind": "observation",
       "note": "Legacy queue measured in full: 115 chapters, 1,882,180 usable source words. Exactly five exceed the 40,000-word single-batch ceiling -- john 4 (94,523), john 3 (90,022), john 18 (68,585), matthew 15 (60,944), john 2 (55,839) -- and the sixth largest is 1samuel 25 at 28,835. The consequence for the loop: --worst-first is longest-first and --spread 40 picks uniformly from the first forty, so every draw falls between about 16,000 and 94,000 source words, and the twenty-seven chapters under 10,000 are never offered. Declining does not dequeue, so those five keep returning. This is a pick-order question for the driver, not something a worker should route around."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "22",
+      "verses": [
+        "4",
+        "10",
+        "22",
+        "28",
+        "40",
+        "46"
+      ],
+      "note": "JFB residue, stride 6, offset 4 (keys 4, 10, 22, 28, 40, 46), drawn from 1 Samuel 25-27 -- Nabal's death, Saul at Hachilah, the midnight stratagem, the speech across the ravine, the flight to Gath, Ziklag. Two things are new. First, the walk has GAPS: keys 16 and 34 fall on the stride but carry no JFB block, the first time a residue walk has been incomplete rather than merely offset. Second, the offset is 4 where 1kings 1, 2 and 9 measured 2 and 1kings 16 measured 3, so the offset varies WITHIN a book and not only between books. Declared in excluded_voices on the five tiles that contain those keys; JFB is named in no prose."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "22",
+      "verses": [
+        "9",
+        "10",
+        "11",
+        "14",
+        "16",
+        "19",
+        "29",
+        "30",
+        "35",
+        "36",
+        "37",
+        "39",
+        "40",
+        "41",
+        "42",
+        "44",
+        "45",
+        "46",
+        "49",
+        "52",
+        "53"
+      ],
+      "note": "K&D SLIDING-WINDOW DUPLICATION, measured. The 200-word cap is applied to a moving window over one continuous section rather than to a per-verse block, so consecutive keys re-emit the same words from a later starting point. Of 28 consecutive pairs, 13 share more than 15 per cent of their 8-word shingles: keys 9/10 at 0.77, 41/42 at 0.76, 52/53 at 0.75, 39/40 at 0.60, 36/37 at 0.49, 44/45 at 0.48, 45/46 at 0.45, 49/52 at 0.43, and five more above 0.20. Across the chapter 1,085 of 5,423 shingle instances are repeats -- roughly a fifth of K&D's 5,627 words here is text already counted under an earlier key, on top of the bare KJV verse text each block opens with. Consequence for the writer: within a tile, two consecutive K&D blocks may be one comment, and per-key word counts overstate the voice by about a fifth. Consequence for the denominator-cleaning list: this is measurable by shingle overlap and so fixable at harvest."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "22",
+      "verses": [
+        "51"
+      ],
+      "note": "Chapter-final Ellicott chrome at key 51, the ninth instance: 1,043 words of which roughly 45 are commentary (the revival of Jezebel's influence, Baal resuming its place beside the calves and Baalzebub), the remainder stylesheet, nav tree, a 66-element book_data array and a live Stripe publishable key. Heavy full-page form again, and again on the commentator's last block. Usable source for vv.51-53 is therefore about 490 words, not the 1,503 the size command reports, which is why that tile was written at 374 words rather than filled toward the cap."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "22",
+      "verses": [
+        "1",
+        "15",
+        "29",
+        "41",
+        "51"
+      ],
+      "note": "Henry's section heads gave the tiling again -- fourteenth chapter running. His five blocks sit at keys 1, 15, 29, 41 and 51, marking vv.1-14, 15-28, 29-40, 41-50 and 51-53. IMPORTANT CONSTRAINT discovered here: a Henry section must not be subdivided blindly. His key-1 block is 2,156 words and comments explicitly on vv.1 through 14, so splitting the section at v.5 strands his whole commentary in the head tile. The resolution used was to subdivide only where the witnesses themselves break and to let Henry's material fall to the sub-tile whose verses it treats, as was forced at 2chronicles 34 by the verse-23 gap. Eight tiles of 1,503-3,949 source words resulted."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "22",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke's chapter argument at key 1 for the sixth consecutive chapter. Worth recording that its synopsis divides the chapter 1-4 / 5-17 / 18-29 / 30-36 / 37-40 / 41-47 / 48 / 49 / 50 / 51-52, which does NOT agree with Henry's five heads. Clarke's argument is a useful cross-check on where the narrative turns but is not a tiling source; where the two have disagreed, Henry's heads have matched the witnesses' own units."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "22",
+      "verses": [
+        "1",
+        "15",
+        "29",
+        "41"
+      ],
+      "note": "Henry's blocks in this chapter carry his full Exposition AND a condensed restatement of the same views appended to it -- the Concise commentary following the Exposition, at all four of the long blocks (clearest at key 15, where the appended portion repeats the rent-garments, the after-the-manner-of-men caveat and the undeceived-too-late rule in nearly the same words, and at key 1, which repeats the take-your-religion-with-you passage). Two effects: his per-key word count is inflated, and a writer reading the block sees the same view twice and may mistake the repetition for emphasis."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "22",
+      "verses": [
+        "6",
+        "38"
+      ],
+      "note": "Two clean multi-way disputes in this chapter. On the identity of the four hundred prophets there are four distinct positions: Gill (prophets of the groves from Jezebel's table, the number agreeing), Clarke (prophets of Asherah absent from Carmel), Ellicott (neither Baal's nor the Asherah's, but men devoted to Jeroboam's idolatry), and K&D (not Baal's, since the word of Jehovah could not be enquired by them, and not disciples of the true prophets). On the clause the English renders as the washing of his armour, three agree against the received rendering -- K&D on grammatical grounds, calling it the only tenable explanation, Clarke from the Greek, Ellicott from the Greek and Josephus -- that it means the harlots bathed in the bloodstained pool, while Gill alone keeps the plain sense of a washing."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "22",
+      "verses": [
+        "49"
+      ],
+      "note": "Clarke offers two textual conjectures here and concedes the weakness of the first himself: that the two words differing by a single letter and pronounced alike should be read 'he consented to him' rather than 'he would not', which he grants no manuscript or version supports, and Houbigant's rearrangement moving the note that the ships never sailed from v.48 to the end of v.49. Both are recorded in the tags as Clarke's own proposals with the concession attached, not as readings of the text, since taking the first would reverse the narrative's sense on no evidence."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "note": "GRANULARITY DIVERGENCE between the two workers, measured across the last fourteen landed chapters. Worker B is producing 17-24 entries per chapter (1samuel 20: 24 entries over 42 source keys; 2samuel 13: 20 over 39; 2samuel 23: 19 over 39; 2kings 10: 17 over 36), i.e. single verses and spans of two to four, each standing on roughly 1,000-1,500 source words. Worker A (these chapters) is producing 5-9 tiles per chapter (1kings 9: 5 over 28; 2chronicles 34: 5 over 32; 2samuel 20: 6 over 26; 1kings 22: 8 over 53), each standing on 1,500-6,000 source words and compressing at 0.16-0.34x where the corpus median expansion is 0.84x. Both shapes pass the validator, the chapter gate and the corpus gate, so the gates cannot see the difference. The loop doc's pericope rule arguably favours the finer grain -- it says a pericope is 'not licence to write twelve verses' worth in one blob', that grouping belongs 'where the material is genuinely continuous or repetitive', and that 'where the witnesses say something distinct about a verse, that verse keeps its own entry' -- while the standing poke instruction for a legacy pick says to regenerate 'as pericope tiles'. Raising it rather than resolving it: a worker should not quietly pick its own output shape, and the choice also decides which chapters are reachable in one run, since at worker B's grain a 23,000-word chapter is not."
     }
   ]
 }
