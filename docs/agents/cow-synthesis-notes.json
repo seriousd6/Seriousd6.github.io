@@ -105226,6 +105226,13 @@
         "12"
       ],
       "note": "A legitimate thin entry, and the first in this run. Span 12-13 holds 162 usable source words, 110 after the JFB exclusion - key 12 is 28 words of Gill and key 13 is 12 words of Gill plus short notes from Clarke and Ellicott. Written at 187 validator words under the thin exemption rather than padded to the 350 floor or merged into a span that would then have broken the ceiling. The alternative considered and rejected was a single 10-13 span, which came out at 817 validator words."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "4",
+      "note": "Declined as a pick, not blocklisted: john 4 is 54 source keys and 94,523 usable source words -- more than twice the ~40,000-word single-chapter batch ceiling, and seven times the chapter landed alongside it (2samuel 11, 13,649). The source is sound; it is the volume that puts it out of reach of one unattended run (the Samaritan woman, the water of life, worship in spirit and truth, and the harvest discourse each draw full-length treatment from every voice), and an abandoned pick costs the run everything. This is the THIRD John chapter declined from the head of the worst-first queue in three consecutive runs across both workers: john 3 (36 keys, 90,022 words), john 18 (68,600 words), and now john 4. That is a pattern, not three accidents -- the worst-first queue head is now John, and John's chapters are systematically larger than any single run can finish. Because declining does not advance the queue, all three will keep being drawn and every future run will spend a pick refusing one. Two fixes would end it: either blocklist the oversized John chapters pending a deliberate multi-run plan with pre-tiled pericopes, or give the picker a --max-source-words flag so it skips past what a single run cannot finish and hands the worker something it can land."
     }
   ]
 }
