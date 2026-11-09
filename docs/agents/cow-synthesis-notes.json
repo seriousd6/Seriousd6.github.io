@@ -105554,6 +105554,70 @@
         "7"
       ],
       "note": "Two over-resolutions in one sentence, both caught by the entity check. Ellicott cites four passages for prophetic rebukes of royal offenders (1 Samuel 15:21-23, 1 Kings 21:21-24, Isaiah 7:3-25, Matthew 14:3-5) and names none of the people in them; I wrote 'from Samuel's words to Saul to the Baptist's to Herod', inventing two names from the last citation. The first replacement then introduced a third flag of the same kind ('Testaments') by reaching for a collective term the source does not use. Fixed to 'citing four such passages without expounding any of them'. This confirms the corollary filed on 2chronicles 30: the rule is not only that bare citations must not be resolved to names, but that no collective or adjectival noun may be coined from what the source leaves in another form. Twelve instances of this class across the run, every one caught by the checker and none by me on first pass."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "10",
+        "21",
+        "29"
+      ],
+      "note": "Declined as a pick (60,944 usable source words, 39 keys, 23 voices), with the tiling measured so a later run need not re-derive it. Matthew Henry holds 15,964 words -- 26 per cent of the chapter -- across four keys, 1, 10, 21 and 29, so his section heads give vv.1-9, 10-20, 21-28 and 29-39. Each section would need subdividing at the 1,700-6,000 words-per-tile band, so roughly twelve to fourteen tiles for the chapter. Third of the five over-ceiling Gospel chapters to be drawn and declined (after john 3 and john 18)."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "7",
+        "12",
+        "15",
+        "21",
+        "29",
+        "32"
+      ],
+      "note": "CATENA AUREA CLUSTER SIGNATURE. Eight patristic labels -- Jerome, Chrysostom, Remigius, Gloss, Raban, Origen, Augustine and Hilary -- land on an almost identical key set: 1, 7, 12, 15, 21, 29, 32 (Augustine lacks 12 and 29, Raban lacks 15, Hilary has only 12, 21, 32). The Catena is therefore harvested as a block at those seven keys rather than distributed per verse. Consequence for tiling: a tile containing one of those keys acquires eight patristic voices at once while the tiles between them have none, so patristic prevalence in a Gospel chapter is an artefact of which keys a tile happens to span. Any school-prevalence count over eastern and latin voices in the Gospels should be read with this in mind."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "21"
+      ],
+      "note": "Chrysostom label split confirmed a second time, after john 18: 'Chrysostom' (keys 1, 7, 12, 15, 21, 29, 32, Catena Aurea extracts) and 'John Chrysostom' (keys 1 and 21, the Homilies). Unlike john 18 the two label sets OVERLAP here, at keys 1 and 21, and the text differs at both -- so nothing is duplicated, but at those keys the catena presents one father as two independent witnesses. That makes the double-counting concrete rather than theoretical and strengthens the case for a label-normalisation table at harvest."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "15",
+      "verses": [
+        "4",
+        "17",
+        "19",
+        "36"
+      ],
+      "note": "Cyril of Jerusalem residue, third chapter confirmed (after matthew 18 and john 18). Keys 4, 17, 19 and 36 carry Catechetical Lecture fragments -- honouring the fathers of our flesh, the 'substantial bread' of the Lord's Prayer, Adam unclothed in Paradise, and the sufficiency of Blessed Paul's teaching -- none of which comments on its verse, and three open at a numbered section head. Lengths 193, 80, 147, 146 words. This is now a corpus-wide property of the Cyril of Jerusalem harvest in the Gospels rather than a per-chapter accident: he should be treated as residue wherever he is credited there unless a block proves otherwise."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "15",
+      "verses": [
+        "22",
+        "28"
+      ],
+      "note": "JFB residue at keys 22 and 28, stride 6, drawn from Matthew 13 -- the wheat and the tares, the burning before the housing, the separation by the Judge. The two blocks are BYTE-IDENTICAL: 744 characters each, SHA1 2951a0115da3. That is the third instance of the byte-identical duplicate-block class (after Gill at job 22 keys 5 and 11, and Cyril at matthew 18), and unlike the Augustine double-translation defect found at john 18 this one IS catchable by a hash comparison at harvest time. The block also repeats its own cross-reference '(See on Mt 13:39 )' twice internally, so there is duplication within the block as well as between the two keys."
     }
   ]
 }
