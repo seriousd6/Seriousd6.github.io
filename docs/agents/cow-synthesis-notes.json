@@ -105456,6 +105456,104 @@
         "14"
       ],
       "note": "ENTITY blind spot recurred and was handled by matching the source. The checker flagged Barada, Awaj and Agade in my draft because the source spells them with diacritics (Buraada, Nahr el-Awaaj, Agadee in the originals use circumflexes), and the ENT regex cannot match any name containing a non-ASCII letter, so the ASCII forms I had written read as ungrounded while the correct forms read as invisible. Fixed by writing the source's own spellings. Same fix as at 2samuel 20 for Bottcher; the standing proposal to widen the character class and fold diacritics on the source side would catch both directions."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "12",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21",
+        "27"
+      ],
+      "note": "JFB defect on a SIXTH consecutive chapter, back to stride 6 (keys 3, 9, 15, 21, 27), and with a finding that changes how the defect should be understood. All five blocks are displaced Judges 14-15 Samson material, and keys 9 and 15 are byte-identical (the riddle note repeated). The decisive point is the comparison with 2samuel 11, the chapter immediately before, whose three blocks carried Judges 13-14 Samson material. Adjacent chapters of 2 Samuel draw from ADJACENT wrong places in Judges. That is a systematic offset in the scrape, not random corruption, and it means the displacement is in principle predictable: a repair could compute where a chapter's blocks were taken from rather than merely discarding them. Running tally of stride: 1ch12 6, 2ki10 6, 1sa12 6, 1sa9 none, 2sa11 12, 2ch30 12, 2sa12 6. Declared in excluded_voices on the five spans covering those keys; 463 of 18,265 usable source words removed."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "15",
+        "26"
+      ],
+      "note": "The appended-Concise defect in all three Henry blocks again (keys 1, 15, 26), as in 2chronicles 30 and 2samuel 11. Three chapters running with every Henry block affected. The tails are condensed restatements in a different register, and on this chapter they are long: the key-1 block runs about 3,100 words of which roughly 500 are the duplicate tail. Treat Henry's usable-word count as inflated by about a sixth wherever his blocks are section-filed."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "12",
+      "verses": [
+        "31"
+      ],
+      "note": "The chapter's hardest verse produces a four-position disagreement in which the same single Hebrew letter is emended in OPPOSITE directions. Keil and Delitzsch and Ellicott both change it to agree with 1 Chronicles 20:3 and read torture ('he cut them with saws'); Clarke changes it the other way, noting that the milder word is the reading here, that this chapter's manuscripts show no variant favouring Chronicles, and that six or seven manuscripts collated by Kennicott carry the milder word even in Chronicles - concluding that David set the captives to forced labour and that 'sawing asunder, hacking, chopping, and hewing human beings have no place in this text'. Gill and Wesley take a third route, limiting the victims to the counsellors who abused the ambassadors. On the ethics, Henry and Wesley condemn David and tie the cruelty to his unrepentance, while Ellicott neither excuses nor condemns but historicises: 'David and his contemporaries took them as matters of course, without a suspicion that they were not in accordance with God's will.' All four positions and the emendation in both directions are recorded in the debates block, because a reader who meets only one of them will think the verse settled."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "12",
+      "verses": [
+        "13"
+      ],
+      "note": "Three incompatible answers to what 'thou shalt not die' remits, and the division does not follow school lines. Clarke denies any pardon is granted at all - 'Many have supposed that David's sin was now actually pardoned, but this is perfectly erroneous' - and reads the words as reprieve from temporal death only, to give time to repent; Wesley narrows it the same way, to David's own life. Ellicott makes the clause an assurance of forgiveness and nothing less, reasoning that as an absolute monarch David had no human sentence to fear, so the divine word matters as pardon rather than as rescue; Keil and Delitzsch gloss the verb as forgiving. Henry gives a third answer by extending the death instead of narrowing the pardon: not dying eternally. Clarke then turns Psalm 51 against the other side, arguing that if it was written after this interview David had not yet been pardoned when he composed it - the same psalm Gill and Wesley cite as proof of the confession's completeness."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "12",
+      "verses": [
+        "21"
+      ],
+      "note": "Clarke contradicts himself across six verses on the central question of the passage, and both statements are emphatic. At v16 he asks how David could pray at all 'after the solemn assurance that he had from God that the child should die', and answers that 'the justice of God absolutely required that the penalty of the law should be exacted; either the father or the son shall die. This could not be reversed.' At v22 he states the opposite as a general principle: David 'and indeed all others under the Mosaic dispensation, were so satisfied that all God's threatenings and promises were conditional, that even in the most positive assertions relative to judgments, etc., they sought for a change of purpose', and calls this 'the sole reason of David's importunity'. Both are recorded, the second with an explicit cross-reference to the first, because a synthesis that quoted only one would misrepresent him."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "12",
+      "verses": [
+        "7",
+        "9",
+        "13"
+      ],
+      "note": "Wesley reproduces Henry almost verbatim at three separate keys in this chapter: at v7 ('not as a petitioner for a poor man, but as an ambassador from the great God'), at v9 (the whole sequence on the despised word of promise and the polluted house), and at v11 (the oracle expressed darkly so its accomplishment should not be hindered). This is the second chapter in which I have found the pattern - 2samuel 11 had it at keys 2 and 15 - and it is now established well enough to state as a rule for this corpus: where Wesley and Henry agree verbatim, they are one witness, not two. Any voice-counting or consensus metric that treats them as independent will overstate agreement, and the schools block will show puritan-evangelical and wesleyan-arminian converging where in fact one is abridging the other. Handled here by attributing shared material to Henry and using Wesley only for what is his own, with the dependence noted in the prose where it bears on the reading."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "12",
+      "verses": [
+        "31"
+      ],
+      "note": "Chrome position: fifth chapter running on the LAST key. Ellicott's block at key 31 carries roughly 250 words of real content before about 940 words of StudyLight furniture. Tally: 1ch12 key 40 (last), 2ki10 key 36 (last), 1sa12 key 23 (NOT last), 1sa9 key 27 (last), 2sa11 key 27 (last), 2ch30 key 27 (last), 2sa12 key 31 (last). Six of seven on the last key; the one exception is why a stripper must key on the chrome's own markers rather than on position."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "12",
+      "verses": [
+        "31"
+      ],
+      "note": "The 650-word cap forced out real content for the second chapter running, and in the same place - the chapter's closing verse, where every voice delivers a summation. On v31 the cap required eight trim rounds and ultimately cost Clarke's argument about English translation generally ('Most of the advantages which our unbelievers have appeared to have over certain passages of Scripture, have arisen from an inaccurate or false translation of the terms in the original'), which is a substantive methodological statement, not padding. The same thing happened on 2chronicles 30 v27, where the cap cost Clarke's named polemic against David's apologists. Two chapters, two closing verses, two losses of Clarke's best material - because Clarke's habit is to put his longest reflection last. This is now a concrete argument for letting the band scale with usable source words, and specifically for a higher ceiling on a chapter's final verse."
+    },
+    {
+      "at": "2026-11-09",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "12",
+      "verses": [
+        "7"
+      ],
+      "note": "Two over-resolutions in one sentence, both caught by the entity check. Ellicott cites four passages for prophetic rebukes of royal offenders (1 Samuel 15:21-23, 1 Kings 21:21-24, Isaiah 7:3-25, Matthew 14:3-5) and names none of the people in them; I wrote 'from Samuel's words to Saul to the Baptist's to Herod', inventing two names from the last citation. The first replacement then introduced a third flag of the same kind ('Testaments') by reaching for a collective term the source does not use. Fixed to 'citing four such passages without expounding any of them'. This confirms the corollary filed on 2chronicles 30: the rule is not only that bare citations must not be resolved to names, but that no collective or adjectival noun may be coined from what the source leaves in another form. Twelve instances of this class across the run, every one caught by the checker and none by me on first pass."
     }
   ]
 }
