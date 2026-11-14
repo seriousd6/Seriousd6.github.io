@@ -105716,6 +105716,162 @@
         "10"
       ],
       "note": "ENTITY flag judged a false positive. The checker flagged Ephraem Syrus in both prose and tags because Keil and Delitzsch abbreviate the name here as 'Ephr. Syr.', and the pool is this chapter's source plus the KJV chapter only. The same commentators spell it in full in 2 Kings 5 ('as Ephraem Syrus and many others suppose'), landed earlier in this same session, so the expansion is the source's own form elsewhere in the same work and not an editorial invention. Kept the full form. This is the abbreviation-expansion case the notebook already lists under 'expand Catena abbreviations'; the fix would be to pool a per-commentator name table rather than per-chapter text."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29",
+        "35"
+      ],
+      "note": "JFB residue: all six JFB blocks in this chapter comment on Judges 17-19 (Leshem and Dan, the armed expedition of the six hundred, the robbers of Micah's chapel, 'from Dan to Beer-sheba', the Levite's concubine), not on 2 Samuel 15. Stride 6, offset 5, and the walk is COMPLETE: keys 5, 11, 17, 23, 29, 35. JFB excluded from all five tiles. Offset remains unpredictable across chapters (2 at 1kings 1/2/9/15, 3 at 1kings 16, 4 at 2samuel 2 and 2chronicles 34 and 1kings 22, 5 at 2kings 5 and here)."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "11",
+        "17"
+      ],
+      "note": "Byte-identical duplicate block: the JFB text at key 11 and key 17 is the same 332 words, SHA1 e9bc3c8e4a. FIFTH instance of this class in the corpus (Gill at job 22 keys 5/11; Cyril at matthew 18; JFB at matthew 15 keys 22/28; JFB at 1kings 15 keys 20/26; JFB here). All three JFB instances sit at stride-6 residue walk positions, so a hash comparison at HARVEST time would catch a measurable share of the residue itself. Raised as a notebook item for the driver; not actioned here."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "34"
+      ],
+      "note": "Chapter-final Ellicott chrome at key 34: a 1,106-word block of which roughly 120 words are commentary and the rest is a full StudyLight page dump (stylesheet, nav tree, 66-element book_data array, live Stripe publishable key). TWELFTH instance of the class; as always it sits on that commentator's last block in the chapter, so it is strippable by pattern."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "24",
+        "31"
+      ],
+      "note": "Henry's section heads give the tiling again — SEVENTEENTH consecutive chapter. His five heads fall at keys 1, 7, 13, 24, 31 and the tiles were cut there unaltered: vv.1-6, 7-12, 13-23, 24-30, 31-37. Clarke's chapter argument sits at key 1 (TENTH consecutive chapter). Henry appears in only three of the five tiles because his key-13 head covers vv.13-23 but his prose there is wholly taken up with the ark and the ascent, which fell to tiles 3 and 4."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "13",
+        "24"
+      ],
+      "note": "Correction to the note recorded immediately before this one: Henry DOES head blocks at keys 13 and 24, so the reason given there for his absence from tiles 3 and 4 was wrong. The real reason is budget. Both tiles came in at the 650-word ceiling carrying the four-way dispute on why David fled (Clarke, Wesley, K&D, Ellicott) and the five-way dispute on why the ark went back (Gill, Clarke, Wesley, Ellicott, K&D) respectively, and Henry's material at those two heads — chiefly devotional application overlapping the others — was what got cut. The prose is faithful to every voice it names, but tiles 3 and 4 under-represent the chapter's source by one commentator each. Flagged rather than fixed: rebuilding two finished grade-A tiles to admit a voice whose substance the others already carry is a worse trade than recording it."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "7"
+      ],
+      "note": "The forty years of v.7 is a five-way textual crux and all five positions are recorded in the tags: Ellicott 'certainly incorrect', reads four with the Syriac, most Vulgate MSS and Josephus; Gill canvasses six reckonings, finds none satisfactory and is tempted to read four; Clarke notes no Hebrew MS supports four and prefers 'forty DAYS' from two of Kennicott's manuscripts; K&D call it altogether unsuitable and reject the Rabbinic terminus a quo of Saul's accession (also found in the marginal note of Cod. 380 of De Rossi); Henry and Wesley keep forty and date it from the change of the government into a monarchy, about ten years before David's accession, putting the revolt in his thirtieth year."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "18"
+      ],
+      "note": "The Gittite identity dispute: K&D and Ellicott hold the six hundred are the old Hebrew companions in arms from the flight from Saul (K&D call the name 'strange' since actual Philistines cannot be meant; Ellicott traces the body through Keilah, the wilderness, Gath, Ziklag and Hebron and supposes them the later mighty men); Wesley reads them as Philistines by birth won to the true religion, which is why their leader is called a stranger and they his brethren; Clarke reports them as generally supposed proselytes with their leader perhaps a banished son of the king of Gath. K&D also reject Thenius's hostage reading as founded on a misreading."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "19"
+      ],
+      "note": "'Return to thy place, and abide with the king' — two flatly opposed readings, both carried in tile 3. Wesley takes 'the king' of Absalom, now made king, with whom a settled citizen of Jerusalem may properly remain. Ellicott denies that David either recognises his son as king or speaks ironically: reading the clause as 'a stranger and an exile at thy place', he has the king tell a foreigner that the quarrel is no concern of his and that he may serve whoever holds power in fact."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "34"
+      ],
+      "note": "The moral verdict on David's counsel to Hushai is unanimous in condemning and three-way in mitigating. Ellicott: 'David here counsels fraud and treachery... while we cannot too strongly condemn such a stratagem, two things are to be remembered' — that like frauds in war and rebellion have been practised in all ages, and that David and Hushai 'had but slender knowledge of the Divine revelation of truth and righteousness which enables us to condemn them'. Wesley: 'David's suggesting this crafty counsel must be reckoned amongst his sins. Nevertheless God was pleased to direct this evil advice to a good end.' Henry refuses any justification as a stratagem of war and allows only that a son in arms against his father must stand on his guard against all mankind. Recorded because an unanimous condemnation of the protagonist by all three traditions is rare in this corpus."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "7"
+      ],
+      "note": "Wesley-Henry near-verbatim borrowing, two more instances (ELEVENTH and TWELFTH logged). At key 1 both say it is 'the way of turbulent and aspiring men to reproach the government they are under' and that even David could not escape the worst of censures; at key 7 both say it is 'no new thing for good men and good things to be used by designing men to put a colour upon bad practices'. Handled by the standing rule: record the view once, name both, and do not let the pair alone carry prevalence above 'single' — here both sit in schools that already have a second voice, so prevalence is unaffected."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "rejected",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "8"
+      ],
+      "note": "Dropped from the prose for space and recorded here: Clarke's emendation at v.8. He argues Geshur, the country of Talmai, was not in Syria but lay south of Canaan in or near Edom, and that the Hebrew Aram (Syria) should be read Edom — daleth confused with resh, the Syriac and Arabic versions reading Edom. The tile carried the forty-years crux and the vow instead; the geographical emendation is the better candidate for a later polish pass if one is wanted."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "13"
+      ],
+      "note": "Clarke's seven reasons for so general a defection (key 13) are the only attempt by any witness in this chapter to account for the scale of the revolt rather than its mechanics: the king old and unable to attend to justice; no judges properly appointed; Joab's power grown oppressive beyond the reach of law; partisans of Saul's house still holding the crown unfairly got; the king under God's displeasure for Bathsheba and Uriah; every state having men who can never rest; and the son the undisputed heir, people being readier to hail the rising than the setting sun. Carried whole into tile 3 and logged as an outlier."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "31"
+      ],
+      "note": "Henry Exposition+Concise doubling confirmed again at key 31 — SEVENTH chapter. The 840-word block runs his Exposition and then re-states it in the Concise form ('David prays not against Ahithophel's person, but against his counsel. He prayed this, in firm belief that God has all hearts in his hand, and tongues also. But we must second our prayers with endeavours...'), closing with the Concise paragraph on the Son of David. Roughly 150 of the 840 words are the doubled tail. It inflates the fidelity denominator without adding a view; the entries' expansion ratios (0.12-0.21) are therefore understated rather than overstated, so nothing is masked, but the doubling belongs in the denominator-cleaning pass already on the notebook."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "24",
+        "31"
+      ],
+      "note": "All five entries self-graded A. Expansion by tile: 1-6 0.20x (649/3,244), 7-12 0.17x (649/3,944), 13-23 0.12x (650/5,432), 24-30 0.18x (650/3,560), 31-37 0.21x (649/3,139). Heavy compression throughout and far below STRETCH_RATIO 6.0, so none of it is flagged — but the 0.12x of tile 3 is the lowest I have produced, and it is a genuine selection: eleven verses carrying three separate multi-way disputes had to be cut to the window. What was dropped is recorded in the sibling notes for this chapter rather than lost."
     }
   ]
 }
