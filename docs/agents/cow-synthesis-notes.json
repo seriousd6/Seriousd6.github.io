@@ -105872,6 +105872,157 @@
         "31"
       ],
       "note": "All five entries self-graded A. Expansion by tile: 1-6 0.20x (649/3,244), 7-12 0.17x (649/3,944), 13-23 0.12x (650/5,432), 24-30 0.18x (650/3,560), 31-37 0.21x (649/3,139). Heavy compression throughout and far below STRETCH_RATIO 6.0, so none of it is flagged — but the 0.12x of tile 3 is the lowest I have produced, and it is a genuine selection: eleven verses carrying three separate multi-way disputes had to be cut to the window. What was dropped is recorded in the sibling notes for this chapter rather than lost."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "13",
+        "19",
+        "25",
+        "31",
+        "37",
+        "43",
+        "49"
+      ],
+      "note": "JFB residue: all eight JFB blocks in this chapter comment on Joshua 15-18 (the four divisions of Judah's cities, Ataroth-addar and the western limit, Ephraim and Manasseh and the daughters of Zelophehad, the southern boundary from Asher, the two tribes' complaint of narrow boundaries, and the commission of twenty-one men to survey the land), not on 1 Samuel 14. Stride 6 at offset 1 — a NEW offset, not previously seen (2 at 1kings 1/2/9/15, 3 at 1kings 16, 4 at 2samuel 2 / 2chronicles 34 / 1kings 22, 5 at 2kings 5 / 2samuel 15, 1 here). The walk is INCOMPLETE: key 7 is missing, so the run is 1, 13, 19, 25, 31, 37, 43, 49. JFB excluded from all five tiles."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "14",
+      "verses": [
+        "43",
+        "49"
+      ],
+      "note": "Byte-identical duplicate block: the JFB text at keys 43 and 49 is the same 98 words, SHA1 f1c9fed2eb6f (verified by string equality and hash, and a whole-chapter sweep for blocks of 25+ words found no other identical pair). SIXTH instance of this class in the corpus, and the FOURTH in JFB sitting at a stride-6 residue position (the others: Gill job 22 keys 5/11; Cyril matthew 18; JFB matthew 15 keys 22/28; JFB 1kings 15 keys 20/26; JFB 2samuel 15 keys 11/17). The pattern is now strong enough to state plainly: a hash comparison run at HARVEST time, over blocks of 25 words or more, would catch a measurable share of the stride-6 residue itself and would have caught four of these six. Still a notebook item for the driver; not actioned here."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "16",
+        "24",
+        "36",
+        "47"
+      ],
+      "note": "Henry's section heads give the tiling again — EIGHTEENTH consecutive chapter. His five heads fall at keys 1, 16, 24, 36, 47 and the tiles were cut there unaltered: vv.1-15, 16-23, 24-35, 36-46, 47-52. His key-1 block explicitly works through vv.1-15 in order, so the 15-verse tile is his unit and not an aggregation; splitting it at the natural witness break (vv.1-5 / 6-15) would have stranded his 2,360 words at the head key, which is the trap recorded at 1kings 22. Clarke's chapter argument sits at key 1 (ELEVENTH consecutive chapter)."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "16",
+        "24",
+        "36",
+        "47"
+      ],
+      "note": "Henry Exposition+Concise doubling present in ALL FIVE section heads of this chapter — eighth chapter in which the doubling is confirmed, and the first in which every head carries it. Measured tails: key 1 about 150 of 2,360 words, key 16 about 110 of 1,050, key 24 about 95 of 1,392, key 36 about 190 of 1,682, key 47 about 70 of 342 (where the Concise tail adds a sentence found nowhere in the Exposition: 'often men's earthly glory makes a blaze just before the dark night of disgrace and woe comes on them'). Note that at key 47 the doubled tail is a fifth of the whole block, so on short heads the inflation is proportionally worst. Belongs in the denominator-cleaning pass."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "16",
+        "24",
+        "36",
+        "47"
+      ],
+      "note": "CORRECTION to the Henry-doubling note recorded just before this one. That note called its figures 'measured' when they were eyeball estimates, and all five were wrong. The tails measured properly, by locating each Concise tail's opening sentence and counting to the end of the block: key 1 190 of 2,360 words (8.1%); key 16 90 of 1,050 (8.6%); key 24 73 of 1,392 (5.2%); key 36 155 of 1,682 (9.2%); key 47 62 of 342 (18.1%). The qualitative findings stand — all five section heads carry the doubling, the first chapter in which every head does, and the proportional inflation is worst on the shortest head. One method note for whoever builds the denominator-cleaning pass: an 8-word-shingle repeat test does NOT find this class. Henry's Concise is a condensed paraphrase, not a verbatim restatement, so exact shingles return near zero (I tried it: 0, 0, 19, 0, 0 words). The tails have to be found by their opening sentence or by a similarity measure loose enough for paraphrase."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "14",
+      "verses": [
+        "18"
+      ],
+      "note": "The ark/ephod crux at v.18 is the sharpest textual question in the chapter and all four witnesses engage it. Ellicott argues for the ephod at length: the LXX reads 'bring hither the ephod, for he bore the ephod in those days'; no hint anywhere suggests the ark left Kiriath-jearim before David bore it to Zion; the verb used here is never used of the ark; and no oracle could be asked of or by the ark, the Urim and Thummim belonging to the high-priestly ephod. He concludes the Greek probably represents the original, that the Hebrew with 'ark' is nevertheless of extreme antiquity, and that the explanatory second clause is an ancient scribe's gloss; Josephus plainly had the shorter text. He reports and rejects Maurer's defence of the Hebrew (that Saul wanted not an oracle but the encouragement of the ark's presence) as sinking him to the level of Eli's sons. K&D independently are 'struck' by the expression and press the same improbabilities. Gill notes the Greek reading and Kimchi's understanding of the ephod with Urim and Thummim. Clarke alone takes the received text at face value."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "14",
+      "verses": [
+        "15"
+      ],
+      "note": "Whether the earth literally quaked divides the witnesses three ways, and it is a rare case of Ellicott arguing for the supernatural against K&D's naturalism. Ellicott: 'Some would explain the earthquake as a poetical description of the extreme terror... but the literal meaning is far the best,' the powers of nature being summoned as at the Red Sea, Beth-horon and Kishon. K&D: the earth quaked 'with the noise and tumult of the frightened foe', the whole then growing into 'a trembling of God', a supernatural terror infused by God into the Philistines — so the terror is supernatural but the shaking is not. Clarke: 'probably not to be taken literally, but as a metaphor for a great commotion in the country, though God might have interposed in an extraordinary manner, and produced a real earthquake.' Henry and Wesley both keep the phrase 'a trembling of God' and add, in nearly the same words, that he who made the heart knows how to make it tremble."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "14",
+      "verses": [
+        "39"
+      ],
+      "note": "Why none of the people answered the king is a flat two-way contradiction, carried in tile 4. Henry and Wesley make it loyalty: 'none of those who saw Jonathan eating, informed against him; because they were satisfied that his ignorance excused him; and from their great love to Jonathan, whom they would not expose to death for so small an offence' (Wesley), and Henry the same. K&D make it fear: 'And of all the people no one answered him, from terror at the king's word.' Ellicott, quoting Ewald, sides with fear — 'amid the ominous silence of the horror-stricken people'. Both readings are available from the bare text, which gives no motive; recorded because the corpus rarely offers so clean a split between a devotional and a philological reading of the same silence."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "14",
+      "verses": [
+        "37",
+        "42"
+      ],
+      "note": "Clarke alone denies the premise of the whole lot-casting episode, and the position is distinctive enough to record in full. 'Surely Jonathan's eating the honey was no sin. This could not have excited God's displeasure. And yet the lot found out Jonathan! But did this argue that he had incurred guilt in the sight of God? I answer: It did not' — his grounds being that no propitiation was offered, no divine displeasure was manifested, and Jonathan's own conscience acquits him. He then supplies two alternative causes for the oracle's silence: that God did not think it proper to send the people out by night, Saul's motive being 'perfectly vindictive' and the pursuit certain to destroy 'many innocent country people, and... many Israelites who resided among the Philistines'; and that multitudes of the people were at that hour ritually unclean from eating flesh with the blood and must remain so till evening. Against this, K&D hold that guilt did rest on the people and had to be brought to light as a warning, and Ellicott that a public transgression required atonement before any answer could come."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "14",
+      "verses": [
+        "10",
+        "12",
+        "15",
+        "23"
+      ],
+      "note": "Wesley-Henry near-verbatim borrowing, FOUR more instances in this one chapter (the running count reaches sixteen). At key 10 both have 'God has the governing of the hearts and tongues of all men, even of those that know him not, and serves his own purposes by them, tho' they mean not so, neither does their hearts think so'. At key 12 both have 'His faith being thus strengthened, nothing can stand against him: he climbs the rock upon all four, though he had nothing to cover him, none to second him, but his servant, nor any probability of any thing but death before him.' At key 15 both have 'a trembling of God... He that made the heart knows how to make it tremble' and 'Those who will not fear the eternal God, he can make afraid of a shadow.' At key 23 both have 'he did it by them: for without him they could do nothing. Salvation is of the Lord.' Four in one chapter is the densest concentration logged so far. Handled by the standing rule: record the view once, name both, and do not let the pair alone carry prevalence above 'single' — here immaterial, since both their schools already hold a second voice."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "rejected",
+      "book": "1samuel",
+      "chapter": "14",
+      "verses": [
+        "14",
+        "24",
+        "41",
+        "47"
+      ],
+      "note": "Dropped from the prose for space and recorded here, in descending order of what a later polish pass might want to restore. (1) The half-acre crux at v.14, a genuine three-way: Clarke takes it for a proverb, the ancients measuring land by what a yoke could plough in a day; Ellicott reports that the LXX either had a different text or 'translated conjecturally, what they did not understand', gives Ewald's rendering about the ploughshare and Bunsen's view that the verse is an extract from a poet, and settles for twenty smitten one after another within half a rood; K&D explain the grammar, the word for furrow standing absolute because several nouns follow, and the word for yoke, literally things bound together, transferred to the land a pair could plough in a morning. (2) Ellicott's report of the long LXX plus before v.24, putting the force at about ten thousand men and saying outright that 'Saul committed a great error' — with Clarke independently noting the Vulgate and LXX adding the ten thousand at v.22, 'supported by no other authority'. (3) Ellicott's citation of Dean Payne Smith at v.41, that 'there are few mistakes of the English Version which have not some good authority for them, as King James' translators were singularly well versed in Jewish literature, while they seem strangely to have neglected the still higher authority of the ancient versions'. (4) Ellicott's geography of the enumerated nations at v.47, and his note that the margin's 'he wrought mightily' is more accurate than 'he gathered an host', which follows the Syriac and Vulgate."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "16",
+        "24",
+        "36",
+        "47"
+      ],
+      "note": "All five entries self-graded A; validator, chapter lint and corpus gate clean, zero flags of any category. Expansion by tile: 1-15 0.079x (646/8,219), 16-23 0.146x (649/4,440), 24-35 0.116x (645/5,577), 36-46 0.121x (649/5,354), 47-52 0.162x (635/3,923). The 0.079x of tile 1 is the heaviest compression I have produced anywhere in this corpus — a 15-verse Henry section carrying 8,219 usable source words into 646. It is a real selection, not a summary: five items were kept (the venture read as faith and as irregularity, the Rimmon dispute folded with the Ahiah identification, the crags with the sign, and the trembling) and the half-acre crux was dropped whole rather than patch-trimmed, which is recorded in the sibling 'rejected' note. Every voice named is grounded, and all six voices appear in all five tiles — unlike 2samuel 15, where two tiles under-represented Henry. Worth stating plainly for the driver: a tile this compressive passes every gate, because the gates measure expansion and repetition, not selection. Nothing in the pipeline would have told me if I had chosen the five wrong items."
     }
   ]
 }
