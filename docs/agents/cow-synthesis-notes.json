@@ -106023,6 +106023,111 @@
         "47"
       ],
       "note": "All five entries self-graded A; validator, chapter lint and corpus gate clean, zero flags of any category. Expansion by tile: 1-15 0.079x (646/8,219), 16-23 0.146x (649/4,440), 24-35 0.116x (645/5,577), 36-46 0.121x (649/5,354), 47-52 0.162x (635/3,923). The 0.079x of tile 1 is the heaviest compression I have produced anywhere in this corpus — a 15-verse Henry section carrying 8,219 usable source words into 646. It is a real selection, not a summary: five items were kept (the venture read as faith and as irregularity, the Rimmon dispute folded with the Ahiah identification, the crags with the sign, and the trembling) and the half-acre crux was dropped whole rather than patch-trimmed, which is recorded in the sibling 'rejected' note. Every voice named is grounded, and all six voices appear in all five tiles — unlike 2samuel 15, where two tiles under-represented Henry. Worth stating plainly for the driver: a tile this compressive passes every gate, because the gates measure expansion and repetition, not selection. Nothing in the pipeline would have told me if I had chosen the five wrong items."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "22",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "29"
+      ],
+      "note": "JFB is defective at all four keys where it appears, and the provenance is Chronicles throughout: keys 5 and 11 carry a byte-identical thanksgiving-prayer block (1 Chron 29), key 17 the hand-under-Solomon custom (2 Kings 10:15 / 1 Chron 29:26-30), and key 29 the Solomon-at-Gibeon passage (2 Chron 1), which even retains the page header fragment 'Commentary by Robert Jamieson'. Stride between affected keys is 6, 6, 12. Eighth consecutive chapter carrying this defect; declared in excluded_voices on spans 5, 10-11, 16-17 and 29-30."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "22",
+      "verses": [
+        "30"
+      ],
+      "note": "Ellicott's block at key 30 is contaminated with roughly 900 words of raw page chrome from the scrape — CSS, JavaScript, the site's whole book/chapter navigation table and footer boilerplate — with his actual 70-word comment buried at the front. This inflates the usable-source-words figure for span 29-30 (reported 1,919 before exclusion, 2,136 by the fidelity reader) and would defeat any ratio check keyed to it. A chrome stripper keying on the markers (style rules, 'StudyLight.org', 'document.addEventListener', the book_data array) would recover the real figure."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "22",
+      "verses": [
+        "18"
+      ],
+      "note": "Ellicott mis-cites at key 18: he says Eliphaz 'adopts the very formula of repudiation Job had himself used (Job 14:16)', but the formula ('the counsel of the wicked is far from me') is at Job 21:16, which both Clarke and Wesley cite correctly in the same verse. Third chapter in which Ellicott has been found mis-citing. Left uncorrected in the prose; his point is used without the reference."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "22",
+      "verses": [
+        "1"
+      ],
+      "note": "VOICE_LABELS registry gap with a concrete casualty. Gregory the Great is correctly marked up at key 1 ('Gregory the Great:') and contributes 303 words, but QA.split_voices returns None for the segment because VOICE_LABELS holds 'Gregory' and not the full label. The material is usable and was declared (voices is not registry-validated) under the latin-fathers school, but the voice is invisible to every counting and auditing tool that goes through split_voices. His text is also OCR-damaged ('even taken he has perfect knowledge f 1. By comparison with God, our knowledge is ignorance, i.')."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "22",
+      "verses": [
+        "1",
+        "5",
+        "15",
+        "21"
+      ],
+      "note": "Henry files by section at four keys, and the blocks are large: key 21 is 3,117 words covering vv21-30, key 15 is 1,487 words covering vv15-20, key 5 is 2,136 words covering vv5-14, key 1 is 965 words covering vv1-4. Per-key source resolution therefore over-counts the section head (v21 reports 3,654 usable words for a single-verse span) and starves every later verse in the section. The prose distributes his material to the span it actually belongs to, which is the only way the chapter can be written at all, but no measurement reflects that."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "22",
+      "verses": [
+        "3",
+        "20",
+        "21"
+      ],
+      "note": "Wesley is verbatim Henry at three separate keys in this chapter: key 3 ('God needs not us, or our services. We are undone, forever undone without him: but he is happy, forever happy without us') reproduces Henry's key-1 sentence; key 20 ('thou mayest find here and there an instance of a wicked man dying in peace. But what is that to the two great instances...') reproduces Henry's key-15 remark; key 21 ('It is our honour, that we are made capable of this acquaintance, our misery that by sin we have lost it; our privilege, that through Christ we may return to it') reproduces Henry's key-21 sentence. Fourth chapter in which this has been found. Any consensus or voice-counting metric treating Wesley and Henry as independent overstates agreement, and the prose attributes such sentences to Henry, who is the source."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "22",
+      "verses": [
+        "1",
+        "3",
+        "5",
+        "6",
+        "8",
+        "10",
+        "12",
+        "15",
+        "16",
+        "18",
+        "20",
+        "21",
+        "22",
+        "23",
+        "25",
+        "27",
+        "29"
+      ],
+      "note": "First chapter in this run with zero ENTITIES signals across all seventeen entries. What produced it was a deliberate rule applied while drafting rather than in correction: never resolve a bare citation to a name, and never nominalise or coin a collective or adjectival form the source leaves in another grammatical shape. Concretely, 'Arab.' in Keil and Delitzsch was not rendered 'Arabic' at span 1-2 (though Clarke spells it out at span 29-30, where it is therefore safe), 'Hiph.' was given as 'the causative form' rather than 'Hiphil', and the Hebrew and Greek of Clarke's and Keil's text-critical notes were paraphrased rather than transliterated. Worth making explicit in the prose rules."
+    },
+    {
+      "at": "2026-11-14",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "22",
+      "verses": [
+        "3",
+        "22"
+      ],
+      "note": "Two spans came out at prose/source ratios of 1.15 and 1.00 — expansion, not compression — while spans 5, 15 and 21 came out at 0.26 to 0.30. The cause is not thin sources but filing: at vv3-4 and v22 Gill and Keil are truncated at 200 words per key and Henry's material for those verses sits under a different key, so span_source_words sees only a fraction of what the prose is actually drawing on. The 350-650 band is insensitive to both effects, which is why the same floor produces padding risk at one end of a chapter and loses real content at the other."
     }
   ]
 }
