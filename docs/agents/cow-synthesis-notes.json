@@ -106925,6 +106925,86 @@
         "22"
       ],
       "note": "Calibration, fourth measurement, and the sentence-count rule works only when actually applied. First-pass validator counts: 653, 518, 708, 592, 750, 698, 477, 631. Of the five entries aimed at the 650 cap, two landed in band first time (653, 631) and three overshot (708, 750, 698) -- and the three overshoots are exactly the entries where I wrote more than the planned seventeen sentences, having stopped counting part way through a long paragraph. The predictor itself (about 36 validator words per sentence in this register, so 17 sentences for a 650 target) held in every case. Operational fix for the next chapter: count the sentences in the draft BEFORE measuring words, and cut a sentence rather than trimming eight of them."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "17",
+      "verses": [
+        "9",
+        "15",
+        "21",
+        "27"
+      ],
+      "note": "JFB cross-reference defect, thirteenth consecutive chapter. Intruders at keys 9, 15, 21 and 27 -- all congruent to 3 modulo 6, the same phase as 1samuel 28. Four different fragments (150, 72, 199 and 32 words, distinct md5s) which are sequential slices of ONE continuous foreign passage, this time Judges 20: the assembly called after the outrage at Gibeah, the husband's recital, the unanimity of the tribes, and their valour. Phases recorded so far: 3 (1samuel 28), 5 (2kings 18), 5 (2samuel 19), 2 (1samuel 19), 3 (2samuel 17) -- so the modulus is fixed at 6 and the phase varies per chapter without obvious pattern. Foreign passages so far: Judges 5, 2 Samuel 14, Judges 21, Joshua 22, Judges 20. The lattice is fully occupied here (9, 15, 21, 27 are every position of phase 3 within 29 keys)."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "17",
+      "verses": [
+        "29"
+      ],
+      "note": "Page-chrome contamination at the chapter's final verse, SIXTH consecutive chapter, always Ellicott, always the last key. The key-29 block runs 1,121 words of which about 45 are real commentary -- one note on the last item in the provision list, a word found nowhere else, with the Chaldee, the Latin and a Greek version compared. Everything after that is StudyLight navigation, copyright text and CSS. Six for six: this is not incidental, and span 27-29 is accordingly measured against about a thousand words of markup."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "17",
+      "verses": [
+        "2",
+        "14",
+        "23",
+        "29"
+      ],
+      "note": "Wesley absorbs Henry systematically, and this chapter makes the borrowing traceable. Four instances here (keys 2, 14, 23 and 29), on top of two in 1samuel 19 (keys 6 and 8). At 1samuel 19:6 he attributes it -- 'God,' says Mr. Henry, 'inclined the heart of Saul' -- and nowhere else does he. At key 14 Henry's sentence ends 'laughs at men's projects against his anointed' and Wesley's ends 'against his children': one substituted word in an otherwise verbatim passage, which is what proves the direction of the borrowing. At key 23 Henry's paired sentences on contempt poured upon the wisdom of man and honour done to the justice of God reappear almost whole; at key 29 so does his sentence on God making up to his people from strangers the comfort they are disappointed of at home. Two consequences for the writer. Reporting Wesley and Henry as independent witnesses overstates the agreement of the catena. But where Henry's block is filed in an earlier span, Wesley's note is sometimes the ONLY carrier of Henry's thought in the span that needs it, as in entries 21 and 27 here."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "15",
+        "22"
+      ],
+      "note": "Henry's filing, third chapter running: three blocks for 29 verses, at keys 1 (covering vv1-14), 15 (vv15-22) and 22 (vv22-29), with v22 covered twice. Four of the nine spans name no Henry, not because he is silent on those verses but because his words sit in a block filed against an earlier one. The pattern across chapters is now consistent enough to state: Henry's exposition is filed at the first verse of a SECTION, and his sections do not coincide with pericopes, so per-key resolution both over-counts him at the section head and reports him absent everywhere else."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "17",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke's chapter-head synopsis filed as verse commentary, third chapter in a row (2samuel 19, 1samuel 19, now 2samuel 17). His key-1 block opens with an outline of all 29 verses -- Ahithophel counsels, Hushai counsels, the priests are informed, David crosses, Ahithophel hangs himself, Absalom follows, friends meet David -- and only then comments on the verse. The 159 words are counted as Clarke on v1. A detector is cheap: a key-1 block whose text enumerates later verse numbers in sequence is an argument, not a comment, and should be split off before the word count."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "17",
+      "verses": [
+        "15",
+        "27"
+      ],
+      "note": "Two ENTITIES signals, both the same class as the Talmudic and Whitsuntide cases: a form the source does not use. (1) 'Elizabethan' was my own category word for Becke's Bible of 1549 and Cardmarden's of 1566, which Clarke names by printer and date; fixed by naming them as he does. (2) 'Syriac' expands Ellicott's abbreviation 'Syr.'; fixed by dropping that version from the sentence, as I earlier declined to render 'Arab.' as Arabic. The rule now has four heads: do not adjectivise a name, do not generalise it, do not supply a category word the source does not use, and do not expand an abbreviation the source leaves short."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "15"
+      ],
+      "note": "Calibration, fifth measurement, and the procedure is now settled. First-pass counts: 781, 508, 503, 560, 708, 411, 667, 506, 639. The only two overshoots were the entries where I wrote 21 and 19 sentences against a plan of 17 -- counting sentences before measuring words caught the rest. Second and more useful finding: for a span under about 1,100 usable source words the binding constraint is not the 650 cap but GRADE A compression, which needs prose at or under roughly 0.58 of the usable source. Five entries here were written to a target computed that way (about 410 to 560 words) and every one landed in band at grade A on the first pass. The target must therefore be computed from the span's source size before drafting, not assumed to be 650."
     }
   ]
 }
