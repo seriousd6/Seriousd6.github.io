@@ -107005,6 +107005,134 @@
         "15"
       ],
       "note": "Calibration, fifth measurement, and the procedure is now settled. First-pass counts: 781, 508, 503, 560, 708, 411, 667, 506, 639. The only two overshoots were the entries where I wrote 21 and 19 sentences against a plan of 17 -- counting sentences before measuring words caught the rest. Second and more useful finding: for a span under about 1,100 usable source words the binding constraint is not the 650 cap but GRADE A compression, which needs prose at or under roughly 0.58 of the usable source. Five entries here were written to a target computed that way (about 410 to 560 words) and every one landed in band at grade A on the first pass. The target must therefore be computed from the span's source size before drafting, not assumed to be 650."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "5",
+      "verses": [
+        "2",
+        "8",
+        "14"
+      ],
+      "note": "JFB residue: THE FIRST TRIPLE BYTE-IDENTICAL BLOCK IN THE RUN, and the seventh instance of that class. All three JFB blocks in this chapter (keys 2, 8, 14) are the same 66 words, SHA1 519371662e6d, verified by string equality and by hash, and a whole-chapter sweep over every block of 25 words or more found no other duplicate pair. Previous instances of the class were all PAIRS (Gill at job 22; Cyril at matthew 18; JFB at matthew 15, 1kings 15, 2samuel 15, 1samuel 14); a triple is new. Five of the seven are now JFB at stride-6 positions, so a harvest-time hash comparison over blocks of 25 words or more would have caught five of seven. The content is JUDGES 9 — Gaal at Shechem: a boastful, impudent and cowardly person totally unfit to be a leader in a revolutionary crisis, drawn into an ambush and defeated, the city destroyed and strewn with salt, the people taking refuge in the stronghold which was set on fire. Stride 6, offset 2; key 20, the fourth expected position, carries no JFB block, so the harvest is partial as well as misplaced. Excluded from the three tiles that span these keys; the vv.17-25 tile needs no exclusion."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "5",
+      "verses": [
+        "2",
+        "8",
+        "14"
+      ],
+      "note": "THE JUDGES-RUTH DONOR PATTERN NOW HOLDS OVER FOUR CONSECUTIVE CHAPTERS, which is worth stating more firmly than before but is still not a corpus-wide claim. The misplaced JFB text has come from: Judges 19 at 2samuel 16, Judges 6 at 1samuel 30, Ruth 2 at 2samuel 21, and Judges 9 here. I floated a Judges-only hypothesis at 1samuel 30 and recorded its falsification at 2samuel 21 when the donor turned out to be Ruth; the surviving formulation is that the donor stream lies in the JUDGES-RUTH REGION, which is adjacent in canonical order, rather than in any single book. Four for four. What would settle it is a sweep of the residue CONTENT (not just the stride) across the chapters where residue was already logged, which I have not done and am not actioning unilaterally. If it holds corpus-wide it would mean the stride-6 residue is a single mis-keyed harvest of Judges and Ruth bleeding forward into Samuel and Kings, which is a much more tractable defect than scattered misalignment."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "5",
+      "verses": [
+        "25"
+      ],
+      "note": "SIXTEENTH chapter-final chrome, 984 of 2,083 words at key 25, with the same measurement consequence recorded at 1samuel 30 key 31 and 2samuel 21 key 22: usable_source_words does not strip it, so the vv.17-25 tile is scored against 7,003 usable words when the real figure is nearer 6,000, and its reported expansion of 0.093x understates the true figure of about 0.108x. Three chapters running have shown this. SEPARATELY, and new: Clarke key 25 is 644 words of which roughly two thirds are a POLITICAL DIGRESSION comparing the Israelitish constitution with the British, concluding that \"The Israelitish constitution was radically good, but the British constitution is much better\" and running through trial by jury, the powers of the sovereign, and the phrase \"Blessed are the people who are in such a case\". It is genuine Clarke, not chrome, so it is not strippable by the footer pattern; but it is not commentary on the verse either. I carried none of it. Recording it because a future automated pass that treats all non-chrome text as commentable source will inflate this chapter denominator with material no honest tile can use."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "5",
+      "verses": [
+        "17"
+      ],
+      "note": "TILING: Henry gives four heads, at keys 1, 6, 11 and 17, and this chapter is the case where his numbered seams DO NOT license a cut — the opposite of the last three chapters. His key-17 block runs over vv.17-25 under four numbered sections, but they are COMPARATIVE rather than sequential: \"I. In both these actions the Philistines were the aggressors\", \"II. In both, David, though forward enough to go forth against them\", then \"III. In the former of these engagements\" and \"IV. In the latter\". Sections I and II treat the two battles together, so cutting the span at v.22 would have strandedndeed split a single observation across two tiles, which is the 1kings 22 error. I therefore kept vv.17-25 whole at 0.093x rather than splitting it into roughly 0.176x and 0.196x. THE RULE AS IT NOW STANDS, across 1kings 22, 1kings 4, 1samuel 30, 2samuel 21 and this chapter: a numbered seam in Henry own block licenses a cut only when his sections are SEQUENTIAL over the verses; where they are comparative, treating the whole span at once, the block must not be divided however tempting the balance. Twentieth consecutive chapter in which Henry structure determines the tiling."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "17"
+      ],
+      "note": "Henry Concise doubling again, and Clarke chapter argument again. Henry key-1 block is 932 words and key-17 is 1,985, the latter carrying a Concise tail of roughly 250 words beginning \"The Philistines considered not that David had the presence of God with him\" — the tenth chapter in this class. Clarke key-1 block is 236 words and is almost entirely the chapter argument summarising vv.1-25, the sixteenth consecutive instance."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "5",
+      "verses": [
+        "21"
+      ],
+      "note": "EIGHTEENTH and NINETEENTH Wesley-Henry borrowings, and the nineteenth has a feature worth recording. At key 13 Wesley writes that all these wives did not preserve David from coveting his neighbour wife, \"for men who have once broke the fence, will wander carelesly\", against Henry \"for men that have once broken the fence will wander endlessly\" — near-verbatim. At key 21 Wesley writes \"When the ark fell into the hand of the Philistines, it consumed them: but when these images fell into the hands of Israel, they could not save themselves from being consumed.\" Henry has the same sentence and ATTRIBUTES IT TO BISHOP PATRICK. So here Wesley reproduces not Henry own words but Henry quotation of a third party, and drops the attribution. That is a new wrinkle in this class: a borrowing can strip an authority as well as a phrase, and a reader of Wesley alone would credit the antithesis to Wesley. Handled under the standing rule — the view recorded once, both named, the pair not carrying prevalence above single — and the prose says plainly that Wesley gives the sentence \"almost word for word, without naming its author\"."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "5",
+      "verses": [
+        "6",
+        "8"
+      ],
+      "note": "The blind and the lame: two classes of answer, and Clarke refusing to choose. Henry offers both and prefers neither outright — either the Jebusites confided in their gods, which David in contempt called the blind and the lame because they have eyes and see not, feet and walk not, some thinking these were images of brass set in a recess of the fort and entrusted with its custody; or else in fortifications they thought so impregnable that the maimed could hold them. Henry is ALONE in the idol reading. Wesley, Ellicott and Keil and Delitzsch all take the fortification sense, Ellicott correcting the rendering to \"Thou shalt not come hither, but the blind and the lame shall keep thee off\", which makes it a boast rather than a condition. Clarke is the outlier of method: \"Scarcely a passage in the sacred oracles has puzzled commentators more than this. For my own part, I do not think that it is worth the labor spent upon it, nor shall I encumber these pages with the discordant opinions of learned men\" — and then he prints Kennicott emended text in full parallel columns against the English. Recorded because the refusal and the emendation sit in the same block, and because it is the clearest instance yet of a commentator declining a crux and then adjudicating it anyway."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "5",
+      "verses": [
+        "8"
+      ],
+      "note": "The gutter order, and the consequence Ellicott alone draws. Ellicott finds the sense obscured both by the Hebrew construction and by the word rendered gutter, which occurs elsewhere only at Psalm 42:7 as waterspouts, and takes it for the watercourses about the precipices of Zion; a very slight change in the Masoretic vowels turns getteth into hurl, giving \"Whosoever smites the Jebusites, let him hurl into the watercourses the lame and the blind\" — David throwing the Jebusites own phrase back at them, with \"hated of David soul\" showing that no quarter was to be given since these Canaanites lay under the old ban. Keil and Delitzsch reach the same rendering independently. Wesley keeps the older sense of scaling to the gutter at the top. THE PART WORTH KEEPING: the clause \"he shall be chief and captain\" is not in the Hebrew here but stands in 1 Chronicles 11:6, and from it Ellicott infers that David promised the command of his army to whoever led the forlorn hope, that Joab won it, and that this \"helps to explain the sense of obligation and restraint which David afterwards felt towards Joab\". No other voice connects the two, and it is the best single explanatory move in the chapter."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "5",
+      "verses": [
+        "11"
+      ],
+      "note": "Is this Hiram Solomon Hiram? Gill says no — this is the father of that one, named Abibalus before he took the name Hiram, which became a common name of the kings of Tyre. Ellicott says yes, and prices the claim: since Solomon Hiram was still living in the twenty-fourth year of that reign, either he reigned some fifty-seven years or this embassy came well after the capture of Jerusalem, which Ellicott thinks likely, several years having elapsed while David \"went on and grew great\". He rejects the thirty-four-year reign Josephus quotes from Menander, on the ground that David was already in his house of cedar, before Solomon was born, when he purposed to build the temple — while granting that the later Huram father also bore the name. Keil and Delitzsch sidestep it, treating him simply as the ally of both kings. A clean two-position disagreement with an argued chronology on one side."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "5",
+      "verses": [
+        "13",
+        "23",
+        "24"
+      ],
+      "note": "Two more live disagreements carried whole. (1) On the wives, all six condemn and the accounts of the motive differ: Clarke ALONE argues from nature, that the dispensation permitted polygamy but from the beginning it was not so, and since on average about fourteen males are born to thirteen females polygamy is unnatural and could never have entered the original design of God; Keil and Delitzsch make it cultural capture, a large harem having been held from time immemorial part of an oriental court; Henry and Wesley both assign the political motive of alliances; Ellicott says he came perilously near a violation without going the length of Solomon. (2) On the trees of the second battle, Keil and Delitzsch refuse BOTH traditional renderings — the Septuagint pear-trees and the rabbinic mulberries — as uncertain conjectures, and prefer, after Abulfadl, an Arabic shrub of Mecca resembling the balsam from a broken leaf of which flows a white pungent sap like a tear, whence the name from a root meaning to weep; Ellicott takes the same baca-shrub as now generally understood; Henry keeps the mulberries and gives Bishop Patrick reading of the phrase as the head or hedge-row of the wood. On the SOUND in them, Gill has wind rustling the tops so as to resemble armies in the air and reports Jarchi and the Targum taking it for angels; Henry allows that angels tread light and that he who can walk on the clouds can walk on the tops of trees; Wesley makes it work both ways, assuring David and frightening the enemy; Ellicott notes the word is used elsewhere of the marching of the hosts of the Lord. Keil and Delitzsch also use the two enquiries polemically, as overthrowing Diestel assertion that the holy lot is not heard of after Saul death and the inference Diestel drew from it."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "6",
+        "11",
+        "17"
+      ],
+      "note": "Four tiles at Henry keyed heads, 650 / 646 / 649 / 650 words, all six voices declared in every tile, self-graded A. Expansions 0.229 / 0.194 / 0.232 / 0.093 against 14,953 usable source words as the scorer counts them; the fourth is really nearer 0.108x once the key-25 chrome is discounted. JFB excluded from the first three tiles and not from the fourth, since its blocks fall at keys 2, 8 and 14 only. METHOD CHANGE THAT WORKED, recorded because it is the first real improvement in several chapters: I capped each tile at FOUR items instead of five and wrote to a per-item budget. First drafts came in at 684, 766, 762 and 902 against the 650 ceiling — 5, 18, 17 and 39 per cent over — against 29 to 54 per cent for every tile of the previous two chapters, and tile 1 needed three trim passes instead of six. The four-item cap is the lever; the one tile that still ran away (vv.17-25) did so because all six voices speak on all four of its items. GUARD PORTED: the voice-declaration check added at 2samuel 21 is in this chapter verifier, and it earned its place — after I corrected a coined word it caught tile 2 at 652 words, two over the ceiling, which I would otherwise have assembled."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "rejected",
+      "book": "2samuel",
+      "chapter": "5",
+      "note": "Dropped for space, all verified in source. The largest loss is the dispute over where \"the hold\" was: Keil and Delitzsch argue it cannot be the citadel of Zion because that was so high that one went UP to it, reject Bertheau view that the verb for going down is used of falling back into a fortification, and take it for the mountain stronghold in the desert of Judah where David had hidden from Saul; Ellicott agrees it cannot be Zion since David went down to it and then up from it, and rules out the cave of Adullam, which on either the monastic or the older tradition is remote from the battlefield; Wesley makes it a fortified place where his people might conveniently resort and he might entrench his army. Also dropped: the Geba-or-Gibeon reading at v.25, where Keil and Delitzsch and Ellicott independently judge Gibeon the true text and Geba a slip of the pen, Ellicott measuring the pursuit at about twelve miles from Gibeon with six more before it; Clarke devotional passage at v.25 asking why such supernatural directions are not given now and answering that they are not asked for, not expected, not believed; Clarke constitutional digression (see the key-25 source-defect note); Clarke note that the Septuagint lists twenty-four sons against the Hebrew eleven, with two Nathans, two Eliphalaths and two Napheks, evidently corrupt; Ellicott observation that the first four sons were Bathsheba and that Solomon and Nathan are the two lines through which Matthew and Luke trace the genealogy, Solomon appearing last in every list though evidently the eldest of her sons; Keil and Delitzsch explanation that Eliphalet and Nogah are omitted here because they died in infancy, with Kimchi to the same effect in Gill; Gill note that the mulberry trees account for silk in Judea; and Clarke report that the Targum gives the sound as a bare noise and the Arabic as the noise of horses hoofs."
     }
   ]
 }
