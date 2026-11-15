@@ -106212,6 +106212,103 @@
         "29"
       ],
       "note": "All four entries self-graded A; validator, chapter lint and corpus gate clean, zero flags of any category. Expansion by tile: 1-6 0.19x (650/3,416), 7-19 0.145x (648/4,464), 20-28 0.123x (647/5,247), 29-34 0.115x (644/5,598). All five voices present in this chapter (there is no Wesley material in 1kings 4 at all) appear in all four tiles, so no tile under-represents a commentator — unlike 2samuel 15, where two tiles dropped Henry, and 1samuel 14, where I had to restore him to the last tile deliberately. For key 29 that restoration was worth it: Henry supplies a third reading of 'largeness of heart' (the intellectual powers, or courage and assurance, or a disposition to do good with knowledge) against Ellicott's 'capacity of knowledge', and a fourth position on the survival of the proverbs (that it is uncertain whether those we have were any part of the three thousand)."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "18",
+      "verses": [
+        "17",
+        "23",
+        "29",
+        "35"
+      ],
+      "note": "The JFB defect appears here in its cleanest and most diagnostic form yet, the ninth consecutive chapter carrying it. All four blocks are byte-identical (md5 813575050c), all four carry the same wrong passage (2 Samuel 14, Joab and the woman of Tekoah), and they sit at keys 17, 23, 29 and 35 — a constant stride of exactly six. Earlier chapters showed varying stride (6, 6, 12) and varying provenance; this one shows a single wrong block replicated at a fixed interval, which points at a deterministic indexing bug in the scrape rather than random mis-pagination, and therefore at a repair that could compute the offset instead of discarding the blocks. Declared in excluded_voices on spans 17-18, 22-23, 29-32 and 33-35."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "18",
+      "verses": [
+        "35"
+      ],
+      "note": "Ellicott's block at key 35 is 1,032 words of which roughly 960 are raw page chrome — CSS rules, JavaScript, the site's whole book-and-chapter navigation array, and footer boilerplate — with about 70 words of actual comment at the front. This is the second chapter running in which the contamination lands on Ellicott's block at the chapter's FINAL verse (job 22 key 30 was the first). The position is the useful part of the finding: it is the last verse that picks up the page furniture, which makes the defect predictable, and a stripper keyed on the markers (style rules, 'StudyLight.org', 'document.addEventListener', the book_data array) would recover both the text and an honest usable-word count. Here it inflated span 33-35 by about half."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "9",
+        "17"
+      ],
+      "note": "Henry files this chapter in only three blocks for 37 verses: key 1 is 1,632 words covering vv1-8, key 9 is 843 words covering vv9-16, and key 17 is 2,637 words covering vv17-37 — twenty-one verses under one key. Per-key resolution therefore reports v17 as carrying 3,834 usable source words while vv18-37 appear to have almost no Henry at all. The prose distributes his material to the span each part belongs to, which is the only way the Rabshakeh section can be written, but no measurement reflects it: span 17-18 reads as 0.16x compression and the later spans read as though a major voice were absent."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "18",
+      "verses": [
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37"
+      ],
+      "note": "Gill stops dead after key 17 and has no comment on any verse from 18 to 37. Combined with Henry's section filing, this thins the later half of the chapter to Keil and Delitzsch, Ellicott, Clarke and Wesley, and the last two spans to three voices (33-35 has Clarke, Ellicott and Keil; 36-37 has Henry, Clarke and Keil). Worth knowing when a chapter's voice count drops in its second half: the cause may be a commentator's coverage ending rather than the source being thin."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "18",
+      "verses": [
+        "3",
+        "4"
+      ],
+      "note": "One ENTITIES flag, and it refines the rule filed for job 22. I wrote 'Aesculapius' where Ellicott writes 'Æsculapius', and the checker caught it. The job 22 note said never to nominalise or coin a form the source leaves in another grammatical shape; this shows the rule has to cover ORTHOGRAPHIC form as well, ligatures included. The usable statement is narrower and stronger: reproduce a proper name exactly as the source spells it, or do not name it at all. Fixed by adopting the source's spelling, which the NONLATIN lint permits since the ligature falls inside the allowed Latin-1 range."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "18",
+      "verses": [
+        "36",
+        "37"
+      ],
+      "note": "Second chapter running in which the 350-word floor forces expansion. Span 36-37 has only 344 usable source words, below the floor itself, so the entry runs at 1.45x even though it draws on Henry's section material for the silence and the rent clothes — material the span's source count cannot see because it is filed under key 17. The same chapter shows the opposite at span 17-18, where 3,802 usable words must be compressed into 650. One band cannot serve both ends, and the cause in both cases is where a commentator files rather than how much he says."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "18",
+      "verses": [
+        "5",
+        "26"
+      ],
+      "note": "Two ROLLCALL hits from the local lint, both the same construction: a semicolon-separated list of three or more commentators' glosses in one paragraph. The shape is natural when summarising who says what about a single word, and it reads perfectly well, but it trips the roll-call heuristic. Splitting the list into separate sentences fixes it at no cost to the content. Worth avoiding at draft time rather than at lint time, since the fix is mechanical and the construction is tempting in exactly the verses where several voices gloss one term."
     }
   ]
 }

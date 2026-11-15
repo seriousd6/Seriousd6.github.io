@@ -5,209 +5,141 @@
    "Keil and Delitzsch",
    "Matthew Henry",
    "Adam Clarke",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "John Wesley"
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reads the date as the third year of Hoshea's revolt from Assyria and works through the arithmetic that makes Ahaz a father at eleven."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch set the pious Hezekiah's accession against Judah's Assyrian bondage and the fall of Samaria; Ellicott finds the king's whole history in his name, 'My strength is Jah.'"
+    "summary": "Keil and Delitzsch set the whole reign in its arc from Assyrian dependence to the destruction of Sennacherib's army; Ellicott finds the king's name significant and suspects a slip in his mother's."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry marvels that so good a son sprang from so wicked a father, proof that goodness is not of nature but of sovereign grace."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill dates the notice to the third year of Hoshea's revolt from Assyria."
+    "summary": "Henry makes the reign a case of grace against inheritance, and finds providence in the timing of Hezekiah's birth."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke surveys the whole chapter in advance and refers the chronology to his earlier discussion."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Hezekiah's accession",
-   "reform against Samaria's fall",
-   "grace not nature",
-   "the meaning of the name Hezekiah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Wesley",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch pass to the verdict that Hezekiah walked after David; Ellicott would read the mother's name 'Abi' as 'Abijah,' with the Chronicler."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill eases the chronology with Grotius, by the rounding of the kings' incomplete years."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley resolves the same numbers by a co-regency, reckoning Ahaz's years from his sole reign."
+    "summary": "Clarke maps the chapter and defers the chronology to an earlier note; Wesley resolves the ages by dating the sixteen years from Ahaz's sole reign."
    }
   ],
   "debates": [
    {
-    "question": "How can the regnal numbers stand, when Ahaz would have been only about eleven at Hezekiah's birth?",
+    "question": "How can Ahaz have been father to a son of twenty-five at his own death?",
     "sides": [
      {
-      "position": "Round the incomplete regnal years, with Grotius, widening the age-gap",
+      "position": "Grotius eases it a year, and the historian's habit of dropping incomplete regnal years leaves nearly fourteen between them",
       "holders": [
-       "Gill"
+       "John Gill"
       ]
      },
      {
-      "position": "Reckon Ahaz's sixteen years from his sole reign, allowing a co-regency",
+      "position": "The sixteen years of Ahaz are reckoned not from his accession but from the beginning of his reigning alone",
       "holders": [
-       "Wesley"
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "note": "He alone asks why a king so bad produced a king so good, and answers that whatever good there is in any man is not of nature but of grace."
+   }
+  ],
   "themes": [
-   "chronology of the reign",
-   "Ahaz's years",
-   "the queen-mother Abi/Abijah",
-   "walking after David"
+   "the third year of Hoshea",
+   "grace against a father's example",
+   "the arithmetic of the two reigns",
+   "the meaning of the two names"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
+  },
+  "range": "1-2",
+  "pericope_label": "Hezekiah began to reign; twenty and nine years in Jerusalem"
  },
  "3": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
    "Adam Clarke",
-   "Keil and Delitzsch"
+   "Charles Ellicott",
+   "John Wesley"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill weighs 'according to all that David did' as a distinction: Hezekiah matched David where lesser kings only did right."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke fills the verdict with the cleansing of the temple, the restored Passover, and the general reformation of 2 Chronicles 29."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch summarize the reign as walking in David's footsteps, removing idolatry and cleaving to Jehovah."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "did right like David",
-   "the cleansed temple",
-   "the restored Passover",
-   "general reformation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch gather the idols under their Hebrew names; Ellicott defends the Mosaic antiquity of the serpent and weighs the etymology of Nehushtan."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke examines the name and its abuse as an amulet; Wesley calls the serpent now nothing but brass, and notes not all high places were removed."
+    "summary": "Gill observes that removing the high places is what the best kings of Judah had never attempted, noted of them to their discredit."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry: a God-given thing, once idolized, is better parted with than kept; the serpent becomes a type of Christ in John 3:14."
+    "summary": "Henry sorts the objects by origin, defends breaking what a father had set up, and reads the serpent as the hardest case because it had divine warrant."
    },
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supplies the cleansing of the temple and the deferred passover, and will not let the name of the serpent be translated; Wesley limits the removal to the high places most frequented."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Gill marks the boldness of removing the high places, which the best earlier kings never dared."
+    "summary": "Ellicott reads the emphatic construction, corrects images to pillars and the groves to a plural, and defends the serpent's Mosaic antiquity."
    }
   ],
   "debates": [
    {
-    "question": "What does the name 'Nehushtan' signify?",
+    "question": "What does the name given to the brasen serpent mean?",
     "sides": [
      {
-      "position": "A term of contempt, merely 'a piece of brass'",
+      "position": "A term of contempt meaning no more than a brazen serpent, as Jarchi takes it, the Targum making it the people's name rather than the king's",
       "holders": [
-       "Gill",
-       "Wesley",
-       "Matthew Henry"
+       "Adam Clarke"
       ]
      },
      {
-      "position": "Possibly 'the serpent' or 'great serpent,' though popularly derived from 'brass'",
+      "position": "Possibly great serpent rather than brass-god, with the derivation from brass only a popular etymology",
       "holders": [
-       "Clarke",
-       "Ellicott"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Nothing but a piece of brass, which is the point Hezekiah was making",
+      "holders": [
+       "Matthew Henry",
+       "John Wesley"
       ]
      }
     ]
@@ -215,510 +147,358 @@
   ],
   "outliers": [
    {
-    "voice": "Adam Clarke",
-    "note": "Digresses from Nehushtan into arguing that the nachash of Genesis 3 was no serpent but a creature of the ape genus, and mocks the Milan relic that claims to be the very serpent Moses raised."
+    "voice": "Charles Ellicott",
+    "note": "He alone explains the symbol rather than the idolatry, since in Egypt the serpent stood for the healing power of Deity and Moses taught by means suited to the people's capacity."
    }
   ],
   "themes": [
-   "removal of the high places",
-   "breaking the brazen serpent",
-   "Nehushtan",
-   "the serpent a type of Christ"
+   "according to all that David did",
+   "high places, pillars and groves",
+   "the brasen serpent broken",
+   "Nehushtan"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.44
+   }
+  },
+  "range": "3-4",
+  "pericope_label": "He removed the high places and brake in pieces the brasen serpent"
  },
  "5": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Keil and Delitzsch"
+   "Keil and Delitzsch",
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott and Keil and Delitzsch reconcile 'none like him' with the same said of Josiah: Hezekiah pre-eminent in trust, Josiah in keeping the law."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: he trusted the Lord, not idols as an arm of flesh; the Targum makes it trust in the Word of the Lord, whom the serpent typified."
+    "summary": "Gill makes the Targum's Word of the Lord the object of the trust, and the cleaving a cleaving to worship and the fear of the Lord."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes perseverance the thing Hezekiah was a nonesuch for, and notes the courage abolishing idolatry took."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke draws the king's character as a chain of trust and obedience; Wesley notes he sought no foreign succours, unlike Ahaz and Asa."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "trust in the LORD alone",
-   "none like him among Judah's kings",
-   "harmonized with Josiah",
-   "no foreign alliances"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
+    "summary": "Clarke numbers the character in four points and its result in two; Wesley defines the trust by what it refused, foreign succours of the kind Ahaz and Asa had sought."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch weigh the verb dabak, 'he clave,' as meaning he never gave himself to idolatry; Ellicott parses the clauses as pious feeling joined to obedient practice."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill glosses the cleaving as adherence to the Lord's worship and the fear of the Lord."
+    "summary": "Ellicott contrasts him with kings who trusted the Nehushtan and separates feeling from practice; Keil and Delitzsch refer the verdict to his confidence in God."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How can none be like him if the same is said of Josiah?",
+    "sides": [
+     {
+      "position": "One was pre-eminent in trust, the other in strict adherence to the Mosaic law, so there is no contradiction",
+      "holders": [
+       "Keil and Delitzsch",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Each excelled the other in several respects, Hezekiah's advantage being that he began at once and removed what none durst touch",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "note": "He alone limits the comparison to the kings of Judah, since David and Solomon were kings of all Israel."
+   }
+  ],
   "themes": [
-   "clave to the LORD",
-   "kept the commandments given to Moses",
-   "never gave himself to idolatry",
-   "perseverance not mere beginning"
+   "trust without foreign succours",
+   "none like him among the kings",
+   "cleaving and keeping",
+   "courage and perseverance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.9
+   }
+  },
+  "range": "5-6",
+  "pericope_label": "He trusted in the LORD God of Israel, and clave to him"
  },
  "7": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
    "Charles Ellicott",
+   "Keil and Delitzsch",
    "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch tie the prospering to the cleaving and date the revolt after Shalmaneser; Ellicott reads vv.1-12 as a preliminary sketch, the revolt resumed at v.13."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: the Word of the Lord was for his help."
+    "summary": "Gill reads the help through the Targum and makes the Philistine campaign a recovery of towns lost under Ahaz."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry ties presence to prosperity, defends the revolt as the assertion of rights Ahaz could not alienate, and draws the parallel between purging corruptions and recovering possessions."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley defends the revolt as righteous, contrasting it with Zedekiah's oath-breaking, since God owned and never reproved it."
+    "prevalence": "several",
+    "summary": "Clarke takes the watchtower phrase for a proverb covering every kind of fortification; Wesley argues at length that the revolt was no sin."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott warns that these verses are a preliminary sketch and not a chronology; Keil and Delitzsch date the refusal of tribute and explain why Sennacherib came."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Was the revolt against Assyria a sin?",
+    "sides": [
+     {
+      "position": "No: it differs from Zedekiah's case in oath, in covenant and in divine command, and God owned and assisted him in it",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "No: it is called rebellion only because Assyria called it so, being an assertion of rights Ahaz could not alienate",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "note": "He alone argues the ethics of revolt by comparing Zedekiah, and rests the verdict on God's never having reproved Hezekiah for it."
+   }
+  ],
   "themes": [
-   "the LORD with him",
-   "prospered whithersoever",
-   "refusing tribute to Assyria",
-   "a righteous revolt unlike Zedekiah's"
+   "the Lord was with him",
+   "refusing the tribute",
+   "the Philistines smitten to Gaza",
+   "from the watchtower to the fenced city"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott take 'from the watchtower to the fenced city' of all the towns, and place the Philistine campaign probably after Sennacherib's defeat."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Hezekiah recovered the towns the Philistines had seized under Ahaz and drove them to Gaza."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke reads 'from the tower of the watchmen' as a proverb: he reduced every fortification, nothing standing before him."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.71
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "smiting the Philistines to Gaza",
-   "recovering what Ahaz lost",
-   "from watchtower to fenced city",
-   "probably after Sennacherib's retreat"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "7-8",
+  "pericope_label": "The LORD was with him; he smote the Philistines unto Gaza"
  },
  "9": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
    "Matthew Henry",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Keil and Delitzsch explain the fall of Samaria is retold from Judah's annals as an event memorable to the whole covenant-nation."
+    "summary": "Gill reads the three years inclusively, so that the end of them means their beginning."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry reads the repetition as spur, lament, and warning: a neighbour's house on fire while one's own is in danger."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill dates the siege to the opening of Hezekiah's fourth year."
+    "summary": "Henry gives three reasons why the fall of Samaria belongs in Hezekiah's reign, and notices the order of hearing and doing in the verdict."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke refers the history back to 2 Kings 17:3."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the siege of Samaria retold",
-   "Judah's annals and the covenant-nation",
-   "a neighbour's house on fire",
-   "warning to Judah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
+    "summary": "Clarke notes only that the history has been given before."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott argues 'they took it' means the Assyrians (Sargon, not Shalmaneser); Keil and Delitzsch note the parallel account in Isaiah 36-39 and 2 Chronicles 32."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads 'at the end of three years' as at their beginning, and dates the fall to Hezekiah's sixth year."
+    "summary": "Ellicott defends the plural verb against the versions and corrects two small points of grammar; Keil and Delitzsch trace the repetition to a second set of annals."
    }
   ],
   "debates": [
    {
-    "question": "How is 'they took it' to be read, and who took Samaria?",
+    "question": "Who took Samaria, and does the verb say?",
     "sides": [
      {
-      "position": "Plural: the Assyrians took it, and it was Sargon, not Shalmaneser",
+      "position": "The Assyrians, plural, since it was Sargon and not Shalmaneser who took the city",
       "holders": [
-       "Ellicott"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "Singular 'he took it' (Septuagint, Syriac, Vulgate)",
+      "position": "He took it, as the older versions read",
       "holders": [
-       "Septuagint (as reported by Ellicott)"
+       "the older versions, as reported by Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "the fall of Samaria dated",
-   "'they took it' - Sargon, not Shalmaneser",
-   "the sixth year of Hezekiah",
-   "nearness of the disaster"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch bind the deportation to its cause in v.12: Israel carried away because they broke the covenant."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes only the places of dispersion, treated where the removal was first recorded."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry reads the captivity as a calamity Hezekiah lamented but could not prevent, and a warning to Judah."
+    "voice": "Matthew Henry",
+    "note": "He alone explains the repetition by its effect on Judah, the neighbour's house on fire making it time to cast away the accursed thing."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "the deportation of Israel",
-   "Halah, Habor, Gozan, and the cities of the Medes",
-   "captivity as covenant judgment",
-   "Israel gone, Judah left"
+   "why the story is told twice",
+   "the end of three years",
+   "Halah, Habor and the cities of the Medes",
+   "hearing and doing"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott calls this remark the 'theme' of the historical abstract, suggesting the reflections of 2 Kings 17:7-23, and reads 'all that Moses commanded' as apposition to the covenant."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: they obeyed not the voice of the Lord in his law and by his prophets."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry seizes on the doubled refusal: they would neither hear nor do, resolved not to obey and so careless even to hear."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.37
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "because they obeyed not",
-   "transgressed the covenant",
-   "the theme behind chapter 17's reflections",
-   "hearing without doing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "9-12",
+  "pericope_label": "Samaria taken, because they obeyed not the voice of the LORD"
  },
  "13": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch open the main narrative and point to the parallels; Ellicott identifies Sin-ahi-erib and presses the date."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley reads the success granted Sennacherib as given to lift him to a more shameful ruin and to occasion the miraculous deliverance."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry weighs how much Hezekiah lost, and reads the invasion as a trial of faith and a chastening of a half-hearted people."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill dates it eight years after the captivity of Israel."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Charles Ellicott",
-    "note": "Presses the divergence between the Bible's fourteenth year (c. 714 B.C.) and Sennacherib's own monuments (701 B.C.), insisting it must not be explained away, since the Assyrian records are strictly contemporary."
-   }
-  ],
-  "themes": [
-   "Sennacherib comes against the fenced cities",
-   "the 714/701 B.C. chronological crux",
-   "success given to lift the proud to ruin",
-   "a trial of Hezekiah's faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
    "Matthew Henry",
-   "Keil and Delitzsch",
    "Charles Ellicott",
+   "Keil and Delitzsch",
    "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch report the fortifying of Jerusalem and the confession 'I have sinned' as a vassal's; Ellicott gives the topography of Lachish and reconciles the tribute figures."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill reads the embassy as weakness and distrust of God's providence, after Hezekiah first resolved to defend himself."
+    "summary": "Gill dates the invasion relatively and traces Hezekiah's change of mind from defence to purchase, calling it weakness and distrust."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry cries, Where was Hezekiah's courage and confidence in God, that he did not first advise with Isaiah?"
+    "summary": "Henry measures the loss of territory, asks where Hezekiah's courage was, and alone defends the stripping of the temple."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott refuses to smooth the thirteen-year divergence between the Hebrew date and the Assyrian monuments, and reconciles the two tribute figures by the talent used; Keil and Delitzsch record the defensive works and the march to Lachish."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Wesley notes the three hundred talents came to above two hundred thousand pounds."
+    "summary": "Wesley reads the claim about all the cities as a loose universal and finds three divine purposes in the invader's success."
    }
   ],
   "debates": [
    {
-    "question": "Was Hezekiah's payment of tribute a sinful failure of faith?",
+    "question": "Which date for the invasion is to be trusted?",
     "sides": [
      {
-      "position": "Yes - weakness and distrust of the power and providence of God",
+      "position": "The Assyrian monuments, which are strictly contemporary, against books compiled long after and copied many times",
       "holders": [
-       "Gill",
-       "Matthew Henry"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "Reported without blame, as a prudent vassal's submission",
+      "position": "The divergence is remarkable and must not be explained away",
       "holders": [
-       "Keil and Delitzsch"
+       "Charles Ellicott"
       ]
      }
     ]
@@ -726,120 +506,43 @@
   ],
   "outliers": [
    {
-    "voice": "Charles Ellicott",
-    "note": "Harmonizes the three hundred talents of silver here with the eight hundred of Sennacherib's own record by the lighter Babylonian talent standard."
+    "voice": "Matthew Henry",
+    "note": "He alone justifies taking the gold from the temple doors, by David's precedent with the showbread and by the difference between borrowing a part and plundering in contempt."
    }
   ],
   "themes": [
-   "the embassy to Lachish",
-   "'I have sinned'",
-   "three hundred talents of silver",
-   "a failure of faith?"
+   "the fourteenth year and the monuments",
+   "why Lachish",
+   "I have offended",
+   "the price of peace"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch show the tribute bought nothing, for Sennacherib took the money yet sent his generals against Jerusalem; Ellicott glosses 'the silver' as the money."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: to make up the tribute the king exhausted both temple and palace treasuries, as kings of Judah had done before in distress."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry faults the fear that emptied the treasuries, yet likens it to David's eating of the shewbread in necessity."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.53
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "emptying the temple and royal treasuries",
-   "the resource of kings in distress",
-   "the money bought no peace",
-   "perfidy foreshadowed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott renders 'cut off' as 'stripped,' the word used of Ahaz in 2 Kings 16:17, and takes the 'pillars' as the framework of the gold-plated doors."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the plates of gold covering the doors were scraped off, as the Targum interprets."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry sets the stripping beside David's shewbread: a part given, in urgent need, for the preservation of the whole."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "stripping the gold from the temple doors",
-   "the doors and pillars Hezekiah had overlaid",
-   "hard necessity",
-   "the reformer undoing his own work"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "13-16",
+  "pericope_label": "Sennacherib came up; Hezekiah sent to Lachish, I have offended"
  },
  "17": {
   "voices": [
@@ -852,987 +555,705 @@
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott identifies Tartan as the Assyrian tur-ta-nu (commander-in-chief) and locates the conduit of Isaiah 7:3; Keil and Delitzsch stress the perfidy of sending the host after taking the money."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke reads the three names as offices, not persons, and glosses each; Wesley says the broken faith justified the revolt and prepared Sennacherib's ruin."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill notes the message is recorded almost word for word in Isaiah 36, Rabshakeh being the chief speaker."
+    "summary": "Gill states the plain fact that the tribute was taken and the army sent anyway."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry brands Sennacherib base and perfidious, and commends Hezekiah's prudence in declining a personal parley."
+    "summary": "Henry refuses the invader the title of great king and calls the refusal of a personal parley prudence."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the three names for offices after Calmet and supplies a campaign history for the detachment; Wesley reads the breach of faith as justifying the revolt after the event."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott corrects two of the three titles from the Assyrian and sorts out which pool is meant; Keil and Delitzsch explain the choice of commissioners."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What do the three titles mean?",
+    "sides": [
+     {
+      "position": "Keeper of the tribute, chief of the eunuchs, and master of the wine cellar",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Commander-in-chief and chief officer, the Hebrew imitating Assyrian titles, with the second unidentified",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
    {
     "voice": "Adam Clarke",
-    "note": "Draws a modern parallel between Rabshakeh's blasphemous manifesto and the Duke of Brunswick's 1792 manifesto in the French Revolution, both followed by disaster."
+    "note": "He alone reconstructs the strategic situation, with the siege of Lachish raised and an Ethiopian invasion drawing the king home, and judges manifestoes of this kind to have seldom been honourable to their senders."
    }
   ],
   "themes": [
-   "Sennacherib breaks faith",
-   "Tartan, Rabsaris, Rabshakeh - offices not names",
-   "the great host at the conduit of the upper pool",
-   "Rabshakeh the chief speaker"
+   "the broken agreement",
+   "titles, not names",
+   "the conduit of the upper pool",
+   "a parley declined"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch name the three ministers and their offices (household, scribe, recorder) and summarize the coming speech; Ellicott compares the officer-lists of 1 Kings 4."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke suspects the summons aimed to seize the king's person, and renders the offices in the terms of his own day."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: Rabshakeh demanded the king, but Hezekiah prudently sent his ministers instead."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Hezekiah's three ministers",
-   "Eliakim, Shebna, and Joah",
-   "the king declines a personal parley",
-   "the offices of household, scribe, and recorder"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "17-18",
+  "pericope_label": "Tartan, Rabsaris and Rabshakeh come up to Jerusalem",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "19": {
   "voices": [
-   "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
+   "Keil and Delitzsch",
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch explain 'the great king' as the standing imperial title; Ellicott enlarges the grandiloquence from the inscriptions and the 'king of princes' of Hosea 8:10."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the title as the speaker's own idolatry and answers the taunt from the facts of Hezekiah's preparations."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke takes bittachon as a diminutive of contempt for Hezekiah's God; Wesley asks what the greatest men are when God contends with them."
+    "summary": "Clarke takes the noun for a diminutive expressing the utmost contempt for Hezekiah's God; Wesley asks what the greatest of men are when God comes to contend with them."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: Rabshakeh makes an idol of his master, but to faith the King of kings makes even Assyria look little."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott supplies a specimen of Assyrian royal style and two guesses at why this officer spoke; Keil and Delitzsch explain the vassal basis of the title and gloss the lip-word."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why did this officer rather than the commander deliver the speech?",
+    "sides": [
+     {
+      "position": "He may have known Hebrew better than his companions",
+      "holders": [
+       "Thenius, as reported by Charles Ellicott"
+      ]
+     },
+     {
+      "position": "It would have been beneath the commander's dignity, and such language would sound strange in a eunuch's mouth",
+      "holders": [
+       "Schrader, as reported by Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
    {
     "voice": "Adam Clarke",
-    "note": "Takes the Hebrew bittachon as a diminutive, a deliberate belittling of Hezekiah's God."
+    "note": "He alone presses the diminutive form of the noun, so that the question means what little, foolish, unavailing confidence is this."
    }
   ],
   "themes": [
-   "'the great king, the king of Assyria'",
-   "the grandiloquence of Assyrian titles",
-   "'what confidence is this?'",
-   "little gods and the King of kings"
+   "the great king",
+   "what confidence is this",
+   "a lip-word",
+   "Egypt a bruised reed"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch render 'counsel and strength' a mere word of the lips, not of the heart (Prov. 14:23); Ellicott reads it as insincere lip-service."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry answers the sneer with the fact: Hezekiah really had counsel and strength, which Rabshakeh mocks as vain words."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.68
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "counsel and strength for war",
-   "a mere word of the lips",
-   "insincere lip-service",
-   "Hezekiah's real preparations"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch unfold the reed that pierces the hand (Ezek. 29:6-7) and recall Isaiah's warning against Egypt; Ellicott prefers 'cracked' and gathers the prophet's denunciations."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke notes Egypt was already bruised and broken by its wars with Assyria."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry turns the reed to a sermon: every arm of flesh fails and wounds, but God is the rock of ages."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the broken reed of Egypt",
-   "the reed that pierces the hand",
-   "Egypt already bruised",
-   "arm of flesh versus the rock of ages"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "19-21",
+  "pericope_label": "What confidence is this wherein thou trustest? Egypt a bruised reed"
  },
  "22": {
   "voices": [
-   "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
+   "Keil and Delitzsch",
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch show Rabshakeh, from a heathen view, casting the reform as an affront to Jehovah; Ellicott notes it is the natural construction a heathen would put on the abolition of the high places."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry answers that the speaker measures the God of Israel by the gods of the heathen, so that the best deed of the reign is read as profanity."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke calls the argument artfully malicious; Wesley marvels that he judges the great God by petty gods, measuring piety by many altars."
+    "summary": "Clarke calls the charge artfully malicious and separates the three things insinuated; Wesley says the man speaks boldly of what he does not understand."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: one of the king's best deeds is here misconstrued as impious by one ignorant of God's law."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott canvasses the renderings of the wager and weighs the singular against the plural address; Keil and Delitzsch credit the skill of the move and make the taunt about riders rather than soldiers."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the sentence addressed to Hezekiah or to his ministers?",
+    "sides": [
+     {
+      "position": "To Hezekiah, since the versions and the parallel have the singular, which is probably original",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "To the ministers, keeping the plural, since what follows addresses Hezekiah directly",
+      "holders": [
+       "Thenius and Knobel, as reported by Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "note": "He alone names the fallacy, that a God who delighted in many altars is being assumed, so that confining a people to one is taken for an offence."
+   }
+  ],
   "themes": [
-   "the taunt about the high places",
-   "a heathen reading of the reform",
-   "one altar, one city",
-   "measuring God by petty gods"
+   "the reformation turned into evidence",
+   "measuring God by the gods of the heathen",
+   "two thousand horses",
+   "want of riders"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch: Judah could not find riders for two thousand horses; Ellicott surveys the disputed opening verb and the sneer at Judah's want of cavalry."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke feels the insult: couldst thou even find riders, how then stand against the smallest division?"
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: with utmost haughtiness Rabshakeh insinuates Hezekiah has no soldiers fit for the field."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.56
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sneer at Judah's cavalry",
-   "two thousand horses without riders",
-   "'give pledges' - a wager or a compact?",
-   "the strategy of contempt"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "22-23",
+  "pericope_label": "Thou sayest, We trust in the LORD; give pledges to my master",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "24": {
   "voices": [
-   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
    "Charles Ellicott",
-   "Matthew Henry"
+   "Keil and Delitzsch",
+   "John Wesley"
   ],
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch make it the conclusion of the horse-taunt; Ellicott takes 'one captain of the least' as the pasha meaning himself, and stops before the reproach about Egypt."
-   },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry weaves the two threads together: Judah's supposed weakness and her supposed false ally in Egypt."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the least of the king's servants",
-   "the pasha who means himself",
-   "trust in Egypt's chariots",
-   "shaming both arms and alliances"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Wesley",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch allow the prophets' predictions may have reached the Assyrian; Ellicott surveys the theories and cites the parallels of Nabonidus and the Moabite Stone, with Isaiah 10:5."
+    "summary": "Henry denies the speaker any sincerity in the claimed commission and traces what colour it had to reports of God's hand on the ten tribes."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley calls the claim a forgery to strike terror; Clarke reads it as a bid to persuade Judah that Jehovah had become the Assyrian's ally."
+    "summary": "Clarke explains the purpose, to persuade the people that Jehovah had become Assyria's ally; Wesley says the oracle was simply forged to strike terror."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: all banter and bravado, though the enemy may have taken colour from the prophets' word on Samaria's fall."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott repunctuates the verse, identifies the governor as the speaker himself, and collects parallels for invaders claiming the gods of the invaded; Keil and Delitzsch think a report of the prophets was turned to his own purposes."
    }
   ],
   "debates": [
    {
-    "question": "Had Rabshakeh any real basis for his claim that the LORD sent him?",
+    "question": "Where did the claim of a divine commission come from?",
     "sides": [
      {
-      "position": "Pure invention, forged to strike terror",
+      "position": "From captive priests of the northern kingdom whom the king had consulted",
       "holders": [
-       "Wesley",
-       "Matthew Henry"
+       "Michaelis, as reported by Charles Ellicott"
       ]
      },
      {
-      "position": "Perhaps grounded in captive northern priests or the Hebrew prophets' menaces",
+      "position": "From reports of the Hebrew prophets, who had called the invasion a judgment",
       "holders": [
-       "Michaelis (as reported by Ellicott)",
-       "Ellicott"
+       "Keil and Delitzsch",
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "A mere inference from his run of success",
+      "position": "From nothing but the success of the expedition so far",
       "holders": [
-       "Thenius (as reported by Ellicott)"
+       "Thenius, as reported by Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "He alone shows the boast to be a convention, producing a Babylonian parallel in which a conqueror claims the favour of the city's own chief god, and the Moabite Stone's oracle to Mesha."
+   }
+  ],
   "themes": [
-   "'Am I come up without the LORD?'",
-   "the claim of a divine commission",
-   "invented terror or borrowed oracle?",
-   "the boast truer than he knew"
+   "the smallest of the servants",
+   "am I come up without the LORD",
+   "invaders and the gods of the invaded",
+   "a boast truer than he knew"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.91
+   }
+  },
+  "range": "24-25",
+  "pericope_label": "Am I now come up without the LORD against this place?"
  },
  "26": {
   "voices": [
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch explain the request for Aramaic to shield the people on the wall; Ellicott adds the philology of Aramaic as the tongue of diplomacy and 'the Jews' language.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: the blasphemer's aim was to stir the people to sedition and deliver up the city."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry judges the request reasonable, but sees it only exasperated an unreasonable man."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "speak in Aramaic",
-   "the people on the wall",
-   "Aramaic the tongue of diplomacy",
-   "fear of sedition"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch note Rabshakeh turns to the men on the wall and the Masoretic euphemisms; Ellicott reads the coarse words as the famine-horror of siege, as in 2 Kings 6:25."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the men are warned that resistance means eating their own excrement; Wesley, that he tells them to what miseries he will force them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the coarse threat of siege",
-   "the horrors of famine",
-   "aimed at the men on the wall",
-   "winning by fear"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch: he stationed himself for effect and cried aloud that neither Hezekiah nor Jehovah could deliver; Ellicott notes he came nearer the wall."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: all to make the people revolt; Wesley reports the tradition that Rabshakeh was an apostate Jew, whose enmity was the more bitter."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry hears 'that great king' pressed again, and repeats the tradition of the apostate, comparing Julian."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Rabshakeh cries aloud",
-   "posturing for effect",
-   "'the great king' again",
-   "the tradition of an apostate Jew"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott shows Rabshakeh posing as the people's friend, the verb 'deceive' being that of Genesis 3:13, and corrects 'his hand' to 'my hand'; Keil and Delitzsch read the wedge driven between people and throne."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry hears the hard alternative, bend or break, and turns it upon the sinner's peace with God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'let not Hezekiah deceive you'",
-   "posing as the people's friend",
-   "bend or break",
-   "'his hand' or 'my hand'"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott sets the two thrusts side by side (Hezekiah cannot, Jehovah will not) and disputes the notion of a late 'Jewish colouring'; Keil and Delitzsch read the assault moving to faith itself."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: this was the enemy's chief endeavour, to shake the confidence in God that was the people's great stay, as David's enemies and Christ's mockers did."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "do not let him make you trust in the LORD",
-   "the assault on faith itself",
-   "the God whose sanctuary is on Zion",
-   "driving at the people's confidence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch render 'make a blessing' as make peace and 'come out' as surrender, the vine and cistern a figure of security; Ellicott ties the phrase to the goodwill of peace-making and the Egyptian campaign."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley catches the honeyed terms: on these conditions I will give you no disturbance."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry marvels at the effrontery of offering an agreement by present, when the last such agreement was so grossly broken; gild the chain and the vulgar submit."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'make a blessing with me'",
-   "surrender and its false comforts",
-   "every man his vine and fig tree",
-   "gilding the chain"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch place the fair land as the doorway to deportation; Ellicott glosses 'oil olive' as the cultivated tree and 'that ye may live' as a promise of immunity."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke sees the sedition: yield, and Sennacherib will transport you to a land as good as your own."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry strips the promise bare: a captivity dressed as a kindness, the devil painting the prison a paradise."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a land like your own",
-   "the promise of a fair captivity",
-   "the tempter's bargain",
-   "the mask slipping into exile"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott admits a verbal inconsistency in an extemporised address and takes 'out of the hand of Assyria' of the predecessors too; Keil and Delitzsch put the bald inference that Jehovah can no more save than Hezekiah."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry lays open the pride and profaneness: he ranks the only living and true God with the upstart gods of the heathen."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the gods of the nations",
-   "the climb toward blasphemy",
-   "Sennacherib and his predecessors",
-   "a false arithmetic"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
    "Keil and Delitzsch",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott supplies the record of Sargon's conquest of Hamath and Arpad and weighs the obscure Hena and Ivah; Keil and Delitzsch join the verse to its blasphemous conclusion."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry calls the request reasonable by the custom of treaties and the refusal a breach of every rule of decency and honour."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke calls the blasphemy without parallel: Sennacherib boasts himself greater than any god of the nations."
+    "prevalence": "several",
+    "summary": "Clarke twice states the purpose, to stir the people to sedition and to make them revolt from their allegiance; Wesley summarises the threat as telling them what miseries he would force on them."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: the God of Israel is no local deity to be ranked with the upstart gods of Hamath and Arpad."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott identifies Aramaic as the diplomatic language of western Asia and is careful about the name given to Hebrew here; Keil and Delitzsch explain who understood which language, and are precise about the verb for taking up a position."
    }
   ],
   "debates": [
    {
-    "question": "What are 'Hena and Ivah'?",
+    "question": "Why did the ministers ask for Aramaean?",
     "sides": [
      {
-      "position": "Genuine place-names, the Avva and Avites of 2 Kings 17:24",
+      "position": "Because the boasting might make an impression on the people on the wall",
       "holders": [
-       "Ellicott"
+       "Keil and Delitzsch"
       ]
      },
      {
-      "position": "Hebrew verbs ('he made to wander and overturned') or an epithet of Sepharvaim",
+      "position": "Because many of them had worshipped at the high places and might believe Jehovah was incensed at their removal",
       "holders": [
-       "Hoffmann (as reported by Ellicott)"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Because the custom of treaties is that plenipotentiaries settle matters before anything is made public",
+      "holders": [
+       "Matthew Henry"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Keil and Delitzsch",
+    "note": "They alone note that the Masoretes replaced both of the coarse words with euphemisms."
+   }
+  ],
   "themes": [
-   "where are the gods of Hamath and Arpad?",
-   "Sargon's conquests",
-   "Hena and Ivah",
-   "blasphemy without parallel"
+   "speak in the Syrian language",
+   "who understood what",
+   "the threat of famine",
+   "taking a position before the wall"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.58
+   }
+  },
+  "range": "26-28",
+  "pericope_label": "Speak in the Syrian language; Rabshakeh cried in the Jews' language"
  },
- "35": {
+ "29": {
   "voices": [
+   "Matthew Henry",
+   "Adam Clarke",
    "Charles Ellicott",
    "Keil and Delitzsch",
-   "Adam Clarke",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry exposes the effrontery of proposing an agreement bought with a present and takes apart both of the advantages held out."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the promise as calculated sedition; Wesley paraphrases the terms as they would have sounded to the hearers."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott notes Ewald's rendering 'much less will Jehovah deliver'; Keil and Delitzsch draw the inference that levels the God of Israel with the idols of the nations."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke names the impudent blasphemy without parallel, which Hezekiah refers to Jehovah to punish."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry marks the profaneness: the God of the whole earth, the Ancient of Days, made no more of than the gods of Hamath."
+    "summary": "Ellicott reports the unique phrase about making a blessing, gives two constructions of the promise and corrects the text to my hand; Keil and Delitzsch read the clause about coming out as a demand for surrender."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does the offer actually promise?",
+    "sides": [
+     {
+      "position": "A return to their farms until the Egyptian campaign closes, after which they will be moved to an equal home",
+      "holders": [
+       "Cheyne, as reported by Charles Ellicott"
+      ]
+     },
+     {
+      "position": "That immediate surrender brings no harm, and they shall enjoy their own land until removed to a better",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Nothing: the free use lasts just as long as the conqueror pleases, and a land like their own holds nothing they may call their own",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "note": "He alone answers the offer with a proverb, that gilding the chain is enough to make the vulgar let you bind them."
+   }
+  ],
   "themes": [
-   "'that the LORD should deliver Jerusalem'",
-   "the God of Israel levelled with idols",
-   "the climax of the blasphemy",
-   "the boast that overreached"
+   "a friend of the people",
+   "make an agreement with me",
+   "until I come and take you away",
+   "the gilded chain"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.51
+   }
+  },
+  "range": "29-32",
+  "pericope_label": "Let not Hezekiah deceive you; make an agreement with me",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
+ },
+ "33": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke states the reasoning and calls the blasphemy of the speech without parallel, admiring that Hezekiah referred the affront to the Lord whose it was."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott admits the inconsistency with the earlier claim and supplies the history of the cities named, while Keil and Delitzsch state the conclusion the argument drives at."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What are Hena and Ivah?",
+    "sides": [
+     {
+      "position": "Place-names, since Ava and the Avites occur elsewhere and the versions support it",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "One word, an epithet of the city before them meaning the utterly perverted",
+      "holders": [
+       "Hoffmann, as reported by Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Two Hebrew verbs, so that the clause is a question about who made them wander",
+      "holders": [
+       "the Targum, as reported by Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "He alone grants that the speech contradicts itself, and excuses it by the occasion, since a man extemporising to frighten his hearers would not be particular about consistency."
+   }
+  ],
+  "themes": [
+   "the gods of the nations",
+   "Hamath, Arpad and Sepharvaim",
+   "two unknown names",
+   "that the LORD should deliver Jerusalem"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
+  },
+  "range": "33-35",
+  "pericope_label": "Hath any of the gods of the nations delivered his land?",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "36": {
   "voices": [
-   "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
-   "Matthew Henry"
+   "Keil and Delitzsch"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Keil and Delitzsch explain the commanded silence: to stop Rabshakeh and leave the envoys uncertain of the effect; the deputies return with rent clothes."
+    "summary": "Henry insists the silence was not for want of an answer, lists what might justly have been said, and reads the rent clothes as grief for Jerusalem as well as detestation of blasphemy."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke reads it as committing the cause to God: the blasphemy insults Jehovah, not you; let him avenge his own quarrel."
+    "summary": "Clarke explains the custom of rending garments at blasphemy and traces the chain by which the matter reached God."
    },
    {
-    "school": "puritan-evangelical",
+    "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Matthew Henry: a time to keep silence; to answer a blasphemer is to cast pearls before swine, and the matter is left with the Lord."
+    "summary": "Keil and Delitzsch find two purposes in the order of silence, and read the gesture as grief at words blaspheming Jehovah more than the king."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why were the people ordered not to answer?",
+    "sides": [
+     {
+      "position": "To stop him saying more, and to leave the ambassadors uncertain what impression they had made",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "Because the blasphemy was too barefaced to argue with, the quarrel being Jehovah's to avenge",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Because there are men to whom offering anything religious or rational is casting pearls before swine",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "He alone traces the sequence of mediation, from ambassadors to the king as God's representative, to the prophet as God's minister, to God through the people's mediator."
+   }
+  ],
   "themes": [
-   "the people held their peace",
-   "the king's command of silence",
-   "leaving the blasphemer to God",
-   "a time to keep silence"
+   "a silence commanded",
+   "what might justly have been said",
+   "clothes rent at blasphemy",
+   "the matter referred upward"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch record the ministers returning with clothes rent, the sign of their grief, to report Rabshakeh's words."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke explains the rending of clothes at blasphemy and the chain of mediation: ministers to king, king to prophet, prophet to God."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: they rent their clothes in detestation of the blasphemy and grief for Jerusalem, and faithfully reported all to the king."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.45
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the ministers return with rent clothes",
-   "rending the garments at blasphemy",
-   "the chain of mediation",
-   "the matter laid before the king"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "36-37",
+  "pericope_label": "The people held their peace; Eliakim and Shebna came with clothes rent"
  }
 }
