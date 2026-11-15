@@ -106721,6 +106721,142 @@
         "42"
       ],
       "note": "Calibration, third measurement, and the sentence-count predictor held. First-pass validator counts this chapter: 707, 713, 682, 657, 716, 601, 759, 713, 718, 462, 611, 673 -- mean 692 against a 650 cap for the full-size entries, so the overshoot is about 6 percent and no longer the 15-25 percent it was with four-paragraph drafts. The three that landed in band first time were the small-source spans where I deliberately aimed below the cap. Overshoot tracked SENTENCE COUNT almost exactly at roughly 36 validator words per sentence in this register. Operational rule for the next chapter: 17 sentences for a 650 target, not 18, and count them before measuring words."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "8",
+      "verses": [
+        "22",
+        "26"
+      ],
+      "note": "RE-OFFERED AND DECLINED A SECOND TIME — STILL BELONGS ON THE BLOCKLIST. The picker served this chapter again today (legacy queue, --worst-first --spread 40). I re-verified the source rather than trusting the 2026-11-07 investigation, and it is unchanged: 34 source keys for 40 verses, with verses 5, 21, 23, 24, 25 and 27 absent entirely, giving contiguous runs of 1-4, 6-20, 22, 26 and 28-40. Keys 22 and 26 are therefore still forced to be single-verse entries walled on both sides, and their whole source is still a severed sentence-head — key 22 sixteen usable words ('And Ishpan, and Heber,.... And all that follow to the end of these verses:') and key 26 nine ('And Shamsherai,.... Who, with those next mentioned:'). Against the 120-word thin floor that is 7.5x and 13.3x, with no exemption below 120 and no way to lower it, so the only two outcomes remain a validator failure or the prose-rule-2 offence the existing legacy prose committed (narrating the source's own thinness and inventing a motive for Gill). I did not start it; the tree is clean and nothing was written. COST OF LEAVING IT UNBLOCKED, which is the new information in this note: this is the second draw this chapter has consumed from worker A alone, eight days apart. The blocklist file's own _doc records exactly this failure mode for numbers 31 — 'the picker kept serving numbers 31 to every worker and every worker spent a draw declining it: a block the picker cannot read is not a block' — and 1chronicles 8 is now reproducing it. Per the standing instruction I have NOT added the entry myself. The unblock condition is unchanged and is at harvest, not in the writing: re-harvest Gill's exposition of vv.15-27 as one block keyed at 15, which would also close the gaps at 21 and 23-25 and make the chapter writable immediately."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "21",
+      "verses": [
+        "12",
+        "18"
+      ],
+      "note": "JFB residue, stride 6, offset 0, INCOMPLETE — and it FALSIFIES the hypothesis I filed three hours ago. Both JFB blocks here (keys 12 and 18) are RUTH 2: the grain beaten out with a stick, the measure supposed to contain about a bushel, the prudent recommendation to Ruth to accept Boaz's invitation lest she stray into other fields, and the observant mind of the old matron. Key 6, the third expected position, carries no JFB block, so the harvest is partial. At 1samuel 30 I recorded a hypothesis that the donor stream might be Judges, since 2samuel 16's residue was Judges 19 and 1samuel 30's was Judges 6. That is now wrong as stated: this chapter's donor is Ruth. The better formulation, offered as a hypothesis again and not a finding, is that the donor is the JUDGES-RUTH REGION rather than Judges specifically — three consecutive chapters have drawn residue from Judges 19, Judges 6 and Ruth 2, which are adjacent in canonical order. I have still not checked the earlier chapters' residue content, so the wider claim remains unverified; what is verified is that the single-book version of the hypothesis is false. Both blocks excluded from the tiles that span them."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "21",
+      "verses": [
+        "22"
+      ],
+      "note": "FIFTEENTH chapter-final Ellicott chrome, and the most extreme yet measured: key 22 is 1,165 words of which only 154 precede the 'Footnotes: Copyright Statement' marker and 1,011 follow it — 87 per cent chrome. As at 1samuel 30 key 31, scripts/synthesis_qa.usable_source_words does not strip it, so the vv.18-22 tile is scored against 3,667 usable words when the real figure is nearer 2,650, and the reported expansion of 0.177x UNDERSTATES the true 0.245x. The measurement bias is consistent in direction: every chapter carrying this chrome reads as more compressive, and therefore safer on fidelity, than it is. Two chapters running have now shown it at this scale. The pattern-strip on each commentator's final block remains on the notebook and remains unactioned."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "15"
+      ],
+      "note": "Clarke's chapter argument at key 1 is the FIFTEENTH consecutive instance of that class. Separately, and more interesting, Clarke's key-20 block is 1,098 words and is not commentary on the verse at all but a TWELVE-POINT INDICTMENT OF THE WHOLE CHAPTER'S AUTHENTICITY, ending: 'Till I get farther light on the subject, I am led to conclude that the whole chapter is not now what it would be, coming from the pen of an inspired writer; and that this part of the Jewish records has suffered much from rabbinical glosses, alterations, and additions.' He also writes that 'it seems as if a Gibeonite has had something to do with the copies that are come down to us, or that the first fourteen verses have been inserted from a less authentic document than the rest of the book.' This is worth recording as a STRUCTURAL feature of the chapter rather than a defect: Clarke's objections at keys 1, 3, 10, 16, 17 and 19 are instalments of a single argument that only resolves at key 20, so a tiling that cuts between them separates premises from conclusion. I handled it by letting his objections appear in each tile where they fall and making the key-20 indictment the opening item of the vv.18-22 tile, which is the only tile that can carry it. Any later pass should keep that arrangement or else gather the whole argument into one tile deliberately."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "21",
+      "verses": [
+        "15",
+        "18"
+      ],
+      "note": "TILING: four tiles, and the subdivision refinement applied for the third chapter running. Henry's keyed heads are at 1, 10 and 15, but his key-15 Exposition runs through v.22 under two numbered seams — 'I. David himself was engaged with one of the giants' (v.15) and 'II. The rest of the giants fell by the hand of David's servants' (citing v.18). Cutting at v.18 therefore follows his own seam, and gives expansions of 0.100 / 0.257 / 0.303 / 0.177 where three tiles would have forced 5,913 words into one. His key-1 block likewise carries three numbered seams within vv.1-9, but those I did NOT split, because the resulting vv.7-9 tile would have had only 813 usable source words against the others' thousands — a 0.80x expansion beside a 0.10x, which is a worse imbalance than the one it fixes. The principle that emerges across 1kings 4, 1samuel 30 and here: a numbered seam in Henry's own block LICENSES a cut but does not require one; use it only where the resulting tiles are better balanced than without it. OPERATIONAL WARNING, same as at 1samuel 30: the vv.18-22 tile must be written from Henry's key-15 section II, since nothing at keys 18-22 carries him at all."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "10",
+        "15",
+        "18"
+      ],
+      "note": "VOICE COUNTS DIFFER BY TILE, and this is deliberate. Tiles 1 and 2 (vv.1-9, 10-14) declare all six voices. Tiles 3 and 4 (vv.15-17, 18-22) declare FIVE: there is no John Wesley block anywhere in vv.15-17, and his only block in vv.18-22 is a ten-word bare connective at key 18 ('After this — After the battle last mentioned'), which carries no proposition and so cannot support declaring him under the attribution rule that a voice must not be declared on bare verse text or a bare cross-reference. Schools follow from that: wesleyan-arminian is 'several' in tiles 1 and 2 (Clarke with Wesley) and 'single' in tiles 3 and 4 (Clarke alone). Expansions 0.100 / 0.257 / 0.303 / 0.177 against 14,706 usable source words as the scorer counts them, though see the key-22 chrome note — the fourth figure is really nearer 0.245. Self-graded A on all four."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "21",
+      "verses": [
+        "1"
+      ],
+      "note": "A NEW FAILURE MODE OF MY OWN, caught by habit rather than by any gate, and now guarded. While trimming tile 1 I dropped a whole paragraph to get under the word ceiling, and that paragraph happened to contain Henry's only full-name-and-school introduction. The tile still named him as 'Henry' six times, so it passed BOTH the chapter verifier and validate-synthesis.py: the verifier's check is  against TAG-STRIPPED text, i.e. it looks for the bare surname, and the validator checks that tags.schools slugs are valid, not that the prose carries the school tags. Nothing in the loop requires each declared voice to be introduced by full name, or each declared school to appear as a tag in the prose. I caught it only because I ran a grep for the bold tags out of habit after the trim. FIX APPLIED IN THIS CHAPTER'S SCRATCHPAD VERIFIER, and recommended for the loop: for each declared voice assert that the literal string '<strong><full name></strong>' occurs in the tile's RAW HTML, and for each school in tags assert '<strong><slug></strong>' occurs too. Both are one-line checks on text the verifier already has in hand. This is the second guard in three chapters that caught a class of error the pipeline does not see, after the cross-chapter shingle diff."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "21",
+      "verses": [
+        "15",
+        "17",
+        "22"
+      ],
+      "note": "Who killed Ishbi-benob is genuinely undecided, and the three positions are a model of the catena's value. Keil and Delitzsch say flatly that Abishai came to the king's help and slew the giant. Henry reads it the other way and marks it as his own judgment — 'he (namely, David, so I understand it) smote the Philistine and killed him' — grounding it on v.22, that the four 'fell by the hand of David, and by the hand of his servants'. Ellicott states the ambiguity instead of resolving it: the original leaves it doubtful whether Abishai is the nominative to the verb or whether it should be simply 'he', referring to David, and v.22 does seem to imply that one at least of the sons of the giant fell by David's own hand. Keil and Delitzsch, notably, also cite v.22 and read it as referring specifically to David's fight with Ishbi-benob — so the same verse is used by all three and read three ways. All three carried."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "21",
+      "verses": [
+        "16"
+      ],
+      "note": "Is the giant's name sound? Keil and Delitzsch defend it as a genuine proper name, not 'Yishbo at Nob' but Yishbobenob, probably meaning 'his dwelling is on the height', possibly given for an inaccessible castle. Ellicott holds some error has crept in, concedes that none of the suggested emendations is free from difficulty, and gives as likeliest the Speaker's Commentary's, which reads the first element as 'they halted' and, by a change of one letter, the second as 'at Gob', supplying 'there was a man' — yielding 'David waxed faint, and they halted at Gob. And there was a man which was of the sons...' — and supports it from vv.18-19, which presuppose a battle at Gob. Recorded because it is a rare case of a conjectural emendation offered with its own difficulties admitted."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "21",
+      "verses": [
+        "19"
+      ],
+      "note": "The Elhanan verse, worked by all three textual voices, with the same mechanism and different verdicts. Clarke calls it 'a most manifest corruption of the text, or gross mistake of the transcriber', since David and not Elhanan slew Goliath, notes that the English translators borrowed words from Chronicles to reconcile the two, explains the corruption by 'oregim' (weavers) slipping from one line into the other and 'beith hallachmi' standing for 'eth Lachmi', and credits Kennicott's First Dissertation with making it plain. Keil and Delitzsch reach the same mechanism and then report the split: most expositors (Piscator, Clericus, Michaelis, Movers, Thenius) hold the Chronicles text original and this one corrupt, while Bertheau and Boettcher maintain the reverse. Ellicott agrees on 'oregim', notes that 'the brother of' is absent from the Hebrew here and supplied from Chronicles, suggests that 'Bethlehemite' — missing in Chronicles — may itself be a corruption of 'Lahmi the brother of', and preserves a curious Jewish tradition that this Elhanan WAS David, the Chaldee paraphrasing: 'and David the son of Jesse, the weaver of veils for the sanctuary, who was of Bethlehem, slew Goliath the Gittite.' That Targum reading explains the weaver word as a title rather than an intrusion, which no other voice notices."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "21",
+      "verses": [
+        "10"
+      ],
+      "note": "SEVENTEENTH instance of Wesley reproducing Henry. Henry at key 10: 'Thus she let the world know that her sons died, not for any sin of their own, not as stubborn and rebellious sons, whose eye had despised to obey their mother; ... they died for their father's sin and therefore her mind could not be alienated from them by their hard fate.' Wesley at key 10: 'Thus she let the world know, that her sons died not for any sin of their own, not as stubborn and rebellious sons, whose eye had despised their mother: but for their father's sin, and therefore her mind could not be alienated from them by their hard fate.' Near-verbatim. Handled under the standing rule: the view is recorded once, both are named, and the pair alone is not allowed to carry prevalence above single — here it sits inside the wesleyan-arminian summary with the borrowing stated rather than hidden, and the prose says plainly that Wesley 'gives that second judgment in almost the same words'."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "rejected",
+      "book": "2samuel",
+      "chapter": "21",
+      "note": "Dropped for space, all verified in source. The largest loss is Clarke's six-fingers excursus at key 20, which is substantial and unusual: Tavernier on the eldest son of the emperor of Java reigning in 1648; Maupertuis's seventeenth letter on two families near Berlin where sedigitism was transmitted on both sides; the daughters of Caius Horatius called sedigitae and the poet Volcatius called sedigitus, after Pliny xi.43; and Clarke's own eyewitness report of 'a young girl, in the county of Londonderry, in Ireland, who had six fingers on each hand, and six toes on each foot, but her stature had nothing gigantic in it'. Keil and Delitzsch cite Pliny's sedigiti independently and add Trusen and Friedreich — so this was a two-voice convergence on a named classical source, and it is the best thing cut from this chapter. Also dropped: the whole Gob/Gezer/Nob place-name discussion (Thenius's slip-of-the-pen theory, el Kubab on the road from Ramleh to Yalo, the forty Kennicott and De Rossi manuscripts reading Nob, the LXX's Gath); Clarke's and Ellicott's agreement that 'sword' is absent from the Hebrew so that 'new' may belong to the armour generally, with Ellicott weighing the spear-head at about eight pounds, half Goliath's; Ellicott's note that most LXX manuscripts add a clause naming the man who took the bodies down; Wesley's distinction that God was pacified by the hanging and not by the burial; Ellicott's inference from 'the light of Israel' that David's reign over all Israel had already lasted long enough for its benefits to be felt; and Clarke's reason for thinking the corruption possible, that the law and prophets were held to the highest title of inspiration and carefully preserved while the historical books ranked lower and suffered frequent alteration."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "21",
+      "verses": [
+        "1"
+      ],
+      "note": "ADDENDUM to the note recorded minutes ago about the missing voice declaration: one clause in it lost its text. I wrote the verifier check inside backticks and the shell ate it, so that note reads \"the verifier check is  against TAG-STRIPPED text\" with a gap. The missing text is the check itself: for each declared voice the verifier evaluates SHORT[voice] not in txt, where SHORT maps each full name to its bare surname (Matthew Henry to Henry, John Gill to Gill, and so on) and txt is the tile HTML with all tags stripped. That is why a tile naming him only as Henry, with no bold full-name introduction and no school tag, satisfies it. Everything else in that note stands, including the recommended fix. Lesson for my own note-writing, since this is the second shell-mangled note in two chapters: never put backticks in a note body passed through the shell; use plain words or single quotes."
     }
   ]
 }
