@@ -106625,6 +106625,102 @@
       "book": "1samuel",
       "chapter": "30",
       "note": "Dropped for space, all verified in source. Ellicott's devotional excursus on the statute, quoting Milton's 'They also serve who only stand and wait' (Sonnet 19), observing that Moses praying on the hill contributed more to the victory over Amalek than Joshua fighting in the plain, and quoting Bishop Hall in Wordsworth on the Simeons and Annas of the church, weak in body but strong in faith, fighting with the peaceful arms of prayers and tears — the best single thing dropped from this chapter, and worth restoring if the vv.21-25 tile is ever rebuilt. Also dropped: the detailed gazetteer at vv.27-31 (Jattir as the present Attir, Eshtemoa surviving as Semna, Hormah as Zephath or Zep-ata, Chor-ashan, Athach unknown, Thenius reading Ether for Athach, and the LXX's five substitute names for Rachal) — only the two genuinely disputed sites, Bethel and Aroer, were kept; Clarke's Cherethites-as-Cretans argument from Zephaniah and Ezekiel, with Ellicott's long excursus on Philistine origins, Caphtor and the foreign bodyguard compared to the Scottish archers, the Swiss Guards and the Varangians; Clarke's identification of Rachal with Hachilah after Calmet; and Henry's reading of the recovered spoil as Christ leading captivity captive, which was kept in tile 3 but dropped from the vv.16-20 providence item."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "19",
+      "verses": [
+        "5",
+        "23",
+        "29"
+      ],
+      "note": "JFB cross-reference defect, eleventh consecutive chapter, and the stride hypothesis now has a clean form. Here three blocks intrude, at keys 5, 23 and 29 -- all congruent to 5 modulo 6. In 1samuel 28 they were at 3, 9, 15, 21 (all 3 mod 6); in 2kings 18 at 17, 23, 29, 35 (all 5 mod 6). So the defect occupies every sixth key on a lattice whose PHASE varies by chapter, and the lattice may be sparsely filled: keys 11, 17, 35 and 41 are empty here though they lie on it. The payload is again sequential slices of ONE continuous foreign passage, this time Judges 21 (key 5 is Israel relenting over Benjamin, key 23 is the feast at Shiloh, key 29 is the dance), where 2kings 18 had one block replicated byte-for-byte. A fixed modulus with a per-chapter phase is what an off-by-N index into a flat list of verse blobs looks like; a repair could compute the phase from the first intruder and recover the real JFB text rather than discarding it."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "19",
+      "verses": [
+        "43"
+      ],
+      "note": "Page-chrome contamination at the chapter's final verse, FOURTH consecutive chapter, always Ellicott, always the last key: job 22 key 30, 2kings 18 key 35, 1samuel 28 key 25, now 2samuel 19 key 43. The Ellicott block runs 1,051 words of which about 150 are real commentary (the note on the Greek addition and on the rendering of the last clause); the rest is StudyLight navigation, a copyright block and CSS. usable_source_words counts all of it, so span 42-43 is measured against roughly 900 words of markup. Four chapters is enough to call this systematic rather than incidental: the scrape picked up the page footer whenever Ellicott's entry was the last on the page."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "9",
+        "16",
+        "24",
+        "31",
+        "40"
+      ],
+      "note": "Henry's section filing, sixth chapter in a row, and the worst instance yet. Six blocks cover 43 verses, at keys 1, 9, 16, 24, 31 and 40, and each block runs on into the FOLLOWING pericope: the key-16 block covers vv16-23, key-24 covers vv24-30, key-31 covers vv31-39, key-40 covers vv40-43. So Henry's analysis of vv19-23, vv27-30, vv35-39 and vv42-43 is filed in the span before the one it belongs to, and cannot be cited where it belongs without pulling source from outside the span. Five of twelve spans here name no Henry at all, not because he is silent but because his words sit one span upstream. Span-aware source resolution would fix the measurement; nothing but a re-scrape would fix the attribution."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "19",
+      "verses": [
+        "1"
+      ],
+      "note": "New source shape: a chapter-head synopsis filed as verse commentary. Clarke's block at key 1 is not comment on vv1-4 at all but an outline of the whole chapter, verse by verse to v43 (David laments, Joab reproves, the tribes take counsel, Shimei entreats, Mephibosheth meets him, Barzillai parts from him, Judah and Israel contend). Per-key resolution counts those 159 words as Clarke on v1, which inflates the span's source count and would misreport the content if drawn on. Handled by noting in the prose that Clarke's material here is a synopsis bearing on what follows. Worth a detector: a key-1 block whose text enumerates later verses is an argument, not a comment."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "19",
+      "verses": [
+        "35",
+        "42"
+      ],
+      "note": "Two clauses in this chapter are glossed in opposite directions by two voices each. (1) The parting at Jordan: Clarke makes the blessing the king's, a prayer for Barzillai's prosperity and perhaps prophetical; Keil and Delitzsch make the kiss the king's leave-taking and the blessing Barzillai's, before he turned home. The Hebrew leaves the subject of the second verb open and neither voice flags the other. (2) The closing note that the words of the men of Judah were fiercer: Clarke reads fiercer as weightier, since that side had more reason behind it; Wesley reads it as a failure of temper so hot that David dared not interpose. Both were carried as a disagreement rather than resolved."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "5",
+        "9",
+        "11",
+        "15",
+        "19",
+        "24",
+        "27",
+        "31",
+        "35",
+        "40",
+        "42"
+      ],
+      "note": "Zero fidelity signals for the second chapter running, and the practice that produced it is now explicit enough to state as three rules applied at DRAFT time, not in correction. (1) Never name a voice whose material for this pericope is filed in another span -- check the span's own source keys first, which is why entry 11 says Gill makes the same point at the end rather than crediting Henry, and why entries 19, 27, 35 and 42 name no Henry. (2) Never resolve a bare citation to a name the source does not spell out, and never change the form in which a source leaves a name, grammatically, orthographically or adjectivally. (3) Where a source quotes a third party, report the agreement and the divergence rather than quoting, since two voices carrying the same quotation rarely carry it in the same words."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "5",
+        "9",
+        "15",
+        "24",
+        "27",
+        "31",
+        "42"
+      ],
+      "note": "Calibration, third measurement, and the sentence-count predictor held. First-pass validator counts this chapter: 707, 713, 682, 657, 716, 601, 759, 713, 718, 462, 611, 673 -- mean 692 against a 650 cap for the full-size entries, so the overshoot is about 6 percent and no longer the 15-25 percent it was with four-paragraph drafts. The three that landed in band first time were the small-source spans where I deliberately aimed below the cap. Overshoot tracked SENTENCE COUNT almost exactly at roughly 36 validator words per sentence in this register. Operational rule for the next chapter: 17 sentences for a 650 target, not 18, and count them before measuring words."
     }
   ]
 }
