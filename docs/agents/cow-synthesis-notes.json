@@ -106422,6 +106422,91 @@
         "21"
       ],
       "note": "Cross-chapter divergence on Ahithophel's motive, stated from each chapter's own source. Here the Bathsheba-revenge motive is asserted by Wesley and reported by Henry as what some think; at 2samuel 15 Ellicott rejected it. Recorded as a divergence between chapters rather than resolved, since neither chapter's source argues against the other's."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "28",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21"
+      ],
+      "note": "JFB cross-reference defect, tenth consecutive chapter, and a new variant. Here the four intruding blocks are NOT identical: keys 3, 9, 15 and 21 carry four different fragments (7, 30, 47 and 60 words) that are sequential slices of one continuous Judges 5 passage -- key 15 is Judges 5:14 (Ephraim, Machir, Zebulun), key 21 is Judges 5:17-18 (Gad, Manasseh, Dan, Asher, then Zebulun and Naphtali). 2kings 18 had four byte-identical blocks (one 2 Samuel 14 passage) at keys 17, 23, 29, 35. The stride is 6 in both chapters while the payload handling differs: one block replicated there, one passage sliced sequentially here. A constant stride across chapters with sequential slicing points at a deterministic indexing bug in whatever assembled the JFB column, not random mis-pagination -- which means a repair could compute the offset rather than discard the blocks."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "28",
+      "verses": [
+        "25"
+      ],
+      "note": "Page-chrome contamination at the chapter's final verse, third consecutive chapter, always in Ellicott, always the last key: job 22 key 30, 2kings 18 key 35, now 1samuel 28 key 25. Key 25's Ellicott block runs 1,096 words of which about 95 are real commentary (the note on returning that night plus the von Gerlach verdict); the rest is StudyLight navigation, a copyright block, CSS rules and a book_data array. usable_source_words counts all of it, so this span's compression ratio is reported against roughly a thousand words of markup. A stripper keyed on the markers (style rules, StudyLight.org, document.addEventListener, book_data) would recover both the text and an honest word count."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "7",
+        "15",
+        "20"
+      ],
+      "note": "Henry's section filing in this chapter: four blocks for 25 verses, at keys 1, 7, 15 and 20. The key-15 block (1,135 words) covers vv15-19 and the key-20 block (1,094 words) covers vv20-25, so the material for spans 17-19 and 22-25 has to be drawn from a key that sits in an earlier span. Per-key source resolution would report Henry absent from four of the ten spans while over-counting the two he is filed under. Fifth chapter in a row where section filing distorts the measurement."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "28",
+      "verses": [
+        "15",
+        "17",
+        "22",
+        "24"
+      ],
+      "note": "This chapter carries the same third-party quotation twice over in divergent wording, in two unrelated places. (1) The hymn stanza on 'thou and thy sons shall be with me': Clarke credits it to the Rev. C. Wesley and gives 'A ray of hope' / 'Not in a state of hellish pain', while Wesley's own note gives 'A gleam of hope' / 'Not in a state of health or pain'. (2) The verdict on Saul's end: Keil and Delitzsch quote 'O. v. Gerlach' and Ellicott quotes 'O. von Gerlach', with 'fate' against 'predicted fate' and 'destiny' against 'fate'. Writing either as a single attributed quotation would misreport it; both were handled by reporting the agreement and noting the divergence without quoting."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "28",
+      "verses": [
+        "15"
+      ],
+      "note": "ENTITIES caught 'Talmudic' where Ellicott writes 'the Talmud, treatise Berachoth'. This extends the rule filed for job 22 and 2kings 18 (never change the form a name appears in, grammatically or orthographically) to a third case: an ADJECTIVAL form coined from a source's proper noun is also a change of form. 'An answer from the Talmud' passes where 'a Talmudic answer' does not, and costs two words."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "28",
+      "verses": [
+        "13",
+        "15",
+        "17"
+      ],
+      "note": "The chapter's central dispute, and Henry is alone. Henry holds the figure to be the devil in Samuel's shape (the design was on the soul, not the body, else the witch would have been taken to Ramah; the ascent out of the earth betrays it, since a good man's spirit goes upward; and the devil can transform himself into an angel of light), citing bishop Patrick that witches cannot disturb the rest of good men at pleasure. Gill agrees it was not Samuel. Clarke, Keil and Delitzsch and Wesley hold that Samuel appeared and was raised neither by the woman nor by the devil; Wesley puts it as a dilemma (if another spirit in his shape, then it is untrue that Saul perceived it was Samuel); and Ellicott quotes Bishop Wordsworth that no evil spirit would have wished to help David to the throne or spoken so solemnly of the punishment due to rebellion. The dispute runs across three spans and had to be carried in all three without resolving it."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "13",
+        "15",
+        "17",
+        "22"
+      ],
+      "note": "Calibration, continued. Dropping from four paragraphs to three did NOT fix the overshoot: first-pass counts this chapter were 699, 734, 719, 671 and 769 validator words against a 650 cap, costing one to three trim cycles each. The driver is sentence count and clause length, not paragraph count -- a three-paragraph entry with six long sentences per paragraph overshoots exactly as a four-paragraph one does. The reliable predictor is roughly 36 validator words per sentence in this register, so about 18 sentences is the budget. Next chapter: count sentences, not paragraphs."
     }
   ]
 }
