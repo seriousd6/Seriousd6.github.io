@@ -107133,6 +107133,93 @@
       "book": "2samuel",
       "chapter": "5",
       "note": "Dropped for space, all verified in source. The largest loss is the dispute over where \"the hold\" was: Keil and Delitzsch argue it cannot be the citadel of Zion because that was so high that one went UP to it, reject Bertheau view that the verb for going down is used of falling back into a fortification, and take it for the mountain stronghold in the desert of Judah where David had hidden from Saul; Ellicott agrees it cannot be Zion since David went down to it and then up from it, and rules out the cave of Adullam, which on either the monastic or the older tradition is remote from the battlefield; Wesley makes it a fortified place where his people might conveniently resort and he might entrench his army. Also dropped: the Geba-or-Gibeon reading at v.25, where Keil and Delitzsch and Ellicott independently judge Gibeon the true text and Geba a slip of the pen, Ellicott measuring the pursuit at about twelve miles from Gibeon with six more before it; Clarke devotional passage at v.25 asking why such supernatural directions are not given now and answering that they are not asked for, not expected, not believed; Clarke constitutional digression (see the key-25 source-defect note); Clarke note that the Septuagint lists twenty-four sons against the Hebrew eleven, with two Nathans, two Eliphalaths and two Napheks, evidently corrupt; Ellicott observation that the first four sons were Bathsheba and that Solomon and Nathan are the two lines through which Matthew and Luke trace the genealogy, Solomon appearing last in every list though evidently the eldest of her sons; Keil and Delitzsch explanation that Eliphalet and Nogah are omitted here because they died in infancy, with Kimchi to the same effect in Gill; Gill note that the mulberry trees account for silk in Judea; and Clarke report that the Targum gives the sound as a bare noise and the Arabic as the noise of horses hoofs."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "6",
+      "verses": [
+        "1"
+      ],
+      "note": "VOICE_LABELS gap confirmed as reproducible: Gregory the Great is again unrecognised. The key-1 block carries a 303-word segment that split_voices returns as UNATTRIBUTED, and the name is sitting in plain text at the head of it -- 'Gregory the Great: Lit. reproaches, but some are more wounded by reproaches than by scourges...'. This is the second chapter in which exactly this happens (job 22 key 1 was the first), so the fix is a one-line addition of 'Gregory the Great' to VOICE_LABELS plus the leading-label pattern, not a per-chapter workaround. The cost of leaving it: the voice is invisible to split_voices, so it is absent from any per-voice measurement, and the writer has to notice it by eye. The content is worth having -- a patristic reading that makes the friends' speeches a distinct permitted temptation and weighs Job's excessive words against the Judge's own verdict on him -- and it is the only latin-fathers material in the chapter."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "6",
+      "verses": [
+        "30"
+      ],
+      "note": "Page-chrome contamination at the chapter's final verse, SEVENTH consecutive chapter, always Ellicott, always the last key: job 22 key 30, 2kings 18 key 35, 1samuel 28 key 25, 2samuel 19 key 43, 1samuel 19 key 24, 2samuel 17 key 29, now job 6 key 30. The block runs 1,485 words of which about 215 are real commentary (the paraphrase of the question about the tongue, and a reflection on the difficulty of tracing Job's argument in Western logical form); the remaining ~937 words carry 37 chrome markers. Seven chapters with no exception."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "6",
+      "verses": [
+        "30"
+      ],
+      "note": "JFB defect, fourteenth consecutive chapter, and the sparsest instance yet: ONE intruding block, at key 30, which is phase 0 modulo 6. All the other phase-0 positions in this chapter (6, 12, 18, 24) are empty. The payload is 87 words on the doxologies of two psalms, with a citation of Bertheau -- so the foreign passage this time is the festival account in 1 Chronicles 16, not Judges or Joshua. Phases to date: 3, 5, 5, 2, 3, 0. A single occupied position rules out any explanation that needs a run of consecutive bad indices and leaves a per-key lookup that fails independently at each key."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "6",
+      "verses": [
+        "11",
+        "20"
+      ],
+      "note": "Wesley absorbing Henry, now eight instances across three chapters, and job 6 shows why it matters for span-aware work. Henry's blocks here are filed at keys 1, 8, 14 and 22. At key 11 Wesley reproduces Henry's sentences from the key-8 block almost verbatim (the man never offered to put an end to his own life; the soul must not break prison but wait for a fair discharge), and at key 20 he reproduces Henry's sentence from the key-14 block (we prepare confusion for ourselves by our vain hopes; the reeds break under us because we lean upon them). In both spans Henry's own block is absent, so Wesley is the only carrier of the thought in the span that needs it. Writing those spans without naming Henry is therefore both fidelity-safe and honest: the words are Wesley's to quote, whoever coined them."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "8",
+        "14",
+        "22"
+      ],
+      "note": "Henry's section filing, fourth chapter running. Four blocks for 30 verses, at keys 1 (covering vv1-7), 8 (vv8-13), 14 (vv14-21) and 22 (vv22-30). Five of the nine spans name no Henry. The regularity is now worth stating as a rule for any future span-aware resolver: Henry's exposition is filed at the first verse of his own section, his sections run six to nine verses, and they do not coincide with the pericope boundaries a tiling needs. A resolver that attributed his block to every verse in its range would fix both the over-count at the section head and the false absences."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "6",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke's chapter-head synopsis, fourth chapter in a row (2samuel 19, 1samuel 19, 2samuel 17, job 6). Here the key-1 block opens with an outline of the whole chapter -- Job vindicates himself, complains of his friends, shows they know nothing of his case, entreats them to show where he has offended -- before commenting on the verse. Same recommendation as before: a block at key 1 that enumerates later verse ranges in sequence is an argument, not a comment."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "6",
+      "verses": [
+        "14"
+      ],
+      "note": "ENTITIES caught 'Horace' where Clarke's citation reads 'Hor. Satyr. lib. i., s. iv., ver. 81'. This is the second instance of the expand-an-abbreviation case in two chapters (after 'Syriac' for 'Syr.' in 2samuel 17), and the third if the earlier refusal to render 'Arab.' as Arabic is counted as the same rule applied correctly. Fixed by dropping the name: a Latin satire in Francis's version. The rule, stated for the loop doc: a name the source gives only in abbreviation cannot be written out, because the expansion is a form the source does not contain -- even when the expansion is certain."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "4",
+        "8",
+        "14"
+      ],
+      "note": "Calibration, sixth measurement. First-pass counts: 841, 730, 743, 680, 744, 575, 617, 627, 686. The four worst overshoots were the four largest-source spans, where the cap rather than compression binds and where the temptation is to carry every voice at length; in each the sentence count had drifted to 19-21 against a plan of 17. The small-source spans, where I computed the target from 0.58 of usable words, came in at 575-627 and needed no trim at all. So both halves of the rule now have evidence: compute the target from the source size first, then hold the sentence count to the target divided by 36. The remaining failure mode is mine, not the method's -- I stop counting sentences inside a long paragraph."
     }
   ]
 }
