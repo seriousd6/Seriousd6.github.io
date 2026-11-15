@@ -106857,6 +106857,74 @@
         "1"
       ],
       "note": "ADDENDUM to the note recorded minutes ago about the missing voice declaration: one clause in it lost its text. I wrote the verifier check inside backticks and the shell ate it, so that note reads \"the verifier check is  against TAG-STRIPPED text\" with a gap. The missing text is the check itself: for each declared voice the verifier evaluates SHORT[voice] not in txt, where SHORT maps each full name to its bare surname (Matthew Henry to Henry, John Gill to Gill, and so on) and txt is the tile HTML with all tags stripped. That is why a tile naming him only as Henry, with no bold full-name introduction and no school tag, satisfies it. Everything else in that note stands, including the recommended fix. Lesson for my own note-writing, since this is the second shell-mangled note in two chapters: never put backticks in a note body passed through the shell; use plain words or single quotes."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "19",
+      "verses": [
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "JFB cross-reference defect, twelfth consecutive chapter, and this chapter settles a question the earlier ones left open. The intruders sit at keys 8, 14 and 20 -- all congruent to 2 modulo 6, a fourth distinct phase (1samuel 28 was phase 3, 2kings 18 and 2samuel 19 phase 5). Keys 14 and 20 are BYTE-IDENTICAL (md5 65621d3b, 243 words each), while key 8 is a different and much shorter fragment of 16 words. All three come from the same foreign passage, Joshua 22 on the altar built by the trans-jordanic tribes. So the two payload behaviours I had been recording as alternatives -- one block replicated verbatim, and one passage sliced into different fragments -- occur TOGETHER in a single chapter. That rules out two different bugs and points at one indexer whose output depends on where in the foreign passage the bad index lands. Foreign passages so far: Judges 5, 2 Samuel 14, Judges 21, Joshua 22."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "19",
+      "verses": [
+        "24"
+      ],
+      "note": "Page-chrome contamination at the chapter's final verse, FIFTH consecutive chapter, always Ellicott, always the last key: job 22 key 30, 2kings 18 key 35, 1samuel 28 key 25, 2samuel 19 key 43, now 1samuel 19 key 24. The block runs 1,662 words of which about 259 are real commentary (the note on the earlier outpouring at Gibeah, Raschi and the Chaldee, Lyranus on the garment, and the proverb); the rest is StudyLight navigation, copyright text and CSS. Five chapters with no exception is a rule: whenever Ellicott's entry is last on the scraped page, the page footer is appended to it."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "19",
+      "verses": [
+        "11",
+        "18"
+      ],
+      "note": "Henry's filing in this chapter is not merely coarse, it DUPLICATES. The key-11 block runs from v11 to the end of the chapter (fourteen verses), and the key-18 block covers vv18-24 again in full. The tail of the key-11 block is a condensed restatement of what the key-18 block says at length -- Michal's stratagem, the flight to Samuel, the messengers prophesying, Saul among the prophets -- which looks like Henry's own practical-observations section being concatenated to his exposition by the scrape. Consequence for the writer: the same Henry material is reachable from two different spans, so a span-aware resolver would have to pick one, and a naive word count counts him twice. Four Henry blocks here (keys 1, 8, 11, 18) cover 24 verses, and three of the eight spans name no Henry."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "19",
+      "verses": [
+        "6",
+        "8"
+      ],
+      "note": "First case in this run of the catena citing itself. Wesley's note at key 6 reads: 'God,' says Mr. Henry, 'inclined the heart of Saul to hearken to the voice of Jonathan.' That exact sentence stands in Henry's own block at key 1 of this same chapter. So a quotation inside one voice can be verified against another voice in the same file -- which is a check worth having, and also a trap, since naming Henry in the span 4-7 entry is only defensible because his name occurs there inside Wesley's quotation. At key 8 Wesley does the same thing without attribution, compressing Henry's sentence about those who are ill paid for doing good almost verbatim. Where one voice silently absorbs another, reporting them as two independent witnesses would overstate the agreement."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "19",
+      "verses": [
+        "20"
+      ],
+      "note": "ENTITIES caught 'Whitsuntide' where Ellicott, quoting Bishop Wordsworth, writes 'Whitsun Tuesday' and 'Whitsun Monday'. Third instance of one class: a coined form of a name the source spells otherwise (job 22 and 2kings 18 gave the grammatical and orthographic cases, 1samuel 28 the adjectival 'Talmudic', and this is the generalising case -- a festival day widened into a season). The rule as it now stands: reproduce a proper name, including a festival's name, exactly as the source gives it, or do not name it at all. Generalising, adjectivising, transliterating and modernising are all the same error."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "8",
+        "13",
+        "18",
+        "22"
+      ],
+      "note": "Calibration, fourth measurement, and the sentence-count rule works only when actually applied. First-pass validator counts: 653, 518, 708, 592, 750, 698, 477, 631. Of the five entries aimed at the 650 cap, two landed in band first time (653, 631) and three overshot (708, 750, 698) -- and the three overshoots are exactly the entries where I wrote more than the planned seventeen sentences, having stopped counting part way through a long paragraph. The predictor itself (about 36 validator words per sentence in this register, so 17 sentences for a 650 target) held in every case. Operational fix for the next chapter: count the sentences in the draft BEFORE measuring words, and cut a sentence rather than trimming eight of them."
     }
   ]
 }
