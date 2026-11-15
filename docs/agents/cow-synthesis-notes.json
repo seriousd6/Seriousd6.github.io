@@ -106128,6 +106128,90 @@
         "22"
       ],
       "note": "Two spans came out at prose/source ratios of 1.15 and 1.00 — expansion, not compression — while spans 5, 15 and 21 came out at 0.26 to 0.30. The cause is not thin sources but filing: at vv3-4 and v22 Gill and Keil are truncated at 200 words per key and Henry's material for those verses sits under a different key, so span_source_words sees only a fraction of what the prose is actually drawing on. The 350-650 band is insensitive to both effects, which is why the same floor produces padding risk at one end of a chapter and loses real content at the other."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "4",
+      "verses": [
+        "1"
+      ],
+      "note": "WORKER ERROR, caught by the entity check and recorded because it is a new failure mode. While writing the tags for this chapter I carried a whole sentence over from the PREVIOUS chapter I had worked (1samuel 14), attributing to Clarke here that 'he identifies Ahiah with Ahimelech... and traces the family of Ahitub and Ichabod back to Phinehas the son of Eli.' None of Ahimelech, Ahitub, Ichabod or Phinehas occurs anywhere in the 1kings 4 source. Worse, 1kings 4 does contain an Ahiah — one of the sons of Shisha, the scribes (v.3) — so the sentence silently conflated this chapter's scribe with the priest of 1 Samuel 14 and would have read as a plausible false attribution. It was removed before assembly; nothing defective reached the data tree. Two points for the driver: (1) this is cross-chapter bleed, not a misreading of the source, and it is the first instance of it I have produced — it is a long-context failure, not a judgement failure; (2) NOTHING in the pipeline would have caught it. The validator, the chapter lint and the corpus gate all passed with the sentence in place; only scripts/ent.py (the unsourced proper-noun check, which is a scratchpad tool and not part of the loop) flagged it, and only because three of the four names happen to be absent from this chapter. Had the names been common to both chapters it would have landed."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "4",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28",
+        "34"
+      ],
+      "note": "JFB residue: all six JFB blocks in this chapter comment on 1 Samuel 8-9 (Samuel's dissatisfaction at the demand for a king, the warning about despotic Oriental government and the royal equipages, the people insisting on being like all the other nations, the family of Kish letting the animals roam and sending to search for them, and the sixpence present), not on 1 Kings 4. Stride 6 at offset 4, and the walk is COMPLETE: keys 4, 10, 16, 22, 28, 34. JFB excluded from all four tiles. Running tally of observed offsets: 1 (1samuel 14, incomplete), 2 (1kings 1/2/9/15), 3 (1kings 16), 4 (2samuel 2, 2chronicles 34, 1kings 22, here), 5 (2kings 5, 2samuel 15). All six residues of 6 have now been seen, which is consistent with the offset being an artefact of where each chapter's harvest began rather than anything about the chapter."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "20",
+        "29"
+      ],
+      "note": "Henry's section heads give only THREE heads in this chapter (keys 1, 20, 29) for 34 verses, the coarsest ratio yet seen — and this is the first chapter where I did not simply take them as the tiling. Three tiles would have put 7,880 net source words into the first tile (0.082x). Instead I cut four tiles at vv.1-6, 7-19, 20-28, 29-34, splitting Henry's first section at v.7. The justification is that his own key-1 block carries a numbered seam exactly there ('III. The purveyors for his household'), so the split follows his structure rather than cutting across it — which is the distinction the 1kings 22 note drew. Result: expansions evened out to 0.19 / 0.145 / 0.123 / 0.115 instead of one tile at 0.082. Clarke's chapter argument sits at key 1 (TWELFTH consecutive chapter). Recorded so the eighteen-chapter run of 'Henry's heads give the tiling' is not read as unbroken: it holds, but it needed a sub-cut here."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "4",
+      "verses": [
+        "22"
+      ],
+      "note": "The size of Solomon's court is the rare case of a dispute that is fully quantified, and the spread is nearly twentyfold on identical data. Henry reckons the flour and meal would 'richly serve 3000 men' and reports Carellus at above 4,800. Ellicott, noting the measure is variously estimated between 42 and 86 gallons, will say only 'probably several thousands'. K&D compute from Thenius's value that ninety cors yield about 28,000 lbs of bread and, at 2 lbs a head, put 14,000 persons at court. Clarke reports the two highest: Vilalpandus at not less than 48,600 and Calvisius at 54,000, accounting for them by supposing the guards included, each drawing a ration. Gill measures only the vessel, at Bishop Cumberland's 75 wine gallons and somewhat more. The whole disagreement reduces to the value of the cor and the assumed ration, both of which every witness leaves implicit except K&D. Worth a note because it is a clean example of what the corpus can show that a single commentary cannot."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "4",
+      "verses": [
+        "2",
+        "31"
+      ],
+      "note": "Two independent disputes in this chapter both turn on whether a word is a title or a name. (1) At v.2 the word applied to Azariah: K&D deny it means 'the priest' at all and make it the administrator of the kingdom, the king's representative before the people, the article marking him first among the confidential counsellors — and they reject the Vulgate/Luther/Thenius construal that joins it genitivally to the patronymic against the accents. Ellicott concedes the wider usage (the word was applied to princes, being given to David's sons where Chronicles paraphrases 'chief about the king') but holds that HERE the usual priestly sense is right, Azariah having been a prince before succeeding to the high priesthood. (2) At v.31 the patronymic of Chalcol and Darda: Ellicott and Clarke both note that the word signifies dance or music and may be no name at all, so that the four rivals may have been masters of music rather than philosophers — which would change what the comparison is about. On the identity of the four, K&D stand alone (identifying them with the sons of Zerach in Chronicles via a copyist's error and a prosthetic aleph) against Ellicott, Clarke and Henry, who all refuse it on the chronological ground that Zerah flourished generations earlier and who identify them instead with David's temple musicians."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "rejected",
+      "book": "1kings",
+      "chapter": "4",
+      "verses": [
+        "24",
+        "26",
+        "30",
+        "31"
+      ],
+      "note": "Dropped from the prose for space and recorded here. (1) Henry's defence of Solomon against the Deuteronomic prohibition on multiplying horses (v.26): he grants the 40,000 for chariots and 12,000 for the troops, and argues that considering the extent and wealth of the kingdom Solomon did not multiply horses IN PROPORTION to his neighbours, since the Philistines had once brought 30,000 chariots into the field and the Syrians at least 40,000 horse. It is the only attempt by any witness here to answer the obvious charge, and is the best candidate for restoration. (2) The whole 'rival wisdoms' item at v.30: K&D take the children of the east for the Arabian tribes celebrated for gnomic wisdom (Sabaeans, Temanites) and hold that 'all' requires the Chaldaeans too, celebrated for astronomy and astrology; Ellicott makes them morally serious, Job being expressly one of them and among the chief, so that the utterances of Job and his friends testify what their wisdom was, resting with an awe greater than was felt within the Abrahamic covenant on the consciousness of the one God, and he contrasts Egyptian wisdom as part of a more advanced civilisation but perhaps less free and vigorous; Gill ALONE makes eastern wisdom disreputable, placing it in the knowledge of the stars, divination by birds and soothsaying. That Gill/Ellicott divergence is a real one and is lost from the prose. (3) K&D's note at v.24 that the Septuagint, Vulgate and Luther connect the first fourteen verses of chapter 5 with this chapter, the copula being absent at v.20."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "7",
+        "20",
+        "29"
+      ],
+      "note": "All four entries self-graded A; validator, chapter lint and corpus gate clean, zero flags of any category. Expansion by tile: 1-6 0.19x (650/3,416), 7-19 0.145x (648/4,464), 20-28 0.123x (647/5,247), 29-34 0.115x (644/5,598). All five voices present in this chapter (there is no Wesley material in 1kings 4 at all) appear in all four tiles, so no tile under-represents a commentator — unlike 2samuel 15, where two tiles dropped Henry, and 1samuel 14, where I had to restore him to the last tile deliberately. For key 29 that restoration was worth it: Henry supplies a third reading of 'largeness of heart' (the intellectual powers, or courage and assurance, or a disposition to do good with knowledge) against Ellicott's 'capacity of knowledge', and a fourth position on the survival of the proverbs (that it is uncertain whether those we have were any part of the three thousand)."
     }
   ]
 }
