@@ -106309,6 +106309,119 @@
         "26"
       ],
       "note": "Two ROLLCALL hits from the local lint, both the same construction: a semicolon-separated list of three or more commentators' glosses in one paragraph. The shape is natural when summarising who says what about a single word, and it reads perfectly well, but it trips the roll-call heuristic. Splitting the list into separate sentences fixes it at no cost to the content. Worth avoiding at draft time rather than at lint time, since the fix is mechanical and the construction is tempting in exactly the verses where several voices gloss one term."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "16",
+      "verses": [
+        "9",
+        "21"
+      ],
+      "note": "JFB residue, offset 3, INCOMPLETE. Both JFB blocks in this chapter (keys 9 and 21) comment on Judges 19 — the Levite turned aside at Jebus, and the outrage at Gibeah — not on 2 Samuel 16 at all. Stride 6 holds as everywhere, but the expected keys 3 and 15 are missing, so this harvest is partial as well as misplaced. Offset 3 was previously seen only at 2samuel 16's neighbour 2samuel 16 — correction: previously only at 2samuel 16 itself is wrong; the prior offset-3 sighting was 2samuel 16 in no earlier chapter. Observed offsets now cover all six residues (1, 2, 3, 4, 5 and the implied 0), which supports reading the offset as an artefact of where each harvest began rather than as anything structural. Both blocks excluded from the tiles that span them."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "16",
+      "verses": [
+        "22"
+      ],
+      "note": "Thirteenth instance of the chapter-final Ellicott chrome. Key 22 carries 1,046 words of which roughly 55 are commentary on this chapter; the remainder is apparatus sitting on the commentator's last block. Strippable by pattern on each commentator's final block — still on the notebook, still not actioned unilaterally."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "rejected",
+      "book": "2samuel",
+      "chapter": "16",
+      "note": "Dropped for space, all verified in source: Clarke's quotation of a fifteen-line verse paraphrase (Let Shimei curse: the rod he bears / For sins which mercy had forgiven...) which he introduces as from the pen of the Rev. Charles Wesley, one of the first of Christian poets — note for any future pass that Charles Wesley here is a reported authority quoted by Clarke, NOT the declared voice John Wesley, and must never be collapsed into him; Ellicott's philology on let the king live, that this and God forbid are exceptional instances where modern phraseology refers more directly to God than the ancient; Gill's Targum and Kimchi canopy of four pillars; Clarke's identification of Bahurim with Almon; Gill's reading of the stones as contempt rather than assault; Ellicott's note that taking a predecessor's harem was an Oriental custom to whose enormity the mind was blunted by polygamy was kept, not dropped."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "5",
+        "15"
+      ],
+      "note": "Three tiles at Henry's section heads (keys 1, 5, 15) — nineteenth consecutive chapter in which Henry's heads give the tiling, with no subdivision needed here. All six voices (Henry, Gill, Keil and Delitzsch, Clarke, Ellicott, Wesley) named in all three tiles; JFB excluded from tiles 2 and 3 where its misplaced blocks fall, and excluded_voices left empty for tile 1 since JFB heads no block in vv.1-4. Expansions 0.308 / 0.132 / 0.129 against 12,071 usable source words. Self-graded A. Guard run and recorded: because this chapter is adjacent to 2samuel 15 and shares Ziba, Hushai and Ahithophel, ent.py is structurally blind to cross-chapter bleed here, so an 8-word shingle diff of the new tag modules and prose against the previous two chapters' tag modules was run before assembly — 43 shared shingles, every one module scaffolding (voice lists, dict keys, the phrase claim alone in), zero shared content. This is the guard added in response to the 1kings 4 contamination; it worked as intended and should be made part of the loop rather than left in a scratchpad."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "16",
+      "verses": [
+        "9",
+        "21"
+      ],
+      "note": "CORRECTION to the JFB-residue note recorded for this chapter minutes earlier: one sentence in it is garbled and should be disregarded — the clause beginning 'Offset 3 was previously seen only at' is incoherent, the result of my writing a self-correction into a sentence I had already half-written. The fact it was trying to state: offset 3 is observed HERE FOR THE FIRST TIME in the run. Prior offsets were 1 (1samuel 14, incomplete), 2 (1kings 1, 2, 9, 15), 4 (2samuel 2, 2chronicles 34, 1kings 22, 1kings 4) and 5 (2kings 5, 2samuel 15). With offset 3 added, the observed offsets span every residue of the stride-6 pattern, which is the point: the offset carries no structural information and is best read as an artefact of where each harvest began. Everything else in that note stands — stride 6, keys 9 and 21, Judges 19 content, keys 3 and 15 missing."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "16",
+      "verses": [
+        "19",
+        "20",
+        "21",
+        "22",
+        "23"
+      ],
+      "note": "Three witnesses independently fix the place as the point, and none cites the others. Clarke: the deed was probably transacted in the very same place where David's eye took the adulterous view. Gill: on the very spot from whence David had a sight of Bathsheba. Ellicott: Nathan had foretold that the nature of David's public punishment should correspond to the character of his secret crime, and finds it striking that it falls on the very roof where David had first yielded. Independent convergence of this kind is rare enough in the catena to be worth recording as such; carried into tile 3 as a converging reading rather than as any one voice's."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "16",
+      "verses": [
+        "10",
+        "11",
+        "12"
+      ],
+      "note": "Five instruments on one hard saying — the LORD hath said unto him, Curse David. Clarke on the particle (for if, not because) plus the Hebrew's conflation of permission with commandment; Wesley on providence against precept; Ellicott on submission without justification; Keil and Delitzsch on the Chethib/Keri, holding the written form to mean upon the guilt that really belongs to me and denying the word ever means misery; Henry on the distinction between the act and the affliction. Henry alone supplies the mechanism: of Saul's blood David's conscience acquitted him but charged him with Uriah's, so the reproach was too true though false as Shimei meant it. All five kept — this is the densest genuine disagreement in the chapter."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "5"
+      ],
+      "note": "Henry's framing line binds the chapter's first two pericopes, and was the reason Henry was restored to tile 2 after a first draft dropped him: David bore Shimei's curses much better than he had borne Ziba's flatteries, since by the latter he was brought to pass a wrong judgment on another and by the former to pass a right judgment on himself; the world's smiles are more dangerous than its frowns. Recorded because it is the only cross-pericope hinge any voice supplies here."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "16",
+      "verses": [
+        "15",
+        "16",
+        "17",
+        "18",
+        "23"
+      ],
+      "note": "Henry's matched-pair reading of the two counsellors against Clarke's verdict on Hushai. Henry: Absalom relies on the two most celebrated politicians of the age and consults not the ark though he has it with him, but miserable counsellors were they both — Hushai an enemy who would never counsel wisely, Ahithophel counselling wickedly and so betraying him as effectually as the man who meant to; a government founded in sin is founded on sand; honesty is the best policy and will be found so in the long run. Clarke by contrast delivers a moral verdict that explicitly shields David: whatever insincerity appears in it, Hushai is alone answerable. Both carried into tile 3 without harmonising them."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "16",
+      "verses": [
+        "20",
+        "21"
+      ],
+      "note": "Cross-chapter divergence on Ahithophel's motive, stated from each chapter's own source. Here the Bathsheba-revenge motive is asserted by Wesley and reported by Henry as what some think; at 2samuel 15 Ellicott rejected it. Recorded as a divergence between chapters rather than resolved, since neither chapter's source argues against the other's."
     }
   ]
 }
