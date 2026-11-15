@@ -106507,6 +106507,124 @@
         "22"
       ],
       "note": "Calibration, continued. Dropping from four paragraphs to three did NOT fix the overshoot: first-pass counts this chapter were 699, 734, 719, 671 and 769 validator words against a 650 cap, costing one to three trim cycles each. The driver is sentence count and clause length, not paragraph count -- a three-paragraph entry with six long sentences per paragraph overshoots exactly as a four-paragraph one does. The reliable predictor is roughly 36 validator words per sentence in this register, so about 18 sentences is the budget. Next chapter: count sentences, not paragraphs."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "30",
+      "verses": [
+        "1",
+        "7",
+        "16",
+        "21",
+        "26"
+      ],
+      "note": "CROSS-CHAPTER CONTAMINATION CAUGHT BY THE NEW GUARD, AND THE REASON THE GUARD SHOULD BE IN THE LOOP. My first draft of the key-1 tags attributed to Keil and Delitzsch the clause 'in the excited state he was then in the king was weak enough to credit the charge'. That is not in this chapter's source: the phrase 'excited state' occurs 0 times in 1samuel 30 and once in 2samuel 16, the chapter I wrote immediately before this one, where Keil and Delitzsch use it of David crediting Ziba's calumny. The surrounding clause, that the people sought the occasion of their calamity in his connection with Achish and that many of his adherents had probably been dissatisfied, IS genuine 1samuel 30 Keil and Delitzsch; only the tail had migrated. This is the SECOND cross-chapter bleed in three chapters (the first was at 1kings 4). The difference matters: at 1kings 4 ent.py caught it by luck, because three of four bled names happened to be absent from the chapter; here ent.py was blind, because no proper noun was involved at all, and it was the 8-word shingle diff against the previous chapters' tag modules that found it. Neither the validator, the chapter lint, the chapter gate nor the corpus gate flags this class — all four passed with the clause in place. Removed before assembly; nothing defective reached the data tree. Recommendation, not actioned: the shingle diff belongs in the loop as a pre-finish check, not in a scratchpad."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "30",
+      "verses": [
+        "19",
+        "25",
+        "31"
+      ],
+      "note": "JFB residue, stride 6, offset 1, INCOMPLETE. All three JFB blocks in this chapter (keys 19, 25, 31) comment on JUDGES 6 — Gideon and the angel, his request for a sign, the roasted kid and the fire that consumed it, 'the transaction ... was not entered on till the night after the vision'. Expected keys 1, 7 and 13 carry no JFB block at all, so the harvest is partial as well as misplaced. Offset 1 was previously seen only at 1samuel 14, also incomplete, so both offset-1 sightings are in 1 Samuel. HYPOTHESIS WORTH A CORPUS-WIDE CHECK, not a finding: the residue at 2samuel 16 was Judges 19 and the residue here is Judges 6, so in the two most recent chapters the misplaced JFB text has come from Judges both times. If that holds more widely it would point to a single Judges harvest bleeding into the Samuel-Kings range rather than to random misalignment. I have not checked the earlier chapters' residue content and am not asserting it. All three blocks excluded from the tiles that span them."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "30",
+      "verses": [
+        "31"
+      ],
+      "note": "FOURTEENTH chapter-final Ellicott chrome, and the worst instance so far — this one is not merely footer and navigation text but RAW CSS AND JAVASCRIPT. Key 31 is 1,349 words, of which 341 precede the 'Footnotes: Copyright Statement' marker and 1,008 follow it; the tail contains stylesheet declarations (about 210 property-colon patterns) and an inline script including a fetch call and a DOM accordion initialiser. Within the 341 usable words, Ellicott's actual commentary on Hebron is about 85. MEASUREMENT CONSEQUENCE, which is the part worth acting on: scripts/synthesis_qa.usable_source_words does NOT strip this, scoring key 31 at 1,316 usable of 1,349 raw. So the denominator for the vv.26-31 tile is inflated by roughly 900 words, and the expansion ratio it reports (0.235x) UNDERSTATES the real expansion — the fidelity meter reads safer than the truth. Every chapter carrying this chrome has the same bias. This is a stronger argument for the pattern-strip than the earlier thirteen instances, because it is not only noise in the tile but a silent error in the measurement."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "30",
+      "verses": [
+        "1",
+        "7"
+      ],
+      "note": "Henry doubling and Clarke's chapter argument, both measured rather than estimated. Henry's key-1 block is 1,501 words of which the final 200 (13.3%) are the Concise restating the Exposition, beginning 'When we go abroad in the way of our duty' — the ninth chapter in this class and the highest proportion yet recorded on a long head. Clarke's key-1 block is 350 words of which the first 258 (73.7%) are the chapter argument summarising vv.1-31 — the fourteenth consecutive chapter, and also the highest share yet; here the argument is nearly three quarters of the block."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "30",
+      "verses": [
+        "4"
+      ],
+      "note": "NEW CLASS, distinct from the byte-identical duplicate-block defect: a CREDITED cross-commentator quotation. Ellicott's block at key 4 (150 words) shares 51% of its 8-word shingles with Keil and Delitzsch's blocks at keys 1 and 2, and ends with the explicit credit '— Keil.' This is not a harvest defect — it is Ellicott's own apparatus quoting Keil with attribution. The consequence for attribution discipline is the point: on the syntactic analysis of vv.1-4 as one long period whose apodosis is deferred to the weeping, Ellicott is NOT independent testimony, and the view must not be counted twice or given to 'grammatical-historical' as though two voices held it. I attributed the analysis to Keil and Delitzsch and dropped it from the prose for space. Any future automated duplicate-detection should distinguish this class from the six byte-identical cases, since the right response is to merge the testimony, not to flag the source."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "30",
+      "verses": [
+        "7",
+        "16",
+        "21"
+      ],
+      "note": "TILING: Henry's section heads again give the cut, and the refinement learned at 1kings 4 applies twice here. His heads sit at keys 1, 7, 16 and 21, but the key-7 Exposition actually runs through v.20 under four numbered seams (I at v.8, II at vv.9-10, III at vv.11-15, IV at v.16), and his key-16 block is only a 74-word Concise echo of that section IV. Likewise his key-21 block carries a numbered seam at 'II. David was generous and kind to all his friends', citing v.26. So the chapter takes FIVE tiles, not four: vv.1-6, 7-15, 16-20, 21-25, 26-31, cutting at v.16 and v.26 on Henry's own numbered seams rather than across them. Nineteenth consecutive chapter in which Henry's structure gives the tiling. OPERATIONAL WARNING for any later pass: tile 3 (vv.16-20) must be written from Henry's section IV at key 7, because the key-16 block alone is far too thin to represent him and relying on it is exactly how Henry gets under-represented."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "30",
+      "verses": [
+        "17"
+      ],
+      "note": "Four-way split on which twilight, each with a stated reason, and it is the cleanest disagreement in the chapter. Gill lays out the options without deciding: the morning, so that David came by night and fell on them early when they were drunk and asleep, as Josephus relates it; or the evening, with the Targum; or, taking 'the morrow' as following two evenings, a slaughter running into a third day. Keil and Delitzsch settle it lexically for the evening, holding the word does not mean the dawn here and that the sense is not even sustained by the one passage urged for it. Ellicott reports their view but prefers Bishop Hervey's in the Speaker's Commentary, that the contrast drawn between twilight and evening suggests the morning, so David arrived at night and deferred the attack till dawn. Wesley argues the evening on two practical grounds, that feasting and dancing are evening work and that darkness hid how few his men were. Worth noting that Ellicott stays internally consistent: at key 26 he reasons from the Amalekites having 'held their ground from early morning until evening', which only follows on his own morning reading."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "30",
+      "verses": [
+        "16",
+        "17"
+      ],
+      "note": "Clarke twice refuses to let the slaughter be justified too easily, and is alone in it among six voices. At key 16: that these Amalekites were enemies of the Philistines is evident, but it does not follow that the people David destroyed were enemies too, and this 'has been too hastily assumed by Dr Chandler and others, in order the better to vindicate the character of David'. At key 17: though Amalek was a proscribed people, so that in extirpating them David has been supposed to fulfil the express will of God, 'all this depends on whether he had an express commission to do so, received from God himself, as Saul had'. Recorded because it is a rare case of a commentator in this catena naming a contemporary apologist and declining the apology, and because it cuts against the devotional reading every other voice gives the victory."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "30",
+      "verses": [
+        "25"
+      ],
+      "note": "Does the rule of equal shares begin with David or precede him? Gill reports that the Hebrew reads 'upwards', of old, so that Jarchi makes it a statute already of Abraham's day from which David learnt it, 'though Josephus is express for it, that this law obtained from the time of David'. Henry calls it a statute of distributions of the first year of David's reign while himself citing Abraham's quitting his title to the spoils of Sodom by the law of war, and the division of the spoil of Midian. Clarke says the practice existed long before and reads 'unto this day' as evidence that the book was composed long after the events. Ellicott looks the other way entirely, tracing the decision forward as remaining in force until the Maccabees. Four positions on one clause, all kept."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "30",
+      "verses": [
+        "25",
+        "28"
+      ],
+      "note": "Two reception-history items carried and one dropped. Carried: Ellicott's parallel from Polybius, where Scipio after taking Nova Carthago divided the spoil equally among the troops engaged, the reserves, the sick and those detached on special service — Wesley independently cites the same Roman practice and supplies the reason Ellicott does not, that the reserve shares the hazard, stands ready for a retreat and is in actual service where its general placed it. Also carried: Ellicott's observation credited to Bishop Hervey, that among David's later officers of state we find so many men of these obscure towns, the friends of his youth, with Ellicott tracing the keeper of the vineyards to Ramah of the South and the keeper of the cellars to Siphmoth. Note on form: I wrote 'New Carthage' in a first draft; ent.py flagged it, and it is now 'Nova Carthago', the source's own form."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "rejected",
+      "book": "1samuel",
+      "chapter": "30",
+      "note": "Dropped for space, all verified in source. Ellicott's devotional excursus on the statute, quoting Milton's 'They also serve who only stand and wait' (Sonnet 19), observing that Moses praying on the hill contributed more to the victory over Amalek than Joshua fighting in the plain, and quoting Bishop Hall in Wordsworth on the Simeons and Annas of the church, weak in body but strong in faith, fighting with the peaceful arms of prayers and tears — the best single thing dropped from this chapter, and worth restoring if the vv.21-25 tile is ever rebuilt. Also dropped: the detailed gazetteer at vv.27-31 (Jattir as the present Attir, Eshtemoa surviving as Semna, Hormah as Zephath or Zep-ata, Chor-ashan, Athach unknown, Thenius reading Ether for Athach, and the LXX's five substitute names for Rachal) — only the two genuinely disputed sites, Bethel and Aroer, were kept; Clarke's Cherethites-as-Cretans argument from Zephaniah and Ezekiel, with Ellicott's long excursus on Philistine origins, Caphtor and the foreign bodyguard compared to the Scottish archers, the Swiss Guards and the Varangians; Clarke's identification of Rachal with Hachilah after Calmet; and Henry's reading of the recovered spoil as Christ leading captivity captive, which was kept in tile 3 but dropped from the vv.16-20 providence item."
     }
   ]
 }
