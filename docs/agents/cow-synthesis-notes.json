@@ -107293,6 +107293,116 @@
         "18"
       ],
       "note": "Grade B on a first pass, and the fix is worth recording because it was diction and not length. Entry 18 came in at 518 validator words with ttr 0.5797, just under the 0.58 threshold, on a span whose vocabulary is inescapably narrow: blood, earth, cry, cover, witness, four times each in a short entry. Substituting the sources' own alternatives -- gore for blood, ground for earth, outcry for cry, hide and conceal and publish for cover, testify and attestation for witness, curse for imprecation -- raised ttr to 0.6129 and incidentally cut 33 words. Lesson: when a span's subject forces a small vocabulary, the TTR floor binds before the word cap does, and the remedy is the alternative words the sources themselves supply, not a shorter entry."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "10",
+      "verses": [
+        "38"
+      ],
+      "note": "KEY 38 LEFT DELIBERATELY UNTILED, and the reasoning is worth keeping because it nearly made this chapter a blocklist candidate. Ezra 10 has 44 verses; the catena has 25 keys, and verses 21-23, 27-37, 39-43 are absent entirely, giving contiguous runs of 1-20, 24-26, 38 and 44. Key 38 is therefore walled on both sides by absent verses, and its ONLY block is Jamieson residue, so usable_source_words returns 0 once JFB is excluded. There is nothing in it to write from, and no span may bridge to it because QA.coverage_problems forbids an entry covering a verse absent from the source. WHAT SAVED THE CHAPTER was reading the coverage code rather than assuming: coverage_problems requires only the contiguous body starting at the LOWEST key (here vv.1-20); keys past the first gap are advisory, while the check against covering absent verses still measures the full key set. So tiling vv.1-20, 24-26 and 44 and omitting 38 passes coverage with zero problems, which I confirmed by calling coverage_problems directly before writing a word. Had I trusted my own 1chronicles 8 note, which says flatly that interior gaps make a chapter unwritable, I would have declined a workable chapter. Key 38 itself still has no legal output and is simply not covered; the scratchpad verifier for this chapter carries an explicit ALLOWED_UNTILED check that asserts its usable source really is zero, so the omission cannot be silent."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "10",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "26",
+        "38"
+      ],
+      "note": "JFB residue, stride 6, offset 2, and the EIGHTH byte-identical duplicate instance. Blocks at keys 2, 8, 14, 20, 26 and 38 — the full stride-6 series for this chapter, with the position at 32 missing only because verse 32 is itself absent from the source. Keys 20 and 26 are byte-identical, 180 words, SHA1 55d5aaa474, confirmed by equality and hash, and a whole-chapter sweep over blocks of 25 words or more found no other duplicate. The content is 2 KINGS 25 / JEREMIAH 52: Nebuchadnezzar appointing the youngest son of Josiah, Zedekiah revolting, the siege of Jerusalem, Pharaoh-hophra drawing off the besiegers, the reconciling of the two dates in Jeremiah 52, and the few court attendants permitted to remain with the king daughters. Nothing whatever to do with the foreign wives. NOTE ON THE DONOR PATTERN: this BREAKS the Judges-Ruth run of four. The donor here is Kings and Jeremiah, not the Judges-Ruth region, so the formulation I recorded at 2samuel 5 does not generalise beyond the Samuel chapters it was drawn from. What survives of the hypothesis is only that the residue comes from a coherent donor passage per chapter, not that the donor lies in one region of the canon. Five of the eight byte-identical instances are still JFB at stride-6 positions, so the harvest-time hash check would catch five of eight."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "10",
+      "verses": [
+        "24",
+        "25",
+        "26"
+      ],
+      "note": "A MEASUREMENT DEFECT THAT DENIES THE THIN EXEMPTION TO A SPAN THAT NEEDS IT, and it is the most actionable thing in this chapter. usable_source_words scores the vv.24-26 span at 647 words, which puts it far above the 200-word ceiling for the thin exemption and so forces the entry into the 350-650 window. But the 647 is almost entirely illusory. (1) Key 26 block is 200 usable words of BARE QUOTED SCRIPTURE — the name list of vv.26-44 followed by \"All these had taken strange wives\" — with no commentary in it at all, so under the attribution rule there is no proposition in it to attribute to anyone. (2) Keys 24 and 25 are Keil and Delitzsch SLIDING-WINDOW blocks that both contain the same analysis of the laity roll, so that analysis is counted twice. The distinct commentary in the span is roughly 250 words: about thirty unique words at key 24 on the singers and porters, some one hundred and seventy of laity analysis counted twice, Clarke thirty-three and Wesley eighteen. My entry is 353 words against that, which is already about 1.4x expansion, and the audit flags it FLOOR (length written to the minimum rather than to the material) precisely because the contract minimum exceeds what the material supports. FLOOR is not a fatal flag so the gate passes, but the flag is telling the truth about the contract rather than about the writing: writing up to 450 would have been padding. THE FIX is at the scorer, not the writing: usable_source_words should discount bare quoted verse text and should not count the same sliding-window content twice. Both are mechanical; neither needs residue detection. Until then, spans of this shape are forced either to pad or to carry a FLOOR flag."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "fidelity",
+      "book": "ezra",
+      "chapter": "10",
+      "verses": [
+        "44"
+      ],
+      "note": "The v.44 entry is 368 words against 374 usable source words, essentially one to one, and the audit flags it FLOOR as well. Unlike vv.24-26 this one is a true floor with no remedy: the source genuinely is that thin, consisting of Gill fifteen words, Wesley ninety-nine and Clarke two hundred and sixty, and anything above about 380 words would be expansion rather than distillation. The entry is 350 or more so it satisfies the window; the thin exemption is unavailable because the source exceeds 200 words. Recording it so that a later reader does not mistake the FLOOR flag for carelessness: at 0.98x this is the most faithful ratio in the chapter."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "6",
+        "15",
+        "44"
+      ],
+      "note": "WESLEY-HENRY BORROWINGS: three more in this chapter, bringing the running count to twenty-two, and the last of them raises an attribution problem I had to handle deliberately. (1) At key 1 Wesley writes \"See what an happy influence the example of great ones may have upon their inferiors!\" against Henry \"See what a happy influence the good examples of great ones may have upon their inferiors\" — near-verbatim. (2) At key 6 Henry gives the reading \"till he came thither\" and credits it to bishop Patrick; Wesley gives \"Thither — till he saw something done\" bare, dropping the authority, which is the same stripping of a cited source recorded at 2samuel 5 key 21. (3) THE DIFFICULT ONE, at key 44: Wesley writes \"One would think this grievance altogether removed. Yet we meet with it again, Neh 13:22. Such corruptions are easily and insensibly brought in, tho not easily purged out. The best reformers can but do their endeavour. It is only the Redeemer himself, who when he cometh to Sion, will effectually turn away ungodliness from Jacob.\" Henry has that whole passage at key 15. Because Henry block sits at key 15 and the v.44 entry span is v.44 alone, Henry is NOT a declared voice in that entry, so the prose necessarily presents the passage as Wesley. That is faithful to the span and would mislead anyone reading the entry alone. Stated here so the record is straight: the sentences in the v.44 entry beginning \"One would think the grievance altogether removed\" are Henry sentences appearing under Wesley name at that key, and no future pass should credit them to Wesley as original."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "ezra",
+      "chapter": "10",
+      "verses": [
+        "15"
+      ],
+      "note": "The sharpest disagreement in the chapter, with named authorities on both sides and Henry explicitly undecided. Does v.15 say that Jonathan the son of Asahel and Jahaziah the son of Tikvah were EMPLOYED about the matter or that they STOOD AGAINST it? Gill and Wesley take employed, and Wesley fills out the office in detail — to see each city officers and offenders come in order, keep account of the names dispatched, prepare the business for the judges — making these two priests and their helpers Levites so they could inform the parties in any doubt. Keil and Delitzsch take the contrary sense: the two opposed the proposal and were backed by two Levites without being able to carry it; they read the opening particle as a qualification of the assembly agreement, construe the verb as standing up AGAINST, cite Lightfoot and R. Salomon for it, and set against them the Vulgate steterunt super hoc and J. H. Michaelis praefecti sunt huic negotio, the latter of which they call decidedly incorrect. Henry gives the employed sense first, guessing these were the very men who had made the proposal and so the fittest to pursue it, but then reports Lightfoot contrary reading, grants that \"the original will very well bear it\", and adds the observation that decides nothing but is worth more than either reading: \"It was strange if a work of this kind was carried on and met with no opposition.\" All four positions carried."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "disagreement",
+      "book": "ezra",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "12"
+      ],
+      "note": "Two places where a commentator refuses the chapter own logic. (1) Henry at key 1 urges the remedy and then forbids it as a precedent: what has been done amiss must be undone as far as possible, and sin must have a bill of divorce given it though it be dear as the wife of one bosom, yet \"Shechaniah counsel, which he was then so clear in, will not hold now\" — marriages with unbelievers are sinful and ought not to be made but are NOT null, quod fieri non debuit factum valet, and the gospel rule is that a brother with an unbelieving wife content to dwell with him should not put her away. He is alone in drawing that line. (2) Clarke at key 12 doubts the reform even happened: the dismissal was a great hardship on women and children who did not know the law that made such marriages void, he will not have them turned away desolate since \"Humanity must have dictated this, and no law of God is contrary to humanity\", and then — \"After all, there is some room to doubt whether they did put them finally away, for several years after Nehemiah found Jews that had married wives of Ashdod, Ammon, and Moab; and if these were not the same women, we find that the same offense was continued.\" Both carried."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "10",
+      "verses": [
+        "44"
+      ],
+      "note": "Clarke reports a passage of Ezra that Justin Martyr claims was SUPPRESSED, and no other voice mentions it. From the Dialogue with Trypho, section 72, Clarke relays that Ezra offered a paschal lamb on this occasion and said to the people: \"This passover is our Savior and our Refuge; and if ye will be persuaded of it, and let it enter into your hearts, that we are to humble ourselves to him in a sign, and afterwards shall believe in him, this place shall not be destroyed for ever, saith the Lord of Hosts: but if ye will not believe in him, nor hearken to his preaching, ye shall be a laughing-stock to the Gentiles.\" Justin charges that the Jews blotted this out of the book of Ezra from enmity to Christ, and cancelled several other places in the same spirit. Clarke relays the charge without endorsing it, and I carried it the same way, as his report of Justin rather than as a claim about the text. Note on form, since it was caught by the entity check: the source spells it Savior and I had written Saviour; the quotation now matches the source exactly."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "6",
+        "15"
+      ],
+      "note": "Henry heads at keys 1, 6 and 15 give the tiling for the required body, as for the twenty-first consecutive chapter. His key-1 block carries three numbered sections but all of them fall inside vv.1-5, so no subdivision arises; keys 6 and 15 carry no numbered seams at all, only verse citations, which match the cuts at vv.6-14 and 15-20. Separately: Henry key-1 block is 1,655 words with a Concise tail of roughly 230 words beginning \"Shechaniah owned the national guilt\", the eleventh chapter in that class; and Clarke key-1 block is 169 words of which the first 120 are the chapter argument summarising vv.1-44, the seventeenth consecutive instance. ALSO WORTH RECORDING: Charles Ellicott has no block anywhere in Ezra 10, so this is the first chapter of the run in which one of the six standing voices is entirely absent, and he is nowhere declared. Tiles carry five voices for vv.1-20 and three each for vv.24-26 and v.44, declared accurately rather than uniformly."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "rejected",
+      "book": "ezra",
+      "chapter": "10",
+      "note": "Dropped for space, all verified in source. The identification of the Johanan whose chamber Ezra withdrew to: Keil and Delitzsch argue he cannot be the high priest Johanan ben Eliashib, since Eliashib was a contemporary of Nehemiah and Johanan was his grandson, the son of Joiada, not his son; Clarke reaches a similar result by a different route, taking this Johanan for the Jonathan of Nehemiah, son of Joiada and grandson of Eliashib, and noting that some suppose Johanan and Joiada to be two names for one man; Henry adds that Ezra went to the council-chamber where the priests probably met on public business, with bishop Patrick reading of the clause. Also dropped: Henry count of about 113 offenders and his inference that God did not crown those marriages with the blessing of increase, both of which attach to v.44 and sit in his key-15 block rather than at key 44; Henry closing reflection that the grievance recurs in Nehemiah and Malachi so that the best reformers can but do their endeavour, which survives in the v.44 entry under Wesley name (see the borrowing note); Gill observation that the delinquent priests example explains how far the evil spread; and the Chethib reading of one name in the laity roll, which is in the vv.24-26 entry only by allusion."
     }
   ]
 }
