@@ -108441,6 +108441,107 @@
         "15"
       ],
       "note": "A live attribution subtlety worth recording. Ellicott grounds Nehemiah stated motive, \"because of the fear of God\", in the law itself, noting that usury and rigour are interdicted in Leviticus 25:36 and 25:43 with the express sanction \"Fear thy God\" -- so that the governor is quoting a formula, not merely reporting a scruple. Henry and Wesley both treat the phrase devotionally (those who truly fear God will not dare to do anything cruel or unjust) without noticing the Levitical echo. Both readings kept, Ellicott in the grammatical-historical summary and the other as the shared puritan and wesleyan note, since they are complementary rather than contradictory."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "1",
+      "verses": [
+        "17",
+        "24",
+        "41",
+        "54"
+      ],
+      "note": "DECLINED, and it belongs on docs/agents/cow-synthesis-blocklist.json. This is the third draw 1chronicles 1 or its sibling 1chronicles 8 has consumed in this run. The arithmetic, so a later reader need not re-derive it: 42 source keys for 54 verses, with 12 interior gaps (verses 3, 15, 16, 21, 22, 23, 26, 27, 40, 42, 45, 53 absent). Because a tiled range may not cover a verse absent from source, the chapter can only be cut into the nine contiguous runs the gaps leave, and their usable word counts (JFB excluded) are: 1-2 = 4466, 4-14 = 799, 17-20 = 207, 24-25 = 241, 28-39 = 3185, 41 = 50, 43-44 = 567, 46-52 = 744, 54 = 1120 nominal. Four runs cannot reach the 350-word floor honestly. 17-20 needs 1.69x its source and is five fragments of 7 to 98 words (Wesley thrice, Clarke twice), with source above 200 words so the thin exemption does not apply. 24-25 needs 1.45x, and about 200 of its 241 words are Keil and Delitzsch reciting the bare genealogy of Eber to Abraham rather than commenting on it. 41 is a single 50-word Ellicott note on Anah and Dishon, 7x even against the 120-word exemption floor. 54 reports 1120 usable but the Ellicott block there is 1041 words of site chrome with only an opening clause of real comment, so the run holds about 120 real words with Wesley 79. UNBLOCK WHEN the harvest is re-run against a source that comments on the missing twelve verses, or when usable_source_words discounts bare quoted genealogy and strips chapter-final chrome, either of which changes these figures."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "rejected",
+      "book": "1chronicles",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "Partial rewrite considered and rejected on its merits, which is the decisive point for this chapter and was not available when 1chronicles 8 was declined. Five of the nine runs ARE writable (1-2, 4-14, 28-39, 43-44, 46-52, together 9761 usable words), and since coverage_problems requires only the contiguous body from the lowest key -- here just verses 1-2, because verse 3 is absent -- tiling only those five would pass the validator. But the existing legacy file holds 42 per-verse entries, including 383 words at key 17, 351 at key 20, 357 at key 24, 364 at key 41 and 399 at key 54, and the assembler rewrites the whole file: writing five tiles would DELETE the prose at the eight keys those four runs cover, roughly 2500 words of live site content. A partial rewrite here is a net loss of coverage even though it would pass every gate. So the chapter is not merely awkward, it is unworkable in both directions -- write all nine runs and four of them are padded, write five and eight keys of the site lose their prose."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "ruth",
+      "chapter": "2",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23"
+      ],
+      "note": "JFB residue, donor identified as JOSHUA 6 to 8, and it runs forward through the donor as the target keys advance -- the clearest specimen of the pattern yet. Key 5 (48w) has the seven circuits round Jericho and the observation that only the militia can have marched; key 11 (139w) has the signal given by Joshua, the war cry and the walls falling; key 17 (24w) is a stranded heading, \"Rahab a proof that this book was written not long after the events related. Jos 6:26, 27. The Rebuilder of Jericho Cursed.\"; key 23 (118w) has the spies going up the pass after the sacking of Jericho and the site of Ai. Stride 6, offset 5. So the donor is not a single window sampled four times but a continuous run of Joshua 6-7-8 paid out in order against Ruth 2:5, 11, 17, 23 -- which is strong evidence that the harvest defect is a fixed offset into a concatenated source file rather than random misfiling. EIGHTH consecutive chapter with stride-6 JFB residue. JFB excluded from tiles 2 and 3; it heads no block in vv.1-3."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "ruth",
+      "chapter": "2",
+      "verses": [
+        "23"
+      ],
+      "note": "Chapter-final site chrome, 22nd recorded instance, on the last key and on Ellicott again. The key-23 Ellicott block is 1030 words of chrome; Gill (56w), Keil and Delitzsch (91w), Clarke (317w) and JFB (118w) at the same key are all real. Twenty of the twenty-two recorded instances are now on Ellicott."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "ruth",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "4",
+        "17"
+      ],
+      "note": "Henry placement verified before writing. Henry heads keys 1, 4 and 17 and all three blocks are genuinely Ruth 2: key 1 Naomi settled in Bethlehem and her rich kinsman, key 4 Boaz appearing in the field with decency towards servants and stranger alike, key 17 Ruth finishing her day work. His three section heads fall on the three movements of the chapter (the going out to glean, Boaz in the field, the return home), so this is again the clean case (a) of the Henry tiling rule -- now held in 27 chapters."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "ruth",
+      "chapter": "2",
+      "verses": [
+        "4",
+        "5"
+      ],
+      "note": "Convergence worth recording, and a trap avoided. Gill and Clarke BOTH reach for Homer on this chapter -- Gill for \"a king in Homer represented among his reapers, with his sceptre in his hand\", Clarke for the harvest field on the shield of Achilles, which he quotes in Greek with Cowper translation. These are the SAME Homeric passage (Iliad xviii), so presenting them as two independent witnesses would have been a false multiplication of testimony. Gill clause was cut and Clarke fuller treatment kept. The genuinely independent convergence is on the proverb rather than the poem: Henry has \"the master eye makes a fat horse\", Gill has Pliny that the eye of the master is the most fruitful thing in the field and Aristotle Persian on what fattens a horse, so three voices reach one saying from Latin, Greek and Persian sources."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "fidelity",
+      "book": "ruth",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "4",
+        "17"
+      ],
+      "note": "Fidelity self-grade, all three tiles A. Prose words / usable source words / expansion: vv.1-3 647/3064 = 0.21; vv.4-16 645/6283 = 0.10; vv.17-23 650/5315 = 0.12. All six voices head blocks in all three spans and are declared in all three tiles. Gate: 0 defects, no FLOOR, no PAD, 0 ungroundable attributions, mean TTR 0.642. Shingle diff against nehemiah 5, 2samuel 10, 2kings 16 and 1kings 19: 0 shared after one fix (see the boilerplate note)."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "ruth",
+      "chapter": "2",
+      "verses": [
+        "17"
+      ],
+      "note": "Self-boilerplate caught by the shingle guard, which is a use of it I had not anticipated. The guard returned one shared 8-gram against the four chapters written earlier today: \"keil and delitzsch grammatical historical attend to the\". That is not source bleed at all but MY OWN transition phrasing recurring -- I had written \"attend to the general instead\" in 2samuel 10 and \"attend to the odd verb\" here. It matters because the corpus gate separately measures reused sentences across the corpus, so a worker writing many chapters in one sitting will slowly seed its own boilerplate. Reworded to \"fasten on the odd verb\" and the diff went to 0. Lesson for the next worker: when shg.py flags a shingle, check whether the shared text is SOURCE content (a real bleed, fix the attribution) or YOUR OWN connective tissue (vary the wording) -- both are worth fixing, for different reasons."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "ruth",
+      "chapter": "2",
+      "verses": [
+        "20"
+      ],
+      "note": "Live disagreement preserved: who is it that has not left off his kindness to the living and the dead? Ellicott alone sees the ambiguity -- \"It is not clear whether the grammatical antecedent is God or Boaz. Either way a good sense is obtained\" -- and draws a character inference from the harder reading, that if Boaz is meant it is curious Naomi never made herself known to a kinsman who had shown kindness before they left for Moab, which is at any rate a proof of the independence of her character. That dovetails with Gill note on the same chapter opening, where he finds it strange on both sides that neither Naomi applied to Boaz nor Boaz sent to her. Clarke, Wesley and Keil and Delitzsch all take the clause without noticing the ambiguity. Tagged as a debate rather than resolved."
     }
   ]
 }
