@@ -108154,6 +108154,93 @@
         "1-30"
       ],
       "note": "Calibration: the three-paragraph rule for spans under 2,500 source words worked, and the four-paragraph entries overshot again. All three large spans (vv1-5, 6-11, 12-16) ran 100 to 150 words over the cap on the first pass; all four smaller spans came in under it without a trim. The diagnosis is now specific: my sentences average 40 to 44 validator words when a span carries five or six voices, against the 36 the cap assumes, because each voice gets a subordinate clause of its own. The correction for the next chapter is to cap sentences at two voices and split rather than coordinate."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "10",
+      "verses": [
+        "15"
+      ],
+      "note": "JFB residue of a new kind: a 20-word orphan fragment, not a sliding window. The only Jamieson, Fausset and Brown block in this chapter sits at key 15 and reads in full \"The messenger of the covenant, the divine personage who made so many remarkable appearances of a similar kind already described\" -- commentary on the messenger of the covenant, nothing to do with the Syrians regathering after their defeat. Every previous recorded instance has been a 95 to 200 word window of a contiguous donor passage; this is a single stranded clause. It is also the only JFB block in the chapter, so there is no stride to measure. JFB excluded from tile 3 accordingly; it heads no block in vv.1-14."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "10",
+      "verses": [
+        "19"
+      ],
+      "note": "Chapter-final site chrome, 20th recorded instance, on the last key and on Ellicott as usual. The key-19 Ellicott block is 1105 words of which about 140 are real commentary (the vassal kings transferring allegiance, the argument from 1 Kings 11:23-24 and 1 Kings 4:21 that Hadarezer himself probably acknowledged the suzerainty of David and Solomon); the rest is StudyLight navigation and script. Worth recording that the real content here is substantial and load-bearing -- it carries one side of the chapter sharpest disagreement -- so the chrome must be trimmed rather than the block skipped. A worker who sized this block by word count and skipped it would have lost the Ellicott side of the Hadarezer question entirely."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "10",
+      "verses": [
+        "19"
+      ],
+      "note": "Wesley-Henry borrowing, 26th in the running count. Wesley key 19 reads \"And thus at length was fulfilled the promise made to Abraham, and repeated to Joshua, that the borders of Israel should extend as far as the river Euphrates. The son of David sent his ambassadors, his apostles and ministers, to the Jewish church and nation. But they intreated them shamefully, as Hanun did David s, mocked them, abused them, slew them. And this it was that filled the measure of their iniquity, and brought upon them ruin without remedy.\" Henry key 15 has both points in the same order and nearly the same words. Handled in the prose by giving the points to Henry and saying plainly that Wesley repeats them in brief."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "6",
+        "15"
+      ],
+      "note": "Henry placement verified before writing. Henry heads keys 1, 6 and 15 and all three blocks are genuinely 2 Samuel 10: key 1 the respect paid to the king of the Ammonites and the affront to the ambassadors, key 6 the Ammonite preparations and Joab battle, key 15 the Syrian rally and the tributaries gained. His three section heads fall exactly on the three natural movements of the chapter (the embassy, the first battle, the second), so this is again the clean case (a) of the Henry tiling rule -- now held in 25 chapters. NOTE a separate harvest artifact at key 1: the Keil and Delitzsch block there is not comment on verse 1 at all but their preface to the whole chs. 10-12 section, on David sin with Bathsheba. It is genuine K and D material about this chapter place in the reign, so it was used as the framing it is and not as comment on the embassy."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "10",
+      "verses": [
+        "18",
+        "19"
+      ],
+      "note": "Two live disagreements preserved as debates rather than resolved. (a) The casualty figures draw FOUR distinct methods, which is worth keeping as a specimen of how these commentators handle numerical discrepancy: Clarke explains it textually (numbers were once written as numeral letters, and the characters for seven hundred and seven thousand closely resemble each other, which alone would account for many disagreements in these books); Ellicott decides between readings on plausibility (seven thousand chariots is almost incredible, so seven hundred is evidently the more correct); Henry harmonises silently (seven thousand men belonging to seven hundred chariots); Keil and Delitzsch note only that the figures agree as well as they do. (b) Whether Hadarezer himself submitted: Keil and Delitzsch say the closing clause about Aram fear shows very clearly that he did and that the first half of the verse is simply inexact, while Ellicott denies it is said at all and argues from 1 Kings that a dependent of his later held Damascus against Israel, so his submission is only probable. Both sides tagged."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "6",
+        "15"
+      ],
+      "note": "Fidelity self-grade, all three tiles A. Prose words / usable source words / expansion: vv.1-5 641/3000 = 0.21; vv.6-14 648/4250 = 0.15; vv.15-19 650/3069 = 0.21 (the last really nearer 0.26 once the key-19 chrome is discounted). Six voices head blocks in tiles 1 and 3, five in tile 2 (Wesley has no block in vv.6-14 and is not declared there). Gate: 0 defects, no FLOOR, no PAD, 0 ungroundable attributions, mean TTR 0.678. Shingle diff against 2kings 16, 1kings 19, 2chronicles 28, 2samuel 5, 2samuel 21 and 2samuel 16: 0 shared. ent.py clean on all three tiles."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "6",
+        "15"
+      ],
+      "note": "Method, confirming the rule recorded at 2kings 16. That note said the controlling variable is ATTRIBUTIONS per tile (voices x items), not items, and that below about 28 words per attribution one should drop a voice from each item rather than compress. Applied here deliberately: four items per tile but only the three or four voices that actually speak to each point, never all six. Result -- first drafts 829, 867 and 806 words against the 650 ceiling, i.e. 28, 33 and 24 per cent over, against 31 to 58 per cent at 2kings 16 with the same six-voice chapter. Each tile then took one or two trim passes instead of four. The rule holds and is worth keeping. One further trick that earned its place: in tile 1 Clarke and Henry made the same point about the courtiers suspicion being self-projection, so the redundant one was cut outright rather than both compressed -- a genuine duplicate is always the cheapest 30 words to find."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "10",
+      "verses": [
+        "6"
+      ],
+      "note": "Process error caught by the validator, worth recording so the next worker does not repeat it. The assembler and tags were built by sed from the previous chapter template, and tile 2 inherited the key \"5\" from that template while covering vv.6-14. validate-synthesis.py rejected it: \"pericopes tile the chapter (5: range starts at 6, so it must be keyed 6)\". The tile KEY must equal the first verse of its range; my own chapter verifier does not check this, only that ranges are contiguous and cover the chapter, so it passed with 0 problems and the error reached the data tree before being caught. Suggest adding the key-equals-range-start assertion to the scratchpad verifier template, or relying on the validator and re-running after a git checkout as was done here."
     }
   ]
 }
