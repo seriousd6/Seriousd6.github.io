@@ -107937,6 +107937,110 @@
         "9"
       ],
       "note": "Interpolation caught by ent.py and removed before assembly: I had written that Ellicott sets the complaint beside \"the Baptist s question from prison\". Ellicott says only \"the message from prison to our Lord\" and never names the Baptist -- the identification is correct but it is mine, not his. Replaced with the source own phrasing. ent.py earns its keep on exactly this class of error: a true statement that the cited commentator did not make."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "16",
+      "verses": [
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "JFB residue, donor identified: the blocks headed Jamieson, Fausset and Brown at keys 8, 14 and 20 belong to 2 Samuel 12, not to this chapter. Keys 8 and 14 carry David mourning the child born to him of Bathsheba (the eastern custom of leaving the nearest relative undisturbed in grief, David bathing and anointing himself instead of appearing as a mourner) and the block signs itself at the end: \"2Sa 12:24, 25. Solomon Is Born.\" Key 20 carries Joab sending for David to command the final assault on the royal city. Stride 6, offset 2 -- the SEVENTH consecutive chapter in which JFB residue falls on an arithmetic stride. JFB excluded from tiles 2, 3 and 4; it heads no block in vv.1-4, so tile 1 excludes nothing."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "16",
+      "verses": [
+        "8",
+        "14"
+      ],
+      "note": "Duplicate blocks, 9th instance -- and the first that is NOT byte-identical. The JFB blocks at keys 8 and 14 are both 197 words and their VISIBLE text is character-for-character identical, but their raw HTML differs (sha1 0eb7194d4a72 vs f6ee7905188e), so a hash over the stored markup does not catch them. This sharpens the open notebook item on harvest-time hash comparison: the hash must be taken over the tag-stripped, entity-unescaped visible text, not over the raw block, or duplicates like this one pass straight through. Five of the nine recorded instances are now JFB at stride-6 positions."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "16",
+      "verses": [
+        "19"
+      ],
+      "note": "Chapter-final site chrome, 19th recorded instance, and the first to land on the SECOND-TO-LAST key rather than the last. The Ellicott block at key 19 is 1015 words of which about twenty are commentary (\"Which he did. -- Some MSS., and the LXX., Syriac and Arabic have the usual formula, and all which he did\"); the remainder is StudyLight navigation, CSS and JavaScript. Key 20 is clean. So the heuristic \"chrome attaches to the last key\" is wrong -- it attaches to the last block the harvester wrote for the chapter, which here fell on key 19 because Ellicott has no key-20 block. usable_source_words does not strip it, so tile 4 reports 2847 usable words where roughly 1830 are real and the recorded expansion 0.228 understates the true figure near 0.35."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "16",
+      "verses": [
+        "7",
+        "14",
+        "15"
+      ],
+      "note": "Wesley-Henry borrowings, three in this one chapter, bringing the running count to 25. (a) Key 7: Wesley \"But was it because there was no God in Israel, that he sent to the Assyrian for help? The sin itself was its own punishment; for tho it served his present turn, yet he made but an ill bargain, seeing he not only impoverished himself, but enslaved both himself and his people\" condenses Henry key 5 almost phrase for phrase. (b) Key 14: Wesley \"A bolder stroke than the very worst of kings had hitherto given to religion\" is Henry key 10 verbatim but for two words. (c) Key 15: Wesley \"Having thrust it out from the use for which it was instituted, which was to sanctify the gifts offered upon it, he pretends to advance it above its institution, which it is common for superstitious people to do\" is Henry key 10 verbatim, with Wesley adding only \"But to overdo is to underdo.\" Handled in the prose by attributing each argument to Henry and saying Wesley repeats or follows him, so no tile presents Wesley as an independent witness to a judgment he took over."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "10"
+      ],
+      "note": "Henry placement verified before writing, per the rule adopted after the 2 Chronicles 27/28/29 displacement. Henry heads keys 1, 5, 10 and 17 and every block is genuinely about 2 Kings 16: key 1 \"a general character of the reign of Ahaz... he died at thirty-six\", key 5 the Syro-Ephraimite attempt and Elath, key 10 the altar of Damascus and the indictment of Urijah, key 17 Ahaz abusing the temple furniture. No displacement here. His four section heads also fall exactly on the four natural pericopes (vv.1-4, 5-9, 10-16, 17-20), so this is the clean case (a) of the Henry tiling rule -- now held in 24 chapters."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "16",
+      "verses": [
+        "10",
+        "13"
+      ],
+      "note": "Live disagreement worth preserving for the study desk: whether Ahaz sacrificed to Jehovah or to idols. Ellicott stands alone -- \"From the present narrative it does not appear but that he offered it to Jehovah\", the Chronicles account referring to other sacrifices, Ahaz thinking \"the traditional worship of Jehovah not incompatible with the cultus of foreign deities\" -- against Henry (to the gods of Damascus), Wesley (to the Syrian idols to whom that altar was appropriated) and Clarke (every alteration made in contempt of the true God, \"evident from 2Chr 28:21-25\"). The same split runs through the motive: Ellicott says the terms for fashion, pattern and workmanship show an interest \"artistic rather than religious\", Clarke that the idolatrous purpose is evident from the parallel. Both sides tagged as debates rather than resolved."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "5",
+        "10",
+        "17"
+      ],
+      "note": "Fidelity self-grade, all four tiles A. Prose words / usable source words / expansion: vv.1-4 648/2342 = 0.28; vv.5-9 649/2595 = 0.25; vv.10-16 650/3775 = 0.17; vv.17-20 649/2847 = 0.23 (really near 0.35 once the key-19 chrome is discounted). Six voices head blocks in every one of the four spans -- Gill, Henry, Keil and Delitzsch, Clarke, Ellicott and Wesley -- and all six are declared in all four tiles. Gate: 0 defects, no FLOOR, no PAD, 0 ungroundable attributions, mean TTR 0.655."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "5",
+        "10",
+        "17"
+      ],
+      "note": "Method measurement, and the clearest result yet on what controls draft length. First drafts against the 650 ceiling: tile 1 969 words (49% over), tile 2 961 (48%), tile 3 1028 (58%), tile 4 853 (31%). Every tile held exactly four items, so the four-item cap did NOT control length here -- what broke it was SIX voices per span. Four items times six voices is twenty-four attributions, and at the ~40 words an attribution needs that is 960 words before a single transition. The controlling variable is attributions per tile, not items per tile. Working rule for the next worker: budget 650 / (voices x items) words per attribution before writing, and if that figure drops below about 28 words, drop the weakest VOICE from each item rather than trying to compress -- compression recovered only 20-40 words a pass here and took four passes per tile. By contrast 1kings 19 tile 3, with three voices, came in 2% over on the first draft."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "16",
+      "verses": [
+        "5",
+        "10"
+      ],
+      "note": "Bleed guard against the parallel chapter, run deliberately and clean. 2 Chronicles 28 (the Ahaz parallel) was written by this worker the previous day, making this the highest cross-chapter contamination risk in the run so far: the same war, the same embassy to Tiglath-pileser, and Ellicott citing the Assyrian monuments in both. The 8-gram shingle diff against 2chronicles 28, 1kings 19, ezra 10, 2samuel 5 and 2samuel 21 returned 0 shared shingles. One spelling check mattered: Ellicott gives the Assyrian form of the king name as \"Yahuhazi\" in 2 Chronicles 28 but \"Jahuhazi\" here, so the form was taken from this chapter own block rather than from memory of the other. ent.py clean on all four tiles."
     }
   ]
 }
