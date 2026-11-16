@@ -107843,6 +107843,100 @@
         "1-25"
       ],
       "note": "Calibration: five of six entries overshot the 650-word cap on the first pass, by 50 to 150 words, which is worse than the previous chapter and traces to a single cause. Every overshoot was a four-paragraph entry, and in each the fourth paragraph was written after the budget was already spent. The correction for the next chapter is to fix the paragraph count at three for any span under 2,500 source words and to assign each paragraph its own sentence allowance before drafting, rather than budgeting the entry as a whole."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "19",
+      "verses": [
+        "4",
+        "10",
+        "16"
+      ],
+      "note": "JFB residue, donor identified: the blocks headed Jamieson, Fausset and Brown at keys 4, 10 and 16 are not about this chapter at all but about 1 Samuel 23 (the Ziphites, the tell of Ziph, Tell Main as the ancient Maon, David and his men). Stride 6, offset 4 -- the sixth consecutive chapter in which JFB residue falls on an arithmetic stride. Donor runs BEHIND the target here, so the old backward rule holds again after being broken at 1chronicles 8. JFB excluded from tiles 1-3 accordingly; it heads no block in vv.19-21, so tile 4 excludes nothing."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "19",
+      "verses": [
+        "21"
+      ],
+      "note": "Chapter-final site chrome, 18th recorded instance: the Ellicott block at key 21 runs 1086 words of which only the first ~90 are commentary (the farewell feast, the wooden implements as fuel, Araunah, \"he that poured water on the hands of Elijah\"); the rest is StudyLight navigation, CSS and JavaScript. Clarke key 21 is genuinely long (963w, his six numbered remarks on the call of Elisha). usable_source_words does NOT strip the chrome, so this tile reports 4170 usable words where roughly 3190 are real and the recorded expansion 0.155 understates the true ~0.20. The bias always reads SAFER than the truth, never worse."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "9",
+        "14",
+        "19"
+      ],
+      "note": "Tiling rationale. Henry heads keys 1, 9, 14 and 19, which would suggest a four-way cut at those points, but key 14 carries only a 189-word Concise echo while his key-9 Exposition is 2885 words running six numbered sections I-VI across vv.9-18. Those sections run SEQUENTIALLY, which under the three-part Henry rule licenses a cut inside his block: the cut at v.15 follows his section V, \"The orders God gives him to execute\". It does NOT license a cut at v.11, because his section III covers both v.10 and v.14 (the complaint given, then repeated), so vv.9-14 stay together. Tiles: 1-8, 9-14, 15-18, 19-21."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "9",
+        "15",
+        "19"
+      ],
+      "note": "Voice census: John Wesley is wholly absent from this chapter -- he heads no block at any of the 21 keys. Second chapter in the recent run with a standing voice entirely missing (Ellicott was absent from ezra 10). Keil and Delitzsch and Henry are both absent from vv.15-18, so tile 3 declares only three voices (Gill, Clarke, Ellicott); nothing was inferred for them from their neighbouring blocks."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "9",
+        "15",
+        "19"
+      ],
+      "note": "Fidelity self-grade, all four tiles A. Prose words / usable source words / expansion: vv.1-8 643/4585 = 0.14; vv.9-14 648/6256 = 0.10; vv.15-18 624/1351 = 0.46; vv.19-21 648/4170 = 0.16 (really ~0.20 once the key-21 chrome is discounted). Tile 3 is the thin span: 1351 usable words, so I wrote to about 620 rather than the 650 ceiling and each of its four items carries distinct matter (the double rebuke; the unrecorded anointing; the sword given to Elisha; the remnant and the kiss) -- no item restates another. Gate: 0 defects, no FLOOR, no PAD, 0 ungroundable attributions."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "9",
+        "15",
+        "19"
+      ],
+      "note": "Method measurement, four-item cap. First drafts against the 650 ceiling: tile 1 953 words (54% over, four trim passes); tile 2 762 (17%, two passes); tile 3 663 (2%, one pass); tile 4 923 (42%, then a full rewrite plus one trim pass). The cap on ITEMS is not sufficient by itself -- tiles 1 and 4 both held exactly four items and still overran badly, because each item was given five voices and ~230 words. What actually controls length is a per-item WORD budget: ~155 words per item for four items. Tile 3 came in at 2% over because it had only three voices to place. Recommendation for the next worker: write to 155 words per item and count after each item, not after the tile."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "19",
+      "verses": [
+        "1"
+      ],
+      "note": "Shingle-guard false positive worth knowing. shg.py flagged three overlapping 8-grams shared with earlier chapters, all from one phrase: \"Shall we praise him for this? We praise him not.\" Verified it IS in this chapter own source at key 1 (Henry on the flight to Beersheba), so it is Henry reusing his own stock phrase across chapters, not cross-chapter bleed from my previous drafts. Lesson: a shingle hit is a prompt to check the source, not proof of contamination -- but it must still be checked every time, since two real bleeds were caught this way at 1kings 4 and 1samuel 30."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "rejected",
+      "book": "1kings",
+      "chapter": "19",
+      "verses": [
+        "9"
+      ],
+      "note": "Interpolation caught by ent.py and removed before assembly: I had written that Ellicott sets the complaint beside \"the Baptist s question from prison\". Ellicott says only \"the message from prison to our Lord\" and never names the Baptist -- the identification is correct but it is mine, not his. Replaced with the source own phrasing. ent.py earns its keep on exactly this class of error: a true statement that the cited commentator did not make."
     }
   ]
 }
