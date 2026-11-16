@@ -107403,6 +107403,79 @@
       "book": "ezra",
       "chapter": "10",
       "note": "Dropped for space, all verified in source. The identification of the Johanan whose chamber Ezra withdrew to: Keil and Delitzsch argue he cannot be the high priest Johanan ben Eliashib, since Eliashib was a contemporary of Nehemiah and Johanan was his grandson, the son of Joiada, not his son; Clarke reaches a similar result by a different route, taking this Johanan for the Jonathan of Nehemiah, son of Joiada and grandson of Eliashib, and noting that some suppose Johanan and Joiada to be two names for one man; Henry adds that Ezra went to the council-chamber where the priests probably met on public business, with bishop Patrick reading of the clause. Also dropped: Henry count of about 113 offenders and his inference that God did not crown those marriages with the blessing of increase, both of which attach to v.44 and sit in his key-15 block rather than at key 44; Henry closing reflection that the grievance recurs in Nehemiah and Malachi so that the best reformers can but do their endeavour, which survives in the v.44 entry under Wesley name (see the borrowing note); Gill observation that the delinquent priests example explains how far the evil spread; and the Chethib reading of one name in the laity roll, which is in the vv.24-26 entry only by allusion."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "14",
+      "verses": [
+        "4",
+        "28"
+      ],
+      "note": "JFB intruder lattice, sixteenth consecutive chapter. Keys 4 and 28 carry commentary on a foreign passage (1 Samuel 18) under the Jamieson, Fausset and Brown label; phase here is 4, i.e. keys 4 and 28 on the every-sixth-key lattice, sparsely filled (keys 10, 16, 22 clean). Both are fragments of the same foreign passage rather than two distinct errors, consistent with the one-indexer mechanism established at 1samuel 19. JFB declared in excluded_voices on spans 4-8 and 27-31."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "14",
+      "verses": [
+        "30"
+      ],
+      "note": "Ellicott page chrome, ninth consecutive chapter, and the rule needs restating. The scrape footer (navigation and advert markers, ~37 of them inside a ~1,089-word block) attaches to Ellicott's LAST block on the scraped page, not to the chapter's last source key. Here that is key 30; key 31, the chapter's final key, has no Ellicott entry at all. Earlier chapters made the two coincide and so suggested the wrong rule."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "7",
+        "21"
+      ],
+      "note": "Henry section filing, sixth chapter running. Henry's blocks are filed at the key where his section begins and are not repeated across the verses they cover: the key-7 block treats vv7-20 entire, so six of the nine spans in this chapter name no Henry at all although his comment covers them. Same fix recommended as before, a resolver that attributes a Henry block to every verse in its stated range."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "14",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke chapter-head synopsis filed at key 1, fifth chapter running. The key-1 Clarke block is the chapter argument, enumerating events at later verses, not a comment on vv1-3. A cheap detector would be: a key-1 block that enumerates several later verse numbers is an argument, not a comment."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "14",
+      "verses": [
+        "1-31"
+      ],
+      "note": "Column-level gap: John Wesley is absent from this chapter entirely, in all 31 source keys. Every other chapter worked in this run carried a Wesley column (and in three of them he was found absorbing Henry). The gap matters for voice counting because Wesley is usually the cheapest second witness in the wesleyan-arminian school, leaving Clarke to carry it alone here."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "14",
+      "verses": [
+        "1-31"
+      ],
+      "note": "Calibration result. Computing the word target from the span's source size first and then holding the draft to target divided by about 36 validator words per sentence produced eight of nine entries inside the 350-650 band on the first pass; the ninth (vv22-24) overshot to 811 and needed a trim. That is the best first-pass rate of the run and confirms the sentence-count rule over the previous habit of writing to the cap."
+    },
+    {
+      "at": "2026-11-15",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "14",
+      "verses": [
+        "9-31"
+      ],
+      "note": "Ellicott carries this chapter. He is present in all nine spans, supplies the longest note (Asherah at vv15-16), and in four of the nine debates he holds both sides or the only developed position, so the debate structures are thinner than the voice counts suggest. Where a chapter has one dominant expositor the disagreement field risks recording his internal alternatives as if they were a conversation."
     }
   ]
 }
