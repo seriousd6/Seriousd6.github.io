@@ -107724,6 +107724,125 @@
         "1-29"
       ],
       "note": "Calibration: the sentence-count rule held for seven of nine entries on the first pass. The two overshoots were both large-source spans written to the full cap (vv8-10 at 704 and vv23-27 at 817 validator words), and in both the drift came from adding a voice's second and third points inside an already-planned paragraph rather than from writing extra paragraphs. The working correction is to budget sentences per voice, not per paragraph, once a span carries five or more voices."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "26",
+      "verses": [
+        "12"
+      ],
+      "note": "JFB intruder, eighteenth consecutive chapter, and the sparsest lattice yet: one hit, at key 12, on the every-sixth-key grid (keys 6, 18 and 24 are clean). The block is 105 words of commentary on Judges 4, opening on the royal title Jabin and the second Jabin's capital, with cross-references to Joshua 11. Declared in excluded_voices on span 9-12."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "26",
+      "verses": [
+        "25"
+      ],
+      "note": "Ellicott page chrome, eleventh consecutive chapter. Key 25 is both the chapter's last key and Ellicott's last block, and the chrome is again the heavy kind seen at 2kings 14: of 1,024 words only about 40 are commentary (one note on the closing blessing, quoting Wordsworth on Julian), the remaining 984 being footer text, a stylesheet and the site's resource menu. The span's declared source size of 3,674 words therefore overstates the real material by about 950. Chrome stripping before counting would correct both the voice list and the word budget."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "26",
+      "verses": [
+        "1",
+        "6",
+        "13",
+        "21"
+      ],
+      "note": "Henry section filing, eighth chapter running. Four blocks cover the chapter: key 1 treats vv1-5, key 6 vv6-12, key 13 vv13-20 entire, and key 21 vv21-25. The key-13 block is the worst case seen so far, 1,857 words covering eight verses, which forced the pericope tiling: vv13-20 had to be cut into two spans (13-16 and 17-20) and Henry's comment on vv17-20 could only be used in the earlier entry, where his block is filed. A span-aware resolver would let the vv17-20 entry carry him too, and would have allowed finer pericopes."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "26",
+      "verses": [
+        "1",
+        "6",
+        "13",
+        "21"
+      ],
+      "note": "Henry's blocks again carry the Exposition and the Concise Commentary concatenated, as characterised at 2kings 14. Every one of the four closes with a compressed digest of itself (the key-13 block restates its argument in its last 150 words, the key-21 block in its last 120). The duplication is intrinsic to the column, not to this chapter."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "26",
+      "verses": [
+        "2",
+        "4",
+        "6",
+        "9",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "18",
+        "21",
+        "22",
+        "23"
+      ],
+      "note": "The Keil and Delitzsch column is truncated at exactly 200 words in thirteen of this chapter's twenty-five keys, with only key 25 (38 words) naturally short. As at 2kings 14 the blocks are a sliding window over one continuous commentary: keys 15 and 16 overlap for most of their length, and keys 22 and 23 likewise. The practical cost here is that K&D's answer to Thenius on David's closing speech is cut off mid-sentence at key 23 and has to be completed from the overlap."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "26",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke chapter-head synopsis filed at key 1, seventh chapter running: the key-1 block enumerates events down to v25 and is the chapter argument, not a comment on vv1-4."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "26",
+      "verses": [
+        "4",
+        "5",
+        "7",
+        "9",
+        "13",
+        "14",
+        "17",
+        "19",
+        "20",
+        "21",
+        "25"
+      ],
+      "note": "Wesley absorbing Henry, and this chapter supplies the most important instance of the run. At key 21 Wesley reproduces 130 words of Henry almost verbatim (the melting, the soul precious where it was thought odious, the double confession against God's law and his own interest, the wronging of both) and then REVERSES Henry's conclusion: Henry holds that neither confession nor promise came from a principle of true repentance, while Wesley adds that God surely now touched his heart and that Saul never attempted the pursuit again. So the borrowing is not a faithful echo. Any model that collapsed Wesley into Henry would lose a genuine disagreement, and the span-21 debate records four distinct positions only because Wesley is counted separately."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "26",
+      "verses": [
+        "13",
+        "17"
+      ],
+      "note": "Pericope tiling was constrained by the source rather than by the text this time. Keys 17-18 together hold only 471 usable words, so a vv17-18 span would have run at better than 0.8x expansion; keys 24-25 hold about 430 real words behind 1,428 declared. Both had to be merged upward, which is why this 25-verse chapter carries six entries where comparable chapters carry nine. Recorded as the first case where chrome and short keys together set the span count."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "26",
+      "verses": [
+        "1-25"
+      ],
+      "note": "Calibration: five of six entries overshot the 650-word cap on the first pass, by 50 to 150 words, which is worse than the previous chapter and traces to a single cause. Every overshoot was a four-paragraph entry, and in each the fourth paragraph was written after the budget was already spent. The correction for the next chapter is to fix the paragraph count at three for any span under 2,500 source words and to assign each paragraph its own sentence allowance before drafting, rather than budgeting the entry as a whole."
     }
   ]
 }
