@@ -108041,6 +108041,119 @@
         "10"
       ],
       "note": "Bleed guard against the parallel chapter, run deliberately and clean. 2 Chronicles 28 (the Ahaz parallel) was written by this worker the previous day, making this the highest cross-chapter contamination risk in the run so far: the same war, the same embassy to Tiglath-pileser, and Ellicott citing the Assyrian monuments in both. The 8-gram shingle diff against 2chronicles 28, 1kings 19, ezra 10, 2samuel 5 and 2samuel 21 returned 0 shared shingles. One spelling check mattered: Ellicott gives the Assyrian form of the king name as \"Yahuhazi\" in 2 Chronicles 28 but \"Jahuhazi\" here, so the form was taken from this chapter own block rather than from memory of the other. ent.py clean on all four tiles."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "18",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21",
+        "27"
+      ],
+      "note": "JFB intruder lattice, nineteenth consecutive chapter, and the clearest demonstration of the mechanism in the whole run. The every-sixth-key grid is FULLY filled at phase 3: keys 3, 9, 15, 21 and 27. The first four blocks are byte-identical (md5 b8587588, 50 words on the cities of the priests, which is commentary on Joshua 21), and key 27 is a different 88-word fragment that opens by calling itself a general winding up of the history from the thirteenth chapter, i.e. the close of Joshua. So all five hits come from one foreign book, four as the same slice repeated and one as a different slice. Four identical copies plus one sliced variant, from a single source book, is what a single mis-seeking indexer produces and what two independent bugs would not. Declared in excluded_voices on all four affected spans."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "18",
+      "verses": [
+        "30"
+      ],
+      "note": "Ellicott page chrome, twelfth consecutive chapter, and the most extreme ratio yet: of 1,046 words in the key-30 Ellicott block only 51 are commentary (one note on the Philistine sortie, citing Wordsworth and the Rabbis), the other 995 being footer, stylesheet and site menu. Key 30 is again both the chapter's last key and Ellicott's last block. The vv28-30 span therefore declares 1,646 usable source words against about 600 real ones, which is why that entry is written at 359 words: budgeting from the declared figure would have produced padding."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "6",
+        "12"
+      ],
+      "note": "Henry section filing, ninth chapter running, and the worst span-forcing case recorded. Three blocks cover the chapter: key 1 treats vv1-5, key 6 vv6-11, and key 12 runs 2,375 words covering vv12-25 entire. That single block spans four natural pericopes (vv12-16, 17-19, 20-23, 24-27), and since Henry is in-source only at key 12 his comment on vv17-25 could be used only in the vv12-16 entry, where it sits as a forward survey of the plots. Four of this chapter's seven entries name no Henry although his commentary covers their verses. The span-aware resolver recommended since 2samuel 17 would fix all four at once."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "18",
+      "verses": [
+        "2",
+        "4",
+        "5",
+        "7",
+        "9",
+        "10",
+        "11",
+        "13",
+        "15",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "27"
+      ],
+      "note": "The Keil and Delitzsch column is truncated at exactly 200 words in eighteen of this chapter's thirty keys; only key 29 (132 words) falls short naturally, and key 30 has no K&D entry at all. The sliding-window behaviour recorded at 2kings 14 and 1samuel 26 is visible here across four consecutive keys: keys 2, 4 and 5 are overlapping windows over one continuous comment on vv2-6, each cut at 200. The practical cost in this chapter is that K&D's report of the Thenius source-division of vv6-14 is cut off mid-sentence at key 6 and its grounds have to be reassembled from the overlap."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "18",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke chapter-head synopsis filed at key 1, eighth chapter running: the key-1 Clarke block enumerates the chapter's events down to v30 and is the argument, not a comment on vv1-5."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "18",
+      "verses": [
+        "4",
+        "5",
+        "10",
+        "11",
+        "13",
+        "18",
+        "19",
+        "26",
+        "27",
+        "30"
+      ],
+      "note": "Wesley absorbing Henry, ten keys in this chapter. Keys 10 and 11 give Henry's account of the returning fits and the evil spirit; key 13 his three reasons for the removal from court; key 18 his reading of the modest answer; key 27 his explanation of the doubled number. None is attributed. As at 1samuel 26 the borrowing is not always faithful: at key 13 Wesley keeps Henry's reasons but adds the motive of exposing David to hazards, which Henry states separately at v17, so Wesley compresses two of Henry's points into one and changes their weight."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "18",
+      "verses": [
+        "20",
+        "24"
+      ],
+      "note": "Expansion ran low on two spans and it was deliberate. The vv20-23 and vv24-27 entries are 447 validator words against about 1,100 real source words each (0.38x and 0.41x), below this chapter's other short spans. The reason is that both spans are dominated by narrative restatement in Gill and K&D, with only two or three genuinely distinct judgements between them; writing to 600 would have meant retelling the story rather than recording disagreement. Recorded because the fidelity ratio alone would read these as thin when the material, not the drafting, is what is thin."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "18",
+      "verses": [
+        "1-30"
+      ],
+      "note": "Calibration: the three-paragraph rule for spans under 2,500 source words worked, and the four-paragraph entries overshot again. All three large spans (vv1-5, 6-11, 12-16) ran 100 to 150 words over the cap on the first pass; all four smaller spans came in under it without a trim. The diagnosis is now specific: my sentences average 40 to 44 validator words when a span carries five or six voices, against the 36 the cap assumes, because each voice gets a subordinate clause of its own. The correction for the next chapter is to cap sentences at two voices and split rather than coordinate."
     }
   ]
 }
