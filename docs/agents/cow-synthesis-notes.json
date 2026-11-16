@@ -108241,6 +108241,127 @@
         "6"
       ],
       "note": "Process error caught by the validator, worth recording so the next worker does not repeat it. The assembler and tags were built by sed from the previous chapter template, and tile 2 inherited the key \"5\" from that template while covering vv.6-14. validate-synthesis.py rejected it: \"pericopes tile the chapter (5: range starts at 6, so it must be keyed 6)\". The tile KEY must equal the first verse of its range; my own chapter verifier does not check this, only that ranges are contiguous and cover the chapter, so it passed with 0 problems and the error reached the data tree before being caught. Suggest adding the key-equals-range-start assertion to the scratchpad verifier template, or relying on the validator and re-running after a git checkout as was done here."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "20",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "30",
+        "36",
+        "42"
+      ],
+      "note": "JFB intruder lattice, twentieth consecutive chapter, six hits on the every-sixth-key grid at phase 0 (keys 6, 12, 18, 30, 36, 42; key 24 is the only gap). Every block is commentary on 1 Samuel 23-25 — Saul in the wilderness, Carmel, Nabal — so the whole lattice again draws on one foreign region. Keys 12 and 18 are byte-identical (md5 f6758ced, 304 words on the cliffs and wadies); keys 6, 30, 36 and 42 are four further distinct slices of the same material at 219, 48, 158 and 138 words. Note for the record that the foreign region differs from chapter to chapter: 1samuel 18 drew five hits from Joshua, this chapter six from 1 Samuel. One indexer landing in a different place each time, not a fixed bad offset."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "20",
+      "verses": [
+        "42"
+      ],
+      "note": "Ellicott page chrome, thirteenth consecutive chapter: key 42 carries 1,133 Ellicott words of which 138 are commentary and 995 are footer, stylesheet and site menu. Key 42 is Ellicott's last block (key 43 has no Ellicott entry), which is the rule as restated at 1kings 14."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "20",
+      "verses": [
+        "43"
+      ],
+      "note": "A new defect class, and the largest single block in the run: Clarke's entry at key 43 is 2,664 words, of which perhaps 120 comment on the verse. The rest is two chapter-end excursions — a Kennicott-based argument that the word rendered wall at v30 should be read as a scorching wind, with instances from Job, Ezekiel, Hosea and Amos, and a long digression on the burghers of Calais and the nature of patriotism. This is genuine Clarke, not chrome, but it is filed as commentary on v43 and inflates the final span's declared source by better than twenty to one. Chrome stripping will not catch it. If source-word budgets are ever used to size entries automatically, a commentator excursus at the chapter's last key needs the same treatment as the Ellicott footer: counted separately, not as commentary on the verse it is filed under."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "20",
+      "verses": [
+        "1",
+        "12",
+        "22",
+        "31"
+      ],
+      "note": "Henry section filing, tenth chapter running. Four blocks cover the chapter: key 1 treats vv1-11, key 12 vv12-21, key 22 vv22-30, key 31 vv31-43. Every one of them spans two of the nine pericopes, so Henry appears in four entries and is absent from five although his commentary covers all forty-three verses. In two entries (vv22-25 and vv31-34) his material on the following pericope had to be carried as a forward survey, which is the third time this run that his filing has shaped the prose rather than just the voice list."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "20",
+      "verses": [
+        "2",
+        "3",
+        "9",
+        "11",
+        "12",
+        "13",
+        "14",
+        "16",
+        "18",
+        "20",
+        "23",
+        "24",
+        "27",
+        "28",
+        "29",
+        "30",
+        "32",
+        "34",
+        "35",
+        "36",
+        "38",
+        "39",
+        "40"
+      ],
+      "note": "The Keil and Delitzsch column is truncated at exactly 200 words in twenty-three of this chapter's forty-three keys, with only key 42 (77 words) naturally short and key 43 absent. The sliding-window behaviour is again visible: keys 2 and 3 overlap for most of their length, as do 23 and 24, and 29 and 30."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke chapter-head synopsis filed at key 1, ninth chapter running: 346 words enumerating the chapter's events down to v43."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "20",
+      "verses": [
+        "1-43"
+      ],
+      "note": "Column-level gap: John Wesley is absent from all forty-three keys of this chapter. This is the second such gap in the run (the first was 1kings 14), and both are in Kings. Where Wesley is missing the wesleyan-arminian school rests on Clarke alone, which in this chapter means it is represented in all nine entries but never corroborated."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "20",
+      "verses": [
+        "1-43"
+      ],
+      "note": "Calibration: the rule capping sentences at two voices worked and the overshoot is down. Five of nine entries went over the cap on the first pass, by 6 to 67 words, against 100 to 150 in the previous chapter, and the three longest entries needed one trim pass each rather than two or three. The residual overshoot is concentrated in four-paragraph entries where the fourth paragraph carries a long excursus (vv31-34 and vv39-43 both did). The next refinement is to give an excursus its own paragraph budget before drafting, not the remainder of the entry's."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "20",
+      "verses": [
+        "17",
+        "7"
+      ],
+      "note": "Two spans sat near the band floor and one needed lengthening. The vv7-11 span holds 803 usable source words and the vv17-21 span 700, and the first draft of the vv17-21 entry came in at 341 validator words, below the 350 floor; two sentences of source detail were added to clear it. Recorded because this is the first floor breach of the run: with the chapter's long keys concentrated at 1, 12, 22, 31 and 43, the short keys between them leave spans that cannot carry a full-length entry honestly."
     }
   ]
 }
