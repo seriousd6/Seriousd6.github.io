@@ -107476,6 +107476,135 @@
         "9-31"
       ],
       "note": "Ellicott carries this chapter. He is present in all nine spans, supplies the longest note (Asherah at vv15-16), and in four of the nine debates he holds both sides or the only developed position, so the debate structures are thinner than the voice counts suggest. Where a chapter has one dominant expositor the disagreement field risks recording his internal alternatives as if they were a conversation."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "12",
+        "20"
+      ],
+      "note": "THE WORST SOURCE DEFECT OF THE RUN, AND A NEW CLASS: MATTHEW HENRY EXPOSITION IS DISPLACED FORWARD BY ONE CHAPTER. Every voice in this file except Henry is correctly on 2 Chronicles 28, which is Ahaz. Henry three blocks, at keys 1, 12 and 20 and totalling 3,734 words, are his Exposition on 2 Chronicles 29, which is HEZEKIAH: key 1 opens \"Here is, I. Hezekiah age when he came to the crown. He was twenty-five years old\" and runs through the opening of the temple doors and his speech to the priests and Levites; key 12 is the cleansing of the house of God beginning on the first day of the first month; key 20 is the solemn assembly and the atonement for the sins of the last reign. HOW IT WAS VERIFIED, because the content alone could be a misreading: I compared against data/commentary/cow/2chronicles/29.json, which exists and holds Henry at keys 1 and 20 but only 156 and 147 words there - his CONCISE. So chapter 28 holds chapter 29 Exposition while chapter 29 retains only its Concise. The two are not identical text, which rules out simple duplication; they are the two different Henry works, filed one chapter apart. WHY THIS IS MORE DANGEROUS THAN JFB RESIDUE: the residue is PLAUSIBLE. JFB residue announces itself (Gideon in a Samuel chapter); here the foreign text is the same book, the adjacent reign, the son of the very king under discussion. A writer who did not check would weave Hezekiah temple reform into a chapter about his idolatrous father and produce a confident false attribution that every gate would pass. Henry is therefore EXCLUDED from all five entries of this chapter, declared in excluded_voices for the three spans where he heads a block (keys 1, 12, 20) and omitted from excluded_voices for the other two, since the verifier requires an excluded voice to head a real block in its span. The puritan-evangelical school consequently appears nowhere in this chapter. Usable source drops from 14,404 to 10,482 words once he is excluded."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "28",
+      "verses": [
+        "1"
+      ],
+      "note": "THE EXTENT OF THE HENRY DISPLACEMENT, measured rather than assumed. I checked the first Henry block of every chapter from 2 Chronicles 24 to 35 and identified which king it discusses. The offset is LOCALISED, not systematic: chapters 24, 25 (Amaziah), 26 (Uzziah), 30 (Hezekiah passover), 31 (after the passover), 32 (Sennacherib), 33 (Manasseh), 34 and 35 (Josiah) are all CORRECT. Only two chapters are displaced, each forward by one: chapter 27, which is Jotham, holds Henry on AHAZ (its key-1 block opens \"Never surely had a man greater opportunity of doing well than Ahaz had\", and its key-16 block discusses the distress of the kingdom of Ahaz citing v.19); and chapter 28, which is Ahaz, holds Henry on HEZEKIAH. Chapter 29 is left with only its Concise. The chain resynchronises at chapter 30. CORROBORATING DAMAGE AT 27: that chapter also carries a key 16 although Jotham chapter has only 9 verses, which is precisely the out-of-range scrape corruption already documented in the coverage comment in scripts/synthesis_qa.py. So chapter 27 is damaged two ways at once. CONSEQUENCES FOR THE QUEUE, which is why this is worth the detail: anyone who rewrites 2chronicles 27 from this source will attribute Ahaz material to Jotham, and anyone who rewrites 2chronicles 29 will find Henry reduced to 300 words of Concise and under-represent the principal voice of the chapter. Both are live legacy chapters. I have not touched either; the fix is at harvest, by re-fetching Henry Exposition for chapters 27, 28 and 29."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "28",
+      "verses": [
+        "26"
+      ],
+      "note": "SEVENTEENTH chapter-final chrome: key 26 is 1,095 words of which 984 follow the \"Footnotes: Copyright Statement\" marker, so roughly ninety per cent is apparatus. usable_source_words does not strip it and scores the key at 1,091, inflating the vv.22-27 denominator by about 900 words; the reported expansion of 0.220x for that entry therefore understates the true figure, which is nearer 0.32x. Four chapters running have now shown this at scale (1samuel 30 key 31, 2samuel 21 key 22, 2samuel 5 key 25, and here). The pattern-strip on each commentator final block remains unactioned and remains the cheapest outstanding fix in the notebook."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "5",
+        "9",
+        "16",
+        "22"
+      ],
+      "note": "NO JAMIESON, FAUSSET AND BROWN BLOCKS ANYWHERE IN THIS CHAPTER, which is worth recording because it is the first chapter of the run with no stride-6 residue at all. A whole-chapter sweep found zero Jamieson occurrences and zero duplicate blocks of 25 words or more. So the stride-6 pagination defect is not universal, and its absence here is a useful control: it shows the JFB residue is a property of particular harvests rather than of the merge format itself. Charles Ellicott, by contrast, is present and prolific throughout - unlike ezra 10, where he was wholly absent."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "5",
+        "9",
+        "16",
+        "22"
+      ],
+      "note": "TILING WITHOUT HENRY, and the first chapter of the run where his heads could not be used. Henry heads keys 1, 12 and 20, but those heads belong to another chapter, so for twenty-two chapters the tiling rule was \"cut at Henry section heads\" and here it had to be abandoned entirely. I tiled instead on the narrative as the remaining five voices present it, with the cut after v.3 forced by verse 4 being absent from the source: vv.1-3 the idolatry, vv.5-8 the defeats and the captives, vv.9-15 Oded and the restoration, vv.16-21 the appeal to Assyria and the other invasions, vv.22-27 the gods of Damascus and the death. Expansions 0.613 / 0.415 / 0.259 / 0.256 / 0.220 ex-Henry, which is better balanced than most Henry-led tilings. Coverage confirmed by calling QA.coverage_problems directly before writing, since verse 4 absent means only vv.1-3 are strictly required and anything past the gap is advisory while covering v.4 is forbidden. Worth noting for the method: the narrative structure of these regnal chapters is clear enough from the other voices that Henry heads are a convenience rather than a necessity."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "28",
+      "verses": [
+        "23"
+      ],
+      "note": "THE RICHEST CRUX OF THE CHAPTER, and possibly of the run: the text says Ahaz sacrificed to the gods of Damascus WHICH SMOTE HIM, and four voices resolve the scandal four different ways. Gill offers a construction, that the meaning may be the gods of those who smote him, the men of Damascus, \"for the Spirit of God would never ascribe the smiting of him to idols, though he himself might\" - having first called the plain sense monstrous stupidity in a king of Judah and compared it to the report that the Indians worship the devil so that he may not hurt them. Clarke emends, quoting Mr Hallet: \"This passage greatly surprised me; for the sacred historian himself is here represented as saying, The gods of Damascus had smitten Ahaz. But it is impossible to suppose that an inspired author could say this\" - and avoids it by following the older Hebrew copies behind the Greek, which make the words Ahaz own saying, I will seek to the gods of Damascus which have smitten me, a turn the Syriac and Arabic share. Ellicott faces the question head on - did the chronicler himself believe the gods of Aram had any power or real existence - answers that the Israelites of that day certainly did, and sets beside the nothingness of idols in the later Isaiah the other current opinion, which Paul repeats and Milton adopted, that what the heathen sacrifice they sacrifice to demons. Keil and Delitzsch ignore the theology and fight over a participle, insisting against Bertheau that it is not a pluperfect: Ahaz sought the Syrian gods help while the Syrians were defeating him, not after. Four incompatible methods - construction, emendation, theology, grammar - on one clause. All four carried."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "28",
+      "verses": [
+        "19",
+        "27"
+      ],
+      "note": "Why Ahaz is called KING OF ISRAEL, with explicit mutual rejection. Gill gives three grounds at once: he walked in the ways of the kings of Israel, he ruled two of the tribes, and of right he was king over all Israel as David and Solomon had been. Keil and Delitzsch DENY the first of those outright - \"not because he walked in the ways of the kings of the kingdom of the ten tribes, but ironically, because his government was the bitterest satire upon the name of the king of Israel, i.e., of the people of God\" - citing Caspari. Ellicott in turn REJECTS the irony: \"Most commentators see an irony in this expression. But, as has been stated before, the southern kingdom was Israel in the chronicler idea\", however much more important the north was politically, as the cedar of Lebanon compared with the blackthorn growing beside it. Clarke, at v.27, takes the plainest line of all and thinks the matter of little importance, this writer commonly putting Israel for Judah since he considers them one people from one stock. Gill and Ellicott both note that the versions read Judah, and Ellicott reports Hebrew manuscripts marking seven places where king of Judah should be read. Three positions that each name and reject at least one of the others, plus a fourth that dismisses the question."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "28",
+      "verses": [
+        "6",
+        "8"
+      ],
+      "note": "The casualty figures, and a rare case of external corroboration settling a dispute. Clarke doubts them: \"It is very probable that there is a mistake in this number. It is hardly possible that a hundred and twenty thousand men could have been slain in one day; yet all the versions and MSS. agree in this number.\" Keil and Delitzsch defend them against named critics - Gesenius, De Wette and Winer, who \"have taken offence at the large numbers ... and have declared them to be exaggerations of the wonder-loving chronicler. But in this they are mistaken\" - arguing from Isaiah 7:6 that the allies meant to annihilate Judah and that the Ephraimites always acted with extreme cruelty in war. Ellicott treats both totals as round numbers, reckons a hundred and twenty thousand at about a third of the Jewish host, and then supplies what neither of the others has: Sennacherib boasts of taking forty-six strong cities of Judah and carrying off 200,150 captives, so that \"the number of the text is thus corroborated from a foreign and wholly unrelated source.\" Recorded because it is the clearest instance in the run of an epigraphic source bearing directly on a disputed biblical figure, and because the three positions are doubt, defence from internal evidence, and confirmation from outside."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "28",
+      "verses": [
+        "9",
+        "15",
+        "20"
+      ],
+      "note": "Three things carried because no other voice says them. (1) Clarke on Oded speech declines to comment and then delivers the strongest moral verdict in the chapter: \"To this beautiful speech nothing can be added by the best comment: it is simple, humane, pious, and overwhelmingly convincing\" - and of the captives sent home clothed, fed, shod, anointed and carried on asses to Jericho, \"We can scarcely find a parallel to this in the universal history of the wars which savage man has carried on against his fellows, from the foundation of the world.\" (2) Ellicott asks why the chronicler lingers on that kindness and answers three ways: as a lesson for the Samaritans of his own age, whose hostility damaged the restored exiles and who by rabbinic tradition tried to prejudice Alexander the Great against Jerusalem; as possibly the passage behind the parable of the good Samaritan, \"the coincidences between the two stories are at any rate curious\"; and as historically secure by symmetry with the Judaean prophet Shemaiah interposing between his people and the ten tribes. (3) Wesley alone explains why Assyrian help was no help: the expression is \"most emphatical\", for in removing the Syrian, who though a troublesome neighbour was a kind of bulwark, Tiglath \"smoothed the way for himself, a far more dangerous enemy, as appears in the very next king reign\" - the buffer-state argument, which no one else makes. Also noted: Ellicott remarks on the strange silence about Hosea, who must have been active in the north at this date, while Keil and Delitzsch cite Hosea positively as proof a true prophet could be found in Samaria - the same fact used to opposite ends."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "9"
+      ],
+      "note": "ENT.PY NON-ASCII BLIND SPOT CONFIRMED FOR THE THIRD CHAPTER RUNNING, with a cheap fix. The entity checker flagged Graecised and Judaean in my prose as unsourced. Both are in the source with ligatures - Ellicott writes Graecised with the ae-ligature and Judaean likewise - so my ASCII spellings are faithful transliterations and the flags are false positives. The same thing happened at 2samuel 5 with Phoenicians, where the source has the oe-ligature. The regex in ent.py never matches a name containing a non-ASCII letter, so every ligature in the source becomes a false positive on any ASCII rendering of it, and the checker cannot be trusted to distinguish my coinages from the source own spellings in these cases. THE FIX is one line: normalise the pooled source text and the candidate token through unicodedata NFKD with the ae and oe ligatures mapped to ae and oe before the membership test. Noted because the checker caught a real coinage at 2samuel 5 (Benjamite) in the same run where it produced this false positive, so it is worth keeping and worth fixing rather than discarding."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "5",
+        "9",
+        "16",
+        "22"
+      ],
+      "note": "Five entries at 617 / 646 / 648 / 649 / 650 words, all grade A, self-graded. Voice counts 4 / 5 / 5 / 5 / 5 - the first entry has no Wesley block in vv.1-3 - and Matthew Henry excluded throughout for the displacement recorded above, so no puritan-evangelical school appears in the chapter. Expansions 0.613 / 0.415 / 0.259 / 0.256 / 0.220 against 10,482 usable source words ex-Henry; the last is really nearer 0.32x once the key-26 chrome is discounted. The four-item cap held well: first drafts came in at 617 (in window first time), 728, 745, 744 and 772, that is 0 to 19 per cent over against 29 to 54 per cent two chapters ago, and tile 1 needed no trimming at all. The voice-declaration guard and the shingle guard both ran clean; the shingle diff against the previous two chapters returned 24 shared shingles, all scaffolding."
     }
   ]
 }
