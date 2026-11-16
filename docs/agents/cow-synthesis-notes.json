@@ -108362,6 +108362,85 @@
         "7"
       ],
       "note": "Two spans sat near the band floor and one needed lengthening. The vv7-11 span holds 803 usable source words and the vv17-21 span 700, and the first draft of the vv17-21 entry came in at 341 validator words, below the 350 floor; two sentences of source detail were added to clear it. Recorded because this is the first floor breach of the run: with the chapter's long keys concentrated at 1, 12, 22, 31 and 43, the short keys between them leave spans that cannot carry a full-length entry honestly."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "5",
+      "verses": [
+        "4",
+        "16"
+      ],
+      "note": "JFB residue, donor identified as 1 Chronicles 2 -- a genealogy chapter. The two Jamieson, Fausset and Brown blocks in this chapter are both short fragments of it: key 4 reads \"so called from uniting the names of husband and wife (1Ch 2:19), and supposed to be the same as was afterwards called Beth-lehem-ephratah... He is called the father, either from his being the first founder, or perhaps the ruler, of the city\" (the Caleb and Ephrath genealogy), and key 16 reads \"either he had no sons alive at his death, or his family consisted wholly of daughters, of whom Ahlai (1Ch 2:31) was one\" (Sheshan daughters). Stride 12, offset 4. Note two things new here: the donor is a genealogy rather than a narrative, and both fragments come from nearby verses of the SAME donor chapter -- the first case where two residue blocks in one target chapter are traceable to one donor passage a dozen verses apart. JFB excluded from tiles 1 and 3; it heads no block in vv.6-13."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "5",
+      "verses": [
+        "19"
+      ],
+      "note": "Chapter-final site chrome, 21st recorded instance, on the last key and on Ellicott again. The key-19 Ellicott block is 1030 words of which only the opening clause is commentary. Gill (55w), Keil and Delitzsch (63w), Clarke (153w) and Wesley (48w) at the same key are all real and all short, so the chrome is isolated to one voice as usual. Twenty-one instances now, nineteen of them on Ellicott; the two exceptions were on the last block the harvester wrote rather than the last voice."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "5",
+      "verses": [
+        "7",
+        "15",
+        "18"
+      ],
+      "note": "Wesley-Henry borrowings, THREE in this one chapter, bringing the running count to 29 -- the densest chapter recorded so far. (a) Key 7: Wesley \"Ezra, and Nehemiah were both good and useful men; but of how different tempers? Ezra was a man of a mild tender spirit, and when told of the sin of the rulers, rent his clothes and wept: Nehemiah forced them to reform, being of a warm and eager spirit\" condenses Henry key 6, which has the same comparison in the same order. (b) Key 15: Wesley \"Those that truly fear God, will not dare to do any thing cruel or unjust. And this is not only a powerful, but an acceptable principle both of justice and charity\" is Henry key 14 almost word for word, as is Wesley \"which fault of the servants is charged upon their masters, because they did not restrain them\" against Henry \"Masters must be accountable for all the acts of fraud and injustice, violence and oppression, which they connive at in their servants.\" (c) Key 18: Wesley \"his office in the Persian court being a place of great profit\" matches Henry \"lived upon what he had got in the king of Persia court.\" Handled by giving each argument to Henry and saying in the prose that Wesley repeats or follows him."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "6",
+        "14"
+      ],
+      "note": "Henry placement verified before writing. Henry heads keys 1, 6 and 14 and all three blocks are genuinely Nehemiah 5: key 1 the tears of the oppressed laid before a governor whose office was to deliver the poor, key 6 the complaint reaching him while his hands were full of the wall and his calling of the assembly, key 14 his own practice related as an inducement to his successors. His three section heads fall exactly on the three movements of the chapter (the outcry, the rebuke and oath, the governor own example), so this is again the clean case (a) of the Henry tiling rule -- now held in 26 chapters."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "fidelity",
+      "book": "nehemiah",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "6",
+        "14"
+      ],
+      "note": "Fidelity self-grade, all three tiles A, each landing at exactly 650 words. Prose words / usable source words / expansion: vv.1-5 650/2974 = 0.22; vv.6-13 650/4480 = 0.15; vv.14-19 650/4832 = 0.14 (the last really nearer 0.17 once the key-19 chrome is discounted). All six voices -- Gill, Henry, Keil and Delitzsch, Clarke, Ellicott and Wesley -- head blocks in all three spans and are declared in all three tiles. Gate: 0 defects, no FLOOR, no PAD, 0 ungroundable attributions, mean TTR 0.648. Shingle diff against 2samuel 10, 2kings 16, 1kings 19, 2chronicles 28 and ezra 10: 0 shared. ent.py clean."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "6",
+        "14"
+      ],
+      "note": "Method. Six voices in every span again, and the attributions-per-tile rule was applied from the start (four items per tile, only the three or four voices that actually speak to each point). First drafts 837, 841 and 938 against the 650 ceiling -- 29, 29 and 44 per cent over. The third tile overran worst because its four items each had genuine four-voice content and I let the paragraphs run to 235 words before counting; rewriting it wholesale at target was faster than patching, which is the lesson to carry: when a draft is more than about 35 per cent over, rewrite the tile rather than trim it, because compression at that scale costs more passes than a second draft. Two redundancy cuts earned their place again -- Clarke and Henry duplicated each other on the courtiers suspicion in tile 1, and Clarke and Ellicott duplicated the tribute gloss in tile 1 -- and a duplicate is always the cheapest 25 words to find."
+    },
+    {
+      "at": "2026-11-16",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "5",
+      "verses": [
+        "15"
+      ],
+      "note": "A live attribution subtlety worth recording. Ellicott grounds Nehemiah stated motive, \"because of the fear of God\", in the law itself, noting that usury and rigour are interdicted in Leviticus 25:36 and 25:43 with the express sanction \"Fear thy God\" -- so that the governor is quoting a formula, not merely reporting a scruple. Henry and Wesley both treat the phrase devotionally (those who truly fear God will not dare to do anything cruel or unjust) without noticing the Levitical echo. Both readings kept, Ellicott in the grammatical-historical summary and the other as the shared puritan and wesleyan note, since they are complementary rather than contradictory."
     }
   ]
 }
