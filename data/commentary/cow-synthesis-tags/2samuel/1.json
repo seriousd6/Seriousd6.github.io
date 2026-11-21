@@ -1,1320 +1,537 @@
 {
-"1": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Matthew Henry",
-"Adam Clarke",
-"Charles Ellicott",
-"John Wesley"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "majority",
-"summary": "The chapter is a seam joining the two books of Samuel; Ellicott and Clarke stitch it to 1 Samuel 30-31, and Keil surveys the whole reign David's kingdom will unfold."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "minority",
-"summary": "Matthew Henry reads Ziklag for its providence: mighty men flock to David, yet he posts no spies for Saul's death — 'he that believes does not make haste.'"
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill fixes the moment as the third day after the battle."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Wesley notes Ziklag, though burned, was not so consumed that David's men could not lodge there."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"seam of the two books",
-"providence and patience",
-"David waits for the crown",
-"Ziklag"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"2": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott reads the obeisance as recognition of David's new kingship, not mere respect; Keil follows the running dialogue at face value."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Clarke calls the whole account a self-contradictory fabrication; the only fact is the crown and bracelets, plundered from the field."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill counts the third day from the battle in which Saul fell."
-}
-],
-"debates": [
-{
-"question": "Is the Amalekite's story true?",
-"sides": [
-{
-"position": "a fabrication invented to win reward; only the plundered regalia is fact",
-"holders": [
-"Clarke"
-]
-},
-{
-"position": "the general facts (defeat, deaths) are true, whatever the particulars",
-"holders": [
-"Ellicott",
-"Keil and Delitzsch"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"obeisance as homage",
-"the messenger's calculation",
-"crown and bracelets",
-"mourning as disguise"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"3": {
-"voices": [
-"John Gill",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott argues the man really was in Israel's camp; the general facts of defeat and death are true, though later particulars are doubtful."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill notes David already suspects the man from his appearance and circumstances."
-}
-],
-"debates": [
-{
-"question": "Was the Amalekite actually in the army of Israel?",
-"sides": [
-{
-"position": "yes — he claims it, and no bystander strays into a battle; 'by chance' refers to finding Saul",
-"holders": [
-"Ellicott"
-]
-},
-{
-"position": "his presence was merely accidental (from the 'by chance' of v.6)",
-"holders": [
-"Ellicott (reported)"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"discernment of witnesses",
-"true substance, false detail",
-"David's caution"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"4": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Matthew Henry"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Gill and Keil trace the rising catalogue of loss — rout, slaughter, and the death of Saul and Jonathan — in the messenger's answer."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "minority",
-"summary": "Henry: the man names only Saul and Jonathan, the one David most feared and the one he most loved, and expects to be rewarded as a bringer of good tidings."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"breaking of bad news",
-"Saul feared, Jonathan loved",
-"the messenger's miscalculation"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"5": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Matthew Henry"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Keil makes the question the hinge opening the man's circumstantial narrative of vv.6-10."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "minority",
-"summary": "Henry: David is slow to believe and will not press his own claim to the throne until fully assured."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill notes David addressed the young man who brought the tidings."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"demand for evidence",
-"David examines the witness",
-"reluctance to claim the crown"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"6": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott reconstructs the flight up Gilboa and tests the tale against 1 Samuel 31, judging a solitary Saul unlikely; Keil grants the regalia put the substance beyond doubt."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill rejects the rabbinic guess that the messenger was Doeg or Doeg's son."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"topography of Gilboa",
-"tested against 1 Samuel 31",
-"the crown as evidence"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"7": {
-"voices": [
-"John Gill",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill: Saul looked behind to see how near the pursuing enemy had come."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "minority",
-"summary": "The vivid, circumstantial staging is read as the Amalekite's calculated self-insertion into Saul's last moments, at odds with 1 Samuel 31."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"a calculated scene",
-"the persuasive lie",
-"David lets the witness commit himself"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"8": {
-"voices": [
-"John Gill",
-"Adam Clarke",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott rehearses the hereditary Amalekite feud with Israel and supposes the man attached to, or conscripted into, Saul's army."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Clarke (with Delaney) marks the irony that an Amalekite strips the crown Saul forfeited by sparing Amalek."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill: Saul asked in order to know whether the man behind him was friend or enemy."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"Amalekite as hereditary foe",
-"providential irony",
-"the devoted nation",
-"forfeited crown"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"9": {
-"voices": [
-"John Gill",
-"Charles Ellicott",
-"Matthew Henry"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "minority",
-"summary": "Ellicott: the rare word for 'anguish' is uncertain — cramp, giddiness, or some effect of the wound disabling Saul."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill doubts Saul would beg death of an Amalekite, having shunned death by the Philistines."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "minority",
-"summary": "Henry: a king weary of life and dignity is a fearful emblem — unpardoned guilt makes death the king of terrors."
-}
-],
-"debates": [
-{
-"question": "Did Saul really speak this plea to the Amalekite?",
-"sides": [
-{
-"position": "doubtful — the request rings false and suits the man's invention",
-"holders": [
-"Gill",
-"Ellicott"
-]
-},
-{
-"position": "taken as spoken, it reveals the misery of a guilty death",
-"holders": [
-"Matthew Henry"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"weariness of life",
-"unpardoned guilt",
-"the meaning of 'anguish'",
-"death the king of terrors"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"10": {
-"voices": [
-"John Gill",
-"Adam Clarke",
-"Charles Ellicott",
-"Matthew Henry"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott judges the killing a lie, inconsistent with 1 Samuel 31, yet the crown and bracelet prove the man reached the body and recognised David as king."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "minority",
-"summary": "Henry: Saul's pride wore the regalia into battle; providence brings the long-awaited crown to David by an ill-designing man."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Clarke examines the diadem and bracelet as ensigns of royalty, given when investing dominion."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill supplies the grim mechanics of pressing the spear home."
-}
-],
-"debates": [
-{
-"question": "Did the Amalekite really kill Saul?",
-"sides": [
-{
-"position": "no — a lie for reward, contradicting 1 Samuel 31; only the regalia is genuine",
-"holders": [
-"Ellicott",
-"Matthew Henry"
-]
-},
-{
-"position": "the report is taken at face value as far as the deed",
-"holders": [
-"Gill"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"the crown to David",
-"providence through a liar",
-"pride wears the diadem",
-"evidence of guilt"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"11": {
-"voices": [
-"John Gill",
-"Matthew Henry"
-],
-"schools": [
-{
-"school": "puritan-evangelical",
-"prevalence": "majority",
-"summary": "Henry: David rends his clothes and mourns even for Saul his enemy; his psalms against foes sprang from holy zeal, not revenge — he would not gloat over the fallen."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill clarifies that David laid hold on his own clothes, not the messenger's."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"grief for an enemy",
-"forgiveness and magnanimity",
-"not rejoicing at a foe's fall"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"12": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott separates the fourfold mourning — for Saul, Jonathan, the people of the LORD, and the house of Israel — and rejects the LXX's 'people of Judah'; Keil notes the man's alien descent."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill vouches for the sincerity of the weeping and fasting."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"fourfold mourning",
-"grief larger than advantage",
-"religious and patriotic sorrow",
-"the persecuted man mourns"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"13": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Keil: the man is a resident 'son of a stranger,' an Amalekite emigrant living under Israel's law — which removes any excuse of ignorance."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill records Abarbanel's alternative, that David asked to whom the man belonged as a servant."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"son of a stranger",
-"resident alien",
-"self-incriminating confession",
-"fixing the ground of judgment"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"14": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott and Keil: the man is judged by his own account; David's earlier sparing of 'the Lord's anointed' (1 Samuel 24; 26) measures his horror, and the mouth convicts whether the boast be true or false."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill: David understood the boast to mean the man drew his sword and slew the king."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the LORD's anointed",
-"regicide as religious offence",
-"judged out of his own mouth",
-"blood-guilt"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"15": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott vindicates the execution: the man had hailed David as king and confessed to high treason; David's band lived by the sword."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill: David summoned one of his own attendants to carry out the sentence."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"summary justice",
-"recognised authority",
-"confessed treason",
-"justice with grief"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"16": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Clarke: whether or not the boast was true, the man was justly executed on his own confession."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill reads the blood-guilt formula: he who shed blood must have his blood shed, proved by his own confession."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "minority",
-"summary": "Keil's maxim: the mouth testifies against its owner, condemning him done or not done."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"thy blood upon thy head",
-"condemned by his own mouth",
-"the boaster of evil",
-"lying against oneself"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"17": {
-"voices": [
-"John Gill",
-"Charles Ellicott",
-"Matthew Henry"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott names the genre — a funeral dirge like David's over Abner and Jeremiah's over Josiah — and calls it David's finest secular poetry."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "several",
-"summary": "Henry: casting grief into verse makes it more moving and lasting; David generously conceals Saul's faults and praises only what was true."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill: David composed and sang the elegy in a fitting tune."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the funeral dirge",
-"charity toward the dead",
-"secular yet sanctified poetry",
-"de mortuis nil nisi bonum"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"18": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke",
-"Matthew Henry"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Clarke reads 'the bow' as the song's title (Kesheth), like the Psalm-titles; Keil lays out the ode's three strophes each opening 'How are the mighty fallen.'"
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill takes 'the use of the bow' as a real military measure — training Judah against the Philistine archers."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "minority",
-"summary": "Henry gives both readings — the weapon of war or the title of the song — and notes the elegy is preserved in the book of Jasher."
-}
-],
-"debates": [
-{
-"question": "Does 'the bow' mean the weapon or the title of the song?",
-"sides": [
-{
-"position": "the title of the elegy (Kesheth), named for Jonathan's bow",
-"holders": [
-"Clarke",
-"Matthew Henry (as one option)"
-]
-},
-{
-"position": "the weapon — David trains Judah in archery against the Philistines",
-"holders": [
-"Gill",
-"Matthew Henry (as one option)"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"the bow: weapon or title",
-"book of Jasher",
-"three strophes",
-"preserving the song"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"19": {
-"voices": [
-"John Gill",
-"Charles Ellicott",
-"John Wesley",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott takes 'beauty' as the glory of Israel (Saul and Jonathan) and rejects the Syriac 'gazelle'; the line is the song's superscription and its refrain the structural pillar."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill: the flower of the nation — king, prince, and young men — lies slain on Gilboa."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Wesley unfolds 'how' into 'how strangely, how suddenly, how universally.'"
-}
-],
-"debates": [
-{
-"question": "What does 'the beauty of Israel' mean?",
-"sides": [
-{
-"position": "the glory or ornament of Israel — Saul and Jonathan",
-"holders": [
-"Ellicott",
-"Gill",
-"Wesley"
-]
-},
-{
-"position": "'the gazelle,' a poetic name for Jonathan (Syriac)",
-"holders": [
-"Ellicott (rejected)"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"beauty/glory of Israel",
-"the refrain 'how are the mighty fallen'",
-"superscription of the song",
-"the high places"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"20": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Charles Ellicott",
-"John Wesley"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott and Keil map Gath and Askelon, the proverb 'tell it not in Gath' (Micah 1:10), and the singing women who celebrate victories (Exodus 15; 1 Samuel 18)."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill: not a command David could enforce, but a wish it were not so."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Wesley: not a precept but a poetical wish expressing sorrow at the dishonour to God and his people."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"tell it not in Gath",
-"a poetic wish, not a command",
-"the daughters of the Philistines",
-"jealousy for God's honour"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"21": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke",
-"Charles Ellicott",
-"John Wesley",
-"Matthew Henry"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Keil reads the curse as summoning nature to mourn; Ellicott takes 'anointed' of the oiled shield, not Saul; Clarke emends 'not' to 'weapons.'"
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "minority",
-"summary": "Henry: a poetical malediction like Job's cursing of his day — the earth's fruit depends on heaven and is devoted to heaven (Joel 1:9)."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Wesley: no proper imprecation but passionate horror; the cast-away shield is the shame of Saul dying like a common soldier."
-}
-],
-"debates": [
-{
-"question": "To what does 'as though he had not been anointed with oil' refer?",
-"sides": [
-{
-"position": "the shield, which was oiled for preservation and thrown away uncared for",
-"holders": [
-"Ellicott",
-"Keil and Delitzsch"
-]
-},
-{
-"position": "Saul — as though he had not been a king (Vulgate); Clarke emends to 'weapons anointed with oil'",
-"holders": [
-"Charles Ellicott (reported Vulgate)",
-"Adam Clarke"
-]
-}
-]
-}
-],
-"outliers": [
-{
-"voice": "Adam Clarke",
-"note": "Emends beli ('not') to keley ('weapons') and prints the whole ode in Hebrew and Kennicott's Latin, rendering 'slain' as 'soldier.'"
-}
-],
-"themes": [
-"curse on Gilboa",
-"nature joins the mourning",
-"the cast-away shield",
-"textual crux 'anointed with oil'"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"22": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"John Wesley"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Keil unfolds the imagery of arrows drinking blood and the sword devouring flesh (Deuteronomy 32; Isaiah 34; Jeremiah 46), dividing bow and sword between Jonathan and Saul."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Wesley: their weapons never missed; past success is named as an aggravation of their final overthrow."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill: Jonathan's bow always did execution and never returned in vain."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"martial imagery",
-"bow and sword",
-"invincible valour magnifies the loss",
-"success aggravating the defeat"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"23": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Charles Ellicott",
-"John Wesley"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Keil and Ellicott: 'lovely and pleasant' applies chiefly to Jonathan but truly to Saul in his early years; David recalls the amiable and forgets the injury (eagle, lion; Habakkuk 1:8)."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Wesley excuses Saul's fierceness as sudden passion and jealousy of state, not his ordinary temper."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill stresses their concord in court and camp, divided only over David."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"lovely and pleasant",
-"charity in eulogy",
-"undivided in death",
-"eagles and lions"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"24": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Charles Ellicott",
-"John Wesley"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott reads the scarlet and gold as the fruit of Saul's victorious campaigns — real prosperity brought to Israel despite his fall."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Wesley: the daughters are addressed as makers of songs and lovers of ornament; Saul's spoils and peace enriched them."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill sets the mourning women within the scene of the elegy."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"Saul's real benefits",
-"spoil and prosperity",
-"the daughters of Israel",
-"fairness of the tribute"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"25": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"John Wesley"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Keil: the refrain repeats v.19 to open the second strophe, which narrows to Jonathan alone."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Wesley: 'thine high places' are the hills of Jonathan's lost inheritance, forfeited by his father's sin."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill: the repeated refrain measures how deeply the loss affected David."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"returning refrain",
-"focus narrows to Jonathan",
-"Jonathan's forfeited inheritance",
-"deepening grief"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"26": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Charles Ellicott",
-"Matthew Henry"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Keil and Ellicott: 'passing the love of women' likens Jonathan's love to a faithful wife's — a devotion possible only between noble souls united in the fear of God."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "several",
-"summary": "Henry: the wonder is that Jonathan loved the man who would take his crown; a true friend is life's chief delight and his loss its chief distress."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill: David mourned not Jonathan's happy eternal state but the loss of his counsel and friendship."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"passing the love of women",
-"holy friendship",
-"loving one's own supplanter",
-"the cost of love"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"27": {
-"voices": [
-"Keil and Delitzsch",
-"Matthew Henry"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Keil: a brief aftertone closing the ode; 'the weapons of war' is a figure for the heroes themselves (Isaiah 13:5; so Luther, 'die Streitbaren')."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "minority",
-"summary": "Henry: 'the mighty have fallen' is thrice lamented; public losses are laid to heart by men of public spirit, and David grieves though he hopes to repair them."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the dying fall of the ode",
-"'weapons of war' as the heroes",
-"threefold refrain",
-"sanctified public sorrow"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-}
+ "1": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Matthew Henry",
+   "John Gill",
+   "Keil and Delitzsch"
+  ],
+  "range": "1-10",
+  "pericope_label": "The Amalekite brings David Saul&rsquo;s crown and claims to have killed him",
+  "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke rejects the messenger&rsquo;s account entire: the whole story is a fabrication, grossly self-contradictory in many of its particulars, and there is no fact in the case but the bringing of the crown and bracelets, which the man, appearing to have been a plunderer of the slain, found on the field of battle and carried to David with a lie attached merely to ingratiate himself. He notes the remark of Dr. Delaney that an Amalekite took from Saul&rsquo;s head the crown he had forfeited by his disobedience in the case of Amalek. He also sets out the frame of the book, which he thinks can scarcely be called a separate book at all, having originally been one with the preceding and divided from it without reason or necessity."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott keeps the general facts and discards the personal role: the man reports the defeat and the deaths of Saul and Jonathan as they really occurred, but the true account of Saul&rsquo;s death stands in the earlier book, it is uncertain whether this man saw Saul at all before he died, and extremely unlikely that he found him wounded and alone, without warriors or armour-bearer. He questions even his presence in the army, since nobody unconcerned in the matter is likely to stray into the middle of a battle, so that the phrase about chance is better referred to his coming upon the wounded king than to his being on the mountain; yet he grants the man certainly claims to have belonged to the camp of Israel. The obeisance he takes for no mere act of Oriental respect but a deliberate recognition of David&rsquo;s rank as having now become king, the earth on his head and the rent clothes being marks of sorrow for the defeat of David&rsquo;s people. He supplies the long Amalekite enmity, their attack on Israel at the coming out of Egypt and repeatedly afterwards, their joining Israel&rsquo;s foes in the days of the judges, and their terrible defeat by Saul himself, so that this man may either have attached himself to the conqueror&rsquo;s army or have been compelled by ancient custom to serve in its ranks. Of Ziklag he observes that the site is not exactly identified but lay some ten or twelve miles south of Beersheba, quite four days&rsquo; journey from Gilboa, so that the messenger must have left the field before David&rsquo;s own return. On the word rendered anguish he notes that it occurs only here and probably bears neither of the senses given in the text and margin, the Rabbis explaining it of cramp and others of giddiness, while the ancient versions differ; it indicates probably some effect of the wound which incapacitated him for further combat. Keil and Delitzsch gloss the same complaint as a cramp on the rabbinic explanation, which left the king unable to defend himself and certain to fall into Philistine hands, and they reject the reading of the phrase about his fall which would make it mean after he had fallen upon his own sword."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry refuses to decide whether the story is true, saying plainly that he is not clear about it, and offers a harmonisation if it is: what the earlier narrative calls a sword may here be called a spear, or in falling on his sword he leaned on his spear, as Peter&rsquo;s account of the death of Judas is an addition to the narrative in the gospel. If it be true, he says, the righteousness of God is to be observed, that Saul, who spared the Amalekites in contempt of the divine command, received his death-wound from an Amalekite, and where Saul spared the best of their spoil the best of his now came to one of that devoted nation. He notes that those who would rejoice at the fall of an enemy are apt to measure others by themselves and to expect the same welcome, which is why the tale was told as it was, and he turns the obeisance to irony: the man pleased himself with the fancy that he had the honour to be first to do homage to his sovereign, and proved the first to receive sentence of death from his judge, not doubting that his officiousness would recommend him to the best preferments in the camp. He observes that David left no spies about the camp to bring him early notice, a sign that he did not desire Saul&rsquo;s woeful day nor was impatient to come to the throne; he that believes does not make haste. On the complaint of anguish he gives the text reading as the pain and terror of a seized spirit and the margin reading as the hindrance of his clothes, adding that no man&rsquo;s clothes should be his pride, since they may become his burden and snare. The rabbinic tradition that the Amalekite was the son of Doeg he calls a groundless conceit."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill fixes the doubt on a particular word, the request itself, which he can hardly think Saul would have made, since the king might as well have died by the hands of the uncircumcised Philistines, which he had been labouring to avoid, as by the hand of an Amalekite. He agrees that the man was neither Doeg nor, with any likelihood, Doeg&rsquo;s son, there being no reason to believe him either, since neither can be thought well disposed to David. He notes that David very likely suspected whence the man came from his appearance and circumstances before a word was asked, and that the tidings came on the third day after the battle."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is the Amalekite&rsquo;s account of killing Saul true?",
+    "positions": [
+     {
+      "view": "Wholly a fabrication, self-contradictory; only the crown and bracelets are fact, found by a plunderer of the slain",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The defeat and the deaths are reported truly, but it is doubtful he saw Saul at all, and most unlikely he found him alone",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Not clear either way; if true it shows God&rsquo;s righteousness, and it can be harmonised with the earlier narrative",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "Doubts the request specifically, since Saul had been labouring to avoid dying by uncircumcised hands",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the anguish that had come upon Saul?",
+    "positions": [
+     {
+      "view": "The word occurs only here and bears neither the text nor the margin sense; probably some effect of the wound disabling him",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "A cramp, on the rabbinic explanation, leaving him unable to defend himself",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "Either terror of spirit, as the text, or the hindrance of his own clothes, as the margin",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in computing the distance from Ziklag to Gilboa and concluding that the messenger must have left the field before David got home."
+   },
+   {
+    "voice": "Matthew Henry",
+    "claim": "Alone in refusing to decide the story&rsquo;s truth, and alone in noting that David posted no spies at the camp, which shows he was not impatient for the throne."
+   }
+  ],
+  "themes": [
+   "Now it came to pass after the death of Saul, when David was returned from the slaughter of the Amalekites",
+   "a man came out of the camp from Saul with his clothes rent, and earth upon his head",
+   "the people are fled from the battle, and Saul and Jonathan his son are dead also",
+   "How knowest thou that Saul and Jonathan his son be dead?",
+   "As I happened by chance upon mount Gilboa, behold, Saul leaned upon his spear",
+   "Stand, I pray thee, upon me, and slay me: for anguish is come upon me",
+   "I took the crown that was upon his head, and the bracelet that was on his arm"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "John Wesley"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-21",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
+  }
+ },
+ "11": {
+  "voices": [
+   "Charles Ellicott",
+   "Matthew Henry",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Adam Clarke"
+  ],
+  "range": "11-16",
+  "pericope_label": "David and his men mourn and fast, and the messenger is executed on his own confession",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott will allow no doubt of the mourning: though David had just heard of the death of his persistent and mortal enemy and of his own consequent accession to the throne, there is not the slightest reason to question the reality and earnestness of his grief, the whole narrative showing that he lamented not only as a patriotic Israelite but out of a personal attachment to Saul notwithstanding that long and unreasonable hostility; and he repeats the observation that, the men of Jabesh-gilead excepted, the only deep mourning for Saul came from the man whom he had hated and persecuted as long as he lived. He separates the grounds of the sorrow, that besides his personal loss David had a religious and a patriotic cause, the fallen being parts of that Church of God which he loved and served and also members of the commonwealth of Israel, and judges that the Septuagint, overlooking the distinction, has very unnecessarily altered the people of the Lord into the people of Judah. On the sentence he holds that it does not matter whether David fully believed the story, the man being judged by his own account of himself; regicide was no mere political crime in David&rsquo;s eyes, who had shown on more than one occasion of great temptation that he held the taking of the Lord&rsquo;s anointed a religious offence of the greatest magnitude, especially grievous in a foreigner and an Amalekite. He also sets aside any question of David&rsquo;s authority to pass a capital sentence, since the man had just recognised him as king and so acknowledged it, and since David and his band of six hundred were in any case accustomed to live by the sword. Keil and Delitzsch give the sentence itself, that his blood should be upon his own head because his mouth had testified against him, and add the reasoning that he is judged out of his own mouth whether he did the deed or not: if he did, he receives the just reward of his deeds; if he did not, he must throw the blame upon his own lying testimony and be content with the wages of a wicked flatterer. They take the answer about his descent to mean the son of an Amalekite who had emigrated into Israel."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks how far the event fell out from what the messenger expected, a passion of weeping where a transport of joy was looked for, and mourning not only for Israel and for Jonathan his friend but for Saul his enemy; this David did as a man of honour, in observance of that decorum which forbids us to insult over the fallen, and as a man of conscience who had forgiven the injuries done him and bore no malice, knowing that if we rejoice when our enemy falls the Lord sees it and is displeased. From this he draws a conclusion about the psalms, that those passages in them which express a desire for the ruin of enemies proceeded not from a spirit of revenge nor any irregular passion but from a holy zeal for the glory of God and the public good, since a man whose natural temper was this tender was kindly affected even to those who hated him. He holds that David did not do unjustly, the man being an Amalekite of a nation doomed to destruction, so that in slaying him David did what his predecessor should have done and was rejected for not doing; that he confessed the crime, so the evidence was by the consent of all laws sufficient, every man being presumed to make the best of himself; and that if he did as he said he deserved to die for treason, while if he did not, his boasting showed he would have done it had there been occasion. He adds that David did honourably as well as justly, demonstrating the sincerity of his grief, discouraging others from thinking to ingratiate themselves the same way, and recommending himself to the people as one zealous for public justice without regard to his own private interest."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes that the clothes David took hold of and rent were his own and not the messenger&rsquo;s, and that the mourning was inward as well as outward and no doubt sincere. He draws an inference from the reproach itself, that to stretch forth the hand must mean more than standing upon the body and pressing it so that the spear might pierce through, but that the man drew his sword and slew him, which is how David understood it. On the question whence he came he reports Abarbinel&rsquo;s view that it asked neither place nor nation but whose servant he was. Of the sentence he says that the blood he had shed should be required of him, according to the law of God, and that for proof of the deed David appeals to his own confession."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke concedes the justice of the execution even while holding the man&rsquo;s tale a fabrication: if he killed Saul, as he said he did, then he deserved death; at that time nothing was known to the contrary, and the man was executed upon his own confession."
+   }
+  ],
+  "debates": [
+   {
+    "question": "On what ground was the Amalekite put to death?",
+    "positions": [
+     {
+      "view": "Out of his own mouth, whether he did it or not: if he did, just reward; if not, the wages of a wicked flatterer",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "It does not matter whether David believed him; he is judged by his own account of himself",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Justly, the confession being evidence enough by all laws, and he an Amalekite of a doomed nation",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "On his own confession, nothing being then known to the contrary",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in objecting to the Septuagint&rsquo;s change of the people of the Lord into the people of Judah, and alone in meeting the objection that David had no authority to pass a capital sentence."
+   },
+   {
+    "voice": "Matthew Henry",
+    "claim": "Alone in using David&rsquo;s grief here as evidence that the imprecatory passages of the psalms sprang from zeal rather than revenge."
+   },
+   {
+    "voice": "John Gill",
+    "claim": "Alone in reporting Abarbinel&rsquo;s reading of \"whence art thou\", and alone in inferring from the reproach that the man must have used a sword rather than merely leaned on him."
+   }
+  ],
+  "themes": [
+   "Then David took hold on his clothes, and rent them; and likewise all the men that were with him",
+   "they mourned, and wept, and fasted until even, for Saul, and for Jonathan his son, and for the people of the LORD",
+   "I am the son of a stranger, an Amalekite",
+   "How wast thou not afraid to stretch forth thine hand to destroy the LORD&rsquo;S anointed?",
+   "Go near, and fall upon him. And he smote him that he died",
+   "Thy blood be upon thy head; for thy mouth hath testified against thee"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-21",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
+  }
+ },
+ "17": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry",
+   "Keil and Delitzsch"
+  ],
+  "range": "17-21",
+  "pericope_label": "The elegy begun: teach Judah the bow, tell it not in Gath, and the curse on Gilboa",
+  "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke argues at length that Kasheth is the title of the dirge and not the use of a weapon: the words rendered as the use of are not in the Hebrew, and many of the psalms carry such titles, this one being called the Bow because the defeat was the work of Philistine archers and still more for the sake of Jonathan&rsquo;s bow, which returned not from the blood of the slain, and which David could not but remember as the bow from which the arrow was shot beyond the lad on the day their covenant was made. He has David commit the teaching of it to the chief musicians. On the book of Jasher he collects the versions, which render it the book of the upright, or the book of the Law, or on the Arabic the book of Samuel. He also proposes a conjectural emendation in the verse about the shield, reading not the particle for not but a similar word meaning instruments. Wesley takes the order the other way, of arms rather than of a song, naming Judah as its particular object because they were the chief and now the royal tribe, bordering upon Philistia and likely to prove the great bulwark of all Israel, and withal the most true to David and his interest; the bow he takes as standing for their arms generally, it being then one of the chief weapons and the one for whose dextrous use Jonathan is commended in the song that follows, so that they might strive to imitate him in military skill. On the embargo he makes a rule of the distinction, that this is no precept but a poetical wish, expressing not a desire for what he knew to be impossible but his great sorrow that it would be done, to the dishonour of God and of his people; and the daughters are named because it was the custom of women in those times and places to celebrate their men&rsquo;s victories with triumphant songs and dances."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott agrees that the italicised words should be omitted and the dirge itself be called the bow, not merely from the allusion to Jonathan&rsquo;s bow but because it is a martial ode and the bow was a chief weapon of the time, with which the Benjamites were particularly skilful; he notes the word is wanting in the Vatican Septuagint, and that the song was taught to the children of Judah rather than to all Israel because for the next seven years and a half, while the memory of Saul was fresh, David reigned over Judah and Benjamin only. He calls the opening phrase the technical expression for a funeral dirge, such as David also composed on the death of Abner and Jeremiah on the death of Josiah, and the only instance of David&rsquo;s secular poetry preserved to us besides those few lines; in praising it he quotes Keil by name. Of Jasher he says nothing more is really known for all the endless discussion, supposing it a collection of songs on memorable events and men in early Israel. He divides the song into two parts, the first on both Saul and Jonathan and the second on Jonathan alone, each opening with the lament over the fallen mighty and the whole closing with the same refrain. The beauty of Israel he takes in the sense of the glory or ornament of Israel, referring to Saul and Jonathan together, and rejects the rendering of the Syriac and some commentators which makes it the gazelle as a poetic name for Jonathan, both because the words are spoken of the two together and because there is no evidence elsewhere that Jonathan was so called. Of the two cities he notes they stand poetically for the whole, that David had himself resided in the one and that the other held the famous temple where the Philistines put Saul&rsquo;s armour, and that the phrase appears to have become a proverb; the word uncircumcised, he adds, is used in the historical books of the Philistines almost exclusively. Keil and Delitzsch divide the ode differently, into three strophes which gradually diminish in force and sweep, each opening with the exclamation over the fallen mighty, the first containing all that was to be said in praise of the fallen heroes, the second commemorating the friendship with Jonathan, and the third uttering only the last sigh with which the elegy becomes silent. They explain the daughters of the Philistines by the custom of employing women to celebrate a nation&rsquo;s victories with singing and dancing, note that only two Philistine cities are named, Gath being near and Askelon farther off by the sea, and read the curse as calling even nature to join the mourning, that God might withdraw his blessing from those mountains so that, remaining in eternal barrenness, they should be memorials of the horrible thing done upon them; the fields of offerings they explain as fields bearing fruit from which offerings of first-fruits were presented."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill puts the clause about the bow in a parenthesis as no part of the elegiac song at all, inserted to show that amid his sorrow and lamentation David was not unmindful of the welfare of his people but would provide for their defence, having them trained in military exercises and in the use of every weapon, of which the bow was a principal one and the rather named because the Philistines were expert with it and seemed to have done much execution with it in the recent battle; they are said indeed to have been its inventors, though he notes that Pliny ascribes it to others. He says David composed the elegy and sang it in a tune agreeable to it, he and the men that were with him. The beauty of Israel he takes of the high mountains of Gilboa where Saul and Jonathan and multitudes of young men, the flower of the nation, were wounded and slain. On the embargo he observes that David could not hinder the victory being known at Gath and talked of there with pleasure, so that the words are not a command but a wish that it were not so."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets out both readings of the order about the bow and declines to settle between them, observing on the one hand that the men of Judah had lately made more use of slings and that it was the Philistine archers who bore so hard upon Saul, so that David would have them return to the bow and be able to avenge their prince; and on the other that some understand it of a musical instrument so called, or of the elegy itself, entitled the bow for the sake of Jonathan&rsquo;s bow, as Moses commanded Israel to learn his song and David his. He reflects on why lamentations were put into poems, that they are thereby made the more moving, the passion of the poet being wonderfully communicated to readers and hearers, and the more lasting, so that those might gain information by poems who would not read history; even songs, he adds, would be forgotten if not committed to writing, that best conservatory of knowledge. Of the composition he draws a conclusion the others do not reach: it is no divine hymn given by inspiration for use in divine service, there being no mention of God in it, but a human composition, and so was set down in the book of Jasher and not among the psalms. He admires that David conceals Saul&rsquo;s faults and celebrates only what was praiseworthy, and calls the embargo an elegant one which he would fain lay upon Fame, the sting of it lying in memory, since Israel had once sung that Saul had slain his thousands and that song would now be retorted. The curse on Gilboa he takes for a poetical strain like Job&rsquo;s cursing of the day he was born, not a wish that any part of Israel should be barren but an expression of sorrow spoken with seeming indignation at the place; and from the phrase about fields of offerings he observes that to want that wherewith we should honour God is worse than to want that wherewith we should sustain ourselves."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Did David teach Judah a weapon or a song?",
+    "positions": [
+     {
+      "view": "A song: Kasheth is its title, as the psalms have titles, named for the archers and for Jonathan&rsquo;s bow",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "A song: the italicised words should be omitted, and the dirge is a martial ode called the bow",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "A weapon: the clause is a parenthesis about arming the people, the Philistines being expert archers",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "A weapon: Judah as the royal tribe and bulwark against Philistia were to be trained in its use",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How is the ode constructed?",
+    "positions": [
+     {
+      "view": "Three strophes diminishing in force, the third only a last sigh",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "Two parts, on both men and then on Jonathan alone, with a closing refrain",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is \"tell it not in Gath\" a command?",
+    "positions": [
+     {
+      "view": "No: David could not hinder the news, so it is a wish that it were not so",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "No precept but a poetical wish, expressing sorrow that it would be done",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "An embargo he would fain lay upon Fame, galling because Israel&rsquo;s old song would now be retorted",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "claim": "Alone in concluding from the absence of any mention of God that the elegy is a human composition and no inspired hymn, which is why it was lodged in Jasher and not among the psalms."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Alone in proposing a conjectural emendation at the verse about the shield, and alone in collecting the versions&rsquo; renderings of the book of Jasher."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in rejecting the Syriac rendering that makes the beauty of Israel a gazelle and a poetic name for Jonathan."
+   }
+  ],
+  "themes": [
+   "And David lamented with this lamentation over Saul and over Jonathan his son",
+   "he bade them teach the children of Judah the use of the bow: behold, it is written in the book of Jasher",
+   "The beauty of Israel is slain upon thy high places: how are the mighty fallen!",
+   "Tell it not in Gath, publish it not in the streets of Askelon",
+   "lest the daughters of the Philistines rejoice, lest the daughters of the uncircumcised triumph",
+   "Ye mountains of Gilboa, let there be no dew, neither let there be rain, upon you, nor fields of offerings",
+   "for there the shield of the mighty is vilely cast away, the shield of Saul, as though he had not been anointed with oil"
+  ],
+  "excluded_voices": [],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-21",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
+  }
+ },
+ "22": {
+  "voices": [
+   "Keil and Delitzsch",
+   "John Wesley",
+   "John Gill",
+   "Charles Ellicott",
+   "Matthew Henry"
+  ],
+  "range": "22-27",
+  "pericope_label": "The bow and the sword, the praise of Saul and Jonathan, and the lament for Jonathan&rsquo;s love",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch take the verse about the weapons to rest on the figure that arrows drink the blood of the enemy and a sword devours their flesh, and note that the two principal weapons are apportioned between the pair, the bow assigned to Jonathan and the sword to Saul, the ignominy on Gilboa being the greater in men whose bow and sword had never turned back until satisfied with the blood and fat of the slain. Of the two predicates in the praise they say that loved and amiable, and affectionate or kind, apply chiefly to Jonathan, though they were also suitable to Saul in the earliest years of his reign when he manifested the virtues of an able ruler and secured the lasting affection of the people; and they admire that, notwithstanding their difference of character and the very opposite attitudes they took towards David, the noble Jonathan did not forsake his father, whose fierce hatred of the friend Jonathan loved as his own soul might well have undermined that attachment. In death as in life, they say, the two were not divided, being alike in bravery and courage. The comparison with the love of women they read as expressive of the deepest earnestness of devoted love, and they gloss the word for distress as the pinching or pressure of the heart consequent upon pain and mourning. Of the closing line they note that the instruments of war which perished are not the weapons themselves but a figure, and that this last strophe is only a brief aftertone of sorrow in which the ode dies away. Ellicott allows that lovely and pleasant belongs peculiarly to Jonathan but in a good degree to Saul in his earlier years and his better moments, which David chose at this moment to recall, and truthfully to them both in their relations to each other. The scarlet he takes of Saul&rsquo;s division among the people of the spoil of his conquered foes and of the prosperity resulting from his many successful campaigns, judging that for all the cloud his light went out under he had on the whole been a successful warrior, the Philistines, Ammonites, Amalekites and others having felt the power of his arm, so that the relations of Israel to the surrounding nations were wonderfully changed for the better during his reign. On the love passing that of women he says the strong expression compares Jonathan&rsquo;s love for David to that of a faithful wife for her husband, and shows David&rsquo;s appreciation of that wonderful affection which had existed between them under the most untoward circumstances."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley reaches the same figure as the Germans by the grammar, that the sword is metaphorically said to have a mouth, which we translate an edge, and to devour, so that it returned not empty but filled and glutted with blood, their arrows seldom missing and reaching even to the heart and bowels; and he adds that this former successfulness is mentioned as an aggravation of their last infelicity. On the praise he excuses what he can, Saul&rsquo;s fierce behaviour towards Jonathan being only a sudden passion by which his ordinary temper is not to be measured, and his carriage towards David proceeding from that jealousy and reason of state which usually engages even well-natured princes in the same hostilities; but he observes that David speaks not a word here of Saul&rsquo;s piety and commends him only for the things that were truly in him, which he calls a fit pattern for all preachers in their funeral commendations. The swiftness and strength he takes of expedition in pursuing enemies and executing designs, a great commendation in a prince and a soldier, and of bodily strength with courage of mind. The daughters are named because the women made songs both of triumph and of lamentation and are usually most delighted with the ornaments of the body; and Saul clothed them because he procured peace enough to let them enrich themselves, and because he took such things as spoils from the enemy. On Jonathan&rsquo;s high places he adds the sharp parenthesis that they were in his country and, had not his father disinherited him by his sins, in his dominions."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reads the verse about the weapons of unfailing execution, the arrows always piercing and entering into the fat of the mighty and bringing them down, and compares the arrows of the Medes and Persians, the expert men among them, which are said not to return in vain. He limits the agreement of the two men to themselves, who had no quarrel or difference with each other except on David&rsquo;s account, but otherwise agreed in the court and in the camp, in their counsels and in their conduct. The repetition of the lament over the fallen mighty he takes to show how much the loss affected David, and he understands the mighty to include the common soldiers as well as the general officers. On the distress for Jonathan he draws the finest distinction of any of them: David was his brother not only by nation and religion but by affinity, having married Jonathan&rsquo;s sister, and still more by affection and friendship; and he was distressed for him not on account of his spiritual and eternal state, which he doubted not was happy, but for the manner of his death, the loss of him, and the want of his pleasant conversation and of his counsel and assistance in present circumstances."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry observes that David does not commend Saul for what he was not and says nothing of his piety or fidelity, since those funeral commendations which are gathered out of the spoils of truth are no praise at all to those on whom they are bestowed but very much the dispraise of those who unjustly misplace them. What he does say in Saul&rsquo;s honour is that he was anointed with the sacred oil, that he was a man of war who had often been victorious and whose disgrace at the last must not make his former services forgotten, that taken with Jonathan he was of an agreeable temper, those who were fiercest in the camp being no less sweet in the court, and that he had enriched his country with the spoils of conquered nations and introduced a more splendid attire &mdash; when they had a king like the nations, they must have clothes like the nations. He finds the wonder of Jonathan&rsquo;s love in its object, that a man should love one whom he knew was to take the crown over his head and be so faithful to his rival, which far surpassed the highest degree of conjugal affection and constancy; and he draws from it that nothing is more delightful in this world than a true friend who is wise and good, and nothing more distressful than the loss of such a one, which is parting with a piece of oneself, since the more we love the more we grieve."
+   }
+  ],
+  "debates": [
+   {
+    "question": "How far can lovely and pleasant be said of Saul?",
+    "positions": [
+     {
+      "view": "Chiefly of Jonathan, but suitable to Saul in his earliest years, when he showed an able ruler&rsquo;s virtues",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "Peculiarly of Jonathan, in a good degree of Saul in his better moments, and truly of their relation to each other",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Of the two towards each other, who quarrelled only on David&rsquo;s account",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Of both, Saul&rsquo;s fierceness being a sudden passion and his enmity to David reason of state",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the significance of what the praise omits?",
+    "positions": [
+     {
+      "view": "David says nothing of Saul&rsquo;s piety or fidelity; commendations gathered out of the spoils of truth dispraise those who misplace them",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "The same, made a rule: he commends only what was truly in him, a fit pattern for preachers at funerals",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "claim": "Alone in distinguishing the grounds of David&rsquo;s distress, which was not for Jonathan&rsquo;s eternal state, which he doubted not was happy, but for the manner of his death and the loss of his counsel."
+   },
+   {
+    "voice": "John Wesley",
+    "claim": "Alone in adding that the high places would have been in Jonathan&rsquo;s dominions had his father not disinherited him by his sins."
+   },
+   {
+    "voice": "Keil and Delitzsch",
+    "claim": "Alone in denying that the instruments of war in the last line are the weapons, taking the phrase as a figure instead."
+   }
+  ],
+  "themes": [
+   "From the blood of the slain, from the fat of the mighty, the bow of Jonathan turned not back",
+   "Saul and Jonathan were lovely and pleasant in their lives, and in their death they were not divided",
+   "they were swifter than eagles, they were stronger than lions",
+   "Ye daughters of Israel, weep over Saul, who clothed you in scarlet, with other delights",
+   "How are the mighty fallen in the midst of the battle! O Jonathan, thou wast slain in thine high places",
+   "thy love to me was wonderful, passing the love of women",
+   "How are the mighty fallen, and the weapons of war perished!"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-21",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
+  }
+ }
 }

@@ -108770,6 +108770,103 @@
         "15"
       ],
       "note": "Wesley declared in excluded_voices for the tile covering vv.15-19, on the standing rule against declaring a voice whose only block in a span is a bare gloss. His sole block in those five verses is eleven words identifying the month -- 'Elul - Answering part to our August, and part to September' -- which Gill already supplies in the same span. Declaring him would have padded the voice badge with a duplicate; excluding him costs 11 words off the denominator, which is immaterial. Recorded so the exclusion is not later mistaken for an oversight."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "1",
+      "verses": [
+        "8",
+        "14",
+        "26"
+      ],
+      "note": "JFB stride-6 residue, ELEVENTH consecutive chapter, and a THIRD independent confirmation of the forward-running donor. All three JFB blocks in 2samuel 1 are foreign, at keys 8, 14 and 26 (stride 6, offset 2, with key 20 absent), and the donor is unmistakably JUDGES 7, the Gideon narrative, advancing as the target keys advance: key 8 carries the reduction of the army ('Two reductions were ordered, the last by the application of a test which was made known to Gideon alone', which is Judges 7:4-7); key 14 carries Gideon spying on the camp (Judges 7:9-11, and it names Gideon outright); key 26 carries the pitchers and torches and trumpets and the rout down to Beth-shittah and Abel-meholah (Judges 7:16-22). With ruth 2 (donor Joshua 6-8, stride 6 offset 5) and nehemiah 2 (donor 1 Chronicles 1, stride 6 offset 4), that is now three chapters in which the donor runs FORWARD through a single passage in step with the target keys. Three independent instances make the fixed-offset-into-a-concatenated-file explanation very hard to resist, and they also suggest the offset differs per chapter while the stride does not. A corpus-wide sweep of residue CONTENT (not just position) would now be cheap to interpret and should settle it."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "1",
+      "verses": [
+        "26"
+      ],
+      "note": "Chapter-final chrome, instance 25, third consecutive chapter. Ellicott's block at key 26 is 1,079 words of which roughly the first 100 are real commentary (on the love passing that of women, comparing Jonathan's love to that of a faithful wife); from about word 104 the familiar StudyLight tail begins -- Footnotes, Copyright, the site nav, the CSS block. So the chapter's reported 15,339 usable source words overstate by about 975 (true ~14,364). Three chapters running (nehemiah 2 key 20, nehemiah 6 key 19, 2samuel 1 key 26), always on Ellicott, always the last Ellicott block of the chapter, always ~1,050 words of which 60-100 are commentary. The pattern is now documented well enough to strip mechanically: take each Ellicott chapter file's final block and cut from the first occurrence of the footnote/copyright marker."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "11",
+        "17"
+      ],
+      "note": "Mandatory Henry placement check: HOLDS, the clean case (a) now in a 30th chapter. Henry's three blocks sit at keys 1, 11 and 17 and each heads the section it belongs to -- key 1 David in Ziklag and the Amalekite's report (vv.1-10), key 11 the mourning and the execution (vv.11-16), key 17 the elegy (vv.17-27). As at nehemiah 6, each block comments ACROSS its whole section rather than on its key alone, so Henry material about vv.19-27 was drawn from the block filed at key 17; see the consolidated note on that filing convention recorded against nehemiah 6."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "1",
+      "verses": [
+        "17"
+      ],
+      "note": "Ellicott QUOTES Keil by name here, so the two are not independent witnesses on this point and were not written as such. At key 17 Ellicott's praise of the elegy -- 'It is one of the finest odes of the Old Testament, full of lofty sentiment, and springing from deep and sanctified emotion, in which, without the slightest allusion to his own relation to the fallen king, David celebrates without envy the bravery and virtues of Saul and his son Jonathan, and bitterly laments their loss' -- is given in quotation marks and attributed '(Keil.)', and the same sentence appears in K&D's own comment at key 15. This is the first recorded case of one source commentator quoting another VERBATIM within this corpus, and it is a trap the convergence rule does not yet cover: two voices agreeing word for word look like the strongest possible convergence and are in fact one voice. The prose therefore cites neither for that judgement. Worth a tool note: a shingle comparison BETWEEN source voices within a chapter would surface this class automatically, and it is the same machinery already used to catch prose bleed."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "1",
+      "verses": [
+        "18",
+        "21"
+      ],
+      "note": "Live disagreement preserved, and a clean two-against-two with one abstention: did David teach Judah a WEAPON or a SONG? Clarke and Ellicott say the song's title. Clarke argues it at length (the words rendered 'the use of' are not in the Hebrew; many psalms carry such titles -- Shoshannim, Maschil, Nehiloth, Neginoth; this one is Kasheth or The Bow because the defeat was the archers' work and still more for Jonathan's bow 'which returned not back from the blood of the slain', and the bow from which the arrow was shot beyond the lad when their covenant was made; and he has David commit the teaching to the chief musicians Ethan, Heman and Jeduthun). Ellicott agrees the italics should go, calls it a martial ode, notes the word is wanting in the Vatican LXX, and explains the restriction to Judah by David's reigning over Judah and Benjamin alone for the next seven and a half years. Gill and Wesley take it as arms drill -- Gill putting the clause in a parenthesis as no part of the song, noting the Philistines were expert archers and 'said to be the inventors of it, though Pliny ascribes it to others'; Wesley making Judah the bulwark against a bordering Philistia. Henry sets out BOTH readings and declines to choose. Written as the four-way split it is, with Henry's abstention preserved rather than resolved."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "1",
+      "verses": [
+        "19",
+        "25",
+        "27"
+      ],
+      "note": "A structural disagreement worth keeping because it is about the text's own shape: how is the ode built? K&D divide it into THREE strophes which 'gradually diminish in force and sweep' (vv.19-24, 25-26, 27), each opening with 'How are the mighty fallen', the first holding the praise of both heroes, the second the friendship with Jonathan, the third 'simply the last sigh, with which the elegy becomes silent'. Ellicott divides it into TWO parts (vv.19-24 on both, 25-26 on Jonathan alone) each opening with that lament, 'and the whole closing with the same refrain' at v.27 -- i.e. he makes v.27 a refrain rather than a third movement. Same data, same refrain, different anatomy. Recorded because a future polish pass could easily flatten one into the other without noticing it had taken a side."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "1",
+      "verses": [
+        "16"
+      ],
+      "note": "Four-voice convergence on a principle, reached four ways, and the best example in the chapter of real independent agreement. On what ground the Amalekite was executed: K&D reason it out fully ('Thy mouth hath testified against thee, and out of it thou art judged, whether thou hast done it or not. If thou hast done it, thou receivest the just reward of thy deeds. If thou hast not done it, then throw the blame upon thine own lying testimony, and be content with the wages of a wicked flatterer'); Ellicott compresses it ('It does not matter whether he fully believed his story or not, the man must be judged by his own account of himself'); Henry argues it from evidence law ('every man is presumed to make the best of himself'); and Clarke concedes it even though he alone holds the whole tale a fabrication ('If he killed Saul, as he said he did, then he deserved death; at that time it was not known to the contrary, and this man was executed on his own confession'). Clarke's position is the interesting one: his verdict on the story and his verdict on the sentence point opposite ways and he keeps both, which is worth preserving rather than tidying."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "1",
+      "verses": [
+        "23"
+      ],
+      "note": "Probable Wesley-Henry borrowing, instance 31, handled conservatively rather than asserted. Both observe that the elegy omits any praise of Saul's piety. Henry: 'He does not commend him for that which he was not, says nothing of his piety or fidelity. Those funeral commendations which are gathered out of the spoils of truth are not at all to the praise of those on whom they are bestowed, but very much the dispraise of those who unjustly misplace them.' Wesley: 'But it is observable, that David speaks not a word here of his piety; but only commends him for those things which were truly in him. A fit pattern for all preachers in their funeral commendations.' The thought is identical; the wording is not close, and each adds material the other lacks (Henry the spoils-of-truth image, Wesley the rule for preachers). So this is weaker evidence of borrowing than the near-verbatim nehemiah 6 pair, and it is genuinely unclear whether Wesley is following Henry here or both are making an obvious observation. The prose therefore credits the observation to Henry and says Wesley 'makes the same observation and turns it into a rule', which asserts agreement without asserting independence -- the safe form when the borrowing is probable but unproven. Flagged so a later reviewer can decide; with 30 confirmed borrowings behind it the prior is strong."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "1",
+      "verses": [
+        "26"
+      ],
+      "note": "Gill draws the finest distinction in the chapter and it deserves to survive any polish pass. On 'I am distressed for thee, my brother Jonathan', he specifies what the distress was NOT about: David was distressed 'not on account of his spiritual and eternal state, which he doubted not was happy, but for the manner of his death, his loss of him, and want of his pleasant conversation, of his counsel and advice, and assistance in his present circumstances'. No other voice separates grief for the dead man's condition from grief at one's own loss, and the distinction is doing real theological work in a lament that never mentions God. Kept explicitly in the tile covering vv.22-27."
     }
   ]
 }
