@@ -108867,6 +108867,100 @@
         "26"
       ],
       "note": "Gill draws the finest distinction in the chapter and it deserves to survive any polish pass. On 'I am distressed for thee, my brother Jonathan', he specifies what the distress was NOT about: David was distressed 'not on account of his spiritual and eternal state, which he doubted not was happy, but for the manner of his death, his loss of him, and want of his pleasant conversation, of his counsel and advice, and assistance in his present circumstances'. No other voice separates grief for the dead man's condition from grief at one's own loss, and the distinction is doing real theological work in a lament that never mentions God. Kept explicitly in the tile covering vv.22-27."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "10",
+      "verses": [
+        "1"
+      ],
+      "note": "FIRST chapter in this worker's run with the Psalms voice set, and the school mapping was resolved from the corpus rather than guessed. Psalms chapters carry Augustine of Hippo, John Calvin and C.H. Spurgeon in addition to the six voices the historical books use, and docs/agents/cow-synthesis-loop.md lists the valid school slugs without mapping commentators to them. Rather than assume, I counted the assignments already made across every psalms tags file: Augustine -> latin-fathers (146/146), Calvin -> reformed (155, with 2 strays), Spurgeon -> puritan-evangelical (436/436), alongside the familiar Henry -> puritan-evangelical, Gill -> reformed, Clarke and Wesley -> wesleyan-arminian, Ellicott and Keil -> grammatical-historical. The corpus is unambiguous and those mappings were used. Two consequences worth recording for the next worker: (1) a psalms tile can legitimately carry FIVE schools, since reformed and puritan-evangelical each hold two voices, which makes the attributions-per-tile budget bite much harder than in the historical books -- tile 1 here drafted at 783 words against a 650 ceiling with eight voices in a two-verse span, and two whole voices had to be dropped from items rather than compressed; (2) the scratchpad verifier's SHORT name map has to be extended with 'Augustine of Hippo', 'John Calvin' and 'C.H. Spurgeon' or its undeclared-voice check silently passes them."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "10",
+      "verses": [
+        "18"
+      ],
+      "note": "Chapter-final chrome, instance 26, FOURTH consecutive chapter and the first outside the historical books, which shows the defect is not book-specific. Ellicott's block at key 18 is 1,086 words; the real commentary is roughly the first hundred (on 'oppressed', with a quotation from Leighton, and on 'that the man', rendering literally 'that may not continue to terrify or defy mere man from the earth'), after which the familiar StudyLight tail begins. So this chapter's reported 14,989 usable source words overstate by about 985 (true ~14,004) and tile 4's expansion reads 0.27 where the truth is nearer 0.47. Four chapters running, always the final Ellicott block, always ~1,050-1,090 words with 60-100 of commentary. Across nehemiah 2, nehemiah 6, 2samuel 1 and psalms 10 the shape has not varied once."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "12"
+      ],
+      "note": "Mandatory Henry placement check: HOLDS, 32nd chapter. Henry has only two blocks here, at keys 1 and 12, and both belong to this psalm -- key 1 on the complaint of God's distance and the indignation against sin, key 12 on the address to God grounded on the foregoing portrait of the oppressors. As in the historical books each block comments across its whole section rather than its key alone."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "10",
+      "verses": [
+        "15"
+      ],
+      "note": "A head-on philological collision in which BOTH SIDES CITE THE SAME TWO PASSAGES, which is the sharpest instance of genuine disagreement recorded in this run. On 'seek out his wickedness till thou find none': Ellicott holds the meaning 'clear, from Psalms 37:36, and Isaiah 41:12, where we see that to seek and not find was a proverb expressing riddance of evil'. K&D take those identical references to the opposite purpose: 'It is a mistake to regard darash and matsa as correlative notions. In the phrase to seek and not find, when used of that which has totally disappeared, we never have darash, but always biqqesh, Psalm 37:36; Isaiah 41:12.' So Ellicott reads the parallels as establishing the proverb, while K&D read them as proving the proverb uses a DIFFERENT verb from the one standing in this verse and therefore does not apply. Both were preserved, with the fact that the evidence is shared made explicit in the prose, because a reader who met either alone would think the point settled. Note for tooling: this is the mirror image of the 2samuel 1 case where Ellicott QUOTED Keil -- there apparent disagreement was really one voice, here apparent independence is really a shared evidence base. Both classes are invisible to a voice-counting prevalence field."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "10",
+      "verses": [
+        "5"
+      ],
+      "note": "Five distinct renderings of one phrase, which is the widest spread recorded for a single clause. On 'his ways are always grievous': Gill reports four -- that they cause terror and make men fear (Aben Ezra), or are defiled (LXX and Vulgate), or always remain the same with no change for the better, or else prosper (Jarchi), which he notes is sometimes stumbling to the saints. Ellicott prefers 'his enterprises always succeed', from the cognate meaning strength and from Job 20:21, allowing that 'always strong' may imply only a tyrant's bold and reckless course. Clarke offers something unrelated to any of them: 'He is travailing in pain to bring forth iniquity at all times', conceiving and bringing forth sin until death comes with it. K&D secure 'lasting, prop. stiff, strong' from the same verse in Job that Ellicott uses, and apply it to unbroken success -- he neither stumbles nor goes astray. Written as the five-way spread it is; no attempt was made to pick a winner, since the Hebrew plainly will not settle it."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "10",
+      "verses": [
+        "8"
+      ],
+      "note": "Live disagreement with real consequences for the psalm's social setting: is the oppressor a highwayman or a grandee? Gill notes the word for the lurking places 'signifies palaces or courts', as the Chaldee and Syriac render it, 'and so the allusion is not to mean thieves and robbers, but to persons of note and figure', the LXX, Vulgate, Arabic and Ethiopic giving 'he sitteth in lurking places with the rich'. Ellicott takes it properly of enclosed spaces, then of any collection of dwellings (comparing our own 'town' from an enclosure), elsewhere an unwalled place and even a nomadic encampment. Wesley keeps the robber, placing him 'not within the villages, but in the ways bordering upon them, as robbers use to do'. Clarke reads espionage or private assassination. The choice decides whether the psalm's villain is a bandit or a magnate, which is not a small matter for a psalm about the oppression of the poor, so all four readings were kept."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "10",
+      "verses": [
+        "14",
+        "17"
+      ],
+      "note": "A convergence across the confessional divide, worth flagging because the prevalence field cannot express it. On 'thou wilt prepare their heart' Clarke, a wesleyan-arminian voice, sets out a four-step economy of grace in which God 'prepares the heart, suggests the prayer, hears what is prayed, answers the petition', concluding that 'no man ever had a cry in his heart after salvation, but from God'. Gill, the reformed voice, reaches the identical position from his own side: the prayers of God's people sometimes lie in inward and secret desires never expressed in words, and 'they being his own preparation'. Two schools that disagree about almost everything upstream of this agree exactly here, and each arrives independently. A draft sentence noting how striking the agreement is was CUT from the prose, because comment about the commentators rather than their content is what the lint flags as META -- the convergence is now shown by juxtaposition instead, which is where it belongs."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "10",
+      "verses": [
+        "2",
+        "13"
+      ],
+      "note": "Spurgeon reads the psalm forensically, which no other voice does, and it is worth preserving as a structural reading rather than a devotional flourish. At v.2 he finds 'the formal indictment against the wicked', dividing into 'two distinct charges - pride and tyranny; the one the root and cause of the other', followed by 'the humble petition of the oppressed'; at v.3 'the indictment being read, and the petition presented, the evidence is now heard upon the first count'. He also alone notices that the prayer of v.12 is internally inconsistent -- 'Fearlessly the Lord is stirred up to arise and lift up his hand, yet timidly is he begged not to forget the humble; as if Jehovah could ever be forgetful of his saints.' Both observations are about the shape of the psalm, not its application, so they were given room in the prose."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "3"
+      ],
+      "note": "Two sustained minority readings run through this psalm and neither was flattened. Augustine alone makes God's delay deliberate pedagogy -- 'Thou despisest seasonably, and causest tribulations to inflame men's minds with longing for Thy coming. For that fountain of life is sweeter to them that have much thirst' -- and extends the principle much further than any other voice would, to the permission of heresies, which providence ordains as darkness so that 'by comparison therewith the light may be more pleasant'. Gill alone reads the wicked one allegorically throughout, as the man of sin and son of perdition: boasting of universal power over bishops and princes and of infallibility (v.3), the little horn with a look more stout than his fellows (v.4), the mouth of the first beast and the speech of the second (v.9), and the beast with two horns like a lamb that calls itself the servant of servants (v.10). Both are genuinely single-voice positions and are labelled as such in the outliers rather than merged into a school consensus."
     }
   ]
 }
