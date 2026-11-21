@@ -108644,6 +108644,132 @@
         "20"
       ],
       "note": "Genuine independent convergence, as distinct from the falsely-multiplied testimony guarded against in ruth 2. Clarke and Ellicott both reach the Zerubbabel parallel at v.20 (Ezra 4:3) from different directions: Clarke from the law of citizenship, that Jerusalem was closed to those not of the tribes of Israel and Zerubbabel had told the Samaritans so; Ellicott from the adversaries' motive, inferring that these enemies, like those of Zerubbabel's day, actually wanted a share in the work, and noting that Nehemiah gives Zerubbabel's answer but STRENGTHENS it, leaving them not even a place in the memorials save one of shame. Two different routes to one precedent, so they are two witnesses and are written as such -- unlike the ruth 2 Homer case, where Gill and Clarke were describing the same passage of the Iliad and only one was kept."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "1",
+      "note": "Declined a SECOND time, on the analysis already recorded against this chapter on 2026-11-16 (nine runs of source, five workable and four padded; and because the assembler rewrites the whole file, writing only the five workable runs would delete roughly 2,500 words of live per-verse prose at the eight keys the four thin runs cover -- 383w at key 17, 351 at 20, 357 at 24, 364 at 41, 399 at 54 among them). The chapter is unworkable in both directions and the earlier note carries the per-run arithmetic and an unblock_when condition. Recording the re-offer itself as the signal: the picker is still serving it because the blocklist entry has not been added, and each re-offer costs a worker a pick. The recommendation stands unchanged -- it belongs on docs/agents/cow-synthesis-blocklist.json alongside numbers 31, as does 1chronicles 8. Not added here, per the standing instruction that the writer does not add blocklist entries."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "8",
+      "verses": [
+        "20",
+        "22",
+        "26"
+      ],
+      "note": "Declined a THIRD time, but now on measurement rather than the earlier 'interior gaps' reasoning, which the ezra 10 precedent had weakened (coverage_problems requires only the contiguous body from the lowest key, so a partial tiling WOULD pass the validator). Having actually checked, the chapter is unwritable for three independent reasons. (1) The source has 34 keys for 40 verses, gaps at 5, 21, 23-25 and 27. Since a tile may never span a gap, the workable runs are 1-4 (1,728 source words), 6-20 (2,442) and 28-40 (4,433), leaving keys 22 and 26 isolated between gaps and unmergeable with anything. (2) Those two isolated keys have NO declarable witness. Key 22's entire source is Gill declining to comment -- 'And Ishpan, and Heber,.... And all that follow to the end of these verses:' (14 words) -- and key 26's is 'And Shamsherai,.... Who, with those next mentioned:' (7 words). Both are bare connectives, which the standing rule forbids declaring a voice on, so neither key can be written faithfully at ANY length, thin exemption included. (3) Yet those same two keys carry 391 and 421 words of live per-verse prose on the site now. So writing only the three workable runs deletes 812 words of live content (the assembler rewrites the whole file), exactly as at 1chronicles 1; and writing all five means inventing ~800 words from 21 words of connectives. Unworkable in both directions. A fourth point for whoever acts on this: key 20's only block is JFB residue, and a mid-sentence fragment at that ('not in age, for he had reached manhood (1Ki 2:9) ... raw and inexperienced in matters of government', which is JFB on the Solomon material), so verse 20 has no genuine witness either and the 6-20 run is really 6-19 plus one unwitnessed verse. RECOMMENDATION, unchanged and now stronger: 1chronicles 8 belongs on docs/agents/cow-synthesis-blocklist.json, as does 1chronicles 1. Not added here, per the standing instruction. Note also that keys 22 and 26 are the clearest PROVEN padding in the live corpus -- ~800 words resting on 21 words of connective -- so if the chapter is ever to be partially written, the right move is to DELETE those two entries rather than rewrite them, which is a product decision and not the writer's to make. unblock_when: the harvest supplies real commentary for keys 22 and 26, or the two padded entries are retired so the three workable runs can be tiled without data loss."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "6",
+      "verses": [
+        "19"
+      ],
+      "note": "Chapter-final chrome, instance 24, and the second consecutive chapter with the same defect at the same place. Ellicott's block at key 19 is 1,044 words of which only the first ~60 are commentary ('Reported his good deeds. -- Besides the correspondence thus carried on, these nobles strove to exalt the character of Tobiah to the governor ... enabled him to write the disquieting letters which Nehemiah says he was in the habit of receiving'). The remaining ~984 words are the identical StudyLight tail found at nehemiah 2 key 20: footnote and copyright lines, CSS, the site nav, a Cloudflare challenge script and the full 66-book JavaScript array. So this chapter's reported 11,063 usable source words overstate the real figure by about that much (true ~10,079), and tile 4's expansion reads 0.18 where the truth is nearer 0.24. Two chapters in a row, both on Ellicott, both ~1,050-word blocks that are ~94 per cent noise, strengthens the case that this is a single mechanical defect at the END of each Ellicott chapter file and can be stripped by one pattern rather than case by case."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "10",
+        "15"
+      ],
+      "note": "Mandatory Henry placement check: HOLDS, the clean case (a) now in a 29th chapter. Henry's three blocks sit at keys 1, 10 and 15 and each is about the section it heads -- key 1 the two plots of vv.1-9, key 10 the Shemaiah plot of vv.10-14, key 15 the finished wall and the nobles' league of vv.15-19."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "5",
+        "15"
+      ],
+      "note": "Henry's Exposition is FILED at the section-head key but COMMENTS ACROSS the whole section, which is the same structural fact noted for the K&D sliding windows at nehemiah 2 and deserves one consolidated statement. Here Henry's key-1 block runs through vv.1-9 explicitly (it discusses the open letter at vv.5-7, the denial at v.8 and the prayer at v.9), so his observation that the address to God in 'now therefore, O God, strengthen my hands' is SUPPLIED by the translators -- and that some therefore read the clause as a resolution, 'I will strengthen my hands' -- is an observation about v.9 and is attributed in the tile covering vv.5-9, although the block is filed at key 1. The same holds for his key-15 block, which reaches forward to vv.17-19. Consequence for tooling: grounding a Henry (or K&D) attribution by the KEY its block sits under is wrong; it must be grounded against the verses the block itself discusses. ungrounded_voices is chapter-scoped and so unaffected, but any future span-scoped check will false-positive on this class, and it is now documented in two chapters for two different commentators."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "4",
+        "15"
+      ],
+      "note": "Henry Concise doubling, two more instances in one chapter (keys 1 and 15), each restating the Exposition's own points in the block's tail; and Wesley-Henry borrowing instance 30, a close one. Henry at key 1: 'We must never suffer ourselves to be overcome by the greatest importunity to do any thing sinful or imprudent; but, when we are attacked with the same temptation, must still resist it with the same reason and resolution.' Wesley at key 4: 'We must never be overcome by the greatest importunity, to do anything ill or imprudent: but when we are attacked with the same temptation, still resist it with the same reason and resolution.' Handled as the standing rule directs -- the argument credited to Henry, with the prose saying that Wesley repeats the rule almost in Henry's words, so the two are not presented as independent witnesses. Note that this pair, like the nehemiah 2 case, is NOT byte-identical (sinful/ill, suffer ourselves to be/be), which is further calibration for the paraphrase-tolerant doubling test the notebook wants."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "fidelity",
+      "book": "nehemiah",
+      "chapter": "6",
+      "verses": [
+        "4"
+      ],
+      "note": "ent.py caught a genuine interpolation of mine before assembly, the same class as the 'Baptist' case at 1kings 19 and the second time this guard has earned its keep on exactly this error. Drafting tile 1 I wrote that K&D note the phrase for answering them in the same manner 'has a parallel in the history of Absalom'. K&D's text reads only '(hzzh kddbr, comp. 2 Samuel 15:6)' -- they give chapter and verse and never name Absalom. The identification is correct (2 Samuel 15:6 is Absalom stealing the hearts of Israel) but it is MINE, not theirs, and attributing it to them overstates what the block says. Replaced with the source's own level of specificity, 'has a parallel in the second book of Samuel'. The lesson is now twice confirmed: the failure mode this guard catches is not a false statement but a TRUE one the cited commentator did not make, which no length or grade check would ever flag."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "disagreement",
+      "book": "nehemiah",
+      "chapter": "6",
+      "verses": [
+        "9"
+      ],
+      "note": "ent.py false positive, and a cheap fix for it. The guard flagged 'Syriac' in tile 2 as absent from the source. It is present, but abbreviated: K&D write 'The translation, in the first pers. sing. of the imperfect, \"I strengthened\" (lxx, Vulg., Syr.), is only an attempt to fit into their context words not understood by the translators.' Expanding 'Syr.' to 'Syriac' (and 'Vulg.' to 'the Vulgate', which the guard did not flag because the stem matches) is ordinary and faithful, so the flag was overridden. Recommendation: give ent.py a small alias table for the standard version and source abbreviations -- Syr./Syriac, Vulg./Vulgate, LXX/Septuagint, Chald./Chaldee, Arab./Arabic, Targ./Targum -- so this class stops costing a manual check. It sits beside the existing recommendation to normalise the ae/oe ligatures before the membership test."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "6",
+      "verses": [
+        "11"
+      ],
+      "note": "Live disagreement preserved, and the best one in the chapter: what does 'who is there, that, being as I am, would go into the temple to save his life?' actually mean? Four voices hear a point of honour and office -- Gill (the king's commissioner on whom the whole work depended), Clarke (should he betray his trust and leave the flock without a shepherd?), Wesley (the life of the city depends on his presence, and flight would dishonour God and betray the people by cowardice), Henry (another might flee, but not I). K&D hear a legal objection instead, taking the ambiguous verb not as 'to save his life' but as surviving the act, since Nehemiah had in mind the law that the stranger who comes nigh shall be put to death. Ellicott independently reaches the same law and then holds BOTH senses together -- 'first, the expression of personal dignity. Then of fear' -- and renders the clause 'and live?' rather than 'to save his life'. Written as a four-against-two division in which the minority carries the grammar and one voice bridges it, rather than flattened to the devotional reading."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "6",
+      "verses": [
+        "14"
+      ],
+      "note": "Opposite uses of one datum, preserved as such. Clarke would EMEND the prophetess Noadiah out of the text: the Hebrew alone makes the person a prophetess, all the versions but the Arabic read 'Noadiah the prophet', and he judges the final letter a mistake. Ellicott makes her presence the argument: a name referred to nowhere else 'shows the circumstantial nature of the narrative, and is an indirect evidence of its truth.' The same oddity is for one a corruption to be removed and for the other a mark of authenticity. Kept as the flat opposition it is. The closing appeal divides them three ways on a different axis -- Gill reads it as asking requital ('reward them as they deserve'), Henry insists it is no imprecation at all but a referral of the cause to God, and Ellicott calls it an official prophetic prayer."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "6",
+      "verses": [
+        "7",
+        "10"
+      ],
+      "note": "Gill makes the sharpest observation in the chapter and it is vindicated by the next paragraph, so it is worth flagging for anyone polishing these verses later. On Sanballat's charge that Nehemiah had 'appointed prophets to preach of thee at Jerusalem', Gill says Sanballat alleged it 'to cover what he and Tobiah had been doing, tampering with, corrupting, and hiring the prophets' -- i.e. the accusation is projection. Verses 10-14 then show exactly that, Shemaiah hired by Tobiah and Sanballat and the prophetess Noadiah named among the hirelings. No other voice connects the two halves of the chapter this way, and the connection is the chapter's own structure, so it was given prominence in the tile covering vv.5-9."
+    },
+    {
+      "at": "2026-11-21",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "6",
+      "verses": [
+        "15"
+      ],
+      "note": "Wesley declared in excluded_voices for the tile covering vv.15-19, on the standing rule against declaring a voice whose only block in a span is a bare gloss. His sole block in those five verses is eleven words identifying the month -- 'Elul - Answering part to our August, and part to September' -- which Gill already supplies in the same span. Declaring him would have padded the voice badge with a duplicate; excluding him costs 11 words off the denominator, which is immaterial. Recorded so the exclusion is not later mistaken for an oversight."
     }
   ]
 }
