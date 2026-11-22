@@ -110398,6 +110398,111 @@
         "1-15"
       ],
       "note": "Calibration, third chapter under the two-voices-per-sentence rule. First-measurement overshoot: 774 on the 1-4 span (3,460 source words) and 779 on 5-7 (3,858), against the 650 ceiling; the three smaller spans came in at 572, 536 and 583 on first draft with no trim needed. The pattern across 1samuel 8, 2kings 9 and this chapter is now consistent enough to state as a rule: spans under about 2,200 usable source words land inside the band on a first draft, spans above about 3,000 overshoot by 120 to 260 and need a whole sub-thread dropped rather than clauses trimmed. The band is doing real damage only above 3,000, which is where the case for scaling it with source size lies."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "7",
+        "13"
+      ],
+      "note": "JFB stride-six residue, and the first confirmation OUTSIDE the historical books. All three JFB blocks in this chapter are 2 Chronicles 24 / 2 Kings 12 material about Joash and Jehoiada; keys 7 and 13 are byte-identical duplicates; and the occupied positions 1, 7, 13 are exactly a stride-6 series. JFB's entire contribution to the chapter is 42 words, every one of them residue. Since the same geometry has now been recorded in 2 Kings, 1 Samuel, 1 Chronicles and the Psalter, the defect is corpus-wide and not local to Samuel-Kings. JFB excluded from tiles 1-2, 6-9 and 10-13."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "7",
+      "verses": [
+        "15"
+      ],
+      "note": "Chapter-final chrome at Ellicott's last key, 37th instance and by far the worst. Of 1065 words at key 15, 73 are real exposition (the gloss on the old word for the head, and the Eusebius note on Maxentius) and 992 are the host site's page apparatus: nav menus, CSS rules, a full book_data array, and Cloudflare and Stripe script fragments. This is the first instance where the harvested chrome includes executable script text rather than navigation links, so a pattern-strip keyed on the nav block alone would not catch it. It is also dangerous rather than merely untidy: it reports 2077 source words for the closing tile against roughly 1085 real ones, understating that tile's true expansion by about half."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "7",
+      "verses": [
+        "1"
+      ],
+      "note": "NEW DEFECT CLASS: the harvester strips inline emphasis spans together with their text. Calvin's 988-word block at key 1 has at least four holes where the italicised word under discussion has vanished mid-sentence, leaving 'the psalm is said to have been composed upon the I cannot subscribe to the interpretation', 'To put for a or is, I allow, a common form of speech among the Jews', 'he here expresses by his proper name', and 'Others translate the Hebrew word, or Delectation, ou Resjouissance.'. Unlike truncation this is silent and interior, and in a lexical note it removes precisely the word being glossed. Only the coherent parts of the block were used."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "6",
+        "9",
+        "10",
+        "12",
+        "14"
+      ],
+      "note": "Chapter-wide truncation: 15 of 78 substantial blocks (19 per cent) end mid-sentence, which looks like a per-block character cap rather than a source problem. Casualties include Henry at key 1, whose treatment of the oath of innocence breaks off at 'it is a great comfort if our own consciences acquit us -' and so left tile 3-5 without him; Augustine at key 1 ('The ruin then of that disciple, who betrayed Him, is'); K&D at keys 2, 4, 10 and 12; Spurgeon at keys 6 and 14; Gill at key 9. Separately, K&D's key-15 block is three verses of bare KJV with no commentary at all, so K&D is excluded from tile 14-17."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "7",
+      "verses": [
+        "11",
+        "13"
+      ],
+      "note": "Wesley abridges Henry, twelfth confirmed instance and the FIRST in the Psalter. His key-13 block is Henry verbatim: 'Of all sinners, persecutors are set up as the fairest marks of Divine wrath. They set God at defiance but cannot set themselves out of the reach of his judgments.' His key-11 gloss also condenses Henry's 'merriest and most prosperous of their days'. The property therefore holds across the Psalms as well as the historical books: Henry-plus-Wesley agreement is one witness, invisible to a voice-counting prevalence field. Wesley excluded from tile 10-13."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "10"
+      ],
+      "note": "Henry Concise doubling, in both halves of the psalm. Each of Henry's two blocks ends with a Concise paragraph restating the exposition just given: at key 1 it repeats the plea about the righteous God trying the hearts and reins almost verbatim, and at key 10 it restates the warning about turning from an evil way and then adds a devotional address ('Blessed Lord, give us grace to look to thee'). About 280 duplicated words in the chapter. A paraphrase-tolerant duplicate test, not an exact-match one, is what would catch this."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "7",
+      "verses": [
+        "11"
+      ],
+      "note": "Clarke against Ellicott on identical evidence. Both collate the Chaldee, Greek, Latin and Syriac on 'God is angry with the wicked every day'. Clarke concludes the mass of the versions denies it, blames the Chaldee for adding the words 'with the wicked', and would repoint the two letters that mean either God or not, restoring 'God judgeth the righteous, and is not angry every day'. Ellicott knows the identical proposal and judges it unnecessary, the two clauses answering to each other. Henry, Spurgeon and Wesley all build theology on the received reading, which makes this the rare case where a textual decision and a devotional tradition visibly diverge. Written up as the debate in tile 10-13."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "7",
+      "verses": [
+        "1"
+      ],
+      "note": "Four-way disagreement on the title, with Augustine standing outside the other three. Henry, Clarke and Calvin argue over whether Cush is Saul in disguise (Clarke yes; Henry probably a kinsman; Calvin emphatically not, since David names Saul openly elsewhere and spares him nothing). Augustine refers the psalm instead to the later revolt of David's son, identifying the name with the friend who crossed to the son's side, then reads Chusi, Gemini and Achitophel allegorically as silence, right-handed and a brother's ruin, figuring Judas. Recorded as two debates in tile 1-2."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "3",
+        "6",
+        "10",
+        "14"
+      ],
+      "note": "Method: tiling set at Henry's two block boundaries (keys 1 and 10, his exposition covering vv.1-9 and vv.10-17) and then subdivided at the psalm's own seams - 1-2 plea, 3-5 oath of innocence, 6-9 appeal to judgment, 10-13 the judge and the whetted sword, 14-17 self-destruction and praise. Nine voices appear in the chapter and seven are usable; per-tile rosters of six and seven meant dropping the weakest voice in each paragraph rather than compressing every one of them below about thirty words."
     }
   ]
 }
