@@ -110000,6 +110000,168 @@
         "7"
       ],
       "note": "Caught and fixed one piece of my own cross-tile templating before landing: tiles 1 and 7 both opened with the construction '...by another. Charles Ellicott (grammatical-historical) notes that the...', which the internal shingle check flagged as one shared eight-gram between them. The chapter audit's TMPL counter did not flag it. Recording it because it is the first time my own formula, rather than the source, produced the overlap, and because the opening sentence of a tile is where that formula is most likely to repeat when one voice carries most of the chapter."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "6",
+        "18",
+        "36"
+      ],
+      "note": "JFB defect, 23rd consecutive chapter. All three Jamieson, Fausset and Brown blocks are foreign and all three come from 2 Samuel 4-5: key 6 (30w) on the exposure of the mutilated remains and David's abhorrence, key 18 (80w) on the city of David and the house of Millo, key 36 (36w) on the trees generally thought to be poplars rather than mulberries. Keys 6, 18 and 36 are the filled slots of the every-sixth-key lattice at phase 0 (6, 12, 18, 24, 30, 36), the other three empty. A different foreign book again, which continues to tell against a fixed bad offset and for one mis-seeking indexer. Declared excluded on the spans beginning at 1, 17 and 32."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "37"
+      ],
+      "note": "Ellicott page chrome, 16th consecutive chapter, and the second in a row of the executable-code variety first recorded at 1samuel 8:22. The key-37 block declares 1100 words of which only 105 are genuine Ellicott, ending at 'no longer be able to recognise her mangled remains.' The remaining 995 words are the scraped page: chapter navigation, footnotes and copyright statement, a stylesheet with an @media block, the site's nav catalogue of commentaries and dictionaries, a site footer, and a closing body of JavaScript. Two consecutive chapters with CSS and script bodies suggests the scrape changed rather than that this is a rare accident. The chapter's declared 20,320 usable words are overstated by about 1,000 on this key alone."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "11",
+        "16",
+        "30"
+      ],
+      "note": "Matthew Henry filing in a narrative chapter, with the cost itemised. His four blocks are keyed at vv1, 11, 16 and 30 and each runs well past its key: key 1 (1720w) expounds vv1-10, key 11 (904w) vv11-15, key 16 (1583w) vv16-29, key 30 (1683w) vv30-37. Each also carries the Concise digest concatenated after the Exposition, so each ends by restating itself. I tiled 1-10 / 11-13 / 14-16 / 17-20 / 21-26 / 27-29 / 30-31 / 32-37, which puts a Henry head inside four entries and leaves 17-20, 21-26, 27-29 and 32-37 without him. The 1-10 span was chosen deliberately over a 1-3 / 4-10 split so that his commission material would sit in the span its verses occupy. His watchman, Naboth's-portion and Jezebel's-death material could not be rescued: the only tilings that recover it merge three or four distinct movements into single entries at compression near 0.10. Declared rather than distorted, per the rule formed at joshua 8 and judges 9. Entry 27-29 keeps a puritan-evangelical voice only because Lightfoot is filed there."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "27"
+      ],
+      "note": "New voice-to-school mapping, declared on the precedent of the psalms 20 note (Spurgeon to puritan-evangelical, Augustine of Hippo to latin-fathers): Lightfoot to puritan-evangelical. Lightfoot is in VOICE_LABELS in scripts/synthesis_qa.py but had no entry in any voice-to-school map I could find. He was a Westminster divine, which is the ground for the classification, although the block itself is a chronological harmony and so grammatical-historical in method; the tradition rather than the method decides it, as with Gregory the Great. His block at key 27 is a 177-word quotation from Lightfoot's Works vol. i p. 88, introduced by Clarke and then split off by the voice splitter as a separate voice, so the attribution is sound even though the text reaches the catena through Clarke."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "31"
+      ],
+      "note": "Factual slip inside Ellicott at key 31. He makes Jezebel call Jehu 'a second Zimri — i.e. a regicide like him who slew Baasha'. Zimri slew Elah the son of Baasha, not Baasha, who died in his bed; Clarke has it right at the same key, reporting Jarchi's paraphrase as 'Zimri also slew Elah, the son of Baasha'. The prose reports Ellicott's reading without reproducing the wrong victim."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "24",
+        "27",
+        "36",
+        "37"
+      ],
+      "note": "Ellicott contradicts Keil by name four times in this one chapter, which is the densest concentration of it recorded so far and worth noting as a property of the pairing rather than of any single verse. At v24 he names Keil's gloss on filling the hand with the bow and rejects it for his own. At v27 he calls the way Rashi, whom Keil follows, combines the two accounts of Ahaziah's death 'revolting to common sense'. At v36 he holds the earlier book's differing word a lost letter and 'not an original difference, as Keil assumes'. At v37 he holds the continuation of the prophecy original and 'not a free expansion by Jehu, as Keil asserts'. Both voices carry the grammatical-historical label, so a span that declares that school unanimous can be concealing an argument; both sides were preserved as debates on the spans beginning at 21, 27 and 32."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "27"
+      ],
+      "note": "The fullest harmonisation dispute in the chapter, with four positions preserved as a debate. Lightfoot's harmony, quoted at length by Clarke, has Ahaziah see Joram killed at Jezreel, flee to hide in Samaria, and be brought out after Jehu's march and smitten towards Gur by Ibleam, his charioteer driving on to Megiddo; Kings is short, Chronicles shows the order. Wesley harmonises in a different sequence, Megiddo first, then Samaria, capture, sentence and death at Megiddo, and holds that Chronicles was in great part written to supply what Kings omits. Ellicott refuses harmonisation: the definite assignment of places here marks the better account, the Rashi-and-Keil reconciliation is revolting to common sense, and it would be better to assume one narrative is textually corrupt. Keil and Delitzsch supply the clause lost by a copyist and read the wound as mortal but not immediately fatal."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "22"
+      ],
+      "note": "Three readings of the charge Jehu brings against Jezebel, preserved on the span. Clarke takes the whoredoms in their common sense, holding there is much reason to think she patronised a genuinely impure religion, and adds the point no other voice makes: that Jehu can hardly have been objecting to the calf-worship, to which he was himself favourably disposed. Ellicott takes them spiritually, of idolatries. Wesley allows both at once, the literal because spiritual whoredom is often punished with corporal and witchcraft was commonly practised by idolaters, the figurative because departing from God is whoredom and sorcery bewitches the mind."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "20"
+      ],
+      "note": "The driving at v20 has contrary testimony in the sources and both sides were kept. Clarke makes it character, Jehu a bold, daring, prompt and precipitate general whose manner was almost proverbial; Keil and Delitzsch render the watchman's words as driving like a madman and gloss the state as headlong haste; Ellicott ties the word to the very one the captains had used of the prophet at v11 and pictures the chariot swaying. Against all of that Ellicott reports the Targum explaining the word in exactly the opposite sense, as quietly, with Josephus having Jehu drive rather slowly and in orderly fashion, and conjectures that this came of confusing the word for madness with a similar one meaning a slow mournful song. Henry reports the same Chaldee reading at key 16, outside this span."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "2",
+        "5",
+        "9",
+        "13",
+        "14",
+        "15",
+        "18",
+        "23",
+        "24",
+        "25",
+        "26",
+        "28",
+        "33",
+        "35"
+      ],
+      "note": "Keil and Delitzsch 200-word sliding window, confirmed across fourteen keys. Overlapping pairs are everywhere: keys 13 and 14 open with text already quoted at 12, keys 23, 24, 25 and 26 each repeat the previous key's verse before advancing, and key 28's window runs on through v30 into the account of Jezebel's paint while key 33's covers vv33-34 and key 35's vv35-37. Key 36 is the only one that breaks the pattern, at 74 words, because the commentary itself ends there. The argument is almost never complete at any single key, so span-level reassembly is required."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "7",
+        "21"
+      ],
+      "note": "Wesley abridging Henry, two more instances, both verbatim enough to be worth recording. At key 7 Wesley's whole note ('That they were idolaters was bad enough: yet that is not mentioned here: the controversy God has with them, is for being persecutors. Nothing fills the measure of the iniquity of any prince so as this doth, nor brings a surer or sorer ruin') is Henry's key-1 sentence condensed. At key 21 his note on Naboth's portion ('The very sight of that ground was enough to make Jehu triumph and Joram tremble. The circumstances of events are sometimes so ordered by Divine providence, as to make the punishment answer the sin, as face answers face in a glass') is Henry's key-16 sentence almost word for word. The second instance matters practically: Henry is not filed in the 21-26 span, so Wesley's abridgement is the only carrier of that reading there, though it arrives under the wesleyan-arminian label and does not restore the puritan-evangelical school."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "30"
+      ],
+      "note": "Adam Clarke excursus at key 30, 560 words of which perhaps 60 comment on the verse. The rest is an ethnography of eye-painting assembled from quotation: the Targum on staining the eyes with antimony, a long passage from E. S. Waring's Tour to Sheeraz (1807) on Persian notions of beauty and the custom of making the eyebrows meet, Ezekiel, Pliny in Latin on Roman eye-painting, Cyprian on anointing the eyes not with the devil's antimony but with the eye-salve of Christ, three lines of Juvenal in Latin with a verse translation, and Russel's Natural History of Aleppo on the Barbary women's blackened probe. Genuine Clarke, so chrome-stripping will not reach it; the same class as the Magna Charta digression at 1samuel 8:3 and the British-constitution propositions at 1samuel 8:22."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "1-37"
+      ],
+      "note": "Self-graded A on all eight spans, 0 fidelity signals, 0 sweep problems, 0 gate violations. One ROLLCALL was caught pre-commit in entry 30 (three commentator names and two semicolons in one sentence on Jezebel's motive) and fixed by splitting the sentence. Every voice present in each span is named in that span's prose and no voice is named outside its source; the two spans where Gill's block is only a verse-echo stub (30-31 and 32-37) were given a short clause each rather than dropping the reformed school. All eight entries inside the 350-650 band on the validator's count, 416 to 645."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "9",
+      "verses": [
+        "1-37"
+      ],
+      "note": "Calibration under a four-block Henry chapter. The two-voices-per-sentence rule held, but overshoot on first measurement was larger than in the last two chapters: 908 against 650 on the 1-10 span (4,575 source words), 831 on 30-31 (3,066) and 834 on 21-26 (2,521), against 71 to 136 for comparable spans in 1samuel 8. The cause is identifiable and not drift: these three spans each carry five or six voices arguing about the same clause, so the material does not thin out as the paragraph budget runs down, and the cuts had to drop whole sub-threads (Clarke's antiquarian parade at v30, Ellicott's version lists at v11 and v24) rather than trim clauses. Two trim passes were needed on those three entries and one on the rest. Worth recording as evidence for the standing question of whether the 350-650 band should scale with usable source words: at 4,575 source words the band forces a 0.14 ratio and real content is lost, not padding."
     }
   ]
 }
