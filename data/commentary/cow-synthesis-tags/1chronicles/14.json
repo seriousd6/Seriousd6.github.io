@@ -1,644 +1,261 @@
 {
  "1": {
   "voices": [
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry draws a lesson in mutual dependence: even a great king like David needed little Tyre's workmen and materials, so we should despise none but be obliging to all."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke keeps to the plain sequence — Hiram sends artificers and materials to build David a house — cross-referencing the fuller account in 2 Samuel 5."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott handles the philology (Hiram/Huram, cedar sea-borne from Lebanon, craftsmen of walls and timber) and reads 'house' as a palace, set among Assyrian and Babylonian palace-building."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Hiram's embassy",
-   "mutual dependence",
-   "the cedar palace",
-   "a neighbour's goodwill"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
    "Charles Ellicott",
+   "Matthew Henry",
    "Keil and Delitzsch",
-   "Matthew Henry"
+   "Adam Clarke"
   ],
+  "range": "1-4",
+  "pericope_label": "Hiram&rsquo;s builders and cedar, David&rsquo;s perception that the kingdom was confirmed, and the sons born at Jerusalem",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott reads Tyre's favour as a sign of God's approval (cf. Genesis 39:21; Luke 2:52) and grounds David's exaltation as national not personal; Keil and Delitzsch parse the unusual passive 'his kingdom had been lifted up' and the Chronicler's intensive 'on high.'"
+    "summary": "Ellicott notes that the Hebrew text of Chronicles spells the name Hiram, as do the Septuagint and all other ancient versions of both books, though the Hebrew margin here writes Huram; that messengers means ambassadors; that the cedar was felled in Lebanon and sea-borne to Joppa; and that the craftsmen are literally craftsmen of walls and craftsmen of timber, where Samuel has craftsmen of wood and craftsmen of stone of wall. The house he insists is a palace, the Temple being called the house as well as the palace, and he sets the project beside the records of palace building the Assyrian and Babylonian sovereigns left, cedar of Lebanon being a favourite material with them. He renders the next verse that David knew Jehovah had appointed him, finding the evidence in the embassy itself, and remarks that the favour of man is sometimes a sign of the approval of God, always so when it results from well-doing. Of the wives he observes the verse is considerably abbreviated against Samuel, which reads concubines and wives from Jerusalem after he had come from Hebron, the concubines not being omitted out of delicacy since they are named elsewhere in this book; and of the sons, that the list is repeated because it stood at this point in the document the historian copied, and perhaps as an instance of the prosperity which is the section&rsquo;s topic, with Joseph tracing his descent from one of them. Keil and Delitzsch mark the difference from the older text, that where Samuel says Jehovah had lifted up his kingdom the Chronicle says his kingdom had been lifted up on high, the unusual form being probably a passive by contraction, and the phrase on high being here, as often in these books, a way of intensifying the expression."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry: it is a satisfaction to see God's providence in one's settlement — 'Who shall unfix me if God hath fixed me?' — and advancement is for usefulness; we are blessed to be blessings (Genesis 12:2)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "confirmed king",
-   "the favour of man as sign of God",
-   "humility and national purpose",
-   "blessed to be a blessing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch carry the record forward; Ellicott notes the Chronicler abbreviates his source ('concubines and wives... after he had come from Hebron') and that the concubines are dropped not for offence, being named at 1 Chronicles 3:9."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry alone presses the tension: David's infirmity in taking more wives, yet the numerous issue added to his honour and strength, for children are a heritage of the LORD (Psalms 127:3)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "David's marriages",
-   "an infirmity and a blessing",
-   "children a heritage",
-   "the growing household"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke counts the versions — eleven names in Samuel's Hebrew, twenty-four in the LXX, thirteen here with all versions agreeing in number though varying in the names — as ordinary wear of transmission."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott glosses 'his children' as 'the born,' explains the list was copied as an instance of David's prosperity, restores 'and Nathan,' and traces Joseph's descent from Nathan (Luke 3:23)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons born at Jerusalem",
-   "textual variety in the lists",
-   "Nathan and Solomon",
-   "the line of promise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch list the closing names and refer to the fuller genealogy (1 Chronicles 3:5ff.); Ellicott explains the whole catalogue is copied here as an instance of David's prosperity, the tally of sons a token of divine favour."
+    "summary": "Henry draws three lessons from the chapter&rsquo;s opening. No man is of such sufficiency in himself that he has no need of his neighbours, for David had a very large kingdom and Hiram a very little one, yet David could not build himself a house to his mind unless Hiram furnished workmen and materials, a reason why we should despise none but be obliging to all. It is a satisfaction to a wise man to be settled and to a good man to see the special providences of God in his settlement, for the people had made David king but he could not be easy till he perceived that the Lord had confirmed him: who shall unfix me if God hath fixed me? And we must look on all our advancements as designed for usefulness, since the kingdom was lifted up not that David might look great but because of his people Israel, that he might be their guide and protector. Of the wives he allows the fault and then the blessing, that it is difficult to thrive without growing secure and indulgent to the flesh, and that it was David&rsquo;s infirmity that on settling in his kingdom he took more wives, yet the numerous issue added to his honour and strength."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke's caution about varieties in the names falls with special force on this verse, whose Beeliada appears elsewhere under another form (cf. 2 Samuel 5:16)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry supplies the thanksgiving: these sons too are a heritage of the LORD (Psalms 127:3), and it was their honour to have such a father."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the close of the catalogue",
-   "varieties in the names",
-   "the tally of sons as prosperity",
-   "a heritage of the LORD"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: the attack forbids security in any settlement and bids us expect molestation; Christ's kingdom is insulted by the serpent's seed, especially when it advances."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke marks the hostile purpose in going up 'to seek David,' pointing to the fuller narrative in 2 Samuel 5:17."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott sharpens the wording: 'anointed' (the root of Messiah), the added 'over all Israel' contrasting David's second election with his first, 'to seek' with hostile intent (1 Samuel 26:2), and the stronghold as Zion or Adullam."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Philistines provoked",
-   "the anointing",
-   "over all Israel",
-   "opposition follows advance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott reads the verse as a resumption ('Now the Philistines had come'), notes the invaders took an unusual road into the valley of Rephaim (cf. 1 Chronicles 11:15), and catches the Chronicler's gentler verb for their 'spreading.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "resumptive narrative",
-   "the valley of Rephaim",
-   "the enemy deployed",
-   "the ground before the inquiry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry makes David's enquiry the chapter's lesson: acknowledge God in all our ways, fly to him in distress, and ask counsel at his oracles before we venture."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke renders the act with the Targum — 'David consulted the Word of the LORD.'"
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott explains the enquiry was made through the high priest by Urim and Thummim (Exodus 28:30; Numbers 27:21; 1 Samuel 30:7) and tidies the Hebrew into a single question."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "inquiring of God",
-   "the Urim and Thummim",
-   "commission and promise",
-   "waiting for the word"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke gives the Targum's expansion: the LORD broke David's enemies like a potter's vessel full of water, shattered at a stroke."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott recovers Baal-perazim ('owner of breaches'), cites Isaiah 28:21 as proof of the events' moment, and stresses that David owns God's hand in his own valour, unlike the boastful Assyrian (Isaiah 10:15; cf. 1 Chronicles 17:16)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry draws the doxology: bring every sacrifice of praise to God's altar — 'Not unto us, O LORD... but to thy name give glory.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Baal-perazim",
-   "the breaking-forth of waters",
-   "God's hand in David's valour",
-   "not unto us but to thy name"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott harmonizes Chronicles' 'burned with fire' with Samuel's 'carried them off' (2 Samuel 5:21) as two moments of one act, and notes the Chronicler records David's obedience to the law against graven images (Deuteronomy 7:25)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry: the burning teaches a holy indignation against idolatry and all its remains — not a keeping of the enemy's images but a resolute destroying of them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the abandoned idols",
-   "carried off and burned",
-   "obedience to the law",
-   "indignation against idolatry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott notes the Chronicler slightly abridges the source (dropping 'of Rephaim') and repeats the verb of spreading, so the second invasion mirrors the first on the same ground."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry reads the renewed assault as proof that no settlement is secure: Christ's kingdom is insulted by the serpent's seed, especially when it advances, so one victory is no guarantee against the next."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the second muster",
-   "the same valley",
-   "the enemy's persistence",
-   "renewing the threat"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "Matthew Henry",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry marks that David enquired again on the fresh occasion — a model that in each new difficulty we should acknowledge God afresh, not presume on yesterday's guidance."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott adjusts the abridged second half from the older text ('go round to their rear... over against the baca trees') and reads the 'mulberry' as the balsam baca, named from the root 'to weep' (cf. Psalms 84:6)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "inquiring afresh",
-   "a new tactic",
-   "the wheeling movement",
-   "the weeping balsam trees"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke reports the Targum's supernatural reading: the sound is the marching of angels coming to David's aid, an angel sent from God's presence to prosper his way."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott inclines to a natural sign — the wind in the baca tops like men walking on dead leaves — while granting the parallel of 2 Kings 7:6 and the ancient prophetic import of rustling leaves (Judges 9:37), without denying the miracle."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry passes to the obedience: attend God's motions in providence and in the Spirit, and when he goes before us, gird up and follow."
+    "summary": "Clarke counts the names of the sons: in Samuel only eleven persons are named in the Hebrew, the Septuagint there has twenty-four, and here there are thirteen, all the versions agreeing in that number with varieties in the names. For the rest of the chapter&rsquo;s opening he refers the reader to his notes on the parallel passage in Samuel."
    }
   ],
   "debates": [
    {
-    "question": "What was the 'sound of marching in the tops of the mulberry trees'?",
-    "sides": [
+    "question": "How many sons born at Jerusalem does the record give?",
+    "positions": [
      {
-      "position": "a natural sign — the wind rustling the balsam tops, a token divinely timed for David's attack",
-      "holders": [
-       "Charles Ellicott"
+      "view": "Thirteen here, against eleven in the Hebrew of Samuel and twenty-four in the Septuagint there",
+      "held_by": [
+       "Adam Clarke"
       ]
      },
      {
-      "position": "a supernatural sound — the marching of angels sent from God to David's aid",
-      "holders": [
-       "the Targum (as reported by Adam Clarke)"
+      "view": "The number is not the point; the list is repeated because it stood at that place in the source document, and as evidence of prosperity",
+      "held_by": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Keil and Delitzsch",
+    "claim": "Alone in tracing the grammatical shift by which Chronicles turns Samuel&rsquo;s active statement, that Jehovah lifted up the kingdom, into a passive one."
+   },
+   {
+    "voice": "Matthew Henry",
+    "claim": "Alone in making the disparity between the two kings a lesson in mutual dependence, the large kingdom unable to build without the little one."
+   }
+  ],
   "themes": [
-   "the sound in the treetops",
-   "natural sign or angelic host",
-   "prophetic import of rustling leaves",
-   "following God's motions"
+   "Now Hiram king of Tyre sent messengers to David, and timber of cedars, with masons and carpenters, to build him an house",
+   "David perceived that the Lord had confirmed him king over Israel",
+   "his kingdom was lifted up on high, because of his people Israel",
+   "And David took more wives at Jerusalem: and David begat more sons and daughters",
+   "these are the names of his children which he had in Jerusalem"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "John Gill"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-22",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.45
+   }
   }
  },
- "16": {
+ "7": {
   "voices": [
    "Charles Ellicott",
-   "Matthew Henry"
+   "Matthew Henry",
+   "Adam Clarke"
   ],
+  "range": "7-12",
+  "pericope_label": "The Philistines spread in the valley of Rephaim, David enquires, smites them at Baal-perazim, and burns their gods",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott follows the wording of the rout and weighs the reading 'Gibeon' (LXX, Chronicles, favoured by Isaiah 28:21) against 'Geba' (Samuel's Hebrew, Targum, Syriac, Arabic), and glosses 'Gazer' as the pausal form of Gezer (Joshua 12:12)."
+    "summary": "Ellicott notes that the word all, omitted in Samuel, contrasts David&rsquo;s second election with his first as king of Judah only; that to seek David means with hostile intent; and that where our text has he went out against them, literally before them, Samuel has he went down to the stronghold, a term used both of the castle of Zion and of David&rsquo;s old refuge at Adullam in the valley of Elah, the latter probably intended, since the Philistines were likely to take that route. He explains how David enquired, through the high priest Abiathar, who sought divine direction by the Urim and Thummim, or sacred lots, carried in a pouch on his breast fastened to the ephod; and he corrects the punctuation, there being a comma and not a query after the word Philistines, the whole sentence forming one question in the Hebrew where Samuel gives two. At Baal-perazim he observes that it was David and his troops who came up, that the locality is unknown, and that Isaiah refers to these two victories together; that David, true to his character, owns the mighty hand of God in the results of his own valour, in contrast with the haughty self-confidence of the Assyrian conqueror; that the image of breaking waters is taken from the ground, the forces having probably charged down the slopes like a mountain torrent; and that the name means lord or owner of breaches, the plural perhaps also meaning the fissures on the mountain-side. Of the gods he notes that where Samuel says David and his men carried them off the chronicler says David gave a commandment and they were burned, the two not incompatible and perhaps both in the same original text, the chronicler being careful to record compliance with the law in Deuteronomy."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Matthew Henry: David's success emboldens us to resist our spiritual enemies in dependence on God — resist the devil and he shall flee as the Philistines fled before David."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "exact obedience",
-   "Gibeon or Geba",
-   "the rout to Gezer",
-   "guidance sought and followed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
+    "summary": "Henry takes the invasion as a warning that forbids us to be secure in any settlement and engages us to expect molestation in this world, for when we are most easy something may come to be a terror to us, and so Christ&rsquo;s kingdom is insulted by the serpent&rsquo;s seed, especially when it advances. David&rsquo;s enquiring of God once and again should direct us in all our ways to acknowledge him: in distress to fly to him, when wronged to appeal to him, and when we know not what to do to ask counsel at his oracles. The victory he makes an encouragement to resist our spiritual enemies in observance of divine direction and dependence on divine strength, the devil resisted fleeing as the Philistines fled; and the burning of the gods he takes as instruction in a holy indignation against idolatry and all its remains."
+   },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke keeps the horizon exact: 'into all lands' means the surrounding, neighbouring nations, no others being intended."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott judges the verse a concluding reflection of the Chronicler's (cf. 2 Chronicles 26:15), and reads even David's renown and the nations' fear as, in the Chronicler's view, the work of Jehovah (cf. Esther 8:17)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry lifts David's fame into type of the exalted honour of the Son of David, to whom God gave a name above every name (Philippians 2:9)."
+    "summary": "Clarke contributes the Targum&rsquo;s renderings at two points: that David consulted the Word of the Lord, and that the Lord had broken the enemies of David like the breaking of a potter&rsquo;s vessel full of water. For the narrative itself he refers the reader to his notes on the parallel in Samuel."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in answering the question the text leaves open, how David enquired, by naming the high priest and the Urim and Thummim in their pouch on the ephod."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Alone in carrying the Targum into the chapter, which turns the breaking forth of waters into the breaking of a potter&rsquo;s vessel."
+   }
+  ],
   "themes": [
-   "David's spreading fame",
-   "the fear of God on the nations",
-   "all of it the work of Jehovah",
-   "type of the Son of David"
+   "when the Philistines heard that David was anointed king over all Israel, all the Philistines went up to seek David",
+   "the Philistines came and spread themselves in the valley of Rephaim",
+   "David enquired of God, saying, Shall I go up against the Philistines? and wilt thou deliver them into mine hand?",
+   "God hath broken in upon mine enemies by mine hand like the breaking forth of waters: therefore they called the name of that place Baalperazim",
+   "when they had left their gods there, David gave a commandment, and they were burned with fire"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-22",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.53
+   }
+  }
+ },
+ "13": {
+  "voices": [
+   "Charles Ellicott",
+   "Adam Clarke"
+  ],
+  "range": "13-17",
+  "pericope_label": "The second invasion, the sound in the tops of the trees, the pursuit to Gazer, and the fame of David",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott finds the first half of the verse about the second enquiry fuller and clearer here than in Samuel, but holds the second half must be adjusted by the older account, which reads: thou must not go up; go round to their rear, and come upon them in front of the baca trees; probably the terms rendered after them and from them should be modified and transposed. The mulberry trees he calls the traditional Jewish rendering of a Hebrew word occurring only here and in the parallel, taking them rather for the balsam tree the Arabs call baca, which sheds a gum like tears, whence its name. The sound he renders the sound of marching and allows the sign may have been natural, the wind rustling in the tops of the bacas like walking on dead leaves; he grants that all ancient peoples attached a prophetic import to rustling leaves, citing the great Assyrian work on terrestrial omens compiled by order of Sargon, the speaking oaks of Dodona, the laurel of Delos and that of Delphi, the oak of the diviners, perhaps the palm-tree of Deborah, and even the burning bush, as well as the Arab belief that certain thorny bushes utter prophetic words; and he insists these analogies do not militate against the reality or the miraculous character of the occurrence, since divine communications always take the form best adapted for striking the mind amidst reigning ideas, as the visions of Joseph are Egyptian and those of Ezekiel Assyrian. On the pursuit he notes the present Hebrew of Samuel has Geba while the Septuagint agrees with Chronicles in reading Gibeon, though the Targum and Syriac and Arabic read Geba; he prefers Gibeon, some six miles north-west of Jerusalem between the valley of Rephaim and Gezer, with Isaiah in support, and observes that Gazer is the pausal form of the name. The closing verse, he adds, is not in Samuel and looks like a concluding reflection of the chronicler&rsquo;s: the fear of David was, as we should say, the natural effect of his victories, though in the chronicler&rsquo;s view his success in arms with all its consequences was the work of Jehovah."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke leaves nature out of the sign and gives the Targum: when thou shalt hear the sound of the angels coming to thy assistance, then go out to battle, for an angel is sent from the presence of God to render thy way prosperous. Of the closing verse he narrows the reach of the fame, that into all lands means all the surrounding or neighbouring lands and nations, for no others can possibly be intended."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What was the sound in the tops of the trees?",
+    "positions": [
+     {
+      "view": "Possibly natural, the wind in the baca tops, and miraculous none the less, since revelation takes the form that strikes the mind of its age",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "The sound of angels coming to David&rsquo;s assistance, as the Targum has it",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How far did David&rsquo;s fame reach?",
+    "positions": [
+     {
+      "view": "All the lands, as the chronicler&rsquo;s concluding reflection has it",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Only the surrounding and neighbouring nations; no others can possibly be intended",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in setting the rustling trees beside Assyrian omen-lists, Dodona, Delphi and the Arab sacred thorns, and then arguing that the parallels do not touch the miracle."
+   }
+  ],
+  "themes": [
+   "the Philistines yet again spread themselves abroad in the valley",
+   "Go not up after them; turn away from them, and come upon them over against the mulberry trees",
+   "when thou shalt hear a sound of going in the tops of the mulberry trees, then thou shalt go out to battle",
+   "they smote the host of the Philistines from Gibeon even to Gazer",
+   "the fame of David went out into all lands; and the Lord brought the fear of him upon all nations"
+  ],
+  "excluded_voices": [],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-22",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.3
+   }
   }
  }
 }

@@ -109924,6 +109924,82 @@
         "18"
       ],
       "note": "Clarke alone gives the figures a textual history: the Septuagint reads three hundred and five men and Josephus three hundred and eighty-five, against the Hebrew's fourscore and five, and he proposes that the eighty-five were the priests and the three hundred their families, three hundred and eighty-five being the whole population of Nob. That reconciliation is attractive because it accounts for both numbers from one event, and it is the only attempt any voice here makes to do so."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "7"
+      ],
+      "note": "JFB stride-six residue for the third consecutive work unit, and here it does real damage. Jamieson, Fausset and Brown appear at keys 1 and 7 -- stride six -- with 126 words that are two BYTE-IDENTICAL copies of one paragraph, and the paragraph is commentary on Hiram's works and the Tyrian artists making golden and brazen utensils for Solomon's temple and palaces: that is 1 Kings 7 or 2 Chronicles 4, not 1 Chronicles 14. The damage is that key 7 has NO OTHER SOURCE AT ALL. Verse 7 is a line of the sons list and JFB's donor paragraph is its only block, so once the residue is excluded the key has zero usable commentary. The tile covering it (7-12) carries it on the strength of keys 8-12. Three donors identified in three consecutive chapters -- 2 Samuel 3, Joshua 24, and now a Solomonic temple passage -- and in two of the three the same block was emitted twice at two stride positions."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "14",
+      "verses": [
+        "1"
+      ],
+      "note": "John Gill's ENTIRE contribution to this chapter is the string 'See Chapter Introduction' -- three words of site navigation, no commentary at all. He is declared in excluded_voices on the tile whose span holds that block. Worth recording because it is a different failure from the ones already logged: not donor residue, not recitation, not page chrome at the chapter end, but a navigation stub harvested as if it were a comment. usable_source_words counts it as three words, so the arithmetic harm is nil; the harm is that a voice-presence count would report Gill as commenting on this chapter when he does not."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "14",
+      "verses": [
+        "17"
+      ],
+      "note": "Chapter-final chrome, thirty-fifth instance, and the first where it makes a ratio read better than the truth in a way that mattered to my own judgement. Ellicott's last key (17) carries 1,098 words of which 123 are real commentary and 983 are StudyLight furniture. The closing tile (13-17) therefore reports 1,709 source words and an expansion of 0.296, where the real figures are about 726 words and 0.70 -- weak compression that the gate presents as strong. The tile is honest (506 words, every sentence grounded, no padding) but I had to compute the real ratio by hand to know that. This is the second time the chrome has mattered rather than merely inflated: at 2 Chronicles 10 it would have waved through prose I knew to be stretched, and here it hides the weakest compression in the chapter."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "14",
+      "verses": [
+        "15"
+      ],
+      "note": "A genuine disagreement about the nature of the sign, and the two voices sit on opposite sides of the natural and the supernatural. Ellicott renders the sound as the sound of marching and allows the sign may have been natural, David listening for the wind rustling in the baca tops like someone walking on dead leaves; he then grants at length that all ancient peoples read prophetic import into rustling leaves, citing the Assyrian terrestrial-omen work compiled by order of Sargon, the speaking oaks of Dodona, the laurels of Delos and Delphi, the oak of the diviners, perhaps Deborah's palm, even the burning bush, and the Arab belief that certain thorns utter prophecy -- and insists the analogies do not touch the reality or the miracle, since divine communications always take the form best adapted to strike the mind amidst reigning ideas, as Joseph's visions are Egyptian and Ezekiel's Assyrian. Clarke gives only the Targum: when thou shalt hear the sound of the angels coming to thy assistance, then go out to battle. So the naturalistic reading comes with its own defence of the miracle, and the supernatural reading comes from a version rather than from argument."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "8"
+      ],
+      "note": "Mandatory-Henry placement, fourth chapter running. Henry has two blocks, at keys 1 and 8, covering vv.1-3 and vv.8-17. The source has a GAP at keys 5-6, so tiles cannot span from key 4 to key 7, which forces the first tile to be 1-4 and leaves 7-17 as the second run. I split that run at 12, giving 1-4 / 7-12 / 13-17. That grounds Henry in the first two tiles and leaves the closing tile with two voices only, Ellicott and Clarke, since Henry's material on vv.13-17 lives inside the key-8 block. The alternative, one tile for 7-17, would have kept three voices throughout at the cost of eleven verses in a single 650-word tile. Two voices is thin but it is the honest state of this chapter: once JFB is excluded as donor residue and Gill as a navigation stub, only four voices have any real content in the whole chapter, and Keil and Delitzsch have commentary at key 2 alone, their key-3 block being pure recitation of vv.3-11."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "14",
+        "15",
+        "16"
+      ],
+      "note": "Note on my own guard rather than on the source: the shingle comparison against the legacy prose returned 48 orphan eight-grams here, against five to thirteen in each of the three preceding chapters. Inspection shows they collapse to about a dozen distinct sentences, each a source phrase with one function word changed, and the overlapping windows inflate the count. The real cause is the character of this chapter's source: Ellicott carries two thirds of it and most of his material is short lexical glossing -- 'literally craftsmen of walls and craftsmen of timber', 'a Hebrew word only occurring here and in the parallel passage', 'the balsam tree called baca by the Arabs, which sheds a gum like tears' -- which any faithful paraphrase must reproduce almost verbatim, and which the legacy prose reproduced the same way. So the orphan rate scales with the proportion of source that is lexical gloss rather than discursive comment, and a high count is not by itself evidence of borrowing. If the shingle check is ever moved into the loop, it should report orphans as DISTINCT sentences and should weight glossing differently."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "7"
+      ],
+      "note": "Caught and fixed one piece of my own cross-tile templating before landing: tiles 1 and 7 both opened with the construction '...by another. Charles Ellicott (grammatical-historical) notes that the...', which the internal shingle check flagged as one shared eight-gram between them. The chapter audit's TMPL counter did not flag it. Recording it because it is the first time my own formula, rather than the source, produced the overlap, and because the opening sentence of a tile is where that formula is most likely to repeat when one voice carries most of the chapter."
     }
   ]
 }
