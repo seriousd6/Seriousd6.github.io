@@ -110162,6 +110162,107 @@
         "1-37"
       ],
       "note": "Calibration under a four-block Henry chapter. The two-voices-per-sentence rule held, but overshoot on first measurement was larger than in the last two chapters: 908 against 650 on the 1-10 span (4,575 source words), 831 on 30-31 (3,066) and 834 on 21-26 (2,521), against 71 to 136 for comparable spans in 1samuel 8. The cause is identifiable and not drift: these three spans each carry five or six voices arguing about the same clause, so the material does not thin out as the paragraph budget runs down, and the cuts had to drop whole sub-threads (Clarke's antiquarian parade at v30, Ellicott's version lists at v11 and v24) rather than trim clauses. Two trim passes were needed on those three entries and one on the rest. Worth recording as evidence for the standing question of whether the 350-650 band should scale with usable source words: at 4,575 source words the band forces a 0.14 ratio and real content is lost, not padding."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "25",
+      "verses": [
+        "3",
+        "9",
+        "27",
+        "33",
+        "39"
+      ],
+      "note": "JFB stride-six residue, now conclusive. All five JFB blocks in this chapter are Judges 2-3 material: key 3 names its own donor ([Jud 2:11-3:8]), keys 3 and 9 are byte-identical duplicates, and the donor offset advances monotonically with the target key (Judges 2:11ff -> 3:8-10 Chushan-rishathaim -> 3:12-14 Eglon -> 3:19 Ehud). The occupied positions are a strict subset of the stride-6 series {3,9,15,21,27,33,39} with 15 and 21 empty. This confirms the recorded hypothesis that the harvester read a concatenated file in order with an offset advancing roughly with the target key. JFB excluded from tiles 2, 5, 6 and 7."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "25",
+      "verses": [
+        "44"
+      ],
+      "note": "Chapter-final page chrome at Ellicott's last key, 36th recorded instance. Key 44 reports 1441 words of which about 983 are the standard navigation/chrome block; only ~466 are real exposition. The pattern is now established as general: it attaches to whichever key is Ellicott's LAST in a chapter, not to a bounded run of chapters. Effect here is cosmetic rather than dangerous (tile 36-44 draws on nine keys), but it inflates the recorded source words for that tile and so understates its true expansion ratio."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "25",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "22"
+      ],
+      "note": "Wesley abridges Henry again - four instances in this chapter, eleven now confirmed across five books. Wesley's key-1 block is Henry verbatim (hence excluded_voices on tile 1). At keys 2, 3 and 22 he reproduces Henry's material with the offset of a key or more: his key-22 note copies Henry's key-12 exposition, which is why that line is attributed to Henry in tile 3 only. Henry-plus-Wesley agreement is ONE witness and is invisible to a voice-counting prevalence field; a key-aligned duplicate check would miss the offset cases."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "25",
+      "verses": [
+        "29"
+      ],
+      "note": "Ellicott quotes Keil verbatim - second recorded instance of this trap. At the bundle of life Ellicott reproduces the Keil and Delitzsch paraphrase entire before building on it. Written into tile 23-31 as one witness quoted twice and then enlarged, not as two agreeing voices. A shingle comparison between source voices within a chapter would catch this class automatically."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "25",
+      "verses": [
+        "12",
+        "13",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22"
+      ],
+      "note": "Convergence: four voices from three schools condemn David's resolve with no dissent and no mitigation - Henry (the resolution was bloody, the oath passionate, is this thy voice O David), Ellicott (quite to be accounted for though not to be excused), Keil and Delitzsch (not right before God but a sudden burst of sinful passion, unseemly in a servant of God), Clarke (abominable and cruel, not to say diabolic; whoever attempts to vindicate it is at least constructively a foe to God and truth). Recorded as convergence rather than a debate because no voice in the chapter defends him."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "25",
+      "verses": [
+        "32",
+        "33",
+        "34"
+      ],
+      "note": "Convergence: two schools reach the same doctrine by different routes, that an oath binding a man to sin is void. Wesley states it as a rule (as it was a sin to make them, so it is adding sin to sin to perform them); Ellicott reaches it by comparison, setting David's deliberate breach of the most solemn vow against Saul at Michmash and Jephthah, who kept theirs."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "25",
+      "verses": [
+        "2"
+      ],
+      "note": "Editorial: Ellicott's note on Nabal's descent carries the dog-etymology apparatus (Josephus, LXX, Syriac, Arabic) alongside the house-of-Caleb reading he prefers. Both reported in tile 2 as a live textual debate rather than one resolved silently."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "25",
+      "verses": [
+        "1",
+        "2",
+        "12",
+        "18",
+        "23",
+        "32",
+        "36"
+      ],
+      "note": "Method: tiling driven by Henry's block boundaries, as in the four preceding chapters. Henry's blocks are wide (v.1; vv.2-16; vv.12-22; vv.18-33; vv.32-35; vv.36-44) and declaring him outside them would be span-ungrounded, so tile boundaries were set at his keys wherever the verse arithmetic allowed. Seven tiles at 592-650 words over 44 verses and 28835 usable source words; the chapter was taken as the whole batch under the 40k source-word rule."
     }
   ]
 }
