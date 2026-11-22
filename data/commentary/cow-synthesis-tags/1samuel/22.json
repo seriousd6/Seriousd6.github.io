@@ -1,1126 +1,594 @@
 {
  "1": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
+   "Charles Ellicott",
    "Adam Clarke",
-   "Charles Ellicott"
+   "Matthew Henry",
+   "Keil and Delitzsch",
+   "John Gill",
+   "John Wesley"
   ],
+  "range": "1-5",
+  "pericope_label": "David in the cave of Adullam, the four hundred who gathered to him, his parents lodged in Moab, and Gad&rsquo;s word to return",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott and Clarke fix Adullam's geography — a great cave in the Elah valley near the old Canaanite city, roomy enough for 400 refugees."
+    "summary": "Ellicott places the cave in a tributary ravine of the valley of Elah, the highway from Philistia to Hebron, where many natural caves, roomy and dry, are still used by shepherds as dwellings and refuges for their flocks, and derives the name from the old Canaanitish city of Adullam whose ruins are visible on a hill to the south; he holds that David&rsquo;s brethren fled to him because they dreaded the fate that often overwhelms whole families for the fault of one, and, citing Ewald, that the melancholy state of the country under Saul drove men to seek a leader, many of the refugees being prominent Israelites whom David organised into a force that guarded the exposed southern frontier and won him a lasting popularity. He notes that this Mizpeh is named nowhere else, grounds the visit in blood since Jesse was Ruth the Moabitess&rsquo;s grandson, and observes that David, addressing the Moabite king, says God and not Jehovah, which he takes for reverence, an idolater having nothing to do with the covenant name, though its letters stand in Mesha&rsquo;s inscription. Keil and Delitzsch read Mizpeh as literally a watch-tower, here a proper name for a mountain fastness on the high land bounding the plains of Moab east of the Dead Sea, most likely in the mountains of Abarim, reached from Bethlehem by crossing Jordan near its mouth; they add that David must have stayed there a considerable time and that those who came over to him were for the most part brave and reckless men who ripened into heroes under his command."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke places the cave in Judah, ten miles east of what Eusebius and Jerome call Eleutheropolis, and contests the usual reading of David&rsquo;s followers: it is possible such men first supposed he would be glad of help in revenging himself and might profit by plunder, but if so they were disappointed, for they are never found plundering or murdering, always appear under good discipline, and are employed only in beneficent service and their country&rsquo;s defence, David having civilised them and made profitable to the state those who were unprofitable; it is not necessary, he adds, to strain the original to prove them exceptionable characters, as some have done. Of Moab he notes that its king, an enemy of Saul, would be the readier to oblige a man from whom he might expect friendship. Wesley reads the debtors as poor debtors whom the creditors were bound to spare, whose lands and goods remained liable though their persons were with David; takes the hold as a singular put for a plural, holds in general, for as long as David had to move from place to place; and reads Gad&rsquo;s order as political, that David should publicly claim the kingdom after Saul&rsquo;s death so his friends might appear for him."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry reads the cave as a shining light eclipsed; David's tender care for his parents and his faith 'till I know what God will do for me.'"
+    "summary": "Henry does not ask whether the fastness was natural or artificial, only that its access was so difficult that David thought himself able, with Goliath&rsquo;s sword, to keep it against all Saul&rsquo;s forces, and so buried himself alive in it, among those the apostle describes as wandering in dens and caves of the earth; he notes that one who might have served his country as a judge or general is thrown by as a vessel in which there is no pleasure. Of the four hundred he is unsparing, that the regiment was made up not of great men, nor rich, nor stout, no, nor good men, but men in distress, in debt and discontented, men of broken fortunes and restless spirits, and sees in this what weak instruments God uses. Of Moab he keeps to the son, that the first thing David does is find his aged parents a quiet habitation, whatever became of himself; and of Gad&rsquo;s word, that David went as one confident of his own innocency and assured of the divine protection, desirous even then to do some service to his tribe and country."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill notes David came glad of his deliverance from Achish at Gath."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the cave of Adullam",
-   "refuge and exile",
-   "care for parents",
-   "faith that waits on God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch and Ellicott set the social scene: malcontents under Saul's misrule, whom David organised into a disciplined frontier force."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke and Wesley defend the men's character — whatever they were before, David civilised them and held them to justice and honesty."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill glosses the distress as poverty, oppression, and afflictive providences."
+    "summary": "Gill says David departed from Gath, driven from the court of Achish and glad of the deliverance; that those in distress were in straitened circumstances through the oppression of men, through poverty, and through afflictive providences in their families; that the name Mizpeh distinguishes it from the place so called in Israel, Junius making it a fortified place, so that David might think himself safer there, in an enemy&rsquo;s land, than at home; and that Gad either accompanied David in his exile or was sent to him, being one of the company of prophets over whom Samuel was president."
    }
   ],
   "debates": [
    {
-    "question": "Were David's four hundred 'exceptionable characters' or merely the oppressed?",
-    "sides": [
+    "question": "What sort of men were the four hundred who gathered to David?",
+    "positions": [
      {
-      "position": "oppressed and persecuted men whom David disciplined, not criminals",
-      "holders": [
-       "Clarke",
-       "Ellicott",
-       "Wesley"
+      "view": "Not great, rich, stout or good men, but broken fortunes and restless spirits, the weak instruments God uses",
+      "held_by": [
+       "Matthew Henry"
       ]
      },
      {
-      "position": "malcontents and bitter of soul, disaffected under Saul",
-      "holders": [
-       "Keil and Delitzsch"
+      "view": "Oppressed men wrongly made out to be exceptionable characters by straining the Hebrew; they never plundered and were kept under good discipline",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Refugees from a country in decline, many of them prominent Israelites, organised into a frontier force",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the hold one place, or holds in general?",
+    "positions": [
+     {
+      "view": "One place, the same hold Gad orders David to leave, most likely in Moab",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "A singular put for a plural: whatever hold David was in as he moved from place to place",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why did Gad send David back into Judah?",
+    "positions": [
+     {
+      "view": "From confidence in his innocency and the divine protection, and to serve his own tribe",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "To put in his public claim to the kingdom, so that his friends might take courage and declare for him",
+      "held_by": [
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "David's outlaw band",
-   "the distressed and indebted",
-   "discipline out of disorder",
-   "a kingdom of the broken"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch and Ellicott place Mizpeh of Moab as a mountain fastness and ground the appeal in David's Moabite descent through Ruth."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke sees prudent care for the parents beyond Saul's reach; Wesley hears in 'till I know' a faith wholly cast upon God."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes David felt safer in Moab, an enemy's land, than in Israel under Saul."
-   }
-  ],
-  "debates": [],
   "outliers": [
    {
     "voice": "Charles Ellicott",
-    "note": "Observes that David reverently says 'Elohim' (God), not the covenant Name 'Jehovah,' when speaking to the idolatrous king of Moab."
+    "claim": "Alone in noticing that David says God and not Jehovah to the Moabite king, and alone in answering it with the Mesha inscription."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Alone in arguing that the followers have been libelled by a strained translation, and in saying so against the whole devotional tradition."
    }
   ],
   "themes": [
-   "Mizpeh of Moab",
-   "kinship through Ruth",
-   "provision for parents",
-   "faith that waits on God"
+   "David therefore departed thence, and escaped to the cave Adullam",
+   "his brethren and all his father&rsquo;s house heard it, and went down thither to him",
+   "every one that was in distress, and every one that was in debt, and every one that was discontented, gathered themselves unto him",
+   "Let my father and my mother, I pray thee, come forth, and be with you, till I know what God will do for me",
+   "Abide not in the hold; depart, and get thee into the land of Judah"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-22",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch and Ellicott read the verse as a narrative hinge; 'the hold' is the same Moabite stronghold from which Gad bids David depart."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley takes the singular 'hold' for the plural — the whole succession of refuges through which David was driven while his parents stayed safe in Moab."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill, with the Targum, notes David caused his parents to remain before the king of Moab by his leave."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the hold in Moab",
-   "parents in safety",
-   "the season of wandering"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott gives Gad a large place in David's later reign and reads his counsel as a divinely-prompted call back to Judah; he weighs 'forest' against 'city' of Hareth."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: David must show himself in Judah to claim the kingdom, and God thereby exercises and prepares his faith and courage."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill identifies Gad as one of the company of prophets under Samuel's presidency."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is the destination 'the forest' or 'the city' of Hareth?",
-    "sides": [
-     {
-      "position": "'city' of Hareth — the LXX and Josephus reading, favoured by Conder, who finds no forest there",
-      "holders": [
-       "Charles Ellicott (reporting LXX/Josephus/Conder)"
-      ]
-     },
-     {
-      "position": "'forest' or 'thickets' — the Hebrew 'yar', still growing abundantly (Payne Smith)",
-      "holders": [
-       "Charles Ellicott (reporting Payne Smith)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the prophet Gad",
-   "return to Judah",
-   "claiming the kingdom",
-   "forest of Hareth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
+   "Charles Ellicott",
    "Adam Clarke",
-   "Charles Ellicott"
+   "Matthew Henry",
+   "Keil and Delitzsch",
+   "John Gill",
+   "John Wesley"
   ],
+  "range": "6-10",
+  "pericope_label": "Saul under the tamarisk at Gibeah reproaches his servants, and Doeg informs against Ahimelech",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott and Clarke reconstruct the scene — Saul under the tamarisk on the height in Gibeah, spear in hand, holding a council of war with his Benjamite captains."
+    "summary": "Ellicott corrects the setting to its literal sense, Saul abiding in Gibeah, his own royal city, under the tamarisk tree upon the height, and notes that his love of trees has been remarked before, so that the darkest deed of his reign was settled in the spot he loved best; he finds here one of the earliest councils of which we have any definite account, the king leaning on his spear, surrounded by captains of his own tribe save one. The appeal to Benjamin he calls a fair specimen of Saul&rsquo;s later rule, no wonder the people were estranged, since we have it from the king&rsquo;s own mouth that he had given all the posts of honour to his own tribe and family or to strangers, so that his argument amounts to asking who but a Benjamite would honour only Benjamites; such a sovereign had forfeited his kingdom, and the consequence was the thin array he could muster at Gilboa. Of the covenant he thinks the terms too pointed for the old friendship alone, so that Saul had learned something of the farewell interview; of Doeg&rsquo;s evidence he holds it told the more because the man related no hearsay but what he had actually seen, and of the inquiry itself that it is by no means certain, nothing being said of the Urim and Thummim at David&rsquo;s visit, so that Doeg may have been misled by seeing the priest fetch the sword from behind the ephod. Keil and Delitzsch allow both readings of the covenant charge, that Saul may have heard something of what passed between Jonathan and David or may merely mean the friendship well known to him; they hold the inquiry did take place, their ground being that Ahimelech never disclaims it; and they identify Doeg&rsquo;s office as superintendent of Saul&rsquo;s servants, apparently a marshal of the court."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the spear as the ensign of power, stuck in the ground where the king rested, marking for the soldiers their general&rsquo;s tent, and takes the gathering for a council of war; he says it was impossible for any of the servants to show what did not exist, no such league having been made, and identifies Doeg from the preceding chapter as chief of the herdmen, whom the Septuagint puts over the mules, probably what we should call the king&rsquo;s equerry or groom. The inquiry he thinks probably true though not related in the earlier history, since David would naturally wish to know where to direct his steps in such a crisis. Wesley glosses the appeal to tribe, that these were of Saul&rsquo;s own kindred, from whom David designed to translate the kingdom to another tribe, and asks whether he would distribute profits and preferments among Benjamites as Saul had done; of Doeg he says plainly that David charges him with the sin of lying in a psalm, and thinks he told many lies not here expressed, besides concealing what he was bound to declare for Ahimelech&rsquo;s defence, namely the artifice by which David had made the priest believe he was on the king&rsquo;s business."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry calls it a 'bloody court of inquisition' and anatomises jealous malice, which suspects treason where only friendship exists."
+    "summary": "Henry makes the spear a sceptre, intimating the force by which Saul designed to rule, and sets the scene as a bloody court of inquisition in which the king seeks information against two of the best men he had. He turns the speech into three charges, that they were unwise, since David advanced would carry into Judah the honour now in Benjamin and would have no such fields and vineyards to reward them with; that they were unfaithful, having conspired; and that they were unkind, none of them being sorry for him. He calls it jealous malice with its pitiful arts to extort discoveries of things that are not, and notes that if a ruler hearken to lies all his servants seem wicked in his eyes. Of Doeg he judges the information true but not the whole truth, since he ought to have told Saul that David had made Ahimelech believe he was then upon the king&rsquo;s business, which would have cleared the priest, who was in Saul&rsquo;s power, and thrown the blame on David, who was out of his reach."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: the news of David in arms filled Saul with fears and jealousies of all about him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "jealous malice",
-   "Saul's court",
-   "the spear as sceptre",
-   "suspicion of conspiracy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott and Keil and Delitzsch expose Saul's favouritism — offices and lands hoarded for Benjamin, loyalty bought with fields and captaincies."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley draws out the tribal appeal and its threat: David of Judah will never enrich Benjamin as Saul has done."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Saul seized the occasion of the report of David's forces to address his servants."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "tribal favouritism",
-   "loyalty bought with reward",
-   "Saul's misrule",
-   "fields and vineyards"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott finds the jealous spirit now mastering even Saul's own tribe and son; the pointed talk of a 'league' suggests he had learned of the New Moon covenant."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke shows the charge impossible — none can prove a league that never existed; Wesley names it the wheedling art of jealousy."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Saul counted the servants' silence and unconcern as itself a conspiracy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "jealousy and false accusation",
-   "Jonathan's covenant",
-   "a diseased mind",
-   "silence taken for treason"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch and Ellicott identify Doeg as marshal or overseer of Saul's servants, whose eyewitness report (not hearsay) struck Saul hard."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Doeg, full of enmity and eager for preferment, outran the others and spoke first."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke reckons Doeg the king's equerry or groom, set over the royal beasts."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Doeg the Edomite",
-   "the informer",
-   "eyewitness accusation",
-   "ambition and malice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch accept that the inquiry happened (Ahimelech never denies it); Ellicott doubts it, thinking Doeg misled by the priest fetching the sword from behind the ephod."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke thinks the consulting probable; Wesley stresses Doeg's lying and his suppression of David's deceit that exculpated the priest."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill weighs both readings and notes the Jewish view that Doeg framed it as treason, since Urim was consulted only for a king."
+    "summary": "Gill says Saul took the occasion of the report that David was at the head of a certain number of men; explains how the charge of conspiracy arose, that they had not revolted nor committed any overt act, but because they did not disclose what he supposed they knew he read their silence as treason; and describes Doeg as full of enmity to David, willing to curry favour, eager for further preferment, and more forward than the rest, so that he prevented them and spoke first, Josephus and the Septuagint calling him a Syrian. On the inquiry he reports that some have taken it for a lie of Doeg&rsquo;s but will not hold it, and adds that by the Jewish writers the inquiry was itself the treason charged, since inquiry by Urim was not made for a private person but for a king, so that to say Ahimelech inquired was to say David had made himself king and the priest owned him."
    }
   ],
   "debates": [
    {
-    "question": "Did Ahimelech really inquire of the Lord for David?",
-    "sides": [
+    "question": "Did Doeg tell the truth in saying Ahimelech enquired of God for David?",
+    "positions": [
      {
-      "position": "yes — it happened, though unrecorded, and Ahimelech never denies it",
-      "holders": [
-       "Keil and Delitzsch",
-       "Clarke",
-       "Gill"
+      "view": "Probably true, though not in the earlier narrative, since David would wish to know where to turn",
+      "held_by": [
+       "Adam Clarke"
       ]
      },
      {
-      "position": "doubtful — Doeg may have been misled by the priest going in to fetch the sword",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "inquiring of the Lord",
-   "the half-true accusation",
-   "Urim and Thummim",
-   "the false witness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: summoning the whole priestly house, not Ahimelech alone, betrays a massacre already determined by Saul and Doeg."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: these are the priests of Eli's house, already under God's threatened sentence to be cut off."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes only that Saul sent messengers to summon Ahimelech before him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "summons of the priests",
-   "premeditated massacre",
-   "the doom of Eli's house",
-   "innocence unsuspecting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Saul's 'thou son of Ahitub,' withholding name and priestly title, is a studied contempt for the second man in the kingdom."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch quote indictment and defence together and find Ahimelech answering calmly and worthily, pleading David's proven faithfulness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "contempt of the high priest",
-   "the indictment",
-   "David's proven faithfulness",
-   "a clear conscience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: of the three counts, the inquiry of the Lord for David was the gravest in Saul's eyes — the point Ahimelech alone troubles to answer."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the word 'conspired' presumes the guilt it pretends to examine, turning an innocent kindness into sedition."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the threefold charge",
-   "the oracle as treason",
-   "a verdict fixed beforehand"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott hears the people's own estimate of David in the priest's dignified plea; Clarke suggests 'neeman' (faithful) may name a court office of trust."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: Ahimelech judges nothing of the present quarrel, only testifies to what David had been and still was for all he knew."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill frames the answer as spoken first for David, then for the priest himself."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "David's public reputation",
-   "the priest's honest defence",
-   "faithful servant",
-   "innocence pleaded"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott lays out three renderings and prefers Abarbanel's 'that was the first day'; the priest's defence rests on his believing David was on the king's errand."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: inquiring for David was nothing new and never forbidden; Ahimelech knew of no breach and treated him as the king's son-in-law."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill cites Kimchi's non-interrogative reading and voices the priest's innocence — had he known David fled, he would never have done it."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How should 'Did I then begin to inquire of God for him?' be rendered?",
-    "sides": [
-     {
-      "position": "an indignant question implying long, customary practice of inquiring for David",
-      "holders": [
-       "Clarke",
-       "Ellicott (reporting the AV)"
-      ]
-     },
-     {
-      "position": "a statement — 'that was the first day that I enquired' (Abarbanel, Kimchi)",
-      "holders": [
-       "Ellicott (preferring Abarbanel)",
-       "Gill (citing Kimchi)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "'did I then begin to inquire'",
-   "the priest's innocence",
-   "Urim consulted for the king",
-   "a first and honest inquiry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Saul pronounces the death sentence himself, without counsel or delay, upon an innocent man — an act of arbitrary power and great injustice, reaching to the whole father's house."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the death sentence",
-   "arbitrary power",
-   "innocence condemned",
-   "judge in his own cause"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott identifies the 'footmen' as the royal runners; Keil and Delitzsch note the repeated 'priests of the Lord' magnifies the horror of the order."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke honours the guards for daring to disobey a command of such injustice and irreligion."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill records the tradition that the runners were Abner and Amasa, whom he takes for princes rather than mere footmen."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'slay the priests of the Lord'",
-   "the royal runners",
-   "honourable disobedience",
-   "loyalty to God above the king"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott stresses the sacrilege of priests slain in their white robes; Clarke reconciles the numbers — 85 priests, 305/385 the whole population of Nob."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke calls Doeg a ruthless Edomite; Wesley reads his foreign, priest-hating descent as why the deed fell to him and not to Israel."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: none fitter for the butchery than the false accuser turned executioner."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How many were slain — and how are the differing numbers reconciled?",
-    "sides": [
-     {
-      "position": "eighty-five priests (Hebrew), the ministers who wore the ephod",
-      "holders": [
-       "Clarke",
+      "view": "It took place, since Ahimelech never disclaims it when challenged",
+      "held_by": [
        "Keil and Delitzsch"
       ]
      },
      {
-      "position": "three hundred and five (LXX) or three hundred and eighty-five (Josephus) — the whole population of Nob",
-      "holders": [
-       "Clarke (reconciling)"
+      "view": "By no means certain; Doeg may have mistaken the priest fetching the sword from behind the ephod for a consultation",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "A lie, and one of many, as David charges in a psalm; and a concealment of the truth besides",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "True in substance but not the whole truth, the exculpating artifice being left out",
+      "held_by": [
+       "Matthew Henry"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "claim": "Alone in explaining why the inquiry was the charge: by the Jewish writers the Urim was consulted for a king only, so the claim implied that David was king and Ahimelech had owned him."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in reading the whole scene as one of the earliest recorded royal councils, and in making Saul&rsquo;s appeal to Benjamin his own self-indictment."
+   }
+  ],
   "themes": [
-   "Doeg the executioner",
-   "the linen ephod",
-   "sacrilege and massacre",
-   "the Edomite's hatred"
+   "now Saul abode in Gibeah under a tree in Ramah, having his spear in his hand, and all his servants were standing about him",
+   "Hear now, ye Benjamites; will the son of Jesse give every one of you fields and vineyards",
+   "there is none of you that is sorry for me, or sheweth unto me that my son hath stirred up my servant against me",
+   "Then answered Doeg the Edomite, which was set over the servants of Saul",
+   "he enquired of the Lord for him, and gave him victuals, and gave him the sword of Goliath the Philistine"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-22",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
   }
  },
- "19": {
+ "11": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley"
+   "John Wesley",
+   "John Gill",
+   "Adam Clarke",
+   "Keil and Delitzsch"
   ],
+  "range": "11-16",
+  "pericope_label": "Ahimelech and the whole priestly house summoned, arraigned, and condemned",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch and Ellicott see Saul treating innocent Nob as a city under the ban, identifying private revenge with the cause of Jehovah; Ellicott links it to the Gibeonite bloodguilt of 2 Samuel 21."
+    "summary": "Ellicott reads the summons itself as evidence of intent: sending for all the priestly house to Gibeah, when Ahimelech alone was to blame if blame there was, looks as though Saul and Doeg had already determined upon the wholesale massacre that followed. He observes that the consultation of the Urim is the charge Saul repeats and the only one the priest takes up, and prefers the rendering Abarbanel gives in Lange, read without the interrogation: that was the first day that I enquired of God for him, and I did not know that it was displeasing to thee; the reason Ahimelech allowed the sacred Urim to be consulted was that he supposed David came, as he represented, on a mission direct from the king. He adds that if the received translation stands, the only possible explanation is that David had been in the habit of consulting the Urim on special occasions for the king, and that the right of consulting it, when there was a king in Israel, belonged to the king alone, citing the Talmud as authoritative on the point. Of Ahimelech&rsquo;s speech he says the words were quiet and dignified and no doubt spoke the general sentiment of the people about David, what the guardian of the sanctuary had done being done as a matter of course for one so closely related to the king and always loyal. Keil and Delitzsch record only that notwithstanding this truthful assertion of his innocence Saul pronounced sentence of death, and not upon the high priest alone."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: no wickedness in Saul's life compares to this; he is now wholly under the evil spirit's power."
+    "prevalence": "several",
+    "summary": "Wesley supplies a frame none of the others give here, that these were the priests of the house of Eli, which God had threatened to cut off; and of Ahimelech&rsquo;s defence he observes that the high priest does not determine the quarrel between Saul and David, nor affirm what David now was, but only declares what David formerly had been and what he was still for anything he knew to the contrary. Clarke takes the crux the opposite way from Ellicott: the inquiry was no new thing, and Ahimelech had never been told it was either wrong in itself or displeasing to the king, nor is it likely he knew of any disagreement, since he knew David only as the king&rsquo;s son-in-law and treated him as such. He also raises a lexical possibility that would change the sentence altogether, that the word translated faithful is probably the name of an office."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: Saul sent men to slay all the inhabitants of the city."
+    "summary": "Gill notes the contempt in the arraignment, that Saul does not so much as call the man by name nor give him the title of his office, though he was the second person in the kingdom and to whose office the civil government had been annexed a few years before. On the crux he gives both readings, his own being that this was far from the first time, David having often consulted the Lord through him when going upon the king&rsquo;s business and always as innocently and as much for the king&rsquo;s service as now, while he reports Kimchi&rsquo;s alternative without the interrogation, that it was the first time and he did not know it would be grievous to the king. Of the sentence he says Saul pronounced it himself, without the opinion or advice of others and without further time, an act of arbitrary power upon an innocent person and of great injustice."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "How should Ahimelech&rsquo;s question about the inquiry be rendered, and what follows from it?",
+    "positions": [
+     {
+      "view": "With Abarbanel, without the interrogation: that was the first day I enquired for him, and I did not know it displeased thee",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "As the received version: had I only then begun? No, it was his long practice, and never forbidden",
+      "held_by": [
+       "Adam Clarke",
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does Ahimelech&rsquo;s praise of David concede?",
+    "positions": [
+     {
+      "view": "The general sentiment of the people: David was loyal, and the help was a matter of course",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Nothing about the present quarrel: only what David had been, so far as the priest knew",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
    {
     "voice": "Charles Ellicott",
-    "note": "Conjectures that the unrecorded slaughter of the Gibeonites (2 Samuel 21:1) was this very destruction of Nob, where the Tabernacle's Gibeonite servants perished."
+    "claim": "Alone in showing what hangs on the rendering: if the received reading stands, David had been exercising a right the Talmud reserves to the king, which is the treason charged."
+   },
+   {
+    "voice": "John Wesley",
+    "claim": "Alone in placing the massacre under the threatened cutting off of the house of Eli."
    }
   ],
   "themes": [
-   "the destruction of Nob",
-   "the city under the ban",
-   "private revenge as holy war",
-   "Saul's unparalleled crime"
+   "Then the king sent to call Ahimelech the priest, the son of Ahitub, and all his father&rsquo;s house",
+   "Hear now, thou son of Ahitub. And he answered, Here I am, my lord",
+   "Why have ye conspired against me, thou and the son of Jesse",
+   "who is so faithful among all thy servants as David, which is the king&rsquo;s son in law",
+   "Did I then begin to enquire of God for him? be it far from me",
+   "Thou shalt surely die, Ahimelech, thou, and all thy father&rsquo;s house"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-22",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.47
+   }
+  }
+ },
+ "17": {
+  "voices": [
+   "Charles Ellicott",
+   "Adam Clarke",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "range": "17-19",
+  "pericope_label": "The king&rsquo;s guards refuse, Doeg falls upon the priests, and Nob is put to the sword",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott renders the footmen literally as runners, guards or lictors who ran by the royal chariot as an escort, still the usual attendants of any great man in the East, a service Samuel had warned the people their king would require; their refusal he endorses through Wordsworth, that they were more faithful in disobeying than if they had obeyed an order against the commandment of the Lord, whose servant the king was no less than they. Of the Edomite he supposes he was helped by his own servants, and reports that for this act he has been execrated in the most ancient Jewish writings above perhaps any other wicked man of Scripture, the Babylonian Talmud telling how three destructive demons met him afterwards, and adding a more curious passage still in which David is reproached by the Most High as the cause of the slaughter, of Doeg&rsquo;s reprobation, and of the death of Saul and his sons. The linen ephod he takes for a linen over-vestment worn by the ordinary priests, similar to the high priestly cape, and thinks they had come from Nob in official costume out of respect to the king, so that the deed assumes a still more awful character when we recollect who the victims were. Keil and Delitzsch make the same point grammatically, that the allusion to the priestly clothing, like the repeated phrase priests of Jehovah, shows the crime in its true light, since the very dress they wore as consecrated servants ought to have made their murderers shrink; and of the city they observe that Saul, not content even with this, had the whole town destroyed as a city laid under the ban, so completely identifying his private revenge with the cause of Jehovah that he avenged a supposed conspiracy against his own person as treason against Jehovah the God-king."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says the guards dared to disobey in a case of such injustice, inhumanity and irreligion, and calls the Edomite a ruthless man capable of any species of iniquity. On the number he notes the Septuagint reads three hundred and five men and Josephus three hundred and eighty-five, and suggests the eighty-five were the priests and the three hundred their families, all the population of Nob; the linen ephod marks those who administered, or had the right to administer, in sacred things, being the ordinary clothing of the priests. The destruction of the city he calls one of the worst acts of Saul&rsquo;s life, his malice implacable and his wrath cruel, with no motive of justice or policy by which such barbarity can be justified. Wesley reads the naming of Doeg&rsquo;s race as deliberate, set down to wipe the stain of the butchery off the Israelite nation and to show why he was so ready for it, being of a people that bore implacable hatred against Israel and the priests of the Lord; and of the city he says that in all Saul&rsquo;s life there is no wickedness to be compared with it, that he appears now wholly under the power of the evil spirit which had long tormented him, and that the destruction could not but go to the heart of every pious Israelite and make them wish a thousand times they had been content with Samuel&rsquo;s government."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill glosses the footmen as the runners who used to run before the king when he went from place to place and were waiting on him here, and reports the Jewish tradition that these were Abner and Amasa, with Kimchi&rsquo;s objection that those two were no footmen but princes and captains. Of the turn to Doeg he puts it bluntly, that Saul was determined they should die, and if one would not do it another should, and who so fit for this bloody work as their false accuser and false witness? Of the city he will not settle whose hand it was, Doeg&rsquo;s or Saul&rsquo;s, noting Josephus has the king send men to slay all the inhabitants."
+   }
+  ],
+  "debates": [
+   {
+    "question": "How many were killed at the sanctuary?",
+    "positions": [
+     {
+      "view": "Fourscore and five, as the Hebrew has it",
+      "held_by": [
+       "Keil and Delitzsch",
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Three hundred and five in the Septuagint and three hundred and eighty-five in Josephus; probably eighty-five priests and three hundred of their families",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why is the slayer&rsquo;s nation named?",
+    "positions": [
+     {
+      "view": "To clear Israel of the butchery and to account for his readiness, his people hating Israel and its priests",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "Because he was a ruthless man capable of any species of iniquity, whoever he was",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Keil and Delitzsch",
+    "claim": "Alone in naming the real blasphemy: Saul treated a supposed conspiracy against himself as treason against Jehovah, and destroyed Nob as a city under the ban."
+   },
+   {
+    "voice": "John Gill",
+    "claim": "Alone in reporting, and in having Kimchi refute, the tradition that the runners who refused were Abner and Amasa."
+   }
+  ],
+  "themes": [
+   "Turn, and slay the priests of the Lord; because their hand also is with David",
+   "But the servants of the king would not put forth their hand to fall upon the priests of the Lord",
+   "And the king said to Doeg, Turn thou, and fall upon the priests",
+   "slew on that day fourscore and five persons that did wear a linen ephod",
+   "And Nob, the city of the priests, smote he with the edge of the sword, both men and women, children and sucklings"
+  ],
+  "excluded_voices": [],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-22",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.39
+   }
   }
  },
  "20": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
+   "Charles Ellicott",
    "Matthew Henry",
    "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
+   "Keil and Delitzsch"
   ],
+  "range": "20-23",
+  "pericope_label": "Abiathar escapes to David, who owns himself the cause and promises him safeguard",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill supposes Abiathar was left by his father to care for the sanctuary and its holy things when the rest were summoned, and that on hearing of the execution he took the ephod, with the Urim and Thummim, and escaped before the king&rsquo;s messengers could reach Nob; he adds that this man succeeded his father in the high priesthood and continued in it until the times of Solomon. Of the tidings he says David had perhaps not yet heard them, though news of that nature generally flies swiftly, and of the confession that David means he thought it in his mind at the time. Of the promise he observes the man plainly appeared to be in a fright, not knowing what to do nor where to go, so that David invites and encourages him to stay and not be afraid of Saul nor any other."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch translate David's confession of guilt and his pledge of protection; Ellicott traces Abiathar's whole career to his banishment under Solomon."
+    "summary": "Ellicott gives the same account of the escape, that Abiathar remained behind to perform the necessary functions in the sanctuary and fled on hearing of the death of his father and his brother priests, but disturbs the sequence the chapter seems to give: the exact period of his coming to the exiled band is uncertain, since in many of the recitals in this book no note of time is given, so it is probable the meeting with David did not take place immediately after the massacre, nor even directly after the destruction of Nob, and from a statement in the following chapter it would appear he only joined David at Keilah. From that time, he adds, Abiathar occupies an important place in the story of David&rsquo;s life. He also brings in the Talmudic tradition that the Edomite had been brought up with Saul in the family of Kish and was jealous for his master with the passionate jealousy often found in old servants, even the praises of David that the Talmud puts in his mouth being held to have had a malicious object. Keil and Delitzsch keep to the plain reading, that he fled after David, that is to David the fugitive, and told him of the barbarous vengeance Saul had taken on the priests of the Lord; they settle the lexical question under David&rsquo;s confession, that the verb he uses carries the sense of being the cause of a thing, a meaning the root has in Arabic and Talmudic usage; and they note that the noun rendered safeguard is an abstract, protection or keeping, used here for the concrete, so the sense is simply that Abiathar is protected with him."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry reads Abiathar's flight to David typically — sufferers for the Son of David commit their souls to him — and notes David's grief and his penning of Psalm 52."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Abiathar carried the ephod with the Urim and Thummim in his escape, bringing the oracle to David."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the escape of Abiathar",
-   "the ephod brought to David",
-   "David's grief and guilt",
-   "a priest for the coming king"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill imagines the shocking disclosure — news David had perhaps not yet heard, a sorrowful account of the Lord's own priests slain."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch set the report with its sequel, showing it draws from David at once both confession and the pledge 'Abide with me, fear not.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the dreadful tidings",
-   "the Lord's priests slain",
-   "news reaching David",
-   "the surviving witness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: David, suspecting Doeg would inform, calls himself the 'innocent cause' of the priests' destruction — no wrong done, yet the guilt of the outcome owned."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott sets the confession against a long Talmudic enmity between David and Doeg, the old servant jealous for Saul's house."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads 'I knew it that day' as David's inward foreboding at Nob, now confirmed by the event."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "David's self-reproach",
-   "the innocent cause",
-   "enmity with Doeg",
-   "owning guilt versus Saul's denial"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: David invites and encourages the frightened Abiathar to stay, bidding him fear neither Saul nor any other."
+    "summary": "Henry adds that Abiathar had intelligence of the danger in time to shift for his own safety, and asks where else he should go but to David. On the confession he is the least indulgent of the voices: David lamented the calamity, but especially his being accessory to it, and must have been much pained to consider that his own falsehood was one cause of this fatal event; indeed he knew the man&rsquo;s character so well that he feared some such mischief when he saw him at the sanctuary. He notes that David calls him the Edomite because he kept the heart of an Edomite, though by embracing the Jewish religion he had put on the mask of an Israelite, and that it is a great trouble to a good man to find himself in any way an occasion of the calamities of the church and ministry. He closes on the symmetry of it, that David had now not only a prophet with him but a priest, and a high priest, a happy omen of his success, and yet Saul also had a high priest, since he had a Urim to consult, for even those who hate the power of godliness will not be without the form."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke: 'he that seeketh my life seeketh thy life' — a common enemy makes common safety, and David is bound in conscience to defend him at his own risk."
+    "summary": "Clarke confirms from a later chapter that the man carried his sacerdotal garments with him, and makes David guiltless: seeing the Edomite there he suspected he would make the matter known, and he has been the innocent cause of their destruction. Of the promise he draws out what it cost, that Saul&rsquo;s enmity is directed against Abiathar as well as David, so he can have no safety but in being closely attached to him, and David undertakes to defend him even at the risk of his own life, which he was bound in duty and conscience to do."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'with me thou shalt be in safeguard'",
-   "protection at David's own risk",
-   "shared danger, shared safety",
-   "the coming king a shelter"
+  "debates": [
+   {
+    "question": "How far was David to blame for the slaughter?",
+    "positions": [
+     {
+      "view": "The innocent cause: he suspected what Doeg would do, but the guilt is not his",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Accessory to it: his own falsehood at the sanctuary was one cause of the event",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "A question of the verb: it says only that he was the cause of the thing, as the root means in Arabic and Talmudic usage",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "When did Abiathar join David?",
+    "positions": [
+     {
+      "view": "At once, as the narrative reads: he fled after David the fugitive and told him",
+      "held_by": [
+       "Keil and Delitzsch",
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Not at once; the book gives no note of time, and by the following chapter he joined David at Keilah",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "claim": "Alone in observing that Saul too had a high priest and a Urim to consult, since even those who hate the power of godliness will not be without the form."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in detaching Abiathar&rsquo;s arrival from the massacre and placing it at Keilah on the evidence of the next chapter."
+   }
+  ],
+  "themes": [
+   "one of the sons of Ahimelech the son of Ahitub, named Abiathar, escaped, and fled after David",
+   "And Abiathar shewed David that Saul had slain the Lord&rsquo;s priests",
+   "I knew it that day, when Doeg the Edomite was there, that he would surely tell Saul",
+   "I have occasioned the death of all the persons of thy father&rsquo;s house",
+   "Abide thou with me, fear not: for he that seeketh my life seeketh thy life: but with me thou shalt be in safeguard"
+  ],
+  "excluded_voices": [],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-22",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
   }
  }
 }
