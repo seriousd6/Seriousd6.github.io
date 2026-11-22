@@ -109534,6 +109534,98 @@
         "20"
       ],
       "note": "A convergence that is probably not independent, flagged so it is not later counted as double attestation. Both Clarke and Ellicott illustrate the Philistine iron monopoly from PORSENNA's terms to Rome -- Clarke at v.19 ('not permitting any iron to be forged except for the purposes of agriculture: Ne ferro, nisi in agricultura, uterentur') and Ellicott at v.20 ('Porsenna, we read, in the time of the wars of the Republic, allowed the Romans iron implements for agriculture only'). Ellicott's 'we read' points to a source rather than to his own reading, and the allusion is a commonplace of the classical handbooks, so the two were presented as reaching the same parallel without any claim that they reached it independently. What IS distinctive is Clarke's further use of it: he presses the comparison into a contrast, finding that the Philistines 'did not grant them as much as Porsenna did to the Romans; he permitted the people to manufacture the implements of husbandry', since Israel had to go down even to sharpen a ploughshare. That inference is Clarke's alone and is recorded as his."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "fidelity",
+      "book": "esther",
+      "chapter": "2",
+      "verses": [
+        "23"
+      ],
+      "note": "ent.py caught a genuine interpolation of mine, the THIRD of this class in the run, and the pattern across all three is now unmistakable. Drafting the tile covering vv.19-23 I wrote that Ellicott cites the crucifying of 'the dead body of the Spartan king' after the stand at Thermopylae. Ellicott writes: 'The dead body of Leonidas was crucified by Xerxes' orders after the desperate stand at Thermopylae.' He names Leonidas and never says Spartan. The identification is of course correct -- Leonidas was king of Sparta -- but it is mine, not his, and attributing it to him overstates the block. Replaced with his own naming. The three instances now recorded are the Baptist at 1kings 19, Absalom at 2samuel 1, and Spartan here, and all three are the SAME failure: I supplied a correct identification for a name or reference the commentator gave in another form (a description, a chapter-and-verse citation, a personal name). The guard exists for exactly this and has now justified itself three times on a class that no length check, grade check or validator would ever see. Working rule for whoever writes next: whenever a source names a person, place or passage in one form and you render it in another, you are interpolating unless the source itself supplies both forms."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "disagreement",
+      "book": "esther",
+      "chapter": "2",
+      "verses": [
+        "23"
+      ],
+      "note": "ent.py ligature false positive, third instance, which should settle the small fix. The guard flagged 'Thermopylae' in the tile covering vv.19-23 as absent from the source. It is present, spelled with the ae digraph as a single character in Ellicott's text. Writing it as two ASCII letters is correct for the data tree, so the flag was overridden, as with 'Aramaean' at 1chronicles 19 and the abbreviation 'Syr.' for Syriac at nehemiah 6. Three instances, two distinct causes, one small fix: normalise the source with NFKD and map the ae and oe digraphs before the membership test, and add an alias table for the standard version abbreviations. Every chapter that quotes a classical place-name or a version sigil will keep producing these until it is done."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "esther",
+      "chapter": "2",
+      "verses": [
+        "23"
+      ],
+      "note": "JFB residue, FIFTEENTH consecutive chapter, but a SPARSE instance worth recording because it constrains the geometry differently from the last two. JFB has exactly ONE block in this chapter, at key 23, and it is foreign: the king's private gate from the palace into the temple, the old ceremonial kept up after the return from captivity though there was no king in Israel, and the honour by which Eastern kings have a gate devoted to their own use which is kept constantly closed -- which is JFB on EZEKIEL 44:1-3, with 2 Kings 16:18 cited alongside. Key 23 is congruent to 5 modulo 6, consistent with the familiar stride-6 offset-5 series (5, 11, 17, 23), but only ONE of those four positions is occupied here. So alongside Mode A (donor advancing forward, five chapters) and Mode B (one block stamped at every stride position, 1samuel 13), there are chapters where the stamping is sparse and lands on a single stride position. That is useful: it means the stride is a property of WHERE residue can land rather than a guarantee that every position gets filled, so a corpus sweep should record occupied positions as a subset of the stride series rather than expecting full series. Excluded."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "esther",
+      "chapter": "2",
+      "verses": [
+        "23"
+      ],
+      "note": "Chapter-final chrome, instance 31, NINTH consecutive chapter. Ellicott's block at key 23 is 1,063 words of which the real commentary is the opening portion (crucifixion as a Persian punishment with the Leonidas parallel, and the note that a sleepless night would later bring the book of the chronicles to be read), the rest the usual StudyLight tail. Reported chapter source 11,073, true nearer 10,100. Nine chapters in a row, and now in Esther as well as 1 and 2 Samuel, Nehemiah, Psalms and 1 Chronicles -- the defect is not confined to any book or genre."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "esther",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "21"
+      ],
+      "note": "Mandatory Henry placement check: HOLDS, 38th chapter. Henry's two blocks sit at keys 1 and 21 and both are on this chapter -- key 1 framing it by the putting down of one and the exalting of another, key 21 on Mordecai's discovery of the plot. He has nothing in vv.5-18, so the two middle tiles declare five voices each and none was invented for him."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "esther",
+      "chapter": "2",
+      "verses": [
+        "19"
+      ],
+      "note": "Two voices reach the same moral judgment about Ahasuerus from two different kinds of evidence, which is the good sort of convergence. On the virgins being gathered a SECOND time: Gill argues from the text's own silence, rejecting the suggestion that the phrase looks back to a collection made when Vashti was chosen 'as there is no proof of any such collection then made', and concluding that 'such was the lust of the king' that he gathered them again although he already had a queen. Ellicott argues from the calendar, that the incident falls between the marriage and the twelfth year, so that Esther had been his wife 'certainly less (possibly much less) than five years' -- and therefore 'how the word love is degraded in this connection is seen by the fact that' a second gathering took place at all. One reasons from what the text does not say, the other from how long the text says it had been; both arrive at the same reading of the king, and neither cites the other."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "esther",
+      "chapter": "2",
+      "verses": [
+        "23"
+      ],
+      "note": "A clean, specific disagreement on a matter of fact, both sides arguing from classical sources. How Bigthan and Teresh died: Clarke suspects the Hebrew rendered 'hanged on a tree' means IMPALED, and describes the method in detail -- 'A pointed stake is set upright in the ground, and the culprit is taken, placed on the sharp point, and then pulled down by his legs.' Ellicott makes it CRUCIFIXION, 'a common punishment among the Persians, especially on rebels', citing Herodotus and the crucifying of the dead body of Leonidas by Xerxes' orders after Thermopylae. Both are attested Persian practices, both men reason from the classical historians, and the Hebrew phrase will carry either. Preserved as the two readings they are rather than collapsed into the Authorised Version's 'hanged', which is probably the least likely of the three."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "esther",
+      "chapter": "2",
+      "verses": [
+        "21"
+      ],
+      "note": "Clarke settles a question of Mordecai's rank by an argument from LATER narrative, which is a method worth noting because it is rare among these voices and is sound. On his sitting in the king's gate: 'Mordecai might have been one of the officers of the king, as the gate was the place where such usually attended to await the king's call. It is NOT LIKELY THAT HE WAS THE PORTER; had he been only such, Haman could have removed him at once.' That is, the fact that Haman in a later chapter has to seek a decree against the whole nation rather than simply dismiss an inconvenient doorkeeper is evidence about Mordecai's standing here. Wesley reaches the same conclusion about the office but grounds it differently, that he sat there 'by office, as one of the king's guards or ministers, being advanced to this place by Esther's favour' -- which adds a cause Clarke does not give. Both were kept, since the office and the route to it are separate claims."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "esther",
+      "chapter": "2",
+      "verses": [
+        "7",
+        "13"
+      ],
+      "note": "Two places where a single voice supplies something no other does, and both were given room. (1) At v.7 Clarke alone settles the kinship against the versions: Esther 'was the daughter of Abihail, the uncle of Mordecai, and therefore must have been Mordecai's cousin, though the Vulgate and Josephus make her Mordecai's niece: but it is safest here to follow the Hebrew.' The others take the cousinship for granted without noticing that two major authorities differ. (2) At v.13 Wesley alone defends Esther's position on the supposition that she had NOT been chosen: 'every one whom the king took to his bed, was his wife of a lower rank, as Hagar was Abraham's, so that it would have been no sin or dishonour to Esther, though she had not been made queen.' That is a moral judgment the chapter invites and no other voice here makes; it is recorded as his alone rather than folded into the general comment, since a reader may well want to know who said it."
     }
   ]
 }
