@@ -109153,6 +109153,119 @@
         "1"
       ],
       "note": "Highest expansion ratio recorded in this run, and recorded deliberately so it is not later mistaken for padding. The tile covering vv.1-5 is 545 words against 887 usable source words, an expansion of 0.61, where this worker's chapters have otherwise run between 0.11 and 0.43. The cause is the chapter's thinness rather than any stretching: three declarable voices in that span (Gill excluded for a three-word pointer), of whom Ellicott supplies textual collation, Clarke an outline and one gloss, and Henry a short devotional passage. Every clause of the prose is grounded and the chapter gate returns no PAD and no FLOOR with mean TTR 0.629, but the ratio is high and the reason is structural. The two later tiles sit at 0.35 and 0.25. For comparison the true figures are a little better than these, since roughly a quarter of the chapter's reported source is the chrome at key 19, which inflates the denominator of the third tile only."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "10",
+      "verses": [
+        "17",
+        "18",
+        "19"
+      ],
+      "note": "DECLINED, and on a new ground that matters more than this one chapter: the chrome defect can make an unwritable chapter look writable, which is the opposite of the conservative bias recorded for it so far. The source has 18 keys for 19 verses, the gap being at key 17, so no tile may span from 16 to 18 and vv.18-19 are irreducibly a two-verse run of their own. The run's REAL content is about 284 words: Clarke 18 words at v.18 (Jarchi, that Hadoram was stoned when he endeavoured to collect the tribute Solomon had imposed) and 191 at v.19 (that a few soft words and the removal of part of the taxes would have secured the people and prevented the shedding of a sea of blood, with his comparison of Rehoboam to the Stuarts losing England while the House of Brunswick kept it by different treatment); Ellicott 40 words at v.18 on the name Hadoram against Kings' Adoram and the Vatican LXX's Adoniram, and about 35 at v.19 on 'unto this day', that neither the compiler of Kings nor the chronicler saw fit to alter a phrase which no longer applied to their own political circumstances. A minimum tile is 350 words, so 350 against 284 is an expansion of 1.23 -- restatement with padding, not distillation. BUT usable_source_words reports 1,291 for that span, because roughly 1,000 of Ellicott's 1,034-word block at key 19 is the StudyLight tail. So the gate would compute 350/1291 = 0.27 and pass a tile I know to be stretched. Every chrome instance recorded up to now inflated the denominator and made ratios read BETTER than the truth, which is safe; this is the first case where it would wave through prose that should not pass. The thin exemption is no escape either: it requires 200 usable source words or fewer, and the span computes at 1,291 with the chrome and still 284 without it. Padding excluded_voices to buy a thin pass would be exactly what the validator's own comment warns against, so it was not done. Nor can the 16 writable verses be tiled alone: the assembler rewrites the whole file, so keys 18 and 19 would lose their existing legacy prose, which is the 1chronicles 1 and 1chronicles 8 trap. RECOMMENDATION, in preference order: (1) strip the chapter-final chrome, after which this span computes at 284 and the real decision becomes visible rather than hidden; (2) give the loop a way to convert the verses a chapter CAN support and leave the rest on legacy prose, which here would land 16 of 19 verses honestly and leave the chapter listed with 2 legacy verses until the harvest supplies key 17; (3) failing both, the chapter belongs on docs/agents/cow-synthesis-blocklist.json alongside numbers 31, with unblock_when: key 17 is harvested, or the chrome is stripped and a sub-350 tile is permitted for a stranded short run. Not added here, per the standing instruction. Note finally that this is the SECOND Chronicles chapter in two picks whose thinness comes from the other voices deferring to their notes on the parallel in Kings, as recorded at 1chronicles 19 -- Ellicott carries 1,908 of the 4,437 words and Gill's entire contribution is 5 words at key 11."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "17",
+      "verses": [
+        "5",
+        "17",
+        "23"
+      ],
+      "note": "JFB stride-6 residue, THIRTEENTH consecutive chapter, FIFTH forward-running donor, and the donor is ADJACENT to the last one, which is the sharpest clue yet about the source file's layout. All three JFB blocks are foreign and come from 1 KINGS 9, advancing as the keys advance: key 5 is JFB's section heading on 1 Kings 9:1-9 ('God's Covenant in a Second Vision with Solomon. This first verse is connected with 1Ki 9:11, all that is contained between 1Ki 9:2-10 being parenthetical'); key 17 is on the Galilean cities given to Hiram, 1 Kings 9:11-13 (Josephus placing them northwest adjacent to Tyre, never conquered till then, inhabited by Canaanite heathens, probably given to Hiram as remuneration for workmen and wrought gold); key 23 is on Solomon's levy and Millo, 1 Kings 9:15. Stride 6, offset 5. The previous chapter worked, 1chronicles 19, drew its residue from 1 KINGS 10 -- the gold shields and the ivory throne. Two consecutively worked Chronicles chapters drawing from two consecutive Kings chapters is much stronger than the stride alone: it suggests the harvester is reading a concatenated file in order and that the offset into it advances roughly with the target, which would make the whole defect predictable and therefore correctable in bulk rather than chapter by chapter. A corpus-wide sweep recording (target chapter, residue keys, donor passage) would now settle the geometry; the five documented donors so far are Joshua 6-8 for ruth 2, 1 Chronicles 1 for nehemiah 2, Judges 7 for 2samuel 1, 1 Kings 10 for 1chronicles 19 and 1 Kings 9 for this chapter."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "17",
+      "verses": [
+        "27"
+      ],
+      "note": "Chapter-final chrome, instance 29, SEVENTH consecutive chapter. Ellicott's block at key 27 is 1,060 words of which the real commentary is the opening portion (rendering the last petition as 'and now Thou hast willed to bless' against Samuel's 'be willing, and bless', and noting that Samuel is as usual fuller), the rest being the StudyLight tail. Reported chapter source 8,410, true nearer 7,440. Seven chapters in a row without a single variation in shape."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "16"
+      ],
+      "note": "Mandatory Henry placement check: HOLDS, 36th chapter. Henry's two blocks are at keys 1 and 16 and both are on this chapter -- key 1 on David's solicitude for God's house, key 16 on his prayer in answer to the message. Both are section expositions covering their whole span, as usual."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "17",
+      "verses": [
+        "16"
+      ],
+      "note": "Wesley-Henry borrowing, instance 32, and by a wide margin the CLOSEST yet recorded -- effectively verbatim for about seventy words including the closing prayer, which settles that these are not independent witnesses. Henry at key 16: 'How humbly does he here abase himself, and acknowledge his own unworthiness! How highly does he advance the name of God and admire his condescending grace and favour! With what devout affections does he magnify the God of Israel ... With what assurance does he build upon the promise ... What an example is this to us of humble, believing, fervent prayer! The Lord enable us all thus to seek him!' Wesley at the same key: 'How humbly does he here abase himself, and acknowledge his own unworthiness! How highly does he advance the name of God, and admire his condescending favour? With what devout affections does he magnify the God of Israel: with what assurance build upon the promise! What an example is this of believing, fervent prayer! The Lord enable us all thus to seek him!' The prose therefore credits the passage to Henry and says in plain terms that Wesley reproduces it almost word for word, and the tags record under the wesleyan-arminian summary that the two are not independent here and are not presented as such. Thirty-two instances in, the working assumption should now be inverted: on a devotional observation where Henry and Wesley agree closely, assume borrowing unless the wording clearly diverges, rather than the other way round."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "17",
+      "verses": [
+        "2",
+        "12",
+        "18",
+        "22"
+      ],
+      "note": "K&D sliding windows, and the most extreme case measured: FOUR OF FIVE of this chapter's K&D blocks are 100 per cent biblical text with no commentary whatsoever. The blocks at keys 2, 12, 18 and 22 each run to the harvest's 200-word ceiling (178 at key 22) and consist entirely of the recited verses -- key 2 reciting vv.2-8, key 12 vv.12-16, key 18 vv.18-21, key 22 vv.22-24 -- so the window is wholly consumed by recitation before any comment can appear. Only the block at key 11 contains an actual remark, the note that 'to go with thy fathers' is more primitive than Samuel's 'lie down with thy fathers'. Consequences, both of which were applied here: (1) K&D is undeclarable in three of the four tiles and is named in excluded_voices for them, under the standing rule against declaring a voice whose only block in the span is bare verse text; (2) usable_source_words counts all of this recitation, so K&D contributed 978 words to the chapter's reported total of which only about 200 are commentary. Together with the chrome at key 27 that is roughly 1,750 words of the reported 8,410 which are not commentary at all. The recommendation to make usable_source_words discount bare quoted verse text now has its strongest supporting case."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "17",
+      "verses": [
+        "4",
+        "17",
+        "27"
+      ],
+      "note": "A pattern across the chapter worth naming, because two voices find it independently at different verses: the chronicler repeatedly converts Samuel's QUESTIONS AND REQUESTS into STATEMENTS. Ellicott at v.4: this account says flatly 'thou shalt not build me an house', better rendered 'it is not thou that shalt build me the house', where Samuel asks interrogatively 'wilt thou build me a house for me to dwell in?'. Henry at v.17, working the parallel independently and by his own avowed method: 'That which is there expressed by way of question (Is this the manner of men, O Lord God?) is here an acknowledgment: Thou hast regarded me according to the estate of a man of high degree.' Ellicott again at v.27: the closing petition is better read not as a request that it may please God to bless but as a statement that he has willed to bless, Samuel having plainly 'be willing, and bless'. Three instances, two voices, one movement. Also at v.4 Ellicott explains the definite article of 'the house' by the chronicler's vantage point, since he writes with Solomon's famous temple already standing -- which is the same editorial awareness showing itself in the grammar."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "17",
+      "verses": [
+        "11",
+        "16"
+      ],
+      "note": "Two judgments about which text is older, pointing opposite ways, and both were preserved. K&D at v.11 hold that CHRONICLES preserves the more primitive idiom: 'to go with thy fathers' is 'more primitive than the more usual' expression in 2 Samuel 7:12. Ellicott at v.16 holds that SAMUEL preserves the more original form: where this account addresses God as Jehovah Elohim, 'Samuel has Adonai Jehovah, which is more original.' The two are not strictly contradictory, since they concern different features, but together they show that 'which text is earlier' is settled feature by feature rather than book by book -- and a polish pass that flattened either into a general claim about the priority of Samuel would misrepresent both. Ellicott's wider position in this chapter is in fact that Samuel is 'as usual' the fuller text, which makes his individual concessions to Chronicles the more notable."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "17",
+      "verses": [
+        "21",
+        "22",
+        "24"
+      ],
+      "note": "Ellicott proposes text-critical operations of three different kinds in this chapter and is candid about each, so they were attributed as proposals rather than findings. (1) A VARIANT with theological weight at v.21: where this account has 'which God went to redeem', 'Samuel has which gods went' -- a plural, so that the chronicler's text reads as a correction of the older one. (2) A conjecture of PHYSICAL DAMAGE at v.22: where Samuel has a verb meaning confirmed it, 'our reading is probably a result of partial obliteration'. (3) Two EMENDATIONS at v.18, that Samuel has the word for 'speak' which this account omits and that the word rendered 'for the honour' may be a corruption of it, and that 'of thy servant' stands in the accusative and 'should be omitted as a mistaken repetition'. He also notes at v.24 that 'let be' is absent from the Hebrew, so the clause about the house of David may be no petition at all but part of a future doxology. Four distinct classes of textual argument from one commentator in one chapter, which is unusual in this corpus and is why the tiles covering vv.16-19 and vv.20-27 are largely his."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "17",
+      "verses": [
+        "27"
+      ],
+      "note": "Clarke states the deferral policy outright here, which directly confirms the excluded_voices class documented at 1chronicles 19 one pick earlier. At the end of this chapter he writes: 'The reader is requested to refer to 2 Samuel 7, and the notes there for many particulars that belong to the parallel places here, and which it should answer no good purpose to repeat in this place.' At key 1 he had already written: 'See every thing recorded in this chapter amply detailed in the notes on 2Sam 7:1.' And Wesley's only block in the chapter's first tile is the same move in miniature: 'This whole chapter is explained, 2Sam 7:1-29, where the same things are recorded with little variation.' So the thinness of the Chronicles parallels is not a harvest failure but the commentators' deliberate editorial practice, now stated in their own words. That is worth putting in the loop doc beside the extended rule, because it tells a worker what to EXPECT before sizing a Chronicles chapter: the synoptic chapters will be carried by whoever does not defer -- here Ellicott with 4,007 of 8,410 words, and Gill contributing three words in total ('See Chapter Introduction')."
     }
   ]
 }
