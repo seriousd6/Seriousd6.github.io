@@ -109626,6 +109626,110 @@
         "13"
       ],
       "note": "Two places where a single voice supplies something no other does, and both were given room. (1) At v.7 Clarke alone settles the kinship against the versions: Esther 'was the daughter of Abihail, the uncle of Mordecai, and therefore must have been Mordecai's cousin, though the Vulgate and Josephus make her Mordecai's niece: but it is safest here to follow the Hebrew.' The others take the cousinship for granted without noticing that two major authorities differ. (2) At v.13 Wesley alone defends Esther's position on the supposition that she had NOT been chosen: 'every one whom the king took to his bed, was his wife of a lower rank, as Hagar was Abraham's, so that it would have been no sin or dishonour to Esther, though she had not been made queen.' That is a moral judgment the chapter invites and no other voice here makes; it is recorded as his alone rather than folded into the general comment, since a reader may well want to know who said it."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "esther",
+      "chapter": "4",
+      "verses": [
+        "14"
+      ],
+      "note": "Chapter-final chrome, instance of the recurring Ellicott defect but in a new place: Ellicott's LAST key in the chapter (14, not 17) carries 1240 words of which only about 340 are commentary; the remaining ~900 are StudyLight page furniture (CSS, inline JS, the nav menu, the whole book_data array, copyright and ads boilerplate). This widens the pattern I had recorded as 'nine consecutive chapters' to a general rule: the chrome attaches to whichever key is Ellicott's last in the chapter. Effect here is only to inflate usable_source_words by ~900 (9442 reported vs ~8540 real), which flatters every ratio; no tiling decision depended on it."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "esther",
+      "chapter": "4",
+      "verses": [
+        "2",
+        "3",
+        "4",
+        "10",
+        "13",
+        "16"
+      ],
+      "note": "Keil and Delitzsch are harvested as overlapping 200-word sliding windows, not as section blocks, and each window is cut mid-sentence. Keys 3 and 4 repeat the whole of key 2's second half verbatim; key 1 and key 5 are both truncated in mid-clause ('Mordochai learnt all that was done, - not', 'not so much for the purpose of raising the indignation of Esther to the'), and key 13 ends on 'Though God and prayer are not'. Two consequences: duplicate-looking agreement that is one window seen twice, and commentary that cannot be used because its sentence does not finish."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "esther",
+      "chapter": "4",
+      "verses": [
+        "9",
+        "11"
+      ],
+      "note": "Windowed-overlap loss: K&D's whole grammatical analysis of the law of the inner court (v.11) -- the nominativi absoluti, the anacoluthic predicate, the king seated on his throne in the inner court -- sits inside the key-9 window, while K&D has no block at keys 10, 11 or 12. Span-scoped tiling therefore has to drop it: it is out of narrative span for the 5-9 tile and ungrounded in the 10-14 tile. Four other voices cover v.11, so nothing essential is lost here, but the pattern will cost real content wherever the preceding verse's window is a voice's only block."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "esther",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "2",
+        "14"
+      ],
+      "note": "Wesley's Notes on this chapter are in large part Henry abridged, and the overlap is close enough to be quotation: Wesley v.1 'It was bravely done, thus publickly to espouse a just cause though it seemed to be a desperate one' against Henry 'It was nobly done thus publicly to espouse what he knew to be a righteous cause... even when it seemed a desperate and a sinking cause'; Wesley v.2 on the badges of sorrow is Henry's sentence compressed; Wesley v.14 'the language of strong faith, against hope believing in hope' and 'We should every one of us consider, for what end God has put us in the place where we are' are both Henry verbatim. Henry-plus-Wesley agreement is therefore ONE witness, not two, and a voice-counting prevalence field cannot see it. I dropped Wesley from the 1-4 tile for this reason and used him only where he is independent (v.4 on why the raiment was sent, v.11 on the courtiers' contrivance, v.16 on the three days' arithmetic)."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "fidelity",
+      "book": "esther",
+      "chapter": "4",
+      "verses": [
+        "16"
+      ],
+      "note": "A real disagreement inside one school, worth preserving because it is invisible to school-level prevalence: on 'fast ye for me', Wesley glosses the command as 'fast AND PRAY, so as you use to do' and makes the abstinence instrumental to constant and fervent prayer, while Clarke, in the same school, says 'What a strange thing, that still we hear nothing of prayer, nor of God' and declines to account for the silence. Both are wesleyan-arminian; the tags record them as a two-position debate rather than a single school summary."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "esther",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "3",
+        "14",
+        "16"
+      ],
+      "note": "The no-prayer observation is a genuine chapter-level thread running through four separate keys and two schools: Ellicott at v.1 (external manifestations solely, with Daniel, Ezra and Nehemiah set against them), Clarke at v.3 (not the slightest intimation of praying to God), Ellicott at v.14 (a lack of nobler feeling, no suggestion of turning for aid to God, so the deliverance comes indirectly), Clarke at v.16 (still nothing of prayer, nor of God). Two independent schools reaching the same verdict four times is the strongest convergence in the chapter and is carried in all four tiles."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "fidelity",
+      "book": "esther",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "5"
+      ],
+      "note": "Mandatory-Henry placement drove the tiling. Henry has only two blocks in this chapter, at keys 1 and 5; the key-1 block covers vv.1-4 and the key-5 block covers vv.5-17 entire. Tile boundaries were set at 1-4 / 5-9 / 10-14 / 15-17 so that Henry's key-1 block is wholly inside the first tile, and only Henry's sections I-II (vv.5-9: the enquiry, the report, the copy, the charge) were drawn on in the second. His sections III-V, on the law, on 'such a time as this' and on the fast, are therefore unused, since he has no block at keys 10-17 and declaring him there would be span-ungrounded. Four voices cover 10-14 and four cover 15-17, so the tiles stand without him."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "esther",
+      "chapter": "4",
+      "verses": [
+        "15",
+        "16",
+        "17"
+      ],
+      "note": "The closing tile is the one place in this chapter where compression is nearly flat: 526 words of prose against 645 reported source words (0.82), and against roughly 528 words of actual commentary once K&D's 75 words of bare verse recitation are discounted, the true ratio is about 1.0. The span simply has little commentary -- Gill's v.15 is a bare connective and K&D's only remark on v.17 is one clause -- and I wrote to the low end rather than pad. A source-words measure that discounted quoted verse text would have shown this honestly instead of reading 0.82."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "fidelity",
+      "book": "esther",
+      "chapter": "4",
+      "verses": [
+        "14"
+      ],
+      "note": "Two attestation traps avoided here. First, Wesley and K&D appear to agree independently that 'from another place' is confident faith, but Wesley's wording is Henry's, so the agreement is Henry and K&D. Second, Ellicott's denial that the saying proves Mordecai's faith rests on exactly the same evidence Clarke uses to praise it (the fact of Esther's elevation), so their opposition is a difference of judgement on one datum, not two witnesses. Both are recorded in the debate rather than flattened into school summaries."
     }
   ]
 }
