@@ -108961,6 +108961,92 @@
         "3"
       ],
       "note": "Two sustained minority readings run through this psalm and neither was flattened. Augustine alone makes God's delay deliberate pedagogy -- 'Thou despisest seasonably, and causest tribulations to inflame men's minds with longing for Thy coming. For that fountain of life is sweeter to them that have much thirst' -- and extends the principle much further than any other voice would, to the permission of heresies, which providence ordains as darkness so that 'by comparison therewith the light may be more pleasant'. Gill alone reads the wicked one allegorically throughout, as the man of sin and son of perdition: boasting of universal power over bishops and princes and of infallibility (v.3), the little horn with a look more stout than his fellows (v.4), the mouth of the first beast and the speech of the second (v.9), and the beast with two horns like a lamb that calls itself the servant of servants (v.10). Both are genuinely single-voice positions and are labelled as such in the outliers rather than merged into a school consensus."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "3",
+      "verses": [
+        "7",
+        "12",
+        "13",
+        "14",
+        "23"
+      ],
+      "note": "This chapter is the POSITIVE case for tiling, and the direct counterpart to the 1chronicles 1 and 1chronicles 8 declines, so it is worth recording as the contrast. Like those two it is 1 Chronicles genealogy with a harvest gap (key 7 missing, 23 source keys for 24 verses) and with very thin interior keys: 16 source words at key 12, 22 at key 13, 33 at key 14, 31 at key 23, 68 at key 4 -- all Ellicott-only. And like those two, the legacy per-verse file had padded every one of them to 350-400 words of prose: 356 words resting on 16 at key 12, 365 on 22 at key 13, 372 on 33 at key 14, 350 on 31 at key 23. The difference that makes this chapter writable is that the thin keys are INTERIOR to contiguous runs rather than isolated between gaps. The runs are 1-6 and 8-24, so three tiles (1-6, 8-16, 17-24) absorb every thin key into a span with 1,977 / 2,018 / 3,097 words of source behind it, and the single gap at key 7 is never spanned. Every one of the 23 source keys is covered, so no live prose is deleted. That is the whole test: a thin key inside a run is harmless, a thin key marooned between gaps is fatal. Worth stating plainly in the loop doc, because on a key-by-key reading this chapter looks as bad as the two that were declined and is in fact a clean conversion that replaces ~8,700 words of padded per-verse prose with 1,941 words of grounded pericope prose."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "3",
+      "verses": [
+        "24"
+      ],
+      "note": "Chapter-final chrome, instance 27, FIFTH consecutive chapter. Ellicott's block at key 24 is 1,073 words; the real commentary is the opening portion on the sons of Elioenai as the sixth generation from Zerubbabel, dating them to about 345 B.C. under Artaxerxes Ochus, after which the StudyLight tail begins (26 markers counted). So the chapter's reported 7,092 usable source words overstate by roughly 970 -- a seventh of the whole chapter -- and tile 3's expansion reads 0.21 where the truth is nearer 0.31. Five chapters in a row now, across 2 Samuel, Nehemiah, Psalms and 1 Chronicles, always the final Ellicott block of the chapter, always ~1,050-1,090 words with 60-100 of commentary. On a chapter this small the distortion is proportionally the worst yet recorded."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "10"
+      ],
+      "note": "Mandatory Henry placement check: HOLDS, 34th chapter. Henry has only two blocks, at keys 1 and 10, and both are on this chapter -- key 1 on David's sons and the griefs they cost him, key 10 on the line of kings and the two gospel genealogies. Note that Henry is entirely absent from vv.17-24, so the third tile declares five voices rather than six; he has no block in that span and none was invented for him."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "3",
+      "verses": [
+        "19"
+      ],
+      "note": "The chapter's central crux, preserved as four distinct remedies rather than resolved. Zerubbabel is son of Pedaiah here but son of Shealtiel in Haggai, Ezra and Matthew. Gill canvasses and REJECTS the easiest escape, the suggestion of Grotius and others that this is a different Zerubbabel ('I see no reason for that'), and offers two of his own: that Pedaiah was himself a son of Salathiel so the grandson may be called son, as Kimchi thinks, or -- his own preference -- that Salathiel, having no children, adopted his brother's son and made him successor in the government. Clarke reports textual surgery instead, that the words should be omitted since Pedaiah is wanting in the Syriac and Arabic, which would leave the gospel's descent standing; he also passes on Calmet's conjecture that the verse should read that the sons of Salathiel were Malchiram and Pedaiah. Wesley takes the sentence as elliptical, 'short and imperfect, as is frequent in the Hebrew language', with the grandson called son. Ellicott alone leaves the Hebrew entirely alone, by which the six persons of v.18 are Jeconiah's sons and Shealtiel's brothers. Four mechanisms -- adoption, deletion, ellipsis, and acceptance -- for one discrepancy, and the adoption solution is Gill's alone."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "3",
+      "verses": [
+        "17"
+      ],
+      "note": "Three-voice convergence reached three different ways, which is the good kind. All of Clarke, Ellicott and Wesley conclude that 'Assir' is not a personal name but the Hebrew word for prisoner used of Jeconiah. Clarke gets there from the gospel genealogy ('Salathiel was not the son of Assir, but of Jeconiah... Who then was Assir? Possibly nobody'). Ellicott gets there from the text itself, on two grounds -- that it 'accords with the Masoretic punctuation, which connects the term assir with Jeconiah', and that it 'accounts for the double reference to the offspring of Jeconiah', separating Zedekiah from the sons born in captivity -- and renders 'the sons of Jeconiah when captive'. Wesley simply glosses it, 'of Jechoniah the captive, which is added to shew that he begat his son when he was captive in Babylon'. Three independent routes, no shared citation and no quotation of one another, so unlike the 2samuel 1 Ellicott-quotes-Keil case this is real triple attestation and was written as such."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "3",
+      "verses": [
+        "22"
+      ],
+      "note": "A small crux with three solutions, one of them nobody else considers. The text numbers six sons of Shemaiah and names five. Clarke checks the evidence and finds none: 'Five only are found in the text, and the versions give us no assistance; neither do the MSS. correct the place', concluding that either the father is counted with his sons or 'some name must be lost out of the text'. Wesley allows the father may be included, but then proposes that the Hebrew word rendered six 'may be the proper name of one of the sons of Shemaiah' -- i.e. that the numeral is not a numeral at all. Ellicott notes the shortfall and points to the versions, which at v.21 turn what the Hebrew gives as several parallel families into a single descending line of son after son, so that the generations themselves are in doubt. Wesley's reading-the-numeral-as-a-name is the sort of proposal that would be easy to drop as eccentric and is preserved deliberately."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "3",
+      "verses": [
+        "8",
+        "18"
+      ],
+      "note": "Ellicott twice reads the history of Israelite religion out of the names themselves, which is unusual among these voices and was given room. (1) At v.8 he explains why the form meaning 'Lord knoweth' gave way to 'God knoweth': 'God was of old called Baal as well as El; and the former title was only discarded because it tended to foster a confusion between the degrading cultus of the Canaanite Baals, and the true religion of Israel. So it came to pass in later times that men were unwilling to write or speak the very name of Baal', substituting El or Iah, or else bosheth (shame), 'as in Ishbosheth instead of Eshbaal'. (2) At v.18 he finds the exile written into Jeconiah's sons' names, one being 'a compound Babylonian name, like Belteshazzar, of which the last part means protect, and the first is, perhaps, Sin, the moon-god' -- a name fit for 'a Jewish prince at the court of Babylon, just as Daniel and his three companions received idolatrous designations of the same sort'. Paired with his observation that Zerubbabel means 'born at Babel' while his father's name means 'Iah hath redeemed', this makes the genealogy itself a record of the captivity. No other voice here reads the onomastics at all."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "3",
+      "verses": [
+        "10"
+      ],
+      "note": "Henry supplies the chapter's theological point in two sentences and it would be easy for a polish pass to lose it among the names. On the line of kings: 'David having nineteen sons, we may suppose them to have raised many noble families in Israel whom we never hear of in the history. But the scripture gives us an account only of the descendants of Solomon here, and of Nathan, Luke iii. The rest had the honour to be the sons of David; but these only had the honour to be related to the Messiah. The sons of Nathan were his fathers as man, the sons of Solomon his predecessors as king.' That distinction -- one line supplying Christ's human ancestry and the other his royal title -- is why the chapter is in the canon at all, and it is the one place in this genealogy where a voice explains the list's purpose rather than its difficulties."
     }
   ]
 }
