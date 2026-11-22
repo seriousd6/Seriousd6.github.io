@@ -1,1209 +1,521 @@
 {
-"1": {
-"voices": [
-"John Gill",
-"Matthew Henry",
-"Adam Clarke",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott: the Hebrew is corrupt and the number lost; the LXX omit the verse, and 'Saul reigned one year' is only a conjectural paraphrase."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill surveys the readings—literal infant, an ellipsis of years, or the Targum's figure of a faultless one-year-old—without deciding."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "single",
-"summary": "Henry takes the plain sense (an uneventful first year) and warns the delay let the Philistines prepare, an instance of self-sufficiency leading to folly."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke moves the clause to ch. 12 as a chronological note and begins the chapter 'when Saul had reigned two years.'"
-}
-],
-"debates": [
-{
-"question": "What does 'Saul was the son of a year... he reigned two years' mean, given the defective Hebrew?",
-"sides": [
-{
-"position": "the text is corrupt and the age simply lost",
-"holders": [
-"Ellicott"
-]
-},
-{
-"position": "a plain chronological note—one quiet year, then the second year's events",
-"holders": [
-"Matthew Henry",
-"Adam Clarke"
-]
-},
-{
-"position": "figurative of innocence, following the Targum/Chaldee",
-"holders": [
-"Gill (as one option)"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"a corrupted number",
-"the accession of Saul",
-"self-sufficiency and folly",
-"textual honesty"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"2": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "majority",
-"summary": "Ellicott hails the first standing army in Israel and Saul's foresight; K&D note the verse follows the fixed regnal formula and introduces Jonathan."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill reads the 3000 as a personal guard plus a standing force to keep peace and watch the Philistines."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke guesses Saul split the force to surprise three garrisons and capture the weapons his men lacked."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"Israel's first standing army",
-"Saul's military foresight",
-"the entrance of Jonathan",
-"a disciplined remnant"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"3": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke",
-"Charles Ellicott",
-"John Wesley"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "majority",
-"summary": "K&D locate Geba (modern Jeba) apart from Gibeah; Ellicott makes the word 'garrison' possibly a pillar or an officer and paints Jonathan as the ideal warrior, the 'gazelle.'"
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill distinguishes Geba from Gibeah and identifies the post with the Philistine garrison left after Samuel's victory."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "several",
-"summary": "Clarke reads a surprise attack by unarmed men and praises Jonathan; Wesley makes the trumpet a call by messengers to gather for defence."
-}
-],
-"debates": [
-{
-"question": "Was Saul's trumpet a war-summons or a spreading of the news?",
-"sides": [
-{
-"position": "a summons to prepare at once for war",
-"holders": [
-"Ellicott"
-]
-},
-{
-"position": "messengers reporting Jonathan's deed and the Philistines' rage",
-"holders": [
-"Wesley"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"Geba distinguished from Gibeah",
-"Jonathan the warrior",
-"the war-trumpet",
-"a nation committed to war"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"4": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke",
-"Charles Ellicott",
-"John Wesley"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott: 'Saul' stands for Jonathan the general-in-chief; the ancient enmity from Joshua's conquest is roused, and the people gather slowly and disperse quickly."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill sees a concerted plan to clear the garrisons, but faults Saul for having disbanded his large army beforehand."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "several",
-"summary": "Wesley suspects a broken treaty behind the 'abomination'; Clarke calls the blow the start of war and the shaking off of the Philistine yoke."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"credit to the king",
-"Israel made to stink",
-"shaking off the yoke",
-"a slow and fickle gathering"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"5": {
-"voices": [
-"John Gill",
-"Adam Clarke",
-"Charles Ellicott",
-"John Wesley"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Ellicott marshals army-rolls (Jabin, Pharaoh, Solomon, Zerah) to show 30,000 chariots is impossible; the true reading is likely 300, the figures untrustworthy."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "several",
-"summary": "Clarke emends 'thirty thousand' to 'three thousand' on the Syriac and Arabic; Wesley takes the chariots as mostly baggage carriages, the allies all joined."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill reads the muster as Philistia's preemptive strike against a people bent on casting off their yoke."
-}
-],
-"debates": [
-{
-"question": "How is the impossible figure of 30,000 chariots to be handled?",
-"sides": [
-{
-"position": "a copyist's error for 3,000 (Syriac/Arabic) or 300",
-"holders": [
-"Clarke",
-"Ellicott"
-]
-},
-{
-"position": "mostly baggage carriages, not war chariots, swelled by allies",
-"holders": [
-"Wesley"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"an untrustworthy number",
-"a terrifying host",
-"textual criticism",
-"Philistia takes the field"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"6": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke",
-"Charles Ellicott",
-"John Wesley"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D detail the hiding-places and locate the scene at the Jordan-valley Gilgal; Ellicott stresses the allied host and reads 'high places' as towers/holds, not shrines."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill sets the distress against an overwhelming host that expected nothing but destruction, noting Abarbanel's alternative reading."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "several",
-"summary": "Wesley: the strait exposed the vanity of trusting a king; Clarke: unarmed and few, they fled to the caves in terror."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"Israel in a strait",
-"hiding in caves and holds",
-"the vanity of trusting men",
-"guilt makes cowards"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"7": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D read verse and context together: Saul lingers while his trembling army melts, and argue the Gilgal here is the one down in the Jordan valley."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill traces the flight beyond Jordan, with Kimchi, to the farthest and (as it once proved) safest ground, where Ammon had been beaten."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"flight over Jordan",
-"a trembling remnant",
-"the melting army",
-"the low-water mark"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"8": {
-"voices": [
-"Matthew Henry",
-"Adam Clarke",
-"Charles Ellicott",
-"John Wesley",
-"John Gill"
-],
-"schools": [
-{
-"school": "puritan-evangelical",
-"prevalence": "single",
-"summary": "Henry: Saul sinned by usurping sacrifice and spurning direction, then boasted instead of repenting—'not sinning but not repenting' ruins men."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "several",
-"summary": "Clarke: Saul fused prophet, priest and king and so attacked the constitution; Wesley notes the seventh day was not complete."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Ellicott: the charge of 1 Sam. 10:8 had been repeated for this occasion, and Saul's faith failed him under the pressure of his melting army."
-}
-],
-"debates": [
-{
-"question": "Wherein lay the gravity of Saul's sin?",
-"sides": [
-{
-"position": "unlawful assumption of priestly office, confounding the three sacred offices",
-"holders": [
-"Adam Clarke",
-"Matthew Henry (in part)"
-]
-},
-{
-"position": "unbelief and impatience—a failure of faith under pressure, disobeying a positive command",
-"holders": [
-"Charles Ellicott",
-"Matthew Henry"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"impatience at Gilgal",
-"presumption vs. obedience",
-"false piety",
-"sin without repentance"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"9": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D and Ellicott deny Saul offered with his own hand—a priest (Ahiah) officiated, as with David and Solomon; the sin lies in the timing, not usurped priesthood."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke calls the offering 'most perfectly unconstitutional'—Saul had no authority to offer or cause to be offered any sacrifice."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill reads Saul's motive: impatient, watching desertion, unwilling to fight before sacrificing and imploring God's help."
-}
-],
-"debates": [
-{
-"question": "Did Saul's sin consist in usurping the priest's office?",
-"sides": [
-{
-"position": "yes—an unconstitutional, unauthorized offering",
-"holders": [
-"Adam Clarke"
-]
-},
-{
-"position": "no—a priest officiated; the sin was the premature, disobedient timing",
-"holders": [
-"Keil and Delitzsch",
-"Charles Ellicott"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"the burnt offering",
-"priestly office or not",
-"the sin of timing",
-"form without obedience"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"10": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D give Saul's self-justifying reply and note 'entreated the face of Jehovah' echoes Exod. 32:11; Ellicott reads Saul's public greeting as genuine, lifelong reverence for Samuel."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke laments the fatal precipitation: one more hour would have prevented every evil and lost no good."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill notes Samuel came before the peace offerings could be made—Saul's haste outran even its own ritual."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the narrow margin",
-"fatal precipitation",
-"Saul's reverence for Samuel",
-"'what hast thou done?'"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"11": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke",
-"Charles Ellicott",
-"John Wesley"
-],
-"schools": [
-{
-"school": "wesleyan-arminian",
-"prevalence": "several",
-"summary": "Clarke itemizes Saul's three excuses and answers that Samuel came within the time; Wesley grants the day was far spent yet leaves the disobedience standing."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott reads the excuses as a preference to act without divine blessing—forgetting the Judges' deliverances—an overt rebellion; K&D show the doom's suppressed conditionals."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Samuel's question aims to draw out confession, though the prophet already knew the deed by the Spirit."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"true excuses, false heart",
-"acting without God",
-"overt rebellion",
-"the forfeited kingdom"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"12": {
-"voices": [
-"John Gill",
-"Adam Clarke",
-"John Wesley"
-],
-"schools": [
-{
-"school": "wesleyan-arminian",
-"prevalence": "several",
-"summary": "Clarke: Saul was sincere but rash, overriding the precept that the Lord should tell him what to do; Wesley reads 'I forced myself' as acting against his own conscience, sacrifice implying prayer."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill notes Saul 'said… within himself'—this is the inward calculation by which he reasoned past the command."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"'I forced myself'",
-"sincerity is no shield",
-"sacrifice and supplication",
-"conscience overruled"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"13": {
-"voices": [
-"John Gill",
-"John Wesley"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Saul is charged not with usurping the priesthood but with not waiting—impatience, disregard of Samuel, and distrust of God—rebuked boldly though he was king."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Wesley: 'for ever' means a long, generational stability the dynasty might have had, not the displacing of Judah's destined throne."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"'thou hast done foolishly'",
-"distrust dressed as prudence",
-"the forfeited dynasty",
-"'for ever' as long duration"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"14": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke",
-"Charles Ellicott",
-"John Wesley"
-],
-"schools": [
-{
-"school": "wesleyan-arminian",
-"prevalence": "several",
-"summary": "Clarke: 'after God's own heart' describes David's official, not private, conduct—a defence against infidels; Wesley stresses the sentence was conditional, the final rejection coming only at ch. 15."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott: David was still a child; the threat was conditional, no fatalism, yet foreknown; K&D note Saul mustered only 600, his sacrifice having gained nothing."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the kingdom is to pass from Saul's family and tribe altogether."
-}
-],
-"debates": [
-{
-"question": "Was the sentence on Saul final and just for so small a fault?",
-"sides": [
-{
-"position": "conditional and not yet final—repentance was still open until ch. 15",
-"holders": [
-"Ellicott",
-"Wesley"
-]
-},
-{
-"position": "just, because disobedience to an express command is no little sin—'no little god to sin against'",
-"holders": [
-"Wesley",
-"Matthew Henry"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"a man after God's own heart",
-"the forfeited kingdom",
-"conditional threatenings",
-"no little sin"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"15": {
-"voices": [
-"John Gill",
-"Matthew Henry",
-"Adam Clarke",
-"Charles Ellicott",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "puritan-evangelical",
-"prevalence": "single",
-"summary": "Henry: Saul is 'left to himself,' yet Samuel's going toward Gibeah shows he had not wholly abandoned him—still praying for the king he would not pray with."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D: the unseasonable sacrifice failed even to hold the army; Ellicott sees divine punishment already begun as only 600 answer the roll-call."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: Samuel accompanies Saul to give needful help, for Saul is not to be removed during his life—and not a sword or spear among the six hundred."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"Samuel's departure",
-"judgment tempered with mercy",
-"the six hundred",
-"disarmed by sin"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"16": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott corrects 'Gibeah' to 'Geba of Benjamin,' a strong pass-position for watching the enemy; K&D mark v.16 as the start of a new section on the raids and disarming before ch. 14's victory."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Saul and Jonathan are now joined to their men after the diminished muster."
-}
-],
-"debates": [
-{
-"question": "Is the place Gibeah or Geba of Benjamin?",
-"sides": [
-{
-"position": "Geba—the translators erred, misled by v.15",
-"holders": [
-"Ellicott"
-]
-},
-{
-"position": "Gibeah, as the received text reads",
-"holders": [
-"Gill (following the English)"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"Geba or Gibeah",
-"two entrenched camps",
-"a new narrative section",
-"the pass of Michmash"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"17": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D map the three raiding routes (Ophrah/land of Shual, etc.); Ellicott calls this Saul's lowest ebb, borrowing Stanley's image of the king weeping over his ruined land."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the unchecked raids proved the vanity of trusting a king and were suffered to turn Israel's trust back to the Lord."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: the Philistines split into three bands to pillage, a dispersal Jonathan would soon exploit."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"three raiding companies",
-"the vanity of the king",
-"Saul's lowest ebb",
-"providential humbling"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"18": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D read the three raiding routes as a deliberate fanning-out and join the verse to the note that no smith remained—the raids and the disarming are one calamity."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill fixes Beth-horon, upper and nether, in Ephraim, northwest of the Philistine camp at Michmash."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the three raiding routes",
-"total exposure",
-"no smith in Israel",
-"geography as pathos"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"19": {
-"voices": [
-"John Gill",
-"Adam Clarke",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: the Philistines carried off the smiths as Porsenna did to the Romans and Nebuchadnezzar to the Jews—a familiar instrument of subjugation."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Ellicott: allow a year or more of unchecked raids; the ruined smithies were chiefly in the south, Benjamin, the king's recruiting-ground."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the Philistines removed the smiths into their own country and forbade the trade in Israel."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"no smith in Israel",
-"disarming as subjugation",
-"historical parallels",
-"victory not by Israelite iron"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"20": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke",
-"Charles Ellicott",
-"John Wesley"
-],
-"schools": [
-{
-"school": "wesleyan-arminian",
-"prevalence": "several",
-"summary": "Wesley: 'down to the Philistines' means their garrisons within Israel, where the smiths were kept; Clarke: they were denied even the making of farm tools that Porsenna allowed Rome."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott parses the disputed tool-names (coulter/ploughshare, mattock/hoe); K&D read on to the swordless day of battle and resolve the tension with the Ammon victory."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Israel was obliged to go to the Philistine garrisons where the smith's trade was exercised."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"sharpening tools at the enemy's forge",
-"a subdued people",
-"the disputed implements",
-"deliverance the Lord's alone"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"21": {
-"voices": [
-"John Gill",
-"Adam Clarke",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Ellicott: 'file' (Targum, Rashi) has yielded to Gesenius's 'bluntness'—the tools grew dull for want of a smith; the LXX read it as the price of sharpening."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke traces petsirah to 'rub hard,' guessing a grindstone to restore blunted edges, though the versions differ widely."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: some kept files at home to sharpen their tools, others went to the Philistines when the edges were blunt."
-}
-],
-"debates": [
-{
-"question": "Does the obscure word mean 'a file' or 'bluntness'?",
-"sides": [
-{
-"position": "'a file' / grindstone (Targum, Rashi, AV)",
-"holders": [
-"Gill",
-"Clarke"
-]
-},
-{
-"position": "'bluntness' of edge (Gesenius and most moderns)",
-"holders": [
-"Ellicott"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"a translator's crux",
-"file or bluntness",
-"blunted, failing tools",
-"honest obscurity"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"22": {
-"voices": [
-"John Gill",
-"Adam Clarke",
-"Charles Ellicott",
-"John Wesley"
-],
-"schools": [
-{
-"school": "wesleyan-arminian",
-"prevalence": "several",
-"summary": "Clarke and Wesley qualify the 'no sword nor spear': bows and slings needed no smith and swords were hidden; the want was of new-forged close-combat arms among the six hundred."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Ellicott: the words are not to be pressed literally—the lack was in the southern valleys, the king's recruiting-ground, while Philistia armed its men to the teeth."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill sets the scene of the day of reckoning, when Israel must fight, flee, or surrender."
-}
-],
-"debates": [
-{
-"question": "Was Israel literally without any arms but Saul's and Jonathan's?",
-"sides": [
-{
-"position": "not literally—swords were hidden, and bows and slings abounded",
-"holders": [
-"Wesley",
-"Clarke"
-]
-},
-{
-"position": "true especially of the southern recruiting-districts, not the whole nation",
-"holders": [
-"Ellicott"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"neither sword nor spear",
-"Israel at its lowest",
-"the frame of a coming miracle",
-"victory not of flesh"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"23": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D and Ellicott read the verse as an introduction to Jonathan's exploit—a Philistine outpost pushed to the pass to guard against surprise; K&D detail the precipitous Wady es Suweinit."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill weighs the readings (Jarchi, Targum's 'governor,' Kimchi's 'generals'), preferring a garrison guarding a strong rocky pass near Michmash."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"a Philistine outpost",
-"the pass of Michmash",
-"a held breath",
-"transition to Jonathan's exploit"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-}
+ "1": {
+  "voices": [
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Gill",
+   "Adam Clarke",
+   "John Wesley",
+   "Matthew Henry"
+  ],
+  "range": "1-7",
+  "pericope_label": "Saul&rsquo;s standing army, Jonathan&rsquo;s blow at Geba, the Philistine muster and Israel in the caves",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott holds that the only possible literal rendering of the opening is that Saul was the son of one year when he began to reign, that the corruption or gap in the text dates from a far back period, and that the English version is simply a probable but conjectural paraphrase; he notes that the Chaldee and some of the Rabbis interpret it of Saul as an innocent child, and that in several places in these books the numbers are quite untrustworthy. The three thousand men he calls a very important statement, telling of the first beginning of a standing army in Israel and the first step towards her becoming a great military power: it was Saul&rsquo;s military genius and foresight that enabled David and Solomon to make the conquests which raised Israel for a time among the greatest of Eastern powers, while Saul&rsquo;s own great life was frittered away repelling domestic enemies. Of the Philistine host he says the figures are perfectly untrustworthy, arguing from the rolls of ancient armies, in which the war chariots are always fewer than the horsemen, whereas here they are made four times as numerous. Keil and Delitzsch meet the opening difficulty from the form of words instead: by the standing custom in the history of the kings such a notice opens with the king&rsquo;s age at his accession and the length of his reign, and comparison with the accession formulas of Ishbosheth and David and the kings of Judah leaves no doubt that this verse was meant to do the same, so that a number has dropped out. Of the flight they render the list of hiding places as caves, thorn-bushes, clefts of the rocks and fortresses."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill collects three readings of the opening clause: that Saul had a son a year old when he began to reign, namely Ishbosheth, who was forty when his father died; that there is an ellipsis of the number, to be supplied as thirty or forty; or that the words are figurative, of one like a child of a year old for purity and innocence. He supplies the arithmetic of the levy, that the three thousand were drawn from the three hundred thousand who had gone against the Ammonites, some appointed as a guard about Saul&rsquo;s person and the rest kept as a standing force. On the garrison Jonathan smote he argues against Jarchi that Geba is not the same place as Gibeah of Benjamin, since it can hardly be thought Jonathan would station himself with his thousand men where the Philistines had a garrison, and he follows Kimchi in making them two places, both in Benjamin and probably not far apart. He reports that Abarbinel refers the clause about the people being distressed not to Israel but to the other side."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the three thousand tactically, that Saul divided them and sent them against the garrisons at Michmash and Bethel and Gibeah, hoping by surprising them to get swords and spears for his people, of which the chapter later says they were entirely destitute. On the Philistine muster he finds no proportion between the chariots and the cavalry, observes that the largest armies ever brought into the field, even by mighty emperors, were never furnished with thirty thousand chariots, and judges the word for thirty a false reading for three, the Syriac and the Arabic both giving three thousand. The flight he explains by numbers and equipment, that the Israelites were few and totally unarmed as to swords and spears and were terrified at so numerous and well-appointed an army, Judea being full of rocks and caves where men might shelter, so that some hid, others fled beyond Jordan, and those who clave to Saul followed him trembling. Wesley keeps the figure of the chariots and changes the word, supposing most of them carriages for baggage rather than chariots of war."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets the whole retreat under a judgment: we are not told wherein Israel had offended so as to forfeit God&rsquo;s presence and turn his hand against them, but doubtless they had left God, else he would not have left them. Saul, he adds, was weak and impolitic and did not order his affairs with discretion; and of the opening clause he notes that the phrase ordinarily dates a man&rsquo;s birth rather than his reign, which is why some have understood it figuratively of one as innocent and good as a child."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What does \"Saul was the son of one year\" mean?",
+    "positions": [
+     {
+      "view": "The text is corrupt from a far back period; the English is a conjectural paraphrase",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "It is an accession formula like those of the other kings, so a number has dropped out",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "Three possibilities: a son a year old (Ishbosheth), an ellipsis of the number, or a figure for innocence",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The phrase ordinarily dates a birth, whence the figurative reading",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is to be done with thirty thousand chariots?",
+    "positions": [
+     {
+      "view": "Emend: \"thirty\" is a false reading for \"three\", with the Syriac and Arabic",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The figures are perfectly untrustworthy; chariots are never more numerous than horsemen in ancient army rolls",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Keep the figure: most were baggage carriages, not chariots of war",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in crediting Saul with the military genius that made the conquests of David and Solomon possible, in a chapter about his rejection."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Alone in reading the levy as a raid for weapons, linking it to the later statement that Israel had neither sword nor spear."
+   }
+  ],
+  "themes": [
+   "Saul reigned one year; and when he had reigned two years, he chose him three thousand men of Israel",
+   "Jonathan smote the garrison of the Philistines that was in Geba",
+   "the Philistines gathered themselves together to fight with Israel, thirty thousand chariots, and six thousand horsemen",
+   "the people did hide themselves in caves, and in thickets, and in rocks, and in high places, and in pits",
+   "some of the Hebrews went over Jordan to the land of Gad and Gilead"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-22",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
+  }
+ },
+ "8": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Matthew Henry",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "range": "8-14",
+  "pericope_label": "Saul sacrifices before Samuel comes, and hears that his kingdom shall not continue",
+  "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke cuts the chronological knot by denying the obvious reference: what is said here cannot be understood of the order given when Saul was anointed but of a different appointment, Samuel having promised on this occasion to come within seven days and having kept his word, since he arrived before the day was out. He holds the act itself unlawful, calling it most perfectly unconstitutional, since Saul had no authority to offer, or even to cause to be offered, any of the Lord&rsquo;s sacrifices. Saul&rsquo;s defence he itemises as three excuses &mdash; that the people were fast leaving his standard, that Samuel had not come at the very commencement of the time though he came within it, and that the Philistines were coming fast upon him &mdash; and judges that in all this Saul was sincere but rash, and regardless of a precept he had evidently received. Wesley agrees with Gill that the seventh day was not finished, glosses the complaint that Samuel came not as meaning that a good part of the day had passed so that Saul concluded he would not come, takes the admission that he forced himself as against his own mind and inclination, and observes from the mention of supplication that sacrifices were accompanied with solemn prayers. On the sentence he qualifies what was forfeited, noting that the phrase for ever in scripture often signifies only a long time, so that it would have been abundantly verified had the kingdom been enjoyed by Saul and by his son and by his son&rsquo;s son, after whom it might have come to Judah in any case."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott feels the difficulty of referring the set time back to the day of Saul&rsquo;s prophetic consecration, which took place at least three or four years and perhaps much longer before this, especially as the two men had certainly been together at Gilgal in the meantime; yet the extraordinary solemnity of that earlier warning draws him back towards it. On the nature of the sin he denies the common account: many have supposed its greatness lay in Saul&rsquo;s offering with his own hand, but not a hint of it is anywhere given us, and it is more than probable that the sacrifice, offered so prematurely in the absence of the seer, was performed by the hand of the priest who was no doubt in attendance on the king, so that there was no unlawful assumption of priestly functions. He puts the king&rsquo;s position bluntly, that Saul would gratefully receive any help the prophet could bring but in such an emergency preferred, sooner than run any risk, to act alone and if necessary to go into battle without divine consecration. Keil and Delitzsch read the Hebrew as Ellicott does, that the phrase does not imply Saul offered with his own hand or performed the priestly function on this occasion; and they supply the fear behind the act, that he resolved to sacrifice without Samuel in his anxiety lest the people lose heart and forsake him altogether if there were further delay."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry offers two harmonisations of the appointed time, that the order though recorded earlier may have been given afterwards, or that it was given as a general rule to be observed at every public gathering at Gilgal; and he treats the offence as Saul&rsquo;s sacrificing before Samuel came, Samuel having promised that at the end of those days he would be sure to come and both offer sacrifices for him and direct him what he should do."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill has Saul tarry to the seventh day but not to the end of it, as he should have done, and explains his motive as impatience together with seeing the people desert him apace and being unwilling to engage in battle without first sacrificing to God and imploring his help. He settles the question of the sin from the rebuke itself: Saul is charged with not waiting the full time, which showed his impatience, his disregard to Samuel and his distrust of God, and with intruding into the priest&rsquo;s office he is not charged. He notices the timing, that Samuel arrived after the burnt offering was ended but before the peace offerings could be offered, and takes the kingdom that shall not continue to mean not in Saul&rsquo;s family nor in his tribe, but removed to another."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Which appointment is the \"set time\" of seven days?",
+    "positions": [
+     {
+      "view": "Not the order given at the anointing but a different and later appointment",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Hard to refer back so far, yet the solemnity of that earlier warning points there",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Either the earlier order was given afterwards, or it was a standing rule for gatherings at Gilgal",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Did Saul&rsquo;s sin consist in usurping the priest&rsquo;s office?",
+    "positions": [
+     {
+      "view": "Yes: the act was most perfectly unconstitutional, and he had no authority even to cause it to be offered",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "No: not a hint of it is given, and the priest in attendance probably performed it",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "No: the Hebrew does not imply he performed the priestly function himself",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "No: with that he is not charged, but with not waiting the full time",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Alone in holding the sacrifice itself unlawful for Saul to procure, against the other three, and alone in enumerating his excuses as three."
+   },
+   {
+    "voice": "John Wesley",
+    "claim": "Alone in limiting what was forfeited, since \"for ever\" often means only a long time, which three generations would have verified."
+   }
+  ],
+  "themes": [
+   "he tarried seven days, according to the set time that Samuel had appointed",
+   "Bring hither a burnt offering to me, and peace offerings. And he offered the burnt offering",
+   "as soon as he had made an end of offering the burnt offering, behold, Samuel came",
+   "I forced myself therefore, and offered a burnt offering",
+   "Thou hast done foolishly: thou hast not kept the commandment of the LORD thy God",
+   "thy kingdom shall not continue: the LORD hath sought him a man after his own heart"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-22",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
+  }
+ },
+ "15": {
+  "voices": [
+   "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "15-18",
+  "pericope_label": "Samuel goes up from Gilgal, Saul numbers six hundred men, and the spoilers go out in three companies",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill sees anger in the manner of Samuel&rsquo;s going, that he arose seemingly in wrath and displeasure and did not stay to offer the peace offerings which remained, though he thinks Saul followed him, or at least came after him quickly. That the raiders could go out at all he turns into a reproach: Saul did not dare come out to fight and there was none throughout the land to oppose them, so the Philistines sent three companies to ravage and spoil the country &mdash; of so little use and service was a king to Israel, which they had been so extremely desirous of, and this was suffered to convince them of their vain confidence. He fixes one of the three roads, that Beth-horon named two cities, the upper and the nether, both in the tribe of Ephraim, lying northwest of the Philistine camp at Michmash and some eight miles from it."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the departure as abandonment with a reservation. Saul has set up for himself and is now left to himself, and it does not appear that Samuel either prayed with him or directed him; yet by going up to Gibeah of Benjamin, which was Saul&rsquo;s own city, he intimated that he had not quite abandoned him but waited to do him a kindness another time &mdash; or else, Henry allows, he went to the college of the prophets there, in order to pray for Saul when he did not think fit to pray with him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke has the two men travel together and makes the journey an act of support: though David in the divine purpose is appointed captain over the people, Saul is not to be removed from the government during his life, and Samuel therefore accompanies him to Gibeah to give him the requisite help in this conjuncture. Of the muster he notes without comment that the six hundred were the whole of the Israelitish army at this time, and not one sword or spear among them. The division of the Philistine force he reads tactically and looks ahead with it, that finding the Israelites durst not risk a battle they split their army in three to pillage and destroy the country, and that Jonathan profited by the circumstance and attacked what remained of the army at Michmash."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott has Samuel pass from Gilgal alone, but judges that he does not yet break off friendly relations with Saul, and wonders whether the noble old man still hoped the brilliant and gallant king would recognise his fatal error. He then charges the English translators with an outright mistake and diagnoses its cause: Saul and Jonathan, uniting their sadly diminished forces, entrench themselves at Geba, in a strong position at the end of a pass from which they could watch the movements of the Philistines, their small number forbidding any idea of an attack; and where the version reads Gibeah of Benjamin it should read Geba of Benjamin, the translators having probably been led astray by the mention of Gibeah in the preceding verse. Of the raids he cautions that the compiler of these books does not profess to give a detailed account of this or any of Saul&rsquo;s wars, and supposes the great armed demonstration had completely cowed the Israelites, certainly in the southern part of Canaan. Keil and Delitzsch treat what follows as continuous with this so far as the facts are concerned, holding that the account of Israel&rsquo;s disarming belongs with the foregoing, since it was Jonathan&rsquo;s brave heroic deed and the splendid victory it brought that terminated the war for which Saul had entreated help."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What did Samuel&rsquo;s going up to Gibeah mean, and did Saul go with him?",
+    "positions": [
+     {
+      "view": "Wrath: he did not stay to finish the sacrifice, though Saul followed after",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Displeasure with a reservation: either a kindness still intended, or the college of the prophets to pray for Saul",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "Support: Samuel accompanied him, since Saul was not to be displaced during his life",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Samuel passed there alone, but friendly relations were not yet broken off",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Gibeah or Geba of Benjamin?",
+    "positions": [
+     {
+      "view": "Geba: the translators substituted Gibeah, led astray by the preceding verse",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in charging the English translators with substituting Gibeah for Geba here, and in diagnosing the cause of the slip."
+   },
+   {
+    "voice": "John Gill",
+    "claim": "Alone in turning the unopposed raids into a reproach against Israel&rsquo;s demand for a king."
+   }
+  ],
+  "themes": [
+   "Samuel arose, and gat him up from Gilgal unto Gibeah of Benjamin",
+   "Saul numbered the people that were present with him, about six hundred men",
+   "Saul, and Jonathan his son, and the people that were with them, abode in Gibeah of Benjamin: but the Philistines encamped in Michmash",
+   "the spoilers came out of the camp of the Philistines in three companies",
+   "one company turned unto the way that leadeth to Ophrah, unto the land of Shual",
+   "another company turned the way to Bethhoron: and another company turned to the way of the border that looketh to the valley of Zeboim"
+  ],
+  "excluded_voices": [],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-22",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
+  }
+ },
+ "19": {
+  "voices": [
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "range": "19-23",
+  "pericope_label": "No smith in Israel: the Philistine monopoly of iron, and a people with neither sword nor spear",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill explains the absence of smiths as deliberate policy, that the Philistines while they ruled had removed them into their own country and forbidden any to learn or exercise the trade in Israel, so that the Israelites were obliged to go into Philistia, to one or other of their cities or garrisons, where the trade was exercised. On the disputed word of the following verse he offers a third arrangement besides the two the others canvass, that those who would not go down to the Philistines, or were not able, or thought it too much trouble, kept files by them to sharpen their instruments upon occasion; though he reports that the words are by some joined to the verse before, so that it was to the Philistines they went to sharpen the tools when the edges were blunt."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke thinks the smiths were likely carried off in the former wars, and sets two parallels beside it: Porsenna, in the peace he granted the Romans, permitted no iron to be forged except for the purposes of agriculture, and the Chaldeans did the same to the Jews in the time of Nebuchadnezzar, carrying away all the artificers. He then presses the Roman parallel to mark a difference, finding from this passage that the Philistines did not grant Israel even as much as Porsenna granted Rome, since he at least permitted the people to manufacture the implements of husbandry. On the disputed word he reports that the Hebrew noun, from a root meaning to rub hard, is translated very differently by the versions and by critics, and settles for the received sense as likely as any, that the people were allowed the use of files &mdash; though he suspects the word means a grindstone &mdash; to restore the blunted edges of their tridents and axes and goads. The statement that no sword or spear was found he treats as an objection to be answered, asking how Israel could be totally destitute of arms if they had enjoyed such profound peace and undisturbed dominion under Samuel, a state which argues the lowest circumstances of oppression and vassalage; and he answers by distinguishing the weapons, since the bow and the sling were the principal arms of Israel and for these they needed no smith at all. Wesley denies that they went to the land of the Philistines at all, taking it of the stations and garrisons the Philistines retained within Israel&rsquo;s own territory, Samuel&rsquo;s authority having so far overawed them that they durst not give the Israelites much disturbance; in these, he says, the Philistines kept all the smiths and allowed them the exercise of their art for the uses that follow."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott limits the claim about the smithies, allowing a year or perhaps two or three to have elapsed while Saul and Jonathan abode in Gibeah and the Philistine raids went on unchecked, and judging that the statement probably refers specially to the southern districts of Canaan. He reaches the same Roman parallel as Clarke, that Porsenna allowed the Romans iron implements for agriculture only. Of the implements themselves he admits defeat, noting that the word rendered coulter is elsewhere given as ploughshare by most of the older versions and that we cannot now distinguish the two with any precision, and that Jerome renders another of them by hoe. On the disputed word he grants that the received rendering is supported by the Targum and by many of the great Hebrew commentators, Rashi among them, but reports that Gesenius and the majority of modern scholars render it instead by bluntness, so that the passage would say there was dulness of edge upon the mattocks and the rest. The absence of arms he says must not be pressed too literally, holding that it was the general result of the raids in the open valleys of southern Canaan, especially the Benjamite territory, which were just the districts from which Saul and Jonathan could most easily have recruited their thinned and dispirited forces. Keil and Delitzsch keep to the inventory, giving the share and coulter, the axe and mattock, and the goads that were sharpened."
+   }
+  ],
+  "debates": [
+   {
+    "question": "How should the word rendered \"file\" be taken?",
+    "positions": [
+     {
+      "view": "A file, or perhaps a grindstone; the versions and critics differ widely",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The received sense has the Targum and Rashi, but Gesenius and most moderns render it \"bluntness\"",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Files kept at home by those who would not go down; or else join the words to the previous verse",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where did Israel go to get iron work done?",
+    "positions": [
+     {
+      "view": "Into Philistia, to their cities or garrisons",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Not to Philistia, but to the garrisons the Philistines held inside Israel",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How could Israel be wholly without arms after peace under Samuel?",
+    "positions": [
+     {
+      "view": "The bow and the sling were their principal arms, and for these no smith was needed",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The words must not be pressed too literally; the lack held in the southern valleys where they recruited",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Alone in pressing the Porsenna parallel into a contrast, that the Philistines allowed Israel less than Porsenna allowed Rome, and alone in raising the objection from Israel&rsquo;s long peace under Samuel."
+   },
+   {
+    "voice": "John Wesley",
+    "claim": "Alone in placing the smithies in Philistine garrisons inside Israel rather than in Philistia itself."
+   }
+  ],
+  "themes": [
+   "Now there was no smith found throughout all the land of Israel: for the Philistines said, Lest the Hebrews make them swords or spears",
+   "all the Israelites went down to the Philistines, to sharpen every man his share, and his coulter, and his axe, and his mattock",
+   "yet they had a file for the mattocks, and for the coulters, and for the forks, and for the axes, and to sharpen the goads",
+   "in the day of battle there was neither sword nor spear found in the hand of any of the people that were with Saul and Jonathan",
+   "but with Saul and with Jonathan his son was there found",
+   "the garrison of the Philistines went out to the passage of Michmash"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-22",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
+  }
+ }
 }
