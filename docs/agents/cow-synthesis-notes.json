@@ -109730,6 +109730,106 @@
         "14"
       ],
       "note": "Two attestation traps avoided here. First, Wesley and K&D appear to agree independently that 'from another place' is confident faith, but Wesley's wording is Henry's, so the agreement is Henry and K&D. Second, Ellicott's denial that the saying proves Mordecai's faith rests on exactly the same evidence Clarke uses to praise it (the fact of Esther's elevation), so their opposition is a difference of judgement on one datum, not two witnesses. Both are recorded in the debate rather than flattened into school summaries."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "7",
+      "verses": [
+        "3",
+        "9",
+        "15"
+      ],
+      "note": "JFB in this chapter is entirely donor residue, and this is the clearest instance of the stride-six defect yet recorded. Jamieson, Fausset and Brown appear at keys 3, 9 and 15 -- differences of exactly six -- with 574 words that have nothing to do with 2 Kings 7: all three blocks are commentary on 2 Samuel 3, discussing Abner, Ish-bosheth, Michal and David's secret treaty, and the last block even ends with the donor's own section heading, '2Sa 3:22-30 . Joab Kills Abner.' The donor passage is therefore named inside the residue itself, which no previous instance gave us. JFB is declared in excluded_voices on the two tiles whose spans contain those keys."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "7",
+      "verses": [
+        "20"
+      ],
+      "note": "Chapter-final chrome again, and the most extreme ratio so far: Ellicott's last key in the chapter (20) carries 1,011 words of which the real commentary is FOURTEEN -- 'For the people trode upon him. - And the people trampled him down, or under foot.' The other ~997 words are StudyLight page furniture (CSS, inline JS, nav menus, the book_data array, copyright and ads boilerplate). Combined with the JFB residue this means usable_source_words reads 10,705 where the real figure is about 9,134, a 15 per cent overstatement. The pattern is now confirmed in two different books in two consecutive work units; it attaches to whichever key is Ellicott's last in the chapter."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "7",
+      "verses": [
+        "2",
+        "4",
+        "9",
+        "13",
+        "17"
+      ],
+      "note": "Keil and Delitzsch are UNUSABLE throughout this chapter and had to be excluded from all four tiles. Their 962 reported words are harvested as overlapping sliding windows that are almost pure verse recitation: key 4 (vv.4-8) and key 17 (vv.17-20) are 100 per cent bare KJV text with no comment at all; key 9 adds one clause, truncated mid-sentence ('The king imagined that the unexpected departure of the Syrians was only a ruse, namely, that'); key 13 adds two sentences, also truncated ('and this was followed by the consequent cheapness of provisions predicted by Elisha. As the'); and key 2's only real commentary -- the lepers' quarantine under the Law, the huts by the Zion gate at Jerusalem, Strauss and Tobler, and the reading of the twilight as evening not morning -- is about v.3, which falls in the NEXT tile's span. So the one substantive K&D note in the chapter is lost to windowed overlap, exactly as in esther 4 at keys 9 and 11. Four voices remain in every tile, so the tiles stand, but a validator that counted recitation would have flagged this chapter's K&D as empty."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "7",
+      "verses": [
+        "7",
+        "20"
+      ],
+      "note": "Third and fourth confirmed instances of Wesley abridging Henry, now in a second book, so this is systematic and not an Esther accident. Wesley at v.7 is Henry almost verbatim: 'None of them had so much sense as to send scouts to discover the supposed enemy, much less courage enough to face them. God can when he pleases dispirit the boldest and make the stoutest heart to tremble. They that will not fear God, he can make them fear at the shaking of a leaf' against Henry's identical sentences; and 'Perhaps Gehazi was one of these lepers, which might occasion his being taken notice of by the king' is Henry's remark too. Wesley at v.20 is likewise Henry's 'How deeply God resents our distrust of him, of his power, providence, and promise' and 'God never promises the end without knowing where to provide the means.' Henry-plus-Wesley agreement is one witness. Wesley is used in the tiles only where he diverges: v.6 on the Hittites and Amorites standing for the surviving Canaanite peoples (where he contradicts Henry outright), v.13 on the Hebrew prefix as an affirmation rather than a similitude, and v.20 where Henry is not groundable in that tile anyway."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "7",
+      "verses": [
+        "13"
+      ],
+      "note": "The best textual-critical disagreement I have met in this corpus, and it splits one school down the middle. On the servant's speech about the horses -- 'behold, they are as all the multitude of Israel that are left in it' -- Clarke, following Kennicott, judges seven Hebrew words a careless scribal repetition, cites their absence from the Septuagint and Syriac and from more than forty manuscripts collated by Kennicott and De Rossi, notes that some manuscripts leave them unpointed and others have them written in and blotted out, and prints the verse without them; he also renders the closing words not 'consumed' but 'perfect', fit for service. Wesley, the same school, emends nothing and construes instead, taking the Hebrew prefix not as a note of similitude but as an affirmation of certainty. Ellicott keeps the text too but reads the repetition as pathos, and offers the servant's fatalism or, following Reuss, a plain doubt whether starving animals can do the work. Three positions, two of them from one school: recorded as a three-way debate."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "7",
+      "verses": [
+        "6"
+      ],
+      "note": "A clean factual disagreement about whether the kings the Syrians feared existed. Henry treats the names as the panic's own invention -- 'there was, for aught we know but one king of Egypt, and what kings there were of the Hittites nobody can imagine' -- and makes the Syrians the authors of their own terror. Ellicott answers with Assyriology: the tract of north Syria between the Euphrates and the Orontes was the cradle of the Hittite race, their kings bore sway over the several tribes, their power once reached over much of Asia Minor as rock inscriptions prove, and he names Carchemish, Kadesh and Hamath as capitals and Rameses' treaty with the Hittite prince. Wesley takes a third line, that the name stands for the surviving Canaanite peoples who fled to the bordering lands after Joshua. Henry's confidence here is simply the state of knowledge in his century being overtaken by the spade; the tags record all three without adjudicating."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "7",
+      "verses": [
+        "13",
+        "15"
+      ],
+      "note": "Two further disagreements in the same tile, both turning on whether a number or a place-name is to be taken strictly. On why two horses were sent when five were asked for: Henry, Gill and Clarke all suppose only two were fit -- the rest dead, eaten, or too weak -- while Ellicott denies the premise, taking five as an indefinite small number like our half a dozen and the Hebrew of the next verse as teams for two chariots, sent so that if attacked they might resist better or if one were taken the other might carry the news. On how far the scouts went: Gill has them reach Jordan itself, over which the Syrians had to pass, while Ellicott says not to the river, at least twenty miles off, but only in its direction."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "7",
+      "verses": [
+        "17"
+      ],
+      "note": "Clarke's key-17 block is 599 words, but only about ninety of them comment on the verse (the officer borne down by the crowd, and the exact fulfilment of such predictions acquiring the prophet great credit in Israel). The remaining five hundred are Lightfoot's year-by-year chronology of the whole reign of Jehoram, running across chapters four to eight of this book and into 2 Chronicles. It is real commentary and worth one clause -- it fixes the siege in the fifth year -- but counted as source words for this pericope it inflates the denominator substantially, the same way chapter-final chrome does. Used in the tile as a single attributed clause, not as an excursus."
+    },
+    {
+      "at": "2026-11-22",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "3",
+        "12"
+      ],
+      "note": "Mandatory-Henry placement drove the tiling again, and the match was better here than in esther 4. Henry has three blocks, at keys 1, 3 and 12, and they cover vv.1-2, vv.3-11 and vv.12-20 respectively; Clarke's own chapter summary at key 1 divides the chapter the same way. Tiles were therefore set at 1-2 / 3-11 / 12-15 / 16-20, which grounds Henry in the first three and loses him only in the last, where his sections III and IV on the spoil and the scoffer's death would otherwise have served. The closing tile has four voices without him and came in at 507 words against about 1,133 words of real source, so nothing was padded to cover the gap."
     }
   ]
 }
