@@ -110862,6 +110862,39 @@
         "1-14"
       ],
       "note": "Calibration on a small chapter, which tests the other end of the band. Both spans overshot on first draft, 735 on 1-5 (3,463 source words) and 787 on 6-14 (3,020), consistent with the rule formed at 1samuel 11 and confirmed at 2kings 2 that spans above about 3,000 source words overshoot by 70 to 140. What is new is the floor: with only about 5,500 real source words in the chapter, a four-span tiling would have put one entry below the 350-word floor's worth of material, so the band constrained the tiling from below for the first time in this run. The useful summary is that the 350-650 band suits spans between roughly 1,200 and 2,500 usable source words and distorts the work at both extremes."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19",
+        "21",
+        "25",
+        "27",
+        "28",
+        "31",
+        "35",
+        "40",
+        "43",
+        "46",
+        "54"
+      ],
+      "note": "NEW DEFECT CLASS: the same father is harvested twice under two different voice names, from two different editions. In this chapter 'Chrysostom' (4846 words, 8 keys) and 'John Chrysostom' (1515 words, 5 keys) are both Chrysostom - the first from a catena, the second from his Homilies on John - and 'Augustine' (2092 words, 3 keys) and 'Augustine of Hippo' (387 words, 2 keys) are both Augustine, the first a catena excerpt and the second his Tractates. A voice-counting prevalence field would therefore count each father twice and report a two-witness agreement where there is one witness in two editions. This will affect every Gospel chapter carrying a patristic catena, not just this one, so it wants fixing at the voice-registry level rather than per chapter."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "4",
+      "verses": [
+        "1"
+      ],
+      "note": "Catena attribution markers bleed into the wrong voice's block. The 'Chrysostom' block at key 1 ends 'For had he been taken and escaped, the reality of His flesh would have been doubted. AUG. It may...' - the catena's own siglum for Augustine, followed by Augustine's text, inside a block attributed wholly to Chrysostom. Any writer trusting the block header would attribute Augustine's words to Chrysostom. The marker is a reliable signal (capitalised abbreviation plus full stop at a sentence boundary) and could be split on at harvest time."
     }
   ]
 }
