@@ -110895,6 +110895,112 @@
         "1"
       ],
       "note": "Catena attribution markers bleed into the wrong voice's block. The 'Chrysostom' block at key 1 ends 'For had he been taken and escaped, the reality of His flesh would have been doubted. AUG. It may...' - the catena's own siglum for Augustine, followed by Augustine's text, inside a block attributed wholly to Chrysostom. Any writer trusting the block header would attribute Augustine's words to Chrysostom. The marker is a reliable signal (capitalised abbreviation plus full stop at a sentence boundary) and could be split on at harvest time."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "24",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "JFB stride-six residue, sixth book, and the first time the series is COMPLETE rather than a subset: keys 2, 8, 14 and 20 with no gaps. The donor is Judges 1-2 throughout - the Judah and Simeon campaign, the Angel of the Covenant at Bochim, and the death of Joshua's generation - keys 2 and 8 are byte-identical duplicates, and the donor offset again advances monotonically with the target key. All 487 of JFB's words in this chapter are residue, so he is excluded from tiles 1-4, 8-15 and 16-22. With 2 Kings, 1 Samuel, 1 Chronicles, Psalms, 1 Kings and now 1 Samuel again, the geometry is settled enough to automate a corpus-wide sweep."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "24",
+      "verses": [
+        "22"
+      ],
+      "note": "Chapter-final chrome at Ellicott's last key, 39th instance and the THIRD consecutive chapter carrying the script-payload variant: 194 real words of exposition against 995 words of the host page's menus, CSS and JavaScript. psalms 7 key 15, 1kings 12 key 33 and now 1samuel 24 key 22 - three different books in a row - which puts it beyond doubt that the variant travels with the Ellicott harvest and attaches to whichever key is his last in the chapter."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "24",
+      "verses": [
+        "1",
+        "6",
+        "7",
+        "16",
+        "17",
+        "20"
+      ],
+      "note": "K&D's 203-visible-word truncation cap confirmed in a third chapter. Keys 1, 16, 17 and 20 are each exactly 203 words and each ends mid-sentence, matching 1kings 12 exactly. The windows also overlap, so the commentary at keys 6 and 7 repeats verbatim - the same artefact noted at 1kings 12 keys 6 and 8. Two independent measurements of the same figure in different books make this a hard harvester limit rather than a coincidence of block lengths."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "24",
+      "verses": [
+        "16",
+        "17",
+        "19"
+      ],
+      "note": "Wesley abridges Henry, 13th instance and the second in 1 Samuel. His key-16 note 'He speaks as one quite overcome with David's kindness, and as one that relents at the sight of his own folly and ingratitude' is Henry verbatim; his key-17 note 'He ingenuously acknowledges David's integrity, and his own iniquity' is Henry verbatim; and his key-19 note paraphrases Henry's 'because he thought himself not able to give him a full recompence for so great a favour'. Three of his five notes in this span are Henry's. Only the two independent ones were used - that he knew the voice although at that distance he could not discern the face, and that David would trust Saul no more - so Wesley is declared in tiles 1-4 and 16-22 on his own material only."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "24",
+      "verses": [
+        "1",
+        "8",
+        "16"
+      ],
+      "note": "Henry Concise doubling, with a NEW VARIANT worth recording. At keys 1 and 16 the Concise paragraph is appended to the end of the Exposition block, as everywhere else. At key 8, however, the Concise text stands as a block of its own, at a key where Henry has no Exposition at all - 64 words that simply restate what key 1 has already said. So the doubling is sometimes a separately harvested block rather than a tail, which means a de-duplicator keyed on the last paragraph of a Henry block would miss it; the test has to run across the whole chapter's Henry material."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "24",
+      "verses": [
+        "5"
+      ],
+      "note": "Why David's heart smote him, two against one on an interior motive. Ellicott says it was not for what he had done to Saul but for the momentary thought that had stained his soul, of slaying the Lord's anointed, and insists there is no sign at all of David's regretting that he cut the fringe - preferring this to Clericus, who had David fearing that Saul would take the sign in bad part. Keil and Delitzsch and Henry both read it the other way, that the cutting itself was the trouble, K&D because David regarded it as an injury done to the king and Henry because it was an affront to royal dignity though it did Saul no real hurt. Written up as the debate in tile 5-7."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "24",
+      "verses": [
+        "3",
+        "4"
+      ],
+      "note": "What 'cover his feet' means, and the argument that settles it. Clarke takes it of easing nature with the Vulgate, the Greek, the Targum and the Arabic; Ellicott and Wesley take it of sleep. Ellicott's reason is the strongest in the chapter and is narrative rather than lexical: the other reading by no means suits a story in which time was needed for a sentinel to inform David, for David to approach, cut the hem and retire. Henry allows either but prefers sleep. Written up as the first debate in tile 1-4."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "24",
+      "verses": [
+        "3"
+      ],
+      "note": "Ellicott's optical note is the single most useful thing in the chapter's apparatus, and unique to him: these caverns are as dark as midnight and the keenest eye cannot see four paces inward, while one who has been long inside and looks outward can observe with perfect distinctness all that passes near the mouth. That asymmetry is what makes the whole episode physically possible - David could watch Saul come in while Saul saw nothing but impenetrable darkness - and no other voice supplies it."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "24",
+      "verses": [
+        "1",
+        "5",
+        "8",
+        "16"
+      ],
+      "note": "Method: tiling at Henry's four block boundaries (keys 1, 8, 9 and 16, his key-1 Exposition covering vv.1-8 and his key-16 block covering vv.16-22), which coincide with the narrative's own seams - the opportunity, the conscience, the appeal, the reply. Four tiles of 615 to 647 words over 22 verses and 16178 usable source words. The 5-7 tile is the thinnest in source at 1351 words, giving an expansion of 0.48, but all five usable voices comment in that span, so it carries the chapter's central debate without strain."
     }
   ]
 }
