@@ -111530,6 +111530,156 @@
         "7"
       ],
       "note": "All seven spans overshot the 650-word ceiling on first measurement, at 966, 698, 697, 722, 705, 819 and 835 validator words, and every one was brought into band by dropping whole sub-threads rather than trimming clauses. The two worst overshoots were not the spans with the most source words but the spans carrying the most distinct voices per verse, six voices across five or six keys, where each voice's distinct contribution costs a clause of its own. Voice count per span, not source words alone, predicts the overshoot."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "9"
+      ],
+      "note": "JFB defect, 29th consecutive chapter: the only JFB block in this chapter is a 124-word fragment on the confederacy of the Syrian and Israelitish kings against Judah, the slaughter of a hundred and twenty thousand in one day and the judgment on Judah for forsaking the Lord God of their fathers. That is 2 Chronicles 28, wholly foreign to this psalm. Excluded via excluded_voices on the 9-11 span."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "11"
+      ],
+      "note": "Ellicott page chrome, 22nd consecutive chapter: 1,098 declared words at this key, of which 114 are genuine comment and 984 are page furniture. Sixth occurrence of the exactly-984-word payload, now spread over nine chapters. The genuine 114 words contain his reading of the closing triplet, so the voice cannot be excluded wholesale."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "1"
+      ],
+      "note": "A THIRD defect class, distinct from the JFB intruder and the Ellicott chrome: the voice label sits inside the body instead of in the markup, so the attribution is misplaced while the text itself is sound. Two instances here. At key 1 a 303-word block opens 'Augustine of Hippo:' and the voice splitter returns it with no attribution at all, so Augustine's exposition of vv1-4 is formally anonymous. At keys 2, 6 and 8 the string 'C.H. Spurgeon:' appears inside John Wesley's segment, so roughly 700 words of Spurgeon are counted as Wesley's and inflate his apparent weight. Both voices are nameable in VOICE_LABELS, so the fix is in the extraction, not the registry."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "1"
+      ],
+      "note": "Henry's block-keying, the familiar pattern: 2,774 words at key 1 covering vv1-7 by his own verse citations, and 1,788 at key 8 covering vv8-11, so Henry has a key in only two of the five spans although his text treats every verse of the psalm. Augustine's misattributed block has the same shape, walking through vv1-4 from a single key."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "10"
+      ],
+      "note": "K&D sliding-window exhaustion at its most costly: the window at key 10 is spent entirely on the quoted text of vv10-11 and leaves 47 words, none of them comment. The result is that Keil and Delitzsch, who had been substantial at five earlier keys, could not be drawn on at all in the span where the psalm's hardest question falls, the meaning of Sheol and corruption."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "1"
+      ],
+      "note": "The chapter's governing disagreement: whose voice speaks in the psalm, and the answers run the whole range. Clarke is convinced from the most serious consideration of the whole that every verse belongs to Jesus Christ and none other, some parts never having applied to David. Augustine has our King speak throughout in the character of the human nature he assumed. Gill holds that prayer is proper to Christ as man and applies the petition to the preserving of his life. Henry reads David first and Christ by application. Keil and Delitzsch and Calvin keep to David throughout."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "8"
+      ],
+      "note": "Two wesleyan-arminian voices on opposite sides of the same question, which is unusual in this corpus. Wesley marks the transition exactly: hitherto David seems to have spoken with respect to himself, but now he is transported by the spirit of prophecy and carried above himself, to speak as a type of Christ, in whom this and the following verses were truly accomplished. Clarke recognises no transition anywhere, having held from the first verse that the whole psalm is Christ's alone. The disagreement is not about the christology but about whether the psalm has a seam."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "2"
+      ],
+      "note": "A collision between an exegetical tradition and a textual judgement. Henry, Wesley, Spurgeon and Clarke all build the doctrine that God gains nothing by our service on the received rendering, that our goodness extendeth not to Him. Ellicott holds the text of the passage exceedingly corrupt, prefers the ancient versions' first person over the received second, calls the words 'O my soul' a mere gloss from the Chaldee, and states that the fine thought about merit could not have been the thought of the original, since the good in question means happiness and not conduct. Gill, on the other side, defends even the supplied words from the Targum and three Jewish commentators."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "10"
+      ],
+      "note": "The sharpest philological disagreement in the chapter, with a doctrinal edge. Clarke and Gill rest the resurrection argument on the word rendered corruption, Clarke holding that the rest in the grave was long enough to prove the death real but too short to produce corruption. Ellicott renders the same word as a pit, from a root meaning to sink in, so that to be left to Sheol and to see the pit are simply synonyms for dying and the clear meaning is only that God will not abandon his beloved to death. He warns that we must not see a conscious reference to immortality here, while granting the first faint scintillation of that light, which is what in his view justifies the use made of the passage in the New Testament."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "10"
+      ],
+      "note": "A textual convergence worth recording alongside the divergences. Clarke and Ellicott independently reach the singular for 'thine Holy One' against the received plural, and from the same three classes of evidence: the ancient versions, the manuscript authority, and the apostle's quotations. Clarke adds the Complutensian Polyglot and the Kennicott and De Rossi collations and concludes either a corruption or an emphatic singular; Ellicott adds that the received text's own margin calls the sign of the plural superfluous."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "3"
+      ],
+      "note": "Wesley's dissent at this verse is an argument from the doctrine of grace against a typological reading: the verse agrees more properly with David than with Christ, whose goodness was principally designed for, and imparted to, sinners rather than to saints. He grants the sense of the words and refuses the reference, which is a distinction the chapter's other voices do not draw."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "11"
+      ],
+      "note": "Roughly 1,200 words of this chapter's Clarke material is quoted Middle English. He gives the translation and paraphrase of what he calls his old Psalter at four keys, and at the last says he has given the whole of it as a curious specimen of the doctrine and language of our northern neighbours in the thirteenth or fourteenth century. None of it can be used in the prose, since quoting it would breach the quote fraction and it is unreadable to this site's audience, and its presence inflates Clarke's apparent weight in the chapter by about a quarter."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "1"
+      ],
+      "note": "Tiling and band record: 16,161 usable source words over 11 keys tiled as five spans on the psalm's sense divisions. The compression ratios run from 0.10 to 0.61, and both extremes are artefacts rather than measures: the low end is the block-keying of Henry and Augustine at key 1, the high end a genuinely short span of 1,049 words where the 350-word floor forces a fuller treatment than the material wants."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "fidelity",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "1"
+      ],
+      "note": "Calvin appears once in the chapter, 814 words at key 1, and almost all of it is on the title rather than the psalm. The reformed school is therefore carried by Gill throughout, with Calvin contributing the discussion of Michtam and nothing else, so the breadth the tags report for that school in the first span overstates what Calvin actually supplies to it."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "fidelity",
+      "book": "psalms",
+      "chapter": "16",
+      "verses": [
+        "1"
+      ],
+      "note": "First-draft overshoots, four of five spans: 770, 662, 697 and 824 validator words, with only the 1,630-word span landing in band at once. This confirms the predictor recorded at job 15: the two worst overshoots are the spans carrying the most distinct voices, nine in the first span and seven in the fourth, not the spans with the most source words. Each additional voice costs a clause whether or not it adds a distinct reading."
     }
   ]
 }

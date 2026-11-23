@@ -1,161 +1,119 @@
 {
  "1": {
   "voices": [
-   "Matthew Henry",
-   "Adam Clarke",
-   "John Calvin",
-   "John Gill",
-   "Augustine of Hippo",
-   "C.H. Spurgeon",
+   "Keil and Delitzsch",
    "Charles Ellicott",
-   "Keil and Delitzsch"
+   "Adam Clarke",
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry",
+   "John Calvin",
+   "Augustine",
+   "C.H. Spurgeon"
   ],
   "schools": [
    {
-    "school": "puritan-evangelical",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Henry reads Michtam as a golden psalm, precious above fine gold, because it speaks so plainly of Christ and his resurrection; Spurgeon takes 'preserve me' as 'guard me,' the manhood of Jesus needing preservation and the elect preserved in his preservation."
+    "summary": "Ellicott holds the text of the second verse exceedingly corrupt, prefers the ancient versions' first person, and denies that the thought of merit could have been the original sense, since the good in question means happiness and not conduct; Keil and Delitzsch find a writer in danger of death whose cry for help is swallowed up by a settled calm and a bright hope."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke canvasses the title (Chaldee 'straight sculpture,' LXX 'inscription on a pillar,' michtam = stamped gold) yet doubts such meanings; reads the prayer as the man Christ Jesus in Gethsemane, El the strong God suited to a frail humanity."
+    "prevalence": "several",
+    "summary": "Clarke is convinced that every verse of the psalm belongs to Jesus Christ and none other, reads the opening as the prayer of the man Christ Jesus in the garden, and notes that the name used is the one signifying the strong God; Wesley takes the second verse to mean that God is not capable of any advantage from our service."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: prayer proper to Christ as man, heard in his preservation from Herod and in the wilderness; Calvin weighs the golden-letters and durable-pillar views of Michtam but inclines to take it for some kind of tune or melody."
+    "summary": "Calvin reports the Jewish expositors divided over the title, between a psalm fit to be written in letters of gold and one fit to be engraven on a durable pillar; Gill takes the prayer as proper to Christ as man and defends the supplied words of the address from the Targum and the Jewish commentators."
    },
    {
-    "school": "grammatical-historical",
+    "school": "puritan-evangelical",
     "prevalence": "several",
-    "summary": "Ellicott renders 'for I have found refuge in thee' (Ps. 7:1), the verb a preterite; Keil and Delitzsch infer David from the compressed, antiquated language — a friend of God in danger of death, yet without gloomy struggle."
+    "summary": "Henry takes the golden sense of the title because the psalm speaks so plainly of Christ and his resurrection, and reads David first with Christ by application; Spurgeon presses the second verse to its limit, that God would have been inconceivably glorious had the race perished and no atonement been offered."
    },
    {
     "school": "latin-fathers",
     "prevalence": "single",
-    "summary": "Augustine hears the King speaking in the character of the human nature He assumed, whose royal title was set forth at his passion."
+    "summary": "Augustine reads the whole as the words of our King, speaking in the character of the human nature he assumed."
    }
   ],
   "debates": [
    {
-    "question": "What does the title 'Michtam' mean?",
-    "sides": [
+    "issue": "Whose voice speaks in the psalm",
+    "positions": [
      {
-      "position": "a golden psalm (michtam = stamped/pure gold), worthy to be written in letters of gold",
-      "holders": [
-       "Henry",
-       "Clarke"
-      ]
+      "school": "wesleyan-arminian",
+      "view": "Clarke holds that every verse belongs to Jesus Christ and none other, some parts never having applied to David."
      },
      {
-      "position": "an inscription engraved on a durable pillar or monument for everlasting remembrance (LXX stelographia)",
-      "holders": [
-       "Clarke",
-       "Calvin"
-      ]
+      "school": "latin-fathers",
+      "view": "Augustine has our King speak throughout in the character of the human nature he assumed."
      },
      {
-      "position": "a musical term — some kind of tune or melody",
-      "holders": [
-       "Calvin"
-      ]
+      "school": "puritan-evangelical",
+      "view": "Henry reads David first and Christ by application, noting at each turn where the verse is applicable to him."
+     },
+     {
+      "school": "grammatical-historical",
+      "view": "Keil and Delitzsch keep to David throughout, a friend of God in danger of death whose confidence is unshaken."
+     }
+    ]
+   },
+   {
+    "issue": "Whether the clause about goodness not extending to God can bear the sense given it",
+    "positions": [
+     {
+      "school": "puritan-evangelical",
+      "view": "Henry and Spurgeon build on it the doctrine that God has no need of our services and is happy without us, so that we can merit nothing."
+     },
+     {
+      "school": "grammatical-historical",
+      "view": "Ellicott holds the text corrupt, the words about the soul a mere gloss, and the thought of merit impossible in the original, since the good meant is happiness and not conduct."
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "That the title's meaning is genuinely undecided among the Jewish expositors, between letters of gold and an inscription on a pillar, and need not be settled to read the psalm."
+   }
+  ],
   "themes": [
-   "the golden title Michtam",
+   "the title Michtam",
    "preserve me, O God",
-   "the prayer of Christ as man",
-   "in thee do I put my trust"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "C.H. Spurgeon",
-   "John Wesley",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes 'O my soul, thou hast said' for an apostrophe of Christ to his own soul, the supplied words warranted by the Targum, Jarchi, Aben Ezra, and Kimchi."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke reads 'Thou art my Lord' as Adonai, my prop and stay, and 'my goodness' as 'my bounty,' which adds nothing to the divinity but extends to the saints; Wesley: 'thou dost not need me or my service.'"
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Spurgeon hears the Lord Jesus vowing allegiance for our sakes, the work of redemption not needful on account of any necessity in the Divine Being."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott calls the passage exceedingly corrupt: the versions favour 'I said' over 'thou hast said' ('O my soul' a Chaldee gloss), yielding 'I have no good besides thee' — 'my good' being happiness, not conduct."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What does 'my goodness extendeth not to thee' mean, and does the soul or the poet speak?",
-    "sides": [
-     {
-      "position": "man's goodness or service adds nothing to God (received 'thou hast said')",
-      "holders": [
-       "Clarke",
-       "Wesley",
-       "Spurgeon"
-      ]
-     },
-     {
-      "position": "'I have no good besides thee' — the poet's happiness, not his conduct; read 'I said' for 'thou hast said'",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "thou art my Lord",
+   "David or Christ as the speaker",
    "my goodness extendeth not to thee",
-   "a corrupt and disputed text",
-   "the soul's dedication"
+   "the corruption of the text"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-23",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
+  },
+  "range": "1-2",
+  "pericope_label": "Preserve me, O God: thou art my Lord, my goodness extendeth not to thee"
  },
  "3": {
   "voices": [
@@ -163,545 +121,301 @@
    "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "Augustine of Hippo",
-   "John Wesley"
+   "John Wesley",
+   "Augustine"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: the saints 'in the earth' are set apart in election, expiated by Christ's blood, sanctified by the Spirit; 'in the earth' marks their scattered abode, or parts them from the angels also called saints (Aben Ezra)."
+    "summary": "Gill makes the saints those set apart by the Father, expiated by the blood of Christ and sanctified by the Spirit, and explains the phrase about the earth as marking the place of their abode rather than distinguishing them from the saints in heaven."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry calls them the excellent ones, God's jewels and peculiar treasure, made excellent by grace, in whom all who take the Lord for their God delight because they bear his image."
+    "summary": "Henry makes it a standing requirement that saints on earth we must be or we shall never be saints in heaven, and holds the paradox that the excellent ones are sometimes so poor that they need our goodness extended to them; he also supplies the epigram that whoever thinks one God too little will find two too many and yet hundreds not enough."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke fixes the addirey (noble ones inheriting the promises) and kedoshim (the consecrated, perhaps the apostles); Wesley reads a singular love borne to all saints, but judges it fits David better than Christ."
+    "summary": "Clarke suggests the apostles, or even the angels, and applies the multiplied sorrows to those still seeking another Messiah; Wesley refuses the Christological reference at this verse, since the goodness of Christ was principally designed for sinners."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott emends to a single sentence, 'and of the saints who are in the earth, they are the excellent in whom is all my delight.'"
+    "summary": "Ellicott calls the verse unintelligible as it stands, proposes an emendation making the saints themselves the excellent, renders the next verse of those who change to another god, and finds in the libations of blood the rites of Moloch and Chemosh."
    },
    {
     "school": "latin-fathers",
     "prevalence": "single",
-    "summary": "Augustine hears 'the saints who are on His earth' as citizens of the heavenly Jerusalem, their hope fixed by an anchor though yet conversant in the flesh."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "John Wesley",
-    "note": "Judges that the verse 'more properly agrees to David than to Christ, whose goodness was principally designed for, and imparted to, sinners' — an early sounding of the David/Messiah question."
-   }
-  ],
-  "themes": [
-   "the saints in the earth",
-   "the excellent ones",
-   "all my delight",
-   "David or Christ as speaker"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "John Wesley",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill refers the multiplied sorrows to the idolaters themselves, not (with Aben Ezra) to the saints grieved by their idolatry."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: those who multiply gods multiply griefs — one God thought too little, and hundreds not enough; the drink-offerings of blood he abhors, forbidden at God's altar but prescribed by the devil to teach cruelty."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke notes no Hebrew word for God, so 'another' may be another Messiah — the unbelieving Jews, sorrows multiplied eighteen centuries; Wesley keeps the plainer Gentile idol-worship, whose blood the heathen drank."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott, with slight repointing, reads 'they shall multiply their sorrows who change to another god,' detecting the prophetic figure of idolatry as adultery (Gen. 3:16) and the rites of Moloch and Chemosh; names avoided as with baal/bosheth (Exod. 23:13)."
+    "summary": "Augustine reads the earth of the citizens of the heavenly Jerusalem, whose conversation is fixed by the anchor of hope in that country although they are as yet conversant in the flesh here."
    }
   ],
   "debates": [
    {
-    "question": "Is the warning aimed at literal idolaters or at the unbelieving Jews?",
-    "sides": [
+    "issue": "Whether this verse speaks of Christ or of David",
+    "positions": [
      {
-      "position": "literal idolaters and their bloody altars",
-      "holders": [
-       "Gill",
-       "Henry",
-       "Wesley",
-       "Ellicott"
-      ]
+      "school": "wesleyan-arminian",
+      "view": "Wesley grants the sense but refuses the reference, since it agrees more properly with David than with Christ, whose goodness was imparted to sinners."
      },
      {
-      "position": "the unbelieving nation still hastening after another Messiah",
-      "holders": [
-       "Clarke"
-      ]
+      "school": "wesleyan-arminian",
+      "view": "Clarke keeps the Messianic reading and makes the saints the first planters of Christianity, with the angels perhaps included."
      }
     ]
    }
   ],
   "outliers": [],
   "themes": [
-   "their sorrows multiplied",
-   "hasten after another god",
-   "drink-offerings of blood",
-   "idolatry as adultery"
+   "the saints that are in the earth",
+   "the excellent ones",
+   "hastening after another god",
+   "drink offerings of blood",
+   "refusing to name the gods"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-23",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.61
+   }
+  },
+  "range": "3-4",
+  "pericope_label": "The saints that are in the earth: their sorrows shall be multiplied that hasten after another god"
  },
  "5": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
    "Adam Clarke",
-   "John Wesley",
    "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: spoken by Christ the priest, in allusion to the Levitical priests who had no inheritance but the Lord himself — his goodness and happiness as man lay in God."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke makes the Messiah speaker, given the lot to redeem mankind and the cup of suffering to impart the cup of consolation; Wesley reads a plainer contentment, the cup as the portion allotted at ancient feasts."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott ties it to the Levitical portion (Num. 18:20), the poet exiled from Canaan consoled by the better part (Savonarola, Paul); Keil and Delitzsch: the measuring lines fall where property is assigned (Micah 2:5; Josh. 17:5), God's fellowship a paradisaic possession."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Who speaks the verse, and what does 'thou maintainest my lot' say?",
-    "sides": [
-     {
-      "position": "the Messiah who takes God for his portion",
-      "holders": [
-       "Gill",
-       "Clarke"
-      ]
-     },
-     {
-      "position": "the exiled David consoling himself with the inheritance that cannot be lost",
-      "holders": [
-       "Ellicott",
-       "Keil and Delitzsch"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [
-   {
-    "voice": "Charles Ellicott",
-    "note": "Reports Hitzig's plausible conjecture, tomid for tomikh, which would yield 'thou art ever my lot' in place of 'thou maintainest my lot.'"
-   }
-  ],
-  "themes": [
-   "the LORD my portion and cup",
-   "the Levitical portion",
-   "thou maintainest my lot",
-   "David or the Messiah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
    "John Wesley",
-   "Charles Ellicott",
+   "Keil and Delitzsch",
    "C.H. Spurgeon"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill turns the pleasant places from ground to people — the elect church given to Christ as his portion — though he allows Aben Ezra and Kimchi supply 'places.'"
+    "summary": "Gill reads the portion against the Levitical priests who had no inheritance in Canaan but had the Lord for their part, and argues that the pleasant places are persons rather than places, the chosen ones given to Christ as his portion."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry draws the rule that gracious persons, though they still covet more of God, never covet more than God, and that those whose lot is cast in a land of light may say the lines have fallen pleasantly, much more those who have Immanuel's love and not only Immanuel's land; Spurgeon finds that obedience itself led into pleasant places, the joy set before Christ sending its splendour down the rugged way of the cross."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke keeps the Messianic key — 'a rich inheritance of immortal spirits,' a Church who shall dwell with him for ever; Wesley reads a land flowing with milk and honey, blessed above all with the presence of God."
+    "summary": "Clarke makes the lot given the Messiah the redemption of mankind, the cup a cup of suffering drunk for their sake through which he imparts the cup of consolation, and the heritage an inheritance of immortal spirits; Wesley keeps the plainer image of a feast where each guest had his portion allotted him."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott explains the figure: the measuring cords 'fall' because the portions were distributed by lot (Josh. 17:5; Micah 2:5)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Spurgeon opens the verse into the Redeemer's joy in obedience — 'I delight to do thy will' — content with his blood-bought portion, poorer than we yet never murmuring; all saints may use the language."
+    "prevalence": "several",
+    "summary": "Ellicott imagines the poet exiled from his inheritance and consoled by a better part that cannot be taken from him, and explains that God does not merely cast a man's lot but holds it fast; Keil and Delitzsch make the charming district into which the lines fall the fellowship of God itself."
    }
   ],
-  "debates": [],
-  "outliers": [
+  "debates": [
    {
-    "voice": "John Gill",
-    "note": "Reads 'pleasant places' as pleasant persons — the elect church in whom Christ's portion lies — rather than tracts of ground, against the others who keep the geographical sense."
+    "issue": "Whether the pleasant places are places or persons",
+    "positions": [
+     {
+      "school": "reformed",
+      "view": "Gill argues for persons, the lines marking out the chosen ones given to Christ, and notes that the word for places is a supplement made by two Jewish commentators."
+     },
+     {
+      "school": "grammatical-historical",
+      "view": "Ellicott and Keil and Delitzsch keep the land, the measuring cords falling because the measured portions were distributed by lot."
+     }
+    ]
    }
   ],
+  "outliers": [],
   "themes": [
+   "the Lord as portion and cup",
+   "the Levitical inheritance",
+   "thou maintainest my lot",
    "the lines fallen in pleasant places",
-   "a goodly heritage",
-   "places or persons",
-   "the Redeemer's contentment"
+   "a goodly heritage"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-23",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.39
+   }
+  },
+  "range": "5-6",
+  "pericope_label": "The Lord is the portion of mine inheritance: I have a goodly heritage"
  },
  "7": {
   "voices": [
    "John Gill",
    "Matthew Henry",
    "Adam Clarke",
-   "John Wesley",
    "Charles Ellicott",
-   "Keil and Delitzsch"
+   "John Wesley",
+   "Keil and Delitzsch",
+   "C.H. Spurgeon"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: thanksgiving, like prayer, belongs to Christ as man and Mediator, who praises God for counsel and instruction."
+    "summary": "Gill assigns thanksgiving to Christ as man and Mediator, and guards the object of the setting, which is not the fear of God only nor the book of the law but the Lord himself."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: counsel given by word and Spirit, while the reins — the conscience (Jer. 17:10) — instructed him in the night-season, catechizing and quickening him to live as one who had God for his portion."
+    "prevalence": "several",
+    "summary": "Henry makes conscience the instructor of the night season, admonishing a man about the duties arising from his choice, and records that the apostle's use of these verses lets them be applied to all Christians; Spurgeon adds that the fear of death once cast its shadow over the Redeemer, who was strengthened by an angel and stayed not his hand until it was finished."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: Jesus as man received all wisdom from God (Luke 2:40-52), the reins the most secret workings devoted to God, the 'night seasons' the time of the passion; Wesley: the inward thoughts moved by the Spirit, the mind working on God while others sleep."
+    "summary": "Clarke dwells on the kidneys, hidden in fat and burnt in sacrifice to signify that the soul's most secret purposes are to be devoted to God, and takes the night seasons for the time of the passion; Wesley marks this verse as the point where David is carried above himself to speak as a type of Christ."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: 'given me counsel' = led to a happy choice, 'instruct me' better 'warn me,' conscience echoing God's voice as a binding law; Keil and Delitzsch see the closing strophe rising like seven rays of light toward a prospect that need not fear death."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I will bless the LORD",
-   "counsel by word and Spirit",
-   "the reins instruct in the night",
-   "instruct or warn"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "Matthew Henry",
-   "John Gill",
-   "Adam Clarke",
-   "C.H. Spurgeon",
-   "Charles Ellicott",
-   "John Wesley",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: all these verses Peter quotes of Christ and his resurrection (Acts 2:25-28); three things bore Christ up — his Father's will, his presence at the right hand (Luke 22:43), and the joy set before him (Heb. 12:2); Spurgeon hears the fear of death overcome by a continued eye to Jehovah."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: 'set the Lord always before me' is not the fear of God or the law (Jarchi) but the Lord himself, on whom Christ kept his eye, aiming always at his Father's glory."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: applied by Peter to Christ's death and resurrection, God's presence and support at his right hand keeping him from swerving; Wesley marks the seam — David spoke of himself, but from here is transported by the spirit of prophecy to speak as a type of Christ."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott reads 'at my right hand' as a military image — the shield of the right-hand comrade protecting the man beside him (Ps. 121:5); Keil and Delitzsch hear a real David whose believing confidence the promise fulfils."
+    "summary": "Ellicott prefers to render the verb as warning rather than instructing, conscience echoing the voice of God with a root that carries obligation; Keil and Delitzsch find in heart, glory and flesh the spirit, soul and body of the apostle's prayer, expressed here as confident expectation."
    }
   ],
   "debates": [
    {
-    "question": "How much of vv.8-11 is David's own voice, and where does prophecy of Christ begin?",
-    "sides": [
+    "issue": "Where the psalm becomes messianic",
+    "positions": [
      {
-      "position": "of Christ throughout — David the prophet speaking of the Messiah's resurrection",
-      "holders": [
-       "Henry",
-       "Gill",
-       "Clarke"
-      ]
+      "school": "wesleyan-arminian",
+      "view": "Wesley locates the turn here, since hitherto David seems to have spoken of himself but is now transported by the spirit of prophecy."
      },
      {
-      "position": "David speaks first of himself, then is caught up from this verse to speak as a type of Christ",
-      "holders": [
-       "Wesley"
-      ]
-     },
-     {
-      "position": "primarily David's own believing confidence as a friend of God, fulfilled and applied to Christ in the NT",
-      "holders": [
-       "Keil and Delitzsch"
-      ]
+      "school": "wesleyan-arminian",
+      "view": "Clarke recognises no turn, having held from the first that the whole psalm belongs to Christ alone."
      }
     ]
    }
   ],
   "outliers": [],
   "themes": [
-   "I have set the LORD always before me",
-   "Peter's Pentecost citation",
-   "he is at my right hand",
-   "the David/Messiah seam"
+   "blessing the Lord for counsel",
+   "the reins instructing in the night season",
+   "I have set the Lord always before me",
+   "at my right hand",
+   "the apostle's use of these verses"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-23",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
+  },
+  "range": "7-8",
+  "pericope_label": "I will bless the Lord, who hath given me counsel: I have set the Lord always before me"
  },
  "9": {
   "voices": [
    "John Gill",
    "Adam Clarke",
-   "John Wesley",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "John Wesley"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill reads 'my heart is glad' of an inward joy and fulness, the same as rejoicing in spirit, because of the Lord's presence."
+    "summary": "Gill rules out the place of the damned, where Christ never went, concludes that the word is best read of the grave, and takes the path of life for the resurrection shown to Christ by his being raised, the firstfruits of them that slept."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke takes 'my glory' for the tongue (Ps. 57:8; Acts 2:26), though 'soul bids as fair,' and insists 'my flesh shall rest in hope' can in no sense be said of David — a dying Messiah's certainty of a swift resurrection (Acts 2:31); Wesley likewise makes 'glory' the tongue and the flesh's hope figurative (Rom. 8:19)."
+    "summary": "Clarke states that there is no sense in which these words can be spoken of David, holds that the rest in the grave was long enough to prove the death real but too short for corruption, argues from the versions and the manuscripts that the plural of the holy ones is a corruption, and reads the pleasures as an eternal progression; Wesley sets our momentary pleasures against the pleasures of immortal souls enjoying an eternal God."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott suspects khabed (liver/heart) for khabod (glory), the LXX 'tongue' a paraphrase, heart-soul-flesh comprising the whole man (1 Thess. 5:23); 'rest in hope' truly 'rest in security,' immortality present only as a faint, unconscious ray."
+    "summary": "Ellicott renders the word usually given as corruption by a pit, making the clauses synonyms for dying, warns against seeing a conscious reference to immortality here, and yet finds the first faint scintillation of that light, which justifies the use made of the passage in the New Testament."
    }
   ],
   "debates": [
    {
-    "question": "What is 'my glory' that rejoices?",
-    "sides": [
+    "issue": "Whether the closing verses can be spoken of David at all",
+    "positions": [
      {
-      "position": "the tongue (so the LXX, quoted in Acts 2:26)",
-      "holders": [
-       "Clarke",
-       "Wesley"
-      ]
+      "school": "wesleyan-arminian",
+      "view": "Clarke denies it flatly, and rests the resurrection argument on the word for corruption."
      },
      {
-      "position": "the liver or heart (khabed), the whole man in heart, soul, and flesh",
-      "holders": [
-       "Ellicott"
-      ]
+      "school": "grammatical-historical",
+      "view": "Ellicott renders that word a pit, so that the verse only says God will not abandon his beloved to death, while granting that a larger hope is stirring in it."
      }
     ]
    },
    {
-    "question": "Can 'my flesh shall rest in hope' be spoken of David, or of Christ only?",
-    "sides": [
+    "issue": "Whether the holy one of the tenth verse is singular or plural",
+    "positions": [
      {
-      "position": "of Christ only — no sense in which it fits David; a dying Messiah's certainty of a swift resurrection",
-      "holders": [
-       "Clarke"
-      ]
+      "school": "wesleyan-arminian",
+      "view": "Clarke finds the singular in several ancient editions and many collated manuscripts and twice in the apostle's quotation, and takes the plural for a corruption or an emphatic singular."
      },
      {
-      "position": "the living confidence of a soul secure in God ('rest in security'), immortality only faintly in view",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "my glory rejoiceth",
-   "the tongue or the heart",
-   "my flesh shall rest in hope",
-   "rest in hope or in security"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill clears away the place of the damned (Christ that day in paradise); sheol/hades may mean the state of the dead, but he judges it best interpreted as the grave, 'my soul' being Christ himself or his dead body, laid there but not left."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: sheol a pit, ditch, grave, or state of the dead, to leave the soul there being to let the Messiah's life continue under death; all men see corruption but the sinless body of Christ none; the plural 'Holy One' a corruption for the singular (264 MSS, the versions, Acts 2:27; 13:35). Wesley glosses 'hell' as the state of the dead, the Holy One a title peculiar to Christ."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'leave' rather 'commit,' 'hell' the unseen world (Sheol), 'Holy One' better 'thy chosen/beloved One' (chasid), the received plural's sign superfluous; 'corruption' (shachath) properly a pit (Ps. 7:15) — yet the first faint scintillation of immortality, justifying the NT use."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What is the 'hell' (sheol) into which the soul is not left?",
-    "sides": [
-     {
-      "position": "the grave, from which the body was raised undecayed",
-      "holders": [
-       "Gill",
-       "Clarke"
-      ]
-     },
-     {
-      "position": "the separate state of the dead, the unseen world of souls (hades/Sheol)",
-      "holders": [
-       "Wesley",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "not the place of the damned (expressly denied)",
-      "holders": [
-       "Gill"
-      ]
-     }
-    ]
-   },
-   {
-    "question": "Is 'thine Holy One' plural or singular in the true text?",
-    "sides": [
-     {
-      "position": "singular (thy Holy/beloved One) — best attested by MSS, versions, and the apostolic citations (Acts 2:27; 13:35)",
-      "holders": [
-       "Clarke",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the received Masoretic plural, its plural-sign marked superfluous — a corruption or emphatic singular",
-      "holders": [
-       "the Masoretic text (as reported by Clarke)"
-      ]
+      "school": "grammatical-historical",
+      "view": "Ellicott adds that the received text's own margin calls the sign of the plural superfluous, and finds the weight of authority for the singular."
      }
     ]
    }
@@ -709,100 +423,45 @@
   "outliers": [
    {
     "voice": "Charles Ellicott",
-    "note": "Reads 'corruption' (shachath) not as decay but as 'the pit,' so that 'to see the pit' is simply 'to die' — where Gill, Clarke, and Wesley take it of the body's corruption, from which Christ's sinless flesh was exempt."
+    "view": "That the psalmist had no conscious doctrine of immortality here, and that the New Testament use of the passage is nevertheless justified by the larger hope stirring in it."
    }
   ],
   "themes": [
+   "my flesh shall rest in hope",
    "thou wilt not leave my soul in hell",
-   "sheol, grave, or hades",
-   "thine Holy One",
-   "see no corruption"
+   "thine Holy One and corruption",
+   "the path of life",
+   "pleasures for evermore"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-23",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: 'the path of life' is not the way of salvation (Christ himself) but the resurrection of the dead, shown to Christ in fact by his being raised — the first-fruits and firstborn from the dead, first to tread the path to an immortal life."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: 'the way out of the regions of death, to die no more,' the plural 'life' restoring body and soul, 'thy faces' the beatific vision (1 John 3:2), netzach an onward eternal progression; Wesley paraphrases throughout of resurrection, heavenly paradise, and the right hand where Christ sits (Ps. 110:1)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry hears Christ's recompense for his sufferings — shown the path of life, received into God's presence and set at his right hand — yet adds that, Christ being the head, the verses belong also to all Christians animated by his Spirit."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott restores the triplet and reads 'another image for the happiness of being with God,' the larger hope only a ray faintly triumphing over death — first the settled peace of a soul that possesses God."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
    }
-  ],
-  "debates": [
-   {
-    "question": "Is 'the path of life' the resurrection of Christ, or the happiness of being with God?",
-    "sides": [
-     {
-      "position": "the resurrection of Christ that Peter and Paul proclaimed — David's tomb remaining, Christ's not",
-      "holders": [
-       "Gill",
-       "Clarke",
-       "Wesley",
-       "Henry"
-      ]
-     },
-     {
-      "position": "the happiness of being with God, upon which the light of immortality has only begun to break",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "thou wilt shew me the path of life",
-   "fulness of joy",
-   "pleasures for evermore",
-   "resurrection or the presence of God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "9-11",
+  "pericope_label": "My flesh shall rest in hope: thou wilt shew me the path of life",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  }
 }
