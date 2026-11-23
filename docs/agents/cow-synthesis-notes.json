@@ -111001,6 +111001,116 @@
         "16"
       ],
       "note": "Method: tiling at Henry's four block boundaries (keys 1, 8, 9 and 16, his key-1 Exposition covering vv.1-8 and his key-16 block covering vv.16-22), which coincide with the narrative's own seams - the opportunity, the conscience, the appeal, the reply. Four tiles of 615 to 647 words over 22 verses and 16178 usable source words. The 5-7 tile is the thinnest in source at 1351 words, giving an expansion of 0.48, but all five usable voices comment in that span, so it carries the chapter's central debate without strain."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "10",
+      "verses": [
+        "12"
+      ],
+      "note": "JFB defect, 27th consecutive chapter: the only JFB block in this chapter is a 27-word foreign fragment on the Solomon/Hiram contract (2 Chronicles 2) with Josephus on the Jewish and Tyrian records. Phase 0 on the every-sixth-key lattice (key 12 is the sole JFB key here). Near-empty sub-variety: it declares a voice and a school while contributing nothing to the verse. Excluded via excluded_voices on the 8-12 span."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "10",
+      "verses": [
+        "14"
+      ],
+      "note": "Ellicott page chrome, 20th consecutive chapter: 1,225 declared words at this key, of which 241 are genuine comment and 984 are page furniture. This is the fourth time in seven chapters that the chrome payload has measured exactly 984 words, which confirms a single fixed template. It is strippable mechanically from the first occurrence of 'Footnotes:' onward."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "10",
+      "verses": [
+        "9"
+      ],
+      "note": "K&D 200-word sliding window: the whole window at this key is consumed by the quoted text of vv9-14 and cuts off mid-sentence at 'According to 1 Samuel 28:6, Saul'. Their actual comment on the Philistines' trophies is lost entirely, so Keil and Delitzsch could not be drawn on anywhere in the 8-12 span despite being listed as present."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "10",
+      "verses": [
+        "1"
+      ],
+      "note": "Henry's block-keying: Henry appears at only two keys in this chapter, 1 (608 words) and 8 (440 words), each a block digest covering material far beyond its key. Keys 3, 4, 5, 7 and 11 are single-voice. Span-aware source resolution for Henry would materially change what is available at the joints."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "10",
+      "verses": [
+        "10"
+      ],
+      "note": "Wesley abridging Henry again, sixth chapter in which this is recorded: his 44 words here are Henry's Dagon question compressed, and he adds nothing of his own. He is listed as a separate voice and a separate school, so the tags overstate the breadth of witness at this key."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "10",
+      "verses": [
+        "3"
+      ],
+      "note": "The chapter's sharpest divergence. Henry's four-point correspondence between Saul's sins and the manner of his fall turns on the archers having hit the king who threw a javelin at David and missed. Ellicott renders the same clause 'he shuddered before the shooters', the verb being properly to writhe or travail, and treats the terror rather than a wound as the point. The two readings cannot both stand."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "10",
+      "verses": [
+        "13"
+      ],
+      "note": "Three-way handling of an omission. Ellicott observes that the verdict makes no allusion to Saul's slaughter of the priests nor to his hatred of David. Clarke reproduces the Targum, which supplies exactly that count, making the slain priests of Nob the reason no answer came by Urim and Thummim. Gill reports the same addition and refuses it on the ground that it is not in the text."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "10",
+      "verses": [
+        "14"
+      ],
+      "note": "A correspondent's excursus at the chapter's last key, the same class as 1samuel 11:15. Of Clarke's 791 words here, roughly 600 are a quoted letter from a literary friend signed J.W., arguing the men of Jabesh acted from gratitude for their rescue from Nahash, comparing the Homeric contests over a fallen chief and the hero of the Iliad's treatment of Hector, and inferring the authenticity of the books from such private matters as the friendship of Jonathan and David. It is accounted as Clarke's commentary on v14."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "10",
+      "verses": [
+        "10"
+      ],
+      "note": "Ellicott's second-source argument, worth preserving: the skull fastened in the house of Dagon here against the corpse fastened to the wall of Beth-shan there, which he calls hardly likely to be a corruption either way; the house of their gods for the house of Ashtaroth, which he reads as the chronicler's repugnance to naming the idol; and the terebinth against the tamarisk at v12."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "10",
+      "verses": [
+        "1"
+      ],
+      "note": "Tiling record: 5,827 usable source words over 14 keys tiled as three spans of 2,071 / 1,387 / 2,321 source words, landing at 648 / 607 / 647 validator words. The two spans over 2,000 source words both overshot on the first draft (762 and 690) and were brought into band by dropping whole sub-threads, not by trimming clauses. The 1,387-word span needed no cut. Further evidence that the 350-650 band should scale with usable source words."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "10",
+      "verses": [
+        "13"
+      ],
+      "note": "Gill is nearly absent from this chapter: 26 words at key 13 and 63 at key 14, nothing elsewhere. The reformed school is therefore carried by a single voice in a single span, and the 1-7 and 8-12 spans have no reformed witness at all."
     }
   ]
 }
