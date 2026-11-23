@@ -111680,6 +111680,75 @@
         "1"
       ],
       "note": "First-draft overshoots, four of five spans: 770, 662, 697 and 824 validator words, with only the 1,630-word span landing in band at once. This confirms the predictor recorded at job 15: the two worst overshoots are the spans carrying the most distinct voices, nine in the first span and seven in the fourth, not the spans with the most source words. Each additional voice costs a clause whether or not it adds a distinct reading."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "6",
+        "7",
+        "9",
+        "12",
+        "13",
+        "15",
+        "16",
+        "18",
+        "20",
+        "22"
+      ],
+      "note": "Measurement, and the strongest single-chapter evidence yet for the Keil and Delitzsch harvest cap: THIRTEEN of the fourteen K&D blocks in this chapter are EXACTLY 203 visible words, every one of them cut off mid-sentence (key 2 ends 'There was no untruth in', key 5 ends 'connected with every sacrificial meal. It', key 6 ends 'for man looketh on', key 15 ends mid-Latin-quotation 'cithara ut ferunt'). The single exception is key 22, the chapter's LAST K&D block, at 69 words and ending cleanly on a full stop - i.e. the only block under the cap is the one that simply ran out of source. That rules out coincidence: 203 is a hard truncation applied per block at harvest time, not a property of the commentary. Seventh chapter and fifth book with the identical figure. Raising or removing the cap would recover roughly two-thirds of K&D's text corpus-wide, and would end the verbatim repetition between consecutive keys that the overlapping windows now produce."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "16",
+      "verses": [
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "JFB residue, eleventh book. The three JFB blocks in this chapter (keys 8, 14, 20 - 71 words in total) carry commentary on JOSHUA 19: 'Instead of describing the boundaries of this tribe, the inspired historian gives a list of its principal cities. These cities are all in the eastern part of the plain of Esdraelon', and then twice 'The western boundary is traced from north to south through the cities mentioned; the site of them, however, is unknown.' Keys 14 and 20 are byte-identical duplicates, as the low positions of the series always are. The donor is again earlier canon than the target, consistent with the global-misalignment reading established at 2 Samuel 3 and 2 Kings 6. All three spans holding a JFB block were handled with excluded_voices."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "23"
+      ],
+      "note": "Page chrome at BOTH ends of the chapter, which is a new variant. The chapter-final Ellicott block at key 23 carries the usual StudyLight footer plus the embedded JavaScript page payload - 42nd instance of that defect, and here it is large enough that the block reads as roughly 170 real words against about 1,000 of chrome. But Clarke's block at key 1 opens with the chapter's own argument list ('Samuel is sent from Ramah to Bethlehem, to anoint David, 1Sam 16:1-13. The Spirit of the Lord departs from Saul... They recommend David, 1Sam 16:18') before any commentary begins. So chrome attaches to the FIRST key as well as the last, and a stripper written only for the chapter-final footer will leave this untouched. K&D's key-1 block has the same shape, being a chapter overview rather than verse commentary."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "16",
+      "verses": [
+        "11",
+        "16"
+      ],
+      "note": "Wesley abridging Henry twice more in one chapter, instances twenty and twenty-one. (1) Wesley's key-16 note ends 'Those whom God designs for any service, his providence will concur with his grace, to prepare and qualify them for it', which is Henry's key-14 sentence 'Those whom God designs for any service his providence shall concur with his grace to prepare and qualify for it'. (2) Wesley's key-11 note ends 'Samuel having done this went to Ramah. He retired to die in peace, since his eyes had seen the salvation, even the sceptre brought into the tribe of Judah', which is Henry's key-6 close almost word for word, down to 'the sceptre brought into the tribe of Judah'. His key-11 arithmetic on David's age and the ten years of trouble is Henry's too. Neither sentence was attributed to Wesley in the tiles. Across nine books the count is now twenty-one, and this is the first chapter in which a single Wesley block borrows from two different Henry blocks."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "6",
+        "14"
+      ],
+      "note": "Henry Concise doubling in all three Henry blocks, the seventh consecutive pick with the defect. Key 1 closes by restating its own Exposition ('It appears that Saul was grown very wicked... The elders of Bethlehem trembled at Samuel's coming... I come peaceably, for I come to sacrifice'); key 6 restates the Eliab lesson and the coming of the Spirit; key 14 repeats verbatim the whole sentence 'It is a pity that music, which may be serviceable to the good temper of the mind, should ever be abused' together with 'Saul is made a terror to himself'. About 600 duplicated words in this chapter. A paraphrase-tolerant duplicate test run over all of a chapter's Henry material would catch every one of them."
     }
   ]
 }
