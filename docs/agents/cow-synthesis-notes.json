@@ -111320,6 +111320,66 @@
         "15"
       ],
       "note": "Method: Henry's three block boundaries (keys 1, 3 and 15) gave three natural seams, and the long middle span was split at v.9, where the narrative turns from the plea to the paperwork - giving 1-2, 3-8, 9-14, 15-17. Henry has no block in the 9-14 span, but his key-3 Exposition covers vv.3-14, so his material on the languages of the decree and on the civil war the expedient entailed is verse-grounded there and he is declared on it. The 9-14 tile is the thinnest in source at 1418 usable words, expansion 0.45, and K&D was left out of it as his only block there is bare verse recitation."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "7",
+        "19",
+        "25"
+      ],
+      "note": "JFB residue again, and the decisive cross-check for the corpus-wide hypothesis. The four JFB blocks in this chapter (keys 1, 7, 19, 25 - a stride-6 series, the low positions byte-identical duplicates, 356 words in total) carry commentary on JUDGES 6-9, not on 2 Samuel 3. Set beside 2 Kings 6, whose JFB slot holds 2 Samuel 2-3 material, this shows each chapter's JFB slot holds some EARLIER chapter's text with a donor offset that advances monotonically with the target key. That makes the defect look like a global misalignment of the JFB harvest rather than per-chapter damage. Tenth book in which the pattern is now documented. A corpus-wide sweep is the highest-value repair available; all four spans with a JFB block were handled with excluded_voices."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "3",
+      "verses": [
+        "29"
+      ],
+      "note": "Wesley's note at key 29 on David's curse is Matthew Henry verbatim, not Wesley's own judgement: Henry's Exposition at key 22 reads 'but methinks a resolute punishment of the murderer himself would better have become David than this passionate imprecation of God's judgments upon his posterity', and Wesley reproduces it as 'would not a resolute punishment of the murderer himself have become David better, than this passionate imprecation on his posterity?'. The objection is therefore attributed to Henry in the tile, and Wesley is credited only with the self-defence argument at key 27 that is his own. Nineteenth confirmed instance of Wesley abridging Henry, across eight books; a voice-counting prevalence field would otherwise report two independent witnesses where there is one."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "7",
+        "22"
+      ],
+      "note": "Henry Concise doubling present in all three Henry blocks in this chapter, as in every chapter examined for the last six consecutive picks. The key-22 block (3,004 words) ends with a Concise paragraph restating the Exposition's own argument on Joab's remonstrance and the curse. A de-duplicator keyed on paraphrase rather than exact match, run across all of a chapter's Henry material rather than only block tails, would catch this class; 1 Samuel 24 key 8 showed the standalone-Concise variant that a tail-only test misses."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "7",
+        "12",
+        "19",
+        "22",
+        "31"
+      ],
+      "note": "Measurement: Keil and Delitzsch's 203-visible-word harvest cap holds in this chapter too, every block, no exceptions - the sixth chapter and fifth book in which the figure is exactly 203. Consecutive keys repeat commentary verbatim because the windows overlap, and every block is truncated mid-sentence. The cap, not the commentary, is why K&D carried only the king's protest into the vv.22-30 tile."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "3",
+      "verses": [
+        "39"
+      ],
+      "note": "Method: 2 Samuel 3 was taken as the second chapter of a two-chapter batch (esther 8 at 9,697 usable source words plus this chapter at 20,115, within the 40,000 ceiling), and that was too much for one turn. Trim cycles on the later tiles ran to three and four passes because the first drafts came in at 750-890 words against a 650 ceiling. Drafting at ~620 on the first pass - four paragraphs of about 155 words with three or four attributions each, budgeting 650 divided by voices times items and dropping the weakest VOICE rather than compressing below about 28 words per attribution - is what kept esther 8's opening tile at 636 first time. Rotation is warranted before the next pick."
     }
   ]
 }
