@@ -110747,6 +110747,121 @@
         "25"
       ],
       "note": "Method: tiling set at Henry's three block boundaries (keys 1, 16 and 25, his exposition covering vv.1-15, 16-24 and 25-33), then subdivided so that no tile fell much below 1800 usable source words - 1-5, 6-11, 12-16, 17-24, 25-33. A straight 12-15 tile would have had only 501 usable source words against a 650-word output floor, so v.16 was folded in with the answer that provoked it, which is also the natural pericope break. Only six voices appear in the chapter and five are usable, so every tile carries all five."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "13",
+      "verses": [
+        "4",
+        "10"
+      ],
+      "note": "JFB defect, 26th consecutive chapter, and the cleanest demonstration yet that the intruders are repeated identical slices rather than random misplacement. Both Jamieson, Fausset and Brown blocks in this chapter are foreign AND byte-identical to each other: md5 846ed04b01bf91152f3c920dca4c81be, 103 words each, on the bronze lavers of Solomon's temple and the four-wheeled carriages that bore them, citing Napier on their weight when full. That is 1 Kings 7 material. Keys 4 and 10 are the two filled slots of the every-sixth-key lattice at phase 4, and both carry the same slice. This matches 1samuel 18, where four of the five lattice hits were byte-identical (md5 b8587588), and strengthens the mis-seeking-indexer account: the indexer lands on one wrong offset for a chapter and emits the same block at each lattice point. Declared excluded on both spans."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "13",
+      "verses": [
+        "14"
+      ],
+      "note": "Ellicott page chrome, 19th consecutive chapter, fifth in a row of the CSS-and-JavaScript variety. The key-14 block declares 1060 words of which 76 are genuine Ellicott, ending at the cross-reference on the nature of the blessing; the remaining 984 are navigation, footnotes, copyright statement, stylesheet and script. The figure 984 is now the third time in five chapters that the chrome payload has come out at exactly that length (1samuel 8:22, 2kings 9:37, 2kings 2:25, and here), which suggests one fixed template rather than page-specific junk and makes it mechanically strippable: everything from the first occurrence of 'Footnotes:' onward."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "13",
+      "verses": [
+        "1-14"
+      ],
+      "note": "Chapter small and lopsided, which forced a two-span tiling against the usual practice of three or four. Usable source is only 6,483 words over 14 keys, and 984 of those are chrome at key 14, leaving about 5,500 real. The distribution is severe: keys 1, 2 and 14 hold 3,829 declared words between them while keys 7, 8, 11, 12 and 13 hold 466 in total, several of them Ellicott alone. A natural four-part tiling (1-5 / 6-8 / 9-12 / 13-14) would have given the 6-8 span only Clarke and Ellicott, and the 13-14 span about 343 real source words against a 350-word band floor, which is expansion rather than synthesis. Tiled 1-5 / 6-14 instead, which keeps four voices in the second span and compresses at 0.21. Recorded because it is the first chapter in this run where the band floor, not the ceiling, dictated the tiling."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "13",
+      "verses": [
+        "6"
+      ],
+      "note": "Matthew Henry filing, a small instance with a real consequence. His three blocks sit at keys 1, 6 and 9, but the key-6 block (104 words) is pure Concise digest about the sin and punishment of Uzza, which is verses 9 and 10, not the verses it is filed under. Had I kept a 6-8 span it would have had a Henry block whose whole content was off-verse, and no usable puritan-evangelical material at all. The two-span tiling makes the point moot, since keys 6 and 9 both fall inside the 6-14 span and his Uzza material is on-verse there. Worth noting as a variant of the filing defect: not an exposition overrunning its key forwards, but a digest filed three verses before the matter it treats."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "13",
+      "verses": [
+        "3"
+      ],
+      "note": "Ellicott against the plain sense of the reason David gives, and the more interesting for how little support he has. The phrase is normally read as enquiring at the ark, which assumes the ark served as an oracle. Ellicott renders it we sought it not, meaning neglected it and cared nothing about it, notes the twenty years it lay in Abinadab's house, suggests the suffix may refer to God rather than the ark, and states flatly that there is no clear evidence the ark itself was ever used as an oracle. Wesley reads the same verse as simple neglect of the ark in favour of sacrificing at Gibeon, which is compatible, but no voice in the chapter defends the oracular sense against Ellicott."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "13",
+      "verses": [
+        "1"
+      ],
+      "note": "Keil and Delitzsch's key-1 block is not verse commentary at all but a comparison of the two accounts, and it is the most useful thing in the chapter for a reader. The facts are in the older book, mostly in the same words, but differently arranged, because that author weighed the transfer of the ark politically, as one of David's first acts towards raising the kingship, where the chronicler has in view its religious significance, the restoring of the Levitical worship prescribed in the Mosaic law. Ellicott states the same relation from the other end at verse 6, that from that point the narrative coincides with the parallel, the original text being plainly the same whether the chronicler drew on that book or another source, the differences consisting of abridgments, paraphrases and corrections. Taken together the two give the span its frame."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "13",
+      "verses": [
+        "7",
+        "13"
+      ],
+      "note": "A gap worth recording, because it is an absence rather than a defect. Not one of the four voices available in the 6-14 span raises the objection the chapter itself later answers, that the ark should have been borne on the shoulders of Levites rather than carried on a cart at all. Clarke explains the new cart only as a precaution against profaning the ark with a carriage that had served common uses. The nearest any voice comes is Ellicott at verse 13, noting that Obed-edom was a Korhite Levite of the clan of Kohath, 'which was charged with the carriage of the Ark' — the premise of the objection, stated without drawing it. The prose reports what the voices say and does not supply the inference."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "13",
+      "verses": [
+        "14"
+      ],
+      "note": "Adam Clarke at the chapter's last key, and for once the appended material is short and he judges it himself. He reports the Targum's account of the blessing on Obed-edom: his wife and his eight daughters-in-law each bore eight at a birth, so that in one day fathers and children numbered eighty-one. His own verdict follows: 'This exposition will not be generally received; but all rabbins must be allowed to deal in the marvellous.' Unlike the excursuses at 1kings 20:43, 1samuel 8:22 and 2kings 9:30, this one is on the verse, is attributed, and carries its own caveat."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "13",
+      "verses": [
+        "9",
+        "10",
+        "11",
+        "14"
+      ],
+      "note": "Wesley abridging Henry, a fourth chapter in a row. Henry's six lessons on Uzza are filed at key 9; Wesley's notes at keys 10, 11 and 14 reproduce the first, the fourth and the sixth of them almost word for word, including 'not to think that a right intention will justify a wrong action', 'if God be angry with us, shall we dare to be angry with him?' and the ark as 'a guest nobody shall lose by'. Here the abridgement costs nothing, since Henry is filed inside the same span; it is only where his block falls outside the span that Wesley's version becomes the sole carrier, as at 2kings 2:8 and 2:11."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "13",
+      "verses": [
+        "1-14"
+      ],
+      "note": "Self-graded A on both spans, 0 fidelity signals, 0 sweep problems, 0 gate violations. Caught pre-commit: one meta flag and one THINTALK, both from the same phrase, 'the comment is thin but pointed' at the head of a paragraph in entry 6, rewritten. No ROLLCALL this chapter, after five in 2kings 2 — the deliberate avoidance of semicolon-chained three-name lists worked. Both voices present in each span are named in that span's prose and no voice is named outside its source. Both entries inside the 350-650 band on the validator's count, 629 and 648."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "13",
+      "verses": [
+        "1-14"
+      ],
+      "note": "Calibration on a small chapter, which tests the other end of the band. Both spans overshot on first draft, 735 on 1-5 (3,463 source words) and 787 on 6-14 (3,020), consistent with the rule formed at 1samuel 11 and confirmed at 2kings 2 that spans above about 3,000 source words overshoot by 70 to 140. What is new is the floor: with only about 5,500 real source words in the chapter, a four-span tiling would have put one entry below the 350-word floor's worth of material, so the band constrained the tiling from below for the first time in this run. The useful summary is that the 350-650 band suits spans between roughly 1,200 and 2,500 usable source words and distorts the work at both extremes."
     }
   ]
 }
