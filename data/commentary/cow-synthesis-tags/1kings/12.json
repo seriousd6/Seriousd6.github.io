@@ -1,1437 +1,629 @@
 {
-"1": {
-"voices": [
-"Keil and Delitzsch",
-"Charles Ellicott",
-"Matthew Henry",
-"John Gill",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Rehoboam succeeds to Judah but must be 'made king' by Israel, who claim a right to conditions; Shechem's choice forebodes revolution."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "single",
-"summary": "Henry: Solomon's one son was a fool — wisdom runs not in the blood; the people meant to unmake, not make, him, yet it was of the Lord."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Rehoboam knew of the threatened rending and hoped to forestall it at Shechem, but the move hastened the rupture."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: Rehoboam was likely Solomon's only son, a foolish heir — the fruit of unbounded matrimonial excess."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the disruption of the kingdom",
-"Shechem",
-"inherited folly",
-"providence and human freedom"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"2": {
-"voices": [
-"Keil and Delitzsch",
-"Charles Ellicott",
-"John Gill"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "majority",
-"summary": "The complex Hebrew sentence runs on into v3; Chronicles and the LXX read 'returned from Egypt' where Kings has 'dwelt in Egypt.'"
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the people sent and called Jeroboam, making the returned fugitive their spokesman before Rehoboam."
-}
-],
-"debates": [
-{
-"question": "Was Jeroboam still in Egypt, or already returned when summoned?",
-"sides": [
-{
-"position": "still in Egypt and only later called (the Masoretic text of Kings)",
-"holders": [
-"Keil and Delitzsch"
-]
-},
-{
-"position": "already returned from Egypt to his city, then sent for (Chronicles/LXX, more probable)",
-"holders": [
-"Charles Ellicott"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"Jeroboam's return",
-"textual variants",
-"providential timing"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"3": {
-"voices": [
-"Keil and Delitzsch",
-"John Gill"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "'All the congregation of Israel' assembles to petition; K&D weigh Solomon's real burdens against the peace and wealth his reign secured."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: chiefly Ephraimites sent for Jeroboam, whose summons may have prompted his very return from Egypt."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the congregation of Israel",
-"petition for relief",
-"Jeroboam as spokesman"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"4": {
-"voices": [
-"Charles Ellicott",
-"Adam Clarke",
-"John Gill"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott: the tribes acted within their right; heavy taxation and forced labour broke old traditions and even Solomon's earlier practice."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: two real grievances — laborious service and heavy tax; late Solomon revived an Egyptian-style bondage."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the complaint was largely groundless; they lived in peace and plenty and said nothing of Solomon's idolatry, their true grievance."
-}
-],
-"debates": [
-{
-"question": "Was Israel's complaint of a 'grievous yoke' just?",
-"sides": [
-{
-"position": "a legitimate grievance, within their rights",
-"holders": [
-"Charles Ellicott",
-"Adam Clarke"
-]
-},
-{
-"position": "groundless and factious — silent about the real evil, Solomon's idolatry",
-"holders": [
-"John Gill"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"the grievous yoke",
-"taxation and forced labour",
-"misplaced complaint"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"5": {
-"voices": [
-"Keil and Delitzsch",
-"John Gill"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D read the three-day delay as due deliberation, the king weighing the petition with his father's old counsellors."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: what looks prudent was imprudent — the delay let the faction ripen and betrayed the king's unwillingness; he should have promised relief at once."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the three-day delay",
-"timing in leadership",
-"provocation by hesitation"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"6": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: consulting the aged, experienced counsellors who had served Solomon was itself prudent — they could give the best advice."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D: the singular verb marks one speaking for all; the elders' counsel — serve now, be served forever — is sound, but Rehoboam forsakes it."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the old counsellors",
-"wisdom of experience",
-"serve to be served"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"7": {
-"voices": [
-"Adam Clarke",
-"Charles Ellicott",
-"John Gill"
-],
-"schools": [
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: the counsel states the true constitutional ideal — the king is the servant, not slave, of his people, and so their father and king."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott: it is the crafty, cynical advice of experienced politicians — 'good words' and temporary concession, yielding no substantial power."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill takes the elders' advice straightforwardly as the good and gracious course Rehoboam ought to have followed."
-}
-],
-"debates": [
-{
-"question": "Is the old men's counsel noble statesmanship or mere cunning?",
-"sides": [
-{
-"position": "a true constitutional ideal of the king as servant of his people",
-"holders": [
-"Adam Clarke",
-"John Gill"
-]
-},
-{
-"position": "the crafty, cynical appeasement of corrupt politicians",
-"holders": [
-"Charles Ellicott"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"the king as servant",
-"statecraft versus cunning",
-"consent and authority"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"8": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: pride is the root — Rehoboam could not brook stooping to his people, so he sought counsel more congenial to his haughty temper."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D: he turns to the young courtiers who advise overawing threats; 'little finger' means greater might, and 'scorpions' are barbed whips."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"pride and flattery",
-"rejecting counsel",
-"the young companions"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"9": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill notes the king rehearsing the people's modest plea to his young circle, already bent on refusal."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D carry the narrative on: the king's question yields at once the young men's boast and the threat of scorpions for whips."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"how to answer the people",
-"a reasonable plea",
-"the royal 'we'"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"10": {
-"voices": [
-"Adam Clarke",
-"Charles Ellicott",
-"John Gill"
-],
-"schools": [
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: reared alongside the prince, these familiar nobles counsel a proverb of pride — power as much greater than Solomon's as the thigh exceeds the little finger."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott: the spoilt children of luxurious despotism mistake obstinacy for vigour; such threats succeed only when disaffection is superficial."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: they put into his mouth words that owned and magnified the charge against Solomon."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the young counsellors",
-"arrogance as policy",
-"misreading the times"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"11": {
-"voices": [
-"John Gill",
-"Adam Clarke",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: to own 'my father laid a heavy yoke' was unbecoming, conceding the charge; perhaps it reports the people's sense, not the king's admission."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: chastisement becomes punishment; the scorpion is a whip armed with iron points, or the Roman engine of poisoned darts."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Ellicott: the scorpion is a flagellum-like whip loaded with weights and sharp points."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"whips and scorpions",
-"the threat of tyranny",
-"fear in place of loyalty"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"12": {
-"voices": [
-"John Gill"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Jeroboam returns at the head of the people, plainly now the head of the faction and their designated king, as the appointed third day arrives."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the third day",
-"Jeroboam at the head",
-"the ripened revolt"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"13": {
-"voices": [
-"John Gill"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the king answered 'roughly' — blustering hard words and menaces, worked up by his young counsellors, forsaking the elders' soft answer."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"a rough answer",
-"forsaking wise counsel",
-"the crisis of the kingdom"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"14": {
-"voices": [
-"John Gill"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Rehoboam answered 'in the very language' of the young men, owning the charge against his father and vowing to add to the yoke."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"borrowed bravado",
-"adding to the yoke",
-"a king mouthing his flatterers"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"15": {
-"voices": [
-"Charles Ellicott",
-"John Gill",
-"Matthew Henry",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott: Scripture holds together God's all-ordaining providence and man's freedom; Rehoboam's folly worked God's judgment yet was folly still."
-},
-{
-"school": "reformed",
-"prevalence": "several",
-"summary": "Gill and Henry: God left Rehoboam to his folly to fulfil Ahijah's word, serving righteous ends by the sins of men."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: the Hebrew names the 'revolution' as from the Lord, not the cruelty — God stirred revolt against an unfit king."
-}
-],
-"debates": [],
-"outliers": [
-{
-"voice": "Adam Clarke",
-"note": "Reads sibbah as 'the Revolution/turning away' that was from the Lord, not the folly itself, and cites no ancient version supporting the common rendering."
-}
-],
-"themes": [
-"the cause was from the Lord",
-"providence and human freedom",
-"Ahijah's word fulfilled"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"16": {
-"voices": [
-"Keil and Delitzsch",
-"Charles Ellicott",
-"Matthew Henry",
-"John Gill",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D: the cry echoes Sheba's revolt and voices an ancient tribal aversion to David's house, the true root of secession; Ellicott hears the sarcasm of 'see to thine own house.'"
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "single",
-"summary": "Henry: their zeal for liberty became a free people, yet they spoke unbecomingly of David and rebelled against God's anointed house — a great sin."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill records the withdrawal of allegiance as rebellion against their lawful prince."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: only Judah and Benjamin, reckoned as one, remained with Rehoboam."
-}
-],
-"debates": [
-{
-"question": "Was Israel's revolt righteous recoil or sinful rebellion?",
-"sides": [
-{
-"position": "a just refusal to be trampled, becoming a free people",
-"holders": [
-"Matthew Henry (in part)",
-"Adam Clarke"
-]
-},
-{
-"position": "a great sin against David's God-established house, rooted in old tribal jealousy",
-"holders": [
-"Keil and Delitzsch",
-"Matthew Henry (in part)",
-"John Gill"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"to your tents, O Israel",
-"what portion in David",
-"revolt as judgment and as sin"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"17": {
-"voices": [
-"Keil and Delitzsch",
-"Charles Ellicott",
-"John Gill"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D and Ellicott: these are ten-tribe Israelites (especially Simeon) settled in Judah's cities; the phrase 'children of Israel' hints the true Israel remained in Judah."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Israelites who had settled, or now removed, into Judah for the sake of the true worship stayed under Rehoboam."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the faithful remnant",
-"children of Israel in Judah",
-"the true Israel"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"18": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Charles Ellicott",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D and Ellicott: Rehoboam earnestly meant to negotiate, but sending Adoram, the taskmaster of the levy (Adoniram of David's and Solomon's reigns), only inflamed the mob to stone him."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the tribute-chief was the most hateful possible envoy — another false step; too late and the wrong man."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: to send the tax-superintendent amid such ferment proved Rehoboam's folly and incapacity to govern."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the stoning of Adoram",
-"the wrong envoy",
-"the king's flight"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"19": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: it is rightly called rebellion — done by the people's own will against their lawful prince — even though it fulfilled God's purpose."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D mark the finality of the fall; Ellicott: 'unto this day' shows an older document embedded, the division enduring till the Assyrian captivity."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"rebellion against David's house",
-"sin within providence",
-"unto this day"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"20": {
-"voices": [
-"Keil and Delitzsch",
-"Charles Ellicott",
-"Adam Clarke",
-"John Gill"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D: the congregation makes Jeroboam king over all Israel, Judah alone left to David; Ellicott sees his astute self-effacement and the claim to be 'the true Israel.'"
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: the ten tribes had no legal or constitutional right to crown Jeroboam; only God's just judgment on Solomon's house could justify it."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the common people, unaware till now of Jeroboam's return, flock to make him king."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"Jeroboam made king",
-"the true Israel",
-"legitimacy and judgment"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"21": {
-"voices": [
-"Keil and Delitzsch",
-"John Gill"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D: Rehoboam raises 180,000 chosen men of Judah, Benjamin and the rest to retake the kingdom — a war soon to be forbidden as 'from the Lord.'"
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill notes the forty miles from Shechem to Jerusalem, marking the king's retreat to raise his army."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the muster for war",
-"180,000 warriors",
-"contending against God"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"22": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D and Ellicott: Shemaiah, a prophet of Judah, unexpectedly forbids Judah's war to protect the new kingdom, marking the opportunity given Israel and stressing 'your brethren.'"
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Shemaiah, a prophet of those days, receives 'the word of prophecy' from the Lord."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"Shemaiah the man of God",
-"the word that stops a war",
-"your brethren"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"23": {
-"voices": [
-"John Gill"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: for the first time the Lord himself names Rehoboam 'king of Judah,' ratifying the reduced realm and addressing the whole house of Judah, Benjamin, and the remnant."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"king of Judah only",
-"heaven ratifies the division",
-"the whole nation addressed"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"24": {
-"voices": [
-"John Gill",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the prophetic 'Thus saith the Lord' lays the separation of the tribes to God's own doing, forbidding the war."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: it was great deference to relinquish a war they thought justified; the people obeyed gladly, since the mass of mankind are averse to war."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"this thing is from me",
-"submission to the word",
-"brethren spared"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"25": {
-"voices": [
-"Charles Ellicott",
-"Keil and Delitzsch",
-"John Gill",
-"Matthew Henry"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott and K&D: 'built' means fortified; Shechem (with its patriarchal and covenant history) and Penuel become Jeroboam's east-and-west strongholds."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "single",
-"summary": "Henry: the fortifying was proper, but sprang from jealous fear of the people and distrust of God's promise of a 'sure house' — the root of all treacherous departures."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Jeroboam repaired and fortified Shechem and built a palace for his residence."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"Shechem and Penuel",
-"fortifying the kingdom",
-"fear of man and distrust of God"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"26": {
-"voices": [
-"Keil and Delitzsch",
-"John Gill"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D: fearing the pull of temple worship would draw the tribes back to David's house and endanger his life, Jeroboam resolves on a rival cult — a fear 'not without reason.'"
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: musing over his kingdom's affairs, Jeroboam conceives the scheme 'in his heart,' his own private reasoning."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"said in his heart",
-"religion and political loyalty",
-"a calculated apostasy"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"27": {
-"voices": [
-"Keil and Delitzsch",
-"John Gill",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D: Jeroboam judges, not unreasonably, that pilgrimage to Jerusalem will turn hearts back to Rehoboam, and takes counsel with the heads who made him king."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the people were bound to sacrifice at the temple three times a year and nowhere else, so the pull toward Jerusalem was constant."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: Jeroboam rightly distrusted a fickle people who followed him from caprice, not principle — but never trusted God's promise."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"fear of losing the crown",
-"worship and allegiance",
-"distrust of God's promise"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"28": {
-"voices": [
-"Keil and Delitzsch",
-"Charles Ellicott",
-"Adam Clarke",
-"John Gill"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D and Ellicott: the gilded wooden calves revive Aaron's Sinai idolatry, drawing on Egyptian and Ephraimite emblems; a breach of the Second Commandment that would degenerate toward polytheism."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: a 'political religion' — religion made a state engine — with the effrontery of echoing Aaron's very words despite the judgments they recalled."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Jeroboam took counsel with men as irreligious as himself, concerned only for the civil state."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the golden calves",
-"imaging the true God",
-"religion as state engine"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"29": {
-"voices": [
-"Keil and Delitzsch",
-"Charles Ellicott",
-"John Gill",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D: the calves broke both the ban on images and the law of the one chosen place; Ellicott: Bethel and Dan, frontier towns, carried patriarchal and old-sanctuary associations Jeroboam exploited."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Bethel was chosen partly because its very name, 'house of God,' and Jacob's visions there lent colour to the corruption."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: Solomon's earlier idolatry had prepared the people for these abominations at the land's two extremities."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"Bethel and Dan",
-"idolatry clothed in tradition",
-"the central sanctuary overthrown"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"30": {
-"voices": [
-"John Gill",
-"Charles Ellicott",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott: no lost Bethel-clause; Dan is singled out because its old sanctuary and priesthood were ready for worship at once; K&D read 'even unto Dan' of the whole kingdom."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the calves became the occasion of idolatry, leading the people by degrees to worship the images as gods."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"this thing became a sin",
-"even unto Dan",
-"self-chosen worship"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"31": {
-"voices": [
-"Keil and Delitzsch",
-"Adam Clarke",
-"John Gill"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "K&D: the house of high places and the shifted feast counterfeit the Jerusalem order, altered just enough to be Jeroboam's own."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: a 'temple of temples,' and priests taken indifferently from any comer, unfit and unconsecrated — though the true Levites likely refused."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: a temple at Dan with altars for burnt offering and incense, in imitation of Jerusalem."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"a non-Levitical priesthood",
-"the lowest of the people",
-"counterfeit worship"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"32": {
-"voices": [
-"Charles Ellicott",
-"Adam Clarke",
-"John Gill"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott: the feast mimics Tabernacles but shifts the date 'of his own heart,' and Jeroboam usurps the priest's office of sacrifice and incense, imitating and outdoing Solomon."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: meeting the people's prejudices, Jeroboam appeared to hold the thing while subverting the ordinance."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: an arbitrary change, though Abarbinel thought the later harvest in the north made the eighth month fitter for an ingathering feast."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"a feast of his own devising",
-"will-worship",
-"the king at the altar"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"33": {
-"voices": [
-"Charles Ellicott",
-"Keil and Delitzsch",
-"Adam Clarke",
-"John Gill"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott: the repeated verse opens the next chapter's story; read as continuous ('was offering'), it fixes Jeroboam mid-sacrifice for the man of God to confront. K&D stress 'devised of his own heart.'"
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: Jeroboam acted as his own high priest, condensing civil and ecclesiastical power in his single person."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: he did at Bethel as he had done in Dan, completing the apostasy at both shrines."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"devised of his own heart",
-"king and priest in one",
-"a self-made religion"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-}
+ "1": {
+  "voices": [
+   "Matthew Henry",
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "1-5",
+  "pericope_label": "Rehoboam at Shechem: Jeroboam recalled, and the petition for a lighter yoke",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry opens on the arithmetic of Solomon&rsquo;s household, a thousand wives and concubines and but one son to bear up his name, and he a fool, since sin is a bad way of building up a family; nor did the son inherit his father&rsquo;s wisdom, for neither wisdom nor grace runs in the blood. He reads the choice of Shechem as a trap: their pretence was to make him king but the design was to unmake him, and Rehoboam, supposed to have known of the threatening that the kingdom should be rent from him, hoped by treating with the ten tribes there to prevent it, and only hastened the rupture. He thinks the errand to Egypt needless, since Jeroboam knew what God had designed him for and would have come unsent. On the petition he holds the complaint groundless: if Solomon&rsquo;s buildings cost them money they cost no blood, and when silver was in a manner as common as the stones they did but render to Solomon the things that were Solomon&rsquo;s; and the one grievance they had cause to name, the idolatry set up among them, is never mentioned."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott finds a constitutional distinction behind the meeting: David made a league with the elders of Israel when they made him king, which implies a less absolute royalty than the unconditional anointing over Judah, so Rehoboam succeeds without question to Judah&rsquo;s throne but must be made king by the rest, with some right to require conditions first; and it is significant that the ceremonial was fixed not at Jerusalem but at Shechem, chief city of Ephraim and afterwards the northern capital, an arrangement without precedent in which there was perhaps some omen of revolution. He reports that Chronicles and the Greek have Jeroboam return from Egypt on hearing of Solomon&rsquo;s death and be sent for from his own city, which is far more probable and might be read in the Hebrew by a slight change; and he infers the tribes&rsquo; right from the narrative&rsquo;s tone and the king&rsquo;s want of resentment, the burdens being against old traditions and even against Solomon&rsquo;s own earlier practice. Keil and Delitzsch measure the loss, that by this renunciation of the Davidic sovereignty the kingdom of God in Israel was rent asunder, weakening not only the political power of the state but the spiritual power of the covenant nation; they describe the Hebrew of the recall as a complicated construction whose main clause is delayed by intervening circumstantial clauses, and treat the parallel account as simplifying it; and against the complaint they allow that Solomon demanded more than the people were accustomed to but hold that he secured them undisturbed peace and great wealth from the trade and tribute of subjugated nations."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke draws the same moral as Henry from the succession, that had Solomon kept within reasonable bounds he would probably have had more children, and such as would have discerned the delicacy of their position. On the petition he takes the opposite side from the others: he hears two distinct complaints, of laborious service and of heavy taxation, and holds that at first Solomon used no Israelite in drudgery, but afterwards, forsaking the God of compassion, used them as slaves and revived the Egyptian bondage."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes a middle course on the recall with Kimchi, reading the verb as a pluperfect, they had sent, which was the reason of his return from Egypt. On the grievance he agrees with Henry that the one thing they had real cause to complain of, the idolatry Solomon had set up among them, they take no notice of at all."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Was the complaint against Solomon&rsquo;s government just?",
+    "positions": [
+     {
+      "view": "Yes in substance: there were two complaints, forced labour and taxation, and in his later years Solomon used Israelites as slaves and revived the Egyptian bondage",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The tribes were within their right; the burdens were against old traditions and even against Solomon&rsquo;s own earlier practice, and the king shows no resentment at the demand",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "No: he demanded more than they were used to, but secured them peace and great wealth, so there can have been no well-grounded occasion for complaint",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "Groundless: the buildings cost money but no blood, and they did but render to Solomon the things that were Solomon&rsquo;s",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How did Jeroboam come to be at the assembly?",
+    "positions": [
+     {
+      "view": "He returned from Egypt on hearing of Solomon&rsquo;s death and was sent for from his own city, as Chronicles and the Greek have it &mdash; far more probable, and recoverable from the Hebrew by a slight change",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "The Hebrew as it stands is a complicated construction, which the parallel account simplifies",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "The verb is a pluperfect, they had sent, which is why he had already left Egypt",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The errand was needless either way: he knew what God had designed him for and would have come unsent",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in reading the meeting constitutionally, as a northern right to impose conditions that Judah&rsquo;s unconditional anointing did not allow, and in finding an omen of revolution in the choice of Shechem."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Alone in holding the grievance substantially true, and in dating the change to Solomon&rsquo;s apostasy, after which he used Israelites as slaves."
+   }
+  ],
+  "themes": [
+   "And Rehoboam went to Shechem: for all Israel were come to Shechem to make him king",
+   "when Jeroboam the son of Nebat, who was yet in Egypt, heard of it",
+   "Thy father made our yoke grievous: now therefore make thou the grievous service of thy father&hellip; lighter, and we will serve thee",
+   "Depart yet for three days, then come again to me"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-23",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
+  }
+ },
+ "6": {
+  "voices": [
+   "Matthew Henry",
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "6-11",
+  "pericope_label": "The counsel of the old men and the counsel of the young men",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry grants it was prudent to take advice, having so weak a head of his own, but impolitic to have taken time to consider, since he gave the disaffected time to ripen a revolt, and deliberating in so plain a case would be read as showing how little he cared for their ease. He states the old men&rsquo;s rule in a sentence, that the way to rule is to serve, and to stoop to do it. He treats the preference for the young men as a symptom: days should speak, and it was folly to think that because they had been his companions in the pleasures of his youth they were fit to manage a kingdom, since great wits have not always the most wisdom, nor are those our best friends who know how to make us merry. Of the drafting he notices the vanity, that the young men thought the old had expressed themselves but dully and furnished the king with quaint and pointed similitudes, though that is not always the best sense which is best worded."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke builds a theory of kingship on the old men&rsquo;s advice: this is the constitutional idea of a king, servant but not slave of his people, and the way to ensure obedience is to let the people see that the king lives for them and not for himself, since the king is made for the people and not the people for the king. He explains the choice of the younger counsellors by the custom of educating young noblemen of nearly the heir&rsquo;s age alongside him, which, as Calmet observes, excited the prince to emulation and taught him the dispositions of his future officers, so that the old counsellors Rehoboam did not know while with the young nobility he had been familiar. He reads the little finger as a proverb, that as much as the thigh surpasses it, so much did the son claim to exceed his father in power; and he takes the scorpions, with Isidore, for whips armed with barbed points, noting that the name was also given a Roman engine for shooting poisoned arrows."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott admires neither party: both policies show how corrupt and cynical the government of Israel had become, and the old counsellors&rsquo; advice has no largeness of policy or depth of wisdom, being the advice of crafty politicians who had watched despotic power develop, still remembered the comparative freedom of earlier days, understood the dangerous vehemence of popular excitement and how easily concessions satisfy it, and perhaps wished to defeat the private ambition using that grievance; it is to give good words and be for the moment a servant, perhaps meaning to abolish some excessive grievances but by no means to yield up substantial power. The young men he calls the spoilt children of a luxurious despotism, of which alone they had experience, their language that of an arrogant self-confidence which mistakes obstinacy for vigour and, blind to the signs of the times, supposes that what once was possible must last for ever; it is needlessly offensive, yet a not unfrequent policy in revolutionary times, holding that to yield at one point endangers the whole fabric of sovereignty, and succeeding only where popular disaffection is superficial. Keil and Delitzsch agree with Isidore on the scorpions as whips with barbed points, and note that the Targum and Syriac read a word meaning simply a whip."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill looks to temper rather than policy: the counsel did not suit the king&rsquo;s haughty disposition, he could not brook stooping to his people, and he thought it a lessening of his dignity to do anything that looked like courting their favour."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What was the old men&rsquo;s counsel worth?",
+    "positions": [
+     {
+      "view": "It states the constitutional idea of kingship: the king is the servant of his people, and the way to secure obedience is to live for them",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The way to rule is to serve, and to stoop to do it",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "It has no largeness of policy or depth of wisdom &mdash; the craft of politicians who knew how cheaply popular excitement can be bought off, with no intention of yielding substantial power",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is a scorpion?",
+    "positions": [
+     {
+      "view": "With Isidore, a whip whose lashes are armed with iron points that tore the flesh; the name also belonged to a Roman engine for shooting poisoned arrows",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Whips with barbed points like a scorpion&rsquo;s sting &mdash; though the Targum and Syriac read a word meaning simply a whip",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in condemning both counsels together as evidence of a corrupt court, and in comparing the young men&rsquo;s policy to later dynastic obstinacy in revolutionary times."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Alone in explaining the king&rsquo;s familiarity with the young men from the practice of educating noblemen alongside the heir."
+   }
+  ],
+  "themes": [
+   "And king Rehoboam consulted with the old men, that stood before Solomon his father while he yet lived",
+   "If thou wilt be a servant unto this people this day&hellip; then they will be thy servants for ever",
+   "But he forsook the counsel of the old men&hellip; and consulted with the young men that were grown up with him",
+   "My little finger shall be thicker than my father&rsquo;s loins",
+   "my father hath chastised you with whips, but I will chastise you with scorpions"
+  ],
+  "excluded_voices": [],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-23",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.36
+   }
+  }
+ },
+ "12": {
+  "voices": [
+   "Matthew Henry",
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "12-16",
+  "pericope_label": "The rough answer, the cause that was from the Lord, and the cry to the tents",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill has the king answer in a blustering manner, with hard words and severe menaces, worked up to that spirit by his young counsellors and speaking in the very language of their advice. Of the revolt that follows he holds that it is rightly called a rebellion, since though it was according to the purpose and will of God the people had no command or order from God for it, did it without consulting him, and so rejected their lawful prince."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry counts the blunders of the answer. The king fancied himself better able to impose on the people than his father, not considering how far he was inferior in capacity, and he offered this provocation to a people whom long ease had made wealthy, strong and proud, and who would not be trampled on as a dispirited people may be; behind it Henry sees temper rather than calculation, since he would rather risk losing them than deny himself so far as to give them good words, and many ruin themselves by consulting their humour more than their interest. On the divine clause he says God left him to his own folly and hid from his eyes the things which belonged to his peace, serving his own righteous purposes by the imprudences of men and snaring sinners in the work of their own hands. On the cry itself he is torn: they spoke very unbecomingly of the great benefactor of their nation, calling him no greater a man than his neighbours, and their resolution was rash, since asking who gave Rehoboam his advice and removing those counsellors might have prevented the rupture; yet their jealousy for liberty and property well became that free people, who are willing to be ruled but not to be ridden."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke will not let the English of the divine clause stand. Making the best of the present version, he allows that God left Rehoboam to himself and did not incline his heart to the wise men; but if we ask what the cause of all this anarchy really was, we find it was Rehoboam&rsquo;s folly, cruelty and despotic tyranny, and he asks whether that was from the Lord. The text, he answers, does not say so: the Hebrew word means the revolution, and none of the ancient translations took it as the present version does, rendering instead that the turning away was from the Lord, or that it was the Lord&rsquo;s ordinance that they should turn from this foolish king. What God did was stir up the people to revolt from a man who had neither skill nor humanity to govern them; and he adds that these nations had such a revolution in 1688 and have never since needed another."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott takes the divine clause as a standing instance of the great mystery of life, the reconcilement of an all-ordaining providence with the freedom, and therefore the folly and sin, of man, and observes that Scripture, here confirming natural reason, simply recognises both powers as real without any attempt to harmonise them: Rehoboam&rsquo;s folly and arrogance worked out the ordained judgment of God, but they were folly and arrogance still. Of the war-cry he notes that it had been heard before, in the conflict between Judah and Israel after the earlier rebellion, where Joab&rsquo;s relentless promptitude silenced it instantly, and that only the last ironical line is new, see to thine own house, David, in which he hears a sarcastic allusion to the promise to establish that house. Keil and Delitzsch draw the political conclusion: the words, with which Sheba had once preached rebellion, express a deep-rooted aversion to the Davidic monarchy so unvarnished that we may clearly see there were deeper causes for the secession than the pretended oppression of Solomon&rsquo;s government, its real foundation being the ancient jealousy of the tribes, which David and Solomon had only suppressed for a time."
+   }
+  ],
+  "debates": [
+   {
+    "question": "In what sense was the cause from the Lord?",
+    "positions": [
+     {
+      "view": "The English is wrong: the Hebrew word means the revolution, and no ancient version reads it otherwise &mdash; God stirred up the people to revolt from a man unfit to govern, but the folly and tyranny were Rehoboam&rsquo;s own",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Scripture recognises both an all-ordaining providence and human freedom without harmonising them: his folly worked out the ordained judgment, but was folly still",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "God left him to his own folly and hid from his eyes the things that belonged to his peace, serving his own purposes by the imprudences of men",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What really caused the secession?",
+    "positions": [
+     {
+      "view": "An ancient tribal jealousy of the Davidic monarchy, only suppressed for a time by David and Solomon; the pretended oppression was not cause enough",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "A rash resolution that prudent management might have averted &mdash; though the people&rsquo;s jealousy for liberty well became a free nation",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "A rebellion proper: according to God&rsquo;s purpose, but undertaken without his order and against their lawful prince",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Alone in rejecting the received English rendering of the verse on versional grounds, and in illustrating it from the revolution of 1688."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in tracing the war-cry to its earlier use and in hearing the closing line as a sarcasm on the promise to David&rsquo;s house."
+   }
+  ],
+  "themes": [
+   "And the king answered the people roughly, and forsook the old men&rsquo;s counsel",
+   "Wherefore the king hearkened not unto the people; for the cause was from the Lord",
+   "What portion have we in David? neither have we inheritance in the son of Jesse",
+   "to your tents, O Israel: now see to thine own house, David"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-23",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
+   }
+  }
+ },
+ "17": {
+  "voices": [
+   "Matthew Henry",
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "17-24",
+  "pericope_label": "Adoram stoned, Jeroboam made king, and Shemaiah forbidding the war",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott calls the phrase about the children of Israel in the cities of Judah significant: historically Judah had its semi-dependent tribes, Simeon already absorbed into it, Dan in great part transferred to the extreme north, Benjamin closely united to it by the position of Jerusalem, so that the southern territory would be really the Judaea of later times. Of Adoram he notes that the officer must be the one who held the post under Solomon, the name and office probably hereditary, and that the sight of their old taskmaster stirred the multitude to a fresh burst of fury. In the title king over all Israel he hears the seceders&rsquo; own case, a claim by the ten tribes to be the true Israel, relying perhaps on the prophetic choice of Jeroboam and professing to have risen in the Lord&rsquo;s name against the idolatry of Solomon&rsquo;s house. Of the prophet he observes that while the prophet of the original promise belonged to Shiloh in Ephraim, Shemaiah was attached to Judah, which makes his interference to protect the new kingdom the more striking; to it the preservation of Jeroboam&rsquo;s half-formed kingdom was probably due, and it indicates the great opportunity given that kingdom to maintain itself under God&rsquo;s blessing, a point the phrase your brethren, the children of Israel, marks with emphasis. Keil and Delitzsch read the same children of Israel as members of the ten tribes settled in Judah over the ages, the Simeonites especially, whose territory obliged them to remain, and insist the verse cannot mean, as Ewald had it, that the tribe of Judah declared for its countryman; they read the embassy charitably, as an attempt to appease the tribes and open negotiations, given to the superintendent of the tribute because the burdens complained of were his department, the king being no doubt serious in his wish to meet their demands, though sending this man only increased the bitterness; and they note that Shemaiah is not mentioned again, glossing the divine reason, with Schmidt, as Rehoboam&rsquo;s being deprived of sovereignty over ten tribes, not the rebellion itself."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke supposes Adoram sent to collect the ordinary taxes, and calls the sending of him, with the public mind in such fermentation, another proof of Rehoboam&rsquo;s incapacity, the people, indignant at the master who gave them such a brutish answer, stoning the servant. On the crowning of Jeroboam he denies the right flatly: the seceders had neither legal nor constitutional right to call another man to the throne, Jeroboam being no kin to the royal house, and nothing could justify the act but the just judgment of God, who thus punished a gainsaying people, and especially Solomon&rsquo;s family. The obedience to the prophet he calls great deference in king and officers alike, and notes that the people heard the command gratefully, since the mass of mankind are averse from war, and no nations would rise against each other were they not instigated or compelled by their rulers."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill agrees that what followed is rightly called a rebellion: though it was according to the will of God, the people had no order from God for it, did it without consulting him, and so rejected their lawful prince."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry admires both halves of the king&rsquo;s conduct at the end: it was brave to design reducing the revolters by force, braver to desist when ordered to lay down his arms, for he would not lose a kingdom tamely, and then he were unworthy the title of a prince, nor contend for it against God, and then he were unworthy the title of an Israelite."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Was the crowning of Jeroboam lawful?",
+    "positions": [
+     {
+      "view": "No: neither legal nor constitutional right, Jeroboam being no kin to the royal house; nothing justifies it but the just judgment of God",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "It was a rebellion &mdash; in accordance with God&rsquo;s purpose, but without his order and against their lawful prince",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The seceders claimed to be the true Israel, resting on the prophetic choice of Jeroboam and professing to rise against the idolatry of Solomon&rsquo;s house",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why was Adoram sent?",
+    "positions": [
+     {
+      "view": "To collect the ordinary taxes &mdash; a further proof of Rehoboam&rsquo;s incapacity, with the public mind in such fermentation",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "To appease the tribes and open negotiations, the tribute being his department and the king serious in wishing to meet their demands",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "Too late, to deal with the grievance of forced labour &mdash; but the sight of their old taskmaster was what the crowd answered",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in making Shemaiah&rsquo;s intervention the hinge of the chapter, and in reading the prophet&rsquo;s Judahite attachment as what makes his protection of the north remarkable."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Alone in drawing a general maxim from the disbanding, that no nations would rise against each other were they not instigated or compelled by their rulers."
+   }
+  ],
+  "themes": [
+   "Then king Rehoboam sent Adoram, who was over the tribute; and all Israel stoned him with stones, that he died",
+   "So Israel rebelled against the house of David unto this day",
+   "they sent and called him unto the congregation, and made him king over all Israel",
+   "Ye shall not go up, nor fight against your brethren the children of Israel: return every man to his house; for this thing is from me"
+  ],
+  "excluded_voices": [],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-23",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
+   }
+  }
+ },
+ "25": {
+  "voices": [
+   "Matthew Henry",
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "25-33",
+  "pericope_label": "Jeroboam fortifies his capital and sets up the calves at Bethel and Dan",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott traces the vicissitudes of the capital Jeroboam chose, a city already when Abraham entered the land, then the seat of Abimelech&rsquo;s usurpation and destroyed for rebelling against him, so that building it may mean rebuilding it or only fortifying it. On the calves he finds several causes at work: the repetition of Aaron&rsquo;s words marks it as a revival of the ancient idolatry of the wilderness, the Egyptian animal worship had been familiar to Jeroboam, and there is reason to think the cherubim were winged bulls, so that the calves may be reproductions of them, made symbols not of the natural powers obeying the divine word but of the Deity itself. The sites he explains by their memories as well as their frontiers: Bethel preserved in its name the memory of Jacob&rsquo;s vision and his consecration of the place, and had been a place of religious assembly and perhaps of the ark&rsquo;s occasional sojourn, while at Dan the sanctuary set up by the Danites at the conquest probably lingered, so that the priests of that old worship became the natural ministers of the new. The choice of day he calls characteristic, since it challenged likeness to the feast that was in Judah and yet took liberty to alter the date, assuming the right to set aside the letter of the old law while still professing to worship Jehovah. Keil and Delitzsch give the motive: to strengthen his kingdom internally he provided a substitute for the temple&rsquo;s sacrificial worship, removing all occasion for festal journeys to Jerusalem, from which he apprehended, probably not without reason, a return of the people and danger to his own life; and on the month they allow him a pretext, that in the north the corn ripened later than in Judah."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry locates the fault deeper than policy: a practical disbelief of God&rsquo;s all-sufficiency is at the bottom of all our treacherous departures from him. On the calves he insists they were made to represent, or rather make present, not any false god but the God of Israel himself, so that the offence was against the second commandment and not the first, and he supposes Jeroboam adopted the Egyptian worship of a god under the figure of a bull. The placing he reads as policy: Bethel lay close to Judah, to tempt such of Rehoboam&rsquo;s subjects as were inclined to image-worship, and Dan served those most remote; and by setting up two he would break them by degrees off the unity of the godhead. Of the priesthood he says in a phrase that the lowest of the people were good enough to be priests to his calves, and too good."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke calls the whole an invented political religion, and finds it strange that in pointing out his calves the king used Aaron&rsquo;s very words. He sees the ground prepared already, since Solomon&rsquo;s own idolatry had made the people ready for these abominations. The house of high places he explains as a temple of temples, one chief sanctuary over the many, with a priesthood of Jeroboam&rsquo;s own ordination: he took the people as they came, not troubling himself whether they were of Aaron&rsquo;s family, for any priests would do well enough for such gods, and probably the sons of Levi had grace to refuse."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill gives the reason for Bethel more plainly than the rest: its very name signifies the house of God. On the month he reports the same explanation Keil and Delitzsch allow, from Abarbinel, that the fruits were not so soon ripe in the northern parts, adding that Jeroboam might hope for a fuller attendance once all was gathered in."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What were the calves meant to be?",
+    "positions": [
+     {
+      "view": "The God of Israel himself made present &mdash; an offence against the second commandment, not the first &mdash; on the Egyptian model of a god under the figure of a bull",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "A revival of Aaron&rsquo;s idolatry, prompted by Egyptian animal worship, and perhaps reproductions of the cherubim, made symbols of the Deity itself rather than of powers obeying it",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "An invented political religion, strangest in its borrowing of Aaron&rsquo;s own words",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why was the feast moved to the eighth month?",
+    "positions": [
+     {
+      "view": "A pretext lay ready, since in the north the corn ripened later than in Judah",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "The same, from Abarbinel &mdash; with the added hope of a fuller attendance once the harvest was in",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "To challenge likeness to the feast in Judah while taking liberty to alter the date, so claiming the right to set aside the letter of the law",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Alone in explaining the two sanctuaries from their surviving cults rather than their politics, and in suggesting the old Danite priesthood simply carried over into the new worship."
+   },
+   {
+    "voice": "Matthew Henry",
+    "claim": "Alone in reading the duplication itself as doctrinal strategy, a step meant to wear away belief in the unity of the godhead."
+   }
+  ],
+  "themes": [
+   "Then Jeroboam built Shechem in mount Ephraim, and dwelt therein; and went out from thence, and built Penuel",
+   "If this people go up to do sacrifice in the house of the Lord at Jerusalem&hellip; they shall kill me",
+   "It is too much for you to go up to Jerusalem: behold thy gods, O Israel",
+   "And he made an house of high places, and made priests of the lowest of the people, which were not of the sons of Levi",
+   "And Jeroboam ordained a feast in the eighth month&hellip; in the month which he had devised of his own heart"
+  ],
+  "excluded_voices": [],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-11-23",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
+  }
+ }
 }

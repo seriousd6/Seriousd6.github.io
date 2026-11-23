@@ -110637,6 +110637,116 @@
         "1-25"
       ],
       "note": "Calibration, fourth chapter under the two-voices-per-sentence rule, and the pattern from 1samuel 11 held exactly. First-measurement overshoot: 778 on the 1-3 span (3,740 source words), 717 on 19-22 (3,036), 774 on 23-25 (3,227), 689 on 9-10 (3,306), 658 on 13-14 (2,842). The three spans under 1,500 source words (4-8, 11-12, 15-18) came in at 613, 638 and 648 on first draft with no trim. The threshold stated at 1samuel 11 is confirmed: under about 2,200 usable source words an entry lands in band unaided, above about 3,000 it overshoots by 70 to 130 and a whole sub-thread has to go. What went in this chapter: Ellicott's Gilgal topography (Stonehenge and Avebury, the view of Gilead and Hermon), his double-messes metaphor for the firstborn's portion, his report of Thenius's sceptical reconstruction of the bears, and Gill's traveller reports on Elisha's fountain were all cut to fit."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "13"
+      ],
+      "note": "JFB stride-six residue, fifth book. Both JFB blocks in this chapter are 1 Samuel 17 material - the champion described as a man between two, and the cheeses David carried to his brothers - and the occupied positions 1 and 13 belong to the stride-6 series with 7 unoccupied, the same subset geometry recorded in 2 Kings, 1 Samuel, 1 Chronicles and Psalms, with the donor offset again advancing with the target key. JFB's entire contribution to the chapter is 109 words, all of it residue. Excluded from tiles 1-5 and 12-16."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "12",
+      "verses": [
+        "33"
+      ],
+      "note": "Chapter-final chrome at Ellicott's last key, 38th instance and the second consecutive chapter with the script-payload variant: 75 real words of exposition against 984 words of the host page's menus, CSS and JavaScript. Together with psalms 7 key 15 this shows the variant is not book-specific but belongs to the Ellicott harvest wherever the chapter's last Ellicott key falls. It inflates the closing tile's recorded source from about 4965 to 5949 words, understating its expansion by roughly a fifth."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "6",
+        "8",
+        "26",
+        "27",
+        "29",
+        "31"
+      ],
+      "note": "K&D blocks are truncated at a HARD CAP OF 203 VISIBLE WORDS. Keys 1, 26, 27, 29 and 31 are each exactly 203 words and each ends mid-sentence. This confirms and sharpens the per-block cap suspected at psalms 7: it is a fixed visible-word limit, not a character limit that happens to vary. The windows also overlap, so the commentary at keys 6 and 8 repeats verbatim, which means a naive duplicate check would flag genuine K&D text as boilerplate."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "16",
+        "25"
+      ],
+      "note": "Henry Concise doubling in all three of his blocks, about 440 duplicated words in the chapter. Each block ends with a Concise paragraph restating the exposition just given, and the key-25 instance closes with a devotional address ('Blessed Lord, give us grace to reverence thy temple') - the same shape recorded at psalms 7 key 10. Three blocks, three doublings: the pattern is systematic rather than occasional, and a paraphrase-tolerant duplicate test would catch it where an exact-match test does not."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "12",
+      "verses": [
+        "7",
+        "9",
+        "10"
+      ],
+      "note": "Gill's blocks at these keys are content-free stubs: 'They gave their advice as follows', 'Gave him the following advice', and at key 9 the bare string 'See Gill on .' - a cross-reference whose target has been stripped out. That dangling reference corroborates the defect class first recorded at psalms 7, where the harvester dropped the contents of inline markup: there it removed Calvin's italicised words mid-sentence, here it removes the verse reference inside Gill's own link, leaving a sentence that points nowhere."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "12",
+      "verses": [
+        "15"
+      ],
+      "note": "Clarke against the received English, and against the other voices. He argues that the Hebrew word means the revolution or the turning away, that none of the ancient translations read it as the present version does, and that if we ask what the cause of the anarchy really was we find it was Rehoboam's own folly, cruelty and despotic tyranny - asking pointedly whether THAT was from the Lord. Ellicott and Henry keep the clause and resolve it theologically instead, Ellicott by recognising providence and freedom as both real without harmonising them, Henry by having God leave the king to his own folly. Written up as the debate in tile 12-16."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "note": "The justice of the grievance splits the chapter two against two, which is unusual: Clarke and Ellicott hold the complaint substantially justified (Clarke dating the change to Solomon's apostasy, after which he used Israelites as slaves and revived the Egyptian bondage; Ellicott inferring the tribes' right from the narrative's tone and the king's want of resentment), while Keil and Delitzsch and Henry hold it groundless, both arguing from the peace and wealth Solomon's reign secured. Gill sides with Henry on the sharper point that the one real grievance, the idolatry, is never mentioned."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "12",
+      "verses": [
+        "31",
+        "32"
+      ],
+      "note": "Convergence across traditions on the moved feast: Keil and Delitzsch allow Jeroboam a genuine pretext, that in the north the corn ripened a month later than in Judah, and Gill reports the identical explanation from Abarbinel, adding the hope of fuller attendance once the harvest was in. Clarke and Ellicott both read the change as pure policy. A rare case of German critical exegesis and Jewish mediaeval commentary agreeing against both English voices."
+    },
+    {
+      "at": "2026-11-23",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "6",
+        "12",
+        "17",
+        "25"
+      ],
+      "note": "Method: tiling set at Henry's three block boundaries (keys 1, 16 and 25, his exposition covering vv.1-15, 16-24 and 25-33), then subdivided so that no tile fell much below 1800 usable source words - 1-5, 6-11, 12-16, 17-24, 25-33. A straight 12-15 tile would have had only 501 usable source words against a 650-word output floor, so v.16 was folded in with the answer that provoked it, which is also the natural pericope break. Only six voices appear in the chapter and five are usable, so every tile carries all five."
     }
   ]
 }
