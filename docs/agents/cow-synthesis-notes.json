@@ -111899,6 +111899,68 @@
         "7"
       ],
       "note": "First-draft overshoots on all four spans, at 785, 945, 836 and 970 validator words, which is the largest aggregate overshoot of the run: roughly 940 words had to be cut from an eventual 2,595. The overshoot tracks the number of distinct positions per span rather than the number of voices alone. The worst two spans each carried two or three full disagreements needing a clause per position, and in both cases what had to go was a catalogue, Clarke's chain of scriptural parallels in the one and his list of renderings of the angels' verse in the other."
+    },
+    {
+      "at": "2026-11-28",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "14",
+      "verses": [
+        "2",
+        "8"
+      ],
+      "note": "JFB residue, twelfth book. The two JFB blocks in this chapter (keys 2 and 8, 126 words together) carry commentary on 2 KINGS 2: 'The waving of the mantle on the river, and the miraculous division of the waters consequent upon it, was an evidence that the Lord God of Elijah was with him', and the salt poured into the spring at Jericho. The donor is again EARLIER in canonical order than the target (2 Kings precedes 2 Chronicles), which is the invariant established at 2 Samuel 3 and 2 Kings 6 and now holds in twelve books without exception. Both spans holding a JFB block were handled with excluded_voices."
+    },
+    {
+      "at": "2026-11-28",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "15"
+      ],
+      "note": "Chrome at both ends again, confirming the variant first isolated at 1 Samuel 16. The chapter-final Ellicott block at key 15 carries the StudyLight footer plus the embedded JavaScript page payload - 43rd instance of that defect. At the other end, Clarke's key-1 block opens with the chapter's own argument list ('Asa succeeds his father Abijah, reigns piously, and has peace for ten years, 2Chr 14:1... He takes several of their cities, their cattle, etc., and returns to Jerusalem, laden with spoils, 2Chr 14:13-15') before any commentary begins, and K&D's key-1 block is likewise a survey of the parallel in Kings rather than verse commentary. Two chapters in a row with the first-key variant: a stripper written only for the chapter-final footer leaves half the problem standing."
+    },
+    {
+      "at": "2026-11-28",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "14",
+      "verses": [
+        "1"
+      ],
+      "note": "Henry Concise doubling with a NEW property: the Concise tail does not stay inside its own key's verses. Henry's single block at key 1 (1,327 words) covers vv.1-8, but its closing Concise paragraph runs past that span into the rest of the chapter - 'A formidable army of Ethiopians invaded Asa's kingdom. This evil came upon them, that their faith in God might be tried. Asa's prayer is short, but it is the real language of faith and expectation from God' - which is material belonging to vv.9-15, duplicating what his key-9 block says at length. Every earlier instance of the doubling restated the same key's own argument. A de-duplicator must therefore compare a Henry Concise tail against the whole chapter's Henry material, not merely against the block it sits in, or it will both miss this duplication and risk deleting the only copy of a comment on a later verse."
+    },
+    {
+      "at": "2026-11-28",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "2",
+        "5",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "note": "Measurement: the Keil and Delitzsch 203-visible-word cap holds again, with the same signature as 1 Samuel 16. Nine of the eleven K&D blocks in this chapter are EXACTLY 203 words and are cut off mid-sentence (key 8 ends 'as to Zerah's army, that'; key 10 ends 'anything with Thee, show Thy'; key 12 ends mid-Hebrew-word). The only two under the cap are the last two, at 84 and 25 words, both ending cleanly on a full stop - the blocks that simply ran out of source. Eighth chapter and sixth book with the identical figure, and the second chapter in which the exceptions are precisely the chapter-final blocks. This is a hard per-block truncation at harvest time."
+    },
+    {
+      "at": "2026-11-28",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "14",
+      "verses": [
+        "15"
+      ],
+      "note": "Method, and a near-miss worth recording. The scratchpad prefix c14_ had been used by an EARLIER, already-landed 1 Chronicles 14 run, and two of that run's tile files (its pericopes 7-12 and 13-17, on David and the Philistines at Baal-perazim) were still sitting beside this chapter's tile 1 on Asa. The source-splitter cleanup removed only the .txt files, so the stale .html tiles survived and would have been assembled into 2 Chronicles 14 as tiles 2 and 3 had they not been read first. That is the same failure class as the assembler that once wrote 1 Samuel 25's prose into 1 Samuel 22. Two cheap guards: make the scratchpad prefix carry the book as well as the chapter number, and have the cleanup step remove the prefix's .html files along with its .txt files."
     }
   ]
 }
